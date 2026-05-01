@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://empasy.io/</loc><priority>1.0</priority></url>
+  <url><loc>https://empasy.io/ko</loc><priority>0.9</priority></url>
+  <url><loc>https://empasy.io/en</loc><priority>0.9</priority></url>
+  <url><loc>https://empasy.io/jp</loc><priority>0.9</priority></url>
+  <!-- Hydra -->
+  <url><loc>https://empasy.io/ko/hydra</loc><priority>0.8</priority></url>
+  <url><loc>https://empasy.io/en/hydra</loc><priority>0.8</priority></url>
+  <url><loc>https://empasy.io/jp/hydra</loc><priority>0.8</priority></url>
+  <!-- Sync Series -->
+  <url><loc>https://empasy.io/ko/sync-series</loc><priority>0.8</priority></url>
+  <url><loc>https://empasy.io/en/sync-series</loc><priority>0.8</priority></url>
+  <url><loc>https://empasy.io/jp/sync-series</loc><priority>0.8</priority></url>
+  <!-- SyncBoot -->
+  <url><loc>https://empasy.io/ko/syncboot</loc><priority>0.7</priority></url>
+  <url><loc>https://empasy.io/en/syncboot</loc><priority>0.7</priority></url>
+  <url><loc>https://empasy.io/jp/syncboot</loc><priority>0.7</priority></url>
+  <!-- SyncEta -->
+  <url><loc>https://empasy.io/ko/synceta</loc><priority>0.7</priority></url>
+  <url><loc>https://empasy.io/en/synceta</loc><priority>0.7</priority></url>
+  <url><loc>https://empasy.io/jp/synceta</loc><priority>0.7</priority></url>
+  <!-- SyncCMS -->
+  <url><loc>https://empasy.io/ko/synccms</loc><priority>0.7</priority></url>
+  <url><loc>https://empasy.io/en/synccms</loc><priority>0.7</priority></url>
+  <url><loc>https://empasy.io/jp/synccms</loc><priority>0.7</priority></url>
+  <!-- SyncAPIM -->
+  <url><loc>https://empasy.io/ko/syncapim</loc><priority>0.7</priority></url>
+  <url><loc>https://empasy.io/en/syncapim</loc><priority>0.7</priority></url>
+  <url><loc>https://empasy.io/jp/syncapim</loc><priority>0.7</priority></url>
+  <!-- CommerceLogi -->
+  <url><loc>https://empasy.io/ko/commercelogi</loc><priority>0.7</priority></url>
+  <url><loc>https://empasy.io/en/commercelogi</loc><priority>0.7</priority></url>
+  <url><loc>https://empasy.io/jp/commercelogi</loc><priority>0.7</priority></url>
+  <!-- UseCases -->
+  <url><loc>https://empasy.io/ko/use-cases</loc><priority>0.6</priority></url>
+  <url><loc>https://empasy.io/en/use-cases</loc><priority>0.6</priority></url>
+  <url><loc>https://empasy.io/jp/use-cases</loc><priority>0.6</priority></url>
+  <!-- Company -->
+  <url><loc>https://empasy.io/ko/company</loc><priority>0.5</priority></url>
+  <url><loc>https://empasy.io/en/company</loc><priority>0.5</priority></url>
+  <url><loc>https://empasy.io/jp/company</loc><priority>0.5</priority></url>
+  <!-- Contact -->
+  <url><loc>https://empasy.io/ko/contact</loc><priority>0.5</priority></url>
+  <url><loc>https://empasy.io/en/contact</loc><priority>0.5</priority></url>
+  <url><loc>https://empasy.io/jp/contact</loc><priority>0.5</priority></url>
+</urlset>

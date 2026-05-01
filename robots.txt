@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.empasy.com/sitemap.xml
+Sitemap: https://empasy.io/sitemap.xml
+Sitemap: https://www.empasy.io/sitemap.xml
