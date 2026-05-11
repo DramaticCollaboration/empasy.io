@@ -175,6 +175,9 @@ const CommerceLogi = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="cl-stats-box cl-grid-bg-dark">
+            {/* Deco blobs */}
+            <div style={{ position: 'absolute', top: 0, right: 0, width: '600px', height: '600px', background: 'rgba(6,182,212,0.2)', borderRadius: '50%', filter: 'blur(120px)', transform: 'translate(33%, -33%)', pointerEvents: 'none' }} />
+            <div style={{ position: 'absolute', bottom: 0, left: 0, width: '500px', height: '500px', background: 'rgba(16,185,129,0.2)', borderRadius: '50%', filter: 'blur(120px)', transform: 'translate(-33%, 33%)', pointerEvents: 'none' }} />
             <div className="cl-grid-overlay" />
             <div className="cl-stats-inner">
               {/* Progress bars */}

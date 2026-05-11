@@ -259,10 +259,8 @@ const SyncEta = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            {/* Deco blobs */}
-            <div style={{ position: 'absolute', right: '-80px', top: '-80px', width: '256px', height: '256px', background: 'rgba(34,211,238,0.15)', borderRadius: '50%', filter: 'blur(80px)', pointerEvents: 'none' }} />
-            <div style={{ position: 'absolute', left: '-80px', bottom: '-80px', width: '256px', height: '256px', background: 'rgba(16,185,129,0.12)', borderRadius: '50%', filter: 'blur(80px)', pointerEvents: 'none' }} />
-
+            <div style={{ position: 'absolute', top: 0, right: 0, width: '600px', height: '600px', background: 'rgba(6,182,212,0.2)', borderRadius: '50%', filter: 'blur(120px)', transform: 'translate(33%, -33%)', pointerEvents: 'none' }} />
+            <div style={{ position: 'absolute', bottom: 0, left: 0, width: '500px', height: '500px', background: 'rgba(16,185,129,0.2)', borderRadius: '50%', filter: 'blur(120px)', transform: 'translate(-33%, 33%)', pointerEvents: 'none' }} />
             <div className="se-cta-network-bg" />
             <div className="se-cta-inner">
               <h2 className="se-cta-title">
