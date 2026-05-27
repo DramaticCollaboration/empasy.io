@@ -28,10 +28,6 @@
   <url><loc>https://empasy.io/ko/syncapim</loc><priority>0.7</priority></url>
   <url><loc>https://empasy.io/en/syncapim</loc><priority>0.7</priority></url>
   <url><loc>https://empasy.io/jp/syncapim</loc><priority>0.7</priority></url>
-  <!-- CommerceLogi -->
-  <url><loc>https://empasy.io/ko/commercelogi</loc><priority>0.7</priority></url>
-  <url><loc>https://empasy.io/en/commercelogi</loc><priority>0.7</priority></url>
-  <url><loc>https://empasy.io/jp/commercelogi</loc><priority>0.7</priority></url>
   <!-- UseCases -->
   <url><loc>https://empasy.io/ko/use-cases</loc><priority>0.6</priority></url>
   <url><loc>https://empasy.io/en/use-cases</loc><priority>0.6</priority></url>

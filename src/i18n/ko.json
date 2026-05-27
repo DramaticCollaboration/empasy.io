@@ -8,7 +8,6 @@
       "synccms": "SyncCMS",
       "syncapim": "SyncAPIM",
       "synceta": "SyncEta",
-      "commerceLogi": "Commerce & Logi",
       "useCases": "Use Cases",
       "company": "Company",
       "contact": "Contact"
@@ -618,101 +617,6 @@
       "cta": {
         "title": "불필요한 기능은 덜어내고, 필요한 기능만 도입하십시오.\n지금 맞춤형 API 생태계를 설계해 드립니다.",
         "btn": "SI 맞춤형 API 도입 문의하기"
-      }
-    },
-    "commercelogi": {
-      "hero": {
-        "title": "커머스의 한계를 넘고, 물류의 흐름을 지배하다",
-        "desc": "프론트/백엔드가 분리된 유연한 SyncShop과 완벽한 동선·재고 최적화를 이끄는 AI Logistics Hub의 결합."
-      },
-      "syncshop": {
-        "title": "초유연 커머스 아키텍처 (SyncShop: Headless eCommerce)",
-        "subtitle": "백엔드와 프론트엔드가 분리되어 모든 채널에 즉시 대응하는 초유연 커머스 아키텍처",
-        "pms": "PMS (상품)",
-        "pmsDesc": "[SKU 재고 연동 애니메이션]",
-        "oms": "OMS (주문/물류)",
-        "omsDesc": "[주문 처리 흐름 렌더링]",
-        "sms": "SMS (마케팅)",
-        "smsDesc": "[지능형 쿠폰 발급 로직]",
-        "ums": "UMS (회원)",
-        "umsDesc": "[회원 등급 및 혜택 동기화]"
-      },
-      "logistics": {
-        "title": "데이터가 예측하고, AI가 최적의 경로를 그립니다.",
-        "subtitle": "AI 알고리즘을 통한 허브별 재고 선배치 및 배송 경로 최적화",
-        "optimized": "[최적화된 직선 경로 맵]",
-        "messy": "[복잡하게 꼬인 경로 맵]",
-        "alertTime": "배송 시간 약 22분 단축",
-        "alertDist": "이동 거리 18% 감소",
-        "btnAsIs": "초기화 (AS-IS)",
-        "btnToBe": "AI 최적화 실행 (TO-BE)"
-      },
-      "docai": {
-        "title": "지식 자산화 및 문서 자동화 (Document AI & Enterprise RAG)",
-        "subtitle": "비정형 물류 데이터를 지능적으로 구조화하여 지식 자산으로 전환",
-        "ocr": "OCR 품질 97.4% 확보",
-        "chatUser": "최근 수도권 배송 지연 원인을 분석해 줘",
-        "chatAi": "WMS 로그 및 VOC 분석 결과, 수도권 A허브의 물량 집중이 원인입니다.\n해결책: 수도권 A허브 재고를 12% 선배치할 것을 권장합니다."
-      },
-      "kpi": {
-        "title": "MLOps 및 도입 기대 효과",
-        "subtitle": "인프라 최적화 및 비용 절감, 생산성 증대 효과를 수치로 증명",
-        "card1": {
-          "title": "물류 운영 비용 절감",
-          "desc": "물류 최적화 알고리즘"
-        },
-        "card2": {
-          "title": "문서 처리 시간 단축",
-          "desc": "수작업 대비 (일 기준)"
-        },
-        "card3": {
-          "title": "모델 서빙 응답 속도",
-          "desc": "MLOps 모니터링"
-        },
-        "card4": {
-          "title": "계약서 구조화 비용 절감",
-          "desc": "Document AI 도입"
-        }
-      },
-      "cta": {
-        "title": "주문에서 배송까지, 당신의 비즈니스를 완벽하게 동기화(Sync) 하세요.",
-        "btn": "Commerce & Logi 도입 문의하기"
-      },
-      "page": {
-        "badge": "SMART LOGISTICS",
-        "heroLine1": "커머스의 한계를 넘고,",
-        "heroLine2": "물류의 흐름을 지배하다",
-        "heroDesc": "프론트/백엔드가 분리된 유연한 SyncShop과 완벽한 동선·재고 최적화를 이끄는 AI Logistics Hub의 결합.",
-        "btnDiagnose": "무료 진단 받기",
-        "btnDetail": "솔루션 상세 보기",
-        "featuresTitle": "차세대 커머스 물류의 3대 핵심 동력",
-        "featuresSubtitle": "백엔드와 프론트엔드가 분리되어 모든 채널에 즉시 대응하는 초유연 커머스 아키텍처",
-        "feature1": {
-          "title": "지능형 창고 자동화",
-          "desc": "AGV와 로봇 팔을 연동한 풀필먼트 센터 자동화로 출고 처리량을 200% 향상시키고 인건비를 최적화합니다.",
-          "b1": "AI 피킹 최적화 경로",
-          "b2": "로봇 통합 제어 시스템 (WCS)",
-          "b3": "실시간 공간 점유율 분석"
-        },
-        "feature2": {
-          "title": "실시간 재고 관리 (IMS)",
-          "desc": "온/오프라인 채널의 재고 데이터를 0.1초 단위로 동기화하여 품절 손실을 방지하고 적정 재고 수준을 유지합니다.",
-          "b1": "옴니채널 재고 통합",
-          "b2": "수요 예측 기반 자동 발주",
-          "b3": "유통기한 및 LOT 추적 관리"
-        },
-        "feature3": {
-          "title": "스마트 라우팅 배송",
-          "desc": "교통 정보와 배송 밀도를 실시간 분석하여 최적의 경로를 생성하고, 배송 현황을 투명하게 시각화합니다.",
-          "b1": "AI 배차 및 경로 최적화 (TMS)",
-          "b2": "고객 실시간 배송 추적 대시보드",
-          "b3": "도착 예정 시간(ETA) 오차 5분 이내"
-        },
-        "statsTitle": "데이터로 확인하는\n물류 혁신의 결과",
-        "bar1Label": "오배송률 감소",
-        "bar1Value": "-85%",
-        "bar2Label": "평균 배송 시간 단축",
-        "bar2Value": "-4.2 Hours"
       }
     },
     "usecases": {

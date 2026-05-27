@@ -267,31 +267,6 @@ const Home = () => {
             </Link>
           </BentoCard>
 
-          {/* Commerce & Logi – 1×1 */}
-          <BentoCard
-            delay={0.15}
-            style={{ gridColumn: 'span 1' }}
-            variant="teal"
-          >
-            <Link to={`/${lang}/commercelogi`}>
-              <div style={{ padding: '28px', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <div>
-                  <div style={{ width: '44px', height: '44px', borderRadius: '10px', background: 'linear-gradient(135deg,#0891b2,#06b6d4)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px', boxShadow: '0 4px 12px rgba(6,182,212,0.3)' }}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                  </div>
-                  <h3 className="bento-card-title-sm" style={{ color: '#0F172A', marginBottom: '6px', lineHeight: 1.3 }}>
-                    Commerce<br/>& Logi
-                  </h3>
-                  <p style={{ color: '#64748B', fontSize: '0.8rem', lineHeight: 1.5 }}>
-                    {t('home.bento.commerce.desc', 'AI 커머스 & 스마트 물류')}
-                  </p>
-                </div>
-                <div style={{ color: '#0D9488', fontWeight: 700, fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  <span>→</span>
-                </div>
-              </div>
-            </Link>
-          </BentoCard>
 
           {/* Let's Talk CTA – 1×1 dark */}
           <BentoCard

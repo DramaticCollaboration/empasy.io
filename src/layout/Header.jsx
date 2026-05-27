@@ -75,7 +75,6 @@ const Header = () => {
                 <li><Link to={`/${currentLang}/synceta`} onClick={closeMobileMenu}>{t('nav.synceta')}</Link></li>
               </ul>
             </li>
-            <li><Link to={`/${currentLang}/commercelogi`} onClick={closeMobileMenu}>{t('nav.commerceLogi')}</Link></li>
             <li><Link to={`/${currentLang}/use-cases`} onClick={closeMobileMenu}>{t('nav.useCases')}</Link></li>
             <li><Link to={`/${currentLang}/company`} onClick={closeMobileMenu}>{t('nav.company')}</Link></li>
             <li><Link to={`/${currentLang}/contact`} className="contact-nav-link" onClick={closeMobileMenu}>{t('nav.contact')}</Link></li>

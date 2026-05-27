@@ -16,8 +16,6 @@ const FILE_MAPPING = {
     'synceta.html': 'SyncEta.jsx',
     'syncapim.html': 'SyncAPIM.jsx',
     'synccms.html': 'SyncCMS.jsx',
-    'syncshop.html': 'CommerceLogi.jsx',
-    'logistics.html': 'CommerceLogi.jsx',
     'use-cases.html': 'UseCases.jsx',
     'company.html': 'Company.jsx',
     'contact.html': 'Contact.jsx',

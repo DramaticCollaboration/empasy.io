@@ -7,7 +7,6 @@ import SyncBoot from './pages/SyncBoot';
 import SyncCMS from './pages/SyncCMS';
 import SyncAPIM from './pages/SyncAPIM';
 import SyncEta from './pages/SyncEta';
-import CommerceLogi from './pages/CommerceLogi';
 import UseCases from './pages/UseCases';
 import Company from './pages/Company';
 import Contact from './pages/Contact';
@@ -82,7 +81,6 @@ function App() {
               <Route path="synccms" element={<SyncCMS />} />
               <Route path="syncapim" element={<SyncAPIM />} />
               <Route path="synceta" element={<SyncEta />} />
-              <Route path="commercelogi" element={<CommerceLogi />} />
               <Route path="use-cases" element={<UseCases />} />
               <Route path="company" element={<Company />} />
               <Route path="contact" element={<Contact />} />

@@ -8,7 +8,6 @@
       "synccms": "SyncCMS",
       "syncapim": "SyncAPIM",
       "synceta": "SyncEta",
-      "commerceLogi": "コマース＆ロジ",
       "useCases": "導入事例",
       "company": "企業情報",
       "contact": "お問い合わせ"
@@ -534,14 +533,32 @@
         "securityTitle": "Zero-Trust Auth",
         "capsTitle": "Core Capabilities",
         "capsSubtitle": "シンプルなゲートウェイを超えた次世代API運用システム",
-        "cap1": { "title": "Unified API Gateway", "desc": "マイクロサービスアーキテクチャの複雑さを解消し、すべてのAPIエンドポイントを単一の入口として統合制御します。" },
-        "cap2": { "title": "Protocol Transformation", "desc": "レガシーSOAP、gRPC、WebSocketなどを最新のRESTful APIにリアルタイム変換し、異種システム間の接続を最大化します。" },
-        "cap3": { "title": "Developer Portal", "desc": "自動化されたAPI仕様(Swagger)とSandbox環境を通じて、内部開発者やパートナーの開発生産性を革新します。" },
+        "cap1": {
+          "title": "Unified API Gateway",
+          "desc": "マイクロサービスアーキテクチャの複雑さを解消し、すべてのAPIエンドポイントを単一の入口として統合制御します。"
+        },
+        "cap2": {
+          "title": "Protocol Transformation",
+          "desc": "レガシーSOAP、gRPC、WebSocketなどを最新のRESTful APIにリアルタイム変換し、異種システム間の接続を最大化します。"
+        },
+        "cap3": {
+          "title": "Developer Portal",
+          "desc": "自動化されたAPI仕様(Swagger)とSandbox環境を通じて、内部開発者やパートナーの開発生産性を革新します。"
+        },
         "trafficTitle": "Advanced",
         "trafficTitleAccent": "Traffic Control",
-        "traffic1": { "title": "Rate Limiting & Quotas", "desc": "ユーザー別、APIグループ別に柔軟な呼び出し制限ポリシーを適用してサービスの安定性を保証します。" },
-        "traffic2": { "title": "Real-time Monitoring", "desc": "全APIトラフィックフローを可視化し、異常の兆候が発生した際に即座にアラートを送信します。" },
-        "traffic3": { "title": "Zero-Downtime Updates", "desc": "APIバージョン管理とカナリアデプロイメントにより、中断のないインフラアップデートが可能です。" },
+        "traffic1": {
+          "title": "Rate Limiting & Quotas",
+          "desc": "ユーザー別、APIグループ別に柔軟な呼び出し制限ポリシーを適用してサービスの安定性を保証します。"
+        },
+        "traffic2": {
+          "title": "Real-time Monitoring",
+          "desc": "全APIトラフィックフローを可視化し、異常の兆候が発生した際に即座にアラートを送信します。"
+        },
+        "traffic3": {
+          "title": "Zero-Downtime Updates",
+          "desc": "APIバージョン管理とカナリアデプロイメントにより、中断のないインフラアップデートが可能です。"
+        },
         "chartEyebrow": "System Performance",
         "chartTitle": "Gateway Load",
         "chartBadge": "Stable",
@@ -602,101 +619,6 @@
         "btn": "SIカスタムAPI導入のお問い合わせ"
       }
     },
-    "commercelogi": {
-      "hero": {
-        "title": "コマースの限界を超え、物流の流れを支配する",
-        "desc": "フロント/バックエンドが分離された柔軟なSyncShopと, 完璧な動線・在庫最適化を導くAI Logistics Hub의 결합."
-      },
-      "syncshop": {
-        "title": "超柔軟コマースアーキテクチャ (SyncShop: Headless eCommerce)",
-        "subtitle": "バックエンドとフロントエンドが分離され、すべてのチャネルに即座に対応する超柔軟なコマースアーキテクチャ",
-        "pms": "PMS (商品)",
-        "pmsDesc": "[SKU在庫連動アニメーション]",
-        "oms": "OMS (注文/物流)",
-        "omsDesc": "[注文処理フローレンダリング]",
-        "sms": "SMS (マーケティング)",
-        "smsDesc": "[知能型クーポン発行ロジック]",
-        "ums": "UMS (会員)",
-        "umsDesc": "[会員ランクおよび特典同期]"
-      },
-      "logistics": {
-        "title": "データが予測し、AIが最適な経路を描きます。",
-        "subtitle": "AIアルゴリズムによるハブ別在庫の事前配置および配送ルートの最適化",
-        "optimized": "[最適化された直線経路マップ]",
-        "messy": "[複雑に絡み合った経路マップ]",
-        "alertTime": "配送時間を約22分短縮",
-        "alertDist": "移動距離を18%削減",
-        "btnAsIs": "初期化 (AS-IS)",
-        "btnToBe": "AI最適化実行 (TO-BE)"
-      },
-      "docai": {
-        "title": "知識資産化および文書自動化 (Document AI & Enterprise RAG)",
-        "subtitle": "非定型物流データをインテリジェントに構造化し、知識資産に転換",
-        "ocr": "OCR品質 97.4% 確保",
-        "chatUser": "最近の首都圏の配送遅延の原因を分析して",
-        "chatAi": "WMSログおよびVOC分析の結果, 首都圏Aハブへの物量集中が原因です。\n解決策: 首都圏Aハブの在庫を12%先行配置することを推奨します。"
-      },
-      "kpi": {
-        "title": "MLOpsおよび導入期待効果",
-        "subtitle": "インフラの最適化、コスト削減、生産性向上効果を数値で証明",
-        "card1": {
-          "title": "物流運営コストの削減",
-          "desc": "物流最適化アルゴリズム"
-        },
-        "card2": {
-          "title": "文書処理時間の短縮",
-          "desc": "手作業比 (日単位)"
-        },
-        "card3": {
-          "title": "モデルサービング応答速度",
-          "desc": "MLOpsモニタリング"
-        },
-        "card4": {
-          "title": "契約書構造化コストの削減",
-          "desc": "Document AI導入"
-        }
-      },
-      "cta": {
-        "title": "注文から配送まで、あなたのビジネスを完璧に同期(Sync)させてください。",
-        "btn": "Commerce & Logi導入のお問い合わせ"
-      },
-      "page": {
-        "badge": "SMART LOGISTICS",
-        "heroLine1": "空間の限界を超える",
-        "heroLine2": "インテリジェント物流システム",
-        "heroDesc": "EmpasyのCommerce & Logiソリューションは、リアルタイムデータ同期とAI予測により、倉庫自動化からラストマイル配送まで全プロセスを革新します。",
-        "btnDiagnose": "無料診断を受ける",
-        "btnDetail": "ソリューション詳細を見る",
-        "featuresTitle": "次世代コマース物流の3大コアドライバー",
-        "featuresSubtitle": "複雑なサプライチェーンをシンプルかつ透明に管理します。",
-        "feature1": {
-          "title": "インテリジェント倉庫自動化",
-          "desc": "AGVとロボットアームを連携したフルフィルメントセンター自動化により出荷処理量を200%向上し、人件費を最適化します。",
-          "b1": "AIピッキング最適化ルート",
-          "b2": "ロボット統合制御システム (WCS)",
-          "b3": "リアルタイム空間占有率分析"
-        },
-        "feature2": {
-          "title": "リアルタイム在庫管理 (IMS)",
-          "desc": "オン/オフラインチャネルの在庫データを0.1秒単位で同期し、欠品損失を防止して適正在庫水準を維持します。",
-          "b1": "オムニチャネル在庫統合",
-          "b2": "需要予測ベースの自動発注",
-          "b3": "賞味期限・LOT追跡管理"
-        },
-        "feature3": {
-          "title": "スマートルーティング配送",
-          "desc": "交通情報と配送密度をリアルタイム分析して最適ルートを生成し、配送状況を透明に可視化します。",
-          "b1": "AI配車・ルート最適化 (TMS)",
-          "b2": "顧客向けリアルタイム配送追跡ダッシュボード",
-          "b3": "到着予定時刻(ETA)誤差5分以内"
-        },
-        "statsTitle": "データで確認する\n物流革新の成果",
-        "bar1Label": "誤配送率削減",
-        "bar1Value": "-85%",
-        "bar2Label": "平均配送時間短縮",
-        "bar2Value": "-4.2時間"
-      }
-    },
     "usecases": {
       "title": "Trusted by Global Innovators",
       "desc": "複雑なエンタープライズ環境で証明されたビジネスの俊敏性。\nエムパシの技術力がグローバルリーダーのデジタル革新を完成させます。",
@@ -720,34 +642,43 @@
         "keyresults": "Key Results",
         "lg": {
           "subtitle": "グローバルSCMシステム構築と統合データパイプライン",
-          "r1l": "リードタイム削減", "r2l": "期待ROI"
+          "r1l": "リードタイム削減",
+          "r2l": "期待ROI"
         },
         "samsung": {
           "subtitle": "大規模AI半導体インフラ最適化・自動化運用",
-          "r1l": "インフラ稼働率", "r2l": "運営コスト削減"
+          "r1l": "インフラ稼働率",
+          "r2l": "運営コスト削減"
         },
         "hyosung": {
           "subtitle": "インテリジェント物流自動化ソリューション",
-          "r1l": "処理速度向上", "r2l": "誤配送率"
+          "r1l": "処理速度向上",
+          "r2l": "誤配送率"
         },
         "visang": {
           "subtitle": "クラウドベースデジタル教育プラットフォームへの全面移行",
-          "r1l": "同時接続ユーザー", "r2l": "ユーザー満足度"
+          "r1l": "同時接続ユーザー",
+          "r2l": "ユーザー満足度"
         },
         "skmagic": {
           "subtitle": "D2C直営モール高度化とリアルタイムOMS構築",
-          "r1l": "注文処理量増加", "r2l": "在庫精度"
+          "r1l": "注文処理量増加",
+          "r2l": "在庫精度"
         },
         "homeplus": {
           "subtitle": "オンデマンド配送物流最適化ルーティングシステム",
-          "r1l": "配送遅延削減", "r2l": "物流コスト削減"
+          "r1l": "配送遅延削減",
+          "r2l": "物流コスト削減"
         }
       },
       "impact": {
         "title": "Empasy Impact",
         "subtitle": "データが証明する確実なビジネス成果",
-        "s1l": "平均処理時間", "s2l": "顧客満足度",
-        "s3l": "平均ROI", "s4l": "年間コスト削減", "s4v": "平均2億ウォン"
+        "s1l": "平均処理時間",
+        "s2l": "顧客満足度",
+        "s3l": "平均ROI",
+        "s4l": "年間コスト削減",
+        "s4v": "平均2億ウォン"
       },
       "cases": {
         "lg": {
@@ -926,9 +857,18 @@
         "history": {
           "title": "History",
           "subtitle": "革新に向けたEmpasyの歩み",
-          "y2024": { "title": "Empasy Sync Series 2.0 リリース", "desc": "グローバル500社のうち10社導入確定" },
-          "y2023": { "title": "シリーズB資金調達 ($40M)", "desc": "AIインフラ部門 韓国革新企業大賞受賞" },
-          "y2022": { "title": "Empasy設立・法人化", "desc": "次世代リアルタイムデータ同期エンジン開発成功" }
+          "y2024": {
+            "title": "Empasy Sync Series 2.0 リリース",
+            "desc": "グローバル500社のうち10社導入確定"
+          },
+          "y2023": {
+            "title": "シリーズB資金調達 ($40M)",
+            "desc": "AIインフラ部門 韓国革新企業大賞受賞"
+          },
+          "y2022": {
+            "title": "Empasy設立・法人化",
+            "desc": "次世代リアルタイムデータ同期エンジン開発成功"
+          }
         },
         "leadership": {
           "title": "Leadership",

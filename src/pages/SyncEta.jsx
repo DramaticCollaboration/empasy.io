@@ -273,10 +273,61 @@ const SyncEta = () => {
                 </Link>
                 <button 
                   className="se-cta-btn-secondary"
-                  onClick={() => window.open('https://doc.empasy.com/synceta/', '_blank', 'noopener,noreferrer')}
+                  onClick={() => window.open('https://doc.empasy.com/synceta/intro.html', '_blank', 'noopener,noreferrer')}
                 >
                   {t('synceta.page.ctaBtn2')}
                 </button>
+              </div>
+              <div className="se-download-group" style={{ marginTop: '32px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
+                  <a 
+                    href="https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA+Setup+3.3.4.exe" 
+                    className="se-download-btn"
+                    style={{ 
+                      padding: '10px 20px', 
+                      borderRadius: '8px', 
+                      background: 'rgba(255,255,255,0.1)', 
+                      border: '1px solid rgba(255,255,255,0.2)',
+                      color: '#fff',
+                      fontSize: '0.9rem',
+                      textDecoration: 'none',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      transition: 'all 0.3s'
+                    }}
+                    onMouseOver={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.2)'}
+                    onMouseOut={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
+                    Windows
+                  </a>
+                  <a 
+                    href="https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA-3.3.4-arm64.dmg" 
+                    className="se-download-btn"
+                    style={{ 
+                      padding: '10px 20px', 
+                      borderRadius: '8px', 
+                      background: 'rgba(255,255,255,0.1)', 
+                      border: '1px solid rgba(255,255,255,0.2)',
+                      color: '#fff',
+                      fontSize: '0.9rem',
+                      textDecoration: 'none',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      transition: 'all 0.3s'
+                    }}
+                    onMouseOver={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.2)'}
+                    onMouseOut={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20.94c1.88-1.06 3.95-1.72 6-1.94 1.86-.2 3.59-.1 5 .24V4.24c-1.41-.34-3.14-.44-5-.24-2.05.22-4.12.88-6 1.94-1.88-1.06-3.95-1.72-6-1.94-1.86-.2-3.59-.1-5 .24v15.06c1.41-.34 3.14-.44 5-.24 2.05.22 4.12.88 6 1.94z"/><path d="M12 4.24V20.94"/></svg>
+                    macOS (Apple Silicon)
+                  </a>
+                </div>
+                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem' }}>
+                  * Linux version is in preparation
+                </p>
               </div>
             </div>
           </motion.div>

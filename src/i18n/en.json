@@ -8,7 +8,6 @@
       "synccms": "SyncCMS",
       "syncapim": "SyncAPIM",
       "synceta": "SyncEta",
-      "commerceLogi": "Commerce & Logi",
       "useCases": "Use Cases",
       "company": "Company"
     },
@@ -599,101 +598,6 @@
       "cta": {
         "title": "Remove unnecessary features and adopt only what you need.\nDesign your customized API ecosystem now.",
         "btn": "Inquire about SI Customized API"
-      }
-    },
-    "commercelogi": {
-      "hero": {
-        "title": "Beyond the Limits of Commerce, Mastering the Flow of Logistics",
-        "desc": "Combination of flexible SyncShop with decoupled front/backend and AI Logistics Hub leading optimal routing and inventory."
-      },
-      "syncshop": {
-        "title": "Ultra-flexible Commerce Architecture (SyncShop: Headless eCommerce)",
-        "subtitle": "Ultra-flexible commerce architecture with decoupled backend and frontend for instant channel response",
-        "pms": "PMS (Product)",
-        "pmsDesc": "[SKU Inventory Sync Animation]",
-        "oms": "OMS (Order/Logistics)",
-        "omsDesc": "[Order Processing Flow Rendering]",
-        "sms": "SMS (Marketing)",
-        "smsDesc": "[Intelligent Coupon Issuance Logic]",
-        "ums": "UMS (Member)",
-        "umsDesc": "[Member Grade & Benefit Sync]"
-      },
-      "logistics": {
-        "title": "Data Predicts, and AI Draws Optimal Routes.",
-        "subtitle": "Inventory pre-positioning by hub and delivery route optimization via AI algorithms",
-        "optimized": "[Optimized Straight Route Map]",
-        "messy": "[Complex Tangled Route Map]",
-        "alertTime": "Delivery time reduced by ~22 mins",
-        "alertDist": "Travel distance reduced by 18%",
-        "btnAsIs": "Reset (AS-IS)",
-        "btnToBe": "Execute AI Optimization (TO-BE)"
-      },
-      "docai": {
-        "title": "Knowledge Assetization & Document Automation (Document AI & Enterprise RAG)",
-        "subtitle": "Intelligently structure unstructured logistics data into knowledge assets",
-        "ocr": "OCR Quality 97.4% Secured",
-        "chatUser": "Analyze the cause of recent metropolitan delivery delays",
-        "chatAi": "WMS log and VOC analysis show volume concentration at Hub A.\nSolution: Recommend pre-positioning 12% of inventory at Hub A."
-      },
-      "kpi": {
-        "title": "MLOps & Expected ROI",
-        "subtitle": "Proving infrastructure optimization, cost reduction, and productivity gains with data",
-        "card1": {
-          "title": "Logistics Cost Reduction",
-          "desc": "Logistics optimization algorithm"
-        },
-        "card2": {
-          "title": "Document Processing Time",
-          "desc": "vs Manual (Daily basis)"
-        },
-        "card3": {
-          "title": "Model Serving Response",
-          "desc": "MLOps monitoring"
-        },
-        "card4": {
-          "title": "Document Structuring Cost",
-          "desc": "Document AI adoption"
-        }
-      },
-      "cta": {
-        "title": "From order to delivery, synchronize your business perfectly.",
-        "btn": "Inquire about Commerce & Logi"
-      },
-      "page": {
-        "badge": "SMART LOGISTICS",
-        "heroLine1": "Beyond the limits of space,",
-        "heroLine2": "Intelligent Logistics System",
-        "heroDesc": "Empasy's Commerce & Logi solution revolutionizes the entire process from warehouse automation to last-mile delivery through real-time data synchronization and AI prediction.",
-        "btnDiagnose": "Get Free Assessment",
-        "btnDetail": "View Solution Details",
-        "featuresTitle": "3 Core Drivers of Next-Gen Commerce Logistics",
-        "featuresSubtitle": "Manage complex supply chains simply and transparently.",
-        "feature1": {
-          "title": "Intelligent Warehouse Automation",
-          "desc": "Fulfillment center automation integrated with AGVs and robotic arms boosts throughput by 200% while optimizing labor costs.",
-          "b1": "AI-optimized picking routes",
-          "b2": "Robot integrated control system (WCS)",
-          "b3": "Real-time space occupancy analysis"
-        },
-        "feature2": {
-          "title": "Real-time Inventory Management (IMS)",
-          "desc": "Synchronize inventory data across online/offline channels every 0.1 seconds to prevent stockouts and maintain optimal inventory levels.",
-          "b1": "Omnichannel inventory integration",
-          "b2": "Demand forecast-based auto ordering",
-          "b3": "Expiry & LOT tracking management"
-        },
-        "feature3": {
-          "title": "Smart Routing Delivery",
-          "desc": "Analyze traffic and delivery density in real time to generate optimal routes and transparently visualize delivery status.",
-          "b1": "AI dispatch & route optimization (TMS)",
-          "b2": "Customer real-time delivery tracking dashboard",
-          "b3": "ETA accuracy within 5 minutes"
-        },
-        "statsTitle": "Logistics Innovation Results\nProven by Data",
-        "bar1Label": "Misdelivery rate reduction",
-        "bar1Value": "-85%",
-        "bar2Label": "Average delivery time reduction",
-        "bar2Value": "-4.2 Hours"
       }
     },
     "usecases": {

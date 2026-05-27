@@ -771,20 +771,6 @@ ul {
   p { font-size: 1.25rem; color: $gray; max-width: 800px; margin: 0 auto; }
 }
 
-.commerce-logi-grid {
-  padding: 80px 0;
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-  .item {
-    padding: 40px;
-    background: #f8f9fa;
-    border-radius: 20px;
-    h2 { margin-bottom: 15px; color: $primary; }
-  }
-}
 
 // Contact Form Styles
 .contact-form-section {
