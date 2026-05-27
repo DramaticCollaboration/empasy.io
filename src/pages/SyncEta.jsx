@@ -281,7 +281,8 @@ const SyncEta = () => {
               <div className="se-download-group" style={{ marginTop: '32px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
                   <a 
-                    href="https://drive.google.com/file/d/192C2s3EV0wvccPeUdfVGzSrJD-pfHOCD/view?usp=sharing"
+                    href="https://drive.google.com/uc?export=download&id=192C2s3EV0wvccPeUdfVGzSrJD-pfHOCD"
+                    target="_blank"
                     className="se-download-btn"
                     style={{ 
                       padding: '10px 20px', 
@@ -303,7 +304,8 @@ const SyncEta = () => {
                     Windows
                   </a>
                   <a 
-                    href="https://drive.google.com/file/d/1U4rcqsoEeY6tYpEms1HWnYUPAp-u3nL0/view?usp=sharing"
+                    href="https://drive.google.com/uc?export=download&id=1U4rcqsoEeY6tYpEms1HWnYUPAp-u3nL0"
+                    target="_blank"
                     className="se-download-btn"
                     style={{ 
                       padding: '10px 20px', 
