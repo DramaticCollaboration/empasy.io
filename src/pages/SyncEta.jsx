@@ -281,7 +281,7 @@ const SyncEta = () => {
               <div className="se-download-group" style={{ marginTop: '32px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
                   <a 
-                    href="https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA+Setup+3.3.4.exe" 
+                    href="https://drive.google.com/file/d/192C2s3EV0wvccPeUdfVGzSrJD-pfHOCD/view?usp=sharing"
                     className="se-download-btn"
                     style={{ 
                       padding: '10px 20px', 
@@ -303,7 +303,7 @@ const SyncEta = () => {
                     Windows
                   </a>
                   <a 
-                    href="https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA-3.3.4-arm64.dmg" 
+                    href="https://drive.google.com/file/d/1U4rcqsoEeY6tYpEms1HWnYUPAp-u3nL0/view?usp=sharing"
                     className="se-download-btn"
                     style={{ 
                       padding: '10px 20px', 
