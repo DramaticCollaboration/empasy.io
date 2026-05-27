@@ -280,9 +280,8 @@ const SyncEta = () => {
               </div>
               <div className="se-download-group" style={{ marginTop: '32px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
-                  <a 
-                    href="https://drive.google.com/uc?export=download&id=192C2s3EV0wvccPeUdfVGzSrJD-pfHOCD"
-                    target="_blank"
+                  <a
+                    href="https://synceta-release.s3.ap-northeast-2.amazonaws.com/syncETA_v0.0.1.exe"
                     className="se-download-btn"
                     style={{ 
                       padding: '10px 20px', 
@@ -303,9 +302,8 @@ const SyncEta = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
                     Windows
                   </a>
-                  <a 
-                    href="https://drive.google.com/uc?export=download&id=1U4rcqsoEeY6tYpEms1HWnYUPAp-u3nL0"
-                    target="_blank"
+                  <a
+                    href="https://synceta-release.s3.ap-northeast-2.amazonaws.com/syncETA_v0.0.1.dmg"
                     className="se-download-btn"
                     style={{ 
                       padding: '10px 20px', 
