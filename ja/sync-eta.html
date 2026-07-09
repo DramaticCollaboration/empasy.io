@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyncEta - AI 기반 차세대 웹 QA 및 테스트 자동화 플랫폼 | Empasy</title>
+    <meta name="description" content="SyncEta는 LLM과 Playwright 기반의 테스트 자동화 솔루션입니다. 시각적 변형을 감지하고 치유하는 자율형 QA 에이전트로 유지보수 비용을 혁신적으로 절감하세요.">
+    <meta name="keywords" content="엠파시, Empasy, IT 기업, B2B 솔루션, 소프트웨어 개발사, AI 에이전트, 엔터프라이즈 AI, SyncSeries, SyncEta, SyncCMS, 아이브 엠파시 아님, 인공지능 회사">
+    <meta name="author" content="Empasy">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .page-header { padding: 150px 0 80px; text-align: center; }
+        .page-title { font-size: 3.5rem; margin-bottom: 1rem; color: var(--text-primary); font-family: var(--font-mono); }
+        .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto; font-family: var(--font-mono); }
+    
+/* --------------------------------------
+   Global Enrichments for Sub-pages 
+-------------------------------------- */
+.hero-grid-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        linear-gradient(rgba(13, 148, 136, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(13, 148, 136, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 1;
+    opacity: 0.8;
+    pointer-events: none;
+}
+.hero-blur-circle {
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(13, 148, 136, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    top: -100px; right: -200px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Premium FAQ */
+.faq-item {
+    border: none !important;
+}
+.faq-item details {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+.faq-item details[open] {
+    box-shadow: 0 10px 25px rgba(13, 148, 136, 0.08);
+    border-color: rgba(13, 148, 136, 0.5);
+}
+.faq-item summary {
+    padding: 1.5rem 2rem !important;
+    background: transparent !important;
+}
+.faq-answer {
+    padding: 0 2rem 1.5rem !important;
+}
+
+/* ROI Calculator Panel */
+.roi-calculator {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    border-radius: 24px;
+    padding: 3rem 4rem;
+    color: white;
+    box-shadow: 0 30px 60px -12px rgba(0,0,0,0.4);
+    margin: 5rem auto;
+    text-align: center;
+    max-width: 900px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.roi-calculator::before {
+    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(13, 148, 136, 0.15) 0%, transparent 50%);
+    z-index: 0; pointer-events: none;
+}
+.roi-content { position: relative; z-index: 1; }
+.roi-number { font-size: 5rem; font-weight: 800; color: #2dd4bf; margin: 1rem 0; line-height: 1; font-family: var(--font-mono); }
+
+/* Live Preview Terminal */
+.live-preview {
+    background: #0f172a; border-radius: 12px; border: 1px solid #334155;
+    text-align: left; overflow: hidden; margin: 3rem auto 0;
+    max-width: 600px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+}
+.live-preview-header {
+    background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; border-bottom: 1px solid #334155;
+}
+.live-preview-dot { width: 12px; height: 12px; border-radius: 50%; }
+.live-preview-body { padding: 1.5rem; font-family: var(--font-mono); font-size: 0.95rem; color: #e2e8f0; line-height: 1.6; }
+
+    </style>
+
+        <meta name="geo.region" content="KR-11" />
+    <meta name="geo.placename" content="Seoul" />
+    <meta name="geo.position" content="37.5665;126.9780" />
+    <meta name="ICBM" content="37.5665, 126.9780" />
+    
+    
+    
+    
+    
+    
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Corporation",
+      "name": "엠파시(Empasy)",
+      "alternateName": ["엠파시 IT", "Empasy AI", "엠파시 소프트웨어"],
+      "url": "https://empasy.com/",
+      "description": "엠파시(Empasy)는 B2B 엔터프라이즈 AI 소프트웨어 개발 IT 기업입니다."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SyncEta",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Windows, macOS, Web",
+      "description": "SyncEta는 엠파시(Empasy)가 개발한 AI 자율 주행 QA 및 테스트 자동화 플랫폼입니다.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      }
+    }
+    </script>
+
+        
+    
+    
+    
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "기존 테스트 스크립트 도구(Selenium 등)와 무엇이 다른가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SyncEta는 UI 디자인이 변경되어도 Vision-LLM이 스스로 새로운 요소를 찾아내어 테스트를 자가 치유합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "웹과 모바일 뷰 모두 지원하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네, 웹 브라우저 기반 테스트뿐 아니라 다양한 디바이스 환경에서의 반응형 테스트를 모두 지원합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "QA 리소스 절감 효과는 어느 정도인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "테스트 스크립트 유지보수에 들어가던 인력과 시간을 80% 이상 절감할 수 있습니다."
+      }
+    }
+  ]
+}
+</script>
+
+    <!-- SEO & AIO Tags -->
+    <link rel="canonical" href="https://empasy.com/ja/sync-eta.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.com/sync-eta.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.com/en/sync-eta.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/sync-eta.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.com/sync-eta.html" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="SyncEta - AI次世代Web QA＆テスト自動化プラットフォーム | Empasy">
+    <meta property="og:description" content="SyncEtaは、Vision-LLMを活用してUIの変更に自律的に適応し、壊れたテストスクリプトを自己修復（Self-Healing）するインテリジェントなQAエージェントです。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://empasy.com/ja/sync-eta.html">
+    <meta property="og:image" content="https://empasy.com/empasy-logo.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SyncEta - AI次世代Web QA＆テスト自動化プラットフォーム | Empasy">
+    <meta name="twitter:description" content="SyncEtaは、Vision-LLMを活用してUIの変更に自律的に適応し、壊れたテストスクリプトを自己修復（Self-Healing）するインテリジェントなQAエージェントです。">
+    <meta name="twitter:image" content="https://empasy.com/empasy-logo.png">
+    
+    <!-- AI & Crawling Optimization -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+</head>
+<body class="theme-eta">
+    <!-- AI Search Optimization (AIO) Context Block -->
+    <article class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
+        <h1>What is Empasy SyncEta?</h1>
+        <p>SyncEta is a Self-Healing QA (Quality Assurance) Agent developed by Empasy. Powered by Vision-LLM, it completely replaces fragile, script-based legacy testing tools like Selenium by visually understanding user interfaces like a human tester.</p>
+        <h2>Key Features of SyncEta</h2>
+        <ul>
+            <li><strong>Self-Healing Automation:</strong> Automatically updates its own test scripts when a website's UI or DOM structure changes, eliminating test maintenance overhead.</li>
+            <li><strong>Vision-LLM Testing:</strong> Evaluates not just code, but visual aesthetics, layout integrity, and functional workflows purely through visual understanding.</li>
+            <li><strong>Natural Language Test Generation:</strong> Create complex end-to-end test scenarios simply by describing them in everyday language.</li>
+        </ul>
+        <p>SyncEta ensures zero-defect software delivery by acting as an autonomous QA team that works 24/7, radically improving software reliability and release velocity.</p>
+    </article>
+
+                            <header class="glass-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="../empasy-logo.png" alt="EMPASY" class="logo-img"></a>
+            </div>
+            <nav class="nav-links">
+    <!-- 1. Company Group -->
+    <div class="dropdown">
+        <a href="index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+        <div class="dropdown-content">
+            <a href="index.html#philosophy" data-i18n="nav.about">회사 철학</a>
+            <a href="vision.html" data-i18n="nav.vision">비전 2026</a>
+            <a href="team.html" data-i18n="nav.team">우리의 이야기</a>
+        </div>
+    </div>
+    
+    <!-- 2. Sync Series Group -->
+    <div class="dropdown">
+        <a href="index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+        <div class="dropdown-content">
+            <a href="sync-boot.html">SyncBoot</a>
+            <a href="sync-cms.html">SyncCMS</a>
+            <a href="sync-crawl.html">SyncCrawl</a>
+            <a href="sync-eta.html">SyncEta</a>
+        </div>
+    </div>
+    
+    <a href="clients.html" data-i18n="nav.clients">레퍼런스</a>
+    
+    <!-- Top-level SyncEta link added as requested -->
+    <a href="sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
+</nav>
+            <div class="nav-actions">
+                <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
+                    <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:1rem; padding: 0.5rem; cursor: pointer; display:flex; align-items:center; gap:6px;">
+                        <span class="lang-label"><img src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> JP</span>
+                    </button>
+                    <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
+                        <a href="../index.html" style="padding: 0.5rem 1rem;"><img src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
+                        <a href="../en/index.html" style="padding: 0.5rem 1rem;"><img src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
+                        <a href="../ja/index.html" style="padding: 0.5rem 1rem;"><img src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JP</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header fade-in-up" style="position: relative; overflow: hidden;">
+            <div class="container" style="position: relative; z-index: 10;">
+                <span class="badge" data-i18n="eta.badge">Self-Healing QA Agent</span>
+                <h1 class="page-title">SyncEta</h1>
+                <p class="page-subtitle">인간의 눈처럼 화면을 이해하고 스스로 테스트 시나리오를 복구하는 무결점 AI QA 엔지니어입니다.</p>
+                
+                <div class="mt-4 flex-center" style="gap: 1rem;">
+                    <a href="../SyncEta/index.html" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 30px; box-shadow: 0 4px 15px rgba(13, 148, 136, 0.3);">🚀 SaaS 플랫폼 시작하기</a>
+                </div>
+
+                <div class="mt-4" style="max-width: 400px; margin: 2rem auto 0;">
+                    <div class="anim-eta-scanner">
+                        <span style="color: var(--primary-color); font-weight: bold;">Detecting UI anomalies...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section pt-0 fade-in-up delay-1">
+            <div class="vs-container mb-4">
+                <div class="vs-box vs-legacy">
+                    <h4 data-i18n="eta.vs.legacy.title">기존 스크립트 기반 QA</h4>
+                    <ul class="vs-list">
+                        <li data-i18n="eta.vs.legacy.1">UI 디자인이나 구조가 바뀌면 식별자 오류로 테스트 실패</li>
+                        <li data-i18n="eta.vs.legacy.2">픽셀 단위 비교로 인한 빈번한 False Positive 발생</li>
+                        <li data-i18n="eta.vs.legacy.3">스크립트 유지보수에 막대한 개발 리소스 지속 투입</li>
+                    </ul>
+                </div>
+                <div class="vs-box vs-agent">
+                    <h4 data-i18n="eta.vs.agent.title">SyncEta 에이전트</h4>
+                    <ul class="vs-list">
+                        <li data-i18n="eta.vs.agent.1">Vision LLM을 활용한 시각적 식별자 자동 탐색 및 자가 치유</li>
+                        <li data-i18n="eta.vs.agent.2">「ユーザーの認知」に基づいた文脈的な画面崩壊の判断。</li>
+                        <li data-i18n="eta.vs.agent.3">오류 검출 시 원인 분석 및 해결 코드를 관제탑으로 역제안</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-header text-center mt-4 mb-4">
+                <h2 class="section-title">핵심 기능 (Key Features)</h2>
+            </div>
+            <div class="rich-features">
+                <div class="feature-item">
+                    <span class="feature-icon">👁️</span>
+                    <h3>Vision LLM 시각 인식</h3>
+                    <p>단순한 DOM 구조(XPath/CSS) 의존을 탈피합니다. AI가 사람처럼 화면을 '보고' 버튼의 위치나 디자인이 변경되어도 정확히 대상 엘리먼트를 추적합니다.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🩹</span>
+                    <h3>실시간 자가 치유 (Self-Healing)</h3>
+                    <p>테스트 실행 중 UI 식별자가 깨진 것을 발견하면, 에이전트가 화면 문맥을 분석하여 새로운 식별자를 스스로 찾고 코드를 수정하여 테스트를 완주합니다.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">📝</span>
+                    <h3>자연어 기반 시나리오 자동 생성</h3>
+                    <p>사용자 스토리나 기획서를 업로드하면, AI가 BDD(Behavior-Driven Development) 스타일의 테스트 시나리오와 Playwright 스크립트를 자동 생성합니다.</p>
+                </div>
+            </div>
+
+            <div class="section-header text-center mt-4 mb-4" style="margin-top: 5rem;">
+                <h2 class="section-title">작동 프로세스 (How it Works)</h2>
+            </div>
+            <div class="process-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>자연어 시나리오 입력</h4>
+                        <p>"로그인 후 장바구니에 아이템을 담고 결제 페이지로 이동해"와 같은 문장을 입력합니다.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>시각적 회귀 및 기능 테스트 수행</h4>
+                        <p>SyncEta가 브라우저를 띄워 사람과 동일한 속도 및 인지 방식으로 화면을 탐색하며 동작합니다.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>오류 분석 및 리포팅</h4>
+                        <p>단순 실패 보고가 아닌, '어떤 변경으로 인해 실패했는지' 원인을 분석하고 해결 스크립트를 첨부해 리포팅합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="faq-section fade-in-up delay-2">
+            <h2>よくあるご質問 (FAQ)</h2>
+            <div class="faq-item">
+                <details>
+                    <summary>기존 테스트 스크립트 도구(Selenium 등)와 무엇이 다른가요?</summary>
+                    <div class="faq-answer">SyncEta는 UI 디자인이 변경되어도 Vision-LLM이 스스로 새로운 요소를 찾아내어 테스트를 자가 치유합니다.</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>웹과 모바일 뷰 모두 지원하나요?</summary>
+                    <div class="faq-answer">네, 웹 브라우저 기반 테스트뿐 아니라 다양한 디바이스 환경에서의 반응형 테스트를 모두 지원합니다.</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>QA 리소스 절감 효과는 어느 정도인가요?</summary>
+                    <div class="faq-answer">테스트 스크립트 유지보수에 들어가던 인력과 시간을 80% 이상 절감할 수 있습니다.</div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer mt-4">
+        <div class="container footer-content text-center">
+            <h2 class="footer-title" data-i18n="footer.title">Empasyと共にビジネスを加速させましょう</h2>
+            <div class="footer-actions mt-4">
+                <a href="contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p data-i18n="footer.copyright">© 2026 Empasy. All rights reserved.</p>
+        <!-- SEO Semantic IT Company Info -->
+        <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
+            <address style="font-style: normal; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
+                <strong>(주)엠파시 (Empasy IT Corp.)</strong><br>
+                エンタープライズB2BソフトウェアおよびAIエージェント（SyncSeries）開発会社<br>
+                Seoul, South Korea
+            </address>
+        </div>
+
+        </div>
+    </footer>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
