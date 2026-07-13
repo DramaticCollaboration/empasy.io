@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 0.5 Mobile Menu Dropdown Toggle
-    const dropdownBtns = document.querySelectorAll('.nav-links .dropdown > .dropbtn');
+    const dropdownBtns = document.querySelectorAll('.nav-container .dropdown > .dropbtn');
     dropdownBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             if (window.innerWidth <= 1023) {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const dropdown = btn.parentElement;
                 
                 // Close other dropdowns
-                document.querySelectorAll('.nav-links .dropdown').forEach(d => {
+                document.querySelectorAll('.nav-container .dropdown').forEach(d => {
                     if (d !== dropdown) d.classList.remove('open');
                 });
                 
