@@ -23,6 +23,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 0.5 Mobile Menu Dropdown Toggle
+    const dropdownBtns = document.querySelectorAll('.nav-links .dropdown > .dropbtn');
+    dropdownBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            if (window.innerWidth <= 1023) {
+                e.preventDefault(); // Prevent jumping to link on mobile
+                const dropdown = btn.parentElement;
+                
+                // Close other dropdowns
+                document.querySelectorAll('.nav-links .dropdown').forEach(d => {
+                    if (d !== dropdown) d.classList.remove('open');
+                });
+                
+                dropdown.classList.toggle('open');
+            }
+        });
+    });
+
     // 1. Intersection Observer for Fade-In-Up Animations
     const animatedElements = document.querySelectorAll('.fade-in-up');
     

@@ -1420,7 +1420,11 @@ h1, h2, h3, h4 {
   .nav-links > a, .dropdown > .dropbtn { padding: 15px 10px; font-size: 1.1rem; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; width: 100%; text-align: left; }
   .dropdown { width: 100%; }
   .dropdown-content { position: static; box-shadow: none; border: none; padding-left: 0; display: none; transform: none; background: #f8fafc; margin-top: 5px; border-radius: 8px; }
-  .dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content { display: block; animation: none; }
+  
+  /* Disable hover expanding on mobile, use JS .open class instead */
+  .dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content { display: none; }
+  .dropdown.open .dropdown-content { display: block; animation: none; }
+  
   .dropdown-content a { padding: 12px 20px; border-bottom: none; font-size: 0.95rem; display: block; text-align: left; }
   
   /* Actions Styling (Lang & Contact) */
