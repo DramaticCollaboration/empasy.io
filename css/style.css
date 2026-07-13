@@ -1443,6 +1443,23 @@ h1, h2, h3, h4 {
   
   img, video, iframe, canvas { max-width: 100% !important; height: auto !important; }
   
+  /* Fix 3D Code Box Overflow */
+  .anim-cms-typing {
+      transform: none !important;
+      animation: none !important;
+      width: 100%;
+      max-width: 100vw;
+      box-sizing: border-box;
+      font-size: 0.85rem;
+      padding: 1.5rem 1rem !important;
+      overflow-x: auto;
+      text-align: left;
+      margin: 0 auto;
+  }
+  .anim-cms-typing::after {
+      font-size: 0.85rem;
+  }
+  
   /* Fallback: Make sure content is visible even if JS observer delays */
   .fade-in-up { opacity: 1 !important; transform: none !important; transition: none !important; }
   
