@@ -139,10 +139,21 @@
             <div class="glow-card" style="padding: 2.5rem; text-align: center;">
                 <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Windows"
                     style="width: 64px; margin-bottom: 1.5rem;">
-                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">Windows (x64 / arm64)</h3>
+                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">Windows (arm64)</h3>
                 <p style="color: var(--text-secondary); margin-bottom: 2rem;">Windows 10, 11 지원</p>
-                <a href="https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA_release_0.0.76.exe"
+                <a id="winArm64"
                     class="btn btn-primary" style="width: 100%; box-shadow: 0 4px 15px rgba(13,148,136,0.3);">다운로드
+                    (.exe)</a>
+            </div>
+
+            <!-- Windows -->
+            <div class="glow-card" style="padding: 2.5rem; text-align: center;">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Windows"
+                     style="width: 64px; margin-bottom: 1.5rem;">
+                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">Windows (x64)</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Windows 10, 11 지원</p>
+                <a id="winX64"
+                   class="btn btn-primary" style="width: 100%; box-shadow: 0 4px 15px rgba(13,148,136,0.3);">다운로드
                     (.exe)</a>
             </div>
 
@@ -152,7 +163,7 @@
                     style="width: 64px; margin-bottom: 1.5rem;">
                 <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">macOS (Apple Silicon)</h3>
                 <p style="color: var(--text-secondary); margin-bottom: 2rem;">M1, M2, M3 칩셋 전용</p>
-                <a href="https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA_release_0.0.76-arm64.dmg"
+                <a id="macSilicon"
                     class="btn btn-primary" style="width: 100%; box-shadow: 0 4px 15px rgba(13,148,136,0.3);">다운로드
                     (.dmg)</a>
             </div>
@@ -163,7 +174,7 @@
                     style="width: 64px; margin-bottom: 1.5rem;">
                 <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">macOS (Intel)</h3>
                 <p style="color: var(--text-secondary); margin-bottom: 2rem;">Intel 프로세서 기반 Mac</p>
-                <a href="https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA_release_0.0.76-x64.dmg"
+                <a id="macIntel"
                    class="btn btn-primary" style="width: 100%; box-shadow: 0 4px 15px rgba(13,148,136,0.3);">다운로드
                     (.dmg)</a>
             </div>
@@ -182,6 +193,15 @@
     <script src="js/main.js"></script>
     <script>
         setTimeout(() => { document.querySelectorAll('.fade-in-up').forEach(el => el.classList.add('visible')); }, 300);
+
+        fetch('/release-config.json?t=' + Date.now())
+            .then(res => res.json())
+            .then(cfg => {
+                document.getElementById('winArm64').href = cfg.files.winArm64;
+                document.getElementById('winX64').href = cfg.files.winX64;
+                document.getElementById('macIntel').href = cfg.files.macIntel;
+                document.getElementById('macSilicon').href = cfg.files.macSilicon;
+            });
     </script>
     <script src="js/i18n.js"></script>
 </body>
