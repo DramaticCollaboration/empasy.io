@@ -1,4 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Mobile Menu Injection
+    const navContainer = document.querySelector('.nav-container');
+    const navLinksEl = document.querySelector('.nav-links');
+    const navActions = document.querySelector('.nav-actions');
+
+    if (navContainer && navLinksEl) {
+        const mobileBtn = document.createElement('button');
+        mobileBtn.className = 'mobile-menu-btn';
+        mobileBtn.innerHTML = `
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        `;
+        navContainer.appendChild(mobileBtn);
+
+        mobileBtn.addEventListener('click', () => {
+            navLinksEl.classList.toggle('active');
+            if (navActions) navActions.classList.toggle('active');
+            navContainer.classList.toggle('active');
+        });
+    }
+
+    // 0.5 Mobile Menu Dropdown Toggle
+    const dropdownBtns = document.querySelectorAll('.nav-container .dropdown > .dropbtn');
+    dropdownBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            if (window.innerWidth <= 1023) {
+                e.preventDefault(); // Prevent jumping to link on mobile
+                const dropdown = btn.parentElement;
+                
+                // Close other dropdowns
+                document.querySelectorAll('.nav-container .dropdown').forEach(d => {
+                    if (d !== dropdown) d.classList.remove('open');
+                });
+                
+                dropdown.classList.toggle('open');
+            }
+        });
+    });
+
     // 1. Intersection Observer for Fade-In-Up Animations
     const animatedElements = document.querySelectorAll('.fade-in-up');
     
