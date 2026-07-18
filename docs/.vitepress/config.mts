@@ -6,7 +6,7 @@ const GITHUB_URL = "https://github.com/DramaticCollaboration/";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: process.env.BASE_URL || "/",
+  base: process.env.BASE_URL || "/docs/",
   lang: "ko-KR",
   title: "살아 있는 소프트웨어는 엠파시가 만듭니다",
   description: "Empathic Synergy (공감 시너지)를 통해 고객을 이해하고 지지하며 함께 목표를 달성합니다.",
