@@ -1,7 +1,7 @@
 {
   "scripts": {
     "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build && cpy CNAME .vitepress/dist/",
+    "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
     "export-pdf": "press-export-pdf export .",
     "prettier": "prettier . --write"
