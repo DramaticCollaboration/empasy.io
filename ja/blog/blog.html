@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技術ブログとインサイト | Empasy</title>
+    <meta name="description" content="Empasyチームからの最新の技術インサイトとアーキテクチャをお読みください。">
+    <meta name="keywords" content="기술 블로그, AI 도입, AI 에이전트, AI Ops, MSA 전환, RPA 대체, 엔터프라이즈 AI, 엠파시, Empasy">
+    <meta name="author" content="Empasy">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "엠파시(Empasy) 기술 블로그",
+      "url": "https://empasy.com/blog.html",
+      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
+      "publisher": {
+        "@type": "Organization",
+        "name": "엠파시(Empasy)",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.com/empasy-logo.png"
+        }
+      }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <meta name="geo.region" content="KR-11" />
+    <meta name="geo.placename" content="Seoul" />
+    <meta name="geo.position" content="37.5665;126.9780" />
+    <meta name="ICBM" content="37.5665, 126.9780" />
+
+    <!-- SEO & AIO Tags -->
+    <link rel="canonical" href="https://empasy.com/ja/blog/blog.html">
+    <meta property="og:title" content="技術ブログとインサイト | Empasy">
+    <meta property="og:description" content="Empasyチームからの最新の技術インサイトとアーキテクチャをお読みください。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://empasy.com/blog.html">
+    <meta property="og:image" content="https://empasy.com/empasy-logo.png">
+    
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="glass-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="../../ja/pages/index.html"><img src="../../assets/images/empasy-logo.png" alt="EMPASY" class="logo-img"></a>
+            </div>
+            <nav class="nav-links">
+                <!-- 1. Company Group -->
+                <div class="dropdown">
+                    <a href="../../ja/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="../../ja/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
+                        <a href="../../ja/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
+                        <a href="../../ja/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
+                    </div>
+                </div>
+                
+                <!-- 2. Sync Series Group -->
+                <div class="dropdown">
+                    <a href="../../ja/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="../../ja/solutions/sync-boot.html">SyncBoot</a>
+                        <a href="../../ja/solutions/sync-cms.html">SyncCMS</a>
+                        <a href="../../ja/solutions/sync-crawl.html">SyncCrawl</a>
+                        <a href="../../ja/solutions/sync-eta.html">SyncEta</a>
+                    </div>
+                </div>
+
+                <!-- 3. Insights Group (NEW) -->
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="../../ja/blog/blog.html">Tech Blog</a>
+                        <a href="../../ja/pages/faq.html">FAQ</a>
+                        <a href="../../ja/blog/case-study-finance.html">고객 사례 상세</a>
+                    </div>
+                </div>
+                
+                <a href="../../ja/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
+                
+                <a href="../../ja/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
+            </nav>
+            <div class="nav-actions">
+                <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
+                    <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:1rem; padding: 0.5rem; cursor: pointer; display:flex; align-items:center; gap:6px;">
+                        <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> JA</span>
+                    </button>
+                    <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
+                        <a href="../../ko/blog/blog.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
+                        <a href="../../en/blog/blog.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
+                        <a href="../../ja/blog/blog.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JA</a>
+                    </div>
+                </div>
+                <a href="../../ja/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 150px; min-height: 80vh;">
+        <div class="page-header text-center fade-in-up mb-4">
+            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Insights</span>
+            <h1 class="page-title" style="font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 1rem; color: var(--text-primary);">Tech Blog</h1>
+            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">エンタープライズAI導入のための実践的なガイドと最新技術トレンドをご確認ください。</p>
+        </div>
+        
+        <section class="section" style="padding-top: 2rem;">
+                        <div class="container">
+                <div class="blog-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+                    <!-- Blog Card 8 -->
+                    <a href="../../ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
+                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Vision & Strategy</div>
+                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">Boon to Business by Agility：Empasyが宣言する2026年ビジョンと自律運用エコシステムの未来</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">コンテキストの接続(MCP)を通じて企業のコーディング、品質検証、意思決定の全プロセスを自律化するEmpasyの2026ビジョン宣言文。</p>
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
+                                    <span>2026-07-18</span>
+                                    <span style="color: var(--primary-color); font-weight: 600;">続きを読む ➔</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Blog Card 7 -->
+                    <a href="../../ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
+                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Security & Decision Intelligence</div>
+                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">オンプレミスセキュリティを貫く最上位意思決定インテリジェンス：SyncInsightのマルチエージェント交差分析アーキテクチャ</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">社内閉鎖網環境でContext-Aware RAGとマルチエージェントを稼働させ、データ主権を守りながら経営インサイトを導き出すSyncInsight。</p>
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
+                                    <span>2026-07-18</span>
+                                    <span style="color: var(--primary-color); font-weight: 600;">続きを読む ➔</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Blog Card 6 -->
+                    <a href="../../ja/blog/syncverse-mcp-ai-orchestration-architecture.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
+                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">AI Orchestration & MCP</div>
+                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">エージェント間のコンテキストを繋ぐ：MCPベースの次世代AI開発エコシステム、SyncVerseオーケストレーションアーキテクチャ</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">グローバル標準MCP(Model Context Protocol)に基づいてコーディング、QA、デプロイエージェントを繋ぐZero-Touch自律運用エコシステム。</p>
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
+                                    <span>2026-07-18</span>
+                                    <span style="color: var(--primary-color); font-weight: 600;">続きを読む ➔</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Blog Card 5 -->
+                    <a href="../../ja/blog/syncboot-cloud-native-msa-architecture.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
+                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Cloud Native & Microservices</div>
+                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">クラウドネイティブの心臓部：エンタープライズMSA移行を加速するSyncBoot分散アーキテクチャ分析</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Seata、Sentinel、SkyWalkingなど100%オープンソースを統合し、複雑なマイクロサービスインフラ環境を即座に構築するSyncBootアーキテクチャ。</p>
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
+                                    <span>2026-07-18</span>
+                                    <span style="color: var(--primary-color); font-weight: 600;">続きを読む ➔</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Blog Card 4 -->
+                    <a href="../../ja/blog/synccms-development-oriented-architecture.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
+                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Frontend & CMS Ecosystem</div>
+                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">ベンダーロックインの克服：柔軟なビジネス拡張のためのSyncCMS「開発指向(Development-Oriented)」アーキテクチャ</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Spring BootベースのオープンアーキテクチャとFreeMarkerレンダリングエンジンを通じてエンタープライズの無限の拡張をサポートするSyncCMSの深掘り分析。</p>
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
+                                    <span>2026-07-18</span>
+                                    <span style="color: var(--primary-color); font-weight: 600;">続きを読む ➔</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Blog Card 3 -->
+                    <a href="../../ja/blog/synceta-intelligent-regression-testing-pipeline.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
+                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">AI Ops & QA Automation</div>
+                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">機械語(JSON)からビジネス言語(Excel)へ：SyncETAのインテリジェント回帰テストパイプラインアーキテクチャ</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">LLMとPlaywright MCPを組み合わせてNo-CodeベースのインテリジェントQA自動化と視覚的自己修復(Self-Healing)エンジンを実現したSyncETAアーキテクチャのレビュー。</p>
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
+                                    <span>2026-07-18</span>
+                                    <span style="color: var(--primary-color); font-weight: 600;">続きを読む ➔</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Blog Card 2 -->
+                    <a href="../../ja/blog/empasy-core-solution-architecture-syncverse.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
+                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Tech Trends & Architecture</div>
+                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">AI自律運用エコシステム(SyncVerse)を支えるコアソリューションアーキテクチャ分析</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">SyncEta、SyncCMS、SyncBoot、SyncVerse、SyncInsightなど、Empasyの5大コアソリューションの技術的課題とエンジニアリングによる解決策を深掘りします。</p>
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
+                                    <span>2026-07-18</span>
+                                    <span style="color: var(--primary-color); font-weight: 600;">続きを読む ➔</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Blog Card 1 -->
+                    <a href="../../ja/blog/enterprise-data-pipeline-automation.html" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
+                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">AI Ops & Architecture</div>
+                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">LLMを活用したエンタープライズデータパイプライン自動化の事例</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">SyncSeriesを活用して非構造化データを構造化し、セキュリティが重要なエンタープライズ環境でLLMをどのように活用できるかを解説します。</p>
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
+                                    <span>2026-07-15</span>
+                                    <span style="color: var(--primary-color); font-weight: 600;">続きを読む ➔</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-4">
+        <div class="container text-center fade-in-up">
+            <h2 class="footer-title" data-i18n="footer.title">엠파시와 함께 비즈니스를 가속화하세요</h2>
+            <div class="mt-4">
+                <a href="../../ja/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p data-i18n="footer.copyright">© 2026 Empasy. All rights reserved.</p>
+            <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
+                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px;">
+                    <a href="https://github.com/DramaticCollaboration" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="../../docs/index.html" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-book"></i> Documentation
+                    </a>
+                </div>
+                <address style="font-style: normal; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
+                    <strong>(주)엠파시 (Empasy IT Corp.)</strong><br>
+                    엔터프라이즈 B2B 소프트웨어 및 AI 에이전트(SyncSeries) 개발사<br>
+                    Seoul, South Korea
+                </address>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>
