@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko-KR" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Issue Creation Prompt | 살아 있는 소프트웨어는 엠파시가 만듭니다</title>
+    <meta name="description" content="Introducing core principles for using Jira efficiently. ✅ Discover how to increase project transparency and team productivity through issue allocation rules, ✅ essential commenting guides, and ✅ status management know-how. This is a guide for team collaboration.">
+    <meta name="generator" content="VitePress v2.0.0-alpha.18">
+    <link rel="preload stylesheet" href="/docs/assets/style.B54n-KfB.css" as="style">
+    <link rel="preload stylesheet" href="/docs/vp-icons.css" as="style">
+    <script type="module" src="/docs/assets/chunks/metadata.593a3c03.js"></script>
+    <script type="module" src="/docs/assets/app.S8SCI_cG.js"></script>
+    <link rel="preload" href="/docs/assets/inter-roman-latin.Cy4MYw_J.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/docs/assets/chunks/theme.Cx5g01sx.js">
+    <link rel="modulepreload" href="/docs/assets/chunks/framework.DWKxYYJ1.js">
+    <link rel="modulepreload" href="/docs/assets/en_agile_createIssue.md.8P9iT7uJ.lean.js">
+    <link rel="icon" href="/images/favicon.ico">
+    <meta name="author" content="엠파시">
+    <meta name="keywords" content="LLM prompt generation, prompt-based issue writing, AI prompt guide, prompt template, AI-based development support, automated issue creation, LLM prompt guide, sample data generation, UI scenario writing, test automation tool, automated test scenario, QA efficiency, software onboarding">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="naver-site-verification" content="3102a764f7ad54fe27ab3083cd0a7b0f647be4c7">
+    <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
+    <link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="msapplication-TileImage" content="/images/icons/mstile-150x150.png">
+    <meta name="msapplication-TileColor" content="#3eaf7c">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&amp;display=swap" rel="stylesheet">
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C" async></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag(`js`,new Date),gtag(`config`,`G-6BNPM5TX7C`);</script>
+    <script>(function(e,t,n,r,i){e[r]=e[r]||[],e[r].push({"gtm.start":new Date().getTime(),event:`gtm.js`});var a=t.getElementsByTagName(n)[0],o=t.createElement(n),s=r==`dataLayer`?``:`&l=`+r;o.async=!0,o.src=`https://www.googletagmanager.com/gtm.js?id=`+i+s,a.parentNode.insertBefore(o,a)})(window,document,`script`,`dataLayer`,`GTM-KPMTVVXN`);</script>
+    <script>navigator.serviceWorker.getRegistrations().then(e=>{for(let t of e)t.unregister()});</script>
+    <script id="check-dark-mode">(()=>{let e=localStorage.getItem(`vitepress-theme-appearance`)||`auto`,t=window.matchMedia(`(prefers-color-scheme: dark)`).matches;(!e||e===`auto`?t:e===`dark`)&&document.documentElement.classList.add(`dark`)})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle(`mac`,/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+    <meta property="og:title" content="Issue Creation Prompt Usage Guide">
+    <meta property="og:description" content="A step-by-step guide on how to efficiently create issues. A practical guide including the use of LLM prompts, automatic generation of sample data/scenarios, and writing UI scenarios.">
+    <meta property="og:image" content="https://doc.empasy.com/images/favicon.png">
+    <meta property="og:url" content="https://doc.empasy.com/agile/createIssue.html">
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-92f6b69a><!--[--><!--]--><!--[--><span tabindex="-1" data-v-4ef46c01></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-4ef46c01>Skip to content</a><!--]--><!----><header class="VPNav" data-v-92f6b69a data-v-bcdccd72><div class="VPNavBar top" data-v-bcdccd72 data-v-a0955d45><div class="wrapper" data-v-a0955d45><div class="container" data-v-a0955d45><div class="title" data-v-a0955d45><div class="VPNavBarTitle" data-v-a0955d45 data-v-3f17f298><a class="title" href="/docs/" data-v-3f17f298><!--[--><!--]--><!--[--><!--[--><!--[--><img class="VPImage dark logo" src="/docs/images/logo-dark.svg" alt data-v-11ec8f41><!--]--><!--[--><img class="VPImage light logo" src="/docs/images/logo.svg" alt data-v-11ec8f41><!--]--><!--]--><!--]--><span data-v-3f17f298>살아 있는 소프트웨어는 엠파시가 만듭니다</span><!--[--><!--]--></a></div></div><div class="content" data-v-a0955d45><div class="content-body" data-v-a0955d45><!--[--><!--]--><div class="VPNavBarSearch search" data-v-a0955d45 data-v-14f98616><!--[--><button type="button" class="VPNavBarSearchButton" aria-label="Search" aria-keyshortcuts="/ control+k meta+k" data-v-14f98616 data-v-69b6e94e><span class="vpi-search" aria-hidden="true" data-v-69b6e94e></span><span class="text" data-v-69b6e94e>Search</span><span class="keys" aria-hidden="true" data-v-69b6e94e><kbd class="key-cmd" data-v-69b6e94e>⌘</kbd><kbd class="key-ctrl" data-v-69b6e94e>Ctrl</kbd><kbd data-v-69b6e94e>K</kbd></span></button><!----><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-a0955d45 data-v-a2048222><span id="main-nav-aria-label" class="visually-hidden" data-v-a2048222> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/docs/" tabindex="0" data-v-a2048222 data-v-c94474d9><!--[--><span data-v-c94474d9>홈</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/docs/synceta" tabindex="0" data-v-a2048222 data-v-c94474d9><!--[--><span data-v-c94474d9>SyncETA</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/docs/synccrawl" tabindex="0" data-v-a2048222 data-v-c94474d9><!--[--><span data-v-c94474d9>SyncCrawl</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/docs/syncboot" tabindex="0" data-v-a2048222 data-v-c94474d9><!--[--><span data-v-c94474d9>SyncBoot</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/docs/synccms" tabindex="0" data-v-a2048222 data-v-c94474d9><!--[--><span data-v-c94474d9>SyncCms</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/docs/syncadmin" tabindex="0" data-v-a2048222 data-v-c94474d9><!--[--><span data-v-c94474d9>SyncAdmin</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/docs/agile" tabindex="0" data-v-a2048222 data-v-c94474d9><!--[--><span data-v-c94474d9>애자일</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="https://www.empasy.com" target="_blank" rel="noopener noreferrer" tabindex="0" data-v-a2048222 data-v-c94474d9><!--[--><span data-v-c94474d9>엠파시</span><!--]--></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-a0955d45 data-v-0e65c0af><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-0e65c0af data-v-a6e5b8de data-v-848e0bf0><span class="check" data-v-848e0bf0><span class="icon" data-v-848e0bf0><!--[--><span class="vpi-sun sun" data-v-a6e5b8de></span><span class="vpi-moon moon" data-v-a6e5b8de></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-a0955d45 data-v-aa94c828 data-v-5678b6c9><!--[--><a class="VPSocialLink no-icon" href="https://github.com/DramaticCollaboration/" aria-label="github" target="_blank" rel="me noopener" data-v-5678b6c9 data-v-70da9800><span class="vpi-social-github"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-a0955d45 data-v-71e49097 data-v-a5365b27><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-a5365b27><span class="vpi-more-horizontal icon" data-v-a5365b27></span></button><div class="menu" data-v-a5365b27><div class="VPMenu" data-v-a5365b27 data-v-bb58648f><!----><!--[--><!--[--><!----><div class="group" data-v-71e49097><div class="item appearance" data-v-71e49097><p class="label" data-v-71e49097>Appearance</p><div class="appearance-action" data-v-71e49097><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-71e49097 data-v-a6e5b8de data-v-848e0bf0><span class="check" data-v-848e0bf0><span class="icon" data-v-848e0bf0><!--[--><span class="vpi-sun sun" data-v-a6e5b8de></span><span class="vpi-moon moon" data-v-a6e5b8de></span><!--]--></span></span></button></div></div></div><div class="group" data-v-71e49097><div class="item social-links" data-v-71e49097><div class="VPSocialLinks social-links-list" data-v-71e49097 data-v-5678b6c9><!--[--><a class="VPSocialLink no-icon" href="https://github.com/DramaticCollaboration/" aria-label="github" target="_blank" rel="me noopener" data-v-5678b6c9 data-v-70da9800><span class="vpi-social-github"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-a0955d45 data-v-9c1913d8><span class="container" data-v-9c1913d8><span class="top" data-v-9c1913d8></span><span class="middle" data-v-9c1913d8></span><span class="bottom" data-v-9c1913d8></span></span></button></div></div></div></div><div class="divider" data-v-a0955d45><div class="divider-line" data-v-a0955d45></div></div></div><!----></header><div class="VPLocalNav empty fixed" data-v-92f6b69a data-v-34d7880d><div class="container" data-v-34d7880d><!----><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-34d7880d data-v-65a3f284><button data-v-65a3f284>Return to top</button><!----></div></div></div><!----><div class="VPContent" id="VPContent" data-v-92f6b69a data-v-382a4418><div class="VPDoc has-aside" data-v-382a4418 data-v-3ab2a2a8><!--[--><!--]--><div class="container" data-v-3ab2a2a8><div class="aside" data-v-3ab2a2a8><div class="aside-curtain" data-v-3ab2a2a8></div><div class="aside-container" data-v-3ab2a2a8><div class="aside-content" data-v-3ab2a2a8><div class="VPDocAside" data-v-3ab2a2a8 data-v-4bfc847e><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-4bfc847e data-v-6e971039><div class="content" data-v-6e971039><div class="outline-marker" data-v-6e971039></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-6e971039>현재 페이지</div><ul class="VPDocOutlineItem root" data-v-6e971039 data-v-f36e3a73><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-4bfc847e></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-3ab2a2a8><div class="content-container" data-v-3ab2a2a8><!--[--><!--]--><main class="main" data-v-3ab2a2a8><div style="position:relative;" class="vp-doc _docs_en_agile_createIssue" data-v-3ab2a2a8><div><h1 id="prompt" tabindex="-1">Prompt <a class="header-anchor" href="#prompt" aria-label="Permalink to “Prompt”">​</a></h1><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>I want to create a new issue in the issue management system of a Playwright-based test automation tool.</span></span>
+<span class="line"><span>Please write it in the format of a **JIRA ticket template** based on the following content.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Requirements:</span></span>
+<span class="line"><span>1. Generate an issue **Title**</span></span>
+<span class="line"><span>2. Write in the format of a **JIRA ticket template**</span></span>
+<span class="line"><span>  - Summary</span></span>
+<span class="line"><span>  - Description</span></span>
+<span class="line"><span>  - Acceptance Criteria</span></span>
+<span class="line"><span>  - Priority</span></span>
+<span class="line"><span>3. Include an example of a **UI scenario** that can be referenced during development</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Issue Content:</span></span>
+<span class="line"><span>{{Issue Content}}</span></span></code></pre></div><h1 id="sample" tabindex="-1">Sample <a class="header-anchor" href="#sample" aria-label="Permalink to “Sample”">​</a></h1><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>I want to create a new issue in the issue management system of a Playwright-based test automation tool.</span></span>
+<span class="line"><span>Please write it in the format of a **JIRA ticket template** based on the following content.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Requirements:</span></span>
+<span class="line"><span>1. Generate an issue **Title**</span></span>
+<span class="line"><span>2. Write in the format of a **JIRA ticket template**</span></span>
+<span class="line"><span>   - Summary</span></span>
+<span class="line"><span>   - Description</span></span>
+<span class="line"><span>   - Acceptance Criteria</span></span>
+<span class="line"><span>   - Priority</span></span>
+<span class="line"><span>3. Include an example of a **UI scenario** that can be referenced during development</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Issue Content:</span></span>
+<span class="line"><span> Add a feature to generate sample data like DBeaver upon first login</span></span></code></pre></div><h1 id="register-the-issue-after-modifying-the-result-as-needed" tabindex="-1">Register the issue after modifying the result as needed <a class="header-anchor" href="#register-the-issue-after-modifying-the-result-as-needed" aria-label="Permalink to “Register the issue after modifying the result as needed”">​</a></h1><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>## 📌 JIRA Ticket Example</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Title**</span></span>
+<span class="line"><span>Add automatic generation of sample data and sample project/scenario upon first login</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Summary**</span></span>
+<span class="line"><span>When a new user logs in for the first time and has no projects, generate a sample project and scenario to improve the initial experience of the tool and support quick onboarding.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Description**</span></span>
+<span class="line"><span>Currently, in the Playwright-based test automation tool, when a new user logs in for the first time without any projects or scenarios, a blank screen is displayed.</span></span>
+<span class="line"><span>To improve this, the following feature must be implemented:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>1. If no project exists upon first login, provide a **popup asking whether to generate samples**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   * &quot;Would you like to generate a sample project and scenario?&quot;</span></span>
+<span class="line"><span>2. If the user agrees, **automatically generate a sample project and sample scenario**</span></span>
+<span class="line"><span>3. The generated sample project and scenario can be checked in the UI and executed immediately</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Acceptance Criteria**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>* [ ] Display a popup if there is no project upon first login</span></span>
+<span class="line"><span>* [ ] Automatically generate a sample project and sample scenario when &quot;Yes&quot; is selected</span></span>
+<span class="line"><span>* [ ] The sample project is displayed in the project list on the UI</span></span>
+<span class="line"><span>* [ ] The sample scenario is executable and confirmed to work normally</span></span>
+<span class="line"><span>* [ ] Do not generate if &quot;No&quot; is selected</span></span>
+<span class="line"><span>* [ ] This logic is executed only at the time of the first login</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Priority**</span></span>
+<span class="line"><span>Medium</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Labels**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>* playwright</span></span>
+<span class="line"><span>* onboarding</span></span>
+<span class="line"><span>* enhancement</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Expected Benefits**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>* Provide an **immediately executable sample** to new users</span></span>
+<span class="line"><span>* Users can **intuitively understand** how to utilize the tool</span></span>
+<span class="line"><span>* **Improved UX** by providing default sample data instead of a blank screen</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## 💻 UI Scenario Example</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Sample Project Name:** `Sample Project`</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>1. **Sample Scenario 1: Web Login Test**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   * Step 1: Open browser</span></span>
+<span class="line"><span>   * Step 2: Navigate to URL (`https://example.com/login`)</span></span>
+<span class="line"><span>   * Step 3: Enter ID (`test_user`)</span></span>
+<span class="line"><span>   * Step 4: Enter PW (`password123`)</span></span>
+<span class="line"><span>   * Step 5: Click login button</span></span>
+<span class="line"><span>   * Step 6: Verify &quot;Login Successful&quot; message</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>2. **Sample Scenario 2: API Call Test**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   * Step 1: Call `GET /api/health`</span></span>
+<span class="line"><span>   * Step 2: Check for response status code 200</span></span>
+<span class="line"><span>   * Step 3: Verify the `&quot;status&quot;: &quot;ok&quot;` value within the response JSON</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>3. **Sample Scenario 3: Basic UI Validation Test**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   * Step 1: Navigate to main page</span></span>
+<span class="line"><span>   * Step 2: Check if the logo image is displayed on the screen</span></span>
+<span class="line"><span>   * Step 3: Click the main menu button and verify page transition</span></span></code></pre></div></div></div></main><footer class="VPDocFooter" data-v-3ab2a2a8 data-v-064b7099><!--[--><!--]--><div class="edit-info" data-v-064b7099><!----><div class="last-updated" data-v-064b7099><p class="VPLastUpdated" data-v-064b7099 data-v-58e644c3>Last updated: <time datetime="2026-07-18T09:37:57.000Z" data-v-58e644c3></time></p></div></div><!----></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><!----><!--[--><!--]--></div></div>
+    
+    
+  </body>
+</html>

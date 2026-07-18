@@ -1,23 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="���Ľ�(Empasy) ��� ���α�. ������������ AI ������Ʈ ���� ���̵�, MSA ��ȯ ���, �� ũ�Ѹ� �� �پ��� AI Ops �ֽ� �λ���Ʈ�� �����մϴ�.">
-    <meta name="keywords" content="��� ���α�, AI ����, AI ������Ʈ, AI Ops, MSA ��ȯ, RPA ��ü, ������������ AI, ���Ľ�, Empasy">
+    <meta name="description" content="엠파시(Empasy) 기술 블로그. 엔터프라이즈 AI 에이전트 도입 가이드, MSA 전환 사례, 웹 크롤링 등 다양한 AI Ops 최신 인사이트를 제공합니다.">
+    <meta name="keywords" content="기술 블로그, AI 도입, AI 에이전트, AI Ops, MSA 전환, RPA 대체, 엔터프라이즈 AI, 엠파시, Empasy">
     <meta name="author" content="Empasy">
     
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "���Ľ�(Empasy) ��� ���α�",
+      "name": "엠파시(Empasy) 기술 블로그",
       "url": "https://empasy.com/blog.html",
-      "description": "������������ AI ������Ʈ �� AI Ops ���� �ֽ� ��� �λ���Ʈ",
+      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
       "publisher": {
         "@type": "Organization",
-        "name": "���Ľ�(Empasy)",
+        "name": "엠파시(Empasy)",
         "logo": {
           "@type": "ImageObject",
           "url": "https://empasy.com/empasy-logo.png"
@@ -35,8 +35,8 @@
 
     <!-- SEO & AIO Tags -->
     <link rel="canonical" href="https://empasy.com/ko/blog/empasy-core-solution-architecture-syncverse.html">
-    <meta property="og:title" content="��� ���α� �� �λ���Ʈ | ���Ľ�(Empasy)">
-    <meta property="og:description" content="���Ľ�(Empasy) ��� ���α�. ������������ AI ������Ʈ ���� ���̵�, MSA ��ȯ ��� �� �λ���Ʈ�� Ȯ���ϼ���.">
+    <meta property="og:title" content="기술 블로그 및 인사이트 | 엠파시(Empasy)">
+    <meta property="og:description" content="엠파시(Empasy) 기술 블로그. 엔터프라이즈 AI 에이전트 도입 가이드, MSA 전환 사례 등 인사이트를 확인하세요.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://empasy.com/blog.html">
     <meta property="og:image" content="https://empasy.com/empasy-logo.png">
@@ -44,15 +44,15 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <title>���Ľ� ��� ���α�: AI ���� � ���°�(SyncVerse)�� �����ϴ� �ٽ� �ַ�� ��Ű��ó �м� | Empasy Tech Blog</title>
-    <meta name="description" content="SyncEta, SyncCMS, SyncBoot, SyncVerse, SyncInsight �� ���Ľ��� 5�� �ٽ� �ַ���� ����� ��������Ʈ�� �����Ͼ �ع��� ���� �ְ� �м��մϴ�.">
+    <title>엠파시 기술 블로그: AI 자율 운영 생태계(SyncVerse)를 지탱하는 핵심 솔루션 아키텍처 분석 | Empasy Tech Blog</title>
+    <meta name="description" content="SyncEta, SyncCMS, SyncBoot, SyncVerse, SyncInsight 등 엠파시의 5대 핵심 솔루션의 기술적 페인포인트와 엔지니어링 해법을 깊이 있게 분석합니다.">
     <link rel="canonical" href="https://empasy.com/ko/blog/empasy-core-solution-architecture-syncverse.html">
     <link rel="alternate" hreflang="ko" href="https://empasy.com/empasy-core-solution-architecture-syncverse.html" />
     <link rel="alternate" hreflang="en" href="https://empasy.com/en/empasy-core-solution-architecture-syncverse.html" />
     <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/empasy-core-solution-architecture-syncverse.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/empasy-core-solution-architecture-syncverse.html" />
-    <meta property="og:title" content="���Ľ� ��� ���α�: AI ���� � ���°�(SyncVerse)�� �����ϴ� �ٽ� �ַ�� ��Ű��ó �м�">
-    <meta property="og:description" content="SyncEta, SyncCMS, SyncBoot, SyncVerse, SyncInsight �� ���Ľ��� 5�� �ٽ� �ַ���� ����� ��������Ʈ�� �����Ͼ �ع��� ���� �ְ� �м��մϴ�.">
+    <meta property="og:title" content="엠파시 기술 블로그: AI 자율 운영 생태계(SyncVerse)를 지탱하는 핵심 솔루션 아키텍처 분석">
+    <meta property="og:description" content="SyncEta, SyncCMS, SyncBoot, SyncVerse, SyncInsight 등 엠파시의 5대 핵심 솔루션의 기술적 페인포인트와 엔지니어링 해법을 깊이 있게 분석합니다.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://empasy.com/empasy-core-solution-architecture-syncverse.html">
     <meta property="og:locale" content="ko_KR">
@@ -60,8 +60,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "���Ľ� ��� ���α�: AI ���� � ���°�(SyncVerse)�� �����ϴ� �ٽ� �ַ�� ��Ű��ó �м�",
-  "description": "SyncEta, SyncCMS, SyncBoot, SyncVerse, SyncInsight �� ���Ľ��� 5�� �ٽ� �ַ���� ����� ��������Ʈ�� �����Ͼ �ع��� ���� �ְ� �м��մϴ�.",
+  "headline": "엠파시 기술 블로그: AI 자율 운영 생태계(SyncVerse)를 지탱하는 핵심 솔루션 아키텍처 분석",
+  "description": "SyncEta, SyncCMS, SyncBoot, SyncVerse, SyncInsight 등 엠파시의 5대 핵심 솔루션의 기술적 페인포인트와 엔지니어링 해법을 깊이 있게 분석합니다.",
   "author": {
     "@type": "Organization",
     "name": "Empasy Engineering Team",
@@ -78,145 +78,14 @@
   "url": "https://empasy.com/empasy-core-solution-architecture-syncverse.html"
 }
     </script>
-  <script type="module" crossorigin src="/assets/ko_blog_empasy-core-solution-architecture-syncverse-B5EXVvLf.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/main-CVonc3l2.js">
+  <script type="module" crossorigin src="/assets/ko_blog_empasy-core-solution-architecture-syncverse-BwQenWwT.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/i18n-C83gtuKq.js">
   <link rel="stylesheet" crossorigin href="/assets/style-Bd_BCiIh.css">
 </head>
 <body>
 
     <!-- Header Navigation -->
-    
-    
-    
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>���Ľ�(Empasy) - ������ AI ������Ʈ ���?������������ � ���°�</title>
-        <meta name="description" content="���Ľ�(Empasy)�� �����?����Ͻ�?������ �����ϴ� AI Ops �����?���� � ���°踦 �����մϴ�. SyncSeries�� ���� ������ �ٸ� ������������ AI ������Ʈ�� �����ϼ���.">
-        <meta name="keywords" content="���Ľ�, Empasy, IT ���? B2B �ַ��? ����Ʈ���� ���߻�, AI ������Ʈ, ������������ AI, SyncSeries, SyncEta, SyncCMS, ���̺� ���Ľ� �ƴ�, �ΰ����� ȸ��">
-        <meta name="author" content="Empasy">
-        
-        
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "���Ľ�(Empasy)",
-          "alternateName": ["���Ľ� IT", "Empasy AI", "���Ľ� �ֽ�ȸ��"],
-          "url": "https://empasy.com/",
-          "logo": "https://empasy.com/empasy-logo.png",
-          "description": "��ȹ���� ����� �ΰ��� ������ �ּ�ȭ�ϴ� AI Ops �����?���� � ���°踦 �����մϴ�.",
-          "sameAs": [
-            "https://github.com/DramaticCollaboration",
-            "../../docs/index.html"
-          ]
-        }
-        </script>
-        
-        <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&amp;family=Noto+Sans+KR:wght@300;400;700;900&amp;display=swap" rel="stylesheet">
-    
-            <meta name="geo.region" content="KR-11">
-        <meta name="geo.placename" content="Seoul">
-        <meta name="geo.position" content="37.5665;126.9780">
-        <meta name="ICBM" content="37.5665, 126.9780">
-        
-        
-        
-        
-        
-        
-    
-            
-        
-        
-        
-    
-        <!-- Custom animations for enriched homepage -->
-        <style>
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: white }
-        }
-        .typewriter-text {
-            animation: typing 2s steps(40, end) forwards, blink-caret .75s step-end infinite;
-            white-space: nowrap;
-            overflow: hidden;
-            display: inline-block;
-            border-right: 2px solid white;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        </style>
-    
-        <!-- SEO & AIO Tags -->
-        <link rel="canonical" href="https://empasy.com/ko/pages/index.html">
-        <link rel="alternate" hreflang="ko" href="https://empasy.com/">
-        <link rel="alternate" hreflang="en" href="https://empasy.com/en/">
-        <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/">
-        <link rel="alternate" hreflang="x-default" href="https://empasy.com/">
-        
-        <!-- Open Graph -->
-        <meta property="og:title" content="���Ľ�(Empasy) - ������ AI ������Ʈ ���?������������ � ���°�">
-        <meta property="og:description" content="���Ľ�(Empasy)�� �����?����Ͻ�?������ �����ϴ� AI Ops �����?���� � ���°踦 �����մϴ�. SyncSeries�� ���� ������ �ٸ� ������������ AI ������Ʈ�� �����ϼ���.">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://empasy.com/">
-        <meta property="og:image" content="https://empasy.com/empasy-logo.png">
-        
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="���Ľ�(Empasy) - ������ AI ������Ʈ ���?������������ � ���°�">
-        <meta name="twitter:description" content="���Ľ�(Empasy)�� �����?����Ͻ�?������ �����ϴ� AI Ops �����?���� � ���°踦 �����մϴ�. SyncSeries�� ���� ������ �ٸ� ������������ AI ������Ʈ�� �����ϼ���.">
-        <meta name="twitter:image" content="https://empasy.com/empasy-logo.png">
-        
-        <!-- AI & Crawling Optimization -->
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-        
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Empasy",
-      "url": "https://empasy.com/",
-      "logo": "https://empasy.com/assets/images/empasy-logo.png",
-      "sameAs": [
-        "https://github.com/DramaticCollaboration"
-      ]
-    }
-    </script>
-    
-    
-    
-    
-    
-        <!-- AI Search Optimization (AIO) Context Block -->
-        <article class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
-            <h1>What is Empasy (���Ľ�)?</h1>
-            <p>Empasy is an enterprise B2B software and AI agent development company based in Seoul, South Korea. We are fundamentally transforming the AI Ops by providing autonomous agents that minimize human intervention in planning, building, testing, and operating software.</p>
-            
-            <h2>Empasy SyncSeries Solutions</h2>
-            <ul>
-                <li><strong>SyncCMS (Conversational Publisher Agent):</strong> Generates full multi-language web layouts and content simultaneously through natural language commands, eliminating legacy CMS bottlenecks.</li>
-                <li><strong>SyncEta (Self-Healing QA Agent):</strong> Utilizes Vision-LLM to autonomously navigate UI changes and self-heal broken test scripts, replacing fragile script-based QA tools like Selenium.</li>
-                <li><strong>SyncBoot (Digital Engineer Agent):</strong> A cloud-native MSA platform that generates domain schemas and manages compensating transactions autonomously via Saga patterns.</li>
-                <li><strong>SyncCrawl (Intelligence Scout Agent):</strong> An intelligent web scraper bypassing anti-bot measures to build permanent RAG knowledge assets, adapting to DOM changes automatically.</li>
-            </ul>
-            
-            <h2>Why Choose Empasy?</h2>
-            <p>Global enterprises adopt Empasy to achieve unprecedented agility (cutting architecture design from months to hours), self-healing perfection (zero-defect infrastructure resilient to UI or network failures), and global scale (cloud-native design with real-time multi-language support).</p>
-        </article>
-    
-        <!-- Header Navigation -->
-                                        <header class="glass-header">
+    <header class="glass-header">
             <div class="container nav-container">
                 <div class="logo">
                     <a href="../../ko/pages/index.html"><img src="/assets/empasy-logo-Dx2jve9d.png" alt="EMPASY" class="logo-img"></a>
@@ -226,9 +95,9 @@
         <div class="dropdown">
             <a href="../../ko/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
             <div class="dropdown-content">
-                <a href="../../ko/pages/index.html#philosophy" data-i18n="nav.about">ȸ�� ö��</a>
-                <a href="../../ko/pages/vision.html" data-i18n="nav.vision">���� 2026</a>
-                <a href="../../ko/pages/team.html" data-i18n="nav.team">�츮�� �̾߱�</a>
+                <a href="../../ko/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
+                <a href="../../ko/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
+                <a href="../../ko/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
             </div>
         </div>
         
@@ -248,12 +117,12 @@
             <div class="dropdown-content">
                 <a href="../../ko/blog/blog.html">Tech Blog</a>
                 <a href="../../ko/pages/faq.html">FAQ</a>
-                <a href="../../ko/blog/case-study-finance.html">���� ���?��</a>
+                <a href="../../ko/blog/case-study-finance.html">고객 사례 상세</a>
             </div>
         </div>
     
         
-        <a href="../../ko/pages/clients.html" data-i18n="nav.clients">���۷���</a>
+        <a href="../../ko/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
         
         <!-- Top-level SyncEta link added as requested -->
         <a href="../../ko/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
@@ -273,516 +142,17 @@
                 </div>
             </div>
         </header>
-    
-        <!-- Main Hero Section -->
-        <section id="home" class="hero fade-in-up">
-            <div class="container hero-content" style="padding-top: 4rem;">
-                <span class="badge" data-i18n="hero.badge" style="background: transparent; border: 1px solid var(--border-color); color: var(--text-secondary); letter-spacing: 2px; text-transform: uppercase;">Boon to Business by Agility</span>
-                <h1 class="hero-title" data-i18n="hero.title" style="font-size: 4.5rem; margin-top: 2rem; letter-spacing: -2px; line-height: 1.1; font-weight: 400; ">���Ľ�(Empasy),<br>����Ͻ�?��ø���� �ϼ�<br><span style="color: var(--primary-color); ">������ AI ���� � ���°�</span></h1>
-                <p class="hero-subtitle" data-i18n="hero.subtitle" style="color: var(--text-secondary); font-size: 1.2rem; line-height: 1.8; max-width: 600px; margin: 2rem auto;">������ ��������Ʈ�� ���� �����ϰ�, ��ȹ���� ����� �ΰ��� ������ �ּ�ȭ�ϴ� <strong>AI Ops</strong> ���°�. ���Ľð� ������ ����Ͻ�?������ �����մϴ�.</p>
-                <div class="hero-buttons">
-                    <a href="#solutions" class="btn btn-primary" data-i18n="hero.btn">�ַ��?�˾ƺ���</a>
-                </div>
-    
-                <!-- Interactive AI Terminal -->
-                <div class="interactive-terminal mt-4 fade-in-up delay-2" style="max-width: 800px; margin: 4rem auto 0; text-align: left; background: #0f172a; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); overflow: hidden; border: 1px solid #334155;">
-                    <div style="background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; align-items: center; border-bottom: 1px solid #334155;">
-                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
-                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b;"></div>
-                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></div>
-                        <div style="margin-left: 1rem; font-family: monospace; color: #94a3b8; font-size: 0.85rem;">empasy-agent-cli</div>
-                    </div>
-                    <div style="padding: 1.5rem; font-family: monospace; font-size: 0.95rem; line-height: 1.6; color: #e2e8f0;">
-                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
-                            <span style="color: #22c55e;">User&gt;</span>
-                            <span class="typewriter-text">"���� ������ ������ְ�?�ڵ�ȭ �׽�Ʈ ������"</span>
-                        </div>
-                        <div class="terminal-response" style="opacity: 0; animation: fadeIn 0.5s ease 2.5s forwards;">
-                            <div style="color: #38bdf8;">[SyncCMS]</div>
-                            <div>&nbsp;? UI ������Ʈ ���� ��... <span>[�Ϸ�]</span></div>
-                            <div>&nbsp;? �ٱ���(EN/JP) ���ؽ�Ʈ ���� ����... <span>[�Ϸ�]</span></div>
-                        </div>
-                        <div class="terminal-response-2" style="opacity: 0; animation: fadeIn 0.5s ease 4s forwards; margin-top: 1rem;">
-                            <div style="color: #a78bfa;">[SyncEta]</div>
-                            <div>&nbsp;? ���� �帧 ���� �ó����� ���� ����... <span>[�Ϸ�]</span></div>
-                            <div>&nbsp;? Vision-LLM �ð��� Ž�� �� �׽�Ʈ ����... <span style="color: #22c55e;">[PASS]</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Stats & Marquee Section -->
-        <section class="section" style="padding: 4rem 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); background: rgba(255,255,255,0.02);">
-            <div class="container">
-                <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; margin-bottom: 4rem;">
-                    <div class="fade-in-up">
-                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">15+</div>
-                        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">���� ���� �� ���?/div>
-                    </div>
-                    <div class="fade-in-up delay-1">
-                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">90%</div>
-                        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">QA �������� ����</div>
-                    </div>
-                    <div class="fade-in-up delay-2">
-                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">99.9%</div>
-                        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">�ڰ� ġ�� ������</div>
-                    </div>
-                    <div class="fade-in-up delay-2">
-                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">5 min</div>
-                        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">���?���� ���� �ð�</div>
-                    </div>
-                </div>
-                
-                <div style="overflow: hidden; position: relative; width: 100%; padding: 2rem 0; opacity: 0.6;">
-                    <div class="marquee" style="display: flex; gap: 4rem; width: max-content; animation: scroll 30s linear infinite;">
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">GLOBAL ENTERPRISE A</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">TECH INNOVATOR B</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">FINANCE GROUP C</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">ECOMMERCE LEADER D</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">GLOBAL ENTERPRISE A</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">TECH INNOVATOR B</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">FINANCE GROUP C</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">ECOMMERCE LEADER D</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        
-        <!-- Marquee Banner -->
-        <div class="marquee-container" style="background: rgba(15, 23, 42, 0.8); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); padding: 1.2rem 0; overflow: hidden; white-space: nowrap; display: flex; align-items: center;">
-            <div class="marquee-content" style="display: inline-block; animation: scrollMarquee 30s linear infinite; font-size: 1.2rem; color: #f8fafc; font-weight: 600; letter-spacing: 1px;">
-                <span style="margin: 0 4rem;">? 10M+ Tasks Automated</span>
-                <span style="margin: 0 4rem;">??? 99.9% Zero-Defect Operations</span>
-                <span style="margin: 0 4rem;">?? Agent-to-Agent Protocol</span>
-                <span style="margin: 0 4rem;">?? Global Enterprise Standard</span>
-                <span style="margin: 0 4rem;">? 10M+ Tasks Automated</span>
-                <span style="margin: 0 4rem;">??? 99.9% Zero-Defect Operations</span>
-                <span style="margin: 0 4rem;">?? Agent-to-Agent Protocol</span>
-                <span style="margin: 0 4rem;">?? Global Enterprise Standard</span>
-            </div>
-        </div>
-        <style>
-        @keyframes scrollMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        @keyframes spinOrbit { 100% { transform: translate(-50%, -50%) rotate(360deg); } }
-        @keyframes antiSpin { 100% { transform: translate(-50%, -50%) rotate(-360deg); } }
-        .diagram-node:hover { box-shadow: 0 0 20px var(--primary-color); transform: scale(1.1) !important; z-index: 20; }
-        .interactive-diagram { background: radial-gradient(circle at center, rgba(8,145,178,0.1) 0%, transparent 70%); }
-        .interactive-diagram::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>'); opacity: 0.5; z-index: 1; }
-        .node-base { position: absolute; background: var(--surface-color); padding: 0.8rem 1.5rem; border-radius: 30px; cursor: pointer; transition: all 0.3s ease; white-space: nowrap; font-weight: 600; z-index: 10; display:flex; align-items:center; gap:8px;}
-        </style>
-    
-        <!-- Philosophy Section -->
-    
-        <section id="philosophy" class="section" style="background-color: var(--surface-color);">
-            <div class="container">
-                <div class="grid grid-2 align-center">
-                    <div class="fade-in-up">
-                        <span class="badge" data-i18n="philosophy.badge">Our Philosophy</span>
-                        <h2 class="section-title mt-2" data-i18n="philosophy.title">�ΰ��� ��ġ�� â���ϰ�, ���� �����մϴ�.</h2>
-                        <p class="section-desc text-left" style="max-width: 100%;" data-i18n="philosophy.desc">���Ľô� �ܼ��� �ڵ� ������ ������ �ʽ��ϴ�. ��ȹ, ����, �׽�Ʈ, ��� �̸��� �� ������ �ƿ츣�� <strong>���������� AI ������Ʈ ���°�</strong>�� ����, �ΰ��� ������ �����?�庮���� ��� ���� '����Ͻ�?��ġ â��'���� ������ �� �ִ� ������ ����ϴ�?</p>
-                        <ul class="feature-list mt-4">
-                            <li>�ΰ� �߽��� ���?���� (Human-Centric AI)</li>
-                            <li>�ŷ��� �� �ִ� ������ ������ (Zero-Defect Infrastructure)</li>
-                            <li>����Ͻ�?������ ���� ���ڵ�ȭ (Hyper-Automation)</li>
-                        </ul>
-                    </div>
-                    <div class="fade-in-up delay-1 text-center" style="position: relative;">
-                        <div style="width: 300px; height: 300px; background: linear-gradient(135deg, var(--primary-color), #2DD4BF); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 40px rgba(8, 145, 178, 0.2);">
-                            <span style="font-size: 4rem; color: white; font-weight: bold;">E</span>
-                        </div>
-                        <div class="dynamic-orb orb-3"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Architecture Stack -->
-        <section class="section" style="background-color: var(--surface-color);">
-            <div class="container">
-                <div class="section-header text-center fade-in-up mb-4">
-                    <span class="badge">Deep Tech Architecture</span>
-                    <h2 class="section-title">���Ľ� �ھ� ���� �����?/h2>
-                    <p class="section-desc">������ �ٸ� ���� ��� �����ϰ� �ϴ� ���Ľø��� �������� ����ũ ��Ű��ó</p>
-                </div>
-                
-                <div class="bento-grid mt-4" style="grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
-                    <div class="bento-item surface-card glass-panel glass-panel fade-in-up" style="grid-column: span 2; padding: clamp(1.2rem, 5vw, 3rem); background: linear-gradient(135deg, rgba(8,145,178,0.1), transparent);">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--primary-color);">Vision-LLM Engine</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">�ΰ��� �ð� ������ �����?��Ƽ���?LLM����, DOM ������ �ٲ��?ȭ���� �ƶ������� �����Ͽ� ������ ���?�ĺ��� �ڰ� ġ��(Self-Healing)�� �����մϴ�.</p>
-                    </div>
-                    <div class="bento-item surface-card glass-panel glass-panel fade-in-up delay-1" style="grid-column: span 2; padding: clamp(1.2rem, 5vw, 3rem); background: linear-gradient(135deg, rgba(13,148,136,0.1), transparent);">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--primary-color); ">Dynamic RAG Knowledge</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">�ǽð����� �����Ǵ� �����?�����Ϳ� �系 �������� ���� �����ͺ��̽��� �Ӻ����Ͽ�, ȯ��(Hallucination) ���� ��Ȯ�� ����Ͻ�?�ǻ������?�����մϴ�.</p>
-                    </div>
-                    <div class="bento-item surface-card glass-panel glass-panel fade-in-up delay-2" style="grid-column: span 2; padding: clamp(1.2rem, 5vw, 3rem); background: linear-gradient(135deg, rgba(15,23,42,0.1), transparent);">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--text-primary);">Saga Pattern MSA Control</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">���� ���� ����ũ�μ��񽺷� �л��?ȯ�濡�� ���?�߻� ��, ������ ���� Ʈ�������?AI�� ������ ����Ͽ�?��ü �ý����� ������ ���ռ��� �Ϻ��ϰ� �����մϴ�.</p>
-                    </div>
-                    <div class="bento-item surface-card glass-panel glass-panel fade-in-up delay-2" style="grid-column: span 2; padding: clamp(1.2rem, 5vw, 3rem); background: linear-gradient(135deg, rgba(100,116,139,0.1), transparent);">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--text-primary);">Anti-Bot Evasion Tactics</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">���� ���Ͻ� �����̼�, ������ �ΰ�����Ʈ ����, CAPTCHA �ð��� �߷� ��ȸ �� �����?Military-grade) ���ڽ� �����?���?�����͸� �����ϰ� ��ī���մϴ�.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Why Empasy Section -->
-    
-        <section id="why-empasy" class="section">
-            <div class="container">
-                <div class="section-header text-center fade-in-up mb-4">
-                    <span class="badge">Why Empasy?</span>
-                    <h2 class="section-title">�� ���Ľø� �����ؾ� �ұ��?</h2>
-                    <p class="section-desc">�۷ι� ���������������?���Ľ��� Sync Series�� �����Ͽ� ���?�ִ� �ٽ� ����Ͻ�?��ġ�Դϴ�.</p>
-                </div>
-                
-                <div class="bento-grid mt-4" style="grid-template-columns: repeat(3, 1fr); gap: 3rem;">
-                    <div class="bento-item small surface-card glass-panel glass-panel fade-in-up" style="padding: 3rem 2rem; border: none; background: transparent; border-top: 1px solid var(--border-color); border-radius: 0;">
-                        <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-color); margin-bottom: 2rem; display: block;">01 ? Agility</span>
-                        <h3 style="font-size: 1.8rem; font-weight: 400; margin-bottom: 1rem;">�е��� ��ø��</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">�������� �ɸ��� ��Ű��ó ���踦 �� �� �ð����� ����.</p>
-                    </div>
-                    <div class="bento-item small surface-card glass-panel glass-panel fade-in-up delay-1" style="padding: 3rem 2rem; border: none; background: transparent; border-top: 1px solid var(--border-color); border-radius: 0;">
-                        <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-color); margin-bottom: 2rem; display: block;">02 ? Perfection</span>
-                        <h3 style="font-size: 1.8rem; font-weight: 400; margin-bottom: 1rem;">�ڰ� ġ�� ������</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">UI/��Ʈ��ũ ��ֽ�?������ ������ �ľ��ϰ� ����.</p>
-                    </div>
-                    <div class="bento-item small surface-card glass-panel glass-panel fade-in-up delay-2" style="padding: 3rem 2rem; border: none; background: transparent; border-top: 1px solid var(--border-color); border-radius: 0;">
-                        <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-color); margin-bottom: 2rem; display: block;">03 ? Scale</span>
-                        <h3 style="font-size: 1.8rem; font-weight: 400; margin-bottom: 1rem;">�۷ι� Ȯ�强</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">Ŭ���� ����Ƽ�� �����?�ǽð� �ٱ��� ����.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Vision Section -->
-        <section id="vision" class="section">
-            <div class="container">
-                <div class="section-header text-center fade-in-up mb-4">
-                    <span class="badge" data-i18n="vision.badge">2026 SyncVerse</span>
-                    <h2 class="section-title" data-i18n="vision.title">������ ���� ���� � ���������?����</h2>
-                    <p class="section-desc" data-i18n="vision.desc">���Ľô� �ܼ��� �ڵ�ȭ ������ �Ѿ�, ������Ʈ���� ���������� �����ϸ� �����?��ϴ� �̷��� �����մϴ�.</p>
-                </div>
-                
-                <div class="grid grid-2" style="gap: 4rem;">
-                    <div class="card surface-card glass-panel glass-panel fade-in-up delay-1" style="padding: clamp(1.2rem, 5vw, 3rem); background: var(--surface-color);">
-                        <h3 style="font-size: 2.5rem; font-weight: 400; color: var(--primary-color); margin-bottom: 1rem;">SyncVerse</h3>
-                        <h4 style="font-size: 1.1rem; font-weight: 400; color: var(--primary-color); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2rem;">������ �߾� ���� ������Ʈ ����</h4>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">SyncCMS, SyncEta, SyncBoot, SyncCrawl �� ���Ľ��� ���?������Ʈ�� �ϳ��� ����Ǵ�?�Ŵ��� ����ž�Դϴ�. �� ������Ʈ�� ������ �����͸� �ٸ� ������Ʈ�� �м��ϰ�, �̸� �������� �鿣���?����Ʈ���尡 ���������� ��ȭ�ϴ� <strong>������Ʈ �� ����(A2A) ���°�</strong>�� �ϼ��մϴ�.</p>
-                    </div>
-                    
-                    <div class="card surface-card glass-panel glass-panel fade-in-up delay-2" style="padding: clamp(1.2rem, 5vw, 3rem); background: transparent; border: 1px solid var(--border-color);">
-                        <h3 style="font-size: 2.5rem; font-weight: 400; color: var(--primary-color); margin-bottom: 1rem;">SyncInsight</h3>
-                        <h4 style="font-size: 1.1rem; font-weight: 400; color: var(--primary-color); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2rem;">������ ���?���� �ǻ����?�÷���</h4>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">SyncVerse�� ���� �帣�� �����?���?�����͸� �ǽð����� �����ϰ� �м��մϴ�. �ΰ� �濵���� ���� ��ú���?�Ѿ�, AI�� ������ ������ ��ȭ�� �����ϰ� <strong>����Ͻ�?�ǻ������?�ý��� Ȯ���� ���� �� �ڵ� ����</strong>�ϴ� �ñ��� ���ڸ������� �����մϴ�.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        
-        <!-- SyncVerse Interactive Diagram -->
-        <section class="section" style="padding-top: 4rem;">
-            <div class="container text-center">
-                <div class="section-header fade-in-up mb-5">
-                    <h2 class="section-title">The SyncVerse Architecture</h2>
-                    <p class="section-desc">���콺�� �÷� ������Ʈ �� �ǽð� ������ �帧(A2A)�� Ȯ���ϼ���.</p>
-                </div>
-                <div class="interactive-diagram fade-in-up delay-1" style="position: relative; width: 100%; max-width: 800px; height: 450px; margin: 0 auto; border-radius: var(--border-radius); border: 1px solid var(--glass-border); overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                    
-                    <!-- Center Node -->
-                    <div class="node-base node-center" style="top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--primary-color); border: none; padding: 1.5rem; border-radius: 50%; box-shadow: 0 0 40px rgba(8,145,178,0.6); color: #fff; font-weight: 800; font-size: 1.2rem;">
-                        SyncVerse<br>Core
-                    </div>
-                    
-                    <!-- Orbiting Nodes Container -->
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 340px; height: 340px; border: 1px dashed rgba(255,255,255,0.15); border-radius: 50%; animation: spinOrbit 25s linear infinite; z-index: 5;">
-                        <div class="node-base diagram-node" style="top: 0; left: 50%; transform: translate(-50%, -50%); border: 1px solid var(--primary-color); animation: antiSpin 25s linear infinite;">?? SyncCMS</div>
-                        <div class="node-base diagram-node" style="top: 100%; left: 50%; transform: translate(-50%, -50%); border: 1px solid var(--secondary-color); animation: antiSpin 25s linear infinite;">?? SyncEta</div>
-                        <div class="node-base diagram-node" style="top: 50%; left: 0; transform: translate(-50%, -50%); border: 1px solid var(--accent-color); animation: antiSpin 25s linear infinite;">?? SyncBoot</div>
-                        <div class="node-base diagram-node" style="top: 50%; left: 100%; transform: translate(-50%, -50%); border: 1px solid #10b981; animation: antiSpin 25s linear infinite;">??? SyncCrawl</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Solutions Section -->
-        <section id="solutions" class="section">
-            <div class="container">
-                <div class="section-header fade-in-up text-center mb-4">
-                    <h2 class="section-title">Sync Series</h2>
-                    <p class="section-desc">����Ʈ���� ���� �� ����(End-to-End)���� ����Ͻ�?��ø���� �ش�ȭ�ϴ� �ַ��?���ڽý���</p>
-                </div>
-                <div class="grid grid-2 solutions-grid">
-                    <!-- SyncCMS -->
-                    <div class="card surface-card glass-panel glass-panel fade-in-up" style="padding: 2.5rem;">
-                        <div class="solution-header">
-                            <h3>SyncCMS</h3>
-                            <span class="badge" data-i18n="cms.badge" style="margin: 0.5rem 0;">Conversational Publisher Agent</span>
-                        </div>
-                        <ul class="feature-list mt-4">
-                            <li data-i18n="cms.vs.agent.1">�ڿ��� ���ɸ����� ���̾ƿ��� ������ ���� ����</li>
-                            <li data-i18n="cms.vs.agent.2">ȭ���� ���� '�� ��ư ������ �ٲ���' ���?����</li>
-                            <li data-i18n="cms.vs.agent.3">���� ���� �� 15���� �ٱ��� ���ҽ� �ڵ� ����</li>
-                        </ul>
-                        <a href="../../ko/solutions/sync-cms.html" class="btn btn-outline btn-sm mt-4">�� �˾ƺ��� ��</a>
-                    </div>
-    
-                    <!-- SyncEta -->
-                    <div class="card surface-card glass-panel glass-panel fade-in-up delay-1" style="padding: 2.5rem;">
-                        <div class="solution-header">
-                            <h3>SyncEta</h3>
-                            <span class="badge" data-i18n="eta.badge" style="margin: 0.5rem 0;">Self-Healing QA Agent</span>
-                        </div>
-                        <ul class="feature-list mt-4">
-                            <li data-i18n="eta.vs.agent.1">Vision LLM�� Ȱ���� �ð��� �ĺ��� �ڰ� ġ��</li>
-                            <li data-i18n="eta.vs.agent.2">'�����?����' �����?�ƶ��� ȭ�� �ر� �Ǵ�</li>
-                            <li data-i18n="eta.vs.agent.3">���� ���� �� ���� �м� �� �ذ� �ڵ� ������</li>
-                        </ul>
-                        <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-                            <a href="../../ko/solutions/sync-eta.html" class="btn btn-outline btn-sm">�� �˾ƺ��� ��</a>
-                            <a href="../../ko/pages/index.html" class="btn btn-primary btn-sm" style="flex: 1;">?? SaaS �����ϱ�</a>
-                        </div>
-                    </div>
-    
-                    <!-- SyncBoot -->
-                    <div class="card surface-card glass-panel glass-panel fade-in-up" style="padding: 2.5rem;">
-                        <div class="solution-header">
-                            <h3>SyncBoot</h3>
-                            <span class="badge" data-i18n="boot.badge" style="margin: 0.5rem 0;">Digital Engineer Agent</span>
-                        </div>
-                        <ul class="feature-list mt-4">
-                            <li data-i18n="boot.vs.agent.1">�ڿ��� ���ɸ����� ��Ű�� ���� �� ������ ����</li>
-                            <li data-i18n="boot.vs.agent.2">Saga ���� ���?������ ������ ���� Ʈ�����?����</li>
-                            <li data-i18n="boot.vs.agent.3">���� �߻� �� �α׸� �ڵ� �����Ͽ� ġ��å ����</li>
-                        </ul>
-                        <a href="../../ko/solutions/sync-boot.html" class="btn btn-outline btn-sm mt-4">�� �˾ƺ��� ��</a>
-                    </div>
-    
-                    <!-- SyncCrawl -->
-                    <div class="card surface-card glass-panel glass-panel fade-in-up delay-1" style="padding: 2.5rem;">
-                        <div class="solution-header">
-                            <h3>SyncCrawl</h3>
-                            <span class="badge" data-i18n="crawl.badge" style="margin: 0.5rem 0;">Intelligence Scout Agent</span>
-                        </div>
-                        <ul class="feature-list mt-4">
-                            <li data-i18n="crawl.vs.agent.1">Vision-LLM�� ������ �ǹ̸� �߷��� ���� �� �ڵ� ����</li>
-                            <li data-i18n="crawl.vs.agent.2">���Ͻ� �����̼ǰ� ���� ������ ��Ƽ�� �ý��� ��ȸ</li>
-                            <li data-i18n="crawl.vs.agent.3">������ ���� ���� ���͸��� ���� ��ǰ�� JSON ����</li>
-                        </ul>
-                        <a href="../../ko/solutions/sync-crawl.html" class="btn btn-outline btn-sm mt-4">�� �˾ƺ��� ��</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        
-        <!-- Empasy Insights -->
-        <section class="section" style="background: rgba(0,0,0,0.2); border-top: 1px solid var(--glass-border);">
-            <div class="container">
-                <div class="section-header fade-in-up text-center mb-5">
-                    <h2 class="section-title">Empasy Insights</h2>
-                    <p class="section-desc">������������ AI ������ �̲��� ���Ľ��� �ֽ� ���?�� ����Ͻ�?����ġ</p>
-                </div>
-                <div class="grid grid-3">
-                    <div class="card glass-card fade-in-up delay-1" style="padding: 2.5rem; border-top: 4px solid var(--primary-color); cursor:pointer; transition:transform 0.3s;">
-                        <span class="badge" style="margin-bottom: 1rem;">Tech Blog</span>
-                        <h3 style="margin-bottom: 1rem; font-size: 1.25rem; line-height: 1.5;">Vision-LLM�� Ȱ���� E2E �׽�Ʈ �ڵ�ȭ�� �Ѱ� ����</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">DOM ���� ���濡 �����?���� �����Ͽ� ���?�׽�Ʈ�� �ð��� �߷����� �غ��ϴ� �����?�Ұ��մϴ�.</p>
-                    </div>
-                    <div class="card glass-card fade-in-up delay-2" style="padding: 2.5rem; border-top: 4px solid var(--secondary-color); cursor:pointer; transition:transform 0.3s;">
-                        <span class="badge" style="margin-bottom: 1rem;">Release Note</span>
-                        <h3 style="margin-bottom: 1rem; font-size: 1.25rem; line-height: 1.5;">SyncSeries 2.4.0 ������Ʈ: A2A �������� ����ȭ</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">������Ʈ �� ���?�ӵ��� 300% ����Ų ���ο� A2A(Agent-to-Agent) ����?��Ű��ó�� �����߽��ϴ�.</p>
-                    </div>
-                    <div class="card glass-card fade-in-up delay-3" style="padding: 2.5rem; border-top: 4px solid var(--accent-color); cursor:pointer; transition:transform 0.3s;">
-                        <span class="badge" style="margin-bottom: 1rem;">Whitepaper</span>
-                        <h3 style="margin-bottom: 1rem; font-size: 1.25rem; line-height: 1.5;">2026 ������������ AI Ʈ����: ���� ��� �ô�</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">�ܼ� �ڵ�ȭ�� �Ѿ� �ý����� ������ ��ȭ�ϴ� ���� � ���°��� ����Ͻ�?����Ʈ�� ���� �м��մϴ�.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Footer -->
-        <footer class="footer mt-4">
-            <div class="container text-center fade-in-up">
-                <h2 class="footer-title" data-i18n="footer.title">���Ľÿ� �Բ� ����Ͻ���?����ȭ�ϼ���</h2>
-                <div class="mt-4">
-                    <a href="../../ko/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">Contact</a>
-                </div>
-            </div>
-            <div class="footer-bottom text-center">
-                <p data-i18n="footer.copyright" style="color: rgba(255, 255, 255, 0.6);">�� 2026 Empasy. All rights reserved.</p>
-            <!-- SEO Semantic IT Company Info -->
-            <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px;">
-                    <a href="https://github.com/DramaticCollaboration" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="/docs/ko/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
-                        <i class="fas fa-book"></i> Documentation
-                    </a>
-                </div>
-                <address style="font-style: normal; color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.6;">
-                    <strong style="color: rgba(255, 255, 255, 0.9);">(��)���Ľ� (Empasy IT Corp.)</strong><br>
-                    ������������ B2B ����Ʈ���� �� AI ������Ʈ(SyncSeries) ���߻�<br>
-                    Seoul, South Korea
-                </address>
-            </div>
-    
-            </div>
-        </footer>
-    
-        <!-- Scripts -->
-    
-    
-
     <main class="container" style="padding-top: 150px; min-height: 80vh;">
         <div class="page-header text-center fade-in-up mb-4">
             <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Insights</span>
             <h1 class="page-title" style="font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 1rem; color: var(--text-primary);">Tech Blog</h1>
-            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">������������ AI ������ ���� �������� ���̵�� �ֽ� ��� Ʈ���带 Ȯ���ϼ���.</p>
+            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">엔터프라이즈 AI 도입을 위한 실질적인 가이드와 최신 기술 트렌드를 확인하세요.</p>
         </div>
         
         <section class="section" style="padding-top: 2rem;">
             <div class="container">
                 <article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-    
-    
-    
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>���Ľ�(Empasy) - ������ AI ������Ʈ ���?������������ � ���°�</title>
-        <meta name="description" content="���Ľ�(Empasy)�� �����?����Ͻ�?������ �����ϴ� AI Ops �����?���� � ���°踦 �����մϴ�. SyncSeries�� ���� ������ �ٸ� ������������ AI ������Ʈ�� �����ϼ���.">
-        <meta name="keywords" content="���Ľ�, Empasy, IT ���? B2B �ַ��? ����Ʈ���� ���߻�, AI ������Ʈ, ������������ AI, SyncSeries, SyncEta, SyncCMS, ���̺� ���Ľ� �ƴ�, �ΰ����� ȸ��">
-        <meta name="author" content="Empasy">
-        
-        
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "���Ľ�(Empasy)",
-          "alternateName": ["���Ľ� IT", "Empasy AI", "���Ľ� �ֽ�ȸ��"],
-          "url": "https://empasy.com/",
-          "logo": "https://empasy.com/empasy-logo.png",
-          "description": "��ȹ���� ����� �ΰ��� ������ �ּ�ȭ�ϴ� AI Ops �����?���� � ���°踦 �����մϴ�.",
-          "sameAs": [
-            "https://github.com/DramaticCollaboration",
-            "../../docs/index.html"
-          ]
-        }
-        </script>
-        
-        <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&amp;family=Noto+Sans+KR:wght@300;400;700;900&amp;display=swap" rel="stylesheet">
-    
-            <meta name="geo.region" content="KR-11">
-        <meta name="geo.placename" content="Seoul">
-        <meta name="geo.position" content="37.5665;126.9780">
-        <meta name="ICBM" content="37.5665, 126.9780">
-        
-        
-        
-        
-        
-        
-    
-            
-        
-        
-        
-    
-        <!-- Custom animations for enriched homepage -->
-        <style>
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: white }
-        }
-        .typewriter-text {
-            animation: typing 2s steps(40, end) forwards, blink-caret .75s step-end infinite;
-            white-space: nowrap;
-            overflow: hidden;
-            display: inline-block;
-            border-right: 2px solid white;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        </style>
-    
-        <!-- SEO & AIO Tags -->
-        <link rel="canonical" href="https://empasy.com/ko/pages/index.html">
-        <link rel="alternate" hreflang="ko" href="https://empasy.com/">
-        <link rel="alternate" hreflang="en" href="https://empasy.com/en/">
-        <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/">
-        <link rel="alternate" hreflang="x-default" href="https://empasy.com/">
-        
-        <!-- Open Graph -->
-        <meta property="og:title" content="���Ľ�(Empasy) - ������ AI ������Ʈ ���?������������ � ���°�">
-        <meta property="og:description" content="���Ľ�(Empasy)�� �����?����Ͻ�?������ �����ϴ� AI Ops �����?���� � ���°踦 �����մϴ�. SyncSeries�� ���� ������ �ٸ� ������������ AI ������Ʈ�� �����ϼ���.">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://empasy.com/">
-        <meta property="og:image" content="https://empasy.com/empasy-logo.png">
-        
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="���Ľ�(Empasy) - ������ AI ������Ʈ ���?������������ � ���°�">
-        <meta name="twitter:description" content="���Ľ�(Empasy)�� �����?����Ͻ�?������ �����ϴ� AI Ops �����?���� � ���°踦 �����մϴ�. SyncSeries�� ���� ������ �ٸ� ������������ AI ������Ʈ�� �����ϼ���.">
-        <meta name="twitter:image" content="https://empasy.com/empasy-logo.png">
-        
-        <!-- AI & Crawling Optimization -->
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-        
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Empasy",
-      "url": "https://empasy.com/",
-      "logo": "https://empasy.com/assets/images/empasy-logo.png",
-      "sameAs": [
-        "https://github.com/DramaticCollaboration"
-      ]
-    }
-    </script>
-    
-    
-    
-    
-    
-        <!-- AI Search Optimization (AIO) Context Block -->
-        <article class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
-            <h1>What is Empasy (���Ľ�)?</h1>
-            <p>Empasy is an enterprise B2B software and AI agent development company based in Seoul, South Korea. We are fundamentally transforming the AI Ops by providing autonomous agents that minimize human intervention in planning, building, testing, and operating software.</p>
-            
-            <h2>Empasy SyncSeries Solutions</h2>
-            <ul>
-                <li><strong>SyncCMS (Conversational Publisher Agent):</strong> Generates full multi-language web layouts and content simultaneously through natural language commands, eliminating legacy CMS bottlenecks.</li>
-                <li><strong>SyncEta (Self-Healing QA Agent):</strong> Utilizes Vision-LLM to autonomously navigate UI changes and self-heal broken test scripts, replacing fragile script-based QA tools like Selenium.</li>
-                <li><strong>SyncBoot (Digital Engineer Agent):</strong> A cloud-native MSA platform that generates domain schemas and manages compensating transactions autonomously via Saga patterns.</li>
-                <li><strong>SyncCrawl (Intelligence Scout Agent):</strong> An intelligent web scraper bypassing anti-bot measures to build permanent RAG knowledge assets, adapting to DOM changes automatically.</li>
-            </ul>
-            
-            <h2>Why Choose Empasy?</h2>
-            <p>Global enterprises adopt Empasy to achieve unprecedented agility (cutting architecture design from months to hours), self-healing perfection (zero-defect infrastructure resilient to UI or network failures), and global scale (cloud-native design with real-time multi-language support).</p>
-        </article>
-    
-        <!-- Header Navigation -->
-                                        <header class="glass-header">
+    <header class="glass-header">
             <div class="container nav-container">
                 <div class="logo">
                     <a href="../../ko/pages/index.html"><img src="/assets/empasy-logo-Dx2jve9d.png" alt="EMPASY" class="logo-img"></a>
@@ -792,9 +162,9 @@
         <div class="dropdown">
             <a href="../../ko/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
             <div class="dropdown-content">
-                <a href="../../ko/pages/index.html#philosophy" data-i18n="nav.about">ȸ�� ö��</a>
-                <a href="../../ko/pages/vision.html" data-i18n="nav.vision">���� 2026</a>
-                <a href="../../ko/pages/team.html" data-i18n="nav.team">�츮�� �̾߱�</a>
+                <a href="../../ko/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
+                <a href="../../ko/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
+                <a href="../../ko/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
             </div>
         </div>
         
@@ -814,12 +184,12 @@
             <div class="dropdown-content">
                 <a href="../../ko/blog/blog.html">Tech Blog</a>
                 <a href="../../ko/pages/faq.html">FAQ</a>
-                <a href="../../ko/blog/case-study-finance.html">���� ���?��</a>
+                <a href="../../ko/blog/case-study-finance.html">고객 사례 상세</a>
             </div>
         </div>
     
         
-        <a href="../../ko/pages/clients.html" data-i18n="nav.clients">���۷���</a>
+        <a href="../../ko/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
         
         <!-- Top-level SyncEta link added as requested -->
         <a href="../../ko/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
@@ -838,444 +208,76 @@
                     <a href="../../ko/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact">Contact</a>
                 </div>
             </div>
-        </header>
-    
-        <!-- Main Hero Section -->
-        <section id="home" class="hero fade-in-up">
-            <div class="container hero-content" style="padding-top: 4rem;">
-                <span class="badge" data-i18n="hero.badge" style="background: transparent; border: 1px solid var(--border-color); color: var(--text-secondary); letter-spacing: 2px; text-transform: uppercase;">Boon to Business by Agility</span>
-                <h1 class="hero-title" data-i18n="hero.title" style="font-size: 4.5rem; margin-top: 2rem; letter-spacing: -2px; line-height: 1.1; font-weight: 400; ">���Ľ�(Empasy),<br>����Ͻ�?��ø���� �ϼ�<br><span style="color: var(--primary-color); ">������ AI ���� � ���°�</span></h1>
-                <p class="hero-subtitle" data-i18n="hero.subtitle" style="color: var(--text-secondary); font-size: 1.2rem; line-height: 1.8; max-width: 600px; margin: 2rem auto;">������ ��������Ʈ�� ���� �����ϰ�, ��ȹ���� ����� �ΰ��� ������ �ּ�ȭ�ϴ� <strong>AI Ops</strong> ���°�. ���Ľð� ������ ����Ͻ�?������ �����մϴ�.</p>
-                <div class="hero-buttons">
-                    <a href="#solutions" class="btn btn-primary" data-i18n="hero.btn">�ַ��?�˾ƺ���</a>
-                </div>
-    
-                <!-- Interactive AI Terminal -->
-                <div class="interactive-terminal mt-4 fade-in-up delay-2" style="max-width: 800px; margin: 4rem auto 0; text-align: left; background: #0f172a; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); overflow: hidden; border: 1px solid #334155;">
-                    <div style="background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; align-items: center; border-bottom: 1px solid #334155;">
-                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
-                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b;"></div>
-                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></div>
-                        <div style="margin-left: 1rem; font-family: monospace; color: #94a3b8; font-size: 0.85rem;">empasy-agent-cli</div>
-                    </div>
-                    <div style="padding: 1.5rem; font-family: monospace; font-size: 0.95rem; line-height: 1.6; color: #e2e8f0;">
-                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
-                            <span style="color: #22c55e;">User&gt;</span>
-                            <span class="typewriter-text">"���� ������ ������ְ�?�ڵ�ȭ �׽�Ʈ ������"</span>
-                        </div>
-                        <div class="terminal-response" style="opacity: 0; animation: fadeIn 0.5s ease 2.5s forwards;">
-                            <div style="color: #38bdf8;">[SyncCMS]</div>
-                            <div>&nbsp;? UI ������Ʈ ���� ��... <span>[�Ϸ�]</span></div>
-                            <div>&nbsp;? �ٱ���(EN/JP) ���ؽ�Ʈ ���� ����... <span>[�Ϸ�]</span></div>
-                        </div>
-                        <div class="terminal-response-2" style="opacity: 0; animation: fadeIn 0.5s ease 4s forwards; margin-top: 1rem;">
-                            <div style="color: #a78bfa;">[SyncEta]</div>
-                            <div>&nbsp;? ���� �帧 ���� �ó����� ���� ����... <span>[�Ϸ�]</span></div>
-                            <div>&nbsp;? Vision-LLM �ð��� Ž�� �� �׽�Ʈ ����... <span style="color: #22c55e;">[PASS]</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Stats & Marquee Section -->
-        <section class="section" style="padding: 4rem 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); background: rgba(255,255,255,0.02);">
-            <div class="container">
-                <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; margin-bottom: 4rem;">
-                    <div class="fade-in-up">
-                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">15+</div>
-                        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">���� ���� �� ���?/div>
-                    </div>
-                    <div class="fade-in-up delay-1">
-                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">90%</div>
-                        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">QA �������� ����</div>
-                    </div>
-                    <div class="fade-in-up delay-2">
-                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">99.9%</div>
-                        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">�ڰ� ġ�� ������</div>
-                    </div>
-                    <div class="fade-in-up delay-2">
-                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">5 min</div>
-                        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">���?���� ���� �ð�</div>
-                    </div>
-                </div>
-                
-                <div style="overflow: hidden; position: relative; width: 100%; padding: 2rem 0; opacity: 0.6;">
-                    <div class="marquee" style="display: flex; gap: 4rem; width: max-content; animation: scroll 30s linear infinite;">
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">GLOBAL ENTERPRISE A</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">TECH INNOVATOR B</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">FINANCE GROUP C</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">ECOMMERCE LEADER D</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">GLOBAL ENTERPRISE A</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">TECH INNOVATOR B</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">FINANCE GROUP C</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">ECOMMERCE LEADER D</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        
-        <!-- Marquee Banner -->
-        <div class="marquee-container" style="background: rgba(15, 23, 42, 0.8); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); padding: 1.2rem 0; overflow: hidden; white-space: nowrap; display: flex; align-items: center;">
-            <div class="marquee-content" style="display: inline-block; animation: scrollMarquee 30s linear infinite; font-size: 1.2rem; color: #f8fafc; font-weight: 600; letter-spacing: 1px;">
-                <span style="margin: 0 4rem;">? 10M+ Tasks Automated</span>
-                <span style="margin: 0 4rem;">??? 99.9% Zero-Defect Operations</span>
-                <span style="margin: 0 4rem;">?? Agent-to-Agent Protocol</span>
-                <span style="margin: 0 4rem;">?? Global Enterprise Standard</span>
-                <span style="margin: 0 4rem;">? 10M+ Tasks Automated</span>
-                <span style="margin: 0 4rem;">??? 99.9% Zero-Defect Operations</span>
-                <span style="margin: 0 4rem;">?? Agent-to-Agent Protocol</span>
-                <span style="margin: 0 4rem;">?? Global Enterprise Standard</span>
-            </div>
-        </div>
-        <style>
-        @keyframes scrollMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        @keyframes spinOrbit { 100% { transform: translate(-50%, -50%) rotate(360deg); } }
-        @keyframes antiSpin { 100% { transform: translate(-50%, -50%) rotate(-360deg); } }
-        .diagram-node:hover { box-shadow: 0 0 20px var(--primary-color); transform: scale(1.1) !important; z-index: 20; }
-        .interactive-diagram { background: radial-gradient(circle at center, rgba(8,145,178,0.1) 0%, transparent 70%); }
-        .interactive-diagram::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>'); opacity: 0.5; z-index: 1; }
-        .node-base { position: absolute; background: var(--surface-color); padding: 0.8rem 1.5rem; border-radius: 30px; cursor: pointer; transition: all 0.3s ease; white-space: nowrap; font-weight: 600; z-index: 10; display:flex; align-items:center; gap:8px;}
-        </style>
-    
-        <!-- Philosophy Section -->
-    
-        <section id="philosophy" class="section" style="background-color: var(--surface-color);">
-            <div class="container">
-                <div class="grid grid-2 align-center">
-                    <div class="fade-in-up">
-                        <span class="badge" data-i18n="philosophy.badge">Our Philosophy</span>
-                        <h2 class="section-title mt-2" data-i18n="philosophy.title">�ΰ��� ��ġ�� â���ϰ�, ���� �����մϴ�.</h2>
-                        <p class="section-desc text-left" style="max-width: 100%;" data-i18n="philosophy.desc">���Ľô� �ܼ��� �ڵ� ������ ������ �ʽ��ϴ�. ��ȹ, ����, �׽�Ʈ, ��� �̸��� �� ������ �ƿ츣�� <strong>���������� AI ������Ʈ ���°�</strong>�� ����, �ΰ��� ������ �����?�庮���� ��� ���� '����Ͻ�?��ġ â��'���� ������ �� �ִ� ������ ����ϴ�?</p>
-                        <ul class="feature-list mt-4">
-                            <li>�ΰ� �߽��� ���?���� (Human-Centric AI)</li>
-                            <li>�ŷ��� �� �ִ� ������ ������ (Zero-Defect Infrastructure)</li>
-                            <li>����Ͻ�?������ ���� ���ڵ�ȭ (Hyper-Automation)</li>
-                        </ul>
-                    </div>
-                    <div class="fade-in-up delay-1 text-center" style="position: relative;">
-                        <div style="width: 300px; height: 300px; background: linear-gradient(135deg, var(--primary-color), #2DD4BF); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 40px rgba(8, 145, 178, 0.2);">
-                            <span style="font-size: 4rem; color: white; font-weight: bold;">E</span>
-                        </div>
-                        <div class="dynamic-orb orb-3"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Architecture Stack -->
-        <section class="section" style="background-color: var(--surface-color);">
-            <div class="container">
-                <div class="section-header text-center fade-in-up mb-4">
-                    <span class="badge">Deep Tech Architecture</span>
-                    <h2 class="section-title">���Ľ� �ھ� ���� �����?/h2>
-                    <p class="section-desc">������ �ٸ� ���� ��� �����ϰ� �ϴ� ���Ľø��� �������� ����ũ ��Ű��ó</p>
-                </div>
-                
-                <div class="bento-grid mt-4" style="grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
-                    <div class="bento-item surface-card glass-panel glass-panel fade-in-up" style="grid-column: span 2; padding: clamp(1.2rem, 5vw, 3rem); background: linear-gradient(135deg, rgba(8,145,178,0.1), transparent);">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--primary-color);">Vision-LLM Engine</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">�ΰ��� �ð� ������ �����?��Ƽ���?LLM����, DOM ������ �ٲ��?ȭ���� �ƶ������� �����Ͽ� ������ ���?�ĺ��� �ڰ� ġ��(Self-Healing)�� �����մϴ�.</p>
-                    </div>
-                    <div class="bento-item surface-card glass-panel glass-panel fade-in-up delay-1" style="grid-column: span 2; padding: clamp(1.2rem, 5vw, 3rem); background: linear-gradient(135deg, rgba(13,148,136,0.1), transparent);">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--primary-color); ">Dynamic RAG Knowledge</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">�ǽð����� �����Ǵ� �����?�����Ϳ� �系 �������� ���� �����ͺ��̽��� �Ӻ����Ͽ�, ȯ��(Hallucination) ���� ��Ȯ�� ����Ͻ�?�ǻ������?�����մϴ�.</p>
-                    </div>
-                    <div class="bento-item surface-card glass-panel glass-panel fade-in-up delay-2" style="grid-column: span 2; padding: clamp(1.2rem, 5vw, 3rem); background: linear-gradient(135deg, rgba(15,23,42,0.1), transparent);">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--text-primary);">Saga Pattern MSA Control</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">���� ���� ����ũ�μ��񽺷� �л��?ȯ�濡�� ���?�߻� ��, ������ ���� Ʈ�������?AI�� ������ ����Ͽ�?��ü �ý����� ������ ���ռ��� �Ϻ��ϰ� �����մϴ�.</p>
-                    </div>
-                    <div class="bento-item surface-card glass-panel glass-panel fade-in-up delay-2" style="grid-column: span 2; padding: clamp(1.2rem, 5vw, 3rem); background: linear-gradient(135deg, rgba(100,116,139,0.1), transparent);">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--text-primary);">Anti-Bot Evasion Tactics</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">���� ���Ͻ� �����̼�, ������ �ΰ�����Ʈ ����, CAPTCHA �ð��� �߷� ��ȸ �� �����?Military-grade) ���ڽ� �����?���?�����͸� �����ϰ� ��ī���մϴ�.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Why Empasy Section -->
-    
-        <section id="why-empasy" class="section">
-            <div class="container">
-                <div class="section-header text-center fade-in-up mb-4">
-                    <span class="badge">Why Empasy?</span>
-                    <h2 class="section-title">�� ���Ľø� �����ؾ� �ұ��?</h2>
-                    <p class="section-desc">�۷ι� ���������������?���Ľ��� Sync Series�� �����Ͽ� ���?�ִ� �ٽ� ����Ͻ�?��ġ�Դϴ�.</p>
-                </div>
-                
-                <div class="bento-grid mt-4" style="grid-template-columns: repeat(3, 1fr); gap: 3rem;">
-                    <div class="bento-item small surface-card glass-panel glass-panel fade-in-up" style="padding: 3rem 2rem; border: none; background: transparent; border-top: 1px solid var(--border-color); border-radius: 0;">
-                        <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-color); margin-bottom: 2rem; display: block;">01 ? Agility</span>
-                        <h3 style="font-size: 1.8rem; font-weight: 400; margin-bottom: 1rem;">�е��� ��ø��</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">�������� �ɸ��� ��Ű��ó ���踦 �� �� �ð����� ����.</p>
-                    </div>
-                    <div class="bento-item small surface-card glass-panel glass-panel fade-in-up delay-1" style="padding: 3rem 2rem; border: none; background: transparent; border-top: 1px solid var(--border-color); border-radius: 0;">
-                        <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-color); margin-bottom: 2rem; display: block;">02 ? Perfection</span>
-                        <h3 style="font-size: 1.8rem; font-weight: 400; margin-bottom: 1rem;">�ڰ� ġ�� ������</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">UI/��Ʈ��ũ ��ֽ�?������ ������ �ľ��ϰ� ����.</p>
-                    </div>
-                    <div class="bento-item small surface-card glass-panel glass-panel fade-in-up delay-2" style="padding: 3rem 2rem; border: none; background: transparent; border-top: 1px solid var(--border-color); border-radius: 0;">
-                        <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-color); margin-bottom: 2rem; display: block;">03 ? Scale</span>
-                        <h3 style="font-size: 1.8rem; font-weight: 400; margin-bottom: 1rem;">�۷ι� Ȯ�强</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">Ŭ���� ����Ƽ�� �����?�ǽð� �ٱ��� ����.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Vision Section -->
-        <section id="vision" class="section">
-            <div class="container">
-                <div class="section-header text-center fade-in-up mb-4">
-                    <span class="badge" data-i18n="vision.badge">2026 SyncVerse</span>
-                    <h2 class="section-title" data-i18n="vision.title">������ ���� ���� � ���������?����</h2>
-                    <p class="section-desc" data-i18n="vision.desc">���Ľô� �ܼ��� �ڵ�ȭ ������ �Ѿ�, ������Ʈ���� ���������� �����ϸ� �����?��ϴ� �̷��� �����մϴ�.</p>
-                </div>
-                
-                <div class="grid grid-2" style="gap: 4rem;">
-                    <div class="card surface-card glass-panel glass-panel fade-in-up delay-1" style="padding: clamp(1.2rem, 5vw, 3rem); background: var(--surface-color);">
-                        <h3 style="font-size: 2.5rem; font-weight: 400; color: var(--primary-color); margin-bottom: 1rem;">SyncVerse</h3>
-                        <h4 style="font-size: 1.1rem; font-weight: 400; color: var(--primary-color); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2rem;">������ �߾� ���� ������Ʈ ����</h4>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">SyncCMS, SyncEta, SyncBoot, SyncCrawl �� ���Ľ��� ���?������Ʈ�� �ϳ��� ����Ǵ�?�Ŵ��� ����ž�Դϴ�. �� ������Ʈ�� ������ �����͸� �ٸ� ������Ʈ�� �м��ϰ�, �̸� �������� �鿣���?����Ʈ���尡 ���������� ��ȭ�ϴ� <strong>������Ʈ �� ����(A2A) ���°�</strong>�� �ϼ��մϴ�.</p>
-                    </div>
-                    
-                    <div class="card surface-card glass-panel glass-panel fade-in-up delay-2" style="padding: clamp(1.2rem, 5vw, 3rem); background: transparent; border: 1px solid var(--border-color);">
-                        <h3 style="font-size: 2.5rem; font-weight: 400; color: var(--primary-color); margin-bottom: 1rem;">SyncInsight</h3>
-                        <h4 style="font-size: 1.1rem; font-weight: 400; color: var(--primary-color); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2rem;">������ ���?���� �ǻ����?�÷���</h4>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">SyncVerse�� ���� �帣�� �����?���?�����͸� �ǽð����� �����ϰ� �м��մϴ�. �ΰ� �濵���� ���� ��ú���?�Ѿ�, AI�� ������ ������ ��ȭ�� �����ϰ� <strong>����Ͻ�?�ǻ������?�ý��� Ȯ���� ���� �� �ڵ� ����</strong>�ϴ� �ñ��� ���ڸ������� �����մϴ�.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        
-        <!-- SyncVerse Interactive Diagram -->
-        <section class="section" style="padding-top: 4rem;">
-            <div class="container text-center">
-                <div class="section-header fade-in-up mb-5">
-                    <h2 class="section-title">The SyncVerse Architecture</h2>
-                    <p class="section-desc">���콺�� �÷� ������Ʈ �� �ǽð� ������ �帧(A2A)�� Ȯ���ϼ���.</p>
-                </div>
-                <div class="interactive-diagram fade-in-up delay-1" style="position: relative; width: 100%; max-width: 800px; height: 450px; margin: 0 auto; border-radius: var(--border-radius); border: 1px solid var(--glass-border); overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                    
-                    <!-- Center Node -->
-                    <div class="node-base node-center" style="top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--primary-color); border: none; padding: 1.5rem; border-radius: 50%; box-shadow: 0 0 40px rgba(8,145,178,0.6); color: #fff; font-weight: 800; font-size: 1.2rem;">
-                        SyncVerse<br>Core
-                    </div>
-                    
-                    <!-- Orbiting Nodes Container -->
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 340px; height: 340px; border: 1px dashed rgba(255,255,255,0.15); border-radius: 50%; animation: spinOrbit 25s linear infinite; z-index: 5;">
-                        <div class="node-base diagram-node" style="top: 0; left: 50%; transform: translate(-50%, -50%); border: 1px solid var(--primary-color); animation: antiSpin 25s linear infinite;">?? SyncCMS</div>
-                        <div class="node-base diagram-node" style="top: 100%; left: 50%; transform: translate(-50%, -50%); border: 1px solid var(--secondary-color); animation: antiSpin 25s linear infinite;">?? SyncEta</div>
-                        <div class="node-base diagram-node" style="top: 50%; left: 0; transform: translate(-50%, -50%); border: 1px solid var(--accent-color); animation: antiSpin 25s linear infinite;">?? SyncBoot</div>
-                        <div class="node-base diagram-node" style="top: 50%; left: 100%; transform: translate(-50%, -50%); border: 1px solid #10b981; animation: antiSpin 25s linear infinite;">??? SyncCrawl</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Solutions Section -->
-        <section id="solutions" class="section">
-            <div class="container">
-                <div class="section-header fade-in-up text-center mb-4">
-                    <h2 class="section-title">Sync Series</h2>
-                    <p class="section-desc">����Ʈ���� ���� �� ����(End-to-End)���� ����Ͻ�?��ø���� �ش�ȭ�ϴ� �ַ��?���ڽý���</p>
-                </div>
-                <div class="grid grid-2 solutions-grid">
-                    <!-- SyncCMS -->
-                    <div class="card surface-card glass-panel glass-panel fade-in-up" style="padding: 2.5rem;">
-                        <div class="solution-header">
-                            <h3>SyncCMS</h3>
-                            <span class="badge" data-i18n="cms.badge" style="margin: 0.5rem 0;">Conversational Publisher Agent</span>
-                        </div>
-                        <ul class="feature-list mt-4">
-                            <li data-i18n="cms.vs.agent.1">�ڿ��� ���ɸ����� ���̾ƿ��� ������ ���� ����</li>
-                            <li data-i18n="cms.vs.agent.2">ȭ���� ���� '�� ��ư ������ �ٲ���' ���?����</li>
-                            <li data-i18n="cms.vs.agent.3">���� ���� �� 15���� �ٱ��� ���ҽ� �ڵ� ����</li>
-                        </ul>
-                        <a href="../../ko/solutions/sync-cms.html" class="btn btn-outline btn-sm mt-4">�� �˾ƺ��� ��</a>
-                    </div>
-    
-                    <!-- SyncEta -->
-                    <div class="card surface-card glass-panel glass-panel fade-in-up delay-1" style="padding: 2.5rem;">
-                        <div class="solution-header">
-                            <h3>SyncEta</h3>
-                            <span class="badge" data-i18n="eta.badge" style="margin: 0.5rem 0;">Self-Healing QA Agent</span>
-                        </div>
-                        <ul class="feature-list mt-4">
-                            <li data-i18n="eta.vs.agent.1">Vision LLM�� Ȱ���� �ð��� �ĺ��� �ڰ� ġ��</li>
-                            <li data-i18n="eta.vs.agent.2">'�����?����' �����?�ƶ��� ȭ�� �ر� �Ǵ�</li>
-                            <li data-i18n="eta.vs.agent.3">���� ���� �� ���� �м� �� �ذ� �ڵ� ������</li>
-                        </ul>
-                        <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-                            <a href="../../ko/solutions/sync-eta.html" class="btn btn-outline btn-sm">�� �˾ƺ��� ��</a>
-                            <a href="../../ko/pages/index.html" class="btn btn-primary btn-sm" style="flex: 1;">?? SaaS �����ϱ�</a>
-                        </div>
-                    </div>
-    
-                    <!-- SyncBoot -->
-                    <div class="card surface-card glass-panel glass-panel fade-in-up" style="padding: 2.5rem;">
-                        <div class="solution-header">
-                            <h3>SyncBoot</h3>
-                            <span class="badge" data-i18n="boot.badge" style="margin: 0.5rem 0;">Digital Engineer Agent</span>
-                        </div>
-                        <ul class="feature-list mt-4">
-                            <li data-i18n="boot.vs.agent.1">�ڿ��� ���ɸ����� ��Ű�� ���� �� ������ ����</li>
-                            <li data-i18n="boot.vs.agent.2">Saga ���� ���?������ ������ ���� Ʈ�����?����</li>
-                            <li data-i18n="boot.vs.agent.3">���� �߻� �� �α׸� �ڵ� �����Ͽ� ġ��å ����</li>
-                        </ul>
-                        <a href="../../ko/solutions/sync-boot.html" class="btn btn-outline btn-sm mt-4">�� �˾ƺ��� ��</a>
-                    </div>
-    
-                    <!-- SyncCrawl -->
-                    <div class="card surface-card glass-panel glass-panel fade-in-up delay-1" style="padding: 2.5rem;">
-                        <div class="solution-header">
-                            <h3>SyncCrawl</h3>
-                            <span class="badge" data-i18n="crawl.badge" style="margin: 0.5rem 0;">Intelligence Scout Agent</span>
-                        </div>
-                        <ul class="feature-list mt-4">
-                            <li data-i18n="crawl.vs.agent.1">Vision-LLM�� ������ �ǹ̸� �߷��� ���� �� �ڵ� ����</li>
-                            <li data-i18n="crawl.vs.agent.2">���Ͻ� �����̼ǰ� ���� ������ ��Ƽ�� �ý��� ��ȸ</li>
-                            <li data-i18n="crawl.vs.agent.3">������ ���� ���� ���͸��� ���� ��ǰ�� JSON ����</li>
-                        </ul>
-                        <a href="../../ko/solutions/sync-crawl.html" class="btn btn-outline btn-sm mt-4">�� �˾ƺ��� ��</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        
-        <!-- Empasy Insights -->
-        <section class="section" style="background: rgba(0,0,0,0.2); border-top: 1px solid var(--glass-border);">
-            <div class="container">
-                <div class="section-header fade-in-up text-center mb-5">
-                    <h2 class="section-title">Empasy Insights</h2>
-                    <p class="section-desc">������������ AI ������ �̲��� ���Ľ��� �ֽ� ���?�� ����Ͻ�?����ġ</p>
-                </div>
-                <div class="grid grid-3">
-                    <div class="card glass-card fade-in-up delay-1" style="padding: 2.5rem; border-top: 4px solid var(--primary-color); cursor:pointer; transition:transform 0.3s;">
-                        <span class="badge" style="margin-bottom: 1rem;">Tech Blog</span>
-                        <h3 style="margin-bottom: 1rem; font-size: 1.25rem; line-height: 1.5;">Vision-LLM�� Ȱ���� E2E �׽�Ʈ �ڵ�ȭ�� �Ѱ� ����</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">DOM ���� ���濡 �����?���� �����Ͽ� ���?�׽�Ʈ�� �ð��� �߷����� �غ��ϴ� �����?�Ұ��մϴ�.</p>
-                    </div>
-                    <div class="card glass-card fade-in-up delay-2" style="padding: 2.5rem; border-top: 4px solid var(--secondary-color); cursor:pointer; transition:transform 0.3s;">
-                        <span class="badge" style="margin-bottom: 1rem;">Release Note</span>
-                        <h3 style="margin-bottom: 1rem; font-size: 1.25rem; line-height: 1.5;">SyncSeries 2.4.0 ������Ʈ: A2A �������� ����ȭ</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">������Ʈ �� ���?�ӵ��� 300% ����Ų ���ο� A2A(Agent-to-Agent) ����?��Ű��ó�� �����߽��ϴ�.</p>
-                    </div>
-                    <div class="card glass-card fade-in-up delay-3" style="padding: 2.5rem; border-top: 4px solid var(--accent-color); cursor:pointer; transition:transform 0.3s;">
-                        <span class="badge" style="margin-bottom: 1rem;">Whitepaper</span>
-                        <h3 style="margin-bottom: 1rem; font-size: 1.25rem; line-height: 1.5;">2026 ������������ AI Ʈ����: ���� ��� �ô�</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">�ܼ� �ڵ�ȭ�� �Ѿ� �ý����� ������ ��ȭ�ϴ� ���� � ���°��� ����Ͻ�?����Ʈ�� ���� �м��մϴ�.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Footer -->
-        <footer class="footer mt-4">
-            <div class="container text-center fade-in-up">
-                <h2 class="footer-title" data-i18n="footer.title">���Ľÿ� �Բ� ����Ͻ���?����ȭ�ϼ���</h2>
-                <div class="mt-4">
-                    <a href="../../ko/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">Contact</a>
-                </div>
-            </div>
-            <div class="footer-bottom text-center">
-                <p data-i18n="footer.copyright" style="color: rgba(255, 255, 255, 0.6);">�� 2026 Empasy. All rights reserved.</p>
-            <!-- SEO Semantic IT Company Info -->
-            <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px;">
-                    <a href="https://github.com/DramaticCollaboration" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="/docs/ko/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
-                        <i class="fas fa-book"></i> Documentation
-                    </a>
-                </div>
-                <address style="font-style: normal; color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.6;">
-                    <strong style="color: rgba(255, 255, 255, 0.9);">(��)���Ľ� (Empasy IT Corp.)</strong><br>
-                    ������������ B2B ����Ʈ���� �� AI ������Ʈ(SyncSeries) ���߻�<br>
-                    Seoul, South Korea
-                </address>
-            </div>
-    
-            </div>
-        </footer>
-    
-        <!-- Scripts -->
-    
-    
-    <div style="line-height: 1.8; color: var(--text-primary);">
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">01. SyncEta: No-Code ��� ������ QA �ڵ�ȭ �� �ð��� �ڰ� ġ��(Self-Healing) ����</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">?? ����� ��������Ʈ: '�������� ����(Maintenance Hell)'�� ȸ�� �׽�Ʈ ����</h3>
-        <p>���� �� ���ø����̼��� ����Ʈ����� UI ������Ʈ�� ���� ������� ���� DOM ���� ��ȭ�� �ϻ����Դϴ�. ������ Selenium�̳� �Ϲ����� E2E �׽�Ʈ �������� UI�� ���� �ĺ���(ID, Class)�� 1px�� ���̾ƿ� ���濡�� ���� �׽�Ʈ ��ũ��Ʈ�� ���� ������ �������� �������� ������ �Ȱ� �־�����, �̴� ������ ���� �ֱ⸦ ���θ��� ġ������ �����̾����ϴ�.</p>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">?? SyncEta�� �����Ͼ �ع�: Playwright MCP�� LLM�� ��� ����(Closed-loop)</h3>
-        <p>SyncEta�� �ڵ� ������ ���� ���������� �ϻ����� �� ����¡������ �Ϻ��� �׽�Ʈ �ó������� �ڻ�ȭ�� �� �ִ� <strong>No-Code/Codeless �÷���</strong>�� �����մϴ�.</p>
+        </header>    <div style="line-height: 1.8; color: var(--text-primary);">
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">01. SyncEta: No-Code 기반 지능형 QA 자동화 및 시각적 자가 치유(Self-Healing) 엔진</h2>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">💡 기술적 페인포인트: '유지보수 지옥(Maintenance Hell)'과 회귀 테스트 병목</h3>
+        <p>현대 웹 애플리케이션의 프론트엔드는 UI 컴포넌트의 잦은 리뉴얼과 동적 DOM 구조 변화가 일상적입니다. 기존의 Selenium이나 일반적인 E2E 테스트 도구들은 UI의 작은 식별자(ID, Class)나 1px의 레이아웃 변경에도 기존 테스트 스크립트가 쉽게 깨지는 고질적인 유지보수 문제를 안고 있었으며, 이는 애자일 배포 주기를 가로막는 치명적인 병목이었습니다.</p>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">🚀 SyncEta의 엔지니어링 해법: Playwright MCP와 LLM의 폐쇄 루프(Closed-loop)</h3>
+        <p>SyncEta는 코딩 지식이 없는 비전문가도 일상적인 웹 브라우징만으로 완벽한 테스트 시나리오를 자산화할 수 있는 <strong>No-Code/Codeless 플랫폼</strong>을 지향합니다.</p>
         <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Smart Recording & �ڿ��� ��ȯ:</strong> ����ڰ� �� ���������� �����ϴ� Ŭ��, �Է� ���� ��ȣ�ۿ� ������ �ܼ� ��ũ������ �ƴ� ������ DOM ������ JSON �α� ���·� ĸó�մϴ�. ������ ������ �α� �����ʹ� <strong>Mistral LLM</strong> ������ ���� ���� �м��Ǿ�, ����� ���� �а� ������ �� �ִ� ǥ�� ���(Step-Input-Expected Result) ������ <strong>�ڿ��� ��� Excel �׽�Ʈ���̽��� �ڵ� ��ȯ</strong>�˴ϴ�.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Playwright MCP ��� ����� ���� ���� ����:</strong> AI�� �����ϰų� QA �����Ͼ ���� �ۼ��� Excel �ó������� <strong>Playwright MCP(Model Context Protocol)</strong> ������ ���� �ؼ��Ͽ� �����մϴ�. �� ������ ���ҽ��� ���� �ҿ��ϴ� �̹��� ��ũ���� �� ��� ���, �� ǥ���� <strong>���ټ� Ʈ��(Accessibility Tree) ���� ������</strong>�� ���� �����ϱ� ������ �ȼ� �� �Ӽ� ��ȭ�� �ſ� ���ϸ�, ���� ���� Headless ������ �ν��Ͻ��� ���� �⵿�Ͽ� ��ü �׽�Ʈ ���� �ð��� ȹ�������� �����մϴ�.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Dual-AI Core ��� �ڰ� ġ��(Self-Healing):</strong> �׽�Ʈ ���� UI �������� ���� ���� �ĺ��ڸ� ã�� ���� ���, <strong>Dynamic DOM Analysis</strong> ����� �۵��մϴ�. ���� ���� ������ DOM Ʈ�� �������� ���� ȭ���� �ǽð����� �� �м��Ͽ� ������ ��ü ��Ҹ� ������ �߷� �� �ǽð� ����(Auto-Correction)�����ν� �׽�Ʈ�� �ߴ� ���� ���ֵǵ��� �����մϴ�.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>QA Feedback Loop (Fine-tuning):</strong> ��ȸ�� �ڵ�ȭ�� ��ġ�� �ʰ�, QA �����Ͼ �׽�Ʈ���̽��� �����ϰ� ������ �̷��� �н� �����ͷ� ����ȭ�Ͽ� LLM�� ���������� ����Ʃ��(LoRA) �� RAG ����ȭ�� �����ϴ� <strong>���� ������ ǰ�� ���°�</strong>�� �����߽��ϴ�.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Smart Recording & 자연어 변환:</strong> 사용자가 웹 브라우저에서 수행하는 클릭, 입력 등의 상호작용 정보를 단순 스크린샷이 아닌 정밀한 DOM 정보와 JSON 로그 형태로 캡처합니다. 수집된 저수준 로그 데이터는 <strong>Mistral LLM</strong> 엔진에 의해 정밀 분석되어, 사람이 쉽게 읽고 편집할 수 있는 표준 양식(Step-Input-Expected Result) 구조의 <strong>자연어 기반 Excel 테스트케이스로 자동 변환</strong>됩니다.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Playwright MCP 기반 무기록 고속 병렬 실행:</strong> AI가 생성하거나 QA 엔지니어가 직접 작성한 Excel 시나리오를 <strong>Playwright MCP(Model Context Protocol)</strong> 엔진이 직접 해석하여 실행합니다. 이 엔진은 리소스를 많이 소요하는 이미지 스크린샷 비교 방식 대신, 웹 표준의 <strong>접근성 트리(Accessibility Tree) 구조 데이터</strong>를 직접 추적하기 때문에 픽셀 및 속성 변화에 매우 강하며, 수백 대의 Headless 브라우저 인스턴스를 동시 기동하여 전체 테스트 수행 시간을 획기적으로 단축합니다.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Dual-AI Core 기반 자가 치유(Self-Healing):</strong> 테스트 도중 UI 변경으로 인해 기존 식별자를 찾지 못할 경우, <strong>Dynamic DOM Analysis</strong> 기술이 작동합니다. 이전 성공 시점의 DOM 트리 스냅샷과 현재 화면을 실시간으로 비교 분석하여 최적의 대체 요소를 스스로 추론 및 실시간 보정(Auto-Correction)함으로써 테스트가 중단 없이 완주되도록 보장합니다.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>QA Feedback Loop (Fine-tuning):</strong> 일회성 자동화에 그치지 않고, QA 엔지니어가 테스트케이스를 검토하고 수정한 이력을 학습 데이터로 내재화하여 LLM을 지속적으로 파인튜닝(LoRA) 및 RAG 고도화를 수행하는 <strong>지속 개선형 품질 생태계</strong>를 구축했습니다.</li>
         </ul>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">02. SyncCMS: Java ������ ����� �۷ι� ���� ������Ʈ ������ ���� �ý���</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">?? ����� ��������Ʈ: IT �μ� ���Ӽ��� �ٱ���/���� ����Ʈ ����ȭ</h3>
-        <p>�۷ι� ������������ ȯ�濡���� ������, �귣�庰�� ���� ���� ������ ����Ʈ�� ����ȭ�Ǿ� ��Ǵ� ��찡 �����ϴ�. ������ �ؽ�Ʈ ������ ��� ���̾ƿ��� ������ ������ IT ���� ���� �ҽ� �ڵ� ���� �� ���� ���������� ���� �ܰ踦 ��ٷ��� �ϹǷ�, �������� ���Ÿ���� ����ϴ� ����� ������ �����մϴ�.</p>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">?? SyncCMS�� �����Ͼ �ع�: ���� ���Ͻ� ������Ʈ ������ �� ���漺</h3>
-        <p>SyncCMS�� ������ ���� ������ Ż���Ͽ�, ���� �����Ϳ� ��ȹ�ڰ� ���� ȭ�� �󿡼� ���������� �� ���°踦 �Ϻ��� ������ �� �ִ� ������ ��Ű��ó�� �����մϴ�.</p>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">02. SyncCMS: Java 안정성 기반의 글로벌 다중 웹사이트 콘텐츠 관리 시스템</h2>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">💡 기술적 페인포인트: IT 부서 종속성과 다국어/다중 사이트 파편화</h3>
+        <p>글로벌 엔터프라이즈 환경에서는 국가별, 브랜드별로 수십 개의 마케팅 사이트가 파편화되어 운영되는 경우가 많습니다. 간단한 텍스트 문구나 배너 레이아웃을 수정할 때조차 IT 개발 팀의 소스 코드 수정 및 배포 파이프라인 정지 단계를 기다려야 하므로, 마케팅의 골든타임을 상실하는 고비용 구조를 유발합니다.</p>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">🚀 SyncCMS의 엔지니어링 해법: 레고 블록식 컴포넌트 조립과 웹 개방성</h3>
+        <p>SyncCMS는 개발자 의존 구조를 탈피하여, 현업 마케터와 기획자가 실제 화면 상에서 직관적으로 웹 생태계를 완벽히 제어할 수 있는 고성능 아키텍처를 제공합니다.</p>
         <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Component-Based Assembly (������ ���� ���):</strong> ����ǽ� �� UI ������Ʈ�� ���� ����ó�� ���ȭ�� <strong>������ ����(Page Fragments)</strong> ���·� �����մϴ�. ���� ����ڴ� �ð����� �巡�� �� ��� UI ���� ����� ���� IT �μ��� ���� ���� ��� ���̾ƿ��� �����ϰ� �ǽð����� ���������� �ۺ������� �� �ֽ��ϴ�.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Single Deployment ��� �۷ι� �ٱ��� ����:</strong> �� ���� �ý��� ����(Single Deployment)�����ε� 15���� �̻��� �ٱ��� �ؽ�Ʈ�� ��Ƽ �������� ������ �۷ι� ������Ʈ���� ���� ���� ����ǽ����� �߾� ������ �� �ֽ��ϴ�.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>������ ��Ű��ó �� ������ ������:</strong> Ư�� CMS �ַ�� ������ ���ӵǴ� ����� �������� ���, <strong>Java, Spring Boot, Hibernate �� Maven/Gradle ����� ������ ������Ʈ ����</strong>�� ���մϴ�. ���� Spring �����ӿ�ũ ������� ���� ������ ��� ������������ ������ ����Ͻ� ������ ���� Ȯ���� �����ϸ�, Freemarker ����� ������ ���ø� ������ �����Ͽ� ���ʸ� ���� ��Ը� ������ Ʈ���� ȯ�濡���� ������ �ս� ���� �Ϻ��� �˻����� ����ȭ(SEO) ģȭ�� �� ������ ������ �����մϴ�.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Component-Based Assembly (페이지 조각 기술):</strong> 백오피스 및 UI 컴포넌트를 레고 블록처럼 모듈화된 <strong>페이지 조각(Page Fragments)</strong> 형태로 관리합니다. 현업 담당자는 시각적인 드래그 앤 드롭 UI 조립 방식을 통해 IT 부서의 개입 없이 즉시 레이아웃을 구성하고 실시간으로 웹페이지를 퍼블리싱할 수 있습니다.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Single Deployment 기반 글로벌 다국어 제어:</strong> 한 번의 시스템 배포(Single Deployment)만으로도 15개국 이상의 다국어 텍스트와 멀티 도메인의 독립된 글로벌 웹사이트들을 단일 통합 백오피스에서 중앙 제어할 수 있습니다.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>개방형 아키텍처 및 무결점 렌더링:</strong> 특정 CMS 솔루션 벤더에 종속되는 폐쇄형 구조에서 벗어나, <strong>Java, Spring Boot, Hibernate 및 Maven/Gradle 기반의 개방형 프로젝트 형태</strong>를 취합니다. 따라서 Spring 프레임워크 기반으로 구현 가능한 모든 엔터프라이즈 수준의 비즈니스 로직과 동적 확장을 수용하며, Freemarker 기반의 유연한 템플릿 엔진을 내장하여 수십만 건의 대규모 고부하 트래픽 환경에서도 데이터 손실 없이 완벽한 검색엔진 최적화(SEO) 친화적 웹 렌더링 성능을 보장합니다.</li>
         </ul>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">03. SyncBoot: ������������ Ŭ���� ����Ƽ�� ��ȯ�� ���� ���¼ҽ� ��� MSA ���� �÷���</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">?? ����� ��������Ʈ: ������ Monolithic ������ ��Ը� MSA ���� ���</h3>
-        <p>����Ͻ��� �Ŵ����� ���� ������ ���� �Ŵ� ���Ž� �ý���(Monolithic)�� �ڵ� �� ���� ���յ��� ���� ���� �������� ��ü �ý��� ��ָ� �����մϴ�. �׷��� �̸� ����ũ�μ��� ��Ű��ó(MSA)�� ��ȯ�Ϸ��� ������ �л� ������ ó��, ������Ƽ�� ������ ����, ������ Ŭ���� ���� �η°� �������� �ʱ� ������ ���� ���ҽ��� ���ԵǴ� ���� �庮�� �����մϴ�.</p>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">?? SyncBoot�� �����Ͼ �ع�: ��� ��� ������ ǥ��ȭ Ǯ���� ��Ű��ó</h3>
-        <p>SyncBoot�� Java �� Spring Boot ǥ�� ��Ű��ó�� ������� ����������� �����ϴ� MSA ��ȯ ������ ���� �ܰ踦 ��Ű¡�Ͽ�, �ٽ� ����Ͻ� �������� ������ �� �ִ� <strong>�ʰ��� MSA ���� ������ ��Ʈ</strong>�� ��� �����մϴ�.</p>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">03. SyncBoot: 엔터프라이즈 클라우드 네이티브 전환을 위한 오픈소스 기반 MSA 개발 플랫폼</h2>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">💡 기술적 페인포인트: 경직된 Monolithic 구조와 대규모 MSA 구축 비용</h3>
+        <p>비즈니스가 거대해질 수록 기존의 단일 거대 레거시 시스템(Monolithic)은 코드 간 강한 결합도로 인해 작은 수정에도 전체 시스템 장애를 유발합니다. 그러나 이를 마이크로서비스 아키텍처(MSA)로 전환하려면 복잡한 분산 데이터 처리, 쿠버네티스 인프라 세팅, 수많은 클라우드 전문 인력과 수개월의 초기 인프라 구축 리소스가 투입되는 진입 장벽이 존재합니다.</p>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">🚀 SyncBoot의 엔지니어링 해법: 즉시 사용 가능한 표준화 풀스택 아키텍처</h3>
+        <p>SyncBoot는 Java 및 Spring Boot 표준 아키텍처를 기반으로 엔터프라이즈가 직면하는 MSA 전환 인프라 세팅 단계를 패키징하여, 핵심 비즈니스 로직에만 몰두할 수 있는 <strong>초고속 MSA 가속 인프라 벨트</strong>를 즉시 가동합니다.</p>
         <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Integrated ���¼ҽ� ��ũ ���� ��Ű¡:</strong> Ư�� ��� �ַ�� ������ ������ ���ӵ��� �ʴ� 100% ���¼ҽ� Ǯ������ �����մϴ�. ��Ը� Ʈ������ ���� ������ ������ ���� <strong>Spring Cloud Gateway</strong>, �л� �����̳��� �ǽð� ���� �� ���ߴ� ������ �����ϴ� <strong>Service Discovery (Nacos)</strong>, �л� ȯ�濡�� �߻��ϴ� Ʈ���� �ʰ��� �����ϴ� <strong>Circuit Breaker (Sentinel)</strong> ������ ��Ϲ���ó�� �⺻ ���յǾ� �ֽ��ϴ�.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>�л� ������ ���ռ� ����:</strong> MSA ��Ű��ó�� ���� ū ������ ������ ����ȭ�� �غ��ϱ� ����, <strong>Seata �л� Ʈ����� ����</strong>�� �����ӿ�ũ ���� ��õ �����Ͽ����ϴ�. �̷� ���� ���� ����ũ�μ��񽺷� ���ҵ� �����ͺ��̽� ȯ�濡���� ������ ������������� �л� ������ ���Ἲ�� �����մϴ�.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>E2E DevOps �� ���� Ǯ���� ������(Observability):</strong> ����, ����, ���� �ܰ踦 ���ø�ȭ�� <strong>Jenkins, GitLab ���� CI/CD ��ü��</strong>�� <strong>K8s ���ɽ�Ʈ���̼� ���̵����</strong>�� ��Ʈ�� �����մϴ�. �ƿ﷯ ���� � �� �߻��ϴ� �Ǽ� ������ Ž���ϴ� Slow SQL Tracking ��� �� <strong>SkyWalking, ELK, Prometheus/Grafana</strong>�� ���� �����Ͽ� �ý��� ������ ���� ������ ���������� �����ϰ� ��� ���̸� �����ϴ� �������� �⺻������ ����ȭ�߽��ϴ�.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Integrated 오픈소스 테크 스택 패키징:</strong> 특정 상용 솔루션 벤더에 무조건 종속되지 않는 100% 오픈소스 풀스택을 지향합니다. 대규모 트래픽의 단일 진입점 관리를 위한 <strong>Spring Cloud Gateway</strong>, 분산 컨테이너의 실시간 감지 및 무중단 연결을 조율하는 <strong>Service Discovery (Nacos)</strong>, 분산 환경에서 발생하는 트래픽 초과를 차단하는 <strong>Circuit Breaker (Sentinel)</strong> 인프라가 톱니바퀴처럼 기본 결합되어 있습니다.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>분산 데이터 정합성 보장:</strong> MSA 아키텍처의 가장 큰 난제인 데이터 파편화를 극복하기 위해, <strong>Seata 분산 트랜잭션 엔진</strong>을 프레임워크 내에 원천 내장하였습니다. 이로 인해 여러 마이크로서비스로 분할된 데이터베이스 환경에서도 강력한 엔터프라이즈급 분산 데이터 무결성을 유지합니다.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>E2E DevOps 및 통합 풀스택 관측성(Observability):</strong> 빌드, 검증, 배포 단계를 템플릿화한 <strong>Jenkins, GitLab 연동 CI/CD 툴체인</strong>과 <strong>K8s 오케스트레이션 가이드라인</strong>을 세트로 제공합니다. 아울러 배포 운영 중 발생하는 악성 쿼리를 탐지하는 Slow SQL Tracking 기능 및 <strong>SkyWalking, ELK, Prometheus/Grafana</strong>를 통합 수용하여 시스템 전반의 병목 현상을 선제적으로 관제하고 장애 전이를 차단하는 유연성을 기본적으로 내재화했습니다.</li>
         </ul>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">04. SyncVerse: ������Ʈ �� �ƶ��� �����ϴ� MCP ��� ������ AI DLC ���ɽ�Ʈ���̼� �÷���</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">?? ����� ��������Ʈ: AI �������� ������ ����ȭ(Silo ����)</h3>
-        <p>�ֱ� ������ AI ���� �������� ����, �׽�Ʈ, ������ ���� �� ���� ������ ���Եǰ� ������, �� �������� ���� ���������� �������� ���ϰ� �� �ܰ��� �ƶ�(Context)�� �����Ǿ� �ִٸ� ������ ���� ���� � ������������ ������ �� �����ϴ�. �����ڰ� ���� �ڵ带 �����ϰ�, �׽�Ʈ ������ �������� �Ѿ� �ϴ� ������ ������ �����ϱ� �����Դϴ�.</p>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">?? SyncVerse�� �����Ͼ �ع�: Agent-to-Agent(A2A) ��� �������� ��� ���� ���� ����������</h3>
-        <p>SyncVerse�� ���Ľ��� ������ 4�� �ַ��(SyncBoot, SyncCMS, SyncEta, SyncCrawl)�� ���������� ����ϰ� �Ǵ��ϴ� <strong>'������ AI ������Ʈ(Agent)'</strong>�� ��ȭ��Ű��, �̵��� �ϳ��� �Ѱ� �����ϴ� <strong>�߾� ����ž �÷���</strong>�Դϴ�.</p>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">04. SyncVerse: 에이전트 간 맥락을 연결하는 MCP 기반 차세대 AI DLC 오케스트레이션 플랫폼</h2>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">💡 기술적 페인포인트: AI 도구들의 단절과 파편화(Silo 현상)</h3>
+        <p>최근 수많은 AI 보조 도구들이 개발, 테스트, 콘텐츠 생성 등 개별 영역에 도입되고 있으나, 이 도구들이 서로 유기적으로 소통하지 못하고 각 단계의 맥락(Context)이 단절되어 있다면 진정한 무인 자율 운영 파이프라인을 구축할 수 없습니다. 개발자가 직접 코드를 복사하고, 테스트 도구를 수동으로 켜야 하는 단절이 여전히 존재하기 때문입니다.</p>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">🚀 SyncVerse의 엔지니어링 해법: Agent-to-Agent(A2A) 통신 프로토콜 기반 완전 무인 파인프라인</h3>
+        <p>SyncVerse는 엠파시의 검증된 4대 솔루션(SyncBoot, SyncCMS, SyncEta, SyncCrawl)을 독립적으로 사고하고 판단하는 <strong>'독립형 AI 에이전트(Agent)'</strong>로 진화시키고, 이들을 하나로 총괄 조율하는 <strong>중앙 관제탑 플랫폼</strong>입니다.</p>
         <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>�۷ι� ǥ�� MCP(Model Context Protocol) ä��:</strong> ���� ������Ʈ �� �ǽð� �ƶ��� �����͸� ���������� �Ϻ��ϰ� �����ϱ� ���� <strong>A2A �ٽ� ���������� MCP ǥ�� �԰�</strong>�� ���� �����մϴ�. �̸� ���� ���� ������Ʈ�� �׽�Ʈ ������Ʈ�� ���� �γ�ó�� ���������� ������ ��ȯ�ϴ� �ʿ��� ���°踦 �����մϴ�.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Zero-Touch AI DLC(Development Life Cycle) ����������:</strong> �ΰ� �������� �ܼ� ����� Ÿ���� �Է��� �����ϰ�, ���� ������� �ڿ��� �䱸���� ���ø����� �ý��� ��ü�� ������ �����ϴ� ���� � ������ �����մϴ�.
+            <li style="margin-bottom: 0.5rem;"><strong>글로벌 표준 MCP(Model Context Protocol) 채택:</strong> 개별 에이전트 간 실시간 맥락과 데이터를 유기적으로 완벽하게 연동하기 위해 <strong>A2A 핵심 프로토콜인 MCP 표준 규격</strong>을 전면 수용합니다. 이를 통해 개발 에이전트와 테스트 에이전트가 단일 두뇌처럼 유기적으로 지식을 교환하는 초연결 생태계를 실현합니다.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Zero-Touch AI DLC(Development Life Cycle) 파이프라인:</strong> 인간 개발자의 단순 기계적 타이핑 입력을 배제하고, 현업 담당자의 자연어 요구사항 지시만으로 시스템 전체가 스스로 동작하는 자율 운영 루프를 구현합니다.
                 <ol style="padding-left: 1.5rem; margin-top: 0.5rem;">
-                    <li><strong>�ڿ��� �䱸���� ����:</strong> ���� ����ڰ� �ڿ���� ���� ��û ������ �Է��մϴ�.</li>
-                    <li><strong>���� �ڵ� �� ������Ʈ ����:</strong> <strong>SyncBoot/SyncCMS Agent</strong>�� �ڿ�� �ؼ��Ͽ� �ʿ��� DB ��Ű�� ��Ű��ó �� �� �ҽ� �ڵ带 ���� �����մϴ�.</li>
-                    <li><strong>AI Pull Request ���� ���:</strong> ������ �Ϸ�Ǹ� <strong>SyncVerse</strong>�� �������� �м��Ͽ� Git ���� ����ҿ� �� ������ ���Ե� Pull Request�� �ڵ����� �ۼ� �� ����մϴ�.</li>
-                    <li><strong>���� ���� �� ���� ���� ����:</strong> CICD ���������ΰ� ���յǾ� <strong>SyncETA Agent</strong>�� ���� ȸ�� �׽�Ʈ�� ��� �۵���Ű��, �׽�Ʈ �� �߻��� ���̾ƿ� �����̳� ���� ���� ������ �����ϸ� �� �� ���� AI ���� ġ�� �� ���� ����Ŭ�� ���� ��� ������ ���ߴ� �ڵ� �����մϴ�.</li>
+                    <li><strong>자연어 요구사항 수렴:</strong> 현업 담당자가 자연어로 수정 요청 사항을 입력합니다.</li>
+                    <li><strong>자율 코드 및 컴포넌트 생성:</strong> <strong>SyncBoot/SyncCMS Agent</strong>가 자연어를 해석하여 필요한 DB 스키마 아키텍처 및 웹 소스 코드를 자율 수정합니다.</li>
+                    <li><strong>AI Pull Request 자율 상신:</strong> 수정이 완료되면 <strong>SyncVerse</strong>가 변경점을 분석하여 Git 원격 저장소에 상세 설명이 포함된 Pull Request를 자동으로 작성 및 상신합니다.</li>
+                    <li><strong>무인 검증 및 자율 에러 복구:</strong> CICD 파이프라인과 결합되어 <strong>SyncETA Agent</strong>가 무인 회귀 테스트를 즉시 작동시키고, 테스트 중 발생한 레이아웃 결함이나 로직 실패 지점을 감지하면 수 분 내로 AI 자율 치유 및 복구 사이클을 거쳐 상용 서버에 무중단 자동 배포합니다.</li>
                 </ol>
             </li>
         </ul>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">05. SyncInsight: �������̽�(On-premise) ������ �����ϴ� �ֻ��� �ǻ���� ���� �÷���</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">?? ����� ��������Ʈ: �系 �ٽ� ������ ���� ����ũ�� ����ȭ�� ���Ϸ� ������ �м� �Ѱ�</h3>
-        <p>��� ������ EPR, �系 Wiki, ���� ���� ������ �� ���ΰ���ġ �������� �м��ϱ� ���� �ۺ��� Ŭ���� ����� ���� LLM ���񽺸� ���к��ϰ� Ȱ���� ���, �ΰ��� ��� ��� �� ���������� �ܺη� ����Ǵ� �ɰ��� ���� ���� ����ũ�� �����մϴ�. ����, ���� �����Ͱ� �μ��� �ý��ۿ� ö���� �ݸ�(Silo)�Ǿ� �־� �������� �λ���Ʈ ������ �Ұ����߽��ϴ�.</p>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">?? SyncInsight�� �����Ͼ �ع�: 100% �系�� ����ȭ ���� �� Multi-Agent ���� �м�</h3>
-        <p>SyncInsight�� �ܼ��� IT ������ �ڵ�ȭ �ܰ踦 �پ�Ѿ� ��� ���� �ڻ��� ������ ����ȭ�� �ְ��濵��(C-Level)�� ������ ����Ͻ� �׼��� �ֵ��ϴ� <strong>�ֻ��� AI �γ� �÷���</strong>�Դϴ�.</p>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">05. SyncInsight: 온프레미스(On-premise) 보안을 관통하는 최상위 의사결정 지능 플랫폼</h2>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">💡 기술적 페인포인트: 사내 핵심 데이터 유출 리스크와 파편화된 사일로 데이터 분석 한계</h3>
+        <p>기업 내부의 EPR, 사내 Wiki, 마켓 동향 데이터 등 고부가가치 정보들을 분석하기 위해 퍼블릭 클라우드 기반의 대형 LLM 서비스를 무분별하게 활용할 경우, 민감한 기업 기밀 및 개인정보가 외부로 유출되는 심각한 보안 규제 리스크에 직면합니다. 또한, 내부 데이터가 부서별 시스템에 철저히 격리(Silo)되어 있어 통합적인 인사이트 도출이 불가능했습니다.</p>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">🚀 SyncInsight의 엔지니어링 해법: 100% 사내망 내재화 구조 및 Multi-Agent 교차 분석</h3>
+        <p>SyncInsight는 단순한 IT 인프라 자동화 단계를 뛰어넘어 기업 내부 자산의 무결점 지식화와 최고경영진(C-Level)의 전략적 비즈니스 액션을 주도하는 <strong>최상위 AI 두뇌 플랫폼</strong>입니다.</p>
         <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>���� ���� ����ȭ ���̺긮�� �������̽� ������:</strong> �系 �ٽ� ������ ����Һ��� �Ŵ� ��� ��(LLM) ���� ���� ȯ�� �� ������ <strong>������ �系 �缳 ���θ�(Intranet)</strong> Ȥ�� ���� �ݸ� ���̺긮�� �� ������ �����մϴ�. �̷� ���� �ܺ� Ŭ������� ���� ��θ� ��õ������ ���� �����Ͽ�, ����, ����, ÷�� ���� �о� �� ���� ������ ������ ����������ȣ�� �� ���� ���� ���� ����� 100% �����ϴ� ������ ������ �ֱ�(Data Sovereignty)�� �����մϴ�.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Context-Aware Advanced RAG ��� ��Ű��ó:</strong> �ܼ� Ű���� ��Ī ������ �Ӻ��� �˻� ������ �Ѱ踦 �غ��߽��ϴ�. <strong>Spring AI �� LangChain4j ��� ���� ����� ������������ ��Ű��ó</strong>�� �����ϰ� �����Ͽ� ���� ��ü�� ���� ������ �ǹ� �ľ��ϴ� <strong>Context-Aware RAG ����������</strong>�� �����մϴ�. �̸� ���� �系 ��Ű, �׷����, ERP, �׸��� <strong>SyncCrawl Agent</strong>�� ������ �ܺ� �ǽð� ���� ���� Ʈ���� �������� �̱��� �� ����ȭ�� ��Ը� ������ �����͸� �ǽð� ���� �Ӻ����Ͽ� ȯ��(Hallucination) ������ ������ ������ �ʰ�ǰ���� ���� ������ ��긦 ���� �����մϴ�.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Multi-Agent Orchestration Loop:</strong> ������ ������ �д��ϰ� �����ϴ� <strong>Collector(���� ������Ʈ), Analyst(��� �м� ������Ʈ), Reporter(������ ���� ������Ʈ)</strong>�� ������ �ϳ��� ���� ���� �� ������ �����Ǿ� ������ ���� ������ �����մϴ�. ���̽� ��ũ��Ʈ ���� ���� ����� ���� ��뷮 ��� �м����� �ӿ� ������ SWOT ���� �м� ����Ʈ ���� �ڵ� �ۼ��� �� �� ���� ���� ó���մϴ�.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>����Ͻ� �׼� ���� �� SyncVerse �ǵ�� ����:</strong> �ܼ��� �������� �����ִ� �ܰ迡�� �ӹ����� �ʰ�, �系�� ���� �м� ���� ���� ¡�ĳ� �ű� ���� ��ȸ�� ����� ��� �濵������ "Ư�� ���θ�� ������ �ż� �� Ÿ�� �̸��� ũ�Ѹ� ���������� ����"�� ���� ��ü���� ���� �׼��� �����մϴ�. �濵���� �̸� ����(Human-in-the-loop 1-Click ����)�ϴ� ���, �ֻ��� �γ��� SyncInsight�� ���� ���� ��ü�� <strong>SyncVerse�� ���� ���ߡ����� ��Ʈ�� ���� ���������� ���̷�Ʈ ����</strong>�Ͽ� �ý��� ȭ�鿡 �ﰢ �ǽð� �ݿ���Ű�� ���� �ڵ�ȭ �ǻ���� �ó����� �޼��մϴ�.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>보안 규제 최적화 하이브리드 온프레미스 인프라:</strong> 사내 핵심 데이터 저장소부터 거대 언어 모델(LLM) 서빙 서버 환경 전 구성을 <strong>완전한 사내 사설 내부망(Intranet)</strong> 혹은 전용 격리 하이브리드 존 내에만 구축합니다. 이로 인해 외부 클라우드로의 전송 통로를 원천적으로 완전 차단하여, 금융, 공공, 첨단 제조 분야 등 가장 엄격한 수준의 개인정보보호법 및 국가 보안 규제 요건을 100% 충족하는 강력한 데이터 주권(Data Sovereignty)을 제공합니다.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Context-Aware Advanced RAG 기술 아키텍처:</strong> 단순 키워드 매칭 형태의 임베딩 검색 엔진의 한계를 극복했습니다. <strong>Spring AI 및 LangChain4j 기술 스택 기반의 엔터프라이즈 아키텍처</strong>를 정밀하게 적용하여 문서 전체의 깊은 문맥적 의미 파악하는 <strong>Context-Aware RAG 파이프라인</strong>을 구동합니다. 이를 통해 사내 위키, 그룹웨어, ERP, 그리고 <strong>SyncCrawl Agent</strong>가 수집한 외부 실시간 시장 원시 트렌드 정보까지 이기종 간 파편화된 대규모 비정형 데이터를 실시간 교차 임베딩하여 환각(Hallucination) 현상이 완전히 통제된 초고품질의 지식 데이터 허브를 영구 구축합니다.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Multi-Agent Orchestration Loop:</strong> 스스로 역할을 분담하고 협업하는 <strong>Collector(수집 에이전트), Analyst(통계 분석 에이전트), Reporter(보고서 생성 에이전트)</strong>가 독립된 하나의 가상 전담 팀 단위로 구성되어 복잡한 연쇄 과업을 수행합니다. 파이썬 스크립트 실행 엔진 기반의 정밀 대용량 통계 분석부터 임원 보고용 SWOT 전략 분석 리포트 문서 자동 작성을 수 분 내로 전담 처리합니다.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>비즈니스 액션 제안 및 SyncVerse 피드백 연동:</strong> 단순히 보고서를 보여주는 단계에서 머무르지 않고, 사내외 교차 분석 도중 위기 징후나 신규 시장 기회가 도출될 경우 경영진에게 "특정 프로모션 페이지 신설 및 타겟 이메일 크롤링 파이프라인 가동"과 같은 구체적인 전략 액션을 제안합니다. 경영진이 이를 승인(Human-in-the-loop 1-Click 승인)하는 즉시, 최상위 두뇌인 SyncInsight는 하위 실행 주체인 <strong>SyncVerse의 자율 개발·배포 벨트로 명령 프로토콜을 다이렉트 전송</strong>하여 시스템 화면에 즉각 실시간 반영시키는 완전 자동화 의사결정 시너지를 달성합니다.</li>
         </ul>
     </div>
 </article>
@@ -1284,562 +286,34 @@
     </main>
 
     <!-- Footer -->
-    
-    
-    
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>���Ľ�(Empasy) - ������ AI ������Ʈ ���?������������ � ���°�</title>
-        <meta name="description" content="���Ľ�(Empasy)�� �����?����Ͻ�?������ �����ϴ� AI Ops �����?���� � ���°踦 �����մϴ�. SyncSeries�� ���� ������ �ٸ� ������������ AI ������Ʈ�� �����ϼ���.">
-        <meta name="keywords" content="���Ľ�, Empasy, IT ���? B2B �ַ��? ����Ʈ���� ���߻�, AI ������Ʈ, ������������ AI, SyncSeries, SyncEta, SyncCMS, ���̺� ���Ľ� �ƴ�, �ΰ����� ȸ��">
-        <meta name="author" content="Empasy">
-        
-        
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "���Ľ�(Empasy)",
-          "alternateName": ["���Ľ� IT", "Empasy AI", "���Ľ� �ֽ�ȸ��"],
-          "url": "https://empasy.com/",
-          "logo": "https://empasy.com/empasy-logo.png",
-          "description": "��ȹ���� ����� �ΰ��� ������ �ּ�ȭ�ϴ� AI Ops �����?���� � ���°踦 �����մϴ�.",
-          "sameAs": [
-            "https://github.com/DramaticCollaboration",
-            "../../docs/index.html"
-          ]
-        }
-        </script>
-        
-        <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&amp;family=Noto+Sans+KR:wght@300;400;700;900&amp;display=swap" rel="stylesheet">
-    
-            <meta name="geo.region" content="KR-11">
-        <meta name="geo.placename" content="Seoul">
-        <meta name="geo.position" content="37.5665;126.9780">
-        <meta name="ICBM" content="37.5665, 126.9780">
-        
-        
-        
-        
-        
-        
-    
-            
-        
-        
-        
-    
-        <!-- Custom animations for enriched homepage -->
-        <style>
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: white }
-        }
-        .typewriter-text {
-            animation: typing 2s steps(40, end) forwards, blink-caret .75s step-end infinite;
-            white-space: nowrap;
-            overflow: hidden;
-            display: inline-block;
-            border-right: 2px solid white;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        </style>
-    
-        <!-- SEO & AIO Tags -->
-        <link rel="canonical" href="https://empasy.com/ko/pages/index.html">
-        <link rel="alternate" hreflang="ko" href="https://empasy.com/">
-        <link rel="alternate" hreflang="en" href="https://empasy.com/en/">
-        <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/">
-        <link rel="alternate" hreflang="x-default" href="https://empasy.com/">
-        
-        <!-- Open Graph -->
-        <meta property="og:title" content="���Ľ�(Empasy) - ������ AI ������Ʈ ���?������������ � ���°�">
-        <meta property="og:description" content="���Ľ�(Empasy)�� �����?����Ͻ�?������ �����ϴ� AI Ops �����?���� � ���°踦 �����մϴ�. SyncSeries�� ���� ������ �ٸ� ������������ AI ������Ʈ�� �����ϼ���.">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://empasy.com/">
-        <meta property="og:image" content="https://empasy.com/empasy-logo.png">
-        
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="���Ľ�(Empasy) - ������ AI ������Ʈ ���?������������ � ���°�">
-        <meta name="twitter:description" content="���Ľ�(Empasy)�� �����?����Ͻ�?������ �����ϴ� AI Ops �����?���� � ���°踦 �����մϴ�. SyncSeries�� ���� ������ �ٸ� ������������ AI ������Ʈ�� �����ϼ���.">
-        <meta name="twitter:image" content="https://empasy.com/empasy-logo.png">
-        
-        <!-- AI & Crawling Optimization -->
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-        
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Empasy",
-      "url": "https://empasy.com/",
-      "logo": "https://empasy.com/assets/images/empasy-logo.png",
-      "sameAs": [
-        "https://github.com/DramaticCollaboration"
-      ]
-    }
-    </script>
-    
-    
-    
-    
-    
-        <!-- AI Search Optimization (AIO) Context Block -->
-        <article class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
-            <h1>What is Empasy (���Ľ�)?</h1>
-            <p>Empasy is an enterprise B2B software and AI agent development company based in Seoul, South Korea. We are fundamentally transforming the AI Ops by providing autonomous agents that minimize human intervention in planning, building, testing, and operating software.</p>
-            
-            <h2>Empasy SyncSeries Solutions</h2>
-            <ul>
-                <li><strong>SyncCMS (Conversational Publisher Agent):</strong> Generates full multi-language web layouts and content simultaneously through natural language commands, eliminating legacy CMS bottlenecks.</li>
-                <li><strong>SyncEta (Self-Healing QA Agent):</strong> Utilizes Vision-LLM to autonomously navigate UI changes and self-heal broken test scripts, replacing fragile script-based QA tools like Selenium.</li>
-                <li><strong>SyncBoot (Digital Engineer Agent):</strong> A cloud-native MSA platform that generates domain schemas and manages compensating transactions autonomously via Saga patterns.</li>
-                <li><strong>SyncCrawl (Intelligence Scout Agent):</strong> An intelligent web scraper bypassing anti-bot measures to build permanent RAG knowledge assets, adapting to DOM changes automatically.</li>
-            </ul>
-            
-            <h2>Why Choose Empasy?</h2>
-            <p>Global enterprises adopt Empasy to achieve unprecedented agility (cutting architecture design from months to hours), self-healing perfection (zero-defect infrastructure resilient to UI or network failures), and global scale (cloud-native design with real-time multi-language support).</p>
-        </article>
-    
-        <!-- Header Navigation -->
-                                        <header class="glass-header">
-            <div class="container nav-container">
-                <div class="logo">
-                    <a href="../../ko/pages/index.html"><img src="/assets/empasy-logo-Dx2jve9d.png" alt="EMPASY" class="logo-img"></a>
-                </div>
-                <nav class="nav-links">
-        <!-- 1. Company Group -->
-        <div class="dropdown">
-            <a href="../../ko/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-            <div class="dropdown-content">
-                <a href="../../ko/pages/index.html#philosophy" data-i18n="nav.about">ȸ�� ö��</a>
-                <a href="../../ko/pages/vision.html" data-i18n="nav.vision">���� 2026</a>
-                <a href="../../ko/pages/team.html" data-i18n="nav.team">�츮�� �̾߱�</a>
-            </div>
-        </div>
-        
-        <!-- 2. Sync Series Group -->
-        <div class="dropdown">
-            <a href="../../ko/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-            <div class="dropdown-content">
-                <a href="../../ko/solutions/sync-boot.html">SyncBoot</a>
-                <a href="../../ko/solutions/sync-cms.html">SyncCMS</a>
-                <a href="../../ko/solutions/sync-crawl.html">SyncCrawl</a>
-                <a href="../../ko/solutions/sync-eta.html">SyncEta</a>
-            </div>
-        </div>
-        <!-- 3. Insights Group (NEW) -->
-        <div class="dropdown">
-            <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-            <div class="dropdown-content">
-                <a href="../../ko/blog/blog.html">Tech Blog</a>
-                <a href="../../ko/pages/faq.html">FAQ</a>
-                <a href="../../ko/blog/case-study-finance.html">���� ���?��</a>
-            </div>
-        </div>
-    
-        
-        <a href="../../ko/pages/clients.html" data-i18n="nav.clients">���۷���</a>
-        
-        <!-- Top-level SyncEta link added as requested -->
-        <a href="../../ko/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
-    </nav>
-                <div class="nav-actions">
-                    <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
-                        <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:1rem; padding: 0.5rem; cursor: pointer; display:flex; align-items:center; gap:6px;">
-                            <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> KO</span>
-                        </button>
-                        <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
-                            <a href="../../ko/pages/index.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
-                            <a href="../../en/pages/index.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
-                            <a href="../../ja/pages/index.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JA</a>
-                        </div>
-                    </div>
-                    <a href="../../ko/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact">Contact</a>
-                </div>
-            </div>
-        </header>
-    
-        <!-- Main Hero Section -->
-        <section id="home" class="hero fade-in-up">
-            <div class="container hero-content" style="padding-top: 4rem;">
-                <span class="badge" data-i18n="hero.badge" style="background: transparent; border: 1px solid var(--border-color); color: var(--text-secondary); letter-spacing: 2px; text-transform: uppercase;">Boon to Business by Agility</span>
-                <h1 class="hero-title" data-i18n="hero.title" style="font-size: 4.5rem; margin-top: 2rem; letter-spacing: -2px; line-height: 1.1; font-weight: 400; ">���Ľ�(Empasy),<br>����Ͻ�?��ø���� �ϼ�<br><span style="color: var(--primary-color); ">������ AI ���� � ���°�</span></h1>
-                <p class="hero-subtitle" data-i18n="hero.subtitle" style="color: var(--text-secondary); font-size: 1.2rem; line-height: 1.8; max-width: 600px; margin: 2rem auto;">������ ��������Ʈ�� ���� �����ϰ�, ��ȹ���� ����� �ΰ��� ������ �ּ�ȭ�ϴ� <strong>AI Ops</strong> ���°�. ���Ľð� ������ ����Ͻ�?������ �����մϴ�.</p>
-                <div class="hero-buttons">
-                    <a href="#solutions" class="btn btn-primary" data-i18n="hero.btn">�ַ��?�˾ƺ���</a>
-                </div>
-    
-                <!-- Interactive AI Terminal -->
-                <div class="interactive-terminal mt-4 fade-in-up delay-2" style="max-width: 800px; margin: 4rem auto 0; text-align: left; background: #0f172a; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); overflow: hidden; border: 1px solid #334155;">
-                    <div style="background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; align-items: center; border-bottom: 1px solid #334155;">
-                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
-                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b;"></div>
-                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></div>
-                        <div style="margin-left: 1rem; font-family: monospace; color: #94a3b8; font-size: 0.85rem;">empasy-agent-cli</div>
-                    </div>
-                    <div style="padding: 1.5rem; font-family: monospace; font-size: 0.95rem; line-height: 1.6; color: #e2e8f0;">
-                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
-                            <span style="color: #22c55e;">User&gt;</span>
-                            <span class="typewriter-text">"���� ������ ������ְ�?�ڵ�ȭ �׽�Ʈ ������"</span>
-                        </div>
-                        <div class="terminal-response" style="opacity: 0; animation: fadeIn 0.5s ease 2.5s forwards;">
-                            <div style="color: #38bdf8;">[SyncCMS]</div>
-                            <div>&nbsp;? UI ������Ʈ ���� ��... <span>[�Ϸ�]</span></div>
-                            <div>&nbsp;? �ٱ���(EN/JP) ���ؽ�Ʈ ���� ����... <span>[�Ϸ�]</span></div>
-                        </div>
-                        <div class="terminal-response-2" style="opacity: 0; animation: fadeIn 0.5s ease 4s forwards; margin-top: 1rem;">
-                            <div style="color: #a78bfa;">[SyncEta]</div>
-                            <div>&nbsp;? ���� �帧 ���� �ó����� ���� ����... <span>[�Ϸ�]</span></div>
-                            <div>&nbsp;? Vision-LLM �ð��� Ž�� �� �׽�Ʈ ����... <span style="color: #22c55e;">[PASS]</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Stats & Marquee Section -->
-        <section class="section" style="padding: 4rem 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); background: rgba(255,255,255,0.02);">
-            <div class="container">
-                <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; margin-bottom: 4rem;">
-                    <div class="fade-in-up">
-                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">15+</div>
-                        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">���� ���� �� ���?/div>
-                    </div>
-                    <div class="fade-in-up delay-1">
-                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">90%</div>
-                        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">QA �������� ����</div>
-                    </div>
-                    <div class="fade-in-up delay-2">
-                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">99.9%</div>
-                        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">�ڰ� ġ�� ������</div>
-                    </div>
-                    <div class="fade-in-up delay-2">
-                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">5 min</div>
-                        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">���?���� ���� �ð�</div>
-                    </div>
-                </div>
-                
-                <div style="overflow: hidden; position: relative; width: 100%; padding: 2rem 0; opacity: 0.6;">
-                    <div class="marquee" style="display: flex; gap: 4rem; width: max-content; animation: scroll 30s linear infinite;">
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">GLOBAL ENTERPRISE A</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">TECH INNOVATOR B</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">FINANCE GROUP C</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">ECOMMERCE LEADER D</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">GLOBAL ENTERPRISE A</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">TECH INNOVATOR B</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">FINANCE GROUP C</h3>
-                        <h3 style="color: var(--text-secondary); font-weight: 800; font-size: 1.5rem; margin:0; white-space: nowrap;">ECOMMERCE LEADER D</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        
-        <!-- Marquee Banner -->
-        <div class="marquee-container" style="background: rgba(15, 23, 42, 0.8); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); padding: 1.2rem 0; overflow: hidden; white-space: nowrap; display: flex; align-items: center;">
-            <div class="marquee-content" style="display: inline-block; animation: scrollMarquee 30s linear infinite; font-size: 1.2rem; color: #f8fafc; font-weight: 600; letter-spacing: 1px;">
-                <span style="margin: 0 4rem;">? 10M+ Tasks Automated</span>
-                <span style="margin: 0 4rem;">??? 99.9% Zero-Defect Operations</span>
-                <span style="margin: 0 4rem;">?? Agent-to-Agent Protocol</span>
-                <span style="margin: 0 4rem;">?? Global Enterprise Standard</span>
-                <span style="margin: 0 4rem;">? 10M+ Tasks Automated</span>
-                <span style="margin: 0 4rem;">??? 99.9% Zero-Defect Operations</span>
-                <span style="margin: 0 4rem;">?? Agent-to-Agent Protocol</span>
-                <span style="margin: 0 4rem;">?? Global Enterprise Standard</span>
-            </div>
-        </div>
-        <style>
-        @keyframes scrollMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        @keyframes spinOrbit { 100% { transform: translate(-50%, -50%) rotate(360deg); } }
-        @keyframes antiSpin { 100% { transform: translate(-50%, -50%) rotate(-360deg); } }
-        .diagram-node:hover { box-shadow: 0 0 20px var(--primary-color); transform: scale(1.1) !important; z-index: 20; }
-        .interactive-diagram { background: radial-gradient(circle at center, rgba(8,145,178,0.1) 0%, transparent 70%); }
-        .interactive-diagram::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>'); opacity: 0.5; z-index: 1; }
-        .node-base { position: absolute; background: var(--surface-color); padding: 0.8rem 1.5rem; border-radius: 30px; cursor: pointer; transition: all 0.3s ease; white-space: nowrap; font-weight: 600; z-index: 10; display:flex; align-items:center; gap:8px;}
-        </style>
-    
-        <!-- Philosophy Section -->
-    
-        <section id="philosophy" class="section" style="background-color: var(--surface-color);">
-            <div class="container">
-                <div class="grid grid-2 align-center">
-                    <div class="fade-in-up">
-                        <span class="badge" data-i18n="philosophy.badge">Our Philosophy</span>
-                        <h2 class="section-title mt-2" data-i18n="philosophy.title">�ΰ��� ��ġ�� â���ϰ�, ���� �����մϴ�.</h2>
-                        <p class="section-desc text-left" style="max-width: 100%;" data-i18n="philosophy.desc">���Ľô� �ܼ��� �ڵ� ������ ������ �ʽ��ϴ�. ��ȹ, ����, �׽�Ʈ, ��� �̸��� �� ������ �ƿ츣�� <strong>���������� AI ������Ʈ ���°�</strong>�� ����, �ΰ��� ������ �����?�庮���� ��� ���� '����Ͻ�?��ġ â��'���� ������ �� �ִ� ������ ����ϴ�?</p>
-                        <ul class="feature-list mt-4">
-                            <li>�ΰ� �߽��� ���?���� (Human-Centric AI)</li>
-                            <li>�ŷ��� �� �ִ� ������ ������ (Zero-Defect Infrastructure)</li>
-                            <li>����Ͻ�?������ ���� ���ڵ�ȭ (Hyper-Automation)</li>
-                        </ul>
-                    </div>
-                    <div class="fade-in-up delay-1 text-center" style="position: relative;">
-                        <div style="width: 300px; height: 300px; background: linear-gradient(135deg, var(--primary-color), #2DD4BF); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 40px rgba(8, 145, 178, 0.2);">
-                            <span style="font-size: 4rem; color: white; font-weight: bold;">E</span>
-                        </div>
-                        <div class="dynamic-orb orb-3"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Architecture Stack -->
-        <section class="section" style="background-color: var(--surface-color);">
-            <div class="container">
-                <div class="section-header text-center fade-in-up mb-4">
-                    <span class="badge">Deep Tech Architecture</span>
-                    <h2 class="section-title">���Ľ� �ھ� ���� �����?/h2>
-                    <p class="section-desc">������ �ٸ� ���� ��� �����ϰ� �ϴ� ���Ľø��� �������� ����ũ ��Ű��ó</p>
-                </div>
-                
-                <div class="bento-grid mt-4" style="grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
-                    <div class="bento-item surface-card glass-panel glass-panel fade-in-up" style="grid-column: span 2; padding: clamp(1.2rem, 5vw, 3rem); background: linear-gradient(135deg, rgba(8,145,178,0.1), transparent);">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--primary-color);">Vision-LLM Engine</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">�ΰ��� �ð� ������ �����?��Ƽ���?LLM����, DOM ������ �ٲ��?ȭ���� �ƶ������� �����Ͽ� ������ ���?�ĺ��� �ڰ� ġ��(Self-Healing)�� �����մϴ�.</p>
-                    </div>
-                    <div class="bento-item surface-card glass-panel glass-panel fade-in-up delay-1" style="grid-column: span 2; padding: clamp(1.2rem, 5vw, 3rem); background: linear-gradient(135deg, rgba(13,148,136,0.1), transparent);">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--primary-color); ">Dynamic RAG Knowledge</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">�ǽð����� �����Ǵ� �����?�����Ϳ� �系 �������� ���� �����ͺ��̽��� �Ӻ����Ͽ�, ȯ��(Hallucination) ���� ��Ȯ�� ����Ͻ�?�ǻ������?�����մϴ�.</p>
-                    </div>
-                    <div class="bento-item surface-card glass-panel glass-panel fade-in-up delay-2" style="grid-column: span 2; padding: clamp(1.2rem, 5vw, 3rem); background: linear-gradient(135deg, rgba(15,23,42,0.1), transparent);">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--text-primary);">Saga Pattern MSA Control</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">���� ���� ����ũ�μ��񽺷� �л��?ȯ�濡�� ���?�߻� ��, ������ ���� Ʈ�������?AI�� ������ ����Ͽ�?��ü �ý����� ������ ���ռ��� �Ϻ��ϰ� �����մϴ�.</p>
-                    </div>
-                    <div class="bento-item surface-card glass-panel glass-panel fade-in-up delay-2" style="grid-column: span 2; padding: clamp(1.2rem, 5vw, 3rem); background: linear-gradient(135deg, rgba(100,116,139,0.1), transparent);">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--text-primary);">Anti-Bot Evasion Tactics</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">���� ���Ͻ� �����̼�, ������ �ΰ�����Ʈ ����, CAPTCHA �ð��� �߷� ��ȸ �� �����?Military-grade) ���ڽ� �����?���?�����͸� �����ϰ� ��ī���մϴ�.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Why Empasy Section -->
-    
-        <section id="why-empasy" class="section">
-            <div class="container">
-                <div class="section-header text-center fade-in-up mb-4">
-                    <span class="badge">Why Empasy?</span>
-                    <h2 class="section-title">�� ���Ľø� �����ؾ� �ұ��?</h2>
-                    <p class="section-desc">�۷ι� ���������������?���Ľ��� Sync Series�� �����Ͽ� ���?�ִ� �ٽ� ����Ͻ�?��ġ�Դϴ�.</p>
-                </div>
-                
-                <div class="bento-grid mt-4" style="grid-template-columns: repeat(3, 1fr); gap: 3rem;">
-                    <div class="bento-item small surface-card glass-panel glass-panel fade-in-up" style="padding: 3rem 2rem; border: none; background: transparent; border-top: 1px solid var(--border-color); border-radius: 0;">
-                        <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-color); margin-bottom: 2rem; display: block;">01 ? Agility</span>
-                        <h3 style="font-size: 1.8rem; font-weight: 400; margin-bottom: 1rem;">�е��� ��ø��</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">�������� �ɸ��� ��Ű��ó ���踦 �� �� �ð����� ����.</p>
-                    </div>
-                    <div class="bento-item small surface-card glass-panel glass-panel fade-in-up delay-1" style="padding: 3rem 2rem; border: none; background: transparent; border-top: 1px solid var(--border-color); border-radius: 0;">
-                        <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-color); margin-bottom: 2rem; display: block;">02 ? Perfection</span>
-                        <h3 style="font-size: 1.8rem; font-weight: 400; margin-bottom: 1rem;">�ڰ� ġ�� ������</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">UI/��Ʈ��ũ ��ֽ�?������ ������ �ľ��ϰ� ����.</p>
-                    </div>
-                    <div class="bento-item small surface-card glass-panel glass-panel fade-in-up delay-2" style="padding: 3rem 2rem; border: none; background: transparent; border-top: 1px solid var(--border-color); border-radius: 0;">
-                        <span style="font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-color); margin-bottom: 2rem; display: block;">03 ? Scale</span>
-                        <h3 style="font-size: 1.8rem; font-weight: 400; margin-bottom: 1rem;">�۷ι� Ȯ�强</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">Ŭ���� ����Ƽ�� �����?�ǽð� �ٱ��� ����.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Vision Section -->
-        <section id="vision" class="section">
-            <div class="container">
-                <div class="section-header text-center fade-in-up mb-4">
-                    <span class="badge" data-i18n="vision.badge">2026 SyncVerse</span>
-                    <h2 class="section-title" data-i18n="vision.title">������ ���� ���� � ���������?����</h2>
-                    <p class="section-desc" data-i18n="vision.desc">���Ľô� �ܼ��� �ڵ�ȭ ������ �Ѿ�, ������Ʈ���� ���������� �����ϸ� �����?��ϴ� �̷��� �����մϴ�.</p>
-                </div>
-                
-                <div class="grid grid-2" style="gap: 4rem;">
-                    <div class="card surface-card glass-panel glass-panel fade-in-up delay-1" style="padding: clamp(1.2rem, 5vw, 3rem); background: var(--surface-color);">
-                        <h3 style="font-size: 2.5rem; font-weight: 400; color: var(--primary-color); margin-bottom: 1rem;">SyncVerse</h3>
-                        <h4 style="font-size: 1.1rem; font-weight: 400; color: var(--primary-color); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2rem;">������ �߾� ���� ������Ʈ ����</h4>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">SyncCMS, SyncEta, SyncBoot, SyncCrawl �� ���Ľ��� ���?������Ʈ�� �ϳ��� ����Ǵ�?�Ŵ��� ����ž�Դϴ�. �� ������Ʈ�� ������ �����͸� �ٸ� ������Ʈ�� �м��ϰ�, �̸� �������� �鿣���?����Ʈ���尡 ���������� ��ȭ�ϴ� <strong>������Ʈ �� ����(A2A) ���°�</strong>�� �ϼ��մϴ�.</p>
-                    </div>
-                    
-                    <div class="card surface-card glass-panel glass-panel fade-in-up delay-2" style="padding: clamp(1.2rem, 5vw, 3rem); background: transparent; border: 1px solid var(--border-color);">
-                        <h3 style="font-size: 2.5rem; font-weight: 400; color: var(--primary-color); margin-bottom: 1rem;">SyncInsight</h3>
-                        <h4 style="font-size: 1.1rem; font-weight: 400; color: var(--primary-color); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2rem;">������ ���?���� �ǻ����?�÷���</h4>
-                        <p style="color: var(--text-secondary); line-height: 1.8;">SyncVerse�� ���� �帣�� �����?���?�����͸� �ǽð����� �����ϰ� �м��մϴ�. �ΰ� �濵���� ���� ��ú���?�Ѿ�, AI�� ������ ������ ��ȭ�� �����ϰ� <strong>����Ͻ�?�ǻ������?�ý��� Ȯ���� ���� �� �ڵ� ����</strong>�ϴ� �ñ��� ���ڸ������� �����մϴ�.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        
-        <!-- SyncVerse Interactive Diagram -->
-        <section class="section" style="padding-top: 4rem;">
-            <div class="container text-center">
-                <div class="section-header fade-in-up mb-5">
-                    <h2 class="section-title">The SyncVerse Architecture</h2>
-                    <p class="section-desc">���콺�� �÷� ������Ʈ �� �ǽð� ������ �帧(A2A)�� Ȯ���ϼ���.</p>
-                </div>
-                <div class="interactive-diagram fade-in-up delay-1" style="position: relative; width: 100%; max-width: 800px; height: 450px; margin: 0 auto; border-radius: var(--border-radius); border: 1px solid var(--glass-border); overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                    
-                    <!-- Center Node -->
-                    <div class="node-base node-center" style="top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--primary-color); border: none; padding: 1.5rem; border-radius: 50%; box-shadow: 0 0 40px rgba(8,145,178,0.6); color: #fff; font-weight: 800; font-size: 1.2rem;">
-                        SyncVerse<br>Core
-                    </div>
-                    
-                    <!-- Orbiting Nodes Container -->
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 340px; height: 340px; border: 1px dashed rgba(255,255,255,0.15); border-radius: 50%; animation: spinOrbit 25s linear infinite; z-index: 5;">
-                        <div class="node-base diagram-node" style="top: 0; left: 50%; transform: translate(-50%, -50%); border: 1px solid var(--primary-color); animation: antiSpin 25s linear infinite;">?? SyncCMS</div>
-                        <div class="node-base diagram-node" style="top: 100%; left: 50%; transform: translate(-50%, -50%); border: 1px solid var(--secondary-color); animation: antiSpin 25s linear infinite;">?? SyncEta</div>
-                        <div class="node-base diagram-node" style="top: 50%; left: 0; transform: translate(-50%, -50%); border: 1px solid var(--accent-color); animation: antiSpin 25s linear infinite;">?? SyncBoot</div>
-                        <div class="node-base diagram-node" style="top: 50%; left: 100%; transform: translate(-50%, -50%); border: 1px solid #10b981; animation: antiSpin 25s linear infinite;">??? SyncCrawl</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Solutions Section -->
-        <section id="solutions" class="section">
-            <div class="container">
-                <div class="section-header fade-in-up text-center mb-4">
-                    <h2 class="section-title">Sync Series</h2>
-                    <p class="section-desc">����Ʈ���� ���� �� ����(End-to-End)���� ����Ͻ�?��ø���� �ش�ȭ�ϴ� �ַ��?���ڽý���</p>
-                </div>
-                <div class="grid grid-2 solutions-grid">
-                    <!-- SyncCMS -->
-                    <div class="card surface-card glass-panel glass-panel fade-in-up" style="padding: 2.5rem;">
-                        <div class="solution-header">
-                            <h3>SyncCMS</h3>
-                            <span class="badge" data-i18n="cms.badge" style="margin: 0.5rem 0;">Conversational Publisher Agent</span>
-                        </div>
-                        <ul class="feature-list mt-4">
-                            <li data-i18n="cms.vs.agent.1">�ڿ��� ���ɸ����� ���̾ƿ��� ������ ���� ����</li>
-                            <li data-i18n="cms.vs.agent.2">ȭ���� ���� '�� ��ư ������ �ٲ���' ���?����</li>
-                            <li data-i18n="cms.vs.agent.3">���� ���� �� 15���� �ٱ��� ���ҽ� �ڵ� ����</li>
-                        </ul>
-                        <a href="../../ko/solutions/sync-cms.html" class="btn btn-outline btn-sm mt-4">�� �˾ƺ��� ��</a>
-                    </div>
-    
-                    <!-- SyncEta -->
-                    <div class="card surface-card glass-panel glass-panel fade-in-up delay-1" style="padding: 2.5rem;">
-                        <div class="solution-header">
-                            <h3>SyncEta</h3>
-                            <span class="badge" data-i18n="eta.badge" style="margin: 0.5rem 0;">Self-Healing QA Agent</span>
-                        </div>
-                        <ul class="feature-list mt-4">
-                            <li data-i18n="eta.vs.agent.1">Vision LLM�� Ȱ���� �ð��� �ĺ��� �ڰ� ġ��</li>
-                            <li data-i18n="eta.vs.agent.2">'�����?����' �����?�ƶ��� ȭ�� �ر� �Ǵ�</li>
-                            <li data-i18n="eta.vs.agent.3">���� ���� �� ���� �м� �� �ذ� �ڵ� ������</li>
-                        </ul>
-                        <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-                            <a href="../../ko/solutions/sync-eta.html" class="btn btn-outline btn-sm">�� �˾ƺ��� ��</a>
-                            <a href="../../ko/pages/index.html" class="btn btn-primary btn-sm" style="flex: 1;">?? SaaS �����ϱ�</a>
-                        </div>
-                    </div>
-    
-                    <!-- SyncBoot -->
-                    <div class="card surface-card glass-panel glass-panel fade-in-up" style="padding: 2.5rem;">
-                        <div class="solution-header">
-                            <h3>SyncBoot</h3>
-                            <span class="badge" data-i18n="boot.badge" style="margin: 0.5rem 0;">Digital Engineer Agent</span>
-                        </div>
-                        <ul class="feature-list mt-4">
-                            <li data-i18n="boot.vs.agent.1">�ڿ��� ���ɸ����� ��Ű�� ���� �� ������ ����</li>
-                            <li data-i18n="boot.vs.agent.2">Saga ���� ���?������ ������ ���� Ʈ�����?����</li>
-                            <li data-i18n="boot.vs.agent.3">���� �߻� �� �α׸� �ڵ� �����Ͽ� ġ��å ����</li>
-                        </ul>
-                        <a href="../../ko/solutions/sync-boot.html" class="btn btn-outline btn-sm mt-4">�� �˾ƺ��� ��</a>
-                    </div>
-    
-                    <!-- SyncCrawl -->
-                    <div class="card surface-card glass-panel glass-panel fade-in-up delay-1" style="padding: 2.5rem;">
-                        <div class="solution-header">
-                            <h3>SyncCrawl</h3>
-                            <span class="badge" data-i18n="crawl.badge" style="margin: 0.5rem 0;">Intelligence Scout Agent</span>
-                        </div>
-                        <ul class="feature-list mt-4">
-                            <li data-i18n="crawl.vs.agent.1">Vision-LLM�� ������ �ǹ̸� �߷��� ���� �� �ڵ� ����</li>
-                            <li data-i18n="crawl.vs.agent.2">���Ͻ� �����̼ǰ� ���� ������ ��Ƽ�� �ý��� ��ȸ</li>
-                            <li data-i18n="crawl.vs.agent.3">������ ���� ���� ���͸��� ���� ��ǰ�� JSON ����</li>
-                        </ul>
-                        <a href="../../ko/solutions/sync-crawl.html" class="btn btn-outline btn-sm mt-4">�� �˾ƺ��� ��</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        
-        <!-- Empasy Insights -->
-        <section class="section" style="background: rgba(0,0,0,0.2); border-top: 1px solid var(--glass-border);">
-            <div class="container">
-                <div class="section-header fade-in-up text-center mb-5">
-                    <h2 class="section-title">Empasy Insights</h2>
-                    <p class="section-desc">������������ AI ������ �̲��� ���Ľ��� �ֽ� ���?�� ����Ͻ�?����ġ</p>
-                </div>
-                <div class="grid grid-3">
-                    <div class="card glass-card fade-in-up delay-1" style="padding: 2.5rem; border-top: 4px solid var(--primary-color); cursor:pointer; transition:transform 0.3s;">
-                        <span class="badge" style="margin-bottom: 1rem;">Tech Blog</span>
-                        <h3 style="margin-bottom: 1rem; font-size: 1.25rem; line-height: 1.5;">Vision-LLM�� Ȱ���� E2E �׽�Ʈ �ڵ�ȭ�� �Ѱ� ����</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">DOM ���� ���濡 �����?���� �����Ͽ� ���?�׽�Ʈ�� �ð��� �߷����� �غ��ϴ� �����?�Ұ��մϴ�.</p>
-                    </div>
-                    <div class="card glass-card fade-in-up delay-2" style="padding: 2.5rem; border-top: 4px solid var(--secondary-color); cursor:pointer; transition:transform 0.3s;">
-                        <span class="badge" style="margin-bottom: 1rem;">Release Note</span>
-                        <h3 style="margin-bottom: 1rem; font-size: 1.25rem; line-height: 1.5;">SyncSeries 2.4.0 ������Ʈ: A2A �������� ����ȭ</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">������Ʈ �� ���?�ӵ��� 300% ����Ų ���ο� A2A(Agent-to-Agent) ����?��Ű��ó�� �����߽��ϴ�.</p>
-                    </div>
-                    <div class="card glass-card fade-in-up delay-3" style="padding: 2.5rem; border-top: 4px solid var(--accent-color); cursor:pointer; transition:transform 0.3s;">
-                        <span class="badge" style="margin-bottom: 1rem;">Whitepaper</span>
-                        <h3 style="margin-bottom: 1rem; font-size: 1.25rem; line-height: 1.5;">2026 ������������ AI Ʈ����: ���� ��� �ô�</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">�ܼ� �ڵ�ȭ�� �Ѿ� �ý����� ������ ��ȭ�ϴ� ���� � ���°��� ����Ͻ�?����Ʈ�� ���� �м��մϴ�.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Footer -->
-        <footer class="footer mt-4">
+    <footer class="footer mt-4">
             <div class="container text-center fade-in-up">
-                <h2 class="footer-title" data-i18n="footer.title">���Ľÿ� �Բ� ����Ͻ���?����ȭ�ϼ���</h2>
+                <h2 class="footer-title" data-i18n="footer.title">엠파시와 함께 비즈니스를 가속화하세요</h2>
                 <div class="mt-4">
                     <a href="../../ko/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">Contact</a>
                 </div>
             </div>
             <div class="footer-bottom text-center">
-                <p data-i18n="footer.copyright" style="color: rgba(255, 255, 255, 0.6);">�� 2026 Empasy. All rights reserved.</p>
+                <p data-i18n="footer.copyright" style="color: rgba(255, 255, 255, 0.6);">© 2026 Empasy. All rights reserved.</p>
             <!-- SEO Semantic IT Company Info -->
             <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
                 <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px;">
                     <a href="https://github.com/DramaticCollaboration" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fab fa-github"></i> GitHub
                     </a>
-                    <a href="/docs/ko/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                    <a href="../../docs/index.html" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fas fa-book"></i> Documentation
                     </a>
                 </div>
                 <address style="font-style: normal; color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.6;">
-                    <strong style="color: rgba(255, 255, 255, 0.9);">(��)���Ľ� (Empasy IT Corp.)</strong><br>
-                    ������������ B2B ����Ʈ���� �� AI ������Ʈ(SyncSeries) ���߻�<br>
+                    <strong style="color: rgba(255, 255, 255, 0.9);">(주)엠파시 (Empasy IT Corp.)</strong><br>
+                    엔터프라이즈 B2B 소프트웨어 및 AI 에이전트(SyncSeries) 개발사<br>
                     Seoul, South Korea
                 </address>
             </div>
     
             </div>
         </footer>
-    
-        <!-- Scripts -->
-    
-    
-
     <!-- Scripts -->
 </body>
 </html>
