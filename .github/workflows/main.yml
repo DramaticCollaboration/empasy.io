@@ -40,6 +40,7 @@ jobs:
         run: |
           # Move docs build to main site dist
           rm -rf ./dist/docs
+          mkdir -p ./dist/docs
           mv docs/.vitepress/dist/* ./dist/docs/
           
           # Copy required static files to dist
