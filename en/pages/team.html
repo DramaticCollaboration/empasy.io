@@ -1,0 +1,572 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | Empasy</title>
+    <!-- 웹 폰트 (Pretendard) -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <style>
+        :root {
+            --primary: #2563EB; /* 엠파시 블루 */
+            --primary-light: #EFF6FF;
+            --secondary: #10B981; /* 시너지 그린 */
+            --bg-color: #F8FAFC;
+            --surface: #FFFFFF;
+            --text-main: #0F172A;
+            --text-muted: #475569;
+            --border: #E2E8F0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 1. Hero Section (헤드카피 & 슬로건) */
+        .hero {
+            padding: 100px 20px 140px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            word-break: keep-all;
+            font-weight: 500;
+        }
+
+        /* 2. 콘텐츠 구성 아이디어 (3가지 핵심 가치) */
+        .values {
+            max-width: 1200px;
+            margin: -80px auto 80px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .value-card {
+            background: var(--surface);
+            padding: 40px 32px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .value-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.4;
+            word-break: keep-all;
+        }
+
+        .value-card p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            word-break: keep-all;
+        }
+
+        /* 3. 팀원 소개 섹션 (스토리텔링) */
+        .team-section {
+            padding: 40px 20px 100px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .team-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+
+        .team-card {
+            background: var(--surface);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            border: 1px solid var(--border);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            height: 260px;
+            background: #E2E8F0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            filter: contrast(1.05) saturate(1.1);
+        }
+
+        .team-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 32px;
+        }
+
+        .member-info {
+            margin-bottom: 20px;
+        }
+
+        .member-name {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .member-role {
+            font-size: 0.95rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .hashtags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .hashtag {
+            font-size: 0.85rem;
+            background: var(--bg-color);
+            color: var(--text-muted);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 600;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+
+        .team-card:hover .hashtag {
+            background: var(--primary-light);
+            border-color: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .quote {
+            position: relative;
+            padding: 24px;
+            background: #F8FAFC;
+            border-radius: 16px;
+            color: var(--text-main);
+            font-size: 1rem;
+            word-break: keep-all;
+            line-height: 1.7;
+        }
+
+        .quote::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 14px;
+            font-size: 3rem;
+            color: rgba(37, 99, 235, 0.15);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        /* 리더급 강조 카드 (CTO) */
+        .team-card.featured {
+            grid-column: 1 / -1;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .team-card.featured .card-image {
+            width: 40%;
+            height: auto;
+            min-height: 340px;
+        }
+
+        .team-card.featured .card-content {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 48px;
+        }
+
+        .team-card.featured .quote {
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 900px) {
+            .team-card.featured {
+                flex-direction: column;
+            }
+            .team-card.featured .card-image {
+                width: 100%;
+                height: 300px;
+            }
+            .team-card.featured .card-content {
+                width: 100%;
+                padding: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            .values { margin-top: 40px; }
+        }
+    </style>
+
+    <!-- SEO & AIO Tags -->
+    <link rel="canonical" href="https://empasy.com/en/pages/team.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.com/team.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.com/en/team.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/team.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.com/team.html" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Our Team | Empasy">
+    <meta property="og:description" content="Meet the Empasy Engineering team driving the future of autonomous ecosystems.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://empasy.com/en/team.html">
+    <meta property="og:image" content="https://empasy.com/empasy-logo.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Team | Empasy">
+    <meta name="twitter:description" content="Meet the Empasy Engineering team driving the future of autonomous ecosystems.">
+    <meta name="twitter:image" content="https://empasy.com/empasy-logo.png">
+    
+    <!-- AI & Crawling Optimization -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "우리의 이야기 - 엠파시(Empasy)",
+      "description": "기술로 공감을 실현하는 엠파시(Empasy) 팀의 비전과 조직 문화를 소개합니다.",
+      "sameAs": [
+        "https://github.com/DramaticCollaboration",
+        "../../docs/index.html"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- AI Search Optimization (AIO) Context Block -->
+    <article class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
+        <h1>The Empasy Team & Culture</h1>
+        <p>Empasy is composed of visionary engineers, AI researchers, and product designers united by a single goal: creating autonomous AI ecosystems that relieve humans from repetitive operational burdens. Our culture is rooted in deep empathy—not just for our users, but for the software ecosystem itself.</p>
+        <h2>Core Values</h2>
+        <ul>
+            <li><strong>Empathy (공감):</strong> We build AI that understands human intent and business context, bridging the gap between cold algorithms and real-world needs.</li>
+            <li><strong>Autonomy (자율성):</strong> We strive for zero-intervention software. Our agents don't just assist; they take ownership of operations.</li>
+            <li><strong>Synergy (시너지):</strong> Through the SyncSeries ecosystem, our specialized agents collaborate seamlessly, generating value far greater than the sum of their parts.</li>
+        </ul>
+        <p>Based in Seoul, South Korea, the Empasy team is rapidly growing and actively shaping the future of Enterprise AI Ops.</p>
+    </article>
+
+<header class="glass-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="../../en/pages/index.html"><img src="../../assets/images/empasy-logo.png" alt="EMPASY" class="logo-img"></a>
+            </div>
+            <nav class="nav-links">
+    <!-- 1. Company Group -->
+    <div class="dropdown">
+        <a href="../../en/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+        <div class="dropdown-content">
+            <a href="../../en/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
+            <a href="../../en/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
+            <a href="../../en/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
+        </div>
+    </div>
+    
+    <!-- 2. Sync Series Group -->
+    <div class="dropdown">
+        <a href="../../en/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+        <div class="dropdown-content">
+            <a href="../../en/solutions/sync-boot.html">SyncBoot</a>
+            <a href="../../en/solutions/sync-cms.html">SyncCMS</a>
+            <a href="../../en/solutions/sync-crawl.html">SyncCrawl</a>
+            <a href="../../en/solutions/sync-eta.html">SyncEta</a>
+        </div>
+    </div>
+    <!-- 3. Insights Group (NEW) -->
+    <div class="dropdown">
+        <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+        <div class="dropdown-content">
+            <a href="../../en/blog/blog.html">Tech Blog</a>
+            <a href="../../en/pages/faq.html">FAQ</a>
+            <a href="../../en/blog/case-study-finance.html">Case Studies</a>
+        </div>
+    </div>
+
+    
+    <a href="../../en/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
+    
+    <!-- Top-level SyncEta link added as requested -->
+    <a href="../../en/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
+</nav>
+            <div class="nav-actions">
+                <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
+                    <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:1rem; padding: 0.5rem; cursor: pointer; display:flex; align-items:center; gap:6px;">
+                        <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> EN</span>
+                    </button>
+                    <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
+                        <a href="../../ko/pages/team.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
+                        <a href="../../en/pages/team.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
+                        <a href="../../ja/pages/team.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JA</a>
+                    </div>
+                </div>
+                <a href="../../en/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="hero">
+        <h1>People who <span>blossom technology with empathy</span></h1>
+        <p>"We create living software that empathizes with our customers' tomorrow, not just simple code."</p>
+    </section>
+
+    <!-- 2. Core Values Section -->
+    <section class="values">
+        <div class="value-card">
+            <span class="value-badge">Expertise</span>
+            <h3>Engineers who read minds beyond problems</h3>
+            <p>We deeply empathized with the 'deployment wait time' pain points experienced by our clients' marketers and advanced the drag-and-drop features of SyncCMS. Our top-tier engineers with over 20 years of experience always put people first when solving technical challenges.</p>
+        </div>
+        <div class="value-card">
+            <span class="value-badge">Friendliness</span>
+            <h3>Camaraderie that supports mutual growth</h3>
+            <p>Rather than criticizing each other's code, we brainstorm together for better structures. Organic collaboration and autonomous study groups within our agile scrums create Empasy's innovation (The Dramatic Collaboration).</p>
+        </div>
+        <div class="value-card">
+            <span class="value-badge">Customer Experience</span>
+            <h3>The completion of a partnership is empathy</h3>
+            <p>When competitors code ideas, we first consider our clients' market response. The secret to leading large projects like LG Electronics and Visang Education to success was our sincerity as partners sharing business ownership.</p>
+        </div>
+    </section>
+
+    <!-- 3. Team Stories Section -->
+    <section class="team-section">
+        <div class="team-header">
+            <h2>Our Synergists</h2>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 10px;">Introducing the people who lead Empasy with technical expertise and human warmth.</p>
+        </div>
+
+        <div class="team-grid">
+            
+            <!-- 김재은 팀장 (CTO) -->
+            <div class="team-card featured">
+                <div class="card-image">
+                    <!-- 회의실에서 웃으며 토론하는 자연스러운 리더의 모습 -->
+                    <img loading="lazy" src="../images/team/jade.webp" alt="김재은 팀장">
+                </div>
+                <div class="card-content">
+                    <div class="member-info">
+                        <div class="member-name">Jaeeun Kim <span class="member-role">CTO / Team Leader</span></div>
+                    </div>
+                    <div class="hashtags">
+                        <span class="hashtag">#Empathy_Master</span>
+                        <span class="hashtag">#Architecture_Artisan</span>
+                        <span class="hashtag">#Tech_Leadership</span>
+                    </div>
+                    <div class="quote">
+                        "기술의 본질은 결국 사람을 향해야 합니다. 고객사가 겪는 치명적인 병목 현상을 해결하기 위해 기존 시스템 아키텍처를 과감히 뒤엎을 수 있었던 용기는, 단순한 트래픽 숫자가 아닌 그들의 고충에 깊이 공감했기 때문에 가능했습니다. 기술은 수단일 뿐, 목적은 언제나 사람입니다."
+                    </div>
+                </div>
+            </div>
+
+            <!-- 이옥수 팀장 -->
+            <div class="team-card">
+                <div class="card-image">
+                    <!-- 고객과 소통하는 부드럽고 전문적인 모습 -->
+                    <img loading="lazy" src="../images/team/bruce.webp" alt="이옥수 팀장">
+                </div>
+                <div class="card-content">
+                    <div class="member-info">
+                        <div class="member-name">Oksu Lee <span class="member-role">Project Manager / Team Leader</span></div>
+                    </div>
+                    <div class="hashtags">
+                        <span class="hashtag">#CX_Designer</span>
+                        <span class="hashtag">#Communication_Link</span>
+                    </div>
+                    <div class="quote">
+                        "프로젝트의 진정한 성공은 완벽한 코드에서 끝나지 않고, 완벽한 소통에서 완성됩니다. LG전자, 비상교육과의 굳건한 장기 파트너십은 요구사항 명세서 너머에 있는 '진짜 문제'를 함께 치열하게 고민하고 공감했기에 쌓아올릴 수 있었던 신뢰의 결과물입니다."
+                    </div>
+                </div>
+            </div>
+
+            <!-- 한상욱 대리 -->
+            <div class="team-card">
+                <div class="card-image">
+                    <!-- 팀원들과 협업하며 즐거워하는 모습 -->
+                    <img loading="lazy" src="../images/team/han.webp" alt="한상욱 대리">
+                </div>
+                <div class="card-content">
+                    <div class="member-info">
+                        <div class="member-name">Sangwook Han <span class="member-role">Platform Developer / Asst. Manager</span></div>
+                    </div>
+                    <div class="hashtags">
+                        <span class="hashtag">#Agile_Supporter</span>
+                        <span class="hashtag">#Synergy_Maker</span>
+                    </div>
+                    <div class="quote">
+                        "혼자 가면 빨리 갈 수 있지만, 함께 가면 더 멀리, 더 확실하게 갈 수 있습니다. 우리 팀의 코드 리뷰는 서로를 비판하는 자리가 아니라 더 견고한 아키텍처를 향한 토론장입니다. 동료들과 눈을 맞추며 만드는 작은 시너지가 결국 'The Dramatic Collaboration'이라는 혁신을 만듭니다."
+                    </div>
+                </div>
+            </div>
+
+            <!-- 전표찬 사원 -->
+            <div class="team-card">
+                <div class="card-image">
+                    <!-- 모니터 앞에서 집중하며 디테일을 체크하는 모습 -->
+                    <img loading="lazy" src="../images/team/poh.webp" alt="전표찬 사원">
+                </div>
+                <div class="card-content">
+                    <div class="member-info">
+                        <div class="member-name">Pyochan Jeon <span class="member-role">QA & Backend Developer / Staff</span></div>
+                    </div>
+                    <div class="hashtags">
+                        <span class="hashtag">#Flawless_QA</span>
+                        <span class="hashtag">#Detail_Obsessed</span>
+                    </div>
+                    <div class="quote">
+                        "작은 버그 하나가 현장에 있는 고객의 하루를 완전히 망칠 수 있다는 것을 항상 되새깁니다. 개발 초기 단계부터 실제 사용자의 입장에 완벽히 빙의하여 꼼꼼하게 테스트합니다. 품질을 향한 집요한 완벽주의도 결국 사용자를 향한 깊은 공감에서 비롯됩니다."
+                    </div>
+                </div>
+            </div>
+
+            <!-- 장지용 사원 -->
+            <div class="team-card">
+                <div class="card-image">
+                    <!-- 활기찬 모습으로 연구/개발에 몰두하는 모습 -->
+                    <img loading="lazy" src="../images/team/ryan.webp" alt="장지용 사원">
+                </div>
+                <div class="card-content">
+                    <div class="member-info">
+                        <div class="member-name">Jiyong Jang <span class="member-role">Frontend Developer / Staff</span></div>
+                    </div>
+                    <div class="hashtags">
+                        <span class="hashtag">#Data_Explorer</span>
+                        <span class="hashtag">#Growing_Engineer</span>
+                    </div>
+                    <div class="quote">
+                        "새로운 기술 스택을 배우고 적용하는 건 언제나 가슴 뛰는 일입니다. 자율적인 사내 기술 스터디에서 치열하게 배운 내용을 실제 프로젝트에 녹여내고, 그로 인해 나의 개인적인 성장이 팀 전체의 성장으로 이어지는 짜릿한 순간들을 가장 사랑합니다."
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<footer class="footer mt-4">
+        <div class="container text-center fade-in-up">
+            <h2 class="footer-title" data-i18n="footer.title">Accelerate your business with Empasy</h2>
+            <div class="mt-4">
+                <a href="../../en/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p data-i18n="footer.copyright">© 2026 Empasy. All rights reserved.</p>
+        <!-- SEO Semantic IT Company Info -->
+        <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
+            <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px;">
+                <a href="https://github.com/DramaticCollaboration" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="../../docs/index.html" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-book"></i> Documentation
+                </a>
+            </div>
+            <address style="font-style: normal; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
+                <strong>(주)엠파시 (Empasy IT Corp.)</strong><br>
+                Enterprise B2B Software and AI Agent (SyncSeries) Developer<br>
+                Seoul, South Korea
+            </address>
+        </div>
+
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>

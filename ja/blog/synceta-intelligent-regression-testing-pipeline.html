@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="synceta intelligent regression testing pipelineに関する技術的な詳細。">
+    <meta name="keywords" content="기술 블로그, AI 도입, AI 에이전트, AI Ops, MSA 전환, RPA 대체, 엔터프라이즈 AI, 엠파시, Empasy">
+    <meta name="author" content="Empasy">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "엠파시(Empasy) 기술 블로그",
+      "url": "https://empasy.com/blog.html",
+      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
+      "publisher": {
+        "@type": "Organization",
+        "name": "엠파시(Empasy)",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.com/empasy-logo.png"
+        }
+      }
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <meta name="geo.region" content="KR-11" />
+    <meta name="geo.placename" content="Seoul" />
+    <meta name="geo.position" content="37.5665;126.9780" />
+    <meta name="ICBM" content="37.5665, 126.9780" />
+
+    <!-- SEO & AIO Tags -->
+    <link rel="canonical" href="https://empasy.com/ja/blog/synceta-intelligent-regression-testing-pipeline.html">
+    <meta property="og:title" content="Empasy技術ブログ: Synceta Intelligent Regression Testing Pipeline">
+    <meta property="og:description" content="synceta intelligent regression testing pipelineに関する技術的な詳細。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://empasy.com/blog.html">
+    <meta property="og:image" content="https://empasy.com/empasy-logo.png">
+    
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Empasy技術ブログ: Synceta Intelligent Regression Testing Pipeline</title>
+    <meta name="description" content="synceta intelligent regression testing pipelineに関する技術的な詳細。">
+    <link rel="canonical" href="https://empasy.com/ja/blog/synceta-intelligent-regression-testing-pipeline.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.com/synceta-intelligent-regression-testing-pipeline.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.com/en/synceta-intelligent-regression-testing-pipeline.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/synceta-intelligent-regression-testing-pipeline.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/synceta-intelligent-regression-testing-pipeline.html" />
+    <meta property="og:title" content="Empasy技術ブログ: Synceta Intelligent Regression Testing Pipeline">
+    <meta property="og:description" content="synceta intelligent regression testing pipelineに関する技術的な詳細。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://empasy.com/synceta-intelligent-regression-testing-pipeline.html">
+    <meta property="og:locale" content="ko_KR">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "[Tech Blog] 기계어(JSON)에서 비즈니스 언어(Excel)로: SyncETA의 지능형 회귀 테스트 파이프라인 아키텍처",
+  "description": "LLM과 Playwright MCP를 결합하여 수작업 없는 No-Code 기반 지능형 QA 자동화 및 시각적 자가 치유(Self-Healing) 엔진을 구현한 SyncETA 아키텍처 리뷰.",
+  "author": {
+    "@type": "Organization",
+    "name": "Empasy Engineering Team",
+    "url": "https://empasy.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Empasy",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://empasy.com/assets/logo.png"
+    }
+  },
+  "url": "https://empasy.com/synceta-intelligent-regression-testing-pipeline.html"
+}
+    </script>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="glass-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="../../ja/pages/index.html"><img src="../../assets/images/empasy-logo.png" alt="EMPASY" class="logo-img"></a>
+            </div>
+            <nav class="nav-links">
+                <!-- 1. Company Group -->
+                <div class="dropdown">
+                    <a href="../../ja/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="../../ja/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
+                        <a href="../../ja/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
+                        <a href="../../ja/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
+                    </div>
+                </div>
+                
+                <!-- 2. Sync Series Group -->
+                <div class="dropdown">
+                    <a href="../../ja/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="../../ja/solutions/sync-boot.html">SyncBoot</a>
+                        <a href="../../ja/solutions/sync-cms.html">SyncCMS</a>
+                        <a href="../../ja/solutions/sync-crawl.html">SyncCrawl</a>
+                        <a href="../../ja/solutions/sync-eta.html">SyncEta</a>
+                    </div>
+                </div>
+
+                <!-- 3. Insights Group (NEW) -->
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="../../ja/blog/blog.html">Tech Blog</a>
+                        <a href="../../ja/pages/faq.html">FAQ</a>
+                        <a href="../../ja/blog/case-study-finance.html">고객 사례 상세</a>
+                    </div>
+                </div>
+                
+                <a href="../../ja/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
+                
+                <a href="../../ja/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
+            </nav>
+            <div class="nav-actions">
+                <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
+                    <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:1rem; padding: 0.5rem; cursor: pointer; display:flex; align-items:center; gap:6px;">
+                        <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> KO</span>
+                    </button>
+                    <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
+                        <a href="../../ko/blog/synceta-intelligent-regression-testing-pipeline.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
+                        <a href="../../en/blog/synceta-intelligent-regression-testing-pipeline.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
+                        <a href="../../ja/blog/synceta-intelligent-regression-testing-pipeline.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JA</a>
+                    </div>
+                </div>
+                <a href="../../ja/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 150px; min-height: 80vh;">
+        <div class="page-header text-center fade-in-up mb-4">
+            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Insights</span>
+            <h1 class="page-title" style="font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 1rem; color: var(--text-primary);">Tech Blog</h1>
+            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">エンタープライズAI導入のための実践的なガイドと最新技術トレンドをご確認ください。</p>
+        </div>
+        
+        <section class="section" style="padding-top: 2rem;">
+            <div class="container">
+                ﻿<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
+    <header style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">2026年7月18日 • AI Ops & QA Automation</div>
+        <h2 style="font-size: clamp(1.5rem, 5vw, 2rem); margin-bottom: 1rem;">[Tech Blog] 機械語(JSON)からビジネス言語(Excel)へ：SyncETAのインテリジェントな回帰テストパイプラインアーキテクチャ</h2>
+        <div style="color: var(--primary-color); font-weight: 600;">By Empasy Engineering Team</div>
+    </header>
+    <div style="line-height: 1.8; color: var(--text-primary);">
+        <p>ソフトウェアのデプロイ周期が「週単位」から「日単位」へと短縮されるアジャイル(Agile)およびクラウドネイティブ環境において、品質保証(QA)は依然として最も多くの手作業とリソースのボトルネックが発生する領域です。UIの小さな変更(DOM構造、ID/Class属性など)でも既存のE2Eテストスクリプトが簡単に壊れてしまう「メンテナンスの地獄(Maintenance Hell)」は、自動化の最大の障害でした。</p>
+        <p>Empasyの<strong>SyncETA</strong>はこれらの限界を克服するため、<strong>「Boon to business by agility」</strong>というビジョンの下、AI自動生成から無人自律運用段階までを網羅する<strong>End-to-Endの循環型品質エコシステム(Self-Evolving AI First QA Platform)</strong>を構築しました。本記事では、SyncETAのコアアーキテクチャと最新のエンジニアリング高度化の成果について深く掘り下げます。</p>
+
+        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. インテリジェントな5大レイヤーアーキテクチャのデータフロー</h2>
+        <p>SyncETAは、非構造化されたユーザー行動ログを精密に収集し、自ら進化する5つのコア階層構造で構成されています。</p>
+        <div class="modern-stack">
+          <div class="stack-layer">
+            <div class="stack-label">LAYER 01</div>
+            <div style="flex-grow: 1;">
+                <div class="stack-content">データ収集</div>
+                <div class="stack-desc">ブラウザイベントおよびDOM Contextの精密キャプチャ (Seleniumベース) ➔ Machine Log / JSON format</div>
+            </div>
+          </div>
+          <div class="stack-layer">
+            <div class="stack-label">LAYER 02</div>
+            <div style="flex-grow: 1;">
+                <div class="stack-content">AI プロセッシング</div>
+                <div class="stack-desc">LLM Semantic Parserを通じた自然言語(Excel)テストケース生成 ➔ 国際標準Excelテンプレート</div>
+            </div>
+          </div>
+          <div class="stack-layer">
+            <div class="stack-label">LAYER 03</div>
+            <div style="flex-grow: 1;">
+                <div class="stack-content">検証と循環</div>
+                <div class="stack-desc">QAエンジニアのフィードバックループ (LoRAファインチューニング / システム自己進化) ➔ 確定した自然言語コマンド</div>
+            </div>
+          </div>
+          <div class="stack-layer">
+            <div class="stack-label">LAYER 04</div>
+            <div style="flex-grow: 1;">
+                <div class="stack-content">インテリジェント実行</div>
+                <div class="stack-desc">Playwright MCPベースのバックグラウンドヘッドレス超高速並列分散実行 ➔ 失敗スナップショット & .webmビデオマッピング</div>
+            </div>
+          </div>
+          <div class="stack-layer">
+            <div class="stack-label">LAYER 05</div>
+            <div style="flex-grow: 1;">
+                <div class="stack-content">監視と分析</div>
+                <div class="stack-desc">リアルタイムダッシュボードモニタリングおよびWeb Result Viewerストリーミング</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">コアとなる差別化要因：年間LLM費用の99%を削減するアーキテクチャ</h3>
+        <p>既存のAIツールとは異なり、SyncETAは<strong>「シナリオ生成時にのみLLMを1回活用」</strong>し、その後の実際のテスト実行段階ではLLM APIの呼び出しなしに<strong>決定論的なレコード再生エンジン</strong>を通じて実行されます。これにより、エンタープライズ環境で数千回繰り返される回帰テストのコストを最大99%革新的に削減します。</p>
+        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. 主要なエンジニアリング高度化の成果</h2>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">① Headless Automation Pipeline & 外部システム連動 (RESTful API)</h3>
+        <p>外部システムやCI/CDパイプラインから自然言語コマンドテキストを送信するだけで、即座にバックグラウンドでテストを完走する完璧な無人自動化ループを提供します。</p>
+        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
+            <li style="margin-bottom: 0.5rem;"><strong>Inbound インターフェース (POST <code>/api/v1/execute/natural-language</code>):</strong> 外部からプロジェクトIDと自然言語シナリオを受信すると、内蔵された<strong>LLMエンジン</strong>が文脈を分析し、<code>Login</code> → <code>Navigate</code> → <code>Verify Element</code> 構造のPlaywright-MCPコマンドにリアルタイムで変換します。</li>
+            <li style="margin-bottom: 0.5rem;"><strong>動画エビデンスの自動マッピング:</strong> ブラウザを画面に表示しない<strong>Headlessモード</strong>で高速並列起動しながら、実行の全過程を<code>.webm</code>形式の映像でリアルタイム録画し、テスト終了後に<strong>AWS S3バケット</strong>に自動アップロードし、固有のPublic URLとPass/Fail状態ログを外部のCallback URLに即座に返します(Outbound API)。</li>
+        </ul>
+
+        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. エンタープライズ導入の成果と期待効果</h2>
+        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
+            <li style="margin-bottom: 0.5rem;"><strong>QA設計と作成工数を80%削減:</strong> 国際標準フォーマットの自然言語Excel形式でコミュニケーションできるため、コーディング知識のない現場担当者や企画者(PL)でも即座に品質資産を設計し検証できる<strong>「QAの民主化」</strong>環境を提供します。</li>
+            <li style="margin-bottom: 0.5rem;"><strong>セキュリティファーストのローカルLLMエコシステム:</strong> 企業の機密データやテスト環境情報の流出リスクを防ぐため、Dockerベースの完全な社内閉鎖網<strong>オンプレミス(On-premise)</strong>および隔離クラウドハイブリッドインフラアーキテクチャによるローカルLLMモデルの構築を完全にサポートします。</li>
+        </ul>
+        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+        <p>SyncETAは、Webエコシステムの精密検証性能を基盤として、単一の自然言語シナリオでAndroidとiOSを同時制御できる<strong>Universal Locator構造ベースの「モバイル領域への拡張(DeviceHub連動)」</strong>技術開発マイルストーンを実現しています。QAのパラダイムを変えるSyncETAの高度化された新技術は、Empasy公式技術ブログを通じて継続的に共有される予定です。</p>
+    </div>
+</article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-4">
+        <div class="container text-center fade-in-up">
+            <h2 class="footer-title" data-i18n="footer.title">엠파시와 함께 비즈니스를 가속화하세요</h2>
+            <div class="mt-4">
+                <a href="../../ja/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p data-i18n="footer.copyright">© 2026 Empasy. All rights reserved.</p>
+            <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
+                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px;">
+                    <a href="https://github.com/DramaticCollaboration" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="../../docs/index.html" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-book"></i> Documentation
+                    </a>
+                </div>
+                <address style="font-style: normal; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
+                    <strong>(주)엠파시 (Empasy IT Corp.)</strong><br>
+                    엔터프라이즈 B2B 소프트웨어 및 AI 에이전트(SyncSeries) 개발사<br>
+                    Seoul, South Korea
+                </address>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/i18n.js"></script>
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>
