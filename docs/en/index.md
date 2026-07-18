@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-    name: "엠파시 제품 가이드"
+    name: "Empasy Product Guide"
     text: "Boon to business by agility."
-    tagline: "'변화에 최적화된 솔루션', Sync Series로 비즈니스 민첩성(Agility)을 극대화합니다."
+    tagline: "'Solutions Optimized for Change', Maximize business agility with the Sync Series."
     actions:
       - text: SyncEta
         link: /synceta/
@@ -31,28 +31,28 @@ hero:
         link: /syncapim/
         type: primary
     
-      - text: 스크럼반
+      - text: Scrumban
         link: /agile/
         type: primary
     
-      - text: 공부방
+      - text: Study Room
         link: /study/
         type: primary
     
-      - text: 작업 로그
+      - text: Work Logs
         link: /logs/
         type: primary
 
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, 엠파시, Empasy, Sync Series, SyncBoot, SyncAdmin, SyncCMS, SyncEta, 마이크로서비스 아키텍처, MSA, 소프트웨어 개발, 솔루션, 디지털 혁신, 비즈니스 민첩성, 개발 플랫폼, 백엔드, 프론트엔드, 콘텐츠 관리 시스템, CMS, AI 테스트, 자동화 테스트, QA, 품질 보증, CI/CD, DevOps, 웹사이트 구축, 시스템 통합, SI, ITO, 맞춤형 솔루션, Java, Vue.js, Vue 3, Vite, TypeScript, Freemarker, Selenium
+      content: Test Automation, Empasy, Sync Series, SyncBoot, SyncAdmin, SyncCMS, SyncEta, Microservices Architecture, MSA, Software Development, Solutions, Digital Transformation, Business Agility, Development Platform, Backend, Frontend, Content Management System, CMS, AI Testing, Automated Testing, QA, Quality Assurance, CI/CD, DevOps, Website Building, System Integration, SI, ITO, Customized Solutions, Java, Vue.js, Vue 3, Vite, TypeScript, Freemarker, Selenium
   - - meta
     - property: og:title
-      content: "엠파시 Sync Series: 디지털 혁신을 위한 MSA 기반 솔루션 | 개발, CMS, AI 테스트 자동화"
+      content: "Empasy Sync Series: MSA-based Solutions for Digital Transformation | Development, CMS, AI Test Automation"
   - - meta
     - property: og:description
-      content: 엠파시는 SyncBoot, SyncAdmin, SyncCMS, SyncEta로 구성된 Sync Series를 통해 기업의 디지털 혁신과 비즈니스 민첩성을 극대화합니다. MSA 기반 백엔드, 프론트엔드, CMS, AI 테스트 자동화로 개발 속도를 높이고 품질을 보장하며 유지보수 비용을 절감하세요.
+      content: Empasy maximizes corporate digital transformation and business agility through the Sync Series, consisting of SyncBoot, SyncAdmin, SyncCMS, and SyncEta. Accelerate development, guarantee quality, and reduce maintenance costs with MSA-based backend, frontend, CMS, and AI test automation.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -62,140 +62,140 @@ head:
 
 
 features:
-  - title: 비즈니스 민첩성 및 변화 대응 최적화
-    details: 빠르게 변하는 비즈니스 환경에 맞춰 소프트웨어 변경을 신속하게 지원하며, 이를 통해 기업의 민첩성을 높이고 경쟁력을 유지하도록 돕습니다. Sync Series는 개발부터 테스트까지 속도와 유연성에 초점을 맞춥니다
-  - title: 개발/운영 효율성 및 사용자 친화성
-    details: 직관적인 인터페이스와 미리 내장된 기능으로 개발자는 핵심 비즈니스 로직에 집중하며, 비전문가도 쉽게 콘텐츠를 관리하거나 테스트를 자동화할 수 있습니다
-  - title: 뛰어난 고객 맞춤화 및 유연한 확장
-    details: 고객의 다양한 비즈니스 환경과 요구사항에 맞춰 시스템 확장 및 수정이 가능하며, 필요한 기능만 선택적으로 도입하여 비용 효율성을 높일 수 있습니다
-  - title: 오픈소스 기반의 벤더 비종속성
-    details: 특정 업체에 종속되지 않는 오픈소스 기반 솔루션으로 유연성을 제공하며, 혁신적인 기술을 발 빠르게 도입하여 서비스를 고도화하기 용이합니다
-  - title: 포괄적인 통합 관리 및 E2E 솔루션
-    details: API 관리, CI/CD, 모니터링, 테스트 자동화 등 개발부터 운영까지 전체 프로세스를 통합 관리하여 업무 효율성을 극대화합니다
-  - title: 높은 안정성, 품질 및 보안 확보
-    details: 다수의 구축 사례를 통해 검증된 안정적인 솔루션이며, 지속적인 모니터링과 강력한 보안 기능으로 신뢰성 있는 서비스를 제공합니다.
+  - title: Optimization of Business Agility and Change Response
+    details: Rapidly supports software changes in response to the fast-paced business environment, helping companies increase agility and maintain competitiveness. The Sync Series focuses on speed and flexibility from development to testing.
+  - title: Development/Operation Efficiency and User Friendliness
+    details: With intuitive interfaces and built-in features, developers can focus on core business logic, while non-experts can easily manage content or automate tests.
+  - title: Outstanding Customization and Flexible Expansion
+    details: System expansion and modification are possible to suit various business environments and customer requirements, and cost efficiency can be increased by selectively adopting only necessary features.
+  - title: Open-Source Based Vendor Independence
+    details: Provides flexibility with open-source-based solutions that are not dependent on specific vendors, making it easy to quickly adopt innovative technologies and advance services.
+  - title: Comprehensive Integrated Management and E2E Solutions
+    details: Maximizes work efficiency by integrally managing the entire process from development to operations, including API management, CI/CD, monitoring, and test automation.
+  - title: Securing High Stability, Quality, and Security
+    details: A stable solution verified through numerous deployment cases, providing reliable services with continuous monitoring and robust security features.
 
 footer: Copyright © 2025 Empasy
 ---
 
 
 
-## 엠파시 문서
+## Empasy Documentation
 
-아래 문서들 포함합니다
+Includes the following documents:
 
-- [SyncETA](/synceta/) - 코딩 없이 누구나 쉽게 자동화 테스트를 구축하고 CI/CD 환경에 통합하여 비즈니스 변화에 신속하고 안정적으로 대응하도록 돕는 통합 테스트 자동화 플랫폼
-- [SyncCrawl](/synccrawl/) - 자연어 명령으로 웹 데이터를 수집하고 RAG 지식 기반 구축. 웹 구조 변경에 자동 대응하여 운영 효율성을 극대화하며, LLM 환각 없는 정확하고 신뢰도 높은 답변을 제공하는 지능형 통합 크롤링 솔루션
-- [SyncCMS](/synccms/) - 비즈니스 변화에 맞춰 웹사이트를 빠르게 발전시키고, 비전문가도 쉽게 콘텐츠를 관리하며 유연하게 기능을 확장할 수 있는 효율적인 콘텐츠 관리 플랫폼
-- [SyncBoot](/syncboot/) - 오픈소스 마이크로서비스 기반의 빠른 개발 및 효율적인 운영 환경을 제공하여, 기업이 빠르게 변화하는 비즈니스 환경에 민첩하게 대응하고 경쟁 우위를 확보하도록 돕는 플랫폼
-- [SyncAdmin](/syncadmin/) - Vue 3, Vite, TypeScript 기반의 오픈소스 관리 시스템 템플릿으로, 재사용 가능한 컴포넌트와 빠른 개발 환경을 제공하여 중대형 백오피스 개발 생산성을 극대화하고 변화하는 요구사항에 신속하게 대응할 수 있도록 지원
-- [SyncApim](/syncapim/) - 종합적이고 안정적인 API 관리와 **뛰어난 맞춤화(Customization in its DNA)**를 통해 기업이 API를 통한 디지털 혁신을 가속화하고 비즈니스 경쟁력을 강화하도록 돕는 강력한 플랫폼
-- [Agile](/agile/) - Agile의 혁신을 위해 스크럼과 칸반을 혼합한(스크럼반(Scrumban)) 엠파시 개발 방법론
-- [Study](/study/) - 엠파시 공부방
+- [SyncETA](/synceta/) - An integrated test automation platform that helps anyone easily build automated tests without coding and integrate them into CI/CD environments to respond quickly and stably to business changes.
+- [SyncCrawl](/synccrawl/) - An intelligent integrated crawling solution that collects web data using natural language commands and builds a RAG knowledge base. It maximizes operational efficiency by automatically responding to web structure changes and provides accurate, highly reliable answers without LLM hallucinations.
+- [SyncCMS](/synccms/) - An efficient content management platform that allows websites to evolve quickly in line with business changes, enables non-experts to easily manage content, and provides flexible feature expansion.
+- [SyncBoot](/syncboot/) - A platform that provides a rapid development and efficient operational environment based on open-source microservices, helping enterprises quickly respond to fast-changing business environments and secure a competitive advantage.
+- [SyncAdmin](/syncadmin/) - An open-source management system template based on Vue 3, Vite, and TypeScript. It maximizes the productivity of mid-to-large back-office development by providing reusable components and a rapid development environment, supporting swift responses to changing requirements.
+- [SyncApim](/syncapim/) - A powerful platform that accelerates digital transformation and strengthens business competitiveness through comprehensive and stable API management and **outstanding customization (Customization in its DNA)**.
+- [Agile](/agile/) - The Empasy development methodology (Scrumban) that combines Scrum and Kanban for Agile innovation.
+- [Study](/study/) - Empasy Study Room.
 
-## 개요
+## Overview
 
-엠파시(Empasy)는 "Empathic Synergy (공감 시너지)"라는 핵심 가치를 바탕으로 빠르게 변화하는 비즈니스 환경에 민첩하게 대응하기 위한 소프트웨어 솔루션을 개발하는 회사입니다. 엠파시는 솔루션 기반의 SI(시스템 통합) 및 ITO(IT 유지보수) 사업을 주력으로 하며, 특히 "변화에 최적화된 솔루션"을 최고 가치로 내세우는 Sync Series 제품군을 통해 기업의 비즈니스 민첩성 확보를 지원하고 있습니다. Sync Series는 개발, 테스트, 콘텐츠 관리, API 관리 등 소프트웨어 라이프사이클 전반에 걸쳐 속도, 효율성, 유연성을 높이는 것을 목표로 합니다.
+Empasy is a company that develops software solutions to respond agilely to rapidly changing business environments based on the core value of "Empathic Synergy". Empasy mainly focuses on solution-based System Integration (SI) and IT Outsourcing (ITO) businesses, and specifically supports securing business agility for enterprises through its Sync Series product line, which promotes "Solutions Optimized for Change" as its highest value. The Sync Series aims to increase speed, efficiency, and flexibility across the entire software lifecycle, including development, testing, content management, and API management.
 
-## 엠파시의 핵심 가치 및 비전
+## Empasy's Core Values and Vision
 
-엠파시의 회사명인 "EmpaSy"는 깊은 공감과 협업을 통해 뛰어난 결과를 창출하는 "Empathic Synergy"를 의미합니다. 이는 고객과 팀원 간의 깊은 이해와 지지를 바탕으로 공동의 목표를 달성하겠다는 철학을 담고 있습니다.
-엠파시는 "빠르게 변해가는 비즈니스 환경에 신속한 대응이 필요하다"는 인식 하에, 소프트웨어가 모든 업무의 중심에 있으며 변화하는 비즈니스 환경에 빠르게 대응하기 위해서는 신속한 소프트웨어의 변경이 필수적이라고 강조합니다. 이에 따라 엠파시는 이러한 빠른 변화에 효율적으로 대응하기 위한 Sync Series를 개발했으며, "변화에 최적화된 솔루션"이 Sync 제품군의 최고 가치라고 명시하고 있습니다. 또한, "Boon to business agility" (비즈니스 민첩성을 위한 혜택)을 슬로건으로 내세우며, "살아 있느 소프트웨어를 만듭니다"는 회사의 주요 목표 중 하나입니다.
+Empasy's company name, "EmpaSy", stands for "Empathic Synergy", which means creating outstanding results through deep empathy and collaboration. This embodies the philosophy of achieving common goals based on deep understanding and support between customers and team members.
+Recognizing that "rapid response is required in a fast-changing business environment", Empasy emphasizes that software is at the center of all operations and that rapid software modification is essential to quickly adapt to changing business environments. Accordingly, Empasy developed the Sync Series to efficiently respond to these rapid changes, explicitly stating that "Solutions Optimized for Change" is the highest value of the Sync product line. Furthermore, with the slogan "Boon to business agility", one of the company's main goals is "We create living software."
 
-## Sync Series 제품군
+## Sync Series Product Line
 
-엠파시는 비즈니스 민첩성 확보를 위한 Sync Series 제품군을 보유하고 있으며, 주요 제품은 다음과 같습니다.
+Empasy possesses the Sync Series product line to secure business agility, and the main products are as follows:
 
-### SyncCMS: 콘텐츠 관리 시스템
+### SyncCMS: Content Management System
 
-1. 개요: 웹사이트와 관리 시스템을 쉽게 구축할 수 있도록 설계된 CMS입니다.
-1. 주요 특징:Java 기반 안정성: 높은 안정성과 확장성 제공.
-1. 모듈화된 구조: 필요에 따라 선택적 기능 사용.
-1. 템플릿 지원: 사용자 정의 템플릿을 통한 디자인 및 레이아웃 관리.
-1. 다국어 지원: 글로벌 웹사이트 구축 용이.
-1. SEO 최적화: 검색 엔진 노출 향상.
-1. 사용자 권한 관리: 세분화된 권한 설정.
-1. RESTful API 지원: 확장성 증대.
-1. Freemarker 기반 템플릿 엔진: 디자인 유연성 보장.
-1. 크로스 플랫폼: 다양한 환경에서 실행 가능.
-1. 실시간 데이터 처리: 데이터베이스 변경 사항 감지 및 동기화.
-1. 장점: "개발자가 아니더라도 마케터나 운영 담당자가 쉽게 웹사이트 내용을 업데이트하거나 고칠 수 있어요.", "모듈 구조 덕분에 필요할 때 새로운 기능을 추가하거나 확장하는 것도 훨씬 유연하게 할 수 있고요." 확장성, 사용자 친화적 인터페이스, 커뮤니티 지원. 벤더 종속성 극복 및 커스텀 한계 극복을 위한 다양한 확장 포인트와 Spring 기반 웹 프레임워크를 제공합니다.
-1. 활용 사례: 기업 웹사이트, 블로그, 뉴스 포털, 전자상거래 플랫폼, 정부 및 공공기관 포털, 빠른 프로토타이핑.
+1. Overview: A CMS designed to easily build websites and management systems.
+1. Key Features: Java-based stability, providing high stability and scalability.
+1. Modular Structure: Selective use of features as needed.
+1. Template Support: Design and layout management through customizable templates.
+1. Multilingual Support: Easy to build global websites.
+1. SEO Optimization: Improved search engine visibility.
+1. User Permission Management: Granular permission settings.
+1. RESTful API Support: Increased scalability.
+1. Freemarker-based Template Engine: Guarantees design flexibility.
+1. Cross-Platform: Can run in various environments.
+1. Real-time Data Processing: Database change detection and synchronization.
+1. Advantages: "Even non-developers, like marketers or operations managers, can easily update or fix website content," and "Thanks to the modular structure, it is much more flexible to add or expand new features when needed." Scalability, user-friendly interface, and community support. It provides various extension points and a Spring-based web framework to overcome vendor lock-in and customization limits.
+1. Use Cases: Corporate websites, blogs, news portals, e-commerce platforms, government and public institution portals, rapid prototyping.
 
-### SyncBoot: Java 빠른 개발 플랫폼
+### SyncBoot: Java Rapid Development Platform
 
-1. 개요: Java 기반의 오픈소스 빠른 개발 플랫폼으로, 기업용 애플리케이션 개발 효율화를 목표로 합니다.
-1. 기술 스택: 백엔드 (Spring Boot, Spring Cloud, MyBatis-Plus, JWT), 프론트엔드 (Vue.js, Ant Design Vue, React), 데이터베이스 (MySQL, Oracle 등), 모듈화 (권한 관리, 워크플로우, 리포트, 대시보드), 클라우드 지원 (마이크로서비스 아키텍처).
-1. 주요 기능: 시스템 관리 (사용자, 역할, 메뉴, 데이터 권한), 데이터 시각화 (Drag & Drop 대시보드, 차트 리포트), 모바일 대응, API 문서 (Swagger 통합).
-1. 장점: "안정적인 Java와 Sping Boot Framework 기반 위에서요. 기업 환경에서 자주 쓰는 기능들이 있잖아요. 예를 들면 뭐 권한 관리라든가 보안 같은 거요. 이런 복잡한 모듈들을 아예 미리 만들어서 제공해요.", "개발자들은 이런 기본적인 기능 만드는 데 시간을 덜 쓰고 실제 비즈니스 로직 개발에 더 집중할 수 있게 되는 거죠.", "표준 기술 기반이라 개발자들이 뭐랄까, 쉽게 적응하고 또 신속하게 기업용 애플리케이션을 만들 수 있게 도와주는 거고요." 낮은 학습 곡선, 활발한 커뮤니티, 확장성.
-1. 활용 사례: ERP/CRM 시스템, 내부 관리 플랫폼, 데이터 분석 대시보드 등 중소규모 기업용 애플리케이션. MSA 운영 환경 확보, 서비스 안정화, 오픈소스 기반, DevOps 개발/운영 환경 정착, 장애 대응력 향상, 고도화 로드맵 확보 등의 기대 효과를 제공합니다.
+1. Overview: An open-source rapid development platform based on Java, aimed at streamlining enterprise application development.
+1. Tech Stack: Backend (Spring Boot, Spring Cloud, MyBatis-Plus, JWT), Frontend (Vue.js, Ant Design Vue, React), Database (MySQL, Oracle, etc.), Modularization (Permission management, Workflow, Reports, Dashboards), Cloud Support (Microservices Architecture).
+1. Key Features: System management (Users, roles, menus, data permissions), Data visualization (Drag & Drop dashboards, chart reports), Mobile responsiveness, API documentation (Swagger integration).
+1. Advantages: "Built on top of the stable Java and Spring Boot Framework. It provides pre-built complex modules frequently used in enterprise environments, like permission management and security." "Developers can spend less time building these basic features and focus more on actual business logic development." "Because it's based on standard technologies, it helps developers easily adapt and quickly build enterprise applications." Low learning curve, active community, scalability.
+1. Use Cases: SME enterprise applications such as ERP/CRM systems, internal management platforms, data analysis dashboards, etc. Provides expected benefits such as securing an MSA operational environment, service stabilization, open-source foundation, establishing a DevOps dev/ops environment, improving failure response capabilities, and securing an advancement roadmap.
 
-### SyncAdmin: Vue 3 관리 시스템 템플릿
+### SyncAdmin: Vue 3 Management System Template
 
-1. 개요: Vue 3, Vite, TypeScript 기반의 오픈소스 관리 시스템 템플릿으로, 중대형 백오피스 및 관리자 대시보드 개발에 최적화되어 있습니다.
-1. 주요 특징:최신 기술 스택: Vue 3, Vite, TypeScript, Pinia, Vue Router 등 현대적인 기술 활용.
-1. 다국어 지원: 내장 국제화(i18n) 기능.
-1. 권한 관리: 동적 라우팅, 버튼 단위 제어를 포함한 세분화된 접근 제어.
-1. 테마 커스터마이징: 다양한 테마 및 다크 모드 지원.
-1. Mock 서버 내장: Nitro 기반 고성능 Mock 서버 제공.
-1. 다양한 UI 프레임워크 지원: Ant Design Vue, Naive UI, Element Plus 등 호환.
-1. 모노레포 구조: Pnpm, TurboRepo 활용.
-1. 풍부한 구성 요소: 재사용 가능한 컴포넌트, 유틸리티, 훅 제공.
-1. 장점: "재사용 가능한 컴포넌트랑 Vite라는 빌드 도구"를 통해 "복잡한 관리 화면도 레고 조립하듯이, 빠르게 만들 수 있고요", "개발 중에 뭔가 바꾸면 거의 실시간으로 화면에 딱 반영을 해줘요. 그래서 개발 속도 자체가 눈에 띄게 빨라집니다."
-1. 활용 사례: 기업 내부 시스템 (ERP, CRM 등), 관리자 대시보드, 학습 및 교육용.
+1. Overview: An open-source management system template based on Vue 3, Vite, and TypeScript, optimized for developing mid-to-large back-offices and admin dashboards.
+1. Key Features: Modern tech stack utilizing Vue 3, Vite, TypeScript, Pinia, Vue Router, etc.
+1. Multilingual Support: Built-in internationalization (i18n) functionality.
+1. Permission Management: Granular access control including dynamic routing and button-level control.
+1. Theme Customization: Support for various themes and dark mode.
+1. Built-in Mock Server: Provides a high-performance Nitro-based Mock server.
+1. Various UI Framework Support: Compatible with Ant Design Vue, Naive UI, Element Plus, etc.
+1. Monorepo Structure: Utilizes Pnpm and TurboRepo.
+1. Rich Components: Provides reusable components, utilities, and hooks.
+1. Advantages: Through "reusable components and the Vite build tool", "even complex management screens can be built quickly, like assembling Lego blocks", and "changes during development are reflected on the screen almost in real-time. So the development speed itself becomes noticeably faster."
+1. Use Cases: Internal enterprise systems (ERP, CRM, etc.), admin dashboards, learning and educational tools.
 
-### Sync APIM: API 관리 플랫폼
+### Sync APIM: API Management Platform
 
-1. 개요: API를 통한 가치 창출 및 디지털 혁신을 선도하는 API 관리 플랫폼입니다. "Customization in its DNA"를 강조하며 고객 맞춤형 솔루션을 제공합니다.
-1. 주요 특징:안정성: 고가용성 및 안정적인 운영 환경 보장.
-1. 보안성: OAuth 2.0, JWT, API 키를 통한 다층 보안.
-1. 통합 관리: API 생성, 배포, 보안, 모니터링, 분석을 한 곳에서 처리.
-1. 개발자 친화적: 직관적인 개발자 포털 및 풍부한 문서화.
-1. 확장성: 클라우드 네이티브 아키텍처로 대규모 트래픽 처리 및 다양한 환경 유연 대응.
-1. 정책 관리: 호출 제한, 알림, 통계 등 다양한 정책 제공 및 고객 특화 정책 개발 가능.
-1. API 관리: 중앙 집중식 API 등록 및 그룹 분류.
-1. API 테스트: 엔드포인트 호출 및 응답 검증.
-1. 모니터링: API 성능 및 상태 준실시간 추적 및 분석.
-1. 시스템 알림: 중요한 이벤트 발생 시 관리자 알림 제공.
-1. 장점: 비즈니스 확장 (파트너십 및 개발자 생태계 구축), 보안 강화 (데이터 암호화, 무단 접근 방지), API 성능 최적화 (응답 속도 향상), 비용 절감 (API 수명 주기 자동화, 개발 시간 단축), 운영 효율성 향상, API 중심 생태계 구축, 비즈니스 모델 확장, 기업 경쟁력 강화. 고객 맞춤형 시스템을 통해 유연한 커스터마이징, 비용 효율성, 빠른 배포, 높은 만족도를 제공합니다.
-1. 기대 효과: API 관리 프로세스 자동화, 내부 및 외부 개발자 협업 강화, 새로운 API 서비스 개발 및 수익 창출, API 기반 혁신적인 서비스 제공 및 시장 선도.
+1. Overview: An API management platform that leads digital transformation and value creation through APIs. It emphasizes "Customization in its DNA" and provides customer-tailored solutions.
+1. Key Features: Stability ensuring a highly available and stable operational environment.
+1. Security: Multi-layered security through OAuth 2.0, JWT, and API keys.
+1. Integrated Management: Handles API creation, deployment, security, monitoring, and analysis in one place.
+1. Developer Friendly: Intuitive developer portal and rich documentation.
+1. Scalability: Cloud-native architecture for handling massive traffic and flexibly responding to diverse environments.
+1. Policy Management: Provides various policies such as call limits, alerts, statistics, and enables the development of customer-specific policies.
+1. API Management: Centralized API registration and group classification.
+1. API Testing: Endpoint invocation and response validation.
+1. Monitoring: Near real-time tracking and analysis of API performance and status.
+1. System Alerts: Provides administrator alerts when critical events occur.
+1. Advantages: Business expansion (partnerships and developer ecosystem building), Security enhancement (data encryption, unauthorized access prevention), API performance optimization (improved response speed), Cost reduction (API lifecycle automation, reduced development time), Improved operational efficiency, API-centric ecosystem building, Business model expansion, Strengthened corporate competitiveness. Provides flexible customization, cost efficiency, rapid deployment, and high satisfaction through customer-tailored systems.
+1. Expected Benefits: Automation of the API management process, strengthened collaboration between internal and external developers, development and monetization of new API services, provision of innovative API-based services and market leadership.
 
-### SyncETA: 웹 자동화 테스트 플랫폼
+### SyncETA: Web Test Automation Platform
 
-1. 개요: 웹 자동화 테스트를 지원하는 통합 테스트 자동화 플랫폼으로, Selenium 기반 엔진 위에 구축되었습니다.
-1. 주요 특징:다양한 테스트 지원: 웹, 모바일, API 테스트 지원.
-1. 이중 인터페이스: 스크립트 기반(Groovy/Java) 및 키워드/GUI 기반 코드리스 모드 제공.
-1. 자동화 도구: 테스트 녹화(Record), 객체 스파이(Object Spy), 디버깅, 데이터 기반 테스트.
-1. 통합 관리: 테스트 케이스, 스위트, 실행 결과 관리.
-1. CI/CD 통합: Jenkins, Azure DevOps, Git, Slack 등 연동.
-1. 스토리 기반 테스트: 시나리오를 Flow Chart로 연결하여 동적 실행.
-1. 실시간 통신 및 AI 화면 검증: 소켓 통신 및 AI 활용 데이터 검증.
-1. AI 테스트 데이터 자동 생성 및 관리: 목업 데이터 자동 생성.
-1. 동적 테스트 CHAINING: 조건에 따른 연쇄적 시나리오 실행.
-1. 장점: "빨리 바꾸다 보면 아무래도 오류 가능성이 높아지죠. SyncEta가 바로 그 부분을 딱 해결해 줍니다.", "쉽게 말해서 사용자가 웹사이트 쓰는 행동을 자동으로 스크립트로 만들어서 자동으로 테스트 실행하는 거예요.", "사용자의 친화적인 개발 환경, IDE를 제공해서 테스트 만드는 것부터 실행하고 결과 보고까지 이걸 아주 효율적으로 관리할 수 있게 해주고요.", "특히 중요한 건 CI/CD 그러니까 지속적 통합, 지속적 배포 도구랑 연동이 된다는 점입니다. 개발자가 코드 바꾸면 자동으로 테스트하고 배포까지 쭉 연결해주니까 소프트웨어 변경 사항을 정말 빠르고 안정적으로 반영할 수 있게 되는 거죠." 사용자 친화성 (코딩 경험 적은 사용자도 용이), 다양한 테스트 유형 지원, 초기 비용 절감 및 유지보수 비용 최소화, 효율적인 리소스 관리, 협업 강화, 속도 향상 및 테스트 확장성 확보, 지속 가능한 품질 관리, 고객 만족도 향상. 코드 없이 손쉽고 빠른 웹 테스트 자동화 환경 제공.
-1. 활용 사례: 자동화 테스트를 통한 시장 출시 시간 단축, CI/CD 및 외부 시스템 통합, 테스트 품질 및 신뢰성 강화, 테스트 관리 및 실행 효율성 향상.
+1. Overview: An integrated test automation platform that supports web automated testing, built on top of a Selenium-based engine.
+1. Key Features: Diverse test support including web, mobile, and API testing.
+1. Dual Interface: Provides script-based (Groovy/Java) and keyword/GUI-based codeless modes.
+1. Automation Tools: Test Recording, Object Spy, debugging, data-driven testing.
+1. Integrated Management: Management of test cases, suites, and execution results.
+1. CI/CD Integration: Integration with Jenkins, Azure DevOps, Git, Slack, etc.
+1. Story-based Testing: Dynamic execution by connecting scenarios with Flow Charts.
+1. Real-time Communication and AI Screen Validation: Socket communication and data validation using AI.
+1. AI Test Data Auto-generation and Management: Automatic generation of mockup data.
+1. Dynamic Test CHAINING: Sequential scenario execution based on conditions.
+1. Advantages: "Making quick changes naturally increases the chance of errors. SyncEta solves exactly that." "Simply put, it automatically scripts user actions on a website and runs tests automatically." "It provides a user-friendly development environment, an IDE, allowing highly efficient management from test creation to execution and result reporting." "What's especially important is that it integrates with CI/CD, i.e., continuous integration and deployment tools. When a developer changes code, it automatically connects testing and deployment, allowing software changes to be reflected really quickly and stably." User-friendliness (easy even for users with little coding experience), diverse test type support, initial cost reduction and maintenance cost minimization, efficient resource management, strengthened collaboration, speed improvement and test scalability securing, sustainable quality management, customer satisfaction improvement. Provides an easy and rapid codeless web test automation environment.
+1. Use Cases: Reduced time-to-market through automated testing, CI/CD and external system integration, strengthened test quality and reliability, improved test management and execution efficiency.
 
-## 엠파시의 사업 분야 및 경쟁력
+## Empasy's Business Areas and Competitiveness
 
-엠파시는 시스템 통합(SI), IT 유지관리(ITO), 솔루션 사업, Mobile 사업을 주력으로 합니다. 특히 자체 개발한 SyncCMS와 SyncBoot 솔루션을 통해 고객에게 최적의 서비스를 제공하고 있습니다.
-경쟁력 핵심 포인트: 앞선 기술 기반의 효율적인 협업 능력, 다양한 산업 분야의 업무 환경 요구에 맞는 최적의 IT 시스템 구축 경험, 대기업 및 중견기업의 전략 사업 파트너로서 ITO 사업 수행, 마이크로서비스 기반의 유연한 시스템 구축 플랫폼 (SyncBoot), 체계적인 콘텐츠 관리 및 확장 가능한 웹 서비스 개발 플랫폼 (SyncCMS), 모바일 앱 개발부터 시스템 연동 및 운영 환경 제공 능력.
+Empasy focuses on System Integration (SI), IT Outsourcing (ITO), Solution Business, and Mobile Business. In particular, it provides optimal services to customers through its internally developed SyncCMS and SyncBoot solutions.
+Core Competitiveness Points: Efficient collaboration capabilities based on advanced technology, experience in building optimal IT systems tailored to the business environment requirements of various industries, performing ITO projects as a strategic business partner for large and mid-sized enterprises, a flexible system building platform based on microservices (SyncBoot), a systematic content management and scalable web service development platform (SyncCMS), and capabilities ranging from mobile app development to system integration and providing operational environments.
 
-## 구축 사례
+## Deployment Cases
 
-엠파시는 다양한 고객사를 대상으로 Sync Series 제품을 활용한 성공적인 구축 사례를 보유하고 있습니다. 주요 사례는 다음과 같습니다.
+Empasy holds successful deployment cases utilizing Sync Series products for various clients. Key cases are as follows:
 
-1. 홈플러스 MIS 시스템 재구축 (SyncBoot)
-1. SK매직 매직플러스 BO 개편 프로젝트 (SyncBoot)
-1. 삼성DS 브랜드 데스크 사이트 구축 (SyncCMS)
-1. KT ESG 포탈 사이트 구축 (SyncCMS)
-1. LX하우시스 해외 글로벌 웹사이트 구축 및 유지보수 (SyncCMS)
-1. SK매직 e-카달로그 시스템 구축(SyncCMS)
-1. 천재교육 T셀파 리뉴얼 구축 (SyncCMS)
-1. 비상교육 AIDT (SyncEta)
-1. LG전자 포털 (SyncEta)
-1. 현대자동차 로그 수집 (SyncEta)
-1. 펜타시큐리티 (SyncApim)
+1. Homeplus MIS System Rebuild (SyncBoot)
+1. SK Magic MagicPlus BO Revamp Project (SyncBoot)
+1. Samsung DS Brand Desk Site Construction (SyncCMS)
+1. KT ESG Portal Site Construction (SyncCMS)
+1. LX Hausys Overseas Global Website Construction and Maintenance (SyncCMS)
+1. SK Magic e-Catalog System Construction (SyncCMS)
+1. Chunjae Education T-Selpa Renewal Construction (SyncCMS)
+1. Visang Education AIDT (SyncEta)
+1. LG Electronics Portal (SyncEta)
+1. Hyundai Motor Company Log Collection (SyncEta)
+1. Penta Security (SyncApim)
 
-## 결론
+## Conclusion
 
-엠파시의 Sync Series 제품군은 빠르게 변화하는 비즈니스 환경에서 기업이 민첩하게 대응하고 경쟁력을 확보할 수 있도록 지원하는 데 초점을 맞추고 있습니다. 각 제품은 프론트엔드 개발, 백엔드 개발, 콘텐츠 관리, 테스트 자동화, API 관리 등 소프트웨어 라이프사이클의 핵심 영역에서 속도, 효율성, 유연성을 제공하는 기술적 특징과 장점을 가지고 있습니다. "변화에 최적화된 솔루션"이라는 엠파시의 철학은 Sync Series 제품군 전반에 걸쳐 구현되어 있으며, 검증된 기술력과 풍부한 구축 경험을 바탕으로 고객의 비즈니스 성공에 기여하고 있습니다. Sync Series는 단순한 기능 목록 나열을 넘어, 기업의 변화 관리라는 어려운 숙제를 해결하기 위한 엠파시의 고민과 그 해답을 담고 있는 솔루션입니다.
+Empasy's Sync Series product line focuses on supporting enterprises to respond agilely and secure competitiveness in rapidly changing business environments. Each product possesses technical features and advantages that provide speed, efficiency, and flexibility in core areas of the software lifecycle, such as frontend development, backend development, content management, test automation, and API management. Empasy's philosophy of "Solutions Optimized for Change" is implemented across the entire Sync Series product line, contributing to the business success of customers based on proven technology and rich deployment experience. Beyond a simple list of features, the Sync Series is a solution that contains Empasy's deep thoughts and answers to solving the difficult task of corporate change management.

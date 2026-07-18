@@ -1,16 +1,16 @@
 ---
-title: 프로젝트
-description: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+title: Project
+description: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, 테스팅 생성형 AI, Playwright, Selenium, 실시간 품질 피드백, 무중단 테스트, AI 기반 테스트 자동화, 지속적 테스트, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, 자기 치유 테스트, Self-healing,  AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
+      content: Test Automation, Testing Generative AI, Playwright, Selenium, Real-time Quality Feedback, Zero-downtime Testing, AI-based Test Automation, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, Self-healing Test, Self-healing, AI Test Automation, Codeless Automation, QA Automation, Software Testing, Test Scenario Creation, Codeless Test, Natural Language Test, Test Automation Tool, Test Automation Platform, Test Efficiency, Playwright, Selenium, QAOps, TestOps, Shift-Left Testing, Shift-Right Testing
   - - meta
     - property: og:title
-      content: AI 테스트 자동화 | SyncETA
+      content: AI Test Automation | SyncETA
   - - meta
     - property: og:description
-      content: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+      content: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,115 +20,115 @@ head:
 sort: 400
 ---
 
-# 프로젝트
+# Project
 
-SyncETA를 통해 여러 **_'단위 테스트'_** 와 **_'통합 테스트'_** 를 관리하게 됩니다.
+You will manage various **_'unit tests'_** and **_'integration tests'_** through SyncETA.
 
-**_'프로젝트'_** 는 여러 테스트를 관리하는 가장 큰 분류 단위입니다.  
-유저들은 프로젝트에 **_'멤버'_** 로 등록되어 syncETA 솔루션을 사용하게 됩니다.  
-프로젝트에 멤버를 초대하고, 멤버별로 작업 권한을 부여하는 방법을 설명하겠습니다.
+A **_'Project'_** is the largest classification unit for managing multiple tests.  
+Users are registered as **_'members'_** in a project and use the SyncETA solution.  
+We will explain how to invite members to a project and grant operation permissions to each member.
 
-## 프로젝트 생성
+## Create a Project
 
 ::: info
-아래 3가지 경우에서 프로젝트를 생성 하는 방법
+How to create a project in the following 3 cases:
 
-1. 소속된 프로젝트가 없는 경우
-2. 소속된 프로젝트가 존재하는 경우
-3. 다른 프로젝트에서 작업중인 경우
+1. When not belonging to any project
+2. When belonging to an existing project
+3. When working in another project
    :::
 
-#### 1. 소속된 프로젝트가 없는 경우 프로젝트를 생성하는 방법.
+#### 1. How to create a project when not belonging to any project.
 
 ::: info
-소속된 프로젝트가 없는 경우 화면 중앙의 **_'새로운 프로젝트'_** 버튼을 클릭합니다.
+If you do not belong to a project, click the **_'New Project'_** button in the center of the screen.
 :::
-![프로젝트 없음](./image/project/project_none.png)
+![No Project](./image/project/project_none.png)
 
-#### 2. 소속된 프로젝트가 존재하하는 경우 프로젝트를 추가하는 방법.
+#### 2. How to add a project when belonging to an existing project.
 
 ::: info
-소속된 프로젝트가 있는 경우 프로젝트를 추가하시려면 프로젝트 목록 좌측 상단의 **_'새로운 프로젝트'_** 버튼을 클릭합니다.
+If you belong to a project and want to add another, click the **_'New Project'_** button at the top left of the project list.
 :::
-![프로젝트 목록에서 생성하기](./image/project/project_list.png)
+![Create from Project List](./image/project/project_list.png)
 
-#### 3. 다른 프로젝트에서 작업중에 프로젝트를 추가하는 방법.
+#### 3. How to add a project while working in another project.
 
 ::: info
-화면 좌측 상단 프로젝트 툴바의 **_'새로운 프로젝트'_** 버튼을 클릭합니다.
+Click the **_'New Project'_** button on the project toolbar at the top left of the screen.
 :::
-![프로젝트 대시보드에서 생성하기](./image/project/create_project_in_dashboard.png)
+![Create from Project Dashboard](./image/project/create_project_in_dashboard.png)
 
-#### 4. 프로젝트 생성
+#### 4. Project Creation
 
 ::: info
-위 3가지 방법으로 프로젝트 생성 화면으로 이동할 수 있습니다.  
-프로젝트 프로필 이미지, 프로젝트명, 프로젝트 설명을 입력하여 프로젝트를 생성합니다.
+You can move to the project creation screen using the 3 methods above.  
+Create a project by entering the project profile image, project name, and project description.
 :::
-![프로젝트 생성 폼](./image/project/create_project.png)
+![Project Creation Form](./image/project/create_project.png)
 
-## 프로젝트 목록
+## Project List
 
-#### 1. 프로젝트 목록으로 이동
+#### 1. Move to Project List
 
 ::: info
-우측 상단의 **_'프로젝트 닫기'_** 버튼을 클릭하여 현재 속해있는 프로젝트 목록을 확인할 수 있습니다.
+Click the **_'Close Project'_** button at the top right to check the list of projects you currently belong to.
 :::
-![프로젝트 목록 이동](./image/project/goto_project_list.png)
+![Move to Project List](./image/project/goto_project_list.png)
 
-#### 2. 프로젝트 목록 조회
+#### 2. View Project List
 
 ::: info
-내가 속한 프로젝트 목록을 확인할 수 있습니다.
+You can check the list of projects you belong to.
 :::
-![프로젝트 목록](./image/project/project_list_org.png)
+![Project List](./image/project/project_list_org.png)
 
-## 역할 / 권한 설정
-
-::: info
-프로젝트별로 역할(role)을 생성하고 권한을 부여할 수 있습니다.
-:::
-
-#### 1. 역할 생성
+## Role / Permission Settings
 
 ::: info
-역할 생성 화면으로 이동
-:::
-![역할 생성으로 이동](./image/project/new_role.png)
-
-#### 2. 권한 설정
-
-::: info
-역할에 부여할 권한을 설정합니다.
-:::
-![역할 생성](./image/project/role_setting.png)
-
-## 멤버 관리
-
-::: info
-프로젝트에 멤버를 초대하고 작업 권한을 부여합니다.
+You can create roles and grant permissions for each project.
 :::
 
-#### 1. 멤버 초대
+#### 1. Create Role
 
 ::: info
-멤버 초대 화면으로 이동
+Move to the role creation screen
 :::
-![멤버 초대 화면으로 이동](./image/project/new_member.png)
+![Move to Create Role](./image/project/new_role.png)
 
-#### 2. 멤버 초대
+#### 2. Permission Settings
 
 ::: info
-프로젝트에 초대할 멤버를 선택합니다.
+Set the permissions to be granted to the role.
 :::
-![멤버 초대](./image/project/vite_member.png)
+![Role Settings](./image/project/role_setting.png)
 
-#### 3. 권한 부여
+## Member Management
 
 ::: info
-초대한 멤버에게 권한을 부여합니다.
+Invite members to a project and grant them working permissions.
+:::
 
-- 해당 권한은 프로젝트 내에서만 유효합니다.  
-  ex) A 프로젝트에서 관리자 권한인 유저가 B 프로젝트에서 테스터(예시)권한일 수 있음.
+#### 1. Invite Members
+
+::: info
+Move to the member invitation screen
+:::
+![Move to Invite Member](./image/project/new_member.png)
+
+#### 2. Invite Members
+
+::: info
+Select members to invite to the project.
+:::
+![Invite Member](./image/project/vite_member.png)
+
+#### 3. Grant Permissions
+
+::: info
+Grant permissions to invited members.
+
+- This permission is valid only within the project.  
+  ex) A user with admin permissions in Project A may have tester (example) permissions in Project B.
   :::
-  ![멤버 초대](./image/project/set_role_to_member.png)
+  ![Set Role to Member](./image/project/set_role_to_member.png)

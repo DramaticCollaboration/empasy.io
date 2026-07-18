@@ -1,16 +1,16 @@
 ---
-title: 용어 설명
-description: AI 테스트 자동화 방법과 최신 도구를 비교해보세요. 머신러닝 기반 자동화 테스트로 QA 효율성을 높이는 방법을 알아봅니다.
+title: Glossary
+description: Compare AI test automation methods and the latest tools. Learn how to increase QA efficiency with machine learning-based automated testing.
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, 테스팅 생성형 AI, Playwright, Selenium, 실시간 품질 피드백, 무중단 테스트, AI 기반 테스트 자동화, 지속적 테스트, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, 자기 치유 테스트, Self-healing,  AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
+      content: Test Automation, Testing Generative AI, Playwright, Selenium, Real-time Quality Feedback, Zero-downtime Testing, AI-based Test Automation, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, Self-healing Test, Self-healing, AI Test Automation, Codeless Automation, QA Automation, Software Testing, Test Scenario Creation, Codeless Test, Natural Language Test, Test Automation Tool, Test Automation Platform, Test Efficiency, Playwright, Selenium, QAOps, TestOps, Shift-Left Testing, Shift-Right Testing
   - - meta
     - property: og:title
-      content: AI 테스트 자동화 | SyncETA
+      content: AI Test Automation | SyncETA
   - - meta
     - property: og:description
-      content: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+      content: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,26 +20,26 @@ head:
 sort: 1000
 ---
 
-SyncETA에 대한 용어 사전은 아래와 같습니다.
+The glossary for SyncETA is as follows.
 
-- **Collection (컬렉션)**: 여러 시나리오를 선택하여 순차적으로 실행하는 기능으로, 다양한 시나리오를 사용자의 필요에 맞게 유연하게 조합하여 일관된 워크플로우를 보장합니다. 하나의 시나리오를 여러 브라우저로 실행시키려면 컬렉션으로 실행할 수 있습니다.
-- **CI/CD (지속적 통합/지속적 배포)**: 개발 및 배포 파이프라인에 테스트 자동화를 자연스럽게 통합하여 전체 소프트웨어 개발 주기의 효율성과 품질을 향상시킬 수 있도록 지원합니다. Jenkins, Git, Azure, DevOps 등 다양한 외부 도구/시스템과 원활하게 연동됩니다. CI/CD 연동을 통해 지속적이고 안정적인 품질 관리를 보장하며, 개발 프로세스 최적화에 기여합니다.
-- **Data Set (데이터셋)**: 표 형식으로 데이터를 입력하고 관리하는 기능으로, 변수 추가, 수정, 삭제를 지원합니다. 시나리오에서 설정한 변수 값을 호출하여 직접 작성하거나, AI를 활용하여 목업 데이터를 자동으로 생성하고 다양한 값으로 테스트를 진행할 수 있습니다.
-- **LLM (대규모 언어 모델)**: 레코딩된 사용자 동작 시나리오를 자연어 기반 테스트케이스로 변환하는 데 활용되는 기술입니다. SyncETA는 7B 또는 Mistral과 같은 오픈소스 LLM을 사용하며, QA 피드백을 반영하여 LLM의 테스트케이스 생성 품질을 지속적으로 향상시킵니다.
-- **Playwright MCP**: SyncETA의 자동 테스트 실행 모듈에서 사용되는 기술로, QA가 승인한 테스트케이스를 기반으로 자동 실행 스크립트를 생성하며, 멀티 브라우저 자동화 환경에서 병렬 테스트 실행을 지원합니다. Chrome, Firefox, Edge 등 다양한 브라우저 호환성을 제공하며, Safari 브라우저 추가도 요청되었습니다.
-- **QA (품질 보증)**: 소프트웨어 개발 과정에서 품질을 보증하고 효율성을 극대화하는 업무를 수행합니다. SyncETA는 QA 엔지니어를 포함한 모든 사용자가 쉽게 테스트 자동화를 구축할 수 있도록 돕고, 생성된 엑셀 테스트케이스를 직접 리뷰하고 수정할 수 있는 기능을 제공합니다. QA의 피드백은 LLM 학습에 반영되어 테스트케이스 생성 품질 향상에 기여합니다.
-- **QA Feedback Loop (품질 개선 루프)**: QA 엔지니어가 생성된 엑셀 테스트케이스를 리뷰하고 수정하면, 이 수정된 데이터가 SyncETA 시스템에 업로드되어 LLM의 학습 데이터로 활용됩니다. 이를 통해 테스트케이스 생성 품질이 지속적으로 향상되고, 시간이 지남에 따라 자동 생성 테스트케이스의 신뢰성과 테스트 커버리지가 증가합니다.
-- **Record (레코드)**: 사용자의 이벤트 및 DOM 정보를 기록하는 기본 단위입니다. 클릭, 입력, 스크롤, 페이지 전환 등 웹 브라우저 내 사용자의 실제 동작을 URL, XPath, 클래스, ID, 탭 정보 등과 함께 실시간으로 캡처하여 기록합니다.
-- **회귀 테스트 자동화 (Regression Test Automation)**: 개발 주기 단축으로 인한 반복적인 테스트 부담을 줄이고, 소프트웨어 품질을 지속적으로 관리하기 위한 자동화 시스템 및 방법입니다. SyncETA는 이를 통해 개발 주기를 단축하고 신속한 피드백으로 시장 출시 시간을 앞당기는 효과를 제공합니다.
-- **Scenario (시나리오)**: 레코드 정보를 체계적으로 통합하여 테스트 시나리오를 구현하는 핵심 구성 요소입니다. 사용자 정의 이벤트들을 지정된 순서로 실행하며, 자동 및 AI 기반 검증을 통해 정확성, 안정성, 실시간 상태 정보를 통한 실행 결과 추적이 가능합니다.
-- **Selenium (셀레늄)**: SyncETA Recorder (사용자 행동 녹화 모듈)에서 사용되는 기술로, 사용자의 웹 브라우저 동작을 실시간으로 캡처하여 JSON/YAML 기반 포맷의 테스트 시나리오로 자동 생성 및 저장합니다. 웹 자동화 및 테스팅을 위한 강력하고 사용하기 쉬운 프레임워크입니다.
-- **Story (스토리)**: Flow Chart 인터페이스를 통해 시나리오를 자유롭게 연결하고, 검증 결과를 바탕으로 다음 시나리오를 동적으로 실행하는 SyncETA의 중요 기능 중 하나입니다. 시각적 워크플로우와 자동 검증으로 안정성과 효율성을 보장합니다.
-- **SyncETA (싱크에타)**: AI 기반 자연어 테스트케이스 생성을 통한 웹 브라우저 동작 레코딩 및 자동 테스트 실행 시스템 및 방법입니다. Selenium 기반 브라우저 동작 레코딩과 AI 기반 테스트 케이스 생성을 결합한 혁신적인 테스트 자동화 솔루션으로, QA 업무의 효율성과 소프트웨어 품질을 극대화하는 것을 목표로 합니다. End to end test automation의 약어이며, Docker 기반 설치형(On-premise) 또는 클라우드 SaaS 형태로 배포될 수 있습니다.
-- **SyncETA Recorder (사용자 행동 녹화 모듈)**: Selenium 기술을 사용하여 실제 사용자의 브라우저 내 동작(클릭, 입력, 스크롤, 페이지 이동, 탭 정보 등)을 실시간으로 녹화하여 이벤트 및 DOM 정보를 기록합니다. 녹화된 동작은 JSON/YAML 기반 포맷의 테스트 시나리오로 저장됩니다.
-- **Test Executor (자동 테스트 실행 모듈)**: TestCase Generator를 통해 생성되고 QA가 검증한 엑셀 테스트케이스를 기반으로 자동 실행 스크립트를 생성하여 실제 브라우저 자동화 환경에서 테스트를 실행합니다. Playwright MCP를 활용하며, 병렬 테스트 실행 및 크로스 브라우저 호환성을 지원합니다.
-- **TestCase Generator (자연어 테스트케이스 자동 생성 모듈)**: SyncETA Recorder에서 생성된 JSON 형식의 테스트 시나리오를 입력받아, LLM이 이를 분석하여 사람이 읽기 쉬운 자연어 기반의 엑셀 테스트케이스를 자동으로 생성하는 모듈입니다. Step, Input, Expected Result 등을 포함하는 테스트케이스를 생성하며, 재사용 가능한 템플릿 형태로 제공될 수 있습니다.
-- **테스트케이스 (Test Case)**: SyncETA 시스템에서 AI (LLM)를 통해 자연어 기반(주로 Excel 형식)으로 자동 생성되는 테스트 시나리오 문서입니다. Step, Input, Expected Result 등의 필드를 포함하며, QA 엔지니어에 의해 검증 및 수정될 수 있습니다.
-- **크로스 브라우징 호환성 (Cross-browser Compatibility)**: 하나의 PC에서 여러 브라우저로 동시 테스트가 가능하도록 지원하는 기능으로, Chrome, Firefox, Edge 등 다양한 브라우저에서의 호환성을 지원합니다.
-- **코드 작성 없는 테스트 자동화 (No-code/Low-code Test Automation)**: 개발 지식이 부족한 사용자도 직관적인 GUI 및 키워드 기반 비코드 방식으로 쉽게 테스트 자동화를 구축할 수 있도록 하는 SyncETA의 강점입니다. 기존의 개발 지식 요구 문제를 해결하여 비기술 사용자(QA 팀)의 접근성을 높입니다.
-- **에러 식별 및 진단 (Error Identification & Diagnosis)**: 테스트 실행 중 에러 발생 시 사용자 친화적인 에러 메시지 제공, 스크린샷 기록, 에러 발생 당시의 녹화 화면(영상) 제공 등을 통해 에러 분석을 용이하게 하는 기능입니다.
-- **대쉬보드/관리 시스템 (Dashboard/Management System)**: 시나리오 등록 현황, 실행 현황, 에러 현황 등 시스템 모니터링이 가능한 인터페이스를 제공합니다. 실행 히스토리에서 영상 확인, 에러 레코드의 스크린샷과 녹화 화면 제공 등을 통해 에러 분석을 돕습니다.
+- **Collection**: A feature that selects multiple scenarios and executes them sequentially. It allows you to flexibly combine various scenarios to meet user needs, ensuring a consistent workflow. If you want to run a single scenario across multiple browsers, you can run it as a collection.
+- **CI/CD (Continuous Integration/Continuous Deployment)**: Supports seamlessly integrating test automation into development and deployment pipelines to improve the efficiency and quality of the entire software development life cycle. It works smoothly with various external tools/systems like Jenkins, Git, Azure, and DevOps. CI/CD integration ensures continuous and stable quality management and contributes to optimizing the development process.
+- **Data Set**: A feature to input and manage data in a tabular format, supporting the addition, modification, and deletion of variables. You can write directly by calling variable values set in a scenario, or automatically generate mockup data using AI and conduct tests with various values.
+- **LLM (Large Language Model)**: A technology utilized to convert recorded user action scenarios into natural language-based test cases. SyncETA uses open-source LLMs like 7B or Mistral and continuously improves the quality of test case generation by the LLM by incorporating QA feedback.
+- **Playwright MCP**: A technology used in SyncETA's automated test execution module that generates auto-execution scripts based on test cases approved by QA and supports parallel test execution in a multi-browser automation environment. It provides compatibility with various browsers like Chrome, Firefox, and Edge, and the addition of the Safari browser has also been requested.
+- **QA (Quality Assurance)**: Performs tasks to guarantee quality and maximize efficiency in the software development process. SyncETA helps all users, including QA engineers, easily build test automation and provides features to directly review and edit generated Excel test cases. QA's feedback is reflected in LLM learning, contributing to the improvement of test case generation quality.
+- **QA Feedback Loop**: When a QA engineer reviews and edits generated Excel test cases, this modified data is uploaded to the SyncETA system and utilized as training data for the LLM. Through this, the quality of test case generation is continuously improved, and the reliability and test coverage of auto-generated test cases increase over time.
+- **Record**: The basic unit for recording user events and DOM information. It captures and records actual user actions within the web browser, such as clicking, typing, scrolling, and page transitions, in real-time along with information like URL, XPath, Class, ID, and Tab information.
+- **Regression Test Automation**: An automated system and method to reduce the burden of repetitive testing due to shortened development cycles and to continuously manage software quality. Through this, SyncETA provides the effect of shortening the development cycle and accelerating the time-to-market with fast feedback.
+- **Scenario**: A core component that implements test scenarios by systematically integrating record information. It executes user-defined events in a specified order and enables tracking of execution results through accuracy, stability, and real-time status information via automatic and AI-based verification.
+- **Selenium**: A technology used in the SyncETA Recorder (User Action Recording Module) that captures users' web browser actions in real-time and automatically generates and saves them as test scenarios in a JSON/YAML-based format. It is a powerful and easy-to-use framework for web automation and testing.
+- **Story**: One of SyncETA's important features that allows you to freely connect scenarios through a Flow Chart interface and dynamically execute the next scenario based on verification results. It ensures stability and efficiency with a visual workflow and automatic verification.
+- **SyncETA**: A web browser action recording and automated test execution system and method through AI-based natural language test case generation. It is an innovative test automation solution that combines Selenium-based browser action recording and AI-based test case generation, aiming to maximize QA work efficiency and software quality. It is an abbreviation for End to end test automation and can be deployed as a Docker-based on-premise installation or a Cloud SaaS format.
+- **SyncETA Recorder**: Uses Selenium technology to record real-time actions (clicking, typing, scrolling, page movement, tab information, etc.) of an actual user in the browser, logging events and DOM information. The recorded actions are saved as a test scenario in a JSON/YAML-based format.
+- **Test Executor**: Generates auto-execution scripts based on Excel test cases generated through the TestCase Generator and verified by QA, and executes tests in an actual browser automation environment. It utilizes Playwright MCP and supports parallel test execution and cross-browser compatibility.
+- **TestCase Generator (Natural Language Test Case Auto-Generation Module)**: A module that receives JSON-format test scenarios generated in the SyncETA Recorder, which the LLM analyzes to automatically generate human-readable, natural language-based Excel test cases. It generates test cases including Step, Input, Expected Result, etc., and can be provided in the form of reusable templates.
+- **Test Case**: A test scenario document automatically generated based on natural language (mainly in Excel format) through AI (LLM) in the SyncETA system. It includes fields such as Step, Input, Expected Result, and can be verified and modified by a QA engineer.
+- **Cross-browser Compatibility**: A feature that supports simultaneous testing on multiple browsers from a single PC, supporting compatibility with various browsers like Chrome, Firefox, and Edge.
+- **No-code/Low-code Test Automation**: SyncETA's strength that allows even users lacking development knowledge to easily build test automation using an intuitive GUI and keyword-based non-code methods. It increases accessibility for non-technical users (QA teams) by solving the problem of requiring existing development knowledge.
+- **Error Identification & Diagnosis**: A feature that facilitates error analysis by providing user-friendly error messages, recording screenshots, and providing a recording screen (video) at the time of the error when an error occurs during test execution.
+- **Dashboard/Management System**: Provides an interface for system monitoring such as scenario registration status, execution status, and error status. It helps with error analysis by allowing video checks in the execution history and providing screenshots and recording screens of error records.

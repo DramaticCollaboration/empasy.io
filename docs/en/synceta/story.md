@@ -1,16 +1,16 @@
 ---
-title: 스토리
-description: AI 테스트 자동화 방법과 최신 도구를 비교해보세요. 머신러닝 기반 자동화 테스트로 QA 효율성을 높이는 방법을 알아봅니다.
+title: Story
+description: Compare AI test automation methods and the latest tools. Learn how to increase QA efficiency with machine learning-based automated testing.
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, 테스팅 생성형 AI, Playwright, Selenium, 실시간 품질 피드백, 무중단 테스트, AI 기반 테스트 자동화, 지속적 테스트, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, 자기 치유 테스트, Self-healing,  AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
+      content: Test Automation, Testing Generative AI, Playwright, Selenium, Real-time Quality Feedback, Zero-downtime Testing, AI-based Test Automation, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, Self-healing Test, Self-healing, AI Test Automation, Codeless Automation, QA Automation, Software Testing, Test Scenario Creation, Codeless Test, Natural Language Test, Test Automation Tool, Test Automation Platform, Test Efficiency, Playwright, Selenium, QAOps, TestOps, Shift-Left Testing, Shift-Right Testing
   - - meta
     - property: og:title
-      content: AI 테스트 자동화 | SyncETA
+      content: AI Test Automation | SyncETA
   - - meta
     - property: og:description
-      content: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+      content: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,42 +20,42 @@ head:
 sort: 600
 ---
 
-# 스토리
+# Story
 
-## 스토리의 기능
+## Story Features
 
-#### 여러 시나리오를 연결하여 하나의 브라우저로 통합 실행
+#### Connect multiple scenarios and run them integrally in a single browser
 
-## 스토리 생성
+## Create Story
 
-#### 1. 스토리 메뉴 이동
+#### 1. Go to Story Menu
 
 ![image](./image/story/newstory.png)
 
-#### 2. 우측 시나리오 목록에서 스토리로 생성할 시나리오를 선택하여 드래그합니다.
+#### 2. Select and drag a scenario to be created as a story from the scenario list on the right.
 
 ![image](./image/story/newstory2.png)
 
-#### 3. 탭 별칭을 생성합니다.
+#### 3. Create a tab alias.
 
 ::: tip
 
-- 각각의 탭들을 고유하게 구별합니다.
+- Uniquely identifies each tab.
   :::
   ![image](./image/story/5.png)
 
-#### 4. 탭에 별칭을 적용합니다.
+#### 4. Apply the alias to the tab.
 
 ::: tip
 
-- 동일한 별칭을 가진 탭별로 레코드가 이어서 실행됩니다.
+- Records are executed sequentially for each tab with the same alias.
   :::
   ![image](./image/story/6.png)
 
-#### 5. 이어서 실행할 시나리오를 연결해줍니다.
+#### 5. Connect scenarios to be executed subsequently.
 
 ![image](./image/story/3.png)
 
-#### 6. 선택된 시나리오들의 시작, 끝 레코드를 선택합니다.
+#### 6. Select the start and end records of the selected scenarios.
 
 ![image](./image/story/4.png)

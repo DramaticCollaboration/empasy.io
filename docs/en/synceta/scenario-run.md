@@ -1,16 +1,16 @@
 ---
-title: 시나리오 / 실행
-description: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+title: Scenario / Run
+description: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, 테스팅 생성형 AI, Playwright, Selenium, 실시간 품질 피드백, 무중단 테스트, AI 기반 테스트 자동화, 지속적 테스트, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, 자기 치유 테스트, Self-healing,  AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
+      content: Test Automation, Testing Generative AI, Playwright, Selenium, Real-time Quality Feedback, Zero-downtime Testing, AI-based Test Automation, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, Self-healing Test, Self-healing, AI Test Automation, Codeless Automation, QA Automation, Software Testing, Test Scenario Creation, Codeless Test, Natural Language Test, Test Automation Tool, Test Automation Platform, Test Efficiency, Playwright, Selenium, QAOps, TestOps, Shift-Left Testing, Shift-Right Testing
   - - meta
     - property: og:title
-      content: AI 테스트 자동화 | SyncETA
+      content: AI Test Automation | SyncETA
   - - meta
     - property: og:description
-      content: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+      content: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,82 +20,82 @@ head:
 sort: 550
 ---
 
-# 실행 방법
+# How to Run
 
-#### SyncETA를 통해 <br> E2E 테스트를 자동화 하는 여러가지 방법을 소개합니다.
+#### Introducing various methods to automate E2E tests through SyncETA.
 
-##### 1. 시나리오 직접 실행
+##### 1. Direct Scenario Execution
 
-##### 2. 스케줄러를 통한 자동 실행
-
-::: info
-
-- 직접 실행은 SyncETA가 설치된 Pc에서 직접 브라우저를 띄워 시나리오를 실행합니다.
-- 스케줄러는 설정된 시간에 맞춰 서버에서 시나리오를 실행하고 그 결과를 영상과 함께 제공합니다.
-  :::
-
-##### 3. **_'스토리'_** 기능을 통해 여러 시나리오를 조합하여 통합 테스트 진행
-
-##### 4. **_'컬랙션'_** 기능을 통해 여러 시나리오를 직/병렬로 실행
-
-##### 5. **_'데이타셋'_** 기능을 통해 입력값을 설정하여 시나리오를 실행
+##### 2. Automatic Execution via Scheduler
 
 ::: info
 
-- **_'스토리'_**, **_'컬랙션'_**, **_'데이타셋'_** 기능은 각 메뉴를 참고해주세요.
+- Direct execution launches a browser directly on the PC where SyncETA is installed to execute the scenario.
+- The scheduler executes the scenario on the server at the set time and provides the results along with a video.
   :::
 
-## 직접 실행
+##### 3. Integrated testing by combining multiple scenarios through the **_'Story'_** feature
+
+##### 4. Execute multiple scenarios in series/parallel through the **_'Collection'_** feature
+
+##### 5. Execute scenarios by setting input values through the **_'Dataset'_** feature
+
+::: info
+
+- For **_'Story'_**, **_'Collection'_**, and **_'Dataset'_** features, please refer to their respective menus.
+  :::
+
+## Direct Execution
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/ZTwlHnBf3lY" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
 
 ::: info
 
-- 시나리오 실행 전 여러가지 설정이 가능합니다.
+- Various settings are available before executing a scenario.
   :::
-  ![프로젝트 생성하기](./image/scenario-run/runsetting.png)
+  ![Scenario Run Setting](./image/scenario-run/runsetting.png)
 
-##### 1. 해당 기능은 **_'데이타셋'_** 부분을 참고해주세요.
+##### 1. For this feature, please refer to the **_'Dataset'_** section.
 
-##### 2. 실행 할 브라우저 - 시나리오를 실행할 브라우저를 선택합니다.
+##### 2. Browser to Execute - Select the browser in which to execute the scenario.
 
-##### 3. 브라우저 크기 - 브라우저의 크기를 설정합니다.
+##### 3. Browser Size - Set the size of the browser.
 
-##### 4. 반복 횟수 - 시나리오의 반복 횟수를 실행합니다.
+##### 4. Number of Iterations - Set the number of times to iterate the scenario.
 
-직렬: 동일한 시나리오를 총 N 번 순차적으로 실행합니다.  
-병렬: 총 N개의 브라우저로 동시에 시나리오를 실행합니다.
+Series: Executes the same scenario sequentially for a total of N times.  
+Parallel: Executes the scenario simultaneously with a total of N browsers.
 
-##### 5. 헤드리스 브라우저 여부 체크시: 실제 브라우저를 띄우지 않고 시나리오를 실행합니다.(백그라운드 실행)
+##### 5. When Headless Browser is checked: Executes the scenario without launching a real browser (Background execution).
 
-##### 6. 실행 후 브라우저 종료 여부 체크시: 시나리오 종료 후 브라우저를 닫습니다.
+##### 6. When Close Browser After Execution is checked: Closes the browser after the scenario finishes.
 
-##### 7. 실행 시 동영상 저장 여부 체크시: 브라우저 화면을 녹화합니다.
+##### 7. When Save Video During Execution is checked: Records the browser screen.
 
-##### 8. 레코드 실행 간격: 각 레코드 실행간 기본 대기 시간을 설정합니다.
+##### 8. Record Execution Interval: Sets the default wait time between executing each record.
 
-## 스케줄러 설정
+## Scheduler Settings
 
-##### 1-1. **_'스케줄러'_** 메뉴로 이동합니다.
+##### 1-1. Go to the **_'Scheduler'_** menu.
 
-![프로젝트 생성하기](./image/scenario-run/scd.png)
+![Scheduler Menu](./image/scenario-run/scd.png)
 
-##### 1-2. 스케줄러 실행 시간을 설정합니다.
+##### 1-2. Set the scheduler execution time.
 
-![프로젝트 생성하기](./image/scenario-run/2222222.png)
+![Scheduler Time](./image/scenario-run/2222222.png)
 
-##### 1-3. 시나리오를 선택합니다.
+##### 1-3. Select a scenario.
 
 ::: info
 
-- 실행 브라우저 타입, 브라우저 사이즈 등을 설정할 수 있습니다.
+- You can set the execution browser type, browser size, etc.
   :::
-  ![프로젝트 생성하기](./image/scenario-run/dfa.png)
+  ![Scheduler Option](./image/scenario-run/dfa.png)
 
-##### 1-4. 스케줄링 확인
+##### 1-4. Confirm Scheduling
 
 ::: info
 
-- 시간대별로 실행되는 시나리오를 확인할 수 있습니다.
+- You can check the scenarios executed by time slot.
   :::
-  ![프로젝트 생성하기](./image/scenario-run/333.png)
+  ![Scheduler List](./image/scenario-run/333.png)

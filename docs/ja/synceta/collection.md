@@ -1,16 +1,16 @@
 ---
-title: 컬랙션
-description: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+title: コレクション
+description: AIベースのテスト自動化でQA時間を80%削減します。コードなしのテスト作成、自然言語によるシナリオ作成、多様なプラットフォームのサポートにより、QAの新しい基準を提示します。
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, 테스팅 생성형 AI, Playwright, Selenium, 실시간 품질 피드백, 무중단 테스트, AI 기반 테스트 자동화, 지속적 테스트, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, 자기 치유 테스트, Self-healing,  AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
+      content: テスト自動化, テスティング生成型AI, Playwright, Selenium, リアルタイム品質フィードバック, 無停止テスト, AIベーステスト自動化, 継続的テスト(Continuous Testing), QAOps, TestOps, コードレス(Codeless), ローコード(Low-Code), 自己修復テスト(Self-healing), AIテスト自動化, コードレス自動化, QA自動化, ソフトウェアテスト, テストシナリオ生成, コードレステスト, 自然言語テスト, テスト自動化ツール, テスト自動化プラットフォーム, テスト効率化, Playwright, Selenium, QAOps, TestOps, シフトレフト(Shift-Left)テスト, シフトライト(Shift-Right)テスト
   - - meta
     - property: og:title
-      content: AI 테스트 자동화 | SyncETA
+      content: AIテスト自動化 | SyncETA
   - - meta
     - property: og:description
-      content: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+      content: AIベースのテスト自動化でQA時間を80%削減します。コードなしのテスト作成、自然言語によるシナリオ作成、多様なプラットフォームのサポートにより、QAの新しい基準を提示します。
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,32 +20,32 @@ head:
 sort: 600
 ---
 
-# 콜렉션
+# コレクション
 
-## 콜렉션의 기능
+## コレクションの機能
 
-#### 여러 시나리오를 직 병렬로 실행
+#### 複数のシナリオを直列・並列で実行
 
-::: tip 콜렉션 주요 기능
-**1. 크로스 브라우징 테스트**
+::: tip コレクションの主な機能
+**1. クロスブラウジングテスト**
 
-- 다양한 브라우저 환경에서 동시에 테스트를 수행하여, 웹사이트가 Chrome, Safari, Edge 등 여러 브라우저에서 일관되게 동작하는지 확인할 수 있습니다
+- 多様なブラウザ環境で同時にテストを実行することで、ウェブサイトがChrome、Safari、Edgeなどの複数のブラウザで一貫して動作するかを確認できます。
 
-**2. 순차적 시나리오 실행**
+**2. 順次的なシナリオ実行**
 
-- 여러 테스트 시나리오를 통합 관리하고, 실행 순서를 최적화하여 테스트 효율성을 극대화할 수 있습니다.
+- 複数のテストシナリオを統合管理し、実行順序を最適化することでテストの効率を最大化できます。
   :::
 
-## 콜렉션 생성
+## コレクションの作成
 
-#### 콜렉션 메뉴로 이동
+#### コレクションメニューへ移動
 
 ![image](./image/collection/newcollection.png)
 
-#### 시나리오 선택
+#### シナリオの選択
 
 ![image](./image/collection/collection2.png)
 
-## 콜렉션 실행
+## コレクションの実行
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/dsb0XpGy7A0" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>

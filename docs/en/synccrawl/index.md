@@ -1,16 +1,16 @@
 ---
-title: 자연어 지능형 웹 크롤링 및 RAG 지식 구축 플랫폼 | SyncCrawl
-description: 자연어 명령으로 웹 데이터를 수집하고 RAG 지식 기반을 구축합니다. 웹 구조 변경에 자동 대응하여 운영 효율성을 극대화하며, LLM 환각 없는 정확하고 신뢰도 높은 답변을 제공하는 지능형 통합 크롤링 솔루션입니다.
+title: Natural Language Intelligent Web Crawling & RAG Knowledge Building Platform | SyncCrawl
+description: SyncCrawl collects web data and builds RAG knowledge bases using natural language commands. It is an intelligent integrated crawling solution that maximizes operational efficiency by automatically adapting to web structure changes and provides accurate, highly reliable answers without LLM hallucination.
 head:
   - - meta
     - name: keywords
-      content: 웹 크롤링 솔루션,지능형 크롤링,크롤링 자동화,통합 크롤링 시스템,웹 데이터 수집,B2B 지식 솔루션,리서치 자동화,RAG (검색 증강 생성),RAG 지식 기반 구축,LLM 환각 방지,시맨틱 검색,맥락 기반 질의응답,AI 에이전트,벡터 저장소 연동,임베딩 생성,한국어 최적화,자연어 명령 크롤링,운영 효율성 극대화,추가 개발 노력 최소화,자동 적응 시스템,비개발자 크롤링,적응형 크롤링,자동화된 선택자 재학습,동적 웹 크롤링,LangChain4j,Playwright MCP,Vector DB,크로스 플랫폼 UI,다중 브라우저 지원
+      content: Web Crawling Solution, Intelligent Crawling, Crawling Automation, Integrated Crawling System, Web Data Collection, B2B Knowledge Solution, Research Automation, RAG (Retrieval-Augmented Generation), RAG Knowledge Base Building, LLM Hallucination Prevention, Semantic Search, Context-based Q&A, AI Agent, Vector Storage Integration, Embedding Generation, Korean Optimization, Natural Language Command Crawling, Maximizing Operational Efficiency, Minimizing Additional Development Effort, Auto-adaptive System, Non-developer Crawling, Adaptive Crawling, Automated Selector Re-learning, Dynamic Web Crawling, LangChain4j, Playwright MCP, Vector DB, Cross-platform UI, Multi-browser Support
   - - meta
     - property: og:title
-      content: 자연어 지능형 웹 크롤링 및 RAG 지식 구축 플랫폼 | SyncCrawl
+      content: Natural Language Intelligent Web Crawling & RAG Knowledge Building Platform | SyncCrawl
   - - meta
     - property: og:description
-      content: 자연어 명령으로 웹 데이터를 수집하고 RAG 지식 기반을 구축합니다. 웹 구조 변경에 자동 대응하여 운영 효율성을 극대화하며, LLM 환각 없는 정확하고 신뢰도 높은 답변을 제공하는 지능형 통합 크롤링 솔루션입니다.
+      content: SyncCrawl collects web data and builds RAG knowledge bases using natural language commands. It is an intelligent integrated crawling solution that maximizes operational efficiency by automatically adapting to web structure changes and provides accurate, highly reliable answers without LLM hallucination.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -22,74 +22,74 @@ dir:
   order: 2
 ---
 
-**SyncCrawl™: 자연어 지능형 크롤링 시스템**
+**SyncCrawl™: Natural Language Intelligent Crawling System**
 
-SyncCrawl™은 자연어 기반의 통합 크롤링 시스템으로, 지능적인 웹 콘텐츠 수집과 RAG(검색 증강 생성) 기반 지식 구축을 위한 차세대 솔루션입니다.
+SyncCrawl™ is an integrated crawling system based on natural language, a next-generation solution for intelligent web content collection and Retrieval-Augmented Generation (RAG)-based knowledge building.
 
-이 플랫폼은 사용자의 복잡한 데이터 수집 및 분석 명령을 **자연어로 해석**하고, 수집된 데이터를 즉시 기업의 RAG 지식 기반으로 변환하여 **신뢰도 높은 질의응답 시스템을 구축**하도록 설계되었습니다. SyncCrawl은 단순한 크롤링 도구를 넘어, 기업의 지식 자산을 구축하고 활용하는 지능형 통합 플랫폼을 목표로 합니다.
+This platform is designed to **interpret users' complex data collection and analysis commands in natural language**, instantly convert the collected data into an enterprise's RAG knowledge base, and **build a highly reliable Q&A system**. Going beyond a simple crawling tool, SyncCrawl aims to be an intelligent integrated platform that builds and utilizes an enterprise's knowledge assets.
 
 ---
 
-## 1. SyncCrawl 핵심 기술 스택 및 구성
+## 1. SyncCrawl Core Technology Stack and Composition
 
-SyncCrawl은 Java 기반의 선도적인 AI 프레임워크와 웹 자동화 도구를 통합하여 구축되었습니다.
+SyncCrawl is built by integrating a leading Java-based AI framework and web automation tools.
 
-| 구분 | 내용 | 출처 |
+| Category | Description | Source |
 | :--- | :--- | :--- |
-| **핵심 프레임워크** | Java 기반의 Spring Boot 서버 아키텍처를 기반으로 합니다. | |
-| **AI 레이어** | **LangChain4j Agent** 기반의 자연어 처리와 RAG 엔진, Agent 시스템을 활용합니다. | |
-| **웹 자동화** | **Playwright MCP (Model Context Protocol)** 웹 자동화 도구를 통합하여 사용합니다. | |
-| **지식 기반** | RAG 기술을 통해 지식 기반을 구축하고 벡터 데이터베이스(Vector DB)를 연동합니다. | |
-| **프론트엔드** | **Quasar Framework**와 Electron을 사용하여 크로스 플랫폼 UI를 지원합니다. | |
+| **Core Framework** | Based on Java's Spring Boot server architecture. | |
+| **AI Layer** | Utilizes natural language processing, RAG engine, and Agent system based on **LangChain4j Agent**. | |
+| **Web Automation** | Integrates and uses the **Playwright MCP (Model Context Protocol)** web automation tool. | |
+| **Knowledge Base** | Builds a knowledge base through RAG technology and integrates a Vector DB. | |
+| **Frontend** | Supports cross-platform UI using **Quasar Framework** and Electron. | |
 
 ---
 
-## 2. 지능형 파이프라인 아키텍처
+## 2. Intelligent Pipeline Architecture
 
-SyncCrawl은 크롤링부터 데이터 처리, RAG 구축까지의 전 과정을 자동화하는 지능형 파이프라인을 운영합니다.
+SyncCrawl operates an intelligent pipeline that automates the entire process from crawling to data processing and RAG building.
 
-| 단계 | 상세 설명 | 기술 요소 | 출처 |
+| Stage | Detailed Description | Technical Elements | Source |
 | :--- | :--- | :--- | :--- |
-| **1. 자연어 명령 해석** | 사용자의 자연어 요청(예: 크롤링, 요약)을 **LangChain4j Agent**가 분석하여 의도를 파악하고 Tool 호출을 자동화합니다. | LangChain4j Agent, Tool | |
-| **2. 지능형 크롤링 실행** | Agent가 파악된 의도에 따라 웹 자동화 Tool인 **Playwright MCP**를 호출합니다. Playwright는 Chromium, Firefox, WebKit 등 다중 브라우저를 지원하며, LLM이 웹 페이지 요소에 접근하고 상호 작용하도록 돕습니다. | Playwright MCP, 동적 웹 상호작용 | |
-| **3. 데이터 수집** | 웹 페이지와 상호 작용하여 HTML 콘텐츠를 수집합니다. | Playwright | |
-| **4. 데이터 처리 및 저장** | 수집된 HTML 콘텐츠를 RAG 구성 요소를 활용하여 벡터 데이터베이스에 저장합니다. | DocumentSplitter, EmbeddingModel, EmbeddingStore | |
-| **5. RAG 기반 질의응답** | 사용자의 질문을 임베딩하고 **Retriever**가 가장 유사한 문서 Chunk를 검색합니다. 검색된 관련 문서는 LLM (예: GPT-4)의 프롬프트에 '컨텍스트'로 주입되어 **정확하고 신뢰성 높은 답변**이 생성됩니다. | ConversationalRetrievalAgent, LLM | |
+| **1. Natural Language Command Interpretation** | The **LangChain4j Agent** analyzes the user's natural language request (e.g., crawling, summarizing) to understand the intent and automate Tool calls. | LangChain4j Agent, Tool | |
+| **2. Intelligent Crawling Execution** | The Agent calls the web automation Tool, **Playwright MCP**, according to the identified intent. Playwright supports multiple browsers like Chromium, Firefox, and WebKit, and helps the LLM access and interact with web page elements. | Playwright MCP, Dynamic Web Interaction | |
+| **3. Data Collection** | Interacts with the web page to collect HTML content. | Playwright | |
+| **4. Data Processing and Storage** | Stores the collected HTML content in a vector database utilizing RAG components. | DocumentSplitter, EmbeddingModel, EmbeddingStore | |
+| **5. RAG-based Q&A** | Embeds the user's question, and the **Retriever** searches for the most similar document Chunks. The retrieved relevant documents are injected as 'context' into the prompt of the LLM (e.g., GPT-4) to generate an **accurate and highly reliable answer**. | ConversationalRetrievalAgent, LLM | |
 
 ---
 
-## 3. 주요 기능 영역
+## 3. Key Feature Areas
 
-SyncCrawl은 세 가지 주요 기능 영역을 통해 통합적인 지식 구축 환경을 제공합니다.
+SyncCrawl provides an integrated knowledge-building environment through three main feature areas.
 
-### I. 지능형 크롤링 기능
-1.  **자연어 기반 명령 처리**: 사용자 요청의 의도를 파악하고 Tool 호출을 자동화합니다.
-2.  **동적 웹 상호작용**: Playwright를 이용해 다중 브라우저 지원 및 네트워크 제어를 제공합니다.
-3.  **적응형 크롤링**: 웹사이트 UI/UX 변경에 유연하게 대응하며, 복잡한 사이트(500개 이상)의 크롤링 규칙을 공통화하여 적용합니다. 이는 **자동화된 선택자 재학습 루프**를 통해 가능합니다.
+### I. Intelligent Crawling Features
+1. **Natural Language-based Command Processing**: Understands the intent of user requests and automates Tool calls.
+2. **Dynamic Web Interaction**: Provides multi-browser support and network control using Playwright.
+3. **Adaptive Crawling**: Flexibly responds to website UI/UX changes, and commonizes and applies crawling rules for complex sites (over 500). This is made possible through an **automated selector re-learning loop**.
 
-### II. RAG 기반 지식 구축 기능
-1.  **문서 분리 및 임베딩**: 수집된 콘텐츠를 DocumentSplitter로 의미 있는 Chunk로 분리하고, EmbeddingModel을 사용해 고차원 벡터로 변환합니다. **한국어 데이터를 위한 모델 지원**이 가능하여 임베딩 품질을 높일 수 있습니다.
-2.  **벡터 저장소 연동**: 임베딩된 데이터를 영속적으로 저장하며, FAISS, Qdrant, Weaviate 등 다양한 Vector DB로 확장 가능합니다.
-3.  **맥락 기반 질의응답**: LLM이 저장된 문서를 검색하여 컨텍스트 기반으로 정확한 답변을 생성합니다.
+### II. RAG-based Knowledge Building Features
+1. **Document Splitting and Embedding**: Splits collected content into meaningful Chunks with DocumentSplitter and converts them into high-dimensional vectors using EmbeddingModel. It can **support models for Korean data** to improve embedding quality.
+2. **Vector Storage Integration**: Persistently stores embedded data and is expandable to various Vector DBs such as FAISS, Qdrant, and Weaviate.
+3. **Context-based Q&A**: LLM retrieves saved documents and generates accurate answers based on the context.
 
-### III. 시스템 관리 및 운영 기능
-1.  **크롤링 설정 관리 UI**: 크롤링 대상 URL, 규칙(CSS Selector), 데이터 추출 패턴, 스케줄링 등을 시각적으로 설정할 수 있는 UI를 제공합니다.
-2.  **크로스 플랫폼 UI**: Quasar Framework와 Electron을 활용하여 하나의 코드베이스로 데스크톱, 웹, 모바일 앱 개발을 지원합니다.
-3.  **실시간 모니터링**: 서버에서 진행 중인 크롤링 작업 상태, 성공/실패 여부, 데이터 수집량 등을 표시하는 대시보드를 Spring REST API 연동을 통해 제공합니다.
-4.  **대화형 설정 및 메모리**: NLP 의도 분석을 통해 크롤링 규칙 설정 시 대화의 의도를 분석하고, 사용자별 대화 히스토리 및 상호작용 이력을 관리합니다 (Redis 기반 LangChain4j Memory 활용 가능).
+### III. System Management and Operation Features
+1. **Crawling Setting Management UI**: Provides a UI to visually set crawling target URLs, rules (CSS Selector), data extraction patterns, scheduling, etc.
+2. **Cross-platform UI**: Supports desktop, web, and mobile app development with a single codebase utilizing the Quasar Framework and Electron.
+3. **Real-time Monitoring**: Provides a dashboard showing the status of ongoing crawling tasks on the server, success/failure status, data collection amount, etc., through Spring REST API integration.
+4. **Interactive Settings and Memory**: Analyzes the intent of conversations when setting crawling rules through NLP intent analysis, and manages conversation history and interaction history per user (can utilize Redis-based LangChain4j Memory).
 
 ---
 
-## 4. SyncCrawl의 핵심 경쟁력 및 차별화된 가치
+## 4. SyncCrawl's Core Competitiveness and Differentiated Value
 
-SyncCrawl은 기존 크롤링 시스템이 가진 한계를 극복하고 엔터프라이즈 환경에서 지식 활용을 극대화하는 차별화된 가치를 제공합니다.
+SyncCrawl overcomes the limitations of existing crawling systems and provides differentiated value that maximizes knowledge utilization in an enterprise environment.
 
-| 경쟁력 요소 | SyncCrawl의 가치 | 출처 |
+| Competitiveness Factor | Value of SyncCrawl | Source |
 | :--- | :--- | :--- |
-| **자연어 인터페이스** | 복잡한 코딩 없이 자연어로 크롤링 명령이 가능하여 **비개발자도 쉽게 사용**할 수 있습니다. | |
-| **자동 적응 시스템** | 웹사이트 UI/UX 변경에 자동으로 대응하여 **유지보수 비용을 획기적으로 절감**하며 운영 효율성을 극대화합니다. 500개 이상의 다양한 웹사이트에 대응할 수 있습니다. | |
-| **정확성 및 신뢰성** | LLM의 상상(Hallucination)을 방지하고 **실제 수집된 문서 기반**의 신뢰할 수 있는 답변을 제공합니다. | |
-| **즉시 활용 가능한 지식** | 수집된 데이터가 즉시 **RAG 지식 기반으로 변환**되어 바로 질의응답에 활용됩니다. | |
-| **한국어 최적화** | 한국어 콘텐츠에 대한 높은 품질의 임베딩과 검색을 실현합니다. | |
-| **엔터프라이즈급 안정성** | Spring Boot 기반의 견고한 아키텍처와 실시간 모니터링으로 안정적인 운영을 보장합니다. | |
-| **확장성** | 다양한 Vector DB 지원과 크로스 플랫폼 UI를 통해 기업의 성장에 맞춰 유연하게 확장이 가능합니다. | |
+| **Natural Language Interface** | Allows crawling commands in natural language without complex coding, making it **easy for non-developers to use**. | |
+| **Auto-adaptive System** | Automatically responds to website UI/UX changes, **drastically reducing maintenance costs** and maximizing operational efficiency. It can handle over 500 different websites. | |
+| **Accuracy and Reliability** | Prevents LLM hallucination and provides reliable answers **based on actually collected documents**. | |
+| **Ready-to-use Knowledge** | Collected data is instantly **converted into a RAG knowledge base** and immediately used for Q&A. | |
+| **Korean Optimization** | Realizes high-quality embedding and search for Korean content. | |
+| **Enterprise-grade Stability** | Ensures stable operation with a robust architecture based on Spring Boot and real-time monitoring. | |
+| **Scalability** | Can be flexibly expanded in line with enterprise growth through support for various Vector DBs and a cross-platform UI. | |

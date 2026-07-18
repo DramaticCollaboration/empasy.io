@@ -1,16 +1,16 @@
 ---
-title: "SyncAPIM: Agility API Platform | 종합 API 관리 및 디지털 혁신 솔루션"
-description: SyncAPIM은 API 게이트웨이, 개발자 포털, 분석 도구 등 종합적인 API 관리 기능을 제공하여 안정적이고 효율적인 API 운영을 지원합니다. 비즈니스 민첩성을 위한 맞춤형 아키텍처를 통해 디지털 혁신을 선도하고, 강력한 보안, 최적의 성능, 개발 효율성 향상으로 새로운 비즈니스 기회를 창출합니다
+title: "SyncAPIM: Agility API Platform | Comprehensive API Management & Digital Transformation Solution"
+description: SyncAPIM supports stable and efficient API operation by providing comprehensive API management features such as API Gateway, Developer Portal, and Analytics Tools. It leads digital transformation through an architecture customized for business agility and creates new business opportunities with strong security, optimal performance, and improved development efficiency.
 head:
   - - meta
     - name: keywords
-      content: SyncAPIM, API 관리, API 플랫폼, API 게이트웨이, 개발자 포털, API 분석, 디지털 혁신, 비즈니스 민첩성, API 보안, API 성능 최적화, API 수명 주기 관리, 마이크로서비스 (MSA), 커스터마이징, 오픈소스, 엔터프라이즈 솔루션, SI 프로젝트, API 운영, API 개발, API 테스트, API 통합, 모니터링, RESTful AP
+      content: SyncAPIM, API Management, API Platform, API Gateway, Developer Portal, API Analytics, Digital Transformation, Business Agility, API Security, API Performance Optimization, API Lifecycle Management, Microservices (MSA), Customization, Open Source, Enterprise Solution, SI Project, API Operation, API Development, API Testing, API Integration, Monitoring, RESTful API
   - - meta
     - property: og:title
-      content: "SyncAPIM: Agility API Platform | 종합 API 관리 및 디지털 혁신 솔루션"
+      content: "SyncAPIM: Agility API Platform | Comprehensive API Management & Digital Transformation Solution"
   - - meta
     - property: og:description
-      content: SyncAPIM은 API 게이트웨이, 개발자 포털, 분석 도구 등 종합적인 API 관리 기능을 제공하여 안정적이고 효율적인 API 운영을 지원합니다. 비즈니스 민첩성을 위한 맞춤형 아키텍처를 통해 디지털 혁신을 선도하고, 강력한 보안, 최적의 성능, 개발 효율성 향상으로 새로운 비즈니스 기회를 창출합니다
+      content: SyncAPIM supports stable and efficient API operation by providing comprehensive API management features such as API Gateway, Developer Portal, and Analytics Tools. It leads digital transformation through an architecture customized for business agility and creates new business opportunities with strong security, optimal performance, and improved development efficiency.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -24,23 +24,23 @@ dir:
 
 # SyncApim
 
-API 게이트웨이, 개발자 포털, 분석 도구 등 종합적인 API 관리 기능을 제공하여 안정적인 API 운영을 지원하고 개발 효율성을 향상시킵니다. 또한, API를 통해 기존 서비스와 데이터를 통합하고 새로운 서비스를 신속하게 개발하여 시장 변화에 민첩하게 대응하고 경쟁 우위를 확보하도록 돕습니다
+It supports stable API operation and improves development efficiency by providing comprehensive API management features such as an API gateway, developer portal, and analytics tools. In addition, it helps to seamlessly integrate existing services and data through APIs and quickly develop new services to respond agilely to market changes and secure a competitive advantage.
 
-## 🔧 주요 특징
+## 🔧 Key Features
 
-1. 안정성: 고가용성 및 안정적인 운영 환경을 보장합니다.
-1. 보안성: OAuth 2.0, JWT, API 키를 통한 다층 보안 등 강력한 보안 기능으로 API 자산을 보호합니다. 데이터 암호화 및 무단 접근 방지를 통해 보안 위협을 감소시키고 안정적인 서비스를 제공합니다.
-1. 통합 관리: API 생성, 배포, 보안, 모니터링, 분석을 한 곳에서 처리할 수 있습니다. 정책 관리, API 관리 (중앙 등록 및 그룹 분류), API 테스트, 모니터링, 시스템 알림 기능을 포함합니다.
-1. 개발자 친화적: 직관적인 개발자 포털과 풍부한 문서화를 제공합니다.
-1. 확장성: 클라우드 네이티브 아키텍처를 통해 대규모 트래픽 처리가 가능하며 다양한 환경 및 요구사항에 유연하게 대응합니다. 표준 API 및 다양한 기술을 지원합니다.
-1. 고객 맞춤형 (Customization in Its DNA): 각 고객의 비즈니스 환경, 요구사항, 기술 스택이 다름을 인지하고, 표준 시스템의 한계를 극복하기 위해 설계되었습니다. 고객의 요구사항에 맞춰 시스템 확장 및 수정이 가능하며, 필요한 기능만 선택적으로 도입하여 비용 효율성을 높일 수 있습니다. 고객 특화 정책 개발 추가도 가능합니다. SI 프로젝트의 빠른 진행 및 통합을 지원하며, 고객의 비즈니스 목표에 최적화된 솔루션을 제공합니다
+1. Stability: Ensures high availability and a stable operating environment.
+1. Security: Protects API assets with strong security features such as multi-layer security through OAuth 2.0, JWT, and API keys. Decreases security threats and provides stable services through data encryption and unauthorized access prevention.
+1. Integrated Management: You can handle API creation, deployment, security, monitoring, and analytics all in one place. It includes policy management, API management (central registration and group classification), API testing, monitoring, and system notification features.
+1. Developer-Friendly: Provides an intuitive developer portal and rich documentation.
+1. Scalability: Capable of handling massive traffic through cloud-native architecture and flexibly responds to various environments and requirements. Supports standard APIs and various technologies.
+1. Customer-Customized (Customization in Its DNA): Designed recognizing that each customer's business environment, requirements, and tech stack are different, overcoming the limitations of standard systems. System expansion and modification are possible according to customer requirements, and cost efficiency can be improved by selectively introducing only necessary features. It is also possible to add customer-specific policy development. Supports fast progress and integration of SI projects and provides solutions optimized for the customer's business goals.
 
-## 🚀 주요 장점및 기대 효과
+## 🚀 Key Advantages and Expected Effects
 
-1. 비즈니스 확장: 새로운 파트너십 및 개발자 생태계 구축, API 자산 활용도 극대화.
-1. 운영 효율성 향상: API 관리 프로세스 자동화, API 개발, 배포, 운영 간소화, 개발자 만족도 증대.
-1. 비용 절감: API 수명 주기 자동화로 운영 비용 감소, 코드 생성 및 테스트 자동화로 개발 시간 단축 (전반적인 개발 효율성 포함).
-1. API 성능 최적화: API 응답 속도 향상 및 사용자 경험 개선.
-1. API 중심 생태계 구축: 내부 및 외부 개발자 협업 강화.
-1. 비즈니스 모델 확장: 새로운 API 서비스 개발 및 수익 창출, 디지털 전환 가속화, 새로운 수익 창출 기회 제공.
-1. 기업 경쟁력 강화: API 기반 혁신적인 서비스 제공 및 시장 선도, 매출 증대 실현.
+1. Business Expansion: Establishing new partnerships and developer ecosystems, maximizing the utilization of API assets.
+1. Operational Efficiency Improvement: Automating API management processes, simplifying API development, deployment, and operation, increasing developer satisfaction.
+1. Cost Reduction: Decreasing operational costs through API lifecycle automation, reducing development time (including overall development efficiency) through code generation and test automation.
+1. API Performance Optimization: Improving API response speed and user experience.
+1. Building an API-centric Ecosystem: Strengthening collaboration with internal and external developers.
+1. Business Model Expansion: Developing new API services and generating revenue, accelerating digital transformation, providing new revenue generation opportunities.
+1. Strengthening Corporate Competitiveness: Providing API-based innovative services, leading the market, and realizing revenue growth.

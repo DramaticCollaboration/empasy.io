@@ -1,16 +1,16 @@
 ---
-title: 계정
-description: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+title: Account
+description: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, 테스팅 생성형 AI, Playwright, Selenium, 실시간 품질 피드백, 무중단 테스트, AI 기반 테스트 자동화, 지속적 테스트, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, 자기 치유 테스트, Self-healing,  AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
+      content: Test Automation, Testing Generative AI, Playwright, Selenium, Real-time Quality Feedback, Zero-downtime Testing, AI-based Test Automation, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, Self-healing Test, Self-healing, AI Test Automation, Codeless Automation, QA Automation, Software Testing, Test Scenario Creation, Codeless Test, Natural Language Test, Test Automation Tool, Test Automation Platform, Test Efficiency, Playwright, Selenium, QAOps, TestOps, Shift-Left Testing, Shift-Right Testing
   - - meta
     - property: og:title
-      content: AI 테스트 자동화 | SyncETA
+      content: AI Test Automation | SyncETA
   - - meta
     - property: og:description
-      content: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+      content: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,62 +20,62 @@ head:
 sort: 7
 ---
 
-# 계정
+# Account
 
-## 회원가입
+## Sign Up
 
-#### 1. SyncETA 시작 화면 하단의 **_'계정을 생성할까요?'_** 를 클릭합니다.
+#### 1. Click **_'Create an account?'_** at the bottom of the SyncETA startup screen.
 
-![계정 생성하기 클릭](./image/account/login_main.png)
+![Click Create Account](./image/account/login_main.png)
 
-#### 2. 이메일과 비밀번호를 입력 후 **_'인증코드전송'_** 버튼을 클릭합니다.
+#### 2. Enter your email and password, then click the **_'Send Auth Code'_** button.
 
 ::: info
-입력한 이메일로 인증코드를 전송합니다.
+Sends an authentication code to the entered email.
 :::
 
-![인증코드 전송](./image/account/send_auth_code.png)
+![Send Auth Code](./image/account/send_auth_code.png)
 
-#### 3. 이메일 인증코드를 입력후 **_'가입하기'_** 버튼을 클릭합니다.
+#### 3. Enter the email authentication code and click the **_'Sign Up'_** button.
 
 ::: info
-정상정으로 회원가입이 완료되면 로그인 화면으로 이동합니다.
+If the sign-up is completed successfully, it moves to the login screen.
 :::
 
-![인증코드 입력](./image/account/success_certify.png)
+![Enter Auth Code](./image/account/success_certify.png)
 
-#### 4. 가입한 계정으로 첫 로그인 시 **_'프로필 설정'_** 화면으로 이동합니다.
+#### 4. Upon first login with the registered account, it moves to the **_'Profile Settings'_** screen.
 
 ::: info
-프로필 사진과 이름을 설정해주세요.
+Please set up your profile picture and name.
 :::
-![프로필 설정](./image/account/set_profile.png)
+![Profile Settings](./image/account/set_profile.png)
 
-## 프로필 수정
+## Edit Profile
 
-#### 1. 메인 대시보드 우측 상단의 **_'내 프로필'_** 을 클릭합니다.
+#### 1. Click **_'My Profile'_** at the top right of the main dashboard.
 
 ::: info
-사용자 설정 클릭시 계정 설정 화면으로 이동합니다.
+Clicking user settings moves you to the account settings screen.
 :::
-![프로필 수정](./image/account/update_profile.png)
+![Edit Profile](./image/account/update_profile.png)
 
-#### 2. 내 프로필을 수정할 수 있습니다.
+#### 2. You can edit your profile.
 
 ::: info
-지원 기능
+Supported Features
 
-- 프로필 수정
-- 언어
-- 테마(다크 모드)
-- 암호 변경
-- 푸쉬 알림 설정
+- Edit Profile
+- Language
+- Theme (Dark Mode)
+- Change Password
+- Push Notification Settings
   :::
-  ![프로필 수정폼](./image/account/update_profile_form.png)
+  ![Edit Profile Form](./image/account/update_profile_form.png)
 
-## 개발중인 기능
+## Features in Development
 
 ::: info
 
-- 계정 삭제
+- Delete Account
   :::

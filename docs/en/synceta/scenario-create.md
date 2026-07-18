@@ -1,16 +1,16 @@
 ---
-title: 시나리오 / 생성
-description: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+title: Scenario / Create
+description: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, 테스팅 생성형 AI, Playwright, Selenium, 실시간 품질 피드백, 무중단 테스트, AI 기반 테스트 자동화, 지속적 테스트, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, 자기 치유 테스트, Self-healing,  AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
+      content: Test Automation, Testing Generative AI, Playwright, Selenium, Real-time Quality Feedback, Zero-downtime Testing, AI-based Test Automation, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, Self-healing Test, Self-healing, AI Test Automation, Codeless Automation, QA Automation, Software Testing, Test Scenario Creation, Codeless Test, Natural Language Test, Test Automation Tool, Test Automation Platform, Test Efficiency, Playwright, Selenium, QAOps, TestOps, Shift-Left Testing, Shift-Right Testing
   - - meta
     - property: og:title
-      content: AI 테스트 자동화 | SyncETA
+      content: AI Test Automation | SyncETA
   - - meta
     - property: og:description
-      content: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+      content: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,276 +20,275 @@ head:
 sort: 500
 ---
 
-# 시나리오
+# Scenario
 
-SyncETA를 사용하여 복잡한 테스트 코드 작성 없이 실제 UI를 통해 테스트 케이스를 생성하고  
-관리할 수 있습니다.
+Using SyncETA, you can create and manage test cases through the actual UI without writing complex test code.
 
-## 시나리오란
+## What is a Scenario?
 
-#### **_'시나리오'_** 는 아래와 같은 기능 테스트 단위를 의미합니다.
+#### A **_'Scenario'_** refers to a functional test unit like the following.
 
-##### [ **_'empasy'_** 홈페이지에 접속하여 문의 전송 ]
+##### [ Access the **_'empasy'_** homepage and send an inquiry ]
 
-1. **_'empasy'_** 홈페이지 접속.
-2. **_'문의 하기'_** 클릭.
-3. 문의 내용 입력.
-4. 문의 보내기.
-5. 정상 전송 확인.
+1. Access the **_'empasy'_** homepage.
+2. Click **_'Contact Us'_**.
+3. Enter inquiry details.
+4. Send inquiry.
+5. Verify successful transmission.
 
-## 시나리오 생성
+## Create Scenario
 
-#### 1. 시나리오 메뉴 이동
+#### 1. Go to Scenario Menu
 
 ::: info
 
-1. 좌측 사이드바의 **_'시나리오'_** 메뉴 클릭
-2. 우측 상단의 **_'새로운 시나리오'_** 클릭
-3. 시나리오 녹화시 필요한 설정 모달이 노출됩니다.
+1. Click the **_'Scenario'_** menu on the left sidebar
+2. Click **_'New Scenario'_** at the top right
+3. A settings modal required for scenario recording will appear.
    :::
-   ![시나리오 생성 클릭](image/scenario-create/new_scenario.png)
+   ![Click Create Scenario](image/scenario-create/new_scenario.png)
 
-#### 2. 녹화 브라우저 설정
+#### 2. Set Recording Browser
 
 ::: info
 
-1. 시나리오를 생성할 웹페이지의 url을 입력합니다.
-2. 녹화를 진행할 브라우저를 선택합니다.
+1. Enter the URL of the webpage to create the scenario.
+2. Select the browser for recording.
 
-- 녹화시 크롬 -> 실행시 엣지 선택 가능 (크로스 브라우징 테스트)
+- Can choose Chrome for recording -> Edge for execution (Cross-browsing test)
 
-3. 녹화를 진행할 브라우저의 크기를 설정합니다.
+3. Set the size of the browser for recording.
 
-- 녹화시 1400 x 800 -> 실행시 800 x 600 가능 (반응형 테스트)
+- 1400 x 800 for recording -> 800 x 600 for execution is possible (Responsive test)
   :::
-  ![시나리오 녹화전 설정](image/scenario-create/select_option.png)
+  ![Pre-recording Settings](image/scenario-create/select_option.png)
 
-#### 3. 수집 이벤트 설정
+#### 3. Set Collection Events
 
 ::: info
 
-- 수집할 이벤트 타입을 선택한 후 모달 우측 하단의 녹화 시작 버튼을 눌러주세요.  
-  기본 설정으로 녹화를 진행하는 것을 권장합니다.
+- After selecting the event type to collect, click the start recording button at the bottom right of the modal.  
+  It is recommended to proceed with recording using the default settings.
   :::
-  ![허용 이벤트 설정](image/scenario-create/allow_event.png)
+  ![Allow Event Settings](image/scenario-create/allow_event.png)
 
-#### 4. 녹화 시작
+#### 4. Start Recording
 
 ::: info
-녹화를 시작하면 브라우저가 화면에 나타납니다.  
-해당 브라우저에서 실제 테스트를 진행해주세요.  
-EX) 네이버에 **_'주변 맛집'_** 검색
+When you start recording, the browser will appear on the screen.  
+Please proceed with the actual test in that browser.  
+EX) Search for **_'nearby restaurants'_** on Naver
 
-사진과 같이 레코드가 수집된 것을 확인할 수 있습니다.
+You can see that records have been collected as shown in the picture.
 
-1. url 이동
-2. 검색창 클릭
-3. 검색어(**_'주변 맛집'_**) 입력
-4. 검색 버튼 클릭
+1. Move to URL
+2. Click search bar
+3. Enter search term (**_'nearby restaurants'_**)
+4. Click search button
    :::
-   ![녹화 시작](image/scenario-create/start_recording.png)
+   ![Start Recording](image/scenario-create/start_recording.png)
 
-#### 4. 돔 정보 수집
+#### 4. Collect DOM Information
 
 ::: info
 
-- 모든 레코드는 이벤트가 발생한 dom의 정보를 가지고 있습니다.  
-  EX) 검색어(**_'주변 맛집'_**)를 입력한 input 요소의 속성 수집
+- All records have information about the DOM where the event occurred.  
+  EX) Collect attributes of the input element where the search term (**_'nearby restaurants'_**) was entered
   :::
-  ![녹화 시작](image/scenario-create/select_dom_info.png)
+  ![Select DOM Info](image/scenario-create/select_dom_info.png)
 
-#### 5. 녹화중 새 탭이 열릴 경우
+#### 5. When a new tab opens during recording
 
 ::: info
-브라우저에서 추가된 모든 탭에서 동일하게 시나리오 녹화를 이어갈 수 있습니다.
+You can continue scenario recording in the exact same way on any new tab added in the browser.
 :::
-![녹화 시작](image/scenario-create/new_tap.png)
+![New Tab](image/scenario-create/new_tap.png)
 
-## 대기 레코드
+## Wait Record
 
 ::: info
-레코드의 실행 간에 특정 조건을 만족할 때까지 대기 시간을 부여하는 기능입니다.
+This is a function that gives a wait time between executions of records until a specific condition is met.
 
-대기 레코드의 종류 3가지
+3 Types of Wait Records
 
-1. 시간 대기 - 설정한 시간만큼 대기합니다.
-2. 요소 노출 대기 - 화면에 특정 엘리먼트가 나타날 때까지 대기합니다.
-3. 요소 값 일치 대기 - 화면에 특정한 값이 노출될 때까지 대기합니다.
+1. Time Wait - Waits for the set time.
+2. Element Exposure Wait - Waits until a specific element appears on the screen.
+3. Element Value Match Wait - Waits until a specific value is exposed on the screen.
 
 :::
 
-#### 1. 시간 대기 조건 추가
+#### 1. Add Time Wait Condition
 
 ::: info
-레코드 실행 전 대기시간을 부여합니다.
+Grants wait time before executing a record.
 
-1. 대기가 필요한 레코드를 우클릭합니다.
-2. 대기 조건 추가를 클릭한 후 대기 시간을 설정합니다. (1000 = 1초)
+1. Right-click the record that requires waiting.
+2. Click Add Wait Condition and set the wait time. (1000 = 1 second)
    :::
-   레코드 우클릭
-   ![녹화 시작](image/scenario-create/time_wait.png)
-   대기 시간 설정
-   ![녹화 시작](image/scenario-create/time_wait2.png)
-   대기 레코드 생성
-   ![녹화 시작](image/scenario-create/time_wait3.png)
+   Right-click record
+   ![Time Wait](image/scenario-create/time_wait.png)
+   Set Wait Time
+   ![Set Time Wait](image/scenario-create/time_wait2.png)
+   Create Wait Record
+   ![Create Wait Record](image/scenario-create/time_wait3.png)
    ::: info
-   EX) url 이동 후 화면 로딩(네트워크 상황을 고려하여 약 3초)시간동안 대기 후 검색창을 클릭 하도록 시간 대기 조건을 추가
+   EX) Add a time wait condition to wait for screen loading (about 3 seconds considering network conditions) after moving to URL, then click the search bar
    :::
 
-#### 2. 요소 노출 대기 조건 추가
+#### 2. Add Element Exposure Wait Condition
 
 ::: info
-특정 요소가 화면에 노출될 떄까지 대기합니다.
+Waits until a specific element is exposed on the screen.
 
-1. 대기가 필요한 레코드를 우클릭합니다.
-2. 대기 조건 추가를 클릭한 후 요소 노출 대기를 선택합니다.
+1. Right-click the record that requires waiting.
+2. Click Add Wait Condition and select Element Exposure Wait.
    :::
-   레코드 우클릭
-   ![녹화 시작](image/scenario-create/dom_wait.png)
-   녹화중인 화면에서 요소 선택을 클릭한 후  
-   녹화가 진행중인 브라우저에서 대기할 요소를 선택합니다.
-   ![녹화 시작](image/scenario-create/dom_wait2.png)
-   요소 노출 대기 레코드 생성
-   ![녹화 시작](image/scenario-create/dom_wait3.png)
+   Right-click record
+   ![DOM Wait](image/scenario-create/dom_wait.png)
+   After clicking Select Element on the recording screen,  
+   Select the element to wait for in the browser where recording is in progress.
+   ![Select DOM](image/scenario-create/dom_wait2.png)
+   Create Element Exposure Wait Record
+   ![Create DOM Wait](image/scenario-create/dom_wait3.png)
    ::: info
-   EX) 검색창을 클릭하기 전 실제로 화면에 검색창(input)이 로딩 될 때까지 대기
+   EX) Wait until the search bar (input) is actually loaded on the screen before clicking the search bar
    :::
 
-#### 3. 요소 값 일치 대기 조건 추가
+#### 3. Add Element Value Match Wait Condition
 
 ::: info
-특정 요소에 설정한 값이 노출될 때까지 대기합니다.
+Waits until the set value is exposed on a specific element.
 :::
 
-레코드 우클릭
-![녹화 시작](image/scenario-create/value_wait.png)
-녹화중인 화면에서 요소 선택을 클릭한 후  
- 녹화가 진행중인 브라우저에서 대기할 요소를 선택합니다.
-![녹화 시작](image/scenario-create/value_wait2.png)
+Right-click record
+![Value Wait](image/scenario-create/value_wait.png)
+After clicking Select Element on the recording screen,  
+Select the element to wait for in the browser where recording is in progress.
+![Select Value](image/scenario-create/value_wait2.png)
 ::: info
-EX) 뉴스 캐러셀에 **_'한경 비즈니스'_** 가 노출될 때까지 대기합니다
+EX) Wait until **_'Hankyung Business'_** is exposed on the news carousel
 :::
 
-## 검증 레코드
+## Verification Record
 
 ::: info
-레코드의 실행 간에 특정 요소가 노출 되는지, 특정 값이 노출 되는지 검증하는 기능입니다.
+This is a function to verify whether a specific element or a specific value is exposed between executions of records.
 
-1. 특정 요소가 화면에 노출되고 있는지 검증  
-   EX) 맛집 검색 이후 화면에 **_'맛집 지도'_** 가 노출되고 있는지 확인
-2. 특정 값이 화면에 노출되고 있는지 검증  
-    EX) **_'플레이스'_** 최상단에 **_'OO 레스토랑'_** 이 노출되는지 확인
+1. Verify whether a specific element is exposed on the screen  
+   EX) Check if **_'Restaurant Map'_** is exposed on the screen after searching for restaurants
+2. Verify whether a specific value is exposed on the screen  
+    EX) Check if **_'OO Restaurant'_** is exposed at the top of **_'Places'_**
    :::
 
-#### 1. 요소 노출 검증 레코드 추가
+#### 1. Add Element Exposure Verification Record
 
 ::: info
-특정 요소가 화면에 노출되고 있는지 검증합니다.
+Verifies whether a specific element is exposed on the screen.
 :::
 
-레코드 우클릭
-![녹화 시작](image/scenario-create/valid_dom.png)
-녹화중인 화면에서 요소 선택을 클릭한 후  
-녹화가 진행중인 브라우저에서 검증할 요소를 선택합니다.
-![녹화 시작](image/scenario-create/valid_dom2.png)
-검증 레코드 생성
-![녹화 시작](image/scenario-create/valid_dom3.png)
+Right-click record
+![Valid DOM](image/scenario-create/valid_dom.png)
+After clicking Select Element on the recording screen,  
+Select the element to verify in the browser where recording is in progress.
+![Select Valid DOM](image/scenario-create/valid_dom2.png)
+Create Verification Record
+![Create Valid DOM](image/scenario-create/valid_dom3.png)
 ::: info
-EX) 네이버에 **_'주변 맛집'_** 검색 후 **_'플레이스'_** 가 노출되는지 검증합니다.
+EX) Verify whether **_'Places'_** is exposed after searching for **_'nearby restaurants'_** on Naver.
 :::
 
-#### 2. 요소 값 검증 레코드 추가
+#### 2. Add Element Value Verification Record
 
 ::: info
-특정 값이 화면에 노출되고 있는지 검증합니다.
+Verifies whether a specific value is exposed on the screen.
 :::
 
-레코드 우클릭
-![녹화 시작](image/scenario-create/valid_value.png)
-녹화중인 화면에서 요소 선택을 클릭한 후  
-녹화가 진행중인 브라우저에서 검증할 요소를 선택합니다.  
-EX) 플레이스 최상단에 **_'디어리스트 연남'_** 이 노출되는지 검증
-![녹화 시작](image/scenario-create/valid_value2.png)
-검증 레코드 생성
-![녹화 시작](image/scenario-create/valid_value3.png)
+Right-click record
+![Valid Value](image/scenario-create/valid_value.png)
+After clicking Select Element on the recording screen,  
+Select the element to verify in the browser where recording is in progress.  
+EX) Verify whether **_'Dearest Yeonnam'_** is exposed at the top of Places
+![Select Valid Value](image/scenario-create/valid_value2.png)
+Create Verification Record
+![Create Valid Value](image/scenario-create/valid_value3.png)
 ::: info
-EX) **_'플레이스'_** 최상단에 **_'디어리스트 연남'_**이 노출되는지 확인
+EX) Check if **_'Dearest Yeonnam'_** is exposed at the top of **_'Places'_**
 :::
 
-#### 3. AI를 통한 화면 검증
+#### 3. Screen Verification using AI
 
 ::: info
-화면 내의 특정 값이나 요소의 노출이 아닌 이미지 기반의 검증이 필요한 경우 사용합니다.
+Used when image-based verification is needed, rather than the exposure of specific values or elements on the screen.
 :::
 
-레코드 우클릭
-![녹화 시작](image/scenario-create/valid_ai.png)
-AI 프롬프트를 선택한 후 프롬프트를 입력합니다.  
-현재 브라우저의 화면을 Sync-ETA 에이전트가 자동으로 캡쳐하여 AI 로 검증합니다.
+Right-click record
+![Valid AI](image/scenario-create/valid_ai.png)
+Select AI Prompt and enter the prompt.  
+The Sync-ETA agent automatically captures the current browser screen and verifies it with AI.
 ::: info
-AWS Bedrock - claude-3-haiku 모델 사용중
+Using AWS Bedrock - claude-3-haiku model
 :::
-![녹화 시작](image/scenario-create/valid_ai2.png)
+![Enter AI Prompt](image/scenario-create/valid_ai2.png)
 ::: info
-EX) **_'주변 맛집'_** 검색 후 화면에 **_'지도'_** 가 정상적으로 노출되는지 확인
-:::
-
-## 시나리오 수정
-
-::: info
-기존 시나리오의 특정 부분에서 이어서 녹화를 진행하는 기능입니다.
+EX) Check if **_'Map'_** is normally exposed on the screen after searching for **_'nearby restaurants'_**
 :::
 
-#### 1. 수정할 시나리오 선택
+## Edit Scenario
 
-시나리오 수정 클릭
-![녹화 시작](image/scenario-create/edit.png)
-이어서 녹화할 레코드를 선택합니다.
-![녹화 시작](image/scenario-create/edit2.png)
+::: info
+This is a feature to continue recording from a specific part of an existing scenario.
+:::
+
+#### 1. Select Scenario to Edit
+
+Click Edit Scenario
+![Edit Scenario](image/scenario-create/edit.png)
+Select the record from which to continue recording.
+![Select Edit Record](image/scenario-create/edit2.png)
 ::: info
 
-1. 시나리오 생성과 동일하게 녹화 브라우저가 나타납니다.
-2. 이어서 녹화를 희망하는 레코드까지 스크립트가 실행됩니다.
-3. 설정한 레코드에 도달하면 해당 시점부터 브라우저에서 발생하는 이벤트를 수집합니다.
+1. The recording browser appears just like when creating a scenario.
+2. The script runs up to the record where you wish to continue recording.
+3. Once the set record is reached, it collects events occurring in the browser from that point onward.
    :::
-   ![녹화 시작](image/scenario-create/edit3.png)
+   ![Execute Edit Script](image/scenario-create/edit3.png)
 
-## 부가 기능
+## Additional Features
 
-#### 1. 노트 기능
-
-::: info
-레코드의 내용을 입력합니다.
-:::
-![녹화 시작](image/scenario-create/comment.png)
-
-#### 2. 실패 복구 스크립트
+#### 1. Note Feature
 
 ::: info
-레코드가 실패했을 경우 복구 스크립트가 실행됩니다.
+Enter the contents of the record.
 :::
-![녹화 시작](image/scenario-create/recover.png)
+![Note Comment](image/scenario-create/comment.png)
 
-#### 3. 데이타셋
+#### 2. Failure Recovery Script
 
 ::: info
-입력 값을 지정합니다.  
-EX) 검색어(**_'주변 맛집'_**)를 사용자가 지정한 값으로 치환합니다.  
-** 상세 설명은 **_'데이타셋'_\*\* 참고
+If a record fails, a recovery script is executed.
 :::
-![녹화 시작](image/scenario-create/dataset.png)
+![Failure Recover](image/scenario-create/recover.png)
 
-#### 4. 삭제
+#### 3. Dataset
 
 ::: info
-수집 레코드를 삭제합니다.  
-EX) 녹화중 잘못된 부분을 클릭한 경우 해당 레코드를 삭제합니다.
+Specifies the input value.  
+EX) Replaces the search term (**_'nearby restaurants'_**) with a value specified by the user.  
+** For detailed explanation, refer to **_'Dataset'_\*\*
 :::
-![녹화 시작](image/scenario-create/delete.png)
+![Dataset](image/scenario-create/dataset.png)
 
-#### 5. 비활성화
+#### 4. Delete
 
 ::: info
-수집한 정보를 삭제하지 않고 실행시 제외합니다.
+Deletes the collected record.  
+EX) If you click the wrong part while recording, delete that record.
 :::
-![녹화 시작](image/scenario-create/disable.png)
+![Delete Record](image/scenario-create/delete.png)
+
+#### 5. Disable
+
+::: info
+Excludes collected information during execution without deleting it.
+:::
+![Disable Record](image/scenario-create/disable.png)

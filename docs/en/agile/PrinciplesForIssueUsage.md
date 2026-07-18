@@ -1,16 +1,16 @@
 ---
-title: 이슈 관리 핵심 원칙 5가지
-description: Jira를 효율적으로 사용하는 핵심 원칙을 소개합니다. ✅ 이슈 할당 법칙, ✅ 필수 코멘팅 가이드, ✅ 상태 관리 노하우를 통해 프로젝트 투명성과 팀 생산성을 높이는 방법을 확인해 보세요. 팀 협업을 위한 가이드입니다.
+title: 5 Core Principles of Issue Management
+description: Introducing core principles for using Jira efficiently. ✅ Discover how to increase project transparency and team productivity through issue allocation rules, ✅ essential commenting guides, and ✅ status management know-how. This is a guide for team collaboration.
 head:
   - - meta
     - name: keywords
-      content: Jira, 이슈 관리, Jira 사용법, 프로젝트 관리, 협업 툴, 할당 원칙, 코멘팅, 상태 관리, 워크플로우, 생산성 향상
+      content: Jira, Issue Management, How to use Jira, Project Management, Collaboration Tool, Allocation Principles, Commenting, Status Management, Workflow, Productivity Improvement
   - - meta
     - property: og:title
-      content: 이슈 관리 핵심 원칙 5가지 | 효과적인 프로젝트 관리법
+      content: 5 Core Principles of Issue Management | Effective Project Management
   - - meta
     - property: og:description
-      content: 이슈를 효율적으로 사용하는 핵심 원칙을 소개합니다. ✅ 이슈 할당 법칙, ✅ 필수 코멘팅 가이드, ✅ 상태 관리 노하우를 통해 프로젝트 투명성과 팀 생산성을 높이는 방법을 확인해 보세요. 팀 협업을 위한 가이드입니다.
+      content: Introducing core principles for efficiently using issues. ✅ Discover how to increase project transparency and team productivity through issue allocation rules, ✅ essential commenting guides, and ✅ status management know-how. This is a guide for team collaboration.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,44 +20,44 @@ head:
 sort: 6000
 ---
 
-## 이슈를 효과적으로 사용하기 위한 핵심 원칙
+## Core Principles for Using Issues Effectively
 
-### 1. **할당 원칙**
+### 1. **Allocation Principles**
 
-- ✅ **현재 담당자에게 할당**: 이슈는 현재 실제로 작업을 진행하는 사람에게 항상 할당되어야 함
-- ✅ **할당 즉시 확인**: 이슈가 할당되면 담당자는 즉시 확인하고 작업 시작 여부를 명시
-- ❌ **빈 할당 금지**: 담당자가 지정되지 않은 이슈는 방치되기 쉬움
+- ✅ **Assign to Current Handler**: An issue must always be assigned to the person who is currently actually working on it.
+- ✅ **Confirm Upon Allocation**: When an issue is assigned, the assignee must confirm it immediately and state whether they will start working on it.
+- ❌ **No Empty Allocations**: Issues without an assignee are easily neglected.
 
-### 2. **코멘트 작성 원칙**
+### 2. **Commenting Principles**
 
-- ✅ **작업 완료 시 코멘트 필수**: 작업 완료 후에는 반드시 처리 결과 코멘트 추가
-- ✅ **진행 상황 공유**: 중간중간 진행 상황을 코멘트로 공유 (특히 장기간 작업 시)
-- ✅ **이슈 이동 시 코멘트**: 상태 변경 시 (예: 진행 중 → 완료) 변경 이유 명시
-- ❌ **무의미한 코멘트 금지**: "확인했습니다", "진행 중" 등만 반복하지 않기
+- ✅ **Comment Mandatory Upon Completion**: After completing the work, a comment on the processing result must be added.
+- ✅ **Share Progress**: Share progress in comments periodically (especially for long-term tasks).
+- ✅ **Comment Upon Issue Movement**: State the reason for the change when the status changes (e.g., In Progress → Done).
+- ❌ **No Meaningless Comments**: Do not repeat things like "Checked" or "In progress".
 
-### 3. **상태 관리 원칙**
+### 3. **Status Management Principles**
 
-- ✅ **실시간 상태 업데이트**: 작업 현황에 따라 상태를 즉시 업데이트
-- ✅ **명확한 상태 정의**: 팀별로 상태 의미를 명확히 정의하고 일관되게 사용
-- ❌ **방치 상태 금지**: "진행 중" 상태로 장기간 방치하지 않기
+- ✅ **Real-time Status Updates**: Immediately update the status according to the current state of work.
+- ✅ **Clear Status Definitions**: Clearly define the meaning of statuses per team and use them consistently.
+- ❌ **No Neglected Status**: Do not leave it neglected in the "In Progress" status for a long time.
 
-### 4. **이슈 작성 원칙**
+### 4. **Issue Writing Principles**
 
-- ✅ **명확한 제목**: 무엇을 하는지 한눈에 알 수 있는 제목 사용
-- ✅ **상세한 설명**: 재현 절차, 예상 결과, 실제 결과를 포함한 상세 내용을 기술
-- ✅ **필수 필드 작성**: 우선순위, 예상 소요 시간, 컴포넌트 등 필수 필드 반드시 작성
-- ❌ **불명확한 표현 금지**: "문제 있음", "고쳐주세요" 등 불명확한 표현 사용하지 않기
+- ✅ **Clear Title**: Use a title that makes it clear at a glance what needs to be done.
+- ✅ **Detailed Description**: Describe details including reproduction procedures, expected results, and actual results.
+- ✅ **Fill Mandatory Fields**: Must fill in mandatory fields such as priority, estimated time required, and components.
+- ❌ **No Unclear Expressions**: Do not use unclear expressions such as "There is a problem" or "Please fix it".
 
-### 5. **워크플로우 준수 원칙**
+### 5. **Workflow Compliance Principles**
 
-- ✅ **정의된 워크플로우 따르기**: 팀에서 정한 워크플로우를 엄격히 준수
-- ✅ **리뷰 프로세스 준수**: 코드 리뷰, QA 과정 등 필요한 절차 생략하지 않기
-- ✅ **일관된 프로세스**: 모든 팀원이 동일한 프로세스 따라 작업하기
+- ✅ **Follow Defined Workflow**: Strictly comply with the workflow decided by the team.
+- ✅ **Comply with Review Process**: Do not skip necessary procedures like code reviews and QA processes.
+- ✅ **Consistent Process**: All team members must work following the same process.
 
-## 예시: 이상적인 이슈 처리 플로우
+## Example: Ideal Issue Processing Flow
 
-1. **이슈 생성** → 담당자 할당 + 우선순위 설정
-2. **작업 시작** → 상태 "진행 중" 변경 + 시작 코멘트
-3. **진행 중** → 중간 진행 상황 comment 작성 (필요시)
-4. **작업 완료** → 상태 "완료" 변경 + **상세한 처리 결과 코멘트**
-5. **검토 필요시** → 상태 "검토 중" 변경 + 검토자 할당
+1. **Create Issue** → Assign handler + Set priority
+2. **Start Work** → Change status to "In Progress" + Start comment
+3. **In Progress** → Write interim progress comments (if necessary)
+4. **Complete Work** → Change status to "Done" + **Detailed processing result comment**
+5. **If Review is Needed** → Change status to "Under Review" + Assign reviewer

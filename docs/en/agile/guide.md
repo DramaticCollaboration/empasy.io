@@ -1,16 +1,16 @@
 ---
-title: 스크럼반 운영 가이드
-description: 스크럼반(Scrumban)은 스크럼의 반복적 구조와 칸반의 흐름 관리·WIP 제한을 결합해 유연하고 효율적으로 작업을 관리하는 하이브리드 애자일 방법론입니다.
+title: Scrumban Operation Guide
+description: Scrumban is a hybrid agile methodology that combines Scrum's iterative structure with Kanban's flow management and WIP limits to manage work flexibly and efficiently.
 head:
   - - meta
     - name: keywords
-      content: 스크럼반, Scrumban, 스크럼반 소개, 스크럼반 개념, 스크럼반이란, Scrumban 소개, Scrumban 개념, 스크럼과 칸반 차이, 스크럼 vs 칸반, 애자일 방법론, 애자일 프레임워크, 칸반 방법론, 스크럼 방법론, 스크럼반 프로세스, 스크럼반 운영 가이드, 스크럼반 보드, WIP 제한, 작업 흐름 관리, 칸반 보드 사용법, 스크럼반 장점, 스크럼반 특징, 스크럼반 효과, 스크럼반 활용 사례, 스크럼반 도입 효과, 스크럼반 Jira 설정, 스크럼반 보드 템플릿, Scrumban 툴, 스크럼반 협업툴, 스크럼반 워크플로우, 애자일 프로젝트 관리, 업무 효율화 방법론, 반복적 작업 관리, 병목 현상 해결
+      content: Scrumban, Scrumban Introduction, Scrumban Concept, What is Scrumban, Scrumban vs Kanban, Agile Methodology, Agile Framework, Kanban Methodology, Scrum Methodology, Scrumban Process, Scrumban Operation Guide, Scrumban Board, WIP Limit, Workflow Management, How to use Kanban Board, Scrumban Advantages, Scrumban Features, Scrumban Effects, Scrumban Use Cases, Scrumban Introduction Effects, Scrumban Jira Setup, Scrumban Board Template, Scrumban Tool, Scrumban Collaboration Tool, Scrumban Workflow, Agile Project Management, Work Efficiency Methodology, Iterative Work Management, Bottleneck Resolution
   - - meta
     - property: og:title
-      content: 스크럼반
+      content: Scrumban
   - - meta
     - property: og:description
-      content: 스크럼반(Scrumban)은 스크럼의 반복적 구조와 칸반의 흐름 관리·WIP 제한을 결합해 유연하고 효율적으로 작업을 관리하는 하이브리드 애자일 방법론입니다.
+      content: Scrumban is a hybrid agile methodology that combines Scrum's iterative structure with Kanban's flow management and WIP limits to manage work flexibly and efficiently.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,186 +20,186 @@ head:
 sort: 300
 ---
 
-# 📘 스크럼반(Scrumban) 표준 운영 가이드
+# 📘 Scrumban Standard Operation Guide
 
-## 1. 개요
+## 1. Overview
 
-스크럼반(Scrumban)은 **스크럼(Scrum)** 의 구조와 **칸반(Kanban)** 의 유연한 흐름 관리 방식을 결합한 하이브리드 프로세스입니다.
+Scrumban is a hybrid process combining the structure of **Scrum** with the flexible flow management approach of **Kanban**.
 
-- **스크럼**이 제공하는 규칙·역할·백로그 관리
-- **칸반**이 제공하는 WIP 제한, 풀(Pull) 시스템, 흐름 시각화
-  이 둘을 조합해 **변화에 빠르게 적응**하고, **흐름을 최적화**하는 것이 핵심 목적입니다.
+- Rules, roles, and backlog management provided by **Scrum**
+- WIP limits, Pull system, and flow visualization provided by **Kanban**
+  The core purpose is to combine these two to **adapt quickly to changes** and **optimize the flow**.
 
-> 🔑 **핵심 철학**
-> “**Stop starting, start finishing**” — 새 작업을 시작하기보다 진행 중인 일을 끝내라.
-
----
-
-## 2. 기본 원칙
-
-1. **Pull 기반 작업**
-
-- 작업은 팀이 처리 가능할 때만 시작합니다.
-- 강제로 “밀어 넣는” 작업은 흐름을 깨뜨립니다.
-
-2. **WIP(Work In Progress) 제한**
-
-- 동시에 진행 중인 작업 수를 제한하여 품질 저하와 멀티태스킹 문제를 방지합니다.
-- 예: 팀원 5명일 경우 Doing WIP = 3.
-
-3. **작업 흐름 시각화**
-
-- 칸반 보드로 모든 작업 상태를 한눈에 보여줍니다.
-- 병목을 즉시 확인할 수 있습니다.
-
-4. **명확한 정책(Explicit Policies)**
-
-- 각 컬럼으로 이동할 수 있는 조건(Definition of Ready / Done 등)을 문서화하고, 모든 팀원이 공유합니다.
-
-5. **데이터 기반 개선**
-
-- 사이클타임·처리량·WIP·CFD(누적 흐름도) 등을 측정하여 개선 방향을 결정합니다.
+> 🔑 **Core Philosophy**
+> "**Stop starting, start finishing**" — Finish work in progress rather than starting new work.
 
 ---
 
-## 3. 역할과 책임
+## 2. Basic Principles
 
-| 역할                            | 주요 책임                                                       | 비고                                          |
+1. **Pull-based Work**
+
+- Work is started only when the team has the capacity to handle it.
+- Forcing work to be "pushed in" disrupts the flow.
+
+2. **WIP (Work In Progress) Limit**
+
+- Prevents quality degradation and multitasking issues by limiting the number of works in progress simultaneously.
+- Example: If there are 5 team members, Doing WIP = 3.
+
+3. **Workflow Visualization**
+
+- Shows all work statuses at a glance on the Kanban board.
+- Bottlenecks can be identified immediately.
+
+4. **Explicit Policies**
+
+- Conditions for moving to each column (Definition of Ready / Done, etc.) are documented and shared by all team members.
+
+5. **Data-driven Improvement**
+
+- Measure Cycle Time, Throughput, WIP, CFD (Cumulative Flow Diagram), etc., to determine the direction of improvement.
+
+---
+
+## 3. Roles and Responsibilities
+
+| Role | Main Responsibility | Remarks |
 | ------------------------------- | --------------------------------------------------------------- | --------------------------------------------- |
-| **Product Owner (PO)**          | 백로그 관리, 우선순위 설정, 요구사항 명확화, 비즈니스 목표 전달 | 스크럼에서 그대로 유지                        |
-| **Flow Manager / Scrum Master** | WIP 모니터링, 병목 제거 지원, 회고 진행, 프로세스 개선 촉진     | 칸반에서의 서비스 딜리버리 매니저 개념과 유사 |
-| **팀원(Dev/QA 등)**             | WIP 준수, Pull 기반 작업, 카드 상태 업데이트, 품질 보장         | 자율성·책임 필수                              |
-| **Stakeholders**                | 피드백 제공, 데모/리뷰 참여                                     | 정기적 관여 필요                              |
+| **Product Owner (PO)** | Backlog management, priority setting, requirement clarification, business goal communication | Maintained as in Scrum |
+| **Flow Manager / Scrum Master** | WIP monitoring, bottleneck removal support, retrospective facilitation, process improvement promotion | Similar to the Service Delivery Manager concept in Kanban |
+| **Team Member (Dev/QA, etc.)** | WIP compliance, pull-based work, card status update, quality assurance | Autonomy & responsibility essential |
+| **Stakeholders** | Provide feedback, participate in demo/review | Regular involvement required |
 
 ---
 
-## 4. 프로세스 단계별 Activity
+## 4. Activities per Process Stage
 
-| 단계        | Activity                 | 상세 설명                                                  | 정책(예시)                                     |
+| Stage | Activity | Detailed Description | Policy (Example) |
 | ----------- | ------------------------ | ---------------------------------------------------------- | ---------------------------------------------- |
-| **Backlog** | 요청/아이디어 수집       | 고객 요청, 버그, 기술부채, 신규 기능 등 모든 작업의 시작점 | 모든 카드에 우선순위와 클래스 오브 서비스 지정 |
-| **Ready**   | DoR 확인, 작업 준비 완료 | 요구사항 명확화, 리소스 확보, 테스트 조건 정의             | DoR 체크리스트 통과 시만 이동                  |
-| **Doing**   | 작업 진행                | WIP 한도 내에서 Pull 후 개발/구현                          | Doing WIP = 3                                  |
-| **Review**  | 코드/문서 리뷰           | 품질, 표준, 보안, 테스트 커버리지 확인                     | 리뷰어 승인 후 Testing 이동                    |
-| **Testing** | 품질 검증                | 자동·수동 테스트, 결함 수정                                | QA 완료 시 Done 이동                           |
-| **Done**    | 작업 완료                | DoD 충족, 문서/배포 완료, 사이클타임 기록                  | 완료 태그 부여                                 |
+| **Backlog** | Collect requests/ideas | Starting point for all work, such as customer requests, bugs, technical debt, new features | Assign priority and Class of Service to all cards |
+| **Ready** | Confirm DoR, ready for work | Clarify requirements, secure resources, define test conditions | Move only when DoR checklist is passed |
+| **Doing** | Work in progress | Development/implementation after Pulling within the WIP limit | Doing WIP = 3 |
+| **Review** | Code/Document review | Check quality, standard, security, test coverage | Move to Testing after reviewer approval |
+| **Testing** | Quality verification | Automated/manual testing, defect fixing | Move to Done when QA is complete |
+| **Done** | Work complete | Meet DoD, document/deployment complete, record cycle time | Assign completion tag |
 
 ---
 
-## 5. Definition 기준
+## 5. Definition Criteria
 
 ### 5.1 Definition of Ready (DoR)
 
-- 요구사항이 명확하고 문서화됨
-- 필요한 디자인/리소스 확보
-- 테스트 조건 정의됨
-- 예상 작업 범위·난이도 확인
+- Requirements are clear and documented
+- Necessary design/resources secured
+- Test conditions defined
+- Estimated work scope/difficulty confirmed
 
 ### 5.2 Definition of Done (DoD)
 
-- 코드 머지 및 빌드 성공
-- 자동·수동 테스트 통과
-- 문서/릴리스 노트 작성
-- 배포(또는 고객 전달) 완료
+- Code merge and build success
+- Passed automated/manual testing
+- Documentation/release notes written
+- Deployment (or customer delivery) complete
 
 ---
 
-## 6. 회의(Event) 운영 가이드
+## 6. Meeting (Event) Operation Guide
 
-| 회의                        | 목적                 | 주기                | 시간     | 특징                    |
+| Meeting | Purpose | Frequency | Duration | Characteristic |
 | --------------------------- | -------------------- | ------------------- | -------- | ----------------------- |
-| **Daily Stand-up**          | 진행 상황, 병목 공유 | 매일                | 10\~15분 | 컬럼 흐름 중심으로 논의 |
-| **Replenishment**           | Ready 칸 채우기      | 주 1회 or 임계점 시 | 30분     | 우선순위 재정렬         |
-| **Retrospective**           | 프로세스 개선        | 2\~4주마다          | 30\~60분 | WIP·정책 조정           |
-| **Service Delivery Review** | SLA/SLE 검토         | 월 1회              | 30분     | 지표 기반 리뷰          |
+| **Daily Stand-up** | Share progress, bottlenecks | Daily | 10~15 min | Discussion centered on column flow |
+| **Replenishment** | Fill the Ready column | Weekly or at threshold | 30 min | Realign priorities |
+| **Retrospective** | Process improvement | Every 2~4 weeks | 30~60 min | Adjust WIP/Policies |
+| **Service Delivery Review** | SLA/SLE review | Monthly | 30 min | Metric-based review |
 
 ---
 
-## 7. WIP 제한 운영
+## 7. WIP Limit Operation
 
-- 초기값: `팀원 수 ÷ 2`
-- 컬럼별 WIP 예시:
+- Initial value: `Number of team members ÷ 2`
+- Example WIP per column:
 
   - Doing: 3
   - Review: 2
   - Testing: 2
 
-- WIP 초과 시 즉시 원인 분석(병목, 인력 부족, 블로커 등)
-- 해결 전 신규 작업 시작 금지
+- Immediate cause analysis when WIP is exceeded (bottleneck, lack of manpower, blocker, etc.)
+- Prohibit starting new work until resolved
 
 ---
 
-## 8. 메트릭 관리
+## 8. Metric Management
 
-| 지표            | 정의                   | 활용                 |
+| Metric | Definition | Utilization |
 | --------------- | ---------------------- | -------------------- |
-| **리드 타임**   | 요청 생성 → 완료       | 고객 대기 시간 분석  |
-| **사이클 타임** | 작업 시작 → 완료       | 흐름 안정성 측정     |
-| **처리량**      | 일정 기간 완료 카드 수 | 생산성 예측          |
-| **평균 WIP**    | 진행 중 작업 평균      | 병목·멀티태스킹 방지 |
-| **CFD**         | 컬럼별 누적 작업 수    | 병목 구간 파악       |
+| **Lead Time** | Request Generation → Completion | Customer wait time analysis |
+| **Cycle Time** | Work Start → Completion | Flow stability measurement |
+| **Throughput** | Number of completed cards in a given period | Productivity forecasting |
+| **Average WIP** | Average of work in progress | Prevent bottlenecks/multitasking |
+| **CFD** | Cumulative number of works per column | Identify bottleneck areas |
 
-> **Tip:** Little’s Law 활용
+> **Tip:** Utilize Little's Law
 > `WIP = Throughput × Cycle Time`
-> → WIP·처리량·사이클타임 중 하나를 조정하면 나머지가 변합니다.
+> → If one of WIP, throughput, or cycle time is adjusted, the rest will change.
 
 ---
 
-## 9. 운영 규칙 예시
+## 9. Example Operation Rules
 
-1. Pull 전 WIP 확인 필수
-2. 모든 카드에 우선순위·담당자 지정
-3. 블로커 즉시 표시(스티커/라벨)
-4. 회의 시간은 엄격히 제한(Stand-up ≤ 15분)
-5. 프로세스 변경은 회고에서 합의 후 반영
+1. Must check WIP before Pulling
+2. Assign priority and handler to all cards
+3. Mark blockers immediately (sticker/label)
+4. Strictly limit meeting times (Stand-up ≤ 15 minutes)
+5. Process changes are reflected after agreement in a retrospective
 
 ---
 
-## 10. 프로세스 시각화 예시
+## 10. Process Visualization Example
 
 ```
 [Backlog]
   ↓ (Replenishment)
 [Ready]
-  ↓ (Pull & WIP 체크)
+  ↓ (Pull & WIP Check)
 [Doing]
-  ↓ (개발 완료)
+  ↓ (Development Complete)
 [Review]
-  ↓ (리뷰 승인)
+  ↓ (Review Approved)
 [Testing]
-  ↓ (품질 검증 완료)
+  ↓ (Quality Verification Complete)
 [Done]
 ```
 
 ---
 
-## 11. 개선 사이클
+## 11. Improvement Cycle
 
-1. 메트릭 수집 (사이클타임, 처리량, WIP)
-2. 병목 및 변동성 분석
-3. WIP 한도·정책·보드 구조 조정
-4. 1\~2주 시험 적용
-5. 회고에서 효과 검증 후 확정
+1. Collect metrics (Cycle Time, Throughput, WIP)
+2. Bottleneck and variability analysis
+3. Adjust WIP limits, policies, and board structure
+4. Trial application for 1~2 weeks
+5. Confirm after verifying effectiveness in retrospective
 
 ---
 
-## 12. 부록
+## 12. Appendix
 
-### Classes of Service 예시
+### Classes of Service Example
 
-- **Expedite**: 즉시 처리(긴급)
-- **Fixed Date**: 특정 날짜 마감
-- **Standard**: 일반 요청
-- **Intangible**: 기술부채 등 장기 가치
+- **Expedite**: Process immediately (Urgent)
+- **Fixed Date**: Deadline on a specific date
+- **Standard**: General request
+- **Intangible**: Long-term value such as technical debt
 
-### 추천 툴
+### Recommended Tools
 
 - Jira, Trello, Azure DevOps, Miro, ClickUp
 
 ---
 
-**📌 핵심 메시지**
-스크럼반은 “**규칙을 최소한 유지하며, 흐름을 최적화**” 하는 방법론입니다.
-프로세스는 팀의 **데이터와 합의**를 기반으로 지속적으로 진화해야 합니다.
+**📌 Core Message**
+Scrumban is a methodology for "**keeping rules to a minimum while optimizing flow**".
+The process must continuously evolve based on the team's **data and consensus**.
 
 ---

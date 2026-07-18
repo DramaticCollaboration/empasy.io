@@ -1,16 +1,16 @@
 ---
-title: 스토리 포인트
-description: 스토리 포인트는 작업의 크기, 복잡성, 불확실성을 상대적으로 추정하는 단위입니다. 절대적인 시간과 직접적으로 매칭하지 않으며, 스프린트 단위의 합리적인 업무량 파악과 팀 일정 추정을 목적으로 합니다.
+title: Story Points
+description: Story points are a unit for relatively estimating the size, complexity, and uncertainty of work. They do not map directly to absolute time, and their purpose is to determine a reasonable workload per sprint and estimate the team's schedule.
 head:
   - - meta
     - name: keywords
-      content: 스크럼반, Scrumban, 스크럼반 소개, 스크럼반 개념, 스크럼반이란, Scrumban 소개, Scrumban 개념, 스크럼과 칸반 차이, 스크럼 vs 칸반, 애자일 방법론, 애자일 프레임워크, 칸반 방법론, 스크럼 방법론, 스크럼반 프로세스, 스크럼반 운영 가이드, 스크럼반 보드, WIP 제한, 작업 흐름 관리, 칸반 보드 사용법, 스크럼반 장점, 스크럼반 특징, 스크럼반 효과, 스크럼반 활용 사례, 스크럼반 도입 효과, 스크럼반 Jira 설정, 스크럼반 보드 템플릿, Scrumban 툴, 스크럼반 협업툴, 스크럼반 워크플로우, 애자일 프로젝트 관리, 업무 효율화 방법론, 반복적 작업 관리, 병목 현상 해결
+      content: Scrumban, Scrumban Introduction, Scrumban Concept, What is Scrumban, Scrumban vs Kanban, Agile Methodology, Agile Framework, Kanban Methodology, Scrum Methodology, Scrumban Process, Scrumban Operation Guide, Scrumban Board, WIP Limit, Workflow Management, How to use Kanban Board, Scrumban Advantages, Scrumban Features, Scrumban Effects, Scrumban Use Cases, Scrumban Introduction Effects, Scrumban Jira Setup, Scrumban Board Template, Scrumban Tool, Scrumban Collaboration Tool, Scrumban Workflow, Agile Project Management, Work Efficiency Methodology, Iterative Work Management, Bottleneck Resolution
   - - meta
     - property: og:title
-      content: 스크럼반
+      content: Scrumban
   - - meta
     - property: og:description
-      content: 스크럼반(Scrumban)은 스크럼의 반복적 구조와 칸반의 흐름 관리·WIP 제한을 결합해 유연하고 효율적으로 작업을 관리하는 하이브리드 애자일 방법론입니다.
+      content: Scrumban is a hybrid agile methodology that combines Scrum's iterative structure with Kanban's flow management and WIP limits to manage work flexibly and efficiently.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,136 +20,138 @@ head:
 sort: 2000
 ---
 
-# 스토리 포인트 가이드: 애자일 팀을 위한 작업 추정 방법
+# Story Point Guide: Work Estimation Method for Agile Teams
 
-## 스토리 포인트란?
+## What are Story Points?
 
-스토리 포인트는 작업의 **크기, 복잡성, 불확실성**을 상대적으로 추정하는 단위입니다. 절대적인 시간과 직접적으로 매칭하지 않으며, 스프린트 단위의 합리적인 업무량 파악과 팀 일정 추정을 목적으로 합니다.
+Story points are a unit for relatively estimating the **size, complexity, and uncertainty** of work. They do not map directly to absolute time, and their purpose is to determine a reasonable workload per sprint and estimate the team's schedule.
 
-> ❌ "5포인트 = 1포인트의 5배 시간"이라는 접근은 잘못되었습니다
+> ❌ The approach of "5 points = 5 times the time of 1 point" is incorrect.
 
-## 피보나치 수열 사용 이유
+## Reason for Using the Fibonacci Sequence
 
-스토리 포인트 추정에는 일반적으로 **1, 2, 3, 5, 8, 13, 21...** 과 같은 피보나치 수열을 사용합니다. 이렇게 연속된 숫자가 아닌 수열을 사용하는 이유는:
+Story point estimation generally uses the Fibonacci sequence, such as **1, 2, 3, 5, 8, 13, 21...**. The reasons for using a sequence rather than consecutive numbers are:
 
-- 차이가 점점 커지며 불확실성을 반영합니다
-- 5와 6의 차이보다 5와 8의 차이가 더 명확합니다
-- 큰 작업일수록 복잡성과 위험이 기하급수적으로 증가함을 반영합니다
-- 결과적으로 팀 합의가 쉬워지고, 과대/과소 추정을 줄일 수 있습니다
+- The gaps become larger, reflecting uncertainty
+- The difference between 5 and 8 is clearer than the difference between 5 and 6
+- It reflects that complexity and risk increase exponentially for larger tasks
+- As a result, team consensus becomes easier, and over/under-estimation can be reduced
 
-## 스토리 포인트 활용 예시
+## Story Point Utilization Example
 
-| 작업 항목    | 포인트   | 설명                                |
+| Work Item | Points | Description |
 | ------------ | -------- | ----------------------------------- |
-| 사용자 조사  | 3포인트  | 비교적 가벼운 노력이 필요한 작업    |
-| 와이어프레임 | 5포인트  | 사용자 조사 후 진행하는 간단한 작업 |
-| UI 디자인    | 8포인트  | 팀 내 조율이 필요한 작업            |
-| 개발 작업    | 13포인트 | 많은 요소가 관여되고 복잡한 작업    |
-| QA 테스트    | 8포인트  | 복잡하지만 관리 가능한 수준의 작업  |
+| User Research | 3 points | Work requiring relatively light effort |
+| Wireframing | 5 points | Simple work done after user research |
+| UI Design | 8 points | Work requiring coordination within the team |
+| Dev Task | 13 points | Complex work involving many elements |
+| QA Testing | 8 points | Complex but manageable level of work |
 
-## 기준 과제 예시
+## Baseline Task Examples
 
-### 스토리 포인트 5: 사용자 패스워드 리셋 기능
+### Story Point 5: User Password Reset Feature
 
-**Done의 정의**
+**Definition of Done**
 
-- 패스워드 변경 기능 구현
-- 메일 인증 기능 구현
-- 패스워드 규칙 준수 (영문+숫자 등)
+- Implement password change feature
+- Implement email verification feature
+- Comply with password rules (alphanumeric, etc.)
 
-**보충 고려사항**
+**Supplementary Considerations**
 
-- DB 테이블 설계
-- 메일 송수신 환경
-- 예외 사항은 고려하지 않아도 됨
+- DB table design
+- Email sending/receiving environment
+- Exceptions do not need to be considered
 
-### 스토리 포인트 13: 신용카드 결제 기능
+### Story Point 13: Credit Card Payment Feature
 
-**Done의 정의**
+**Definition of Done**
 
-- 상품 결제 기능 구현
-- My페이지에서 구매 내역 조회 가능
-- 관리자도 확인 가능
+- Implement product payment feature
+- Purchase history can be viewed on My Page
+- Admins can also check
 
-**보충 고려사항**
+**Supplementary Considerations**
 
-- 카드 등록 기능이 기존에 있음
-- DB 설계 필요
-- 에러 패턴은 고려하지 않아도 됨
+- Card registration feature already exists
+- DB design required
+- Error patterns do not need to be considered
 
-## 주의사항: 잘못된 사용법
+## Caution: Incorrect Usage
 
-**시간을 그대로 대입하는 방식은 피해야 합니다**
+**Avoid the method of directly substituting time.**
 
-- ❌ "4시간짜리 업무 = 1포인트" → 기존 방식과 다를 바 없음
-- ❌ "5포인트 = 1포인트의 5배 시간"
+- ❌ "A 4-hour task = 1 point" → No different from the existing method
+- ❌ "5 points = 5 times the time of 1 point"
 
-**올바른 의미**: 1포인트보다 5배 복잡하다는 뜻입니다. 이런 잘못된 접근은 스토리 포인트의 본질을 무너뜨립니다.
+**Correct meaning**: It means it is 5 times more complex than 1 point. Such incorrect approaches destroy the essence of story points.
 
-## 리팩토링과 품질 고려사항
+## Refactoring and Quality Considerations
 
-모든 스토리에는 다음 두 요소가 반드시 포함되어야 합니다:
+Every story must include the following two elements:
 
-1. **제대로 동작**하는 기능
-2. **올바르게 동작**하는 품질
+1. A feature that **works properly**
+2. Quality that ensures it **operates correctly**
 
-첫 번째 요소만 만족하고 두 번째 요소를 무시하면 스토리 포인트는 불완전합니다. 리팩토링 작업도 품질 향상(기술 부채 제거) 관점에서 포인트를 부여할 수 있습니다.
+If only the first element is satisfied and the second is ignored, the story point is incomplete. Refactoring work can also be assigned points from the perspective of quality improvement (removing technical debt).
 
-> 주의: 스토리 포인트는 개인 성과 비교용으로는 절대 사용하지 마십시오. 이는 순수하게 팀 단위 도구입니다.
+> Caution: Never use story points to compare individual performance. This is purely a team-level tool.
 
-## 핵심 정리
+## Core Summary
 
-- 스토리 포인트는 **상대적 추정 단위**입니다
-- 시간 환산이 아닌 작업의 **복잡성/불확실성 비교**가 목적입니다
-- 피보나치 수열을 사용해 큰 작업일수록 위험이 더 커진다는 점을 반영합니다
-- 팀 합의 기준(3, 5, 8, 13 등)을 정해놓고, 새 작업을 비교해서 결정합니다
-- 잘못된 시간 대응 방식은 피하고, 품질 기준을 반드시 반영합니다
+- Story points are a **relative estimation unit**
+- The purpose is to **compare complexity/uncertainty** of work, not to convert it to time
+- Using the Fibonacci sequence reflects that risks increase as the work gets larger
+- Establish team consensus criteria (e.g., 3, 5, 8, 13) and make decisions by comparing new tasks
+- Avoid incorrect time mapping methods and ensure quality standards are reflected
 
 ---
 
-# 스토리 포인트 회의 진행 가이드
+# Story Point Meeting Guide
 
-## 회의 아젠다
+## Meeting Agenda
 
-### 오프닝 (5분)
+### Opening (5 mins)
 
-- 회의 목적 설명: 이번 스프린트의 작업 난이도/복잡성을 상대적으로 추정
-- 절대 시간 단위가 아닌 상대적 크기 비교를 통해 합의하는 것 강조
+- Explain the purpose of the meeting: Relatively estimate the difficulty/complexity of tasks for this sprint
+- Emphasize reaching a consensus through relative size comparison, not absolute time units
 
-### 기본 개념 리마인드 (10분)
+### Basic Concepts Reminder (10 mins)
 
-- 스토리 포인트 정의: 작업의 크기, 복잡성, 불확실성을 나타내는 단위
-- 시간과 1:1로 매칭하지 않음 (❌ "5포인트 = 1포인트의 5배 시간")
-- 피보나치 수열 사용 이유 설명 (1, 2, 3, 5, 8, 13, 21...)
+- Definition of story points: A unit representing the size, complexity, and uncertainty of work
+- Does not match 1:1 with time (❌ "5 points = 5 times the time of 1 point")
+- Explain why the Fibonacci sequence is used (1, 2, 3, 5, 8, 13, 21...)
 
-### 기준 사례 공유 (10분)
+### Share Baseline Examples (10 mins)
 
-- 스토리 포인트 예시 공유 (사용자 조사 → 3, 와이어프레임 → 5 등)
-- 구체적 기준 과제 검토 (5포인트: 패스워드 리셋, 13포인트: 신용카드 결제)
+- Share story point examples (User Research → 3, Wireframing → 5, etc.)
+- Review specific baseline tasks (5 points: password reset, 13 points: credit card payment)
 
-### 잘못된 사용법 주의 (5분)
+### Caution on Incorrect Usage (5 mins)
 
-- 시간을 그대로 대입하지 말 것 강조
-- "5포인트 = 1포인트의 5배 시간" ❌
-- 올바른 해석: "1포인트보다 5배 복잡하다"
+- Emphasize not to directly substitute time
+- "5 points = 5 times the time of 1 point" ❌
+- Correct interpretation: "5 times more complex than 1 point"
 
-### 리팩토링 및 품질 고려 (10분)
+### Refactoring and Quality Considerations (10 mins)
 
-- 모든 스토리에는 [1] 제대로 동작 + [2] 올바르게 동작(품질) 포함해야 함
-- 리팩토링/기술 부채 개선도 상황에 따라 포인트 책정 필요
-- 개인 성과 비교용이 아님을 재강조
+- Every story must include [1] Works properly + [2] Operates correctly (Quality)
+- Points need to be allocated for refactoring/technical debt improvement depending on the situation
+- Reiterate that it is not for comparing individual performance
 
-### 실제 작업 추정 (30~40분)
+### Actual Work Estimation (30~40 mins)
 
-- 백로그 아이템 하나씩 확인
-- 기준 사례와 비교하여 토론
-- 팀 합의 → 피보나치 수 중 하나로 결정 (예: 3, 5, 8, 13)
-- 이슈나 의견 충돌 시 합의점 찾기
+- Review backlog items one by one
+- Discuss by comparing with baseline examples
+- Team consensus → Decide on one of the Fibonacci numbers (e.g., 3, 5, 8, 13)
+- Find a middle ground when there are issues or conflicting opinions
 
-### 마무리 (5분)
+### Wrap-up (5 mins)
 
-- 회의에서 정한 스토리 포인트 결과 정리
-- 다음 스프린트 계획 시 반영 예정 알림
-- "스토리 포인트는 팀의 일정을 빠르고 쉽게 추정할 수 있도록 돕는 도구"임을 재강조
+- Summarize the story point results decided in the meeting
+- Notify that it will be reflected in the next sprint planning
+- Reiterate that "Story points are a tool to help the team estimate schedules quickly and easily"
 
-스토리 포인트는 팀의 생산성과 일정 관리에 유용한 도구지만, 올바르게 이해하고 사용할 때 그 진정한 가치를 발휘합니다.
+Story points are a useful tool for team productivity and schedule management, but they show their true value only when understood and used correctly.
+
+---

@@ -1,16 +1,16 @@
 ---
-title: 스크럼반 단계별 Activity
-description: 스크럼반(Scrumban)은 스크럼의 반복적 구조와 칸반의 흐름 관리·WIP 제한을 결합해 유연하고 효율적으로 작업을 관리하는 하이브리드 애자일 방법론입니다.
+title: Scrumban Step-by-Step Activities
+description: Scrumban is a hybrid agile methodology that combines Scrum's iterative structure with Kanban's flow management and WIP limits to manage work flexibly and efficiently.
 head:
   - - meta
     - name: keywords
-      content: 스크럼반, Scrumban, 스크럼반 소개, 스크럼반 개념, 스크럼반이란, Scrumban 소개, Scrumban 개념, 스크럼과 칸반 차이, 스크럼 vs 칸반, 애자일 방법론, 애자일 프레임워크, 칸반 방법론, 스크럼 방법론, 스크럼반 프로세스, 스크럼반 운영 가이드, 스크럼반 보드, WIP 제한, 작업 흐름 관리, 칸반 보드 사용법, 스크럼반 장점, 스크럼반 특징, 스크럼반 효과, 스크럼반 활용 사례, 스크럼반 도입 효과, 스크럼반 Jira 설정, 스크럼반 보드 템플릿, Scrumban 툴, 스크럼반 협업툴, 스크럼반 워크플로우, 애자일 프로젝트 관리, 업무 효율화 방법론, 반복적 작업 관리, 병목 현상 해결
+      content: Scrumban, Scrumban Introduction, Scrumban Concept, What is Scrumban, Scrumban vs Kanban, Agile Methodology, Agile Framework, Kanban Methodology, Scrum Methodology, Scrumban Process, Scrumban Operation Guide, Scrumban Board, WIP Limit, Workflow Management, How to use Kanban Board, Scrumban Advantages, Scrumban Features, Scrumban Effects, Scrumban Use Cases, Scrumban Introduction Effects, Scrumban Jira Setup, Scrumban Board Template, Scrumban Tool, Scrumban Collaboration Tool, Scrumban Workflow, Agile Project Management, Work Efficiency Methodology, Iterative Work Management, Bottleneck Resolution
   - - meta
     - property: og:title
-      content: 스크럼반
+      content: Scrumban
   - - meta
     - property: og:description
-      content: 스크럼반(Scrumban)은 스크럼의 반복적 구조와 칸반의 흐름 관리·WIP 제한을 결합해 유연하고 효율적으로 작업을 관리하는 하이브리드 애자일 방법론입니다.
+      content: Scrumban is a hybrid agile methodology that combines Scrum's iterative structure with Kanban's flow management and WIP limits to manage work flexibly and efficiently.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,93 +20,91 @@ head:
 sort: 400
 ---
 
-# 스크럼반 단계별 Activity 가이드
+# Scrumban Step-by-Step Activity Guide
 
-| 단계                                      | 주요 Activity                                                                       | 상세 설명                                                                                                                                                                                                         |
-| ----------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1. Backlog**                            | - 신규 아이디어/요청 수집<br>- 백로그 아이템 기록<br>- 클래스 오브 서비스 지정      | 모든 작업의 출발점.<br>비즈니스 요청, 버그, 기술부채 등을 **Product Owner**나 팀이 기록.<br>각 카드에 **우선순위**와 **작업 유형(긴급·고정일·표준·무형)** 지정.<br>이 단계에서는 아직 시작 준비가 되지 않은 상태. |
-| **2. Ready**                              | - Definition of Ready(DoR) 확인<br>- 작업 분해(필요 시)<br>- 담당자 미지정          | 작업이 바로 시작 가능하도록 세부 내용이 준비된 상태.<br>DoR 기준(요구사항 명확, 디자인/리소스 확보, 테스트 조건 정의 등)을 만족해야 함.<br>보통 **Replenishment 미팅**에서 Backlog에서 Ready로 이동.              |
-| **3. Doing / In Progress**                | - 작업 시작(Pull)<br>- 진행 중 상황 업데이트<br>- 블로커 표시                       | 팀원이 WIP 한도 내에서 Ready에서 Pull하여 시작.<br>작업 중 발생한 **병목/블로커**는 보드에서 시각적으로 표시(빨간 라벨, 아이콘 등).<br>데일리 스탠드업에서 상태 공유.                                             |
-| **4. Review (Code Review / Peer Review)** | - 코드 리뷰/문서 리뷰 수행<br>- 피드백 반영                                         | 개발이 끝난 작업은 리뷰 컬럼으로 이동.<br>지정된 리뷰어가 코드 품질, 표준 준수 여부 확인.<br>리뷰 피드백이 있으면 Doing으로 되돌아가거나 수정 후 다시 Review 단계.                                                |
-| **5. Testing / QA**                       | - 기능 테스트<br>- 버그 리포트 작성 및 수정                                         | QA 또는 팀원이 테스트 수행.<br>자동 테스트 + 수동 테스트 병행 가능.<br>버그가 있으면 해당 카드에 기록하고 수정 후 재검증.                                                                                         |
-| **6. Done**                               | - Definition of Done(DoD) 충족 확인<br>- 문서화/릴리스 노트 업데이트<br>- 배포 완료 | 모든 품질 기준을 충족하고 배포까지 완료된 상태.<br>릴리스 노트, 사용자 매뉴얼 등 문서화 포함.<br>카드에 완료 날짜 기록(사이클타임 분석에 활용).                                                                   |
+| Step | Main Activity | Detailed Description |
+| --- | --- | --- |
+| **1. Backlog** | - Collect new ideas/requests<br>- Record backlog items<br>- Assign class of service | The starting point for all work.<br>**Product Owner** or team records business requests, bugs, technical debt, etc.<br>Assign **priority** and **work type (Expedite, Fixed Date, Standard, Intangible)** to each card.<br>Items in this stage are not yet ready to start. |
+| **2. Ready** | - Check Definition of Ready (DoR)<br>- Break down work (if necessary)<br>- Unassigned handler | Details are prepared so work can start immediately.<br>Must meet DoR criteria (clear requirements, design/resources secured, test conditions defined, etc.).<br>Usually moved from Backlog to Ready during **Replenishment meetings**. |
+| **3. Doing / In Progress** | - Start work (Pull)<br>- Update progress status<br>- Mark blockers | Team members pull from Ready to start within WIP limits.<br>**Bottlenecks/Blockers** that occur during work are visually marked on the board (red labels, icons, etc.).<br>Share status in daily stand-ups. |
+| **4. Review (Code Review / Peer Review)** | - Perform code review/document review<br>- Reflect feedback | Completed work is moved to the Review column.<br>Designated reviewers check for code quality and standard compliance.<br>If there is review feedback, it goes back to Doing or goes back to the Review stage after modification. |
+| **5. Testing / QA** | - Functional testing<br>- Write bug reports and fix | QA or team members perform testing.<br>Can combine automated testing + manual testing.<br>If there is a bug, record it on the card and re-verify after fixing. |
+| **6. Done** | - Confirm Definition of Done (DoD) is met<br>- Document/Update release notes<br>- Deployment complete | Meets all quality criteria and deployment is complete.<br>Includes documentation like release notes and user manuals.<br>Record completion date on the card (used for cycle time analysis). |
 
 ---
 
-## 각 단계 Activity 흐름 시각화
+## Visualizing the Activity Flow for Each Stage
 
 ```
 [Backlog]
-  ↓ (Replenishment 미팅)
+  ↓ (Replenishment Meeting)
 [Ready]
-  ↓ (Pull & WIP 체크)
+  ↓ (Pull & WIP Check)
 [Doing]
-  ↓ (개발 완료)
+  ↓ (Development Complete)
 [Review]
-  ↓ (리뷰 승인)
+  ↓ (Review Approved)
 [Testing]
-  ↓ (품질 검증 완료)
+  ↓ (Quality Verification Complete)
 [Done]
 ```
 
 ---
 
-## 단계별 운영 팁
+## Operation Tips per Stage
 
 ### 1. Backlog
 
-- **우선순위 기준 명확화**: 긴급, 가치, 마감일, 리스크 기반
-- **카드 크기 표준화**: 너무 크면 Ready 전 분할
-- **주기적 정리**: 오래된/불필요한 카드는 폐기
+- **Clarify Priority Criteria**: Based on urgency, value, deadlines, and risk
+- **Standardize Card Size**: Split before Ready if too large
+- **Periodic Cleanup**: Discard old/unnecessary cards
 
 ### 2. Ready
 
-- **작업 착수 가능 조건(DoR) 체크리스트 예시**
-
-  - 요구사항이 명확하다
-  - 디자인/데이터/리소스 확보됨
-  - 테스트 조건 정의됨
-  - 예상 작업 시간/범위 확인됨
+- **Example of Definition of Ready (DoR) Checklist**
+  - Requirements are clear
+  - Design/Data/Resources are secured
+  - Test conditions are defined
+  - Estimated work time/scope is confirmed
 
 ### 3. Doing
 
-- **Stop Starting, Start Finishing** 규칙 유지
-- 병목 발생 시 즉시 해결 논의
-- 멀티태스킹 최소화
+- Maintain the **Stop Starting, Start Finishing** rule
+- Discuss immediately when bottlenecks occur
+- Minimize multitasking
 
 ### 4. Review
 
-- 코드 리뷰 기준 정의(예: 코드 스타일, 성능, 보안, 테스트 포함 여부)
-- 리뷰 대기 시간 줄이기 위해 알림 시스템 활용
+- Define code review criteria (e.g., code style, performance, security, tests included)
+- Utilize notification systems to reduce review wait time
 
 ### 5. Testing
 
-- 자동화 테스트와 수동 테스트 병행
-- 버그 발생 시 동일 카드에서 수정 후 재검증
-- 테스트 실패 시 WIP 초과 예외 허용 가능
+- Parallel use of automated testing and manual testing
+- Re-verify after fixing on the same card when bugs occur
+- WIP limit exceptions can be allowed if a test fails
 
 ### 6. Done
 
-- 완료 후 카드에 **사이클타임 기록**
-- 릴리스 회고 시 완료 카드 리뷰
-- 데이터 분석용 태그(버그, 신규 기능 등) 부여
+- **Record cycle time** on the card upon completion
+- Review completed cards during release retrospectives
+- Assign tags for data analysis (bugs, new features, etc.)
 
 ---
 
-## 단계별 주요 지표
+## Key Metrics per Stage
 
-| 단계            | 핵심 지표                  | 활용 목적             |
-| --------------- | -------------------------- | --------------------- |
-| Backlog → Ready | 리드 타임(요청\~준비 완료) | 준비 지연 원인 파악   |
-| Ready → Doing   | Pull 빈도                  | 팀의 처리 가능성 파악 |
-| Doing           | 평균 WIP, 블로커 비율      | 병목 관리             |
-| Review          | 리뷰 대기 시간             | 품질·속도 균형        |
-| Testing         | 결함율, 재작업률           | QA 효율성             |
-| Done            | 사이클타임, 처리량         | 예측 가능성 개선      |
+| Stage | Key Metric | Purpose of Utilization |
+| --- | --- | --- |
+| Backlog → Ready | Lead Time (Request ~ Ready to Start) | Identify causes of preparation delays |
+| Ready → Doing | Pull Frequency | Grasp the team's throughput capacity |
+| Doing | Average WIP, Blocker Ratio | Bottleneck management |
+| Review | Review Wait Time | Balance between quality and speed |
+| Testing | Defect Rate, Rework Rate | QA efficiency |
+| Done | Cycle Time, Throughput | Improve predictability |
 
 ---
 
-이렇게 정리하면 **스크럼반을 도입한 팀이 각 단계에서 무엇을 해야 하는지** 명확해지고,
-**메트릭 기반의 개선 활동**도 병행할 수 있습니다.
+By organizing this way, it becomes clear **what teams adopting Scrumban should do at each stage**, and **metric-based improvement activities** can also be conducted concurrently.
 
 ---

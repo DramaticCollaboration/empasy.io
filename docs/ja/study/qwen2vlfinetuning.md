@@ -1,16 +1,16 @@
 ---
 title: Qwen2 VL Fine-Tuning
-description: Qwen2 VL 모델 FIne-Tuning
+description: Qwen2 VL モデル Fine-Tuning
 head:
   - - meta
     - name: keywords
-      content: 공부기록, 학습일기, 지식저장소, 공부로그, 학습관리, 공부노트, 지식정리, 공부방법, 학습저장, 기억보조
+      content: 勉強記録, 学習日記, 知識リポジトリ, 勉強ログ, 学習管理, 勉強ノート, 知識整理, 勉強方法, 学習保存, 記憶補助
   - - meta
     - property: og:title
-      content: 📚 두뇌 저장소 - 재미있는 공부 기록 놀이터
+      content: 📚 頭脳リポジトリ - 楽しい勉強記録の遊び場
   - - meta
     - property: og:description
-      content: 까먹지 말고 재밌게 저장하자! 🎯 공부한 내용을 자유롭게 기록하는 즐거운 지식 저장소
+      content: 忘れないように楽しく保存しよう！🎯 勉強した内容を自由に記録する楽しい知識リポジトリ
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,14 +20,14 @@ head:
 sort: 400
 ---
 
-# Qwen2-VL 파인튜닝 가이드 by LLM
+# Qwen2-VL ファインチューニングガイド by LLM
 
-## 🎯 파인튜닝 전 준비사항
+## 🎯 ファインチューニング前の準備事項
 
-### 1. **환경 설정**
+### 1. **環境設定**
 
 ```bash
-# 필수 패키지 설치
+# 必須パッケージのインストール
 pip install transformers>=4.37.0
 pip install accelerate
 pip install datasets
@@ -38,64 +38,64 @@ pip install pillow
 pip install einops
 pip install timm
 
-# Qwen2-VL 전용 패키지
+# Qwen2-VL 専用パッケージ
 pip install git+https://github.com/QwenLM/Qwen2-VL.git
 ```
 
-### 2. **하드웨어 요구사항**
+### 2. **ハードウェア要件**
 
-- **GPU 메모리**:
+- **GPUメモリ**:
   - Full Fine-tuning: 80GB+ (A100 80GB)
   - LoRA Fine-tuning: 24GB+ (RTX 4090)
   - QLoRA: 16GB+ (V100 16GB)
 
-## 📊 데이터셋 형식
+## 📊 データセット形式
 
-### 1. **표준 데이터 형식**
+### 1. **標準データ形式**
 
 ```json
 {
   "conversations": [
     {
       "from": "human",
-      "value": "<image>\n이 이미지에서 무엇이 보이나요?"
+      "value": "<image>\nこの画像には何が見えますか？"
     },
     {
       "from": "gpt",
-      "value": "이 이미지에는 빨간색 스포츠카가 도로 위에 주차되어 있습니다."
+      "value": "この画像には、赤いスポーツカーが道路上に駐車されています。"
     }
   ],
   "image": "base64_encoded_image_or_image_path"
 }
 ```
 
-### 2. **다중 턴 대화 형식**
+### 2. **マルチターン対話形式**
 
 ```json
 {
   "conversations": [
     {
       "from": "human",
-      "value": "<image>\n이 사진의 배경은 어디인가요?"
+      "value": "<image>\nこの写真の背景はどこですか？"
     },
     {
       "from": "gpt",
-      "value": "도시의 거리입니다."
+      "value": "都市の通りです。"
     },
     {
       "from": "human",
-      "value": "차량의 색상은 무엇인가요?"
+      "value": "車両の色は何色ですか？"
     },
     {
       "from": "gpt",
-      "value": "빨간색입니다."
+      "value": "赤色です。"
     }
   ],
   "image": "base64_encoded_image"
 }
 ```
 
-## 🔧 파인튜닝 방법
+## 🔧 ファインチューニング方法
 
 ### 1. **Full Fine-tuning**
 
@@ -111,7 +111,7 @@ from transformers import (
 from datasets import Dataset
 import json
 
-# 모델 로드
+# モデルロード
 model = Qwen2VLForConditionalGeneration.from_pretrained(
     "Qwen/Qwen2-VL-7B-Instruct",
     torch_dtype=torch.bfloat16,
@@ -120,16 +120,16 @@ model = Qwen2VLForConditionalGeneration.from_pretrained(
 
 processor = Qwen2VLProcessor.from_pretrained("Qwen/Qwen2-VL-7B-Instruct")
 
-# 데이터셋 준비
+# データセット準備
 def load_dataset(json_path):
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
     def process_example(example):
-        # 이미지 처리
+        # 画像処理
         image = Image.open(example['image_path']).convert('RGB')
 
-        # 대화 처리
+        # 対話処理
         conversations = example['conversations']
         text = processor.apply_chat_template(conversations, add_generation_prompt=False)
 
@@ -160,7 +160,7 @@ training_args = TrainingArguments(
     remove_unused_columns=False,
 )
 
-# Trainer 설정
+# Trainer設定
 trainer = Trainer(
     model=model,
     args=training_args,
@@ -180,19 +180,19 @@ trainer = Trainer(
     }
 )
 
-# 학습 시작
+# 学習開始
 trainer.train()
 trainer.save_model()
 ```
 
-### 2. **LoRA 파인튜닝**
+### 2. **LoRA ファインチューニング**
 
 ```python
 # lora_finetune.py
 from peft import LoraConfig, get_peft_model
 from transformers import Qwen2VLForConditionalGeneration
 
-# LoRA 설정
+# LoRA設定
 lora_config = LoraConfig(
     r=16,
     lora_alpha=32,
@@ -202,7 +202,7 @@ lora_config = LoraConfig(
     task_type="CAUSAL_LM"
 )
 
-# 모델에 LoRA 적용
+# モデルにLoRAを適用
 model = Qwen2VLForConditionalGeneration.from_pretrained(
     "Qwen/Qwen2-VL-7B-Instruct",
     torch_dtype=torch.bfloat16,
@@ -212,26 +212,26 @@ model = Qwen2VLForConditionalGeneration.from_pretrained(
 model = get_peft_model(model, lora_config)
 model.print_trainable_parameters()
 
-# 학습률을 더 높게 설정
+# 学習率をより高く設定
 training_args = TrainingArguments(
     output_dir="./qwen2-vl-lora",
-    per_device_train_batch_size=4,  # LoRA는 메모리 사용량이 적음
+    per_device_train_batch_size=4,  # LoRAはメモリ使用量が少ない
     gradient_accumulation_steps=2,
-    learning_rate=1e-4,  # 더 높은 학습률
+    learning_rate=1e-4,  # より高い学習率
     num_train_epochs=5,
     fp16=True,
-    # ... 나머지 설정은 동일
+    # ... 残りの設定は同じ
 )
 ```
 
-### 3. **QLoRA 파인튜닝 (4bit 양자화)**
+### 3. **QLoRA ファインチューニング (4bit量子化)**
 
 ```python
 # qlora_finetune.py
 from transformers import BitsAndBytesConfig
 from peft import prepare_model_for_kbit_training
 
-# 4bit 양자화 설정
+# 4bit量子化設定
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_use_double_quant=True,
@@ -239,21 +239,21 @@ quantization_config = BitsAndBytesConfig(
     bnb_4bit_compute_dtype=torch.bfloat16
 )
 
-# 양자화된 모델 로드
+# 量子化されたモデルロード
 model = Qwen2VLForConditionalGeneration.from_pretrained(
     "Qwen/Qwen2-VL-7B-Instruct",
     quantization_config=quantization_config,
     device_map="auto"
 )
 
-# QLoRA 준비
+# QLoRA準備
 model = prepare_model_for_kbit_training(model)
 
-# LoRA 설정 (QLoRA)
+# LoRA設定 (QLoRA)
 lora_config = LoraConfig(
-    r=8,  # 더 작은 rank
+    r=8,  # より小さいrank
     lora_alpha=16,
-    target_modules=["q_proj", "v_proj"],  # 주요 모듈만 대상
+    target_modules=["q_proj", "v_proj"],  # 主要なモジュールのみ対象
     lora_dropout=0.1,
     bias="none",
     task_type="CAUSAL_LM"
@@ -262,7 +262,7 @@ lora_config = LoraConfig(
 model = get_peft_model(model, lora_config)
 ```
 
-## 📝 데이터 전처리 유틸리티
+## 📝 データ前処理ユーティリティ
 
 ```python
 # data_utils.py
@@ -271,17 +271,17 @@ import base64
 import io
 
 def image_to_base64(image_path):
-    """이미지를 base64로 변환"""
+    """画像をbase64に変換"""
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')
 
 def base64_to_image(base64_str):
-    """base64를 이미지로 변환"""
+    """base64を画像に変換"""
     image_data = base64.b64decode(base64_str)
     return Image.open(io.BytesIO(image_data))
 
 def create_conversation_dataset(image_paths, questions, answers):
-    """데이터셋 생성 도우미"""
+    """データセット生成ヘルパー"""
     dataset = []
     for img_path, question, answer in zip(image_paths, questions, answers):
         dataset.append({
@@ -300,18 +300,18 @@ def create_conversation_dataset(image_paths, questions, answers):
     return dataset
 
 def save_dataset(dataset, output_path):
-    """데이터셋 저장"""
+    """データセット保存"""
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(dataset, f, ensure_ascii=False, indent=2)
 ```
 
-## 🚀 학습 스크립트 예제
+## 🚀 学習スクリプトの例
 
 ```bash
 #!/bin/bash
 # train_qwen2_vl.sh
 
-# 환경 변수 설정
+# 環境変数の設定
 export MODEL_NAME="Qwen/Qwen2-VL-7B-Instruct"
 export DATA_PATH="train_data.json"
 export OUTPUT_DIR="./qwen2-vl-finetuned"
@@ -319,7 +319,7 @@ export BATCH_SIZE=2
 export LEARNING_RATE=2e-5
 export EPOCHS=3
 
-# 학습 실행
+# 学習の実行
 python -m torch.distributed.launch \
     --nproc_per_node=4 \
     --master_port=29500 \
@@ -336,14 +336,14 @@ python -m torch.distributed.launch \
     --save_steps 500
 ```
 
-## 🔍 평가 및 추론
+## 🔍 評価および推論
 
 ```python
 # evaluate.py
 from transformers import pipeline
 from PIL import Image
 
-# 파인튜닝된 모델 로드
+# ファインチューニングされたモデルロード
 model_path = "./qwen2-vl-finetuned"
 vl_pipeline = pipeline(
     "visual-question-answering",
@@ -351,11 +351,11 @@ vl_pipeline = pipeline(
     device="cuda:0"
 )
 
-# 테스트 이미지
+# テスト画像
 image = Image.open("test_image.jpg")
 
-# 추론
-question = "이 이미지에서 무엇이 보이나요?"
+# 推論
+question = "この画像には何が見えますか？"
 result = vl_pipeline(image=image, question=question)
 
 print(f"Question: {question}")
@@ -363,32 +363,32 @@ print(f"Answer: {result['answer']}")
 print(f"Confidence: {result['score']:.4f}")
 ```
 
-## ⚡ 최적화 팁
+## ⚡ 最適化のヒント
 
-### 1. **메모리 최적화**
+### 1. **メモリ最適化**
 
 ```python
-# 그래디언트 체크포인팅
+# グラディエントチェックポイント
 model.gradient_checkpointing_enable()
 
-# 배치 사이즈 조정
+# バッチサイズ調整
 training_args = TrainingArguments(
     per_device_train_batch_size=1,
-    gradient_accumulation_steps=8,  # 효과적 배치 크기: 8
+    gradient_accumulation_steps=8,  # 効果的なバッチサイズ: 8
 )
 
 # mixed precision training
 training_args = TrainingArguments(
-    fp16=True,  # 또는 bf16=True
+    fp16=True,  # または bf16=True
 )
 ```
 
-### 2. **학습률 스케줄링**
+### 2. **学習率スケジューリング**
 
 ```python
 from transformers import get_cosine_schedule_with_warmup
 
-# 웜업 스케줄러
+# ウォームアップスケジューラ
 num_training_steps = len(train_dataloader) * num_epochs
 num_warmup_steps = int(0.1 * num_training_steps)
 
@@ -399,13 +399,13 @@ scheduler = get_cosine_schedule_with_warmup(
 )
 ```
 
-## 🎯 특정 태스크 파인튜닝 예제
+## 🎯 特定のタスクのファインチューニングの例
 
-### 1. **이미지 캡셔닝**
+### 1. **画像キャプショニング**
 
 ```python
 def prepare_captioning_data(image_dir, captions_file):
-    """이미지 캡셔닝 데이터 준비"""
+    """画像キャプショニングのデータ準備"""
     dataset = []
     with open(captions_file, 'r', encoding='utf-8') as f:
         for line in f:
@@ -414,7 +414,7 @@ def prepare_captioning_data(image_dir, captions_file):
                 "conversations": [
                     {
                         "from": "human",
-                        "value": "<image>\n이 이미지를 설명해주세요."
+                        "value": "<image>\nこの画像を説明してください。"
                     },
                     {
                         "from": "gpt",
@@ -430,39 +430,39 @@ def prepare_captioning_data(image_dir, captions_file):
 
 ```python
 def prepare_vqa_data(questions_file, annotations_file, image_dir):
-    """VQA 데이터 준비"""
-    # questions 및 annotations 파일 처리
+    """VQAデータの準備"""
+    # questionsおよびannotationsファイルの処理
     # ...
     return vqa_dataset
 ```
 
-## 📊 모니터링 및 로깅
+## 📊 モニタリングおよびロギング
 
 ```python
-# wandb 연동
+# wandb 連携
 import wandb
 
 wandb.init(project="qwen2-vl-finetuning")
 
 training_args = TrainingArguments(
     output_dir="./output",
-    report_to="wandb",  # wandb에 리포트
+    report_to="wandb",  # wandbにレポート
     logging_dir="./logs",
     logging_steps=10,
 )
 ```
 
-## 🛠️ 문제 해결
+## 🛠️ トラブルシューティング
 
 ### **Common Issues:**
 
-1. **CUDA Out of Memory**: 배치 사이즈 줄이기, 그래디언트 accumulation 사용
-2. **NaN Loss**: 학습률 낮추기, gradient clipping 적용
-3. **Slow Training**: mixed precision 사용, 데이터 로딩 최적화
+1. **CUDA Out of Memory**: バッチサイズを減らす、グラディエントアキュムレーションを使用する
+2. **NaN Loss**: 学習率を下げる、グラディエントクリッピングを適用する
+3. **Slow Training**: mixed precisionを使用する、データ読み込みを最適化する
 
 ```python
-# 그래디언트 클리핑
+# グラディエントクリッピング
 training_args = TrainingArguments(
-    max_grad_norm=1.0,  # 그래디언트 클리핑
+    max_grad_norm=1.0,  # グラディエントクリッピング
 )
 ```

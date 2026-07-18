@@ -1,16 +1,16 @@
 ---
-title: 커밋 메세지
-description: 효율적인 Git 커밋 메시지 작성법 완전 가이드. feat, fix, refactor 등 타입별 규칙, 커밋 제목·본문 작성법과 실전 예시까지.
+title: コミットメッセージ
+description: 効率的なGitコミットメッセージの作成方法完全ガイド。feat、fix、refactorなどタイプ別のルール、コミットの件名・本文の作成方法と実践例まで。
 head:
   - - meta
     - name: keywords
-      content: git commit, git commit 메시지, git 커밋 규칙, git 커밋 컨벤션, commit message guide, commit convention, git 협업, git 브랜치 전략, feat, fix, refactor
+      content: git commit, git commit メッセージ, git コミット ルール, git コミット コンベンション, commit message guide, commit convention, git コラボレーション, git ブランチ戦略, feat, fix, refactor
   - - meta
     - property: og:title
-      content: 스크럼반
+      content: スクラムバン
   - - meta
     - property: og:description
-      content: git commit, git commit 메시지, git 커밋 규칙, git 커밋 컨벤션, commit message guide, commit convention, git 협업, git 브랜치 전략, feat, fix, refactor
+      content: git commit, git commit メッセージ, git コミット ルール, git コミット コンベンション, commit message guide, commit convention, git コラボレーション, git ブランチ戦略, feat, fix, refactor
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,58 +20,58 @@ head:
 sort: 5000
 ---
 
-## git 커밋 메세지 작성
+## git コミットメッセージの作成
 
-## 🔎 요약 (TL;DR)
+## 🔎 要約 (TL;DR)
 
-- **형식**: `<type>(scope): <subject>`
-- **제목(Subject)**: 명령형, **50자 이내**, 끝에 마침표 X
-- **본문(Body)**: _무엇을_ + **왜** 했는지 (필요할 때만, 줄폭 \~72자)
-- **꼬리말(Footer)**: 이슈 연결 `Closes #123`, 큰 변경은 `BREAKING CHANGE:`
-- **타입(Conventional Commits)**: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `build`, `ci`
-- **원칙**: 한 커밋 = 한 목적, “해결은 코드가 말하고 동기는 본문이 말한다”
+- **形式**: `<type>(scope): <subject>`
+- **件名(Subject)**: 命令形、**50文字以内**、末尾にピリオドなし
+- **本文(Body)**: _何を_ + **なぜ** したのか (必要な場合のみ、1行約72文字)
+- **フッター(Footer)**: イシューのリンク `Closes #123`、大きな変更は `BREAKING CHANGE:`
+- **タイプ(Conventional Commits)**: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `build`, `ci`
+- **原則**: 1つのコミット = 1つの目的、「解決策はコードが語り、動機は本文が語る」
 
 ---
 
-## 📘 자세한 설명
+## 📘 詳細な説明
 
-## 1) 메시지 구조
-
-```
-<type>(옵션:scope): <subject>
-
-본문(선택) — 무엇과 왜를 설명, 72자 내로 줄바꿈
-필요하면 목록/항목화
-
-꼬리말(선택) — 이슈/브레이킹 체인지/공동작업자 등
-```
-
-### 예시
+## 1) メッセージ構造
 
 ```
-feat(auth): 구글 소셜 로그인 추가
+<type>(オプション:scope): <subject>
 
-OAuth 2.0 기반으로 구글 계정으로 로그인/가입을 지원합니다.
-기존 이메일 기반 가입 전환율이 낮아 대안 경로를 제공합니다.
+本文(オプション) — 何を、なぜを説明、72文字以内で改行
+必要であればリスト/項目化
+
+フッター(オプション) — イシュー/破壊的変更/共同作業者など
+```
+
+### 例
+
+```
+feat(auth): Googleソーシャルログインの追加
+
+OAuth 2.0ベースでGoogleアカウントによるログイン/登録をサポートします。
+既存のメールベースの登録のコンバージョン率が低いため、代替ルートを提供します。
 
 Closes #52
 ```
 
 ---
 
-## 2) 제목(Subject) 작성 규칙
+## 2) 件名(Subject)作成ルール
 
-- **명령형 동사**로 시작: “Add”, “Fix”, “Refactor” / 한국어면 “추가”, “수정”처럼 **행위**가 드러나게.
-- **50자 이내**, **마침표( . ) 금지**, **불필요한 수식어 금지**.
-- **Scope**는 좁고 명확하게: `auth`, `api`, `signup`, `ci`, `deps` 등.
+- **命令形の動詞**で開始: 「Add」、「Fix」、「Refactor」 / 日本語なら「追加」、「修正」のように**行為**がわかるように。
+- **50文字以内**、**ピリオド( . )禁止**、**不要な修飾語禁止**。
+- **Scope**は狭く明確に: `auth`, `api`, `signup`, `ci`, `deps` など。
 
-**좋은 예**
+**良い例**
 
-- `fix(api): 회원가입 중복 이메일 검사 추가`
-- `refactor(search): 인덱스 전략 변경으로 응답 시간 개선`
-- `docs: 설치 가이드에 Docker 사용법 추가`
+- `fix(api): 会員登録の重複メール検査の追加`
+- `refactor(search): インデックス戦略の変更による応答時間の改善`
+- `docs: インストールガイドにDockerの使用法を追加`
 
-**나쁜 예**
+**悪い例**
 
 - `update stuff`
 - `fix`
@@ -79,131 +79,131 @@ Closes #52
 
 ---
 
-## 3) 본문(Body) — _무엇 + 왜_
+## 3) 本文(Body) — _何を + なぜ_
 
-- **무엇을** 바꿨는지 요약 + **왜** 필요한지 배경/의도/대안 비교.
-- “어떻게”는 과도하게 설명하지 않되, **중요한 의사결정/트레이드오프**는 남기기.
-- 버그 수정이면 **재현 조건 → 원인 → 해결 방식** 순서가 좋음.
-- 줄폭 **\~72자**로 자동 줄바꿈(가독성/CLI 뷰 고려).
+- **何を** 変更したかの要約 + **なぜ** 必要なのかの背景/意図/代替案との比較。
+- 「どのように」は過度に説明せず、**重要な意思決定/トレードオフ**は残す。
+- バグ修正であれば **再現条件 → 原因 → 解決方法** の順序が良い。
+- 行幅は **約72文字** で自動改行(可読性/CLIビューを考慮)。
 
-**본문 예시(버그 수정)**
-
-```
-비동기 검증 중 중복 요청이 발생하면 마지막 응답이 이전 결과로 덮이는 문제를
-debounce 처리와 취소 토큰을 통해 방지했습니다.
-
-재현: 느린 네트워크에서 입력창에 빠르게 타이핑 시 상태 불일치 발생.
-원인: 이전 요청 취소 미구현.
-해결: AbortController로 이전 요청 취소 + debounce(300ms) 적용.
-```
-
----
-
-## 4) 꼬리말(Footer)
-
-- **이슈 연결**: `Closes #123` / `Fixes JIRA-456`
-- **브레이킹 체인지**: `BREAKING CHANGE:`로 시작해 **무엇이 깨졌고** **마이그레이션 방법** 명시
-- **공동 작업자**: `Co-authored-by: 이름 <email>`
-- **참고**: `Refs #789`, `See also: ...`
-
-**브레이킹 예시**
+**本文の例(バグ修正)**
 
 ```
-BREAKING CHANGE: 회원 테이블에 unique index(email) 추가.
-기존 중복 데이터는 마이그레이션 스크립트로 정리 필요.
+非同期検証中に重複リクエストが発生すると、最後の応答が前の結果で上書きされる問題を
+debounce処理とキャンセルトークンを通じて防止しました。
+
+再現: 遅いネットワークで入力欄に素早くタイピングすると状態の不一致が発生。
+原因: 前のリクエストのキャンセルが未実装。
+解決: AbortControllerで前のリクエストをキャンセル + debounce(300ms)適用。
 ```
 
 ---
 
-## 5) 타입(Conventional Commits) 빠른 가이드
+## 4) フッター(Footer)
 
-- `feat`: 사용자에게 보이는 **새 기능**
-- `fix`: **버그 수정**
-- `docs`: 문서/가이드 변경
-- `style`: 포맷/공백/세미콜론 등 **로직 무관**
-- `refactor`: 리팩토링(동작 동일)
-- `test`: 테스트 추가/수정
-- `chore`: 빌드/도구/패키지 작업(코드 영향 적음)
-- `build`: 빌드 시스템/의존성
-- `ci`: CI 설정/스크립트
+- **イシューのリンク**: `Closes #123` / `Fixes JIRA-456`
+- **破壊的変更**: `BREAKING CHANGE:` で開始し、**何が壊れたか**と**移行方法**を明示
+- **共同作業者**: `Co-authored-by: 名前 <email>`
+- **参照**: `Refs #789`, `See also: ...`
 
-> 팀에서 **필수 타입만 좁게** 쓰면 일관성이 올라갑니다. (예: `feat|fix|refactor|docs|test|chore`)
+**破壊的変更の例**
+
+```
+BREAKING CHANGE: 会員テーブルに unique index(email) 追加。
+既存の重複データは移行スクリプトで整理が必要。
+```
 
 ---
 
-## 6) 상황별 샘플
+## 5) タイプ(Conventional Commits) クイックガイド
 
-\*\* 기능 추가 \*\*
+- `feat`: ユーザーに見える**新機能**
+- `fix`: **バグ修正**
+- `docs`: ドキュメント/ガイドの変更
+- `style`: フォーマット/空白/セミコロンなど **ロジックに無関係**
+- `refactor`: リファクタリング(動作は同じ)
+- `test`: テストの追加/修正
+- `chore`: ビルド/ツール/パッケージ作業(コードへの影響が少ない)
+- `build`: ビルドシステム/依存関係
+- `ci`: CI設定/スクリプト
+
+> チームで**必須タイプだけを絞って**使うと一貫性が上がります。 (例: `feat|fix|refactor|docs|test|chore`)
+
+---
+
+## 6) 状況別サンプル
+
+\*\* 機能追加 \*\*
 
 ```
-feat(search): 추천 키워드 API 추가
+feat(search): 推奨キーワードAPIの追加
 
-검색 전환율 향상을 위해 서버 측 추천 키워드를 제공합니다.
-AB 테스트 그룹 B에만 노출되며 2주간 수집 후 평가 예정.
+検索コンバージョン率向上のため、サーバー側の推奨キーワードを提供します。
+ABテストグループBにのみ露出し、2週間収集後に評価予定。
 
 Closes #410
 ```
 
-\*\* 버그 수정 \*\*
+\*\* バグ修正 \*\*
 
 ```
-fix(cart): 할인 코드가 중복 적용되던 문제 수정
+fix(cart): 割引コードが重複適用されていた問題の修正
 
-할인 정책 우선순위 계산 시 누락된 조건으로 인해
-특정 시나리오에서 두 번 적용되었습니다.
+割引ポリシーの優先順位計算時に欠落していた条件により、
+特定のシナリオで2回適用されていました。
 
 Fixes #612
 ```
 
-\*\* 리팩토링 \*\*
+\*\* リファクタリング \*\*
 
 ```
-refactor(core): 의존성 주입으로 모듈 결합도 낮춤
+refactor(core): 依存性の注入によりモジュール結合度を低下
 
-싱글톤 전역 접근을 제거하고 DI 컨테이너로 교체했습니다.
-테스트 가능성과 확장성을 위해 인터페이스를 도입했습니다.
+シングルトンのグローバルアクセスを削除し、DIコンテナに置き換えました。
+テスト可能性と拡張性のためにインターフェースを導入しました。
 ```
 
-\*\* 문서 \*\*
+\*\* ドキュメント \*\*
 
 ```
-docs(readme): 로컬 개발 환경 설정 절차 보완
+docs(readme): ローカル開発環境のセットアップ手順の補足
 
-Node 버전 제약과 .env 샘플 파일 설명을 추가했습니다.
+Nodeバージョンの制約と.envサンプルファイルの説明を追加しました。
 ```
 
-\*\* 설정/의존성 \*\*
+\*\* 設定/依存関係 \*\*
 
 ```
-chore(deps): lodash 4.17.21로 보안 업데이트
+chore(deps): lodash 4.17.21へのセキュリティアップデート
 
-GHSA-... 취약점 패치 포함.
+GHSA-... 脆弱性パッチを含む。
 Refs #702
 ```
 
 ---
 
-## 7) 팀 운영 팁
+## 7) チーム運用のヒント
 
-- **언어 통일**(한글/영문), **시제 통일**(명령형) 합의.
-- **한 커밋 = 한 목적**(리뷰/리버트 용이). 코드는 작게, 커밋은 자주.
-- **PR 제목 = 대표 커밋 제목** 관례로 맞추면 changelog 품질↑
-- **이슈-브랜치-커밋 연결 규칙**: `feature/JIRA-123-auth-social-login` → 커밋 `feat(auth): ... (Closes JIRA-123)`
-
----
-
-## 8) 안티패턴(피하기)
-
-- `WIP` 남발, “update/fix” 같은 **의미 없는 제목**
-- **여러 논리를 한 커밋**에 섞기(포맷+리팩토링+기능)
-- 커밋 메시지에 **코드 덤프/긴 로그** 붙이기
-- **본문 없이** 맥락 상실(특히 버그 수정)
+- **言語の統一**(日本語/英語)、**時制の統一**(命令形)の合意。
+- **1つのコミット = 1つの目的**(レビュー/リバートが容易)。コードは小さく、コミットは頻繁に。
+- **PRのタイトル = 代表コミットのタイトル**の慣例に合わせるとchangelogの品質↑
+- **イシュー-ブランチ-コミットの連結ルール**: `feature/JIRA-123-auth-social-login` → コミット `feat(auth): ... (Closes JIRA-123)`
 
 ---
 
-## 9) 자동화(선택)
+## 8) アンチパターン(避けるべきこと)
 
-- **Commit Template**(로컬): `git config --global commit.template ~/.gitmessage.txt`
+- `WIP`の乱発、「update/fix」のような**意味のないタイトル**
+- **複数のロジックを1つのコミット**に混ぜる(フォーマット+リファクタリング+機能)
+- コミットメッセージに**コードダンプ/長いログ**を貼り付ける
+- **本文なし**で文脈を喪失(特にバグ修正)
+
+---
+
+## 9) 自動化(オプション)
+
+- **Commit Template**(ローカル): `git config --global commit.template ~/.gitmessage.txt`
 
 ```txt
 # <type>(scope): <subject>
@@ -213,8 +213,8 @@ Refs #702
 # Footer: Closes #, BREAKING CHANGE:, Co-authored-by:
 ```
 
-- **commitlint + husky**로 규칙 강제(예: Node 리포지터리)
-  `package.json` 예시:
+- **commitlint + husky**でルールを強制(例: Nodeリポジトリ)
+  `package.json` の例:
 
 ```json
 {
@@ -230,7 +230,7 @@ Refs #702
 }
 ```
 
-셋업:
+セットアップ:
 
 ```bash
 npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'

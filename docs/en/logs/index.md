@@ -1,16 +1,16 @@
 ---
-title: 작업 로그
-description: 기억은 금방 사라지지만, 로그는 영원하다! 🎯 우리 팀의 재미있고 자유로운 작업 기록 공간
+title: Work Log
+description: Memories fade quickly, but logs are forever! 🎯 Our team's fun and free work record space
 head:
   - - meta
     - name: keywords
-      content: 공부 한것들을 적어 보아요
+      content: Let's write down what we studied
   - - meta
     - property: og:title
-      content: 작업 로그 놀이터 - 자유로운 작업 기록 공간 🎪
+      content: Work Log Playground - Free Work Record Space 🎪
   - - meta
     - property: og:description
-      content: 이 곳은 팀원들이 자유롭게 작업 로그를 기록하고 공유하는 공간입니다. 강제 없이 필요할 때 편하게 추가할 수 있는 재미있는 작업 로그 시스템을 소개합니다.
+      content: This is a space where team members freely record and share work logs. We introduce a fun work log system that you can conveniently add to whenever you need without any force.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,95 +20,95 @@ head:
 sort: 200
 ---
 
-# 🎪 작업 로그 놀이터에 어서오세요!
+# 🎪 Welcome to the Work Log Playground!
 
-**"기억은 금방 사라지지만, 로그는 영원하다!"** ✍️  
-이 곳은 우리 팀의 자유로운 작업 기록 공간입니다. 부담없이 필요할 때 마음껏 써주세요!
+**"Memories fade quickly, but logs are forever!"** ✍️  
+This is our team's free work record space. Feel free to use it as much as you want whenever you need it!
 
 ---
 
-## 🗂️ 공간 구조 (간단해요!)
+## 🗂️ Space Structure (It's simple!)
 
 ```
 logs/
-│── 2024-03-15_crash_debug.md   # "3월 기억나요? 그때 그거 했잖아요!" 특별했던 그날의 기록
+│── 2024-03-15_crash_debug.md   # "Remember March? We did that back then!" The record of that special day
 │── ...
-└── README.md                   # 지금 읽고 있는 이 안내문!
+└── README.md                   # This guide you are reading now!
 ```
 
 ---
 
-## ✨ 자유로운 작성 규칙
+## ✨ Free Writing Rules
 
-1. **하고 싶을 때** 작성하세요 (강제 X)
-2. **원하는 형식**으로 작성하세요 (자유 O)
-3. **아무나** 작성할 수 있어요 (권한 無)
+1. Write **when you want to** (No force X)
+2. Write in **any format you want** (Freedom O)
+3. **Anyone** can write (No permissions required)
 
 ---
 
-## 🎨 작성 예시 (마음대로 고쳐쓰세요!)
+## 🎨 Writing Example (Feel free to rewrite!)
 
 ```markdown
-# 오늘의 셀프 인터뷰 🎤
+# Today's Self Interview 🎤
 
-## 💪 오늘의 성과
+## 💪 Today's Achievements
 
-- [x] 홈페이지에 빛나는 효과 추가
-- [x] 고객님의 "이게 뭐죠?" 질문에 답변
+- [x] Added a shiny effect to the homepage
+- [x] Answered the customer's "What is this?" question
 
-## 🤔 깨달은 점
+## 🤔 What I Realized
 
-- 오늘의 발견: "커피가 떨어지면 작업 효율이 200% 감소한다"
+- Today's discovery: "When coffee runs out, work efficiency decreases by 200%"
 
-## 🎯 내일/다음에 할 일
+## 🎯 What to do Tomorrow/Next
 
-- [ ] 그때 그거 마저 만들기
-- [ ] 새로운 아이디어 시도해보기
+- [ ] Finish making that thing from last time
+- [ ] Try out a new idea
 ```
 
 ---
 
-## 🌈 이런 걸 적어도 OK!
+## 🌈 Writing these is OK too!
 
-- ✅ 오늘 한 작은 성취
-- ✅ 재미있었던 에피소드
-- ✅ 발견한 새로운 정보
-- ✅ 실패한 경험과 교훈
-- ✅ 그냥 오늘의 감정
-
----
-
-## 🚫 이런 건 NO! (아주 조금만)
-
-- ⚠️ 비밀번호 같은 개인정보
-- ⚠️ 남을 비방하는 내용
-- ⚠️ 회사 기밀 사항
+- ✅ A small achievement you made today
+- ✅ A fun episode
+- ✅ New information you discovered
+- ✅ Failed experiences and lessons learned
+- ✅ Just your feelings for the day
 
 ---
 
-## 🤝 함께 하는 방법
+## 🚫 These are NO! (Just a little bit)
 
-1. **마음가는 대로** 로그 추가
-2. **다른 사람 로그** 읽어보기 (재미있어요!)
-3. **서로 댓글이나 반응** 남기기
-
----
-
-## 💫 왜 이 공간이 있나요?
-
-- **기억 보조제**: 까먹기 전에 재밌게 기록
-- **자유로운 공유**: 강제 없이 자연스러운 소통
-- **성장 기록**: 우리가 어떻게 발전하는지 보여주는 지도
+- ⚠️ Personal information like passwords
+- ⚠️ Content slandering others
+- ⚠️ Company confidential matters
 
 ---
 
-## 🎊 시작하는 법
+## 🤝 How to participate together
 
-1. `logs/2024-03-15_my_file.md` 같은 파일 만들기
-2. 마음대로 내용 작성하기
-3. 커밋하고 푸시하기 (끝!)
+1. Add logs **however you feel**
+2. Read **other people's logs** (It's fun!)
+3. **Leave comments or reactions** to each other
 
 ---
 
-_이 공간은 **작업 로그 저장용**이지만, 규칙은 최소한으로!  
-자유롭게 참여해주세요~ 🎉_
+## 💫 Why does this space exist?
+
+- **Memory aid**: Record for fun before you forget
+- **Free sharing**: Natural communication without being forced
+- **Growth record**: A map showing how we develop
+
+---
+
+## 🎊 How to start
+
+1. Create a file like `logs/2024-03-15_my_file.md`
+2. Write content freely
+3. Commit and push (Done!)
+
+---
+
+_This space is for **saving work logs**, but with minimal rules!  
+Please participate freely~ 🎉_

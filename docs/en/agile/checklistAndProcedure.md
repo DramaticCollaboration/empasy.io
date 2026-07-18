@@ -1,16 +1,16 @@
 ---
-title: 미팅 체크리스트 및 진행 절차
-description: 스크럼반(Scrumban)은 스크럼의 반복적 구조와 칸반의 흐름 관리·WIP 제한을 결합해 유연하고 효율적으로 작업을 관리하는 하이브리드 애자일 방법론입니다.
+title: Meeting Checklist and Procedure
+description: Scrumban is a hybrid agile methodology that combines Scrum's iterative structure with Kanban's flow management and WIP limits to manage work flexibly and efficiently.
 head:
   - - meta
     - name: keywords
-      content: 스크럼반, Scrumban, 스크럼반 소개, 스크럼반 개념, 스크럼반이란, Scrumban 소개, Scrumban 개념, 스크럼과 칸반 차이, 스크럼 vs 칸반, 애자일 방법론, 애자일 프레임워크, 칸반 방법론, 스크럼 방법론, 스크럼반 프로세스, 스크럼반 운영 가이드, 스크럼반 보드, WIP 제한, 작업 흐름 관리, 칸반 보드 사용법, 스크럼반 장점, 스크럼반 특징, 스크럼반 효과, 스크럼반 활용 사례, 스크럼반 도입 효과, 스크럼반 Jira 설정, 스크럼반 보드 템플릿, Scrumban 툴, 스크럼반 협업툴, 스크럼반 워크플로우, 애자일 프로젝트 관리, 업무 효율화 방법론, 반복적 작업 관리, 병목 현상 해결
+      content: Scrumban, Scrumban Introduction, Scrumban Concept, What is Scrumban, Scrumban vs Kanban, Agile Methodology, Agile Framework, Kanban Methodology, Scrum Methodology, Scrumban Process, Scrumban Operation Guide, Scrumban Board, WIP Limit, Workflow Management, How to use Kanban Board, Scrumban Advantages, Scrumban Features, Scrumban Effects, Scrumban Use Cases, Scrumban Introduction Effects, Scrumban Jira Setup, Scrumban Board Template, Scrumban Tool, Scrumban Collaboration Tool, Scrumban Workflow, Agile Project Management, Work Efficiency Methodology, Iterative Work Management, Bottleneck Resolution
   - - meta
     - property: og:title
-      content: 스크럼반
+      content: Scrumban
   - - meta
     - property: og:description
-      content: 스크럼반(Scrumban)은 스크럼의 반복적 구조와 칸반의 흐름 관리·WIP 제한을 결합해 유연하고 효율적으로 작업을 관리하는 하이브리드 애자일 방법론입니다.
+      content: Scrumban is a hybrid agile methodology that combines Scrum's iterative structure with Kanban's flow management and WIP limits to manage work flexibly and efficiently.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,85 +20,75 @@ head:
 sort: 450
 ---
 
-# Scrumban 미팅 및 행사 목록과 진행 방법 상세 설명
+# Scrumban Meeting and Event List and Detailed Procedures
 
-## 1. **데일리 스탠드업 미팅 (Daily Stand-up)**
+## 1. **Daily Stand-up**
 
-- **목적**: 팀원들이 현재 작업 상태를 공유하고, 장애 요소를 파악하며, 당일 목표를 명확히 하기 위함.
-- **진행 방법**:
+- **Purpose**: For team members to share their current work status, identify obstacles, and clarify the goals for the day.
+- **How to proceed**:
+  - Held daily at a set time (usually in the morning) for within 15 minutes.
+  - All team members stand during the meeting to keep it short.
+  - Each team member briefly shares answers to these 3 questions:
+    - What did you do yesterday?
+    - What are you planning to do today?
+    - Are there any obstacles in your current work?
+  - Conducted in front of the Kanban board to visually check the progress of tasks.
 
-  - 매일 정해진 시간(보통 오전)에 15분 이내로 진행.
-  - 모든 팀원이 서서 진행하여 회의 시간을 짧게 유지.
-  - 각 팀원이 다음 3가지 질문에 대해 간략히 공유:
+## 2. **Backlog Refinement**
 
-    - 어제 무엇을 했는가?
-    - 오늘 무엇을 할 예정인가?
-    - 현재 작업에 장애 요소가 있는가?
+- **Purpose**: The process of continuously reviewing and reprioritizing backlog items, and breaking them down into task units.
+- **How to proceed**:
+  - Conducted periodically (e.g., 1-2 times a week).
+  - The PO (Product Owner) or related person in charge participates to adjust the priority of stories.
+  - Analyze items with the team and, if necessary, break down the work into smaller units.
+  - Increase understanding and readiness for the work to prevent disruptions in future work.
 
-  - 칸반 보드 앞에서 진행해 작업 진행 상태를 시각적으로 확인.
+## 3. **Release Planning**
 
-## 2. **백로그 리파인먼트 (Backlog Refinement)**
+- **Purpose**: Setting mid-to-long-term goals and establishing functional release plans.
+- **How to proceed**:
+  - Conducted as needed or periodically (e.g., monthly, quarterly).
+  - The entire team participates to discuss target features and release schedules.
+  - Create a plan by appropriately combining the Kanban board and Scrum's sprint concept.
+  - Establish a realistic schedule considering the Work in Progress (WIP) limits.
 
-- **목적**: 백로그 아이템을 지속적으로 리뷰 및 우선순위 조정, 작업 단위로 분해하는 과정.
-- **진행 방법**:
+## 4. **Review Meeting**
 
-  - 주기적으로 (예: 1주일에 1\~2회) 진행.
-  - PO(Product Owner) 또는 관련 담당자가 참여해 스토리의 우선순위를 조정.
-  - 팀과 함께 아이템을 분석하고, 필요한 경우 업무를 더 작은 단위로 쪼갬.
-  - 작업에 대한 이해도와 준비 상태를 높여 추후 작업에 차질 없도록 준비.
+- **Purpose**: A time to share completed work outcomes and receive feedback.
+- **How to proceed**:
+  - Conducted periodically or as needed.
+  - Team members demonstrate completed work or share results.
+  - Stakeholders and PO attend to provide feedback.
+  - Discuss areas for improvement and success stories together.
 
-## 3. **릴리즈 플래닝 (Release Planning)**
+## 5. **Retrospective**
 
-- **목적**: 중장기 목표 설정과 기능 릴리즈 계획 수립.
-- **진행 방법**:
+- **Purpose**: To look back on the team's work process and collaboration methods to derive areas for improvement.
+- **How to proceed**:
+  - Conducted periodically (e.g., once every 2 weeks, or once a month).
+  - All team members participate.
+  - General procedure:
+    - Share what went well
+    - Identify problems and obstacles
+    - Discuss improvement ideas
+    - Select actionable action items
+  - Action items are reflected and executed in the next period.
 
-  - 필요 시 또는 주기적으로(예: 매월, 분기별) 진행.
-  - 팀 전체가 참여해 목표 기능과 릴리즈 일정을 협의.
-  - 칸반 보드와 스크럼의 스프린트 개념을 적절히 조합해 계획을 세움.
-  - 작업량(와크 인 프로그레스, WIP) 제한을 고려해 현실적인 일정 수립.
+## 6. **Priority Adjustment and WIP Limit Management Meeting**
 
-## 4. **리뷰 미팅 (Review Meeting)**
-
-- **목적**: 완료된 작업 결과물을 공유하고 피드백을 받는 자리.
-- **진행 방법**:
-
-  - 주기적 혹은 필요에 따라 진행.
-  - 팀원이 완료한 작업을 시연하거나 결과를 공유.
-  - 스테이크홀더 및 PO가 참석해 피드백 제공.
-  - 개선할 점과 성공 사례를 함께 논의.
-
-## 5. **회고 미팅 (Retrospective)**
-
-- **목적**: 팀의 작업 과정과 협업 방식에 대해 돌아보고 개선점을 도출.
-- **진행 방법**:
-
-  - 주기적으로 진행 (예: 2주에 1회, 혹은 월 1회).
-  - 팀원 모두가 참여.
-  - 일반적인 진행 절차:
-
-    - 잘된 점 공유
-    - 문제점과 장애 요소 도출
-    - 개선 아이디어 논의
-    - 실행 가능한 액션 아이템 선정
-
-  - 액션 아이템은 다음 기간에 반영되어 실행.
-
-## 6. **우선순위 조정 및 WIP 제한 관리 미팅**
-
-- **목적**: 칸반의 핵심인 WIP 제한을 점검하고, 우선순위를 조정하여 작업 흐름을 최적화.
-- **진행 방법**:
-
-  - 필요 시 수시로 진행 가능.
-  - 팀이 현재 WIP 한도를 초과했는지 확인.
-  - 병목 현상이나 지연 상황을 파악하고 해결책 논의.
-  - 작업 추가 시 우선순위 재조정.
+- **Purpose**: To optimize workflow by checking the WIP limit, which is the core of Kanban, and adjusting priorities.
+- **How to proceed**:
+  - Can be conducted frequently as needed.
+  - Check if the team has exceeded the current WIP limit.
+  - Identify bottlenecks or delayed situations and discuss solutions.
+  - Readjust priorities when adding tasks.
 
 ---
 
-# 추가 참고
+# Additional Notes
 
-- **칸반 보드 활용**: 모든 미팅은 칸반 보드(실제 보드 또는 디지털 보드)를 중심으로 진행하여 작업의 시각화가 핵심.
-- **유연한 진행**: Scrumban은 엄격한 스프린트가 없고, 필요에 따라 미팅 빈도와 내용을 조절할 수 있다.
-- **WIP 제한 중요**: WIP 제한을 잘 지키는 것이 작업 효율성 향상과 병목 최소화에 중요하다.
+- **Utilization of Kanban Board**: The core of all meetings is to proceed centered around the Kanban board (physical board or digital board) to visualize the work.
+- **Flexible Progression**: Scrumban does not have strict sprints, and the frequency and content of meetings can be adjusted as needed.
+- **Importance of WIP Limits**: Strictly adhering to WIP limits is important for improving work efficiency and minimizing bottlenecks.
 
 ---

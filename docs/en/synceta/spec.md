@@ -1,16 +1,16 @@
 ---
-title: 기능 사양서
-description: AI 테스트 자동화 방법과 최신 도구를 비교해보세요. 머신러닝 기반 자동화 테스트로 QA 효율성을 높이는 방법을 알아봅니다.
+title: Feature Specifications
+description: Compare AI test automation methods and the latest tools. Learn how to increase QA efficiency with machine learning-based automated testing.
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, 테스팅 생성형 AI, Playwright, Selenium, 실시간 품질 피드백, 무중단 테스트, AI 기반 테스트 자동화, 지속적 테스트, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, 자기 치유 테스트, Self-healing,  AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
+      content: Test Automation, Testing Generative AI, Playwright, Selenium, Real-time Quality Feedback, Zero-downtime Testing, AI-based Test Automation, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, Self-healing Test, Self-healing, AI Test Automation, Codeless Automation, QA Automation, Software Testing, Test Scenario Creation, Codeless Test, Natural Language Test, Test Automation Tool, Test Automation Platform, Test Efficiency, Playwright, Selenium, QAOps, TestOps, Shift-Left Testing, Shift-Right Testing
   - - meta
     - property: og:title
-      content: AI 테스트 자동화 | SyncETA
+      content: AI Test Automation | SyncETA
   - - meta
     - property: og:description
-      content: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+      content: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,106 +20,106 @@ head:
 sort: 2000
 ---
 
-# SyncETA 하드웨어 및 소프트웨어 상세 사양서
+# SyncETA Hardware and Software Detailed Specifications
 
-본 문서에서는 SyncETA 회귀 테스트 자동화 솔루션의 하드웨어 및 소프트웨어 사양을 상세히 기술합니다.
-사용자의 웹 브라우저 동작 레코딩, 테스트 실행, 결과 관리 및 기타 부수적인 기능을 기술합니다.
+This document details the hardware and software specifications of the SyncETA regression test automation solution.
+It describes the user's web browser action recording, test execution, result management, and other ancillary features.
 
-## 1. 시스템 배포 및 운영 환경
+## 1. System Deployment and Operating Environment
 
-- **배포 형태**: SyncETA는 Docker 기반의 설치형(On-premise) 또는 클라우드 SaaS(Software as a Service) 형태로 배포될 수 있습니다.
-- **보안 요건**: 보안 요건에 따라 LLM 모델을 온프레미스에서 실행할 수 있도록 지원합니다.
-- **테스트 환경**: 개발 서버가 아닌 운영 서버를 대상으로 시나리오 녹화 및 실행을 수행하여 실제 환경에서의 테스트를 지원합니다.
+- **Deployment Format**: SyncETA can be deployed as a Docker-based installation (On-premise) or as a Cloud SaaS (Software as a Service) format.
+- **Security Requirements**: Supports executing LLM models on-premise depending on security requirements.
+- **Test Environment**: Supports testing in real environments by performing scenario recording and execution against the production server rather than the development server.
 
-## 2. 시스템 구성 요소 및 상세 기능
+## 2. System Components and Detailed Features
 
-SyncETA는 크게 다음과 같은 모듈로 구성됩니다:
+SyncETA largely consists of the following modules:
 
-### 2.1 SyncETA Recorder (사용자 행동 녹화 모듈)
+### 2.1 SyncETA Recorder (User Action Recording Module)
 
-**기술**: Selenium 기술을 사용합니다. Selenium 기반의 강력하고 사용하기 쉬운 프레임워크를 활용하여 테스트 작성 및 유지보수를 단순화하고 웹 테스트 프로세스를 최적화합니다.
+**Technology**: Uses Selenium technology. It utilizes a powerful and easy-to-use framework based on Selenium to simplify test creation and maintenance and optimize the web testing process.
 
-**기능**:
+**Features**:
 
-- 사용자의 실제 브라우저 동작(클릭, 입력, 스크롤, 페이지 이동, 탭 정보 등)을 실시간으로 캡처하고 녹화합니다.
-- 녹화 시 URL, XPath, 클래스, ID, DOM 정보 등의 상세한 이벤트 및 DOM 정보를 기록합니다.
-- 녹화된 동작은 테스트 목적에 맞는 시나리오로 자동 생성 및 JSON/YAML 기반 포맷으로 저장됩니다.
-- 복수의 사용자가 동시에 상호작용하는 시나리오 녹화를 지원합니다.
+- Captures and records the user's actual browser actions (clicks, inputs, scrolls, page movements, tab information, etc.) in real-time.
+- Records detailed events and DOM information such as URL, XPath, Class, ID, and DOM information during recording.
+- Recorded actions are automatically generated into scenarios suitable for testing purposes and saved in JSON/YAML-based formats.
+- Supports recording scenarios where multiple users interact simultaneously.
 
-**사용자 인터페이스**:
+**User Interface**:
 
-- 녹화할 웹 URL을 입력하고, 자유로운 웹 브라우저 선택 및 사이즈 설정을 할 수 있도록 편리한 화면을 제공합니다.
-- 다양한 사용자 이벤트를 수집하며, 직관적인 GUI 및 키워드 기반의 비코드 방식으로 테스트 자동화 구축이 용이합니다.
-- 스크립트(JavaScript) 기반의 코드 방식도 함께 제공합니다.
-- 각 이벤트에 대해 추가적인 조건(AI, Script)을 추가하여 데이터 검증 기능을 강화합니다.
-- 각 이벤트 별 성공 조건 추가 및 실패 복구 스크립트 설정이 가능합니다.
-- 실행 전 대기 시간 부여 및 변수명 지정 기능을 제공합니다.
+- Provides a convenient screen to enter the web URL to record, and freely select the web browser and set its size.
+- Collects various user events, and test automation can be easily built using an intuitive GUI and keyword-based non-code methods.
+- Also provides a script (JavaScript)-based code method.
+- Strengthens data verification capabilities by adding additional conditions (AI, Script) to each event.
+- Can add success conditions and set failure recovery scripts for each event.
+- Provides functions to assign wait times before execution and specify variable names.
 
-### 2.2 Test Executor (자동 테스트 실행 모듈)
+### 2.2 Test Executor (Automated Test Execution Module)
 
-**기술**: Playwright MCP (Multi-Channel Platform) 를 연동하여 사용합니다.
+**Technology**: Interlocks and uses Playwright MCP (Multi-Channel Platform).
 
-**기능**:
+**Features**:
 
-- 자동 실행 스크립트가 생성되며, 실제 브라우저 자동화 환경에서 테스트를 실행합니다.
-- 멀티 브라우저 자동화 환경에서 병렬 테스트 실행을 지원하여 빠른 결과 도출이 가능합니다.
-- Chrome, Firefox, Edge 등 다양한 브라우저에서의 크로스 브라우저 호환성을 지원하며, Safari 브라우저 추가도 요청되었습니다.
-- 실행 결과 보고서(통과/실패 로그, 스크린샷 등)를 제공하며, 실패한 테스트 케이스는 자동 로깅됩니다.
-- 테스트 실행 중 에러 발생 시 사용자 친화적인 에러 식별 및 진단 기능을 제공합니다. 에러 발생 지점의 스크린샷, 에러 발생 시 녹화 화면(영상) 제공, 그리고 사용자 친화적인 에러 메시지를 표시합니다. 대쉬보드에서 에러 클릭 시 에러 당시의 녹화 화면을 영상으로 보여줍니다.
+- Automatically generated execution scripts are run in an actual browser automation environment.
+- Supports parallel test execution in a multi-browser automation environment, enabling rapid results.
+- Supports cross-browser compatibility in various browsers such as Chrome, Firefox, and Edge, and the addition of Safari browser has also been requested.
+- Provides execution result reports (pass/fail logs, screenshots, etc.), and failed test cases are automatically logged.
+- Provides user-friendly error identification and diagnostic features when errors occur during test execution. It displays screenshots of the error point, recorded screens (video) when the error occurred, and user-friendly error messages. Clicking an error on the dashboard shows a video of the recorded screen at the time of the error.
 
-### 2.3 대쉬보드/관리 시스템
+### 2.3 Dashboard/Management System
 
-**기능**: 시나리오 등록 현황, 실행 현황, 에러 현황, 브라우저 정보 등 시스템 모니터링이 가능한 대쉬보드를 제공합니다.
+**Features**: Provides a dashboard for system monitoring such as scenario registration status, execution status, error status, and browser information.
 
-**보고서(Report)**:
+**Report**:
 
-- 실행 결과 시각화, 테스트 트렌드 분석을 포함한 정밀 보고서 및 분석을 제공하며, 고객 요구사항에 맞춘 커스텀 보고서 제공이 가능합니다.
-- 메일 템플릿으로 보고서를 발송하며, 대쉬보드에서 이미지 확인이 가능하나 보고서에는 미포함됩니다.
+- Provides precise reports and analysis including execution result visualization and test trend analysis, and can provide custom reports tailored to customer requirements.
+- Sends reports using mail templates, and while images can be checked on the dashboard, they are not included in the report.
 
-**시나리오 관리 기능**:
+**Scenario Management Feature**:
 
-- 저장된 시나리오의 분류, 검색, 버전 관리가 가능합니다.
-- 녹화 시점의 데이터 기록 및 수정 내역에 대한 버전 관리 표시를 지원합니다.
-- 고객 요구에 맞게 테스트 시나리오 추출이 가능합니다.
-- 시나리오 히스토리 필터링을 통해 실행 이력 관리 편의성을 제공합니다.
-- UI 변화 감지 시 자동으로 테스트 실패 처리하여 퍼블리싱 및 UI 변경 검수 작업에 최적화됩니다.
+- Can classify, search, and version-control saved scenarios.
+- Supports version control display for data records at the time of recording and modification history.
+- Can extract test scenarios according to customer needs.
+- Provides convenience in managing execution history through scenario history filtering.
+- Optimizes publishing and UI change inspection tasks by automatically processing tests as failed when UI changes are detected.
 
-### 2.4 데이터셋 (Data Set) 관리 기능
+### 2.4 Dataset Management Feature
 
-**기능**:
+**Features**:
 
-- 표 형식으로 데이터를 입력하고 관리할 수 있으며, 변수 추가, 수정, 삭제를 지원합니다.
-- 시나리오에서 설정한 변수 값을 호출하여 직접 작성하거나, AI를 활용하여 목업 데이터를 자동으로 생성하고 다양한 값으로 테스트를 진행할 수 있습니다. 이 기능은 테스트 데이터를 생성하는 것으로, 테스트 케이스의 AI 자동 생성과는 구분됩니다.
-- 데이터셋 적용으로 다양한 케이스 테스트가 가능합니다.
-- 검증 데이터 설정: 사이트(프로젝트)의 고유한 값 설정을 통해 더 높은 정확성을 부여하여 데이터를 검증합니다.
+- Can input and manage data in a tabular format, supporting the addition, modification, and deletion of variables.
+- You can write directly by calling variable values set in the scenario, or automatically generate mockup data using AI and conduct tests with various values. This feature generates test data, which is distinct from AI automatic generation of test cases.
+- Applying datasets enables various case tests.
+- Verification Data Setting: Verifies data by granting higher accuracy through the setting of unique values for the site (project).
 
-### 2.5 시나리오 관리 및 실행 옵션
+### 2.5 Scenario Management and Execution Options
 
-- **Record**: 사용자의 이벤트 및 DOM 정보를 기록하는 기본 단위입니다.
-- **Scenario**: 레코드 정보를 체계적으로 통합하여 테스트 시나리오를 구현하는 핵심 구성 요소입니다. 자동 및 AI 기반 검증을 통해 정확성, 안정성, 실시간 상태 정보를 통한 실행 결과 추적이 가능합니다.
-- **Collection**: 여러 시나리오를 선택하여 순차적으로 실행하는 기능으로, 다양한 시나리오를 유연하게 조합하여 일관된 워크플로우를 보장합니다. 하나의 시나리오를 여러 브라우저로 실행시키려면 컬렉션으로 실행할 수 있습니다.
-- **Story**: Flow Chart 인터페이스를 통해 시나리오를 자유롭게 연결하고, 검증 결과를 바탕으로 다음 시나리오를 동적으로 실행하는 기능입니다. 시각적 워크플로우와 자동 검증으로 안정성과 효율성을 보장합니다.
-- **동적 테스트 Chaining**: 조건에 따른 연쇄적인 시나리오 실행을 통해 유연한 테스트가 가능합니다.
-- **재실행 시 초기화**: 테스트 재실행 시 환경 초기화 기능을 제공합니다.
-- **시나리오 심각도 설정**: 시나리오별 중요도 관리를 지원합니다.
-- \*\*데이터를 변경하여 다양한 환경으로 실행 가능하며, 직/병렬로 성능 테스트가 가능합니다.
+- **Record**: The basic unit that records user events and DOM information.
+- **Scenario**: A core component that implements test scenarios by systematically integrating record information. Enables tracking execution results through accuracy, stability, and real-time status information via automatic and AI-based verification.
+- **Collection**: A feature that selects multiple scenarios and executes them sequentially, guaranteeing a consistent workflow by flexibly combining various scenarios. If you want to run one scenario on multiple browsers, you can run it as a collection.
+- **Story**: A feature that freely connects scenarios through a Flow Chart interface and dynamically executes the next scenario based on verification results. Ensures stability and efficiency with visual workflows and automatic verification.
+- **Dynamic Test Chaining**: Enables flexible testing through sequential scenario execution based on conditions.
+- **Initialization upon Re-execution**: Provides an environment initialization function when re-executing a test.
+- **Scenario Severity Setting**: Supports severity management for each scenario.
+- **Can be executed in various environments by modifying data, and performance testing can be done in series/parallel.
 
-## 3. 시스템 운영 및 구현 상세
+## 3. System Operation and Implementation Details
 
-- **실시간 통신**: 소켓 통신을 통해 실시간 이벤트 동작 및 DOM 정보 확인이 가능합니다.
-- **화면 검증**: AI를 통해 각 이벤트에 대한 화면 캡쳐 후 데이터 추가 검증이 가능합니다.
-- **CI/CD 연동**: Jenkins, Git, Azure, DevOps 등 CI/CD 파이프라인 및 다양한 외부 도구/시스템과 원활하게 연동됩니다. 이를 통해 기존 개발/배포 프로세스에 테스트 자동화를 자연스럽게 통합하여 전체 소프트웨어 개발 주기의 효율성과 품질을 향상시킬 수 있습니다.
-- **보안 및 인증 처리**: 자동 로그인 처리, 쿠키 및 세션 관리 기능 제공, HTTP 인증 우회 가능, VPN, 프록시 설정 지원 등 다양한 보안 및 인증 처리 기능을 포함합니다.
-- **재사용성 및 유지보수 용이성**: 모듈화 및 재사용 가능한 테스트 구조를 통해 테스트 자산의 재사용과 유지보수 효율성을 높입니다.
+- **Real-time Communication**: Enables checking real-time event actions and DOM information through socket communication.
+- **Screen Verification**: Additional data verification is possible after capturing the screen for each event through AI.
+- **CI/CD Integration**: Seamlessly integrates with CI/CD pipelines and various external tools/systems like Jenkins, Git, Azure, DevOps, etc. Through this, it can naturally integrate test automation into the existing development/deployment process, improving the efficiency and quality of the entire software development life cycle.
+- **Security and Authentication Processing**: Includes various security and authentication processing functions such as automatic login processing, cookie and session management functions, HTTP authentication bypass capability, and VPN/Proxy setting support.
+- **Reusability and Maintenance Ease**: Increases the reuse and maintenance efficiency of test assets through a modular and reusable test structure.
 
-## 4. 기대 효과 (테스트케이스 생성 및 학습에 대한 효과 제외)
+## 4. Expected Effects (Excluding effects on test case generation and learning)
 
-- **QA 리소스 효율화**: 반복적인 테스트 작업이 자동화되어 QA 업무 효율성이 증대되고, QA 리소스가 30% 이상 절감됩니다.
-- **빠른 릴리즈 및 시장 출시**: 회귀 테스트 자동화를 통해 개발 주기를 단축하고, 신속한 피드백으로 시장 출시 시간을 앞당깁니다.
-- **코드 작성 없는 테스트 자동화**: 직관적인 GUI 및 키워드 기반 비코드 방식으로 개발 지식이 부족한 사용자도 쉽게 테스트 자동화를 구축할 수 있습니다.
-- **유연한 테스트 환경 제공**: 크로스 브라우저 호환성, 병렬 실행, 동적 체이닝 등 다양한 실행 옵션과 커스터마이징을 지원합니다. 고객의 요구에 맞게 테스트 환경 및 기능을 유연하게 조정하고 확장할 수 있도록 설계되었습니다.
-- **사용자 친화적인 에러 식별**: 에러 발생 시 사용자 친화적인 에러 메시지 제공, 스크린샷 기록, 에러 발생 시 녹화 화면 제공 등을 통해 에러 분석을 용이하게 합니다.
-- **테스트 실행의 접근성 및 효율성 증대**: 기존 시나리오 녹화 과정 없이 엑셀 테스트케이스를 직접 실행할 수 있도록 함으로써, QA 엔지니어가 유연하게 테스트를 수행하고 시간을 절약할 수 있습니다.
-- **테스트 품질 및 신뢰성 향상**: 인적 실수를 방지하고 일관된 품질을 유지합니다. 오류를 조기에 발견하고 지속적이고 안정적인 품질을 보장합니다.
+- **Streamline QA Resources**: Repetitive test tasks are automated, increasing QA work efficiency and reducing QA resources by more than 30%.
+- **Fast Release and Time-to-Market**: Shortens the development cycle through regression test automation and accelerates time-to-market with rapid feedback.
+- **Test Automation without Writing Code**: Users lacking development knowledge can also easily build test automation with an intuitive GUI and keyword-based non-code methods.
+- **Provide a Flexible Test Environment**: Supports various execution options and customization such as cross-browser compatibility, parallel execution, and dynamic chaining. Designed to flexibly adjust and expand test environments and functions according to customer needs.
+- **User-friendly Error Identification**: Facilitates error analysis by providing user-friendly error messages when an error occurs, recording screenshots, and providing recorded screens when an error occurs.
+- **Increase Accessibility and Efficiency of Test Execution**: By allowing Excel test cases to be executed directly without the existing scenario recording process, QA engineers can flexibly perform tests and save time.
+- **Improve Test Quality and Reliability**: Prevents human error and maintains consistent quality. Discovers errors early and guarantees continuous and stable quality.
 
 ---

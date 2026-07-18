@@ -1,16 +1,16 @@
 ---
-title: 데이타셋
-description: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+title: Dataset
+description: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, 테스팅 생성형 AI, Playwright, Selenium, 실시간 품질 피드백, 무중단 테스트, AI 기반 테스트 자동화, 지속적 테스트, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, 자기 치유 테스트, Self-healing,  AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
+      content: Test Automation, Testing Generative AI, Playwright, Selenium, Real-time Quality Feedback, Zero-downtime Testing, AI-based Test Automation, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, Self-healing Test, Self-healing, AI Test Automation, Codeless Automation, QA Automation, Software Testing, Test Scenario Creation, Codeless Test, Natural Language Test, Test Automation Tool, Test Automation Platform, Test Efficiency, Playwright, Selenium, QAOps, TestOps, Shift-Left Testing, Shift-Right Testing
   - - meta
     - property: og:title
-      content: AI 테스트 자동화 | SyncETA
+      content: AI Test Automation | SyncETA
   - - meta
     - property: og:description
-      content: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+      content: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,41 +20,41 @@ head:
 sort: 700
 ---
 
-# 데이터셋
+# Dataset
 
-## 데이터셋은?
+## What is a Dataset?
 
-데이터셋은 Key-Value 구조로 미리 생성된 목업 데이터를 시나리오에 설정된 변수와 자동으로 매핑해주는 역할을 합니다.
-미리 정의한 변수를 기반으로 목업 데이터를 생성할 수 있으며, AI를 활용하여 변수에 적합한 데이터를 자동으로 생성해줍니다.
+A dataset plays the role of automatically mapping pre-generated mockup data in a Key-Value structure to variables set in a scenario.
+You can generate mockup data based on pre-defined variables, and AI can automatically generate suitable data for the variables.
 
-## 데이터셋 생성하기
+## Create a Dataset
 
-데이터셋은 Excel 시트와 유사한 구조로 설계되어 있어, 사용자에게 친숙하고 쉽게 생성 및 관리할 수 있습니다.
+The dataset is designed with a structure similar to an Excel sheet, making it familiar to users and easy to create and manage.
 
-변수와 행을 자유롭게 추가 및 삭제할 수 있으며, 시나리오에서 미리 설정한 변수 값을 불러오는 기능을 제공하며,
-Excel 파일로 미리 생성된 데이터를 가져올 수 있고, 변수 설정 후 AI를 활용하여 목업 데이터를 자동으로 생성할 수 있습니다.
+You can freely add and delete variables and rows, and it provides a function to load variable values pre-set in the scenario.
+You can import pre-generated data from an Excel file, and after setting variables, you can automatically generate mockup data using AI.
 
 ::: info
 
-- 시트를 우클릭하세요
+- Right-click the sheet
   :::
   ![image](./image/dataset/dataset.png)
 
-## 엑셀로 생성하기
+## Create with Excel
 
-#### 엑셀 form [다운로드](./image/dataset/dataset_form.xlsx)
+#### Excel form [Download](./image/dataset/dataset_form.xlsx)
 
 ![image](./image/dataset/exel.png)
 
-## AI를 활용한 자동 생성
+## Automatic Generation using AI
 
-변수 설정 후 'AI로 데이터 자동채우기'를 클릭하면, AI가 변수에 맞는 목업 데이터를 자동으로 생성해줍니다.
+After setting variables, click 'Auto-fill data with AI', and the AI will automatically generate mockup data that matches the variables.
 
-- 로딩
+- Loading
   ![image](./image/dataset_loading.png)
-- 데이터 생성 후 화면
+- Screen after data generation
   ![image](./image/dataset_ai.png)
 
-## 데이터셋 적용
+## Apply Dataset
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/d2RU8aabXIQ" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>

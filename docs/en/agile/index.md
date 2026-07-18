@@ -1,16 +1,16 @@
 ---
-title: 스크럼반(Scrumban)
-description: 스크럼반(Scrumban)은 스크럼의 반복적 구조와 칸반의 흐름 관리·WIP 제한을 결합해 유연하고 효율적으로 작업을 관리하는 하이브리드 애자일 방법론입니다.
+title: Scrumban
+description: Scrumban is a hybrid Agile methodology that combines Scrum's iterative structure with Kanban's flow management and WIP limits to flexibly and efficiently manage work.
 head:
   - - meta
     - name: keywords
-      content: 스크럼반, Scrumban, 스크럼반 소개, 스크럼반 개념, 스크럼반이란, Scrumban 소개, Scrumban 개념, 스크럼과 칸반 차이, 스크럼 vs 칸반, 애자일 방법론, 애자일 프레임워크, 칸반 방법론, 스크럼 방법론, 스크럼반 프로세스, 스크럼반 운영 가이드, 스크럼반 보드, WIP 제한, 작업 흐름 관리, 칸반 보드 사용법, 스크럼반 장점, 스크럼반 특징, 스크럼반 효과, 스크럼반 활용 사례, 스크럼반 도입 효과, 스크럼반 Jira 설정, 스크럼반 보드 템플릿, Scrumban 툴, 스크럼반 협업툴, 스크럼반 워크플로우, 애자일 프로젝트 관리, 업무 효율화 방법론, 반복적 작업 관리, 병목 현상 해결
+      content: Scrumban, Introduction to Scrumban, Scrumban Concept, What is Scrumban, Difference between Scrum and Kanban, Scrum vs Kanban, Agile Methodology, Agile Framework, Kanban Methodology, Scrum Methodology, Scrumban Process, Scrumban Operation Guide, Scrumban Board, WIP Limit, Workflow Management, How to use Kanban Board, Scrumban Advantages, Scrumban Features, Scrumban Effects, Scrumban Use Cases, Scrumban Adoption Effects, Scrumban Jira Setup, Scrumban Board Template, Scrumban Tools, Scrumban Collaboration Tools, Scrumban Workflow, Agile Project Management, Work Efficiency Methodology, Iterative Work Management, Bottleneck Resolution
   - - meta
     - property: og:title
-      content: 스크럼반
+      content: Scrumban
   - - meta
     - property: og:description
-      content: 스크럼반(Scrumban)은 스크럼의 반복적 구조와 칸반의 흐름 관리·WIP 제한을 결합해 유연하고 효율적으로 작업을 관리하는 하이브리드 애자일 방법론입니다.
+      content: Scrumban is a hybrid Agile methodology that combines Scrum's iterative structure with Kanban's flow management and WIP limits to flexibly and efficiently manage work.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,216 +20,216 @@ head:
 sort: 200
 ---
 
-# 스크럼반(Scrumban)
+# Scrumban
 
-> **요약 한 줄:** 스크럼반은 스크럼의 구조(역할/회의/백로그 개념)와 칸반의 흐름 중심·WIP 제한(Work In Progress 제한)을 결합한 프로세스입니다. 스프린트의 엄격함 대신 **흐름(Flow)** 과 **풀(Pull)** 을 중시하면서, 필요한 곳에 스크럼식 의식(계획·회고)을 유지합니다.
-
-
-## 소개 · 정의
-
-**스크럼반(Scrumban)** 은 소프트웨어 개발 및 지식 작업팀이 유연하게 작업 흐름을 관리하도록 설계된 하이브리드 프로세스입니다.
-
-- **스크럼**: 반복(스프린트), 고정된 행사(스프린트 플래닝·리뷰·레트로), 명확한 역할
-- **칸반**: 시각적 보드, WIP 제한, 풀 기반 작업, 지속적 개선
-  스크럼반은 위 두 접근의 장점을 취하면서 **현실적인 흐름 개선**에 초점을 맞춥니다.
+> **One-line summary:** Scrumban is a process that combines the structure of Scrum (roles/meetings/backlog concepts) with Kanban's flow-centric approach and WIP (Work In Progress) limits. Instead of the strictness of a sprint, it emphasizes **Flow** and **Pull**, while maintaining Scrum-style ceremonies (planning/retrospectives) where necessary.
 
 
-## 언제 스크럼반을 쓰면 좋은가?
+## Introduction · Definition
 
-- 기존에 **스크럼**을 쓰고 있는데 잦은 변경(긴급 요청)이 많아 스프린트로 묶기 어렵다.
-- **칸반**으로 흐름을 돌리고 있지만, 백로그 관리·우선순위·정기적 회고 같은 규율이 필요한 팀.
-- 유지보수·운영·지원(운영 작업 + 신기능 개발 혼재) 팀.
-- 예측보다 **지속적 납품**(continuous delivery)과 흐름 최적화를 더 중시할 때.
+**Scrumban** is a hybrid process designed for software development and knowledge work teams to flexibly manage their workflow.
 
-
-## 핵심 개념
-
-1. **Pull 시스템**: 작업은 팀이 처리 가능한 시점에만 시작(다음 칸으로 끌어옴).
-2. **WIP(진행 중 작업) 제한**: 동시에 진행되는 작업 수를 제한해 멀티태스킹을 줄이고 완료를 촉진.
-3. **시각화된 보드**: 작업의 상태를 명확히 보여주며 병목을 즉시 확인.
-4. **정기적 리필(Replenishment) / 플래닝**: 필요할 때만 백로그에서 작업을 채움(주기적 혹은 임계점 도달 시).
-5. **측정과 개선**: 사이클타임, 리드타임, 처리량 등 지표로 흐름을 개선.
-6. **정책(Explicit Policies)**: 칸 전환 조건, 우선순위 규칙, Definition of Ready/Done 명문화.
+- **Scrum**: Iterations (Sprints), fixed ceremonies (Sprint Planning/Review/Retro), clear roles
+- **Kanban**: Visual board, WIP limits, pull-based work, continuous improvement
+  Scrumban takes the advantages of both approaches and focuses on **practical flow improvement**.
 
 
-## 스크럼 vs 칸반 vs 스크럼반
+## When is it good to use Scrumban?
 
-| 항목           |                스크럼 | 칸반            | 스크럼반                             |
-| -------------- | --------------------: | --------------- | ------------------------------------ |
-| 반복(스프린트) |       있음(고정 길이) | 없음(지속 흐름) | 선택적 / 짧은 이터레이션 혼용        |
-| WIP 제한       | 암묵적(스프린트 범위) | 명시적          | 명시적(핵심)                         |
-| 계획 방식      |       스프린트 플래닝 | 리필/풀 기반    | 리필 + 필요시 플래닝                 |
-| 역할           |             PO/SM/Dev | 유연(역할 없음) | PO + Flow Manager(혹은 SM 역할 유지) |
-| 목표           |   약속(스프린트 목표) | 흐름 최적화     | 흐름 최적화 + 우선순위 관리          |
+- Teams that are currently using **Scrum** but find it hard to bundle work into sprints due to frequent changes (urgent requests).
+- Teams managing flow with **Kanban**, but need disciplines like backlog management, prioritization, and regular retrospectives.
+- Maintenance, operations, and support teams (a mix of operational tasks + new feature development).
+- When **continuous delivery** and flow optimization are valued more than predictability.
 
 
-## 역할과 책임
+## Core Concepts
 
-- **Product Owner(PO)**: 백로그 우선순위, 이해관계자 조율, 비즈니스 가치 정의
-- **Flow Manager (또는 Scrum Master 역할 유지)**: 흐름 모니터링, 병목 제거 지원, 프로세스 개선 촉진
-- **팀(개발자/테스터 등)**: 정의된 정책 준수, WIP 한도 내 풀 방식으로 작업 시작/완료
-- **Stakeholders**: 요구·피드백 제공, 리뷰 참여(필요 시)
-
-> 역할은 팀 상황에 맞게 유연하게 조정하세요. 핵심은 **흐름 관리 책임**이 분명해야 한다는 점입니다.
-
-## 핵심 아티팩트 · 도구
-
-- **칸반 보드** (물리 또는 디지털) — 컬럼과 WIP 한도 포함
-- **백로그(우선순위 목록)** — 풀 상태의 작업 후보
-- **명확한 정책(Explicit policies)** — 칸 전환 규칙, 정의(Ready/Done)
-- **클래스 오브 서비스(Classes of Service)** — 긴급/고정일/표준 등 우선순위 유형
-- **메트릭 대시보드**: 사이클 타임, 리드 타임, 처리량, CFD(누적 흐름도)
+1. **Pull System**: Work is only started (pulled into the next column) when the team has the capacity to handle it.
+2. **WIP (Work In Progress) Limits**: Limits the number of tasks in progress simultaneously to reduce multitasking and promote completion.
+3. **Visualized Board**: Clearly shows the status of work and instantly identifies bottlenecks.
+4. **Regular Replenishment / Planning**: Fills the backlog with tasks only when needed (periodically or upon reaching a threshold).
+5. **Measurement and Improvement**: Improves flow using metrics like cycle time, lead time, and throughput.
+6. **Explicit Policies**: Documents column transition conditions, prioritization rules, and Definition of Ready/Done.
 
 
-## 보드 레이아웃
+## Scrum vs Kanban vs Scrumban
 
-기본적인 스크럼반 보드(예시):
+| Item           | Scrum | Kanban | Scrumban |
+| -------------- | ---: | --- | --- |
+| Iteration (Sprint) | Yes (Fixed length) | No (Continuous flow) | Optional / Mix of short iterations |
+| WIP Limit      | Implicit (Sprint scope) | Explicit | Explicit (Core) |
+| Planning Method| Sprint Planning | Replenishment / Pull-based | Replenishment + Planning if needed |
+| Roles          | PO/SM/Dev | Flexible (No roles) | PO + Flow Manager (or maintain SM role) |
+| Goal           | Commitment (Sprint Goal) | Flow Optimization | Flow Optimization + Priority Management |
 
-| 컬럼                | 설명                                    | 권장 WIP 한도 |
-| ------------------- | --------------------------------------- | ------------: |
-| Backlog             | 우선순위가 매겨진 모든 작업             |             — |
-| Ready               | 시작 가능한 작업(Do로 이동 가능한 상태) |             — |
-| Doing / In Progress | 실제 작업 중                            |             3 |
-| Code Review         | 리뷰 대기                               |             2 |
-| Testing             | QA/검증                                 |             2 |
-| Done                | 완료                                    |             — |
 
-**간단 ASCII 보드:**
+## Roles and Responsibilities
+
+- **Product Owner (PO)**: Backlog prioritization, stakeholder coordination, business value definition
+- **Flow Manager (or maintaining Scrum Master role)**: Flow monitoring, bottleneck removal support, process improvement facilitation
+- **Team (Developers/Testers, etc.)**: Complies with defined policies, starts/completes work using a pull method within WIP limits
+- **Stakeholders**: Provide requirements/feedback, participate in reviews (if necessary)
+
+> Flexibly adjust roles according to the team's situation. The key is that the **responsibility for flow management** must be clear.
+
+## Core Artifacts · Tools
+
+- **Kanban Board** (Physical or Digital) — including columns and WIP limits
+- **Backlog (Priority List)** — candidates for pull-status tasks
+- **Explicit Policies** — column transition rules, definitions (Ready/Done)
+- **Classes of Service** — priority types such as Urgent/Fixed Date/Standard
+- **Metrics Dashboard**: Cycle time, lead time, throughput, CFD (Cumulative Flow Diagram)
+
+
+## Board Layout
+
+Basic Scrumban Board (Example):
+
+| Column              | Description | Recommended WIP Limit |
+| ------------------- | --- | ---: |
+| Backlog             | All prioritized tasks | — |
+| Ready               | Tasks ready to start (Can be moved to Do) | — |
+| Doing / In Progress | Actually working | 3 |
+| Code Review         | Waiting for review | 2 |
+| Testing             | QA/Verification | 2 |
+| Done                | Completed | — |
+
+**Simple ASCII Board:**
 
 ```
 Backlog -> Ready -> [Doing (WIP 3)] -> Code Review (WIP 2) -> Testing (WIP 2) -> Done
 ```
 
-## workflow 규칙 예시
+## Workflow Rule Examples
 
 ```text
-Policy: Pull 조건 (Doing 칸으로 이동)
-- 카드가 Ready 칸에 있고, Doing 칸의 WIP < WIP한도
-- 해당 작업의 'Definition of Ready' 충족 (요구사항/테스트케이스/디자인 등)
-- 필요한 리소스(테스터/리뷰어) 가용성 확인
+Policy: Pull Condition (Move to Doing Column)
+- Card is in the Ready column, and WIP in the Doing column < WIP limit
+- Meets the 'Definition of Ready' for the task (Requirements/Test Cases/Design, etc.)
+- Confirm availability of necessary resources (Tester/Reviewer)
 
-Policy: Definition of Done (완료 기준)
-- 코드가 머지되었고 빌드 성공
-- 자동/수동 테스트 통과
-- 배포(또는 QA 인계) 문서화 완료
+Policy: Definition of Done (Completion Criteria)
+- Code is merged and build is successful
+- Passed automated/manual tests
+- Deployment (or QA handover) documentation completed
 ```
 
-**Classes of Service 예시**
+**Classes of Service Examples**
 
-- **Expedite**: 즉시 처리(작업 우선순위 최상, WIP 예외 허용)
-- **Fixed Date**: 특정 날짜 필요 — 일정 감시 필요
-- **Standard**: 일반 요청
-- **Intangible**: 기술부채 등 장기 가치
-
-
-## 이벤트와 권장 주기
-
-- **Daily Stand-up (매일, 10\~15분)**: 흐름 중심으로 (무엇을 하고 있는지보다 병목/블로커 공유)
-- **Replenishment / Backlog Refinement (주 1회 또는 필요시)**: Ready 칸 채우기 — 우선순위 재정비
-- **Planning (필요 시)**: 큰 작업(에픽) 분해 또는 대체 계획 — 짧게.
-- **Retrospective (2\~4주 주기)**: 프로세스 개선, WIP 한도 조정 검토
-- **Service Delivery Review / Ops Review (월간)**: SLA·SLE·지표 리뷰
-
-> 스크럼처럼 모든 회의를 엄격히 정해둘 필요는 없습니다. **흐름을 방해하는 지점**이 보이면 회의를 도입하세요.
+- **Expedite**: Process immediately (Highest task priority, WIP exception allowed)
+- **Fixed Date**: Needed by a specific date — requires schedule monitoring
+- **Standard**: General request
+- **Intangible**: Long-term value like technical debt
 
 
-## 추정 · 계획 방법
+## Events and Recommended Frequencies
 
-- **스토리 포인트 유지**: 스크럼에서 넘어오는 팀에 적합. throughput 대비 예측에 유리.
-- **No Estimates(추정 생략)**: 카드 단순 카운트 + 사이클타임/처리량으로 예측.
-- **버킷(기간 기반) 계획**: 월별로 완료 가능한 작업량(throughput) 기준으로 리필.
-- **권장**: 무거운 추정 활동을 줄이고 **실제 데이터(사이클타임, 처리량)** 로 예측하세요.
+- **Daily Stand-up (Daily, 10~15 mins)**: Flow-centric (share bottlenecks/blockers rather than what you are doing)
+- **Replenishment / Backlog Refinement (Weekly or when needed)**: Fill the Ready column — re-prioritize
+- **Planning (When needed)**: Breakdown large tasks (Epics) or alternative planning — keep it short.
+- **Retrospective (Every 2~4 weeks)**: Process improvement, review WIP limit adjustments
+- **Service Delivery Review / Ops Review (Monthly)**: Review SLAs, SLEs, and metrics
 
-
-## 핵심 메트릭(정의·활용)
-
-- **리드 타임(Lead Time)** = 카드가 백로그(또는 생성)된 시점 → 완료 시점
-- **사이클 타임(Cycle Time)** = 작업 시작(Doing) → 완료
-- **처리량(Throughput)** = 특정 기간 내 완료된 카드 수
-- **WIP(평균 진행중 작업 수)**
-- **Cumulative Flow Diagram (CFD)**: 각 컬럼의 누적 영역으로 병목·흐름 변화를 시각화
-- **서비스 레벨 기대치(SLE)**: 예: 85% 작업이 10일 내 완료될 것
-
-**참고 활용법**
-
-- Little’s Law: `WIP = Throughput × Cycle Time` (평균 값 사용) — 예측 및 한계 파악에 유용
-- 목표: 사이클타임 안정화 → 예측 가능성 증가
+> You don't need to strictly schedule all meetings like in Scrum. Introduce meetings when you see **points that disrupt the flow**.
 
 
-## 스크럼에서 스크럼반으로
+## Estimation · Planning Methods
 
-1. **현재 프로세스 맵핑**: 어떤 일이 어떻게 흐르는지 시각화
-2. **보드 구성**: 최소 컬럼으로 시작(Ready → Doing → QA → Done)
-3. **WIP 한도 설정**: 보수적으로 시작(예: Doing = 팀원 수 ÷ 2)
-4. **리필 규칙 정하기**: 언제 Backlog에서 Ready로 채울지 결정(주간/임계값)
-5. **데이터 수집**: 사이클타임·처리량 수집(2\~4주)
-6. **조정 반복**: 회고에서 WIP·컬럼·정책 조정
+- **Keep Story Points**: Suitable for teams transitioning from Scrum. Good for predictability against throughput.
+- **No Estimates (Skip Estimation)**: Predict using simple card counts + cycle time/throughput.
+- **Bucket (Time-based) Planning**: Replenish based on the amount of work (throughput) that can be completed monthly.
+- **Recommendation**: Reduce heavy estimation activities and predict using **actual data (cycle time, throughput)**.
 
 
-## 칸반/스크럼반 도입 체크리스트
+## Core Metrics (Definition · Utilization)
 
-- [ ] 보드가 팀의 현실을 반영하는가?
-- [ ] WIP 한도가 설정되어 있고 모두 이해하는가?
-- [ ] Definition of Ready/Done 문서화 되었는가?
-- [ ] Replenishment 주기(또는 규칙)가 정해졌는가?
-- [ ] Daily stand-up에서 병목 중심 토론이 이루어지는가?
-- [ ] 사이클타임·처리량·CFD를 수집하고 분석 중인가?
-- [ ] 클래스 오브 서비스와 정책이 정의되어 있는가?
-- [ ] 정기적 레트로에서 프로세스 변경이 반영되는가?
+- **Lead Time** = The point a card is backlogged (or created) → point of completion
+- **Cycle Time** = Work start (Doing) → completion
+- **Throughput** = Number of cards completed within a specific period
+- **WIP (Average number of tasks in progress)**
+- **Cumulative Flow Diagram (CFD)**: Visualizes bottlenecks/flow changes with the cumulative area of each column
+- **Service Level Expectation (SLE)**: e.g., 85% of tasks will be completed within 10 days
 
+**Reference Utilization**
 
-## 실전 팁 & 모범 사례
-
-- **작게 시작**: 보드와 WIP 한도를 작게 만들어 빠르게 피드백 받기.
-- **Stop starting — start finishing**: 새로운 작업을 시작하기보다 진행 중인 일을 끝내는 문화.
-- **WIP 위반시 팀 규율**: 즉각적 논의(왜 위반했는지, 병목 원인 파악).
-- **시각적 신호**: 블로커/긴급 카드는 별도 색상/스티커로 표시.
-- **정책은 문서화**: “언제 카드를 이동시키는가” 명확히 적어두기.
-- **자동화**: CI/CD, 자동 테스트로 사이클타임 단축.
-- **데이터 기반 의사결정**: 추정보다 실제 사이클타임/throughput으로 계획.
+- Little’s Law: `WIP = Throughput × Cycle Time` (using average values) — useful for predictions and identifying limits
+- Goal: Stabilize cycle time → increase predictability
 
 
-## 흔한 실수
+## From Scrum to Scrumban
 
-- WIP 한도만 설정해놓고 지키지 않는 경우
-- 스크럼의 의식을 그대로 유지하면서 WIP·풀 개념을 무시함
-- 클래스를 만들고 아무 기준 없이 사용(우선순위 혼란)
-- 지표를 수집 안 하고 '느낌'으로만 의사결정
-- 너무 많은 컬럼/세분화로 보드가 복잡해지는 경우
+1. **Map the current process**: Visualize how work flows
+2. **Configure the board**: Start with minimal columns (Ready → Doing → QA → Done)
+3. **Set WIP limits**: Start conservatively (e.g., Doing = Number of team members ÷ 2)
+4. **Determine replenishment rules**: Decide when to fill Ready from Backlog (Weekly/Threshold)
+5. **Collect data**: Collect cycle time/throughput (2~4 weeks)
+6. **Iterate adjustments**: Adjust WIP/columns/policies in retrospectives
 
 
-## 템플릿: Replenishment 회의(간단 아젠다)
+## Kanban/Scrumban Adoption Checklist
 
-1. 지난 주 완료된 작업(간단 리뷰) — 5분
-2. Ready 칸 상태 확인(우선순위 재정렬) — 10\~20분
-3. WIP 한도 대비 현재 가용 리소스 확인 — 5분
-4. 신규 작업 Pull 결정(우선순위순 채움) — 10\~20분
-5. Blocker / 위험요인 공유 — 5분
+- [ ] Does the board reflect the team's reality?
+- [ ] Are WIP limits set and understood by everyone?
+- [ ] Are Definition of Ready/Done documented?
+- [ ] Is the Replenishment frequency (or rule) set?
+- [ ] Does the Daily stand-up focus on bottlenecks?
+- [ ] Are cycle time, throughput, and CFD being collected and analyzed?
+- [ ] Are Classes of Service and policies defined?
+- [ ] Are process changes reflected in regular retros?
+
+
+## Practical Tips & Best Practices
+
+- **Start small**: Make the board and WIP limits small to get fast feedback.
+- **Stop starting — start finishing**: A culture of finishing ongoing work rather than starting new ones.
+- **Team discipline upon WIP violation**: Immediate discussion (why it was violated, identifying the bottleneck cause).
+- **Visual cues**: Mark blockers/urgent cards with separate colors/stickers.
+- **Document policies**: Clearly write down "when to move a card".
+- **Automation**: Shorten cycle time with CI/CD and automated tests.
+- **Data-driven decision making**: Plan with actual cycle time/throughput rather than estimation.
+
+
+## Common Mistakes
+
+- Setting WIP limits but not enforcing them
+- Maintaining Scrum ceremonies while ignoring WIP/Pull concepts
+- Creating classes and using them without criteria (priority confusion)
+- Making decisions based on 'feelings' without collecting metrics
+- Overcomplicating the board with too many columns/segmentations
+
+
+## Template: Replenishment Meeting (Simple Agenda)
+
+1. Completed work from the previous week (Brief review) — 5 mins
+2. Check Ready column status (Re-prioritize) — 10~20 mins
+3. Check current available resources against WIP limits — 5 mins
+4. Decide on Pulling new tasks (Fill by priority) — 10~20 mins
+5. Share Blockers / Risk factors — 5 mins
 
 
 ## FAQ
 
-**Q. 스프린트가 완전히 없어지나요?**
-A. 팀이 원하면 짧은 이터레이션(예: 2주)을 유지하면서 스크럼반 원칙을 적용할 수 있습니다. 핵심은 흐름 개선입니다.
+**Q. Do sprints disappear completely?**
+A. If the team wants, you can maintain short iterations (e.g., 2 weeks) while applying Scrumban principles. The key is flow improvement.
 
-**Q. 스토리 포인트를 계속 써야 할까요?**
-A. 반드시 그럴 필요는 없습니다. 처리량과 사이클타임으로 예측하는 방법도 많이 사용됩니다. 팀 문화·보고 필요성에 따라 결정하세요.
+**Q. Should we keep using Story Points?**
+A. Not necessarily. Predicting with throughput and cycle time is also widely used. Decide based on team culture and reporting needs.
 
-**Q. WIP 한도는 어떻게 정하나요?**
-A. 보수적으로 시작(팀원 수 기준, 또는 과거 처리량으로 추정). 한도를 지키며 점진적으로 조정합니다.
-
-
-## 적용 예시
-
-- 팀원 5명 → Doing WIP = 3 (동시작업 제한)
-- Replenishment : 주 1회(월요일)
-- Retrospective: 2주마다(온라인·오프라인 혼합)
-- 지표: 주 단위 처리량 + 4주 누적 사이클타임 관찰
+**Q. How do we set WIP limits?**
+A. Start conservatively (based on team size, or estimated from past throughput). Gradually adjust while keeping the limits.
 
 
-## 마무리 — 시작 가이드
+## Application Example
 
-1. **보드를 만들고**,
-2. **WIP 한도를 정하고**,
-3. **풀(Pull) 규칙과 Definition을 문서화** 한 뒤,
-4. **데이터(사이클타임·처리량)를 2\~4주 수집**하고 **레트로에서 조정**하세요.
+- 5 Team members → Doing WIP = 3 (Limit concurrent work)
+- Replenishment : Once a week (Monday)
+- Retrospective: Every 2 weeks (Mix of online/offline)
+- Metrics: Observe weekly throughput + 4-week cumulative cycle time
+
+
+## Wrap-up — Starter Guide
+
+1. **Create the board**,
+2. **Set WIP limits**,
+3. **Document Pull rules and Definitions**,
+4. **Collect data (cycle time/throughput) for 2~4 weeks** and **adjust in retros**.

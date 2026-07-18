@@ -1,16 +1,16 @@
 ---
-title: LLM 파인튜닝 후 성능 저하 원인 및 해결책 분석
-description: 까먹지 말고 재밌게 저장하자! 🎯 공부한 내용을 자유롭게 기록하는 즐거운 지식 저장소
+title: LLMファインチューニング後の性能低下の原因と解決策の分析
+description: 忘れないように楽しく保存しよう！🎯 勉強した内容を自由に記録する楽しい知識リポジトリ
 head:
   - - meta
     - name: keywords
-      content: 공부기록, 학습일기, 지식저장소, 공부로그, 학습관리, 공부노트, 지식정리, 공부방법, 학습저장, 기억보조
+      content: 勉強記録, 学習日記, 知識リポジトリ, 勉強ログ, 学習管理, 勉強ノート, 知識整理, 勉強方法, 学習保存, 記憶補助
   - - meta
     - property: og:title
-      content: 📚 두뇌 저장소 - 재미있는 공부 기록 놀이터
+      content: 📚 頭脳リポジトリ - 楽しい勉強記録の遊び場
   - - meta
     - property: og:description
-      content: 까먹지 말고 재밌게 저장하자! 🎯 공부한 내용을 자유롭게 기록하는 즐거운 지식 저장소
+      content: 忘れないように楽しく保存しよう！🎯 勉強した内容を自由に記録する楽しい知識リポジトリ
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -19,3 +19,4 @@ head:
       content: https://doc.empasy.com/study/
 sort: 500
 ---
+

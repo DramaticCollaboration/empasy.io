@@ -1,16 +1,16 @@
 ---
-title: 데이타셋
-description: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+title: データセット
+description: AIベースのテスト自動化でQA時間を80%削減します。コードなしのテスト作成、自然言語によるシナリオ作成、多様なプラットフォームのサポートにより、QAの新しい基準を提示します。
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, 테스팅 생성형 AI, Playwright, Selenium, 실시간 품질 피드백, 무중단 테스트, AI 기반 테스트 자동화, 지속적 테스트, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, 자기 치유 테스트, Self-healing,  AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
+      content: テスト自動化, テスティング生成型AI, Playwright, Selenium, リアルタイム品質フィードバック, 無停止テスト, AIベーステスト自動化, 継続的テスト(Continuous Testing), QAOps, TestOps, コードレス(Codeless), ローコード(Low-Code), 自己修復テスト(Self-healing), AIテスト自動化, コードレス自動化, QA自動化, ソフトウェアテスト, テストシナリオ生成, コードレステスト, 自然言語テスト, テスト自動化ツール, テスト自動化プラットフォーム, テスト効率化, Playwright, Selenium, QAOps, TestOps, シフトレフト(Shift-Left)テスト, シフトライト(Shift-Right)テスト
   - - meta
     - property: og:title
-      content: AI 테스트 자동화 | SyncETA
+      content: AIテスト自動化 | SyncETA
   - - meta
     - property: og:description
-      content: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+      content: AIベースのテスト自動化でQA時間を80%削減します。コードなしのテスト作成、自然言語によるシナリオ作成、多様なプラットフォームのサポートにより、QAの新しい基準を提示します。
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,41 +20,41 @@ head:
 sort: 700
 ---
 
-# 데이터셋
+# データセット
 
-## 데이터셋은?
+## データセットとは？
 
-데이터셋은 Key-Value 구조로 미리 생성된 목업 데이터를 시나리오에 설정된 변수와 자동으로 매핑해주는 역할을 합니다.
-미리 정의한 변수를 기반으로 목업 데이터를 생성할 수 있으며, AI를 활용하여 변수에 적합한 데이터를 자동으로 생성해줍니다.
+データセットは、Key-Value構造で事前に生成されたモックアップデータを、シナリオに設定された変数と自動的にマッピングする役割を果たします。
+事前に定義した変数に基づいてモックアップデータを生成することができ、AIを活用して変数に適したデータを自動的に生成してくれます。
 
-## 데이터셋 생성하기
+## データセットの作成
 
-데이터셋은 Excel 시트와 유사한 구조로 설계되어 있어, 사용자에게 친숙하고 쉽게 생성 및 관리할 수 있습니다.
+データセットはExcelシートに似た構造で設計されており、ユーザーに馴染みがあり、簡単に作成および管理できます。
 
-변수와 행을 자유롭게 추가 및 삭제할 수 있으며, 시나리오에서 미리 설정한 변수 값을 불러오는 기능을 제공하며,
-Excel 파일로 미리 생성된 데이터를 가져올 수 있고, 변수 설정 후 AI를 활용하여 목업 데이터를 자동으로 생성할 수 있습니다.
+変数と行を自由に追加および削除でき、シナリオで事前に設定した変数値を呼び出す機能を提供します。
+Excelファイルで事前に生成されたデータをインポートすることができ、変数設定後にAIを活用してモックアップデータを自動的に生成することができます。
 
 ::: info
 
-- 시트를 우클릭하세요
+- シートを右クリックしてください
   :::
   ![image](./image/dataset/dataset.png)
 
-## 엑셀로 생성하기
+## Excelで作成する
 
-#### 엑셀 form [다운로드](./image/dataset/dataset_form.xlsx)
+#### Excel form [ダウンロード](./image/dataset/dataset_form.xlsx)
 
 ![image](./image/dataset/exel.png)
 
-## AI를 활용한 자동 생성
+## AIを活用した自動生成
 
-변수 설정 후 'AI로 데이터 자동채우기'를 클릭하면, AI가 변수에 맞는 목업 데이터를 자동으로 생성해줍니다.
+変数設定後、「AIでデータを自動入力」をクリックすると、AIが変数に合ったモックアップデータを自動的に生成してくれます。
 
-- 로딩
+- ローディング
   ![image](./image/dataset_loading.png)
-- 데이터 생성 후 화면
+- データ生成後の画面
   ![image](./image/dataset_ai.png)
 
-## 데이터셋 적용
+## データセットの適用
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/d2RU8aabXIQ" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>

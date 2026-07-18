@@ -1,16 +1,16 @@
 ---
-title: AI 테스트 자동화 | SyncETA
-description: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+title: AI Test Automation | SyncETA
+description: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, 테스팅 생성형 AI, Playwright, Selenium, 실시간 품질 피드백, 무중단 테스트, AI 기반 테스트 자동화, 지속적 테스트, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, 자기 치유 테스트, Self-healing,  AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
+      content: Test Automation, Testing Generative AI, Playwright, Selenium, Real-time Quality Feedback, Zero-downtime Testing, AI-based Test Automation, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, Self-healing Test, Self-healing, AI Test Automation, Codeless Automation, QA Automation, Software Testing, Test Scenario Creation, Codeless Test, Natural Language Test, Test Automation Tool, Test Automation Platform, Test Efficiency, Playwright, Selenium, QAOps, TestOps, Shift-Left Testing, Shift-Right Testing
   - - meta
     - property: og:title
-      content: AI 테스트 자동화 | SyncETA
+      content: AI Test Automation | SyncETA
   - - meta
     - property: og:description
-      content: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+      content: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,91 +20,91 @@ head:
 sort: 1
 ---
 
-# 🚀 SyncETA: "사람처럼 이해하고, 기계처럼 테스트하라"
+# 🚀 SyncETA: "Understand like a human, test like a machine"
 
-**AI 기반 웹 브라우저 동작 레코딩 및 자동 테스트 실행 시스템**
+**AI-based Web Browser Action Recording and Automated Test Execution System**
 
-SyncETA는 웹 브라우저 기반의 사용자 동작을 **Selenium**으로 기록(레코딩)하고, **LLM** (대규모 언어 모델)을 활용하여 자연어 기반의 테스트케이스를 자동으로 생성하며, 이를 **Playwright MCP**를 통해 자동으로 실행하는 혁신적인 테스트 자동화 솔루션입니다. QA 업무의 효율성을 극대화하고 소프트웨어 품질을 지속적으로 향상시키는 것을 목표로 합니다.
+SyncETA is an innovative test automation solution that records web browser-based user actions with **Selenium**, automatically generates natural language-based test cases utilizing **LLMs** (Large Language Models), and automatically executes them through **Playwright MCP**. It aims to maximize the efficiency of QA work and continuously improve software quality.
 
-## [제품 소개 보기](https://synceta.empasy.com/)
+## [View Product Introduction](https://synceta.empasy.com/)
 
-## 💡 SyncETA가 해결하고자 하는 문제점
+## 💡 Problems SyncETA Aims to Solve
 
-기존 소프트웨어 개발 및 배포 과정에서 테스트 자동화는 필수적임에도 불구하고 다음과 같은 어려움이 있었습니다:
+Despite test automation being essential in the existing software development and deployment process, there were the following difficulties:
 
-- **높은 도입 비용 및 유지보수 부담**: 테스트 자동화 솔루션 도입 및 유지보수에 많은 QA 리소스가 소모됩니다.
-- **수작업 중심의 비효율성**: 테스트케이스 작성이 사람 중심이어서 반복 가능성과 재사용성이 낮고, 인적 실수 발생 가능성이 높습니다.
-- **회귀 테스트 부담 증가**: 잦은 릴리즈 주기 단축으로 인해 반복적인 회귀 테스트에 대한 부담이 가중됩니다.
-- **개발 지식 요구**: 테스트 자동화를 위한 스크립트 작성에 개발 지식이 요구되어 비기술 사용자(QA 팀)의 접근성이 낮았습니다.
+- **High implementation costs and maintenance burden**: Significant QA resources are consumed in implementing and maintaining test automation solutions.
+- **Manual-centric inefficiency**: Test case writing is human-centric, resulting in low repeatability and reusability, and a high probability of human error.
+- **Increased regression testing burden**: The burden of repetitive regression testing is exacerbated due to frequent release cycle shortening.
+- **Development knowledge required**: Accessibility for non-technical users (QA teams) was low because development knowledge was required to write scripts for test automation.
 
-SyncETA는 이러한 문제점들을 해결하여 QA 엔지니어를 포함한 모든 사용자가 쉽게 테스트 자동화를 구축하고, 유지보수 비용을 절감하며, 회귀 테스트의 효율성과 품질을 극대화할 수 있는 통합 솔루션을 제공합니다.
+SyncETA solves these problems, providing an integrated solution where all users, including QA engineers, can easily build test automation, reduce maintenance costs, and maximize the efficiency and quality of regression testing.
 
-## 🛠️ SyncETA의 핵심 기술 및 해결 수단
+## 🛠️ SyncETA's Core Technologies and Solutions
 
-SyncETA는 다음의 주요 모듈들을 통해 문제를 해결하고 혁신적인 테스트 자동화 경험을 제공합니다.
+SyncETA solves problems and provides an innovative test automation experience through the following key modules.
 
-1.  **SyncETA Recorder (Selenium 기반 브라우저 동작 레코딩 모듈)**:
+1.  **SyncETA Recorder (Selenium-based Browser Action Recording Module)**:
 
-- 사용자의 실제 웹 브라우저 동작(클릭, 입력, 스크롤, 페이지 전환 등)을 실시간으로 캡처하여 **JSON/YAML 기반 포맷의 테스트 시나리오로 자동 생성 및 저장**합니다.
-- 녹화 시 URL, XPath, 클래스, ID 등의 정보가 함께 기록되며, 녹화된 시나리오는 관리 기능을 통해 분류, 검색, 버전 관리가 가능합니다.
-- 녹화 웹 URL 입력, 자유로운 웹 브라우저 선택 및 사이즈 설정 등 **사용자 친화적인 화면**을 제공하여 누구나 쉽게 녹화할 수 있습니다.
+- Captures the actual web browser actions of the user (clicks, inputs, scrolls, page transitions, etc.) in real-time and **automatically generates and saves them as test scenarios in a JSON/YAML-based format**.
+- Information such as URL, XPath, Class, ID, etc., is recorded together during recording, and the recorded scenarios can be classified, searched, and version-controlled through the management function.
+- Provides a **user-friendly screen** such as inputting the recording web URL and free web browser selection and size setting, so anyone can easily record.
 
-2.  **TestCase Generator (LLM 기반 자연어 테스트케이스 자동 생성 모듈)**:
+2.  **TestCase Generator (LLM-based Natural Language Test Case Auto-Generation Module)**:
 
-- 레코딩된 시나리오(JSON)를 **7B 또는 오픈소스 LLM이 분석하여 Step, Input, Expected Result 등을 포함하는 자연어 기반의 엑셀 테스트케이스로 변환**합니다.
-- 이 과정에서 사내 용어 및 UI 요소에 대한 컨텍스트 학습과 QA 기준에 맞춘 포맷 커스터마이징이 지원됩니다.
-- 재사용 가능한 템플릿 형태로 제공될 수 있습니다.
+- The recorded scenario (JSON) is analyzed by a **7B or open-source LLM and converted into a natural language-based Excel test case including Step, Input, Expected Result, etc.**
+- During this process, context learning about in-house terminology and UI elements, and format customizing according to QA standards are supported.
+- It can be provided in the form of reusable templates.
 
-3.  **Test Executor (Playwright MCP 연동 자동 테스트 실행 모듈)**:
+3.  **Test Executor (Playwright MCP Interlocking Auto Test Execution Module)**:
 
-- QA가 승인한 테스트케이스는 Playwright MCP를 통해 자동 실행 스크립트가 생성되며, **멀티 브라우저 자동화 환경에서 병렬 테스트 실행을 지원**합니다. Chrome, Firefox, Edge 등 다양한 브라우저 호환성을 지원하며, Safari 브라우저 추가도 요청되었습니다.
-- **이벤트 레코딩 없이 QA가 직접 생성하거나 보유한 엑셀 테스트케이스를 AI를 통해 직접 실행하는 기능을 제공**하여 테스트 실행의 유연성을 극대화합니다. AI가 엑셀 파일 내의 'Step', 'Input', 'Expected Result' 등의 필드를 분석하여 해당 동작을 브라우저에서 수행하고 결과를 검증할 수 있습니다.
-- 실행 결과 보고서(통과/실패 로그, 스크린샷 등)를 제공하며, 실패한 테스트 케이스는 자동 로깅됩니다.
-- 시나리오 실행 중 에러 발생 시 식별이 가능하며, **에러 레코드 스크린샷, 대쉬보드에서 에러 클릭 시 에러 당시의 녹화 화면(영상) 제공 등 사용자 친화적인 에러 메시지 및 진단 기능을 제공**합니다.
+- For test cases approved by QA, an auto-execution script is generated through Playwright MCP, and **supports parallel test execution in a multi-browser automation environment**. It supports compatibility with various browsers such as Chrome, Firefox, and Edge, and the addition of the Safari browser has also been requested.
+- **Provides a function for the AI to directly execute Excel test cases created or possessed by QA directly without event recording**, maximizing the flexibility of test execution. The AI analyzes fields such as 'Step', 'Input', and 'Expected Result' in the Excel file, performs the action in the browser, and verifies the result.
+- Provides an execution result report (pass/fail log, screenshots, etc.), and failed test cases are automatically logged.
+- Identification is possible when an error occurs during scenario execution, and provides **user-friendly error messages and diagnostic features such as error record screenshots and providing the recorded screen (video) at the time of the error when clicking the error on the dashboard**.
 
-4.  **QA Feedback Loop (품질 개선 루프 모듈)**:
+4.  **QA Feedback Loop (Quality Improvement Loop Module)**:
 
-- QA 엔지니어가 생성된 엑셀 테스트케이스를 직접 리뷰, 수정, 평가할 수 있으며, 수정된 데이터는 SyncETA 시스템에 업로드되어 LLM의 재학습(Fine-tuning or RAG)에 반영됩니다.
-- QA의 수정 사항을 기준으로 LLM 학습 데이터를 확보하고 주기적인 재학습을 통해 테스트케이스 생성 품질을 지속적으로 향상시킵니다. 이를 통해 자동 생성 테스트케이스의 신뢰성이 증가하고 테스트 커버리지가 향상됩니다. QA별 피드백 이력 분석 및 개선 내역 추적도 가능합니다.
+- QA engineers can directly review, modify, and evaluate the generated Excel test cases, and the modified data is uploaded to the SyncETA system and reflected in the LLM's re-training (Fine-tuning or RAG).
+- Secures LLM training data based on QA's modifications and continuously improves test case generation quality through periodic re-training. This increases the reliability of auto-generated test cases and improves test coverage. It is also possible to analyze feedback history by QA and track improvement details.
 
-## ✨ SyncETA의 주요 기능 및 특징
+## ✨ SyncETA's Key Features and Characteristics
 
-- **대쉬보드/관리 시스템**: 시나리오 등록 현황, 실행 현황, 에러 현황 등 시스템 모니터링이 가능한 대쉬보드를 제공합니다. 실행 히스토리에서 영상을 확인할 수 있으며, 에러 레코드의 스크린샷과 에러 발생 시 녹화 화면을 영상으로 제공하여 에러 분석을 돕습니다. 정밀 보고서 및 분석을 제공하며, 고객 요구사항에 맞춘 커스텀 보고서 제공이 가능합니다.
-- **데이터셋(Data Set) 관리 기능**: 표 형식으로 데이터를 입력하고 관리하며, 변수 추가, 수정, 삭제를 지원합니다. 시나리오에서 설정한 변수 값을 호출하여 직접 작성하거나, AI를 활용하여 목업 데이터를 자동으로 생성하고 다양한 값으로 테스트를 진행할 수 있습니다.
-- **시나리오 관리 및 실행 옵션**:
-- **Record**: 사용자의 이벤트 및 DOM 정보를 기록하는 기본 단위입니다.
-- **Scenario**: 레코드 정보를 체계적으로 통합하여 테스트 시나리오를 구현하는 핵심 구성 요소입니다.
-- **Collection**: 여러 시나리오를 선택하여 순차적으로 실행하는 기능으로, 다양한 시나리오를 유연하게 조합하여 일관된 워크플로우를 보장합니다. 하나의 시나리오를 여러 브라우저로 동시 실행할 때 사용됩니다.
-- **Story**: Flow Chart 인터페이스를 통해 시나리오를 자유롭게 연결하고, 검증 결과를 바탕으로 다음 시나리오를 동적으로 실행하는 기능입니다.
-- **동적 테스트 Chaining**: 조건에 따른 연쇄적인 시나리오 실행을 통해 유연한 테스트가 가능합니다.
-- 재실행 시 초기화, 시나리오 심각도 설정, 시나리오 히스토리 필터링 등 다양한 기능을 제공하여 테스트 관리를 용이하게 합니다.
-- **화면 검증**: AI를 통해 각 이벤트에 대한 화면 캡쳐 후 데이터 추가 검증이 가능하며, UI 변화 감지 시 자동으로 테스트 실패 처리할 수 있습니다.
-- **실시간 통신**: 소켓 통신을 통해 실시간 이벤트 동작 및 DOM 정보 확인이 가능합니다.
-- **보안 및 인증 처리**: 자동 로그인, 쿠키 및 세션 관리, HTTP 인증 우회, VPN/프록시 설정 등을 지원합니다.
-- **CI/CD 통합**: Jenkins, Git, Azure, DevOps 등 다양한 외부 도구/시스템과 연동하여 기존 개발/배포 프로세스에 테스트 자동화를 자연스럽게 통합할 수 있습니다.
-- **코드/비코드 기반 테스트 설계**: 직관적인 GUI 및 키워드 기반 비코드 방식으로 개발 지식이 부족한 사용자도 쉽게 테스트 자동화를 구축할 수 있으며, 전문가를 위한 스크립트(JavaScript) 기반의 코드 방식도 함께 제공합니다.
-- **API 테스트 지원**: 웹 테스트뿐만 아니라 API 테스트도 지원하여 올인원 테스트 플랫폼을 제공합니다.
+- **Dashboard/Management System**: Provides a dashboard for system monitoring such as scenario registration status, execution status, and error status. You can check the video in the execution history, and it helps with error analysis by providing screenshots of error records and recorded videos of the screen when errors occur. Provides precise reports and analysis, and can provide custom reports tailored to customer requirements.
+- **Data Set Management Feature**: Inputs and manages data in a tabular format, supporting the addition, modification, and deletion of variables. You can write directly by calling variable values set in the scenario, or automatically generate mockup data using AI and conduct tests with various values.
+- **Scenario Management and Execution Options**:
+  - **Record**: The basic unit that records user events and DOM information.
+  - **Scenario**: A core component that implements test scenarios by systematically integrating record information.
+  - **Collection**: A feature that selects multiple scenarios and executes them sequentially, guaranteeing a consistent workflow by flexibly combining various scenarios. It is used when simultaneously executing one scenario across multiple browsers.
+  - **Story**: A feature that freely connects scenarios through a Flow Chart interface and dynamically executes the next scenario based on verification results.
+  - **Dynamic Test Chaining**: Enables flexible testing through sequential scenario execution based on conditions.
+  - Provides various features to facilitate test management, such as initialization upon re-execution, scenario severity setting, and scenario history filtering.
+- **Screen Verification**: Additional data verification is possible after capturing the screen for each event through AI, and when UI changes are detected, it can automatically process the test as a failure.
+- **Real-time Communication**: Enables checking real-time event actions and DOM information through socket communication.
+- **Security and Authentication Processing**: Supports automatic login, cookie and session management, HTTP authentication bypass, VPN/Proxy settings, etc.
+- **CI/CD Integration**: Seamlessly integrates test automation into existing development/deployment processes by interworking with various external tools/systems such as Jenkins, Git, Azure, DevOps, etc.
+- **Code/Non-code-based Test Design**: Even users lacking development knowledge can easily build test automation with an intuitive GUI and keyword-based non-code methods, and it also provides a script (JavaScript)-based code method for experts.
+- **API Test Support**: Provides an all-in-one test platform by supporting not only web tests but also API tests.
 
-## 🎯 SyncETA의 기대 효과
+## 🎯 SyncETA's Expected Effects
 
-SyncETA는 다음과 같은 혁신적인 효과를 제공하여 비즈니스 민첩성과 경쟁력 확보에 기여합니다:
+SyncETA contributes to securing business agility and competitiveness by providing the following innovative effects:
 
-- **테스트케이스 작성 시간 80% 절감**: Selenium 녹화 및 LLM 기반 자동 생성을 통해 수작업 대비 테스트케이스 작성 시간을 획기적으로 단축합니다.
-- **QA 리소스 효율화**: 반복적인 테스트 작업이 자동화되어 QA 업무 효율성이 증대되고, **QA 리소스가 30% 이상 절감**됩니다.
-- **테스트 품질 및 신뢰성 향상**: AI 기반 테스트케이스 생성 및 QA 피드백 루프를 통해 테스트 정확도와 커버리지가 향상되며, 인적 실수를 방지하고 일관된 품질을 유지합니다.
-- **빠른 릴리즈 및 시장 출시**: 회귀 테스트 자동화를 통해 개발 주기를 단축하고, 신속한 피드백으로 시장 출시 시간을 앞당깁니다.
-- **코드 작성 없는 테스트 자동화**: 직관적인 GUI 및 키워드 기반 비코드 방식으로 개발 지식이 부족한 사용자도 쉽게 테스트 자동화를 구축할 수 있습니다.
-- **유연한 테스트 환경 제공**: 크로스 브라우저 호환성, 병렬 실행, 동적 체이닝 등 다양한 실행 옵션과 커스터마이징을 지원합니다.
-- **사용자 친화적인 에러 식별**: 에러 발생 시 사용자 친화적인 에러 메시지 제공, 스크린샷 기록, 에러 발생 시 녹화 화면 제공 등을 통해 에러 분석을 용이하게 합니다.
+- **Reduce test case writing time by 80%**: Drastically shortens test case writing time compared to manual work through Selenium recording and LLM-based automatic generation.
+- **Streamline QA Resources**: Repetitive testing tasks are automated, increasing QA work efficiency and **reducing QA resources by more than 30%**.
+- **Improve Test Quality and Reliability**: Through AI-based test case generation and the QA feedback loop, test accuracy and coverage are improved, human errors are prevented, and consistent quality is maintained.
+- **Fast Release and Time-to-Market**: Shortens the development cycle through regression test automation and accelerates time-to-market with rapid feedback.
+- **Test Automation without Writing Code**: Users lacking development knowledge can also easily build test automation with an intuitive GUI and keyword-based non-code methods.
+- **Provide a Flexible Test Environment**: Supports various execution options and customization such as cross-browser compatibility, parallel execution, and dynamic chaining.
+- **User-friendly Error Identification**: Facilitates error analysis by providing user-friendly error messages when an error occurs, recording screenshots, and providing recorded screens when an error occurs.
 
-## 🌐 적용 대상 및 배포 형태
+## 🌐 Target Audience and Deployment Format
 
-SyncETA는 Docker 기반 설치형(On-premise) 또는 클라우드 SaaS 형태로 배포될 수 있으며, 보안 요건에 따라 LLM 모델을 온프레미스에서 실행할 수 있습니다.
+SyncETA can be deployed as a Docker-based installation (On-premise) or in a Cloud SaaS format, and depending on security requirements, the LLM model can be executed on-premise.
 
-- **대상**: SaaS 웹서비스 QA 팀, 대규모 커머스 플랫폼, 회귀 테스트 자동화가 필요한 기업, 웹 애플리케이션 개발팀, QA 엔지니어링 팀, DevOps 팀, AI/ML 팀 등.
+- **Target**: SaaS web service QA teams, large commerce platforms, enterprises requiring regression test automation, web application development teams, QA engineering teams, DevOps teams, AI/ML teams, etc.
 
-## 🏆 SyncETA의 차별화된 강점
+## 🏆 SyncETA's Differentiated Strengths
 
-SyncETA는 급상승하는 오픈소스 LLM의 상용화 가능성과 폭발적인 QA 자동화 수요를 기반으로, 경쟁 솔루션에는 없는 **LLM 학습 피드백 루프 기반 품질 향상 모델**을 제공합니다. 또한, 고객의 특정 요구사항에 맞춰 테스트 환경 및 기능을 유연하게 조정하고 확장할 수 있는 **'Customization in its DNA'**를 강조하며, 기업의 디지털 전환과 경쟁력 강화에 기여하는 전략적 도구가 되고자 합니다.
+Based on the commercialization potential of rapidly rising open-source LLMs and the explosive demand for QA automation, SyncETA provides a **quality improvement model based on an LLM learning feedback loop** that competing solutions do not have. Furthermore, it emphasizes **'Customization in its DNA'**, which can flexibly adjust and expand test environments and features according to customer's specific requirements, aiming to become a strategic tool contributing to enterprise digital transformation and strengthening competitiveness.
 
 ---

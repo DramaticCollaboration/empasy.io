@@ -1,16 +1,16 @@
 ---
-title: 스토리
-description: AI 테스트 자동화 방법과 최신 도구를 비교해보세요. 머신러닝 기반 자동화 테스트로 QA 효율성을 높이는 방법을 알아봅니다.
+title: ストーリー
+description: AIテスト自動化の方法と最新ツールを比較してみてください。機械学習ベースの自動化テストでQA効率を高める方法について説明します。
 head:
   - - meta
     - name: keywords
-      content: 테스트 자동화, 테스팅 생성형 AI, Playwright, Selenium, 실시간 품질 피드백, 무중단 테스트, AI 기반 테스트 자동화, 지속적 테스트, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, 자기 치유 테스트, Self-healing,  AI 테스트 자동화, 코드리스 자동화, QA 자동화, 소프트웨어 테스트, 테스트 시나리오 생성, 코드리스 테스트, 자연어 테스트, 테스트 자동화 도구, 테스트 자동화 플랫폼, 테스트 효율화, Playwright , Selenium , QAOps, TestOps, Shift-Left 테스트, Shift‑Right 테스트
+      content: テスト自動化, テスティング生成型AI, Playwright, Selenium, リアルタイム品質フィードバック, 無停止テスト, AIベーステスト自動化, 継続的テスト(Continuous Testing), QAOps, TestOps, コードレス(Codeless), ローコード(Low-Code), 自己修復テスト(Self-healing), AIテスト自動化, コードレス自動化, QA自動化, ソフトウェアテスト, テストシナリオ生成, コードレステスト, 自然言語テスト, テスト自動化ツール, テスト自動化プラットフォーム, テスト効率化, Playwright, Selenium, QAOps, TestOps, シフトレフト(Shift-Left)テスト, シフトライト(Shift-Right)テスト
   - - meta
     - property: og:title
-      content: AI 테스트 자동화 | SyncETA
+      content: AIテスト自動化 | SyncETA
   - - meta
     - property: og:description
-      content: AI 기반 테스트 자동화로 QA 시간을 80% 절감하세요. 코드 없는 테스트 생성, 자연어 시나리오 작성, 다양한 플랫폼 지원으로 QA의 새로운 기준을 제시합니다.
+      content: AIベースのテスト自動化でQA時間を80%削減します。コードなしのテスト作成、自然言語によるシナリオ作成、多様なプラットフォームのサポートにより、QAの新しい基準を提示します。
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,42 +20,42 @@ head:
 sort: 600
 ---
 
-# 스토리
+# ストーリー
 
-## 스토리의 기능
+## ストーリーの機能
 
-#### 여러 시나리오를 연결하여 하나의 브라우저로 통합 실행
+#### 複数のシナリオを接続して1つのブラウザで統合して実行
 
-## 스토리 생성
+## ストーリーの作成
 
-#### 1. 스토리 메뉴 이동
+#### 1. ストーリーメニューへ移動
 
 ![image](./image/story/newstory.png)
 
-#### 2. 우측 시나리오 목록에서 스토리로 생성할 시나리오를 선택하여 드래그합니다.
+#### 2. 右側のシナリオリストからストーリーとして作成するシナリオを選択してドラッグします。
 
 ![image](./image/story/newstory2.png)
 
-#### 3. 탭 별칭을 생성합니다.
+#### 3. タブエイリアスを作成します。
 
 ::: tip
 
-- 각각의 탭들을 고유하게 구별합니다.
+- それぞれのタブを一意に識別します。
   :::
   ![image](./image/story/5.png)
 
-#### 4. 탭에 별칭을 적용합니다.
+#### 4. タブにエイリアスを適用します。
 
 ::: tip
 
-- 동일한 별칭을 가진 탭별로 레코드가 이어서 실행됩니다.
+- 同じエイリアスを持つタブごとにレコードが連続して実行されます。
   :::
   ![image](./image/story/6.png)
 
-#### 5. 이어서 실행할 시나리오를 연결해줍니다.
+#### 5. 続けて実行するシナリオを接続します。
 
 ![image](./image/story/3.png)
 
-#### 6. 선택된 시나리오들의 시작, 끝 레코드를 선택합니다.
+#### 6. 選択されたシナリオの開始、終了レコードを選択します。
 
 ![image](./image/story/4.png)

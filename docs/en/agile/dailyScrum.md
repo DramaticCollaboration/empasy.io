@@ -1,16 +1,16 @@
 ---
-title: 데일리 스크럼
-description: 데일리 스크럼(Daily Scrum)의 효과적인 진행 방법을 단계별로 안내합니다. 애자일 팀의 협력 강화, 진행 상황 점검, 장애물 해결을 위한 15분 회의의 핵심 원칙과 실전 팁을 확인하세요.
+title: Daily Scrum
+description: A step-by-step guide to conducting an effective Daily Scrum. Check out the core principles and practical tips of this 15-minute meeting for strengthening agile team collaboration, checking progress, and removing obstacles.
 head:
   - - meta
     - name: keywords
-      content: 데일리 스크럼, Daily Scrum, 스크럼 회의, 애자일, 애자일 방법론, 스크럼 마스터, 팀 협업, 일일 회의, 스크럼 진행 방법, 애자일 코칭, 팀 장애물 해결
+      content: Daily Scrum, Scrum Meeting, Agile, Agile Methodology, Scrum Master, Team Collaboration, Daily Meeting, How to conduct Scrum, Agile Coaching, Team Obstacle Resolution
   - - meta
     - property: og:title
-      content: 스크럼반
+      content: Scrumban
   - - meta
     - property: og:description
-      content: 데일리 스크럼(Daily Scrum)의 효과적인 진행 방법을 단계별로 안내합니다. 애자일 팀의 협력 강화, 진행 상황 점검, 장애물 해결을 위한 15분 회의의 핵심 원칙과 실전 팁을 확인하세요.
+      content: A step-by-step guide to conducting an effective Daily Scrum. Check out the core principles and practical tips of this 15-minute meeting for strengthening agile team collaboration, checking progress, and removing obstacles.
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,173 +20,173 @@ head:
 sort: 3000
 ---
 
-# ✅ 데일리 스크럼 진행 방법
+# ✅ How to Conduct a Daily Scrum
 
-1. **시간 & 장소 고정**
+1. **Fixed Time & Location**
 
-- 매일 같은 시간(예: 오전 9시)
-- 같은 장소(회의실 or 온라인 화상회의)
+- Same time every day (e.g., 9:00 AM)
+- Same location (meeting room or online video conference)
 
-2. **참여자**
+2. **Participants**
 
-- 개발팀 전원 (개발자, QA 등)
-- 스크럼 마스터(진행 보조), PO는 옵저버 가능
+- All development team members (Developers, QA, etc.)
+- Scrum Master (facilitator), PO can be an observer
 
-3. **진행 방식**
+3. **How to Proceed**
 
-- 시간은 **15분 이내**
-- 팀원이 **돌아가며 공유**
-- **3가지 질문**에 맞춰 간단히 말함
+- Duration is **within 15 minutes**
+- Team members **take turns sharing**
+- Briefly answer based on **3 questions**
 
-  1. 어제 무엇을 했나요?
-  2. 오늘 무엇을 할 건가요?
-  3. 진행을 방해하는 장애물이 있나요?
+  1. What did you do yesterday?
+  2. What will you do today?
+  3. Are there any obstacles preventing progress?
 
-4. **중요 원칙**
+4. **Important Principles**
 
-- 상세 기술 설명 ❌ → “공유” 중심
-- 장애물은 스크럼 끝난 뒤 별도로 논의
-- 보고가 아니라 **팀 동기화 목적**
-
----
-
-# 🎤 데일리 스크럼 실제 진행 예시 스크립트
-
-## 기본 정보
-
-- **시간**: 매일 아침 10:00 (15분 이내)
-- **참석자**: 개발팀 전체, 스크럼 마스터, 필요시 제품 책임자(PO)
-- **형식**: 서서 진행 (원격 시에는 화상회의)
+- Detailed technical explanation ❌ → Focus on "Sharing"
+- Obstacles are discussed separately after the Scrum
+- The purpose is not reporting, but **team synchronization**
 
 ---
 
-## 1. 시작 인사 및 회의 목적 확인 (2분)
+# 🎤 Daily Scrum Practical Example Script
 
-**스크럼 마스터**:
+## Basic Information
 
-> "좋은 아침입니다. 데일리 스크럼 시작하겠습니다. 오늘도 각자 어제 한 일, 오늘 할 일, 그리고 장애 요소가 있다면 공유 부탁드립니다."
-
----
-
-## 2. 팀원별 진행 상황 공유 (10분)
-
-### 김개발
-
-> "어제는 사용자 로그인 API 개발을 완료했습니다. 오늘은 사용자 프로필 조회 기능을 구현할 예정입니다. 현재 별다른 장애 요소는 없습니다."
-
-### 이디자인
-
-> "어제는 결제 페이지 UI 디자인을 완료하고 개발팀에 전달했어요. 오늘은 관리자 페이지 디자인을 시작할 예정입니다. 다만 개발 파트와의 협의가 필요한 부분이 있어 오후에 짧게 미팅 부탁드려도 될까요?"
-
-**스크럼 마스터**:
-
-> "네, 회의 후에 관련 팀원들과 일정 조율해드리겠습니다."
-
-### 박백엔드
-
-> "어제 DB 최적화 작업을 진행했고, 오늘은 성능 테스트를 진행할 예정입니다. 다만 테스트 서버의 CPU 사용률이 높아서 모니터링이 필요할 것 같습니다."
-
-**스크럼 마스터**:
-
-> "장애 요소로 기록해두고 회의 후에 인프라 팀과 협의해보겠습니다."
-
-### 정QA
-
-> "어제는 로그인 기능 테스트를 완료했고, 오늘은 새로 추가된 결제 기능 테스트를 시작할 예정입니다. 테스트 시나리오 중 개발팀의 확인이 필요한 부분이 몇 군데 있습니다."
-
-**스크럼 마스터**:
-
-> "회의 후에 관련 개발자와 바로 연결해드리겠습니다."
+- **Time**: Every morning at 10:00 (within 15 minutes)
+- **Attendees**: Entire development team, Scrum Master, Product Owner (PO) if necessary
+- **Format**: Stand-up (video conference for remote)
 
 ---
 
-## 3. 장애 요소 요약 및 조치 계획 수립 (2분)
+## 1. Opening Remarks and Confirming the Purpose of the Meeting (2 minutes)
 
-**스크럼 마스터**:
+**Scrum Master**:
 
-> "지금까지 공유된 장애 요소를 정리해보면:
+> "Good morning. We will begin the Daily Scrum. Today again, please share what you did yesterday, what you will do today, and any obstacles you have."
+
+---
+
+## 2. Sharing Progress by Team Member (10 minutes)
+
+### Developer Kim
+
+> "Yesterday, I completed the user login API development. Today, I plan to implement the user profile inquiry feature. There are no particular obstacles at the moment."
+
+### Designer Lee
+
+> "Yesterday, I finished the UI design for the payment page and delivered it to the dev team. Today, I plan to start designing the admin page. However, there is a part that requires consultation with the dev part, so can we have a short meeting in the afternoon?"
+
+**Scrum Master**:
+
+> "Yes, I will coordinate the schedule with the related team members after the meeting."
+
+### Backend Park
+
+> "I worked on DB optimization yesterday, and I plan to conduct performance testing today. However, the CPU usage of the test server is high, so I think monitoring is needed."
+
+**Scrum Master**:
+
+> "I will record it as an obstacle and discuss it with the infrastructure team after the meeting."
+
+### QA Jung
+
+> "Yesterday, I completed testing the login feature, and today I plan to start testing the newly added payment feature. There are a few places in the test scenario that need confirmation from the dev team."
+
+**Scrum Master**:
+
+> "I will connect you directly with the relevant developer after the meeting."
+
+---
+
+## 3. Summarizing Obstacles and Establishing an Action Plan (2 minutes)
+
+**Scrum Master**:
+
+> "Summarizing the obstacles shared so far:
 >
-> 1. 디자인-개발 협의 미팅 필요
-> 2. 테스트 서버 CPU 사용률 문제
-> 3. QA 테스트 시나리오 확인 필요
+> 1. Need a design-dev consultation meeting
+> 2. Test server CPU usage issue
+> 3. Need to confirm QA test scenarios
 >
-> 이 세 가지 항목에 대해 제가 각 담당자와 조율하겠습니다."
+> I will coordinate with each person in charge regarding these three items."
 
 ---
 
-## 4. 회의 종료 (1분)
+## 4. Closing the Meeting (1 minute)
 
-**스크럼 마스터**:
+**Scrum Master**:
 
-> "다들 오늘 할 일 명확히 확인하셨고, 장애 요소도 파악되었습니다. 회의는 여기서 마치고, 필요한 분들은 따로 논의 이어가주세요. 다들 힘내세요!"
-
----
-
-## 💡 데일리 스크럼 효과적인 운영 팁
-
-- **시간 엄수**: 15분 규칙을 지키기 위해 서서 회의하는 것을 권장
-- **문제 해결 회의 금지**: 깊은 논의는 별도 시간을 확보하여 진행
-- **모든 팀원 참여**:골고루 발언할 수 있도록 분위기 조성
-- **시각적 보조 도구 활용**: 칸반 보드, 태스크 관리 도구 등을 함께 사용
-- **장애 요소 집중**: 문제 해결을 위한 액션 플랜 반드시 수립
+> "Everyone clearly confirmed what to do today, and obstacles have been identified. Let's wrap up the meeting here, and those who need to, please continue the discussion separately. Have a great day everyone!"
 
 ---
 
-## 📝 기록 예시
+## 💡 Tips for Operating an Effective Daily Scrum
 
-| 담당자   | 어제 한 일              | 오늘 할 일                | 장애 요소                   |
-| -------- | ----------------------- | ------------------------- | --------------------------- |
-| 김개발   | 로그인 API 개발 완료    | 프로필 조회 기능 구현     | 없음                        |
-| 이디자인 | 결제 페이지 UI 완료     | 관리자 페이지 디자인 시작 | 개발팀과 협의 필요          |
-| 박백엔드 | DB 최적화 작업          | 성능 테스트 진행          | 테스트 서버 CPU 사용률 문제 |
-| 정QA     | 로그인 기능 테스트 완료 | 결제 기능 테스트 시작     | 테스트 시나리오 확인 필요   |
-
----
-
-# ✅ 데일리 스크럼 진행용 체크리스트
-
-## 📌 진행자(스크럼 마스터) 체크리스트
-
-- [ ] 매일 같은 시간/장소(혹은 온라인)에서 시작했는가?
-- [ ] 15분 내로 끝낼 준비가 되었는가?
-- [ ] 각 팀원이 **어제/오늘/장애물** 3가지 항목만 공유하도록 유도했는가?
-- [ ] 공유된 **장애물(Blocking Issue)** 은 별도 Follow-up으로 기록했는가?
-- [ ] 스크럼 종료 후, 이슈 해결을 위한 추가 미팅이 필요한 사람만 소집했는가?
+- **Punctuality**: Recommend standing up to keep the 15-minute rule
+- **No Problem-Solving Meetings**: Secure a separate time for deep discussions
+- **Participation of All Team Members**: Create an atmosphere where everyone can speak evenly
+- **Utilize Visual Aids**: Use Kanban boards, task management tools, etc. together
+- **Focus on Obstacles**: Must establish an action plan for problem-solving
 
 ---
 
-## 📌 팀원 개별 공유 체크리스트
+## 📝 Example Record
 
-- [ ] 어제 내가 완료한 일은?
-- [ ] 오늘 내가 할 일은?
-- [ ] 진행을 방해하는 장애물이 있는가?
-
-👉 공유는 **짧고 명확하게 (1\~2문장)**
-👉 문제 해결 논의는 ❌ (스크럼 이후 따로)
+| Person in Charge | What was done yesterday | What to do today | Obstacles |
+| ---------------- | ----------------------- | ---------------- | --------- |
+| Developer Kim | Completed login API dev | Implement profile inquiry | None |
+| Designer Lee | Completed payment page UI | Start admin page design | Need to consult with dev team |
+| Backend Park | DB optimization work | Conduct performance test | Test server CPU usage issue |
+| QA Jung | Completed login test | Start payment feature test | Need to confirm test scenario |
 
 ---
 
-## 📝 팀원 공유 예시 템플릿
+# ✅ Daily Scrum Checklist for Facilitator
+
+## 📌 Facilitator (Scrum Master) Checklist
+
+- [ ] Started at the same time/location (or online) every day?
+- [ ] Ready to finish within 15 minutes?
+- [ ] Guided each team member to share only the 3 items: **Yesterday/Today/Obstacles**?
+- [ ] Recorded shared **Obstacles (Blocking Issues)** for separate Follow-up?
+- [ ] Called only those who need an additional meeting to resolve issues after the Scrum?
+
+---
+
+## 📌 Individual Team Member Sharing Checklist
+
+- [ ] What did I complete yesterday?
+- [ ] What will I do today?
+- [ ] Are there any obstacles preventing progress?
+
+👉 Keep sharing **short and clear (1~2 sentences)**
+👉 No problem-solving discussion ❌ (separately after Scrum)
+
+---
+
+## 📝 Team Member Sharing Example Template
 
 ```
-[이름]
-- 어제:
-- 오늘:
-- 장애물:
+[Name]
+- Yesterday:
+- Today:
+- Obstacle:
 ```
 
 ---
 
-## 📊 팀 전체 스크럼 보드 예시 (화이트보드 / 온라인 협업툴)
+## 📊 Team Entire Scrum Board Example (Whiteboard / Online Collaboration Tool)
 
-| 이름 | 어제 한 일                                    | 오늘 할 일                               | 장애물 (Blocking Issue)   |
-| ---- | --------------------------------------------- | ---------------------------------------- | ------------------------- |
-| 철수 | 로그인 API 리팩토링 완료                      | 구글 소셜 로그인 연동 시작               | 구글 OAuth 문서 접근 불가 |
-| 영희 | 회원가입 기능 테스트 케이스 작성 및 일부 실행 | 회원가입 기능 전체 테스트 및 버그 리포트 | 테스트 서버 자주 끊김     |
-| 민수 | 대시보드 UI 작업                              | 차트 라이브러리 적용 및 API 연동         | 최신 API 스펙 문서 미공유 |
+| Name | What was done yesterday | What to do today | Obstacles (Blocking Issue) |
+| ---- | ----------------------- | ---------------- | -------------------------- |
+| Chulsoo | Completed login API refactoring | Start Google social login integration | Cannot access Google OAuth docs |
+| Younghee | Write sign-up test cases and execute some | Complete sign-up feature test and bug report | Test server disconnects frequently |
+| Minsoo | Dashboard UI work | Apply chart library and API integration | Latest API spec doc not shared |
 
 ---
 
-👉 이렇게 하면 팀원들이 매일 **체크리스트 기반으로 말하기만 하면 되고**, 스크럼 마스터는 **테이블만 업데이트**하면 기록과 공유가 동시에 해결됩니다.
+👉 By doing this, team members just have to **speak based on the checklist** every day, and the Scrum Master just has to **update the table**, solving recording and sharing simultaneously.
 
 ---

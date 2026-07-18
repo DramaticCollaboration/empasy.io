@@ -1,16 +1,16 @@
 ---
-title: 리눅스 electron 디버깅 Crash
-description: 기억은 금방 사라지지만, 로그는 영원하다! 🎯 우리 팀의 재미있고 자유로운 작업 기록 공간
+title: Linux Electron デバッグ Crash
+description: 記憶はすぐに消えますが、ログは永遠です！🎯 私たちのチームの楽しくて自由な作業記録スペース
 head:
   - - meta
     - name: keywords
-      content: 공부 한것들을 적어 보아요
+      content: 勉強したことを書いてみましょう
   - - meta
     - property: og:title
-      content: 작업 로그 놀이터 - 자유로운 작업 기록 공간 🎪
+      content: 作業ログの遊び場 - 自由な作業記録スペース 🎪
   - - meta
     - property: og:description
-      content: 이 곳은 팀원들이 자유롭게 작업 로그를 기록하고 공유하는 공간입니다. 강제 없이 필요할 때 편하게 추가할 수 있는 재미있는 작업 로그 시스템을 소개합니다.
+      content: ここはチームメンバーが自由に作業ログを記録して共有するスペースです。強制なしで必要な時に気軽に追加できる楽しい作業ログシステムを紹介します。
   - - meta
     - property: og:image
       content: https://doc.empasy.com/images/favicon.png
@@ -20,11 +20,11 @@ head:
 sort: 400
 ---
 
-# Linux에서 디버그중에 어플이 갑자기 죽는 "ENOSPC: System limit for number of file watchers reached" 오류
+# Linuxでデバッグ中にアプリが突然落ちる「ENOSPC: System limit for number of file watchers reached」エラー
 
-해결 1) Linux inotify watcher 한도 증가(권장)
+解決 1) Linux inotify watcher 制限の増加 (推奨)
 
-- 현재 값 확인:
+- 現在の値を確認:
 
 ```shell script
 # Bash
@@ -32,31 +32,31 @@ sort: 400
   cat /proc/sys/fs/inotify/max_user_instances
 ```
 
-- 일시 증가(즉시 적용):
+- 一時的な増加 (即時適用):
 
 ```shell script
-# Bash (sudo 필요)
+# Bash (sudo が必要)
   sudo sysctl fs.inotify.max_user_watches=524288
   sudo sysctl fs.inotify.max_user_instances=1024
 ```
 
-- 영구 설정(재부팅 후에도 유지):
+- 永続的な設定 (再起動後も維持):
 
 ```shell script
-# Bash (sudo 필요)
+# Bash (sudo が必要)
   echo 'fs.inotify.max_user_watches=524288' | sudo tee /etc/sysctl.d/99-inotify.conf
   echo 'fs.inotify.max_user_instances=1024' | sudo tee -a /etc/sysctl.d/99-inotify.conf
   sudo sysctl -p /etc/sysctl.d/99-inotify.conf
 ```
 
-- 이후 다시: yarn dev:debug 실행
+- その後、再度: `yarn dev:debug` を実行
 
-해결 2) Watcher 대신 폴링 사용(대안/즉시 응급처치)
+解決 2) Watcherの代わりにポーリングを使用 (代替/即時応急処置)
 
-- 한 번만 시험:
+- 1回だけテスト:
 
 ```shell script
 CHOKIDAR_USEPOLLING=1 CHOKIDAR_INTERVAL=800 yarn dev:debug
 ```
 
-- 자주 쓸 거면 Run/Debug 구성의 Environment variables에 CHOKIDAR_USEPOLLING=1, CHOKIDAR_INTERVAL=800 추가
+- 頻繁に使用する場合は、Run/Debug構成の Environment variables に `CHOKIDAR_USEPOLLING=1`、`CHOKIDAR_INTERVAL=800` を追加
