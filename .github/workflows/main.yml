@@ -24,6 +24,11 @@ jobs:
           cache: 'pnpm'
           cache-dependency-path: docs/pnpm-lock.yaml
 
+      - name: Build Main Site
+        run: |
+          npm install
+          npm run build
+
       - name: Build Docs
         run: |
           cd docs
@@ -31,14 +36,19 @@ jobs:
           pnpm run docs:build
           cd ..
           
-          # Replace raw docs folder with built dist
-          mv docs/.vitepress/dist ./docs_dist
-          rm -rf docs
-          mv docs_dist docs
+      - name: Assemble Final Build
+        run: |
+          # Move docs build to main site dist
+          mv docs/.vitepress/dist ./dist/docs
+          
+          # Copy required static files to dist
+          cp CNAME dist/ || true
+          cp robots.txt dist/ || true
+          cp sitemap.xml dist/ || true
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GIT_TOKEN }}
-          publish_dir: .
+          publish_dir: dist
 
