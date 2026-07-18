@@ -39,7 +39,8 @@ jobs:
       - name: Assemble Final Build
         run: |
           # Move docs build to main site dist
-          mv docs/.vitepress/dist ./dist/docs
+          rm -rf ./dist/docs
+          mv docs/.vitepress/dist/* ./dist/docs/
           
           # Copy required static files to dist
           cp CNAME dist/ || true
