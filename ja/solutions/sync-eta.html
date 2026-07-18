@@ -118,7 +118,7 @@
       "name": "엠파시(Empasy)",
       "alternateName": ["엠파시 IT", "Empasy AI", "엠파시 소프트웨어"],
       "url": "https://empasy.com/",
-      "description": "엠파시(Empasy)는 B2B 엔터프라이즈 AI 소프트웨어 개발 IT 기업입니다.",
+      "description": "EmpasyはB2BエンタープライズAIソフトウェア開発IT企業です。",
       "sameAs": [
         "https://github.com/DramaticCollaboration",
         "../../docs/index.html"
@@ -157,26 +157,26 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "기존 테스트 스크립트 도구(Selenium 등)와 무엇이 다른가요?",
+      "name": "従来のテストスクリプトツール（Seleniumなど）と何が違いますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "SyncEta는 UI 디자인이 변경되어도 Vision-LLM이 스스로 새로운 요소를 찾아내어 테스트를 자가 치유합니다."
+        "text": "SyncEtaはUIデザインが変更されても、Vision-LLMが自ら新しい要素を見つけ出し、テストを自己修復します。"
       }
     },
     {
       "@type": "Question",
-      "name": "웹과 모바일 뷰 모두 지원하나요?",
+      "name": "Webとモバイルビューの両方に対応していますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "네, 웹 브라우저 기반 테스트뿐 아니라 다양한 디바이스 환경에서의 반응형 테스트를 모두 지원합니다."
+        "text": "はい、Webブラウザベースのテストだけでなく、さまざまなデバイス環境でのレスポンシブテストにも対応しています。"
       }
     },
     {
       "@type": "Question",
-      "name": "QA 리소스 절감 효과는 어느 정도인가요?",
+      "name": "QAリソースの削減効果はどのくらいですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "테스트 스크립트 유지보수에 들어가던 인력과 시간을 80% 이상 절감할 수 있습니다."
+        "text": "テストスクリプトの保守に費やしていた人員と時間を80%以上削減できます。"
       }
     }
   ]
@@ -315,67 +315,67 @@
         <section class="section pt-0 fade-in-up delay-1">
             <div class="vs-container mb-4">
                 <div class="vs-box vs-legacy">
-                    <h4 data-i18n="eta.vs.legacy.title">기존 스크립트 기반 QA</h4>
+                    <h4 data-i18n="eta.vs.legacy.title">従来のスクリプトベースQA</h4>
                     <ul class="vs-list">
-                        <li data-i18n="eta.vs.legacy.1">UI 디자인이나 구조가 바뀌면 식별자 오류로 테스트 실패</li>
-                        <li data-i18n="eta.vs.legacy.2">픽셀 단위 비교로 인한 빈번한 False Positive 발생</li>
-                        <li data-i18n="eta.vs.legacy.3">스크립트 유지보수에 막대한 개발 리소스 지속 투입</li>
+                        <li data-i18n="eta.vs.legacy.1">UIデザインや構造が変わると識別子エラーでテストが失敗</li>
+                        <li data-i18n="eta.vs.legacy.2">ピクセル単位の比較による頻繁な誤検知(False Positive)の発生</li>
+                        <li data-i18n="eta.vs.legacy.3">スクリプトの保守に膨大な開発リソースを継続的に投入</li>
                     </ul>
                 </div>
                 <div class="vs-box vs-agent">
                     <h4 data-i18n="eta.vs.agent.title">SyncEta 에이전트</h4>
                     <ul class="vs-list">
-                        <li data-i18n="eta.vs.agent.1">Vision LLM을 활용한 시각적 식별자 자동 탐색 및 자가 치유</li>
+                        <li data-i18n="eta.vs.agent.1">Vision LLMを活用した視覚的識別子の自動探索および自己修復</li>
                         <li data-i18n="eta.vs.agent.2">「ユーザーの認知」に基づいた文脈的な画面崩壊の判断。</li>
-                        <li data-i18n="eta.vs.agent.3">오류 검출 시 원인 분석 및 해결 코드를 관제탑으로 역제안</li>
+                        <li data-i18n="eta.vs.agent.3">エラー検出時に原因分析と解決コードを管制塔へ逆提案</li>
                     </ul>
                 </div>
             </div>
 
             <div class="section-header text-center mt-4 mb-4">
-                <h2 class="section-title">핵심 기능 (Key Features)</h2>
+                <h2 class="section-title">主な機能 (Key Features)</h2>
             </div>
             <div class="rich-features">
                 <div class="feature-item">
                     <span class="feature-icon">👁️</span>
-                    <h3>Vision LLM 시각 인식</h3>
-                    <p>단순한 DOM 구조(XPath/CSS) 의존을 탈피합니다. AI가 사람처럼 화면을 '보고' 버튼의 위치나 디자인이 변경되어도 정확히 대상 엘리먼트를 추적합니다.</p>
+                    <h3>Vision LLM 視覚認識</h3>
+                    <p>単純なDOM構造（XPath/CSS）への依存から脱却します。AIが人間のように画面を「見て」、ボタンの位置やデザインが変更されても正確に対象要素を追跡します。</p>
                 </div>
                 <div class="feature-item">
                     <span class="feature-icon">🩹</span>
-                    <h3>실시간 자가 치유 (Self-Healing)</h3>
-                    <p>테스트 실행 중 UI 식별자가 깨진 것을 발견하면, 에이전트가 화면 문맥을 분석하여 새로운 식별자를 스스로 찾고 코드를 수정하여 테스트를 완주합니다.</p>
+                    <h3>リアルタイム自己修復 (Self-Healing)</h3>
+                    <p>テスト実行中にUI識別子が壊れたことを発見すると、エージェントが画面の文脈を分析して新しい識別子を自ら見つけ出し、コードを修正してテストを完走します。</p>
                 </div>
                 <div class="feature-item">
                     <span class="feature-icon">📝</span>
-                    <h3>자연어 기반 시나리오 자동 생성</h3>
+                    <h3>自然言語ベースのシナリオ自動生成</h3>
                     <p>사용자 스토리나 기획서를 업로드하면, AI가 BDD(Behavior-Driven Development) 스타일의 테스트 시나리오와 Playwright 스크립트를 자동 생성합니다.</p>
                 </div>
             </div>
 
             <div class="section-header text-center mt-4 mb-4" style="margin-top: 5rem;">
-                <h2 class="section-title">작동 프로세스 (How it Works)</h2>
+                <h2 class="section-title">動作プロセス (How it Works)</h2>
             </div>
             <div class="process-steps">
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h4>자연어 시나리오 입력</h4>
-                        <p>"로그인 후 장바구니에 아이템을 담고 결제 페이지로 이동해"와 같은 문장을 입력합니다.</p>
+                        <h4>自然言語シナリオの入力</h4>
+                        <p>「ログイン後、カートにアイテムを入れて決済ページへ移動して」などの文章を入力します。</p>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h4>시각적 회귀 및 기능 테스트 수행</h4>
-                        <p>SyncEta가 브라우저를 띄워 사람과 동일한 속도 및 인지 방식으로 화면을 탐색하며 동작합니다.</p>
+                        <h4>視覚的リグレッションと機能テストの実行</h4>
+                        <p>SyncEtaがブラウザを立ち上げ、人間と同じ速度と認知方法で画面を探索しながら動作します。</p>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h4>오류 분석 및 리포팅</h4>
-                        <p>단순 실패 보고가 아닌, '어떤 변경으로 인해 실패했는지' 원인을 분석하고 해결 스크립트를 첨부해 리포팅합니다.</p>
+                        <h4>エラー分析とレポーティング</h4>
+                        <p>単なる失敗報告ではなく、「どのような変更により失敗したのか」の原因を分析し、解決スクリプトを添付してレポートします。</p>
                     </div>
                 </div>
             </div>
@@ -385,20 +385,20 @@
             <h2>よくあるご質問 (FAQ)</h2>
             <div class="faq-item">
                 <details>
-                    <summary>기존 테스트 스크립트 도구(Selenium 등)와 무엇이 다른가요?</summary>
-                    <div class="faq-answer">SyncEta는 UI 디자인이 변경되어도 Vision-LLM이 스스로 새로운 요소를 찾아내어 테스트를 자가 치유합니다.</div>
+                    <summary>従来のテストスクリプトツール（Seleniumなど）と何が違いますか？</summary>
+                    <div class="faq-answer">SyncEtaはUIデザインが変更されても、Vision-LLMが自ら新しい要素を見つけ出し、テストを自己修復します。</div>
                 </details>
             </div>
             <div class="faq-item">
                 <details>
-                    <summary>웹과 모바일 뷰 모두 지원하나요?</summary>
-                    <div class="faq-answer">네, 웹 브라우저 기반 테스트뿐 아니라 다양한 디바이스 환경에서의 반응형 테스트를 모두 지원합니다.</div>
+                    <summary>Webとモバイルビューの両方に対応していますか？</summary>
+                    <div class="faq-answer">はい、Webブラウザベースのテストだけでなく、さまざまなデバイス環境でのレスポンシブテストにも対応しています。</div>
                 </details>
             </div>
             <div class="faq-item">
                 <details>
-                    <summary>QA 리소스 절감 효과는 어느 정도인가요?</summary>
-                    <div class="faq-answer">테스트 스크립트 유지보수에 들어가던 인력과 시간을 80% 이상 절감할 수 있습니다.</div>
+                    <summary>QAリソースの削減効果はどのくらいですか？</summary>
+                    <div class="faq-answer">テストスクリプトの保守に費やしていた人員と時間を80%以上削減できます。</div>
                 </details>
             </div>
         </section>
@@ -424,7 +424,7 @@
                 </a>
             </div>
             <address style="font-style: normal; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
-                <strong>(주)엠파시 (Empasy IT Corp.)</strong><br>
+                <strong>Empasy IT Corp.</strong><br>
                 エンタープライズB2BソフトウェアおよびAIエージェント（SyncSeries）開発会社<br>
                 Seoul, South Korea
             </address>
