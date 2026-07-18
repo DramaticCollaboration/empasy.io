@@ -1,23 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="description" content="Technical deep-dive into syncboot cloud native msa architecture.">
-    <meta name="keywords" content="��� ���α�, AI ����, AI ������Ʈ, AI Ops, MSA ��ȯ, RPA ��ü, ������������ AI, ���Ľ�, Empasy">
+    <meta name="keywords" content="기술 블로그, AI 도입, AI 에이전트, AI Ops, MSA 전환, RPA 대체, 엔터프라이즈 AI, 엠파시, Empasy">
     <meta name="author" content="Empasy">
     
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "���Ľ�(Empasy) ��� ���α�",
+      "name": "엠파시(Empasy) 기술 블로그",
       "url": "https://empasy.com/blog.html",
-      "description": "������������ AI ������Ʈ �� AI Ops ���� �ֽ� ��� �λ���Ʈ",
+      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
       "publisher": {
         "@type": "Organization",
-        "name": "���Ľ�(Empasy)",
+        "name": "엠파시(Empasy)",
         "logo": {
           "@type": "ImageObject",
           "url": "https://empasy.com/empasy-logo.png"
@@ -61,8 +61,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "[Tech Blog] Ŭ���� ����Ƽ���� ����: ������������ MSA ��ȯ�� �����ϴ� SyncBoot �л� ��Ű��ó �м�",
-  "description": "Seata, Sentinel, SkyWalking �� 100% ���¼ҽ��� �����Ͽ� ������ ����ũ�μ��� ������ ȯ���� �ܹ��� �����ϴ� SyncBoot ��Ű��ó.",
+  "headline": "[Tech Blog] 클라우드 네이티브의 심장: 엔터프라이즈 MSA 전환을 가속하는 SyncBoot 분산 아키텍처 분석",
+  "description": "Seata, Sentinel, SkyWalking 등 100% 오픈소스를 통합하여 복잡한 마이크로서비스 인프라 환경을 단번에 구축하는 SyncBoot 아키텍처.",
   "author": {
     "@type": "Organization",
     "name": "Empasy Engineering Team",
@@ -94,7 +94,7 @@
         
         <section class="section" style="padding-top: 2rem;">
             <div class="container">
-                ?<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
+                ﻿<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
     {{> header_en }}
     <div style="line-height: 1.8; color: var(--text-primary);">
         <p>Transitioning from a massive, rigid Monolithic system to a flexible, scalable Microservices Architecture (MSA) is an essential task to secure business agility today. However, when building actual large-scale distributed systems, development teams face complex infrastructure barriers such as distributed transaction data integrity, inter-service routing and traffic control, and establishing integrated Observability.</p>

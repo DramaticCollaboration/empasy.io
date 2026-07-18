@@ -1,23 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="description" content="Technical deep-dive into synceta intelligent regression testing pipeline.">
-    <meta name="keywords" content="��� ���α�, AI ����, AI ������Ʈ, AI Ops, MSA ��ȯ, RPA ��ü, ������������ AI, ���Ľ�, Empasy">
+    <meta name="keywords" content="기술 블로그, AI 도입, AI 에이전트, AI Ops, MSA 전환, RPA 대체, 엔터프라이즈 AI, 엠파시, Empasy">
     <meta name="author" content="Empasy">
     
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "���Ľ�(Empasy) ��� ���α�",
+      "name": "엠파시(Empasy) 기술 블로그",
       "url": "https://empasy.com/blog.html",
-      "description": "������������ AI ������Ʈ �� AI Ops ���� �ֽ� ��� �λ���Ʈ",
+      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
       "publisher": {
         "@type": "Organization",
-        "name": "���Ľ�(Empasy)",
+        "name": "엠파시(Empasy)",
         "logo": {
           "@type": "ImageObject",
           "url": "https://empasy.com/empasy-logo.png"
@@ -61,8 +61,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "[Tech Blog] ����(JSON)���� ����Ͻ� ���(Excel)��: SyncETA�� ������ ȸ�� �׽�Ʈ ���������� ��Ű��ó",
-  "description": "LLM�� Playwright MCP�� �����Ͽ� ���۾� ���� No-Code ��� ������ QA �ڵ�ȭ �� �ð��� �ڰ� ġ��(Self-Healing) ������ ������ SyncETA ��Ű��ó ����.",
+  "headline": "[Tech Blog] 기계어(JSON)에서 비즈니스 언어(Excel)로: SyncETA의 지능형 회귀 테스트 파이프라인 아키텍처",
+  "description": "LLM과 Playwright MCP를 결합하여 수작업 없는 No-Code 기반 지능형 QA 자동화 및 시각적 자가 치유(Self-Healing) 엔진을 구현한 SyncETA 아키텍처 리뷰.",
   "author": {
     "@type": "Organization",
     "name": "Empasy Engineering Team",
@@ -94,7 +94,7 @@
         
         <section class="section" style="padding-top: 2rem;">
             <div class="container">
-                ?<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
+                ﻿<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
     {{> header_en }}
     <div style="line-height: 1.8; color: var(--text-primary);">
         <p>In Agile and Cloud-Native environments where software deployment cycles are shortened from 'weekly' to 'daily', Quality Assurance (QA) remains the area with the most manual work and resource bottlenecks. The 'Maintenance Hell', where existing E2E test scripts easily break even with minor UI changes (DOM structure, ID/Class attributes, etc.), has been the biggest obstacle to automation.</p>
@@ -109,28 +109,28 @@
             <div class="stack-label">LAYER 01</div>
             <div style="flex-grow: 1;">
                 <div class="stack-content">Data Collection</div>
-                <div class="stack-desc">Precise capture of browser events & DOM Context (Selenium based) ? Machine Log / JSON format</div>
+                <div class="stack-desc">Precise capture of browser events & DOM Context (Selenium based) ➔ Machine Log / JSON format</div>
             </div>
           </div>
           <div class="stack-layer">
             <div class="stack-label">LAYER 02</div>
             <div style="flex-grow: 1;">
                 <div class="stack-content">AI Processing</div>
-                <div class="stack-desc">Natural language (Excel) test case generation via LLM Semantic Parser ? International standard Excel template</div>
+                <div class="stack-desc">Natural language (Excel) test case generation via LLM Semantic Parser ➔ International standard Excel template</div>
             </div>
           </div>
           <div class="stack-layer">
             <div class="stack-label">LAYER 03</div>
             <div style="flex-grow: 1;">
                 <div class="stack-content">Verification & Iteration</div>
-                <div class="stack-desc">QA Engineer feedback loop (LoRA fine-tuning / System self-evolution) ? Confirmed natural language commands</div>
+                <div class="stack-desc">QA Engineer feedback loop (LoRA fine-tuning / System self-evolution) ➔ Confirmed natural language commands</div>
             </div>
           </div>
           <div class="stack-layer">
             <div class="stack-label">LAYER 04</div>
             <div style="flex-grow: 1;">
                 <div class="stack-content">Intelligent Execution</div>
-                <div class="stack-desc">Playwright MCP based background headless ultra-fast parallel distributed execution ? Failure snapshot & .webm video mapping</div>
+                <div class="stack-desc">Playwright MCP based background headless ultra-fast parallel distributed execution ➔ Failure snapshot & .webm video mapping</div>
             </div>
           </div>
           <div class="stack-layer">
@@ -146,10 +146,10 @@
         <p>Unlike existing AI tools, SyncETA utilizes the LLM <strong>'only once at the time of scenario generation'</strong>, and then executes through a <strong>deterministic record playback engine</strong> without LLM API calls during the actual test execution phase. This innovatively reduces the cost of regression tests repeated thousands of times in an enterprise environment by up to 99%.</p>
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
         <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. Key Engineering Advancements</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">�� Headless Automation Pipeline & External System Integration (RESTful API)</h3>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">① Headless Automation Pipeline & External System Integration (RESTful API)</h3>
         <p>Provides a perfect unmanned automation loop that immediately completes tests in the background just by sending natural language command text from an external system or CI/CD pipeline.</p>
         <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Inbound Interface (POST <code>/api/v1/execute/natural-language</code>):</strong> When receiving a project ID and a natural language scenario from the outside, the embedded <strong>LLM engine</strong> analyzes the context and converts it in real time into Playwright-MCP commands structured as <code>Login</code> �� <code>Navigate</code> �� <code>Verify Element</code>.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Inbound Interface (POST <code>/api/v1/execute/natural-language</code>):</strong> When receiving a project ID and a natural language scenario from the outside, the embedded <strong>LLM engine</strong> analyzes the context and converts it in real time into Playwright-MCP commands structured as <code>Login</code> → <code>Navigate</code> → <code>Verify Element</code>.</li>
             <li style="margin-bottom: 0.5rem;"><strong>Automatic Video Evidence Mapping:</strong> Runs at high speed in parallel in <strong>Headless mode</strong> without displaying the browser, records the entire execution process in real time in <code>.webm</code> format, automatically uploads it to an <strong>AWS S3 Bucket</strong> after the test ends, and immediately returns the unique Public URL and Pass/Fail status log to the external Callback URL (Outbound API).</li>
         </ul>
 

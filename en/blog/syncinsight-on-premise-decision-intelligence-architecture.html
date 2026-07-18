@@ -1,23 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="description" content="Technical deep-dive into syncinsight on premise decision intelligence architecture.">
-    <meta name="keywords" content="��� ���α�, AI ����, AI ������Ʈ, AI Ops, MSA ��ȯ, RPA ��ü, ������������ AI, ���Ľ�, Empasy">
+    <meta name="keywords" content="기술 블로그, AI 도입, AI 에이전트, AI Ops, MSA 전환, RPA 대체, 엔터프라이즈 AI, 엠파시, Empasy">
     <meta name="author" content="Empasy">
     
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "���Ľ�(Empasy) ��� ���α�",
+      "name": "엠파시(Empasy) 기술 블로그",
       "url": "https://empasy.com/blog.html",
-      "description": "������������ AI ������Ʈ �� AI Ops ���� �ֽ� ��� �λ���Ʈ",
+      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
       "publisher": {
         "@type": "Organization",
-        "name": "���Ľ�(Empasy)",
+        "name": "엠파시(Empasy)",
         "logo": {
           "@type": "ImageObject",
           "url": "https://empasy.com/empasy-logo.png"
@@ -61,8 +61,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "[Tech Blog] �������̽� ������ �����ϴ� �ֻ��� �ǻ���� ����: SyncInsight�� ��Ƽ ������Ʈ ���� �м� ��Ű��ó",
-  "description": "�系 ���� ȯ�濡�� Context-Aware RAG�� ��Ƽ ������Ʈ�� �����Ͽ� ������ �ֱ��� ��Ű�� �濵 �λ���Ʈ�� �����ϴ� SyncInsight.",
+  "headline": "[Tech Blog] 온프레미스 보안을 관통하는 최상위 의사결정 지능: SyncInsight의 멀티 에이전트 교차 분석 아키텍처",
+  "description": "사내 폐쇄망 환경에서 Context-Aware RAG와 멀티 에이전트를 가동하여 데이터 주권을 지키며 경영 인사이트를 도출하는 SyncInsight.",
   "author": {
     "@type": "Organization",
     "name": "Empasy Engineering Team",
@@ -94,7 +94,7 @@
         
         <section class="section" style="padding-top: 2rem;">
             <div class="container">
-                ?<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
+                ﻿<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
     {{> header_en }}
     <div style="line-height: 1.8; color: var(--text-primary);">
         <p>High-value information such as internal ERP, groupware, in-house Wiki, and market trend data are a company's core assets. However, indiscriminately utilizing large public cloud-based LLM services to analyze this data and derive strategies exposes companies to serious security regulatory risks of leaking sensitive corporate secrets and personal information. In addition, there was a limitation in deriving integrated insights because numerous data are thoroughly isolated (Silo) in departmental systems.</p>
@@ -120,11 +120,11 @@
           <div class="pipeline-step">
             <div class="pipeline-title">Collector Agent</div>
             <div class="pipeline-desc">Heterogeneous data collection</div>
-          </div><div class="pipeline-arrow">?</div>
+          </div><div class="pipeline-arrow">➔</div>
           <div class="pipeline-step">
             <div class="pipeline-title">Analyst Agent</div>
             <div class="pipeline-desc">Python-based big data analysis</div>
-          </div><div class="pipeline-arrow">?</div>
+          </div><div class="pipeline-arrow">➔</div>
           <div class="pipeline-step">
             <div class="pipeline-title">Reporter Agent</div>
             <div class="pipeline-desc">SWOT & strategy report generation</div>
