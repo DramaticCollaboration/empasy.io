@@ -118,7 +118,7 @@
       "name": "엠파시(Empasy)",
       "alternateName": ["엠파시 IT", "Empasy AI", "엠파시 소프트웨어"],
       "url": "https://empasy.com/",
-      "description": "엠파시(Empasy)는 B2B 엔터프라이즈 AI 소프트웨어 개발 IT 기업입니다.",
+      "description": "Empasy is a B2B enterprise AI software development IT company.",
       "sameAs": [
         "https://github.com/DramaticCollaboration",
         "../../docs/index.html"
@@ -152,26 +152,26 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "대상 사이트의 DOM이 바뀌면 스크래핑이 중단되나요?",
+      "name": "Does scraping stop if the target site's DOM changes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "아닙니다. Vision-LLM이 페이지의 시각적 맥락과 의미를 스스로 추론하여 수집 룰을 자동 보정합니다."
+        "text": "No. Vision-LLM infers the visual context and semantics of the page to automatically self-correct collection rules."
       }
     },
     {
       "@type": "Question",
-      "name": "캡챠나 Cloudflare 같은 봇 방어 시스템을 우회할 수 있나요?",
+      "name": "Can it bypass bot defense systems like CAPTCHA or Cloudflare?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "네, 고도화된 프록시 로테이션과 브라우저 지문(Fingerprint) 변조 기술을 통해 안티봇 시스템을 자율적으로 돌파합니다."
+        "text": "Yes, it autonomously breaks through anti-bot systems via advanced proxy rotation and browser fingerprint spoofing technologies."
       }
     },
     {
       "@type": "Question",
-      "name": "수집된 데이터는 RAG(검색 증강 생성)에 바로 쓸 수 있나요?",
+      "name": "Can the collected data be directly used for RAG (Retrieval-Augmented Generation)?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "네, 데이터 오염 방지 필터링을 거쳐 고품질 JSON/Markdown 형태로 정제되므로 즉각적인 RAG 파이프라인 연동이 가능합니다."
+        "text": "Yes, it is refined into high-quality JSON/Markdown through poisoning prevention filtering, enabling immediate integration into RAG pipelines."
       }
     }
   ]
@@ -304,67 +304,67 @@
         <section class="section pt-0 fade-in-up delay-1">
             <div class="vs-container mb-4">
                 <div class="vs-box vs-legacy">
-                    <h4 data-i18n="crawl.vs.legacy.title">기존 규칙 기반 스크래퍼</h4>
+                    <h4 data-i18n="crawl.vs.legacy.title">Legacy Rule-based Scrapers</h4>
                     <ul class="vs-list">
-                        <li data-i18n="crawl.vs.legacy.1">대상 사이트의 DOM 클래스명 변경 시 즉시 수집 중단</li>
-                        <li data-i18n="crawl.vs.legacy.2">CAPTCHA나 Cloudflare 등 안티봇 보안 장벽에 취약함</li>
-                        <li data-i18n="crawl.vs.legacy.3">단순 HTML 복사 수준으로 즉각적인 AI 활용(RAG)이 어려움</li>
+                        <li data-i18n="crawl.vs.legacy.1">Collection halts immediately when target site DOM class names change</li>
+                        <li data-i18n="crawl.vs.legacy.2">Vulnerable to anti-bot security barriers like CAPTCHA or Cloudflare</li>
+                        <li data-i18n="crawl.vs.legacy.3">Difficult to utilize for immediate AI (RAG) due to simple HTML copying</li>
                     </ul>
                 </div>
                 <div class="vs-box vs-agent">
                     <h4 data-i18n="crawl.vs.agent.title">SyncCrawl 에이전트</h4>
                     <ul class="vs-list">
                         <li data-i18n="crawl.vs.agent.1">에러 발생 시 Vision-LLM infers page semantics to auto-correct collection rules.</li>
-                        <li data-i18n="crawl.vs.agent.2">프록시 로테이션과 지문 변조로 안티봇 시스템 자율 우회 돌파</li>
-                        <li data-i18n="crawl.vs.agent.3">데이터 오염 방지 필터링을 거쳐 고품질 JSON 즉시 추출</li>
+                        <li data-i18n="crawl.vs.agent.2">Autonomously bypasses anti-bot systems via proxy rotation and fingerprint spoofing</li>
+                        <li data-i18n="crawl.vs.agent.3">Instantly extracts high-quality JSON after data poisoning sanitization</li>
                     </ul>
                 </div>
             </div>
 
             <div class="section-header text-center mt-4 mb-4">
-                <h2 class="section-title">핵심 기능 (Key Features)</h2>
+                <h2 class="section-title">Key Features</h2>
             </div>
             <div class="rich-features">
                 <div class="feature-item">
                     <span class="feature-icon">🤖</span>
-                    <h3>안티봇 자율 우회 돌파</h3>
-                    <p>Cloudflare, CAPTCHA, 지문 인식 등 강력한 보안 장벽을 만났을 때, 에이전트가 자율적으로 프록시를 로테이션하고 인간과 유사한 마우스 무브먼트로 장벽을 우회합니다.</p>
+                    <h3>Autonomous Anti-bot Bypassing</h3>
+                    <p>When facing strong security barriers like Cloudflare, CAPTCHA, or fingerprinting, the agent autonomously rotates proxies and uses human-like mouse movements to bypass them.</p>
                 </div>
                 <div class="feature-item">
                     <span class="feature-icon">🧠</span>
-                    <h3>RAG 최적화 Data Refinement</h3>
-                    <p>단순한 텍스트 긁어오기가 아닙니다. 수집된 원시 데이터를 LLM이 이해하기 쉬운 고품질 JSON 포맷으로 실시간 필터링하고 임베딩 벡터로 즉시 변환합니다.</p>
+                    <h3>RAG-Optimized Data Refinement</h3>
+                    <p>It is not simple text scraping. Collected raw data is filtered in real-time into a high-quality JSON format that LLMs easily understand, and instantly converted into embedding vectors.</p>
                 </div>
                 <div class="feature-item">
                     <span class="feature-icon">🧭</span>
-                    <h3>동적 DOM 추론 (Semantic Scraper)</h3>
-                    <p>대상 사이트가 대규모 업데이트로 클래스명이 바뀌어도, AI가 '가격', '상품명', '리뷰' 등의 의미(Semantics)를 이해하여 수집 룰을 자율적으로 수정하고 수집을 이어갑니다.</p>
+                    <h3>Dynamic DOM Inference (Semantic Scraper)</h3>
+                    <p>Even if the target site undergoes major updates and class names change, the AI understands semantics like "price", "product name", or "review" to autonomously adjust collection rules and continue scraping.</p>
                 </div>
             </div>
 
             <div class="section-header text-center mt-4 mb-4" style="margin-top: 5rem;">
-                <h2 class="section-title">작동 프로세스 (How it Works)</h2>
+                <h2 class="section-title">How it Works</h2>
             </div>
             <div class="process-steps">
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h4>타겟 URL 및 목적 입력</h4>
-                        <p>"A 쇼핑몰에서 스마트폰 카테고리의 제품명, 가격, 스펙을 모두 수집해줘"라고 명령합니다.</p>
+                        <h4>Input Target URL and Goal</h4>
+                        <p>Command: "Collect all product names, prices, and specs from the smartphone category on Mall A."</p>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h4>의미론적 탐색 및 데이터 추출</h4>
-                        <p>SyncCrawl이 복잡한 동적 렌더링(SPA) 페이지를 순회하며 인간처럼 의미를 파악해 타겟 데이터를 식별하고 추출합니다.</p>
+                        <h4>Semantic Exploration and Data Extraction</h4>
+                        <p>SyncCrawl navigates complex dynamically rendered (SPA) pages, understanding semantics like a human to identify and extract target data.</p>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h4>오염 방지 및 자산화</h4>
-                        <p>수집된 데이터 중 노이즈(광고, 무의미한 태그)를 제거하고, 기업의 벡터 DB나 사내 검색 엔진에 즉시 연동 가능한 형태로 저장합니다.</p>
+                        <h4>Poisoning Prevention and Capitalization</h4>
+                        <p>Removes noise (ads, meaningless tags) from collected data and stores it in a format ready for immediate integration with enterprise Vector DBs or internal search engines.</p>
                     </div>
                 </div>
             </div>
@@ -374,20 +374,20 @@
             <h2>Frequently Asked Questions (FAQ)</h2>
             <div class="faq-item">
                 <details>
-                    <summary>대상 사이트의 DOM이 바뀌면 스크래핑이 중단되나요?</summary>
-                    <div class="faq-answer">아닙니다. Vision-LLM이 페이지의 시각적 맥락과 의미를 스스로 추론하여 수집 룰을 자동 보정합니다.</div>
+                    <summary>Does scraping stop if the target site's DOM changes?</summary>
+                    <div class="faq-answer">No. Vision-LLM infers the visual context and semantics of the page to automatically self-correct collection rules.</div>
                 </details>
             </div>
             <div class="faq-item">
                 <details>
-                    <summary>캡챠나 Cloudflare 같은 봇 방어 시스템을 우회할 수 있나요?</summary>
-                    <div class="faq-answer">네, 고도화된 프록시 로테이션과 브라우저 지문(Fingerprint) 변조 기술을 통해 안티봇 시스템을 자율적으로 돌파합니다.</div>
+                    <summary>Can it bypass bot defense systems like CAPTCHA or Cloudflare?</summary>
+                    <div class="faq-answer">Yes, it autonomously breaks through anti-bot systems via advanced proxy rotation and browser fingerprint spoofing technologies.</div>
                 </details>
             </div>
             <div class="faq-item">
                 <details>
-                    <summary>수집된 데이터는 RAG(검색 증강 생성)에 바로 쓸 수 있나요?</summary>
-                    <div class="faq-answer">네, 데이터 오염 방지 필터링을 거쳐 고품질 JSON/Markdown 형태로 정제되므로 즉각적인 RAG 파이프라인 연동이 가능합니다.</div>
+                    <summary>Can the collected data be directly used for RAG (Retrieval-Augmented Generation)?</summary>
+                    <div class="faq-answer">Yes, it is refined into high-quality JSON/Markdown through poisoning prevention filtering, enabling immediate integration into RAG pipelines.</div>
                 </details>
             </div>
         </section>
@@ -413,7 +413,7 @@
                 </a>
             </div>
             <address style="font-style: normal; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
-                <strong>(주)엠파시 (Empasy IT Corp.)</strong><br>
+                <strong>Empasy IT Corp.</strong><br>
                 Enterprise B2B Software and AI Agent (SyncSeries) Developer<br>
                 Seoul, South Korea
             </address>
