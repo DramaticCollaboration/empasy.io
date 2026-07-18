@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Empasy - Page Not Found</title>
+    <script>
+        var lang = navigator.language || navigator.userLanguage;
+        if (lang.startsWith('en')) {
+            window.location.href = '/en/pages/index.html';
+        } else if (lang.startsWith('ja')) {
+            window.location.href = '/ja/pages/index.html';
+        } else {
+            window.location.href = '/ko/pages/index.html';
+        }
+    </script>
+    <meta http-equiv="refresh" content="0; url=/ko/pages/index.html">
+</head>
+
+<body>
+    <p>Page Not Found. Redirecting to <a href="/ko/pages/index.html">Empasy Homepage</a>...</p>
+</body>
+
+</html>

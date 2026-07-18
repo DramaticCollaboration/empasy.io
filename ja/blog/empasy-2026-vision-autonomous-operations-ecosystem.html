@@ -1,23 +1,23 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="empasy 2026 vision autonomous operations ecosystemに関する技術的な詳細。">
-    <meta name="keywords" content="기술 블로그, AI 도입, AI 에이전트, AI Ops, MSA 전환, RPA 대체, 엔터프라이즈 AI, 엠파시, Empasy">
+    <meta name="description" content="empasy 2026 vision autonomous operations ecosystem��?���������ܪ���ᬡ�">
+    <meta name="keywords" content="��� ���α�, AI ����, AI ������Ʈ, AI Ops, MSA ��ȯ, RPA ��ü, ������������ AI, ���Ľ�, Empasy">
     <meta name="author" content="Empasy">
     
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "엠파시(Empasy) 기술 블로그",
+      "name": "���Ľ�(Empasy) ��� ���α�",
       "url": "https://empasy.com/blog.html",
-      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
+      "description": "������������ AI ������Ʈ �� AI Ops ���� �ֽ� ��� �λ���Ʈ",
       "publisher": {
         "@type": "Organization",
-        "name": "엠파시(Empasy)",
+        "name": "���Ľ�(Empasy)",
         "logo": {
           "@type": "ImageObject",
           "url": "https://empasy.com/empasy-logo.png"
@@ -36,8 +36,8 @@
 
     <!-- SEO & AIO Tags -->
     <link rel="canonical" href="https://empasy.com/ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html">
-    <meta property="og:title" content="Empasy技術ブログ: Empasy 2026 Vision Autonomous Operations Ecosystem">
-    <meta property="og:description" content="empasy 2026 vision autonomous operations ecosystemに関する技術的な詳細。">
+    <meta property="og:title" content="Empasy�����֫���: Empasy 2026 Vision Autonomous Operations Ecosystem">
+    <meta property="og:description" content="empasy 2026 vision autonomous operations ecosystem��?���������ܪ���ᬡ�">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://empasy.com/blog.html">
     <meta property="og:image" content="https://empasy.com/empasy-logo.png">
@@ -45,15 +45,15 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <title>Empasy技術ブログ: Empasy 2026 Vision Autonomous Operations Ecosystem</title>
-    <meta name="description" content="empasy 2026 vision autonomous operations ecosystemに関する技術的な詳細。">
+    <title>Empasy�����֫���: Empasy 2026 Vision Autonomous Operations Ecosystem</title>
+    <meta name="description" content="empasy 2026 vision autonomous operations ecosystem��?���������ܪ���ᬡ�">
     <link rel="canonical" href="https://empasy.com/ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html">
     <link rel="alternate" hreflang="ko" href="https://empasy.com/empasy-2026-vision-autonomous-operations-ecosystem.html" />
     <link rel="alternate" hreflang="en" href="https://empasy.com/en/empasy-2026-vision-autonomous-operations-ecosystem.html" />
     <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/empasy-2026-vision-autonomous-operations-ecosystem.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/empasy-2026-vision-autonomous-operations-ecosystem.html" />
-    <meta property="og:title" content="Empasy技術ブログ: Empasy 2026 Vision Autonomous Operations Ecosystem">
-    <meta property="og:description" content="empasy 2026 vision autonomous operations ecosystemに関する技術的な詳細。">
+    <meta property="og:title" content="Empasy�����֫���: Empasy 2026 Vision Autonomous Operations Ecosystem">
+    <meta property="og:description" content="empasy 2026 vision autonomous operations ecosystem��?���������ܪ���ᬡ�">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://empasy.com/empasy-2026-vision-autonomous-operations-ecosystem.html">
     <meta property="og:locale" content="ko_KR">
@@ -61,8 +61,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "[Tech Blog] 기계어(JSON)에서 비즈니스 언어(Excel)로: SyncETA의 지능형 회귀 테스트 파이프라인 아키텍처",
-  "description": "LLM과 Playwright MCP를 결합하여 수작업 없는 No-Code 기반 지능형 QA 자동화 및 시각적 자가 치유(Self-Healing) 엔진을 구현한 SyncETA 아키텍처 리뷰.",
+  "headline": "[Tech Blog] ����(JSON)���� ����Ͻ� ���(Excel)��: SyncETA�� ������ ȸ�� �׽�Ʈ ���������� ��Ű��ó",
+  "description": "LLM�� Playwright MCP�� �����Ͽ� ���۾� ���� No-Code ��� ������ QA �ڵ�ȭ �� �ð��� �ڰ� ġ��(Self-Healing) ������ ������ SyncETA ��Ű��ó ����.",
   "author": {
     "@type": "Organization",
     "name": "Empasy Engineering Team",
@@ -83,130 +83,71 @@
 <body>
 
     <!-- Header Navigation -->
-    <header class="glass-header">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="../../ja/pages/index.html"><img src="../../assets/images/empasy-logo.png" alt="EMPASY" class="logo-img"></a>
-            </div>
-            <nav class="nav-links">
-                <!-- 1. Company Group -->
-                <div class="dropdown">
-                    <a href="../../ja/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-                    <div class="dropdown-content">
-                        <a href="../../ja/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
-                        <a href="../../ja/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
-                        <a href="../../ja/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
-                    </div>
-                </div>
-                
-                <!-- 2. Sync Series Group -->
-                <div class="dropdown">
-                    <a href="../../ja/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-                    <div class="dropdown-content">
-                        <a href="../../ja/solutions/sync-boot.html">SyncBoot</a>
-                        <a href="../../ja/solutions/sync-cms.html">SyncCMS</a>
-                        <a href="../../ja/solutions/sync-crawl.html">SyncCrawl</a>
-                        <a href="../../ja/solutions/sync-eta.html">SyncEta</a>
-                    </div>
-                </div>
-
-                <!-- 3. Insights Group (NEW) -->
-                <div class="dropdown">
-                    <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-                    <div class="dropdown-content">
-                        <a href="../../ja/blog/blog.html">Tech Blog</a>
-                        <a href="../../ja/pages/faq.html">FAQ</a>
-                        <a href="../../ja/blog/case-study-finance.html">고객 사례 상세</a>
-                    </div>
-                </div>
-                
-                <a href="../../ja/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
-                
-                <a href="../../ja/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
-            </nav>
-            <div class="nav-actions">
-                <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
-                    <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:1rem; padding: 0.5rem; cursor: pointer; display:flex; align-items:center; gap:6px;">
-                        <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> KO</span>
-                    </button>
-                    <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
-                        <a href="../../ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
-                        <a href="../../en/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
-                        <a href="../../ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JA</a>
-                    </div>
-                </div>
-                <a href="../../ja/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact">Contact</a>
-            </div>
-        </div>
-    </header>
+    {{> header_ja }}
 
     <main class="container" style="padding-top: 150px; min-height: 80vh;">
         <div class="page-header text-center fade-in-up mb-4">
             <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Insights</span>
             <h1 class="page-title" style="font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 1rem; color: var(--text-primary);">Tech Blog</h1>
-            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">エンタープライズAI導入のための実践的なガイドと最新技術トレンドをご確認ください。</p>
+            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">����?�׫髤��AI�����Ϊ����??�ܪʫ����ɪ����������ȫ��ɪ����㪯��������</p>
         </div>
         
         <section class="section" style="padding-top: 2rem;">
             <div class="container">
-                ﻿<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-    <header style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
-        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">2026年7月18日 • Vision & Strategy</div>
-        <h2 style="font-size: clamp(1.5rem, 5vw, 2rem); margin-bottom: 1rem;">[Tech Blog] Boon to Business by Agility: Empasyが宣言する2026年ビジョンと自律運用エコシステムの未来</h2>
-        <div style="color: var(--primary-color); font-weight: 600;">By Empasy Engineering Team</div>
-    </header>
+                ?<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
+    {{> header_ja }}
     <div style="line-height: 1.8; color: var(--text-primary);">
-        <p>こんにちは、Empasy技術ブログです。</p>
-        <p>ソフトウェアアーキテクチャのパラダイムがモノリシック(Monolithic)からマイクロサービスアーキテクチャ(MSA)へ、そしてクラウドネイティブを超えてAIエージェント中心へと急速に移行しています。Empasyは設立以来、<strong>「Boon to Business by Agility(俊敏性によるビジネス価値の最大化)」</strong>という確固たる哲学に基づき、エンタープライズ企業が技術的な複雑さに阻まれることなく、ビジネスの本質にのみ集中できる高性能ソリューションを提供してきました。</p>
-        <p>2026年、Empasyはこれまで培ってきた強力なソリューションラインナップを有機的に統合し、企業のコーディング・品質検証・意思決定の全プロセスを自律化する<strong>「超連結自律運用エコシステム(Self-Evolving Business Ecosystem)」</strong>への飛躍を宣言します。</p>
+        <p>����˪��ϡ�Empasy�����֫����Ǫ���</p>
+        <p>���իȫ�������?���ƫ�����Ϋѫ�����બ��Ϋ꫷�ë�(Monolithic)����ޫ�������?�ӫ���?���ƫ�����(MSA)�ء������ƫ��髦�ɫͫ��ƫ��֪�������AI��?������������ت����ܪ�������ƪ��ު���Empasy����ء�?��<strong>��Boon to Business by Agility(�������˪��ӫ��ͫ�?����������)��</strong>�Ȫ�����ͳ������?����Ū�������?�׫髤�������������ܪ���?������ު�몳�Ȫʪ����ӫ��ͫ��������˪Ϊ����Ǫ��������������?��������ꪷ�ƪ��ު�����</p>
+        <p>2026Ҵ��Empasy�Ϫ���ު��ƪêƪ���?���ʫ����?�����髤��ʫëת���Ѧ�ܪ����ꪷ�������Ϋ�?�ǫ���?����???����̽�Ҫ���׫�����������������<strong>����֧̿������ī��������ƫ�(Self-Evolving Business Ecosystem)��</strong>�ت�ޫ帪���몷�ު���</p>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. 2026年のEmpasyの技術的拠点：断片化を超えた「超連結」</h2>
-        <p>これまでのIT市場は、開発の加速化(SyncBoot)、コンテンツ管理(SyncCMS)、テスト自動化(SyncETA)など、各領域の課題を解決する断片化されたAIツールの全盛期でした。しかし、各ツールが文脈(Context)を共有できなければ、結局のところ人間の開発者が途中でデータをコピーし、コマンドを入力しなければならないという断絶が生じます。</p>
-        <p>Empasyが考える2026年のコアバリューは<strong>「文脈の連結」</strong>です。グローバル標準プロトコルである<strong>MCP(Model Context Protocol)</strong>を全面的に採用し、自社のすべてのソリューションを自ら判断し協業する「独立型AIエージェント」へと進化させました。</p>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. 2026Ҵ��Empasy��������?�ã�?����������������֧̿��</h2>
+        <p>����ުǪ�IT��ުϡ���?��ʥ����(SyncBoot)������ƫ��η��(SyncCMS)���ƫ���������(SyncETA)�ʪɡ�����洪�Τ����̽����?�������쪿AI��?�������Ѣ�Ǫ�����������������?�몬����(Context)������Ǫ��ʪ���С�̿�ѪΪȪ����������?����Բ��ǫ�?���򫳫�?�������ޫ�ɪ��������ʪ���Ъʪ�ʪ��Ȫ���?ﾪ��檸�ު���</p>
+        <p>Empasy���Ū���2026Ҵ�Ϋ����Ы��?��<strong>�������֧̿��</strong>�Ǫ�������?�Ы����ޫ׫��ȫ���Ǫ���<strong>MCP(Model Context Protocol)</strong>�������ܪ����Ī�������Ϊ��٪ƪΫ����?������������?���������롸?ء��AI��?������ȡ��ت����������ު�����</p>
         <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>ビジネスコアインフラ (SyncBoot):</strong> エンタープライズのクラウドネイティブ化を加速する標準MSAフルスタックアーキテクチャを提供します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>フロントエンドおよびコンテンツ制御 (SyncCMS):</strong> 開発者に依存することなく、現場の担当者が視覚的に組み立てるオープンなCMSエコシステムを維持します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>インテリジェントな品質安全網 (SyncETA):</strong> 機械語ログを人間のビジネス言語(Excel)に自律的に変換し、実行するノーコード(No-Code)テスト自動化を完成させます。</li>
+            <li style="margin-bottom: 0.5rem;"><strong>�ӫ��ͫ���������ի� (SyncBoot):</strong> ����?�׫髤���Ϋ��髦�ɫͫ��ƫ�������ʥ�ܪ�������MSA�ի뫹���ë���?���ƫ��������ꪷ�ު���</li>
+            <li style="margin-bottom: 0.5rem;"><strong>�ի���ȫ���ɪ���ӫ���ƫ����� (SyncCMS):</strong> ��?�����������몳�Ȫʪ������ު�??������?�ܪ��ڪ�ء�ƪ뫪?�׫��CMS���������ƫ���򥪷�ު���</li>
+            <li style="margin-bottom: 0.5rem;"><strong>����ƫ꫸����Ȫ����������� (SyncETA):</strong> Ѧ���ޫ���������Ϋӫ��ͫ�����(Excel)�������ܪ�?������?�������?��?��(No-Code)�ƫ��������������������ު���</li>
         </ul>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. 無人自律開発ライフサイクルの完成：SyncVerse</h2>
-        <p>2026年のEmpasyビジョンの中心軸である<strong>SyncVerse</strong>は、前述のコアソリューションを単一の頭脳のようにつなぐ中央AIオーケストレーションプラットフォームです。現場の担当者が自然言語で要件を提示すれば、人間がコーディングしたりサーバーを再起動したりしなくても、システムが自ら進化する<strong>「Zero-Touch AI DLC(Development Life Cycle)」</strong>パイプラインを稼働させます。</p>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. ����������?�髤�ի��������������SyncVerse</h2>
+        <p>2026Ҵ��Empasy�ӫ�����������Ǫ���<strong>SyncVerse</strong>�ϡ������Ϋ��������?������?�����?�Ϊ誦�˪Īʪ�����AI��?�����ȫ�?�����׫�ëȫի�?��Ǫ������ު�??�����������ު�������ƪ���С����બ��?�ǫ��󫰪����ꫵ?��?������Ѫ����ꪷ�ʪ��ƪ⡢�����ƫબ������������<strong>��Zero-Touch AI DLC(Development Life Cycle)��</strong>�ѫ��׫髤���ʳ?�����ު���</p>
         <div class="modern-pipeline">
           <div class="pipeline-step">
-            <div class="pipeline-title">自然言語要件の収れん</div>
-            <div class="pipeline-desc">ビジネス言語の入力</div>
-          </div><div class="pipeline-arrow">➔</div>
+            <div class="pipeline-title">������������?���</div>
+            <div class="pipeline-desc">�ӫ��ͫ����ު�����</div>
+          </div><div class="pipeline-arrow">?</div>
           <div class="pipeline-step">
             <div class="pipeline-title">SyncBoot/CMS Agent</div>
-            <div class="pipeline-desc">ソースとUIの自律生成</div>
-          </div><div class="pipeline-arrow">➔</div>
+            <div class="pipeline-desc">��?����UI����������</div>
+          </div><div class="pipeline-arrow">?</div>
           <div class="pipeline-step">
             <div class="pipeline-title">SyncETA Agent</div>
-            <div class="pipeline-desc">無人回帰テストと自己修復</div>
-          </div><div class="pipeline-arrow">➔</div>
+            <div class="pipeline-desc">������?�ƫ��Ȫ���������</div>
+          </div><div class="pipeline-arrow">?</div>
           <div class="pipeline-step">
-            <div class="pipeline-title">無停止自律デプロイ</div>
-            <div class="pipeline-desc">CI/CDパイプライン完走</div>
+            <div class="pipeline-title">��������ȫǫ׫���</div>
+            <div class="pipeline-desc">CI/CD�ѫ��׫髤������</div>
           </div>
         </div>
-        <p>この自律運用ループにより、大規模エンタープライズシステムの機能追加やリファクタリングの過程で発生する副作用を根本から遮断し、アイデアが商用サービスとして展開されるまでのリードタイムを劇的に短縮します。</p>
+        <p>����������ī�?�ת˪�ꡢ��Юټ����?�׫髤�������ƫ��Ѧ����ʥ���ի�������󫰪�Φ���?�檹�������Ī����⪫���?���������ǫ������ī�?�ӫ��Ȫ������Ҫ����ުǪΫ�?�ɫ������м�ܪ�ӭ�ꪷ�ު���</p>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. 最高意思決定インテリジェンスの内在化：SyncInsight</h2>
-        <p>自律運用エコシステムの最上位階層には、100%社内網内在化構造を備えた<strong>SyncInsight</strong>が位置します。</p>
-        <p>社内のERP、社内Wiki、外部の市場動向(SyncCrawl)など、異機種間で断片化されたデータ資産を<strong>Advanced RAGアーキテクチャ</strong>により統合知識化します。金融機関や公共機関の厳しいセキュリティ規制を完全に満たしながら、マルチエージェント交差分析を通じて最高経営陣(C-Level)に戦略的レポートをリアルタイムで提供します。</p>
-        <p>特に、SyncInsightが導き出した戦略的ビジネスアクションを経営陣が承認すると即座に、下位の実行主体である<strong>SyncVerseにコマンドプロトコルが直接送信</strong>され、システム開発とマーケティングページのデプロイがリアルタイムで連動する完璧な意思決定シナジーを達成します。</p>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. ��������̽�ҫ���ƫ꫸���󫹪�?�����SyncInsight</h2>
+        <p>������ī��������ƫ����߾��ͭ���˪ϡ�100%��?��?���ϰ����᪨��<strong>SyncInsight</strong>�����Ǫ��ު���</p>
+        <p>��?��ERP����?Wiki����ݻ���������(SyncCrawl)�ʪɡ��Ѧ�����?�������쪿��?����ߧ��<strong>Advanced RAG��?���ƫ�����</strong>�˪��������������ު�������Ѧ?������Ѧ?��?�����������ƫ�Ю�������?�����ʪ��顢�ޫ����?������������ప��ת�������??��(C-Level)��?���ܫ��?�Ȫ�ꫢ�뫿�������ꪷ�ު���</p>
+        <p>��ˡ�SyncInsight�������󪷪�?���ܫӫ��ͫ�����������??�檬��㪹���?�ˡ����Ȫ�?���?�Ǫ���<strong>SyncVerse�˫��ޫ�ɫ׫��ȫ��몬��������</strong>���졢�����ƫ���?�ȫ�?���ƫ��󫰫�?���Ϋǫ׫������ꫢ�뫿�����֧�Ѫ�������������̽�ҫ��ʫ�?��ӹ�����ު���</p>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">🚀 ビジネスの舞台が変わります</h2>
-        <p>2026年にEmpasyが高度化していく技術エコシステムは、単に人間の労働を補助するシステムではありません。エンジニアが機械的なタイピングや単純な反復作業から解放され、より価値のある創造的なアーキテクチャ設計に集中できるよう支援するイノベーションです。</p>
-        <p><strong>"Boon to Business by Agility"</strong><br>Empasyは、最も安全で、最も俊敏で、自ら進化するソリューションを通じて、顧客企業のビジネスの舞台を未来へと移します。今後、技術ブログを通じて順次公開される各製品群別のMCPアーキテクチャ詳細高度化内容にぜひご期待ください。</p>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">?? �ӫ��ͫ���������?���ު�</h2>
+        <p>2026Ҵ��Empasy�����������ƪ����������������ƫ�ϡ�?�������??����𾪹�뫷���ƫ�ǪϪ���ު��󡣫��󫸫˫���Ѧ���ܪʫ����ԫ󫰪�?������������������ۯ���졢���?���Ϊ��������ܪʫ�?���ƫ�������ͪ�����Ǫ���誦�굪��뫤�Ϋ�?�����Ǫ���</p>
+        <p><strong>"Boon to Business by Agility"</strong><br>Empasy�ϡ��̪�����ǡ��̪����ªǡ������������뫽���?�������ת��ơ����������Ϋӫ��ͫ���������ڱ?�ت�칪��ު��������������֫������ת���������Ҫ�����������ܬ��MCP��?���ƫ��������������?黪˪��Ҫ�Ѣ�⪯��������</p>
     </div>
 </article>
             </div>
@@ -214,35 +155,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-4">
-        <div class="container text-center fade-in-up">
-            <h2 class="footer-title" data-i18n="footer.title">엠파시와 함께 비즈니스를 가속화하세요</h2>
-            <div class="mt-4">
-                <a href="../../ja/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">Contact</a>
-            </div>
-        </div>
-        <div class="footer-bottom text-center">
-            <p data-i18n="footer.copyright">© 2026 Empasy. All rights reserved.</p>
-            <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
-                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px;">
-                    <a href="https://github.com/DramaticCollaboration" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="../../docs/index.html" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
-                        <i class="fas fa-book"></i> Documentation
-                    </a>
-                </div>
-                <address style="font-style: normal; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
-                    <strong>(주)엠파시 (Empasy IT Corp.)</strong><br>
-                    엔터프라이즈 B2B 소프트웨어 및 AI 에이전트(SyncSeries) 개발사<br>
-                    Seoul, South Korea
-                </address>
-            </div>
-        </div>
-    </footer>
+    {{> footer_ja }}
 
     <!-- Scripts -->
-    <script src="../../assets/js/i18n.js"></script>
-    <script src="../../assets/js/main.js"></script>
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>

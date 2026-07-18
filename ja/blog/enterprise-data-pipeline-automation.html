@@ -1,23 +1,23 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="enterprise data pipeline automationに関する技術的な詳細。">
-    <meta name="keywords" content="기술 블로그, AI 도입, AI 에이전트, AI Ops, MSA 전환, RPA 대체, 엔터프라이즈 AI, 엠파시, Empasy">
+    <meta name="description" content="enterprise data pipeline automation��?���������ܪ���ᬡ�">
+    <meta name="keywords" content="��� ���α�, AI ����, AI ������Ʈ, AI Ops, MSA ��ȯ, RPA ��ü, ������������ AI, ���Ľ�, Empasy">
     <meta name="author" content="Empasy">
     
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "엠파시(Empasy) 기술 블로그",
+      "name": "���Ľ�(Empasy) ��� ���α�",
       "url": "https://empasy.com/blog.html",
-      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
+      "description": "������������ AI ������Ʈ �� AI Ops ���� �ֽ� ��� �λ���Ʈ",
       "publisher": {
         "@type": "Organization",
-        "name": "엠파시(Empasy)",
+        "name": "���Ľ�(Empasy)",
         "logo": {
           "@type": "ImageObject",
           "url": "https://empasy.com/empasy-logo.png"
@@ -36,8 +36,8 @@
 
     <!-- SEO & AIO Tags -->
     <link rel="canonical" href="https://empasy.com/ja/blog/enterprise-data-pipeline-automation.html">
-    <meta property="og:title" content="Empasy技術ブログ: Enterprise Data Pipeline Automation">
-    <meta property="og:description" content="enterprise data pipeline automationに関する技術的な詳細。">
+    <meta property="og:title" content="Empasy�����֫���: Enterprise Data Pipeline Automation">
+    <meta property="og:description" content="enterprise data pipeline automation��?���������ܪ���ᬡ�">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://empasy.com/blog.html">
     <meta property="og:image" content="https://empasy.com/empasy-logo.png">
@@ -45,15 +45,15 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <title>Empasy技術ブログ: Enterprise Data Pipeline Automation</title>
-    <meta name="description" content="enterprise data pipeline automationに関する技術的な詳細。">
+    <title>Empasy�����֫���: Enterprise Data Pipeline Automation</title>
+    <meta name="description" content="enterprise data pipeline automation��?���������ܪ���ᬡ�">
     <link rel="canonical" href="https://empasy.com/ja/blog/enterprise-data-pipeline-automation.html">
     <link rel="alternate" hreflang="ko" href="https://empasy.com/enterprise-data-pipeline-automation.html" />
     <link rel="alternate" hreflang="en" href="https://empasy.com/en/enterprise-data-pipeline-automation.html" />
     <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/enterprise-data-pipeline-automation.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/enterprise-data-pipeline-automation.html" />
-    <meta property="og:title" content="Empasy技術ブログ: Enterprise Data Pipeline Automation">
-    <meta property="og:description" content="enterprise data pipeline automationに関する技術的な詳細。">
+    <meta property="og:title" content="Empasy�����֫���: Enterprise Data Pipeline Automation">
+    <meta property="og:description" content="enterprise data pipeline automation��?���������ܪ���ᬡ�">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://empasy.com/ja/enterprise-data-pipeline-automation.html">
     <meta property="og:locale" content="ja_JP">
@@ -61,8 +61,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "LLMを活用したエンタープライズデータパイプライン自動化の事例",
-  "description": "SyncSeriesを活用して非構造化データを構造化し、セキュリティが重要なエンタープライズ環境でLLMをどのように活用できるかを解説します.",
+  "headline": "LLM�����Ī�������?�׫髤����?���ѫ��׫髤��������������",
+  "description": "SyncSeries�����Ī���ުϰ������?����ϰ���������������ƫ�����驪ʫ���?�׫髤�����Ѫ�LLM��ɪΪ誦�����ĪǪ��몫����?���ު�.",
   "author": {
     "@type": "Organization",
     "name": "Empasy Engineering Team",
@@ -83,165 +83,106 @@
 <body>
 
     <!-- Header Navigation -->
-    <header class="glass-header">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="../../ja/pages/index.html"><img src="../../assets/images/empasy-logo.png" alt="EMPASY" class="logo-img"></a>
-            </div>
-            <nav class="nav-links">
-                <!-- 1. Company Group -->
-                <div class="dropdown">
-                    <a href="../../ja/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-                    <div class="dropdown-content">
-                        <a href="../../ja/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
-                        <a href="../../ja/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
-                        <a href="../../ja/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
-                    </div>
-                </div>
-                
-                <!-- 2. Sync Series Group -->
-                <div class="dropdown">
-                    <a href="../../ja/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-                    <div class="dropdown-content">
-                        <a href="../../ja/solutions/sync-boot.html">SyncBoot</a>
-                        <a href="../../ja/solutions/sync-cms.html">SyncCMS</a>
-                        <a href="../../ja/solutions/sync-crawl.html">SyncCrawl</a>
-                        <a href="../../ja/solutions/sync-eta.html">SyncEta</a>
-                    </div>
-                </div>
-
-                <!-- 3. Insights Group (NEW) -->
-                <div class="dropdown">
-                    <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-                    <div class="dropdown-content">
-                        <a href="../../ja/blog/blog.html">Tech Blog</a>
-                        <a href="../../ja/pages/faq.html">FAQ</a>
-                        <a href="../../ja/blog/case-study-finance.html">고객 사례 상세</a>
-                    </div>
-                </div>
-                
-                <a href="../../ja/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
-                
-                <a href="../../ja/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
-            </nav>
-            <div class="nav-actions">
-                <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
-                    <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:1rem; padding: 0.5rem; cursor: pointer; display:flex; align-items:center; gap:6px;">
-                        <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> JA</span>
-                    </button>
-                    <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
-                        <a href="../../ko/blog/enterprise-data-pipeline-automation.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
-                        <a href="../../en/blog/enterprise-data-pipeline-automation.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
-                        <a href="../../ja/blog/enterprise-data-pipeline-automation.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JA</a>
-                    </div>
-                </div>
-                <a href="../../ja/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact">Contact</a>
-            </div>
-        </div>
-    </header>
+    {{> header_ja }}
 
     <main class="container" style="padding-top: 150px; min-height: 80vh;">
         <div class="page-header text-center fade-in-up mb-4">
             <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Insights</span>
             <h1 class="page-title" style="font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 1rem; color: var(--text-primary);">Tech Blog</h1>
-            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">エンタープライズAI導入のための実践的なガイドと最新技術トレンドをご確認ください。</p>
+            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">����?�׫髤��AI�����Ϊ����??�ܪʫ����ɪ����������ȫ��ɪ����㪯��������</p>
         </div>
         
         <section class="section" style="padding-top: 2rem;">
             <div class="container">
                 <article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-    <header style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
-        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">2026-07-15 • AI Ops & Architecture</div>
-        <h2 style="font-size: clamp(1.5rem, 5vw, 2rem); margin-bottom: 1rem;">[Tech Blog] 自律型AIエージェント導入ガイド：レガシーシステムからAI Opsへの移行</h2>
-        <div style="color: var(--primary-color); font-weight: 600;">By Empasy Engineering Team</div>
-    </header>
+    {{> header_ja }}
     <div style="line-height: 1.8; color: var(--text-primary);">
-        <p>ソフトウェアシステムの規模がエンタープライズレベルに拡大し、アジャイル(Agile)のデプロイメントサイクルが極端に短縮されるにつれて、レガシーシステムの運用方法は明らかな限界点に達しました。システム変更に伴う回帰テスト(Regression Test)の需要が爆発的に増加する一方で、手作業中心の検証と監視はプロセスのボトルネックを引き起こし、適時リリース(Time-to-Market)を妨げる致命的なリスクとなっています。</p>
-        <p>今日のIT組織が直面している本当のボトルネックは、単なる「制作」ではなく「運用および保守(TCO)の急増」にあります。複雑なスクリプトベースの自動化ツールは高度なコーディングスキルを要求し、業務のサイロ化(Silo)を生み出します。UIやロジックが少しでも変更されると壊れてしまい、手作業の修正にさらに多くのリソースが浪費されるという悪循環を生み出します。</p>
-        <p>これらの限界を克服するために、Empasyは単なるルールベース(If-Else)の自動化を超えて、自ら判断し文脈を理解して自己修復(Self-Healing)する<strong>「自律型AIエージェントベースのAI Opsエコシステム」</strong>へのパラダイムシフトを提案します。</p>
+        <p>���իȫ����������ƫ��Юټ������?�׫髤����٫��?�ު��������㫤��(Agile)�Ϋǫ׫������ȫ������몬пӮ��ӭ�ꪵ���˪Ī�ơ��쫬��?�����ƫ�����۰����٥�骫����ͣ�ê�ӹ���ު����������ƫ�?�ڪ��᪦��?�ƫ���(Regression Test)����驪���?�ܪ�?ʥ������۰�ǡ������������??�����ʪϫ׫������Ϋܫȫ�ͫë����ڪ��ê������������?��(Time-to-Market)��۪������٤�ܪʫ꫹���Ȫʪêƪ��ު���</p>
+        <p>������IT���Ī��������ƪ�����?�Ϋܫȫ�ͫë��ϡ�?�ʪ롸��¡��ǪϪʪ�����Ī��������(TCO)����?���˪���ު�����?�ʫ�����׫ȫ�?������������?��������ʫ�?�ǫ��󫰫�������ϴ��������Ϋ�������(Silo)������󪷪ު���UI������ë���ᴪ��Ǫ�?�ڪ�����?��ƪ��ު��������������˪���������Ϋ꫽?������ި�����Ȫ���?����������󪷪ު���</p>
+        <p>��������ͣ��к�ת��몿��ˡ�Empasy��?�ʪ��?���?��(If-Else)���������������ơ�������?�����������������������(Self-Healing)����<strong>��������AI��?������ȫ�?����AI Ops���������ƫࡹ</strong>�تΫѫ�����૷�իȪ���Ъ��ު���</p>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. 自律運用の出発点：AIループ設計の4段階</h2>
-        <p>レガシーからAI Opsへの移行を成功させるためには、AIに無条件の正解を求めるのではなく、複雑なビジネスの文脈(Context)を提供し、仮想の同僚としての協業体制を固める必要があります。Claude Codeチームが提示したAI自律性設計の4段階を、フレームワークの運用に精密に移植しなければなりません。</p>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. ������Ī���?�ã�AI��?����ͪ��4ӫͭ</h2>
+        <p>�쫬��?����AI Ops�ت���������������몿��˪ϡ�AI����?���������ϴ���ΪǪϪʪ�����?�ʫӫ��ͫ�������(Context)����ꪷ��?�̪������Ȫ��ƪ�����?��ͳ�����驪�����ު���Claude Code��?�બ��ƪ���AI��������ͪ��4ӫͭ�򡢫ի�?���?������Ī����˪���ժ��ʪ���Ъʪ�ު���</p>
         <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>第1段階 (ターンベース - 結果確認):</strong> ユーザーが指示するたびに実行し、結果を確認する段階です。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>第2段階 (目標ベース - 終了条件委任):</strong> 「すべてのテストシナリオを通過したときに終了する」といった特定の最終条件を認識し、自ら繰り返し実行するように調整します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>第3段階 (時間ベース - 開始の自律化):</strong> 定められた周期やイベントトリガー（Code CommitなどのWebhook連動）に合わせて、無人実行を能動的に開始します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>第4段階 (能動型 - タスクの自律決定):</strong> システム障害や欠陥が発生した際、自ら判断して何をすべきかを決定し、自律的な復旧ワークフローを稼働させる完全なAI Opsの段階です。</li>
+            <li style="margin-bottom: 0.5rem;"><strong>�1ӫͭ (��?���?�� - ̿������):</strong> ��?��?����ƪ��몿�Ӫ�?������̿�������㪹��ӫͭ�Ǫ���</li>
+            <li style="margin-bottom: 0.5rem;"><strong>�2ӫͭ (������?�� - ����?������):</strong> �����٪ƪΫƫ��ȫ��ʫꫪ����Φ�����Ȫ����������롹�Ȫ��ê����Ҫ�����?������۪��������۪�����?������誦�����ڪ��ު���</li>
+            <li style="margin-bottom: 0.5rem;"><strong>�3ӫͭ (�����?�� - ��㷪�������):</strong> �Ҫ��쪿�Ѣ�䫤�٫�ȫȫꫬ?��Code Commit�ʪɪ�Webhook֧�ѣ�����請�ơ�����?���������ܪ���㷪��ު���</li>
+            <li style="margin-bottom: 0.5rem;"><strong>�4ӫͭ (������ - ������������̽��):</strong> �����ƫ��������?��?�檷��𷡢������?�������򪹪٪�����̽�Ҫ��������ܪ���?��?���ի�?��ʳ?�����������AI Ops��ӫͭ�Ǫ���</li>
         </ul>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. AI Opsの中核インフラ：5-Layer Intelligent Pipeline</h2>
-        <p>Empasyは、これらの自律型エージェントのオーケストレーションを実現するために、<strong>SyncETA</strong>ソリューションを中心に5段階のインテリジェントパイプラインアーキテクチャを構築し、レガシーQAとインフラ品質プロセスを革新します。</p>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. AI Ops����������ի飺5-Layer Intelligent Pipeline</h2>
+        <p>Empasy�ϡ���������������?������ȪΫ�?�����ȫ�?������?�ު��몿��ˡ�<strong>SyncETA</strong>�����?������������5ӫͭ�Ϋ���ƫ꫸����ȫѫ��׫髤��?���ƫ������ϰ�骷���쫬��?QA�ȫ���ի������׫����������檷�ު���</p>
 
         <div class="modern-stack">
           <div class="stack-layer">
             <div class="stack-label" style="color:var(--primary-color);">LAYER 01</div>
             <div style="flex-grow: 1;">
-                <div class="stack-content">データ収集</div>
-                <div class="stack-desc">ユーザー行動の追跡および非構造化ログのJSON構造化 (Zero-Recording)</div>
+                <div class="stack-content">��?��?�</div>
+                <div class="stack-desc">��?��?���Ѫ����檪���ުϰ����������JSONϰ���� (Zero-Recording)</div>
             </div>
           </div>
           <div class="stack-layer">
             <div class="stack-label" style="color:var(--primary-color);">LAYER 02</div>
             <div style="flex-grow: 1;">
-                <div class="stack-content">AI インテリジェンス処理</div>
-                <div class="stack-desc">LLMセマンティック解析に基づく高度な意味分析と自然言語仕様の自律生成</div>
+                <div class="stack-content">AI ����ƫ꫸����?��</div>
+                <div class="stack-desc">LLM���ޫ�ƫ��ë���ప���Ū���������ګ��ప�����������?����������</div>
             </div>
           </div>
           <div class="stack-layer">
             <div class="stack-label" style="color:var(--primary-color);">LAYER 03</div>
             <div style="flex-grow: 1;">
-                <div class="stack-content">検証および循環</div>
-                <div class="stack-desc">HITL (Human-in-the-Loop) フィードバックの吸収、LoRAおよびRAGの自己進化</div>
+                <div class="stack-content">??���������</div>
+                <div class="stack-desc">HITL (Human-in-the-Loop) �ի�?�ɫЫë�����?��LoRA�����RAG����������</div>
             </div>
           </div>
           <div class="stack-layer">
             <div class="stack-label" style="color:var(--primary-color);">LAYER 04</div>
             <div style="flex-grow: 1;">
-                <div class="stack-content">インテリジェント実行</div>
-                <div class="stack-desc">Playwright MCPベースのブラウザ直接制御および高速並列分散実行</div>
+                <div class="stack-content">����ƫ꫸�����?��</div>
+                <div class="stack-desc">Playwright MCP��?���Ϋ֫髦��������٪��������?֪��ߤ?��</div>
             </div>
           </div>
           <div class="stack-layer">
             <div class="stack-label" style="color:var(--primary-color);">LAYER 05</div>
             <div style="flex-grow: 1;">
-                <div class="stack-content">監視および分析</div>
-                <div class="stack-desc">WebSocketリアルタイム中継およびPixel-PerfectベースのAI視覚エラー検証</div>
+                <div class="stack-content">���ʪ�������</div>
+                <div class="stack-desc">WebSocket�ꫢ�뫿������?�����Pixel-Perfect��?����AI��?����???</div>
             </div>
           </div>
         </div>
 
-        <p style="color: var(--text-secondary); font-size: 0.85rem; text-align: right; margin-top: -1.5rem;"><em>(出典：Empasy 統合品質管理アーキテクチャ仕様)</em></p>
+        <p style="color: var(--text-secondary); font-size: 0.85rem; text-align: right; margin-top: -1.5rem;"><em>(����Empasy ��������η�⫢?���ƫ�������?)</em></p>
 
         <ul style="padding-left: 1.5rem; margin-bottom: 2rem; margin-top: 1.5rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>インテリジェントな意図分析(Semantic Reasoning):</strong> 背景と文脈が断片化された機械語の生データを分析し、人間のビジネス言語である標準Excelテストケースに自動的に資産化することで、「QAの民主化」を実現します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>自己修復(Self-Healing)アーキテクチャ:</strong> 実行レイヤーでUIコンポーネントの変動が検出された場合、AIがテキスト、位置、形状を融合したハイブリッド検索を通じて自ら補正し、中断のないTestOpsデプロイメントパイプラインを維持します。</li>
+            <li style="margin-bottom: 0.5rem;"><strong>����ƫ꫸����Ȫ���?���(Semantic Reasoning):</strong> ���ت����檬?�������쪿Ѧ���ު����?������ప�������Ϋӫ��ͫ����ުǪ�������Excel�ƫ��ȫ�?���������ܪ���ߧ�����몳�Ȫǡ���QA�����������?�ު��ު���</li>
+            <li style="margin-bottom: 0.5rem;"><strong>��������(Self-Healing)��?���ƫ�����:</strong> ?���쫤��?��UI�����?�ͫ�Ȫ�?�Ѫ�?�󪵪쪿���ꡢAI���ƫ����ȡ����ǡ���?�����ꪷ���ϫ��֫�ë�?����ת����������᪷����?�Ϊʪ�TestOps�ǫ׫������ȫѫ��׫髤����򥪷�ު���</li>
         </ul>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. 障害対応の未来：単純な実行自動化を超えたAgentic Workflow</h2>
-        <p>真のAI Opsの完成は、システム障害の状況で光を放ちます。既存の監視システムはアラート通知を送信するにとどまっていましたが、自律型エージェントは<strong>「検出 ➔ 判断 ➔ 措置 ➔ 検証」</strong>の体系的なプロセスを自律的に完了します。</p>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. ���??��ڱ?��?����?����������������Agentic Workflow</h2>
+        <p>?��AI Ops�������ϡ������ƫ������?�Ϫ��ê�ۯ���ު���?�������ʫ����ƫ�ϫ���?���������᪹��˪Ȫɪުêƪ��ު���������������?������Ȫ�<strong>��?�� ? ��? ? ���� ? ??��</strong>��?ͧ�ܪʫ׫������������ܪ��������ު���</p>
         <ol style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>異常検出:</strong> OpenSearch、Prometheus/Grafanaインフラを通じて、P95応答時間の遅延や決済失敗率の急増などの異常の兆候をリアルタイムで捉えます。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>AI 精密分析 (判断):</strong> 単純な通知ではなく、LLMと接続された<strong>MCP (Model Context Protocol)</strong>を使用して推論を開始します。ログの文脈とGitのコミット履歴を組み合わせて、エラーの原因とコード変更の担当者を数秒以内に特定します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>自動措置:</strong> n8nワークフローと統合ツールチェーンを稼働させてガイドラインを検索し、単純な繰り返し欠陥である場合、AIが導出した「解決策(Fix Code)」に基づいて、Jiraチケットの自動生成や決済ルーティングの重み切り替えなどの自律的復旧を即座に実行します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>整合性検証:</strong> 措置後、システムの成功率とパフォーマンス指標を継続的に追跡して正常な軌道への復帰を確認し、デバッグ生産性向上の履歴を恒久的なデータセットプレイブックとして自律的に更新します。</li>
+            <li style="margin-bottom: 0.5rem;"><strong>���?��:</strong> OpenSearch��Prometheus/Grafana����ի���ת��ơ�P95?�������?�Ū�̽?���������?�ʪɪ���Ȫ������ꫢ�뫿�����󵪨�ު���</li>
+            <li style="margin-bottom: 0.5rem;"><strong>AI ������� (��?):</strong> ?�������ǪϪʪ���LLM����?���쪿<strong>MCP (Model Context Protocol)</strong>�����Ī����������㷪��ު��������������Git�Ϋ��߫ë���?���ڪ���請�ơ�����?����תȫ�?��?�ڪ�??����?���?�����Ҫ��ު���</li>
+            <li style="margin-bottom: 0.5rem;"><strong>��������:</strong> n8n��?���ի�?�������?�����?���ʳ?�����ƫ����ɫ髤���?�㪷��?�����۪�������?�Ǫ������ꡢAI�����󪷪�����̽��(Fix Code)������Ū��ơ�Jira�����ëȪ�����������̽?��?�ƫ��󫰪����﷪��𪨪ʪɪ���������?��?��?�����ު���</li>
+            <li style="margin-bottom: 0.5rem;"><strong>������??:</strong> �������������ƫ��������ȫѫի�?�ޫ������??�ܪ����檷�����Ȫ���Գ�ت���?�����㪷���ǫЫë���ߧ����߾����?�������ܪʫ�?�����ëȫ׫쫤�֫ë��Ȫ��������ܪ����檷�ު���</li>
         </ol>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">4. ビジネスROIと移行への期待効果</h2>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">4. �ӫ��ͫ�ROI������ت�Ѣ��?��</h2>
         <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>工数と時間の革新的な短縮:</strong> スクリプティングとテストケース作成の工数を<strong>80%削減</strong>し、障害発生時の平均復旧時間(MTTR)を<strong>90%以上短縮</strong>させます。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>揮発性ノウハウの資産化(Assetization):</strong> ベテランエンジニアとQAの例外処理知識をシステム内部の恒久的なデータセット(Golden Data)として内在化し、組織全体の技術の連続性を保証します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Shift-Left ビジネスの俊敏性:</strong> 自律型エージェントをCI/CD統合の無人パイプライン(Zero-Touch Pipeline)と連動させることで、開発の初期段階で欠陥を先制的に発見し、修正コストを最小限に抑え、リリースの俊敏性を3.5倍以上に引き上げます。</li>
+            <li style="margin-bottom: 0.5rem;"><strong>��?������������ܪ�ӭ��:</strong> ������׫ƫ��󫰪ȫƫ��ȫ�?����������?��<strong>80%����</strong>�������?��������г��?����(MTTR)��<strong>90%�߾ӭ��</strong>�����ު���</li>
+            <li style="margin-bottom: 0.5rem;"><strong>��?���Ϋ��ϫ�����ߧ��(Assetization):</strong> �٫ƫ�󫨫󫸫˫���QA������?����۪򫷫��ƫ�?ݻ�������ܪʫ�?�����ë�(Golden Data)�Ȫ���?�������������?��������֧?������?���ު���</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Shift-Left �ӫ��ͫ���������:</strong> ��������?������Ȫ�CI/CD��������ѫѫ��׫髤��(Zero-Touch Pipeline)��֧�Ѫ����몳�Ȫǡ���?����Ѣӫͭ����?�����ܪ�?̸�������᫳���Ȫ�����ڪ��䪨�����?������������3.5���߾���ڪ�߾���ު���</li>
         </ul>
 
-        <p>Empasyは、LGエレクトロニクスのBIプラットフォームやVisang EducationのAIDTなどのエンタープライズでの実証事例を通じて、自律型技術の安定性を完全に証明しました。レガシーの重い負債を捨て去り、自ら進化する自律運用エコシステムへの移行を、今すぐEmpasyと共に始めましょう。</p>
+        <p>Empasy�ϡ�LG���쫯�ȫ��˫�����BI�׫�ëȫի�?���Visang Education��AIDT�ʪɪΫ���?�׫髤���Ǫ�??���Ǫ��ת��ơ��������������������������?٥���ު������쫬��?���쪤ݶ����ת��۪ꡢ������������������ī��������ƫ�ت�������Ѫ���Empasy�����㷪�ު��窦��</p>
     </div>
 </article>
             </div>
@@ -249,35 +190,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-4">
-        <div class="container text-center fade-in-up">
-            <h2 class="footer-title" data-i18n="footer.title">엠파시와 함께 비즈니스를 가속화하세요</h2>
-            <div class="mt-4">
-                <a href="../../ja/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">Contact</a>
-            </div>
-        </div>
-        <div class="footer-bottom text-center">
-            <p data-i18n="footer.copyright">© 2026 Empasy. All rights reserved.</p>
-            <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
-                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px;">
-                    <a href="https://github.com/DramaticCollaboration" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="../../docs/index.html" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
-                        <i class="fas fa-book"></i> Documentation
-                    </a>
-                </div>
-                <address style="font-style: normal; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
-                    <strong>(주)엠파시 (Empasy IT Corp.)</strong><br>
-                    엔터프라이즈 B2B 소프트웨어 및 AI 에이전트(SyncSeries) 개발사<br>
-                    Seoul, South Korea
-                </address>
-            </div>
-        </div>
-    </footer>
+    {{> footer_ja }}
 
     <!-- Scripts -->
-    <script src="../../assets/js/i18n.js"></script>
-    <script src="../../assets/js/main.js"></script>
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>

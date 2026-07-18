@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko-KR" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>이슈 생성 프롬프트 | 살아 있는 소프트웨어는 엠파시가 만듭니다</title>
+    <meta name="description" content="Jira를 효율적으로 사용하는 핵심 원칙을 소개합니다. ✅ 이슈 할당 법칙, ✅ 필수 코멘팅 가이드, ✅ 상태 관리 노하우를 통해 프로젝트 투명성과 팀 생산성을 높이는 방법을 확인해 보세요. 팀 협업을 위한 가이드입니다.">
+    <meta name="generator" content="VitePress v2.0.0-alpha.18">
+    <link rel="preload stylesheet" href="/docs/assets/style.B54n-KfB.css" as="style">
+    <link rel="preload stylesheet" href="/docs/vp-icons.css" as="style">
+    <script type="module" src="/docs/assets/chunks/metadata.7a401b18.js"></script>
+    <script type="module" src="/docs/assets/app.CIEn3ka4.js"></script>
+    <link rel="preload" href="/docs/assets/inter-roman-latin.Cy4MYw_J.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/docs/assets/chunks/theme.CFPAVqvs.js">
+    <link rel="modulepreload" href="/docs/assets/chunks/framework.DWKxYYJ1.js">
+    <link rel="modulepreload" href="/docs/assets/ja_agile_createIssue.md.CQQAJxBA.lean.js">
+    <link rel="icon" href="/images/favicon.ico">
+    <meta name="author" content="엠파시">
+    <meta name="keywords" content="LLM 프롬프트 생성, 프롬프트 기반 이슈 작성, AI 프롬프트 가이드, 프롬프트 템플릿, AI 기반 개발 지원, 자동화 이슈 생성, LLM 프롬프트 가이드, 샘플 데이터 생성, UI 시나리오 작성, 테스트 자동화 툴, 자동화 테스트 시나리오, QA 효율화, 소프트웨어 온보딩">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="naver-site-verification" content="3102a764f7ad54fe27ab3083cd0a7b0f647be4c7">
+    <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
+    <link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="msapplication-TileImage" content="/images/icons/mstile-150x150.png">
+    <meta name="msapplication-TileColor" content="#3eaf7c">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&amp;display=swap" rel="stylesheet">
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C" async></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag(`js`,new Date),gtag(`config`,`G-6BNPM5TX7C`);</script>
+    <script>(function(e,t,n,r,i){e[r]=e[r]||[],e[r].push({"gtm.start":new Date().getTime(),event:`gtm.js`});var a=t.getElementsByTagName(n)[0],o=t.createElement(n),s=r==`dataLayer`?``:`&l=`+r;o.async=!0,o.src=`https://www.googletagmanager.com/gtm.js?id=`+i+s,a.parentNode.insertBefore(o,a)})(window,document,`script`,`dataLayer`,`GTM-KPMTVVXN`);</script>
+    <script>navigator.serviceWorker.getRegistrations().then(e=>{for(let t of e)t.unregister()});</script>
+    <script id="check-dark-mode">(()=>{let e=localStorage.getItem(`vitepress-theme-appearance`)||`auto`,t=window.matchMedia(`(prefers-color-scheme: dark)`).matches;(!e||e===`auto`?t:e===`dark`)&&document.documentElement.classList.add(`dark`)})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle(`mac`,/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+    <meta property="og:title" content="이슈 생성 프롬프트 사용 가이드">
+    <meta property="og:description" content="이슈를 효율적으로 생성하는 방법을 단계별로 안내합니다. LLM 프롬프트 활용, 샘플 데이터/시나리오 자동 생성, UI 시나리오 작성까지 포함한 실전 가이드.">
+    <meta property="og:image" content="https://doc.empasy.com/images/favicon.png">
+    <meta property="og:url" content="https://doc.empasy.com/agile/createIssue.html">
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-92f6b69a><!--[--><!--]--><!--[--><span tabindex="-1" data-v-4ef46c01></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-4ef46c01>Skip to content</a><!--]--><!----><header class="VPNav" data-v-92f6b69a data-v-bcdccd72><div class="VPNavBar top" data-v-bcdccd72 data-v-a0955d45><div class="wrapper" data-v-a0955d45><div class="container" data-v-a0955d45><div class="title" data-v-a0955d45><div class="VPNavBarTitle" data-v-a0955d45 data-v-3f17f298><a class="title" href="/docs/" data-v-3f17f298><!--[--><!--]--><!--[--><!--[--><!--[--><img class="VPImage dark logo" src="/docs/images/logo-dark.svg" alt data-v-11ec8f41><!--]--><!--[--><img class="VPImage light logo" src="/docs/images/logo.svg" alt data-v-11ec8f41><!--]--><!--]--><!--]--><span data-v-3f17f298>살아 있는 소프트웨어는 엠파시가 만듭니다</span><!--[--><!--]--></a></div></div><div class="content" data-v-a0955d45><div class="content-body" data-v-a0955d45><!--[--><!--]--><div class="VPNavBarSearch search" data-v-a0955d45 data-v-14f98616><!--[--><button type="button" class="VPNavBarSearchButton" aria-label="Search" aria-keyshortcuts="/ control+k meta+k" data-v-14f98616 data-v-69b6e94e><span class="vpi-search" aria-hidden="true" data-v-69b6e94e></span><span class="text" data-v-69b6e94e>Search</span><span class="keys" aria-hidden="true" data-v-69b6e94e><kbd class="key-cmd" data-v-69b6e94e>⌘</kbd><kbd class="key-ctrl" data-v-69b6e94e>Ctrl</kbd><kbd data-v-69b6e94e>K</kbd></span></button><!----><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-a0955d45 data-v-a2048222><span id="main-nav-aria-label" class="visually-hidden" data-v-a2048222> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/docs/" tabindex="0" data-v-a2048222 data-v-c94474d9><!--[--><span data-v-c94474d9>홈</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/docs/synceta" tabindex="0" data-v-a2048222 data-v-c94474d9><!--[--><span data-v-c94474d9>SyncETA</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/docs/synccrawl" tabindex="0" data-v-a2048222 data-v-c94474d9><!--[--><span data-v-c94474d9>SyncCrawl</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/docs/syncboot" tabindex="0" data-v-a2048222 data-v-c94474d9><!--[--><span data-v-c94474d9>SyncBoot</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/docs/synccms" tabindex="0" data-v-a2048222 data-v-c94474d9><!--[--><span data-v-c94474d9>SyncCms</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/docs/syncadmin" tabindex="0" data-v-a2048222 data-v-c94474d9><!--[--><span data-v-c94474d9>SyncAdmin</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/docs/agile" tabindex="0" data-v-a2048222 data-v-c94474d9><!--[--><span data-v-c94474d9>애자일</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="https://www.empasy.com" target="_blank" rel="noopener noreferrer" tabindex="0" data-v-a2048222 data-v-c94474d9><!--[--><span data-v-c94474d9>엠파시</span><!--]--></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-a0955d45 data-v-0e65c0af><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-0e65c0af data-v-a6e5b8de data-v-848e0bf0><span class="check" data-v-848e0bf0><span class="icon" data-v-848e0bf0><!--[--><span class="vpi-sun sun" data-v-a6e5b8de></span><span class="vpi-moon moon" data-v-a6e5b8de></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-a0955d45 data-v-aa94c828 data-v-5678b6c9><!--[--><a class="VPSocialLink no-icon" href="https://github.com/DramaticCollaboration/" aria-label="github" target="_blank" rel="me noopener" data-v-5678b6c9 data-v-70da9800><span class="vpi-social-github"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-a0955d45 data-v-71e49097 data-v-a5365b27><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-a5365b27><span class="vpi-more-horizontal icon" data-v-a5365b27></span></button><div class="menu" data-v-a5365b27><div class="VPMenu" data-v-a5365b27 data-v-bb58648f><!----><!--[--><!--[--><!----><div class="group" data-v-71e49097><div class="item appearance" data-v-71e49097><p class="label" data-v-71e49097>Appearance</p><div class="appearance-action" data-v-71e49097><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-71e49097 data-v-a6e5b8de data-v-848e0bf0><span class="check" data-v-848e0bf0><span class="icon" data-v-848e0bf0><!--[--><span class="vpi-sun sun" data-v-a6e5b8de></span><span class="vpi-moon moon" data-v-a6e5b8de></span><!--]--></span></span></button></div></div></div><div class="group" data-v-71e49097><div class="item social-links" data-v-71e49097><div class="VPSocialLinks social-links-list" data-v-71e49097 data-v-5678b6c9><!--[--><a class="VPSocialLink no-icon" href="https://github.com/DramaticCollaboration/" aria-label="github" target="_blank" rel="me noopener" data-v-5678b6c9 data-v-70da9800><span class="vpi-social-github"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-a0955d45 data-v-9c1913d8><span class="container" data-v-9c1913d8><span class="top" data-v-9c1913d8></span><span class="middle" data-v-9c1913d8></span><span class="bottom" data-v-9c1913d8></span></span></button></div></div></div></div><div class="divider" data-v-a0955d45><div class="divider-line" data-v-a0955d45></div></div></div><!----></header><div class="VPLocalNav empty fixed" data-v-92f6b69a data-v-34d7880d><div class="container" data-v-34d7880d><!----><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-34d7880d data-v-65a3f284><button data-v-65a3f284>Return to top</button><!----></div></div></div><!----><div class="VPContent" id="VPContent" data-v-92f6b69a data-v-382a4418><div class="VPDoc has-aside" data-v-382a4418 data-v-3ab2a2a8><!--[--><!--]--><div class="container" data-v-3ab2a2a8><div class="aside" data-v-3ab2a2a8><div class="aside-curtain" data-v-3ab2a2a8></div><div class="aside-container" data-v-3ab2a2a8><div class="aside-content" data-v-3ab2a2a8><div class="VPDocAside" data-v-3ab2a2a8 data-v-4bfc847e><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-4bfc847e data-v-6e971039><div class="content" data-v-6e971039><div class="outline-marker" data-v-6e971039></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-6e971039>현재 페이지</div><ul class="VPDocOutlineItem root" data-v-6e971039 data-v-f36e3a73><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-4bfc847e></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-3ab2a2a8><div class="content-container" data-v-3ab2a2a8><!--[--><!--]--><main class="main" data-v-3ab2a2a8><div style="position:relative;" class="vp-doc _docs_ja_agile_createIssue" data-v-3ab2a2a8><div><h1 id="프롬프트" tabindex="-1">프롬프트 <a class="header-anchor" href="#프롬프트" aria-label="Permalink to “프롬프트”">​</a></h1><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>Playwright 기반 테스트 자동화 툴의 이슈 관리 시스템에서 새로운 이슈를 생성하려고 합니다.</span></span>
+<span class="line"><span>다음 내용을 바탕으로 **JIRA 티켓 템플릿** 형태로 작성해주세요.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>요청 사항:</span></span>
+<span class="line"><span>1. 이슈 **제목(Title)** 생성</span></span>
+<span class="line"><span>2. **JIRA 티켓 템플릿** 형식으로 작성</span></span>
+<span class="line"><span>  - Summary</span></span>
+<span class="line"><span>  - Description</span></span>
+<span class="line"><span>  - Acceptance Criteria</span></span>
+<span class="line"><span>  - Priority</span></span>
+<span class="line"><span>3. 개발 시 참고할 수 있는 **UI 시나리오** 예시 포함</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>이슈 내용:</span></span>
+<span class="line"><span>{{이슈 내용}}</span></span></code></pre></div><h1 id="샘플" tabindex="-1">샘플 <a class="header-anchor" href="#샘플" aria-label="Permalink to “샘플”">​</a></h1><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>Playwright 기반 테스트 자동화 툴의 이슈 관리 시스템에서 새로운 이슈를 생성하려고 합니다.</span></span>
+<span class="line"><span>다음 내용을 바탕으로 **JIRA 티켓 템플릿** 형태로 작성해주세요.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>요청 사항:</span></span>
+<span class="line"><span>1. 이슈 **제목(Title)** 생성</span></span>
+<span class="line"><span>2. **JIRA 티켓 템플릿** 형식으로 작성</span></span>
+<span class="line"><span>   - Summary</span></span>
+<span class="line"><span>   - Description</span></span>
+<span class="line"><span>   - Acceptance Criteria</span></span>
+<span class="line"><span>   - Priority</span></span>
+<span class="line"><span>3. 개발 시 참고할 수 있는 **UI 시나리오** 예시 포함</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>이슈 내용:</span></span>
+<span class="line"><span> 첫 로그인시 Dbeaver와 같은 샘플 데이타 생성 기능 추가</span></span></code></pre></div><h1 id="필요에-따라-결과-수정후-이슈-등록" tabindex="-1">필요에 따라 결과 수정후 이슈 등록 <a class="header-anchor" href="#필요에-따라-결과-수정후-이슈-등록" aria-label="Permalink to “필요에 따라 결과 수정후 이슈 등록”">​</a></h1><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>## 📌 JIRA 티켓 예시</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Title**</span></span>
+<span class="line"><span>첫 로그인 시 샘플 데이터 및 샘플 프로젝트/시나리오 자동 생성 기능 추가</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Summary**</span></span>
+<span class="line"><span>신규 사용자가 첫 로그인했을 때 프로젝트가 없으면 샘플 프로젝트와 시나리오를 생성하도록 하여, 툴의 초기 경험을 개선하고 빠른 온보딩을 지원하는 기능 추가</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Description**</span></span>
+<span class="line"><span>현재 Playwright 기반 테스트 자동화 툴에서는 신규 사용자가 첫 로그인 시 프로젝트나 시나리오가 없으면 빈 화면만 표시됩니다.</span></span>
+<span class="line"><span>이를 개선하기 위해 다음 기능을 구현해야 합니다:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>1. 첫 로그인 시 프로젝트가 존재하지 않으면 **샘플 생성 여부 확인 팝업** 제공</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   * &quot;샘플 프로젝트와 시나리오를 생성하시겠습니까?&quot;</span></span>
+<span class="line"><span>2. 사용자가 동의하면 **샘플 프로젝트와 샘플 시나리오 자동 생성**</span></span>
+<span class="line"><span>3. 생성된 샘플 프로젝트와 시나리오는 UI에서 확인 가능하며 바로 실행 가능</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Acceptance Criteria**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>* [ ] 첫 로그인 시 프로젝트가 없는 경우 팝업 표시</span></span>
+<span class="line"><span>* [ ] &quot;예&quot; 선택 시 샘플 프로젝트 및 샘플 시나리오 자동 생성</span></span>
+<span class="line"><span>* [ ] 샘플 프로젝트는 UI의 프로젝트 목록에 표시</span></span>
+<span class="line"><span>* [ ] 샘플 시나리오는 실행 가능하며 정상 동작 확인</span></span>
+<span class="line"><span>* [ ] &quot;아니오&quot; 선택 시 생성하지 않음</span></span>
+<span class="line"><span>* [ ] 해당 로직은 최초 로그인 시점에만 실행</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Priority**</span></span>
+<span class="line"><span>Medium</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Labels**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>* playwright</span></span>
+<span class="line"><span>* onboarding</span></span>
+<span class="line"><span>* enhancement</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Expected Benefits**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>* 신규 사용자에게 **즉시 실행 가능한 샘플 제공**</span></span>
+<span class="line"><span>* 툴 활용 방법을 **직관적으로 이해** 가능</span></span>
+<span class="line"><span>* 빈 화면 대신 기본 샘플 데이터 제공으로 **UX 향상**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## 💻 UI 시나리오 예시</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**샘플 프로젝트명:** `Sample Project`</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>1. **샘플 시나리오 1: 웹 로그인 테스트**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   * Step 1: 브라우저 열기</span></span>
+<span class="line"><span>   * Step 2: URL 이동 (`https://example.com/login`)</span></span>
+<span class="line"><span>   * Step 3: ID 입력 (`test_user`)</span></span>
+<span class="line"><span>   * Step 4: PW 입력 (`password123`)</span></span>
+<span class="line"><span>   * Step 5: 로그인 버튼 클릭</span></span>
+<span class="line"><span>   * Step 6: &quot;로그인 성공&quot; 메시지 확인</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>2. **샘플 시나리오 2: API 호출 테스트**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   * Step 1: `GET /api/health` 호출</span></span>
+<span class="line"><span>   * Step 2: 응답 상태 코드 200 확인</span></span>
+<span class="line"><span>   * Step 3: 응답 JSON 내 `&quot;status&quot;: &quot;ok&quot;` 값 확인</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>3. **샘플 시나리오 3: 기본 UI 검증 테스트**</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   * Step 1: 메인 페이지 이동</span></span>
+<span class="line"><span>   * Step 2: 화면 내 로고 이미지 표시 여부 확인</span></span>
+<span class="line"><span>   * Step 3: 주요 메뉴 버튼 클릭 후 페이지 전환 확인</span></span></code></pre></div></div></div></main><footer class="VPDocFooter" data-v-3ab2a2a8 data-v-064b7099><!--[--><!--]--><div class="edit-info" data-v-064b7099><!----><div class="last-updated" data-v-064b7099><p class="VPLastUpdated" data-v-064b7099 data-v-58e644c3>Last updated: <time datetime="2026-07-18T07:44:52.000Z" data-v-58e644c3></time></p></div></div><!----></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><!----><!--[--><!--]--></div></div>
+    
+    
+  </body>
+</html>

@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="syncverse mcp ai orchestration architectureに関する技術的な詳細。">
-    <meta name="keywords" content="기술 블로그, AI 도입, AI 에이전트, AI Ops, MSA 전환, RPA 대체, 엔터프라이즈 AI, 엠파시, Empasy">
+    <meta name="description" content="syncverse mcp ai orchestration architecture?�関?�る?�術的?�詳細�?>
+    <meta name="keywords" content="기술 블로�? AI ?�입, AI ?�이?�트, AI Ops, MSA ?�환, RPA ?��? ?�터?�라?�즈 AI, ?�파?? Empasy">
     <meta name="author" content="Empasy">
     
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "엠파시(Empasy) 기술 블로그",
+      "name": "?�파??Empasy) 기술 블로�?,
       "url": "https://empasy.com/blog.html",
-      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
+      "description": "?�터?�라?�즈 AI ?�이?�트 �?AI Ops 관??최신 기술 ?�사?�트",
       "publisher": {
         "@type": "Organization",
-        "name": "엠파시(Empasy)",
+        "name": "?�파??Empasy)",
         "logo": {
           "@type": "ImageObject",
           "url": "https://empasy.com/empasy-logo.png"
@@ -36,8 +36,8 @@
 
     <!-- SEO & AIO Tags -->
     <link rel="canonical" href="https://empasy.com/ja/blog/syncverse-mcp-ai-orchestration-architecture.html">
-    <meta property="og:title" content="Empasy技術ブログ: Syncverse Mcp Ai Orchestration Architecture">
-    <meta property="og:description" content="syncverse mcp ai orchestration architectureに関する技術的な詳細。">
+    <meta property="og:title" content="Empasy?�術ブ??��: Syncverse Mcp Ai Orchestration Architecture">
+    <meta property="og:description" content="syncverse mcp ai orchestration architecture?�関?�る?�術的?�詳細�?>
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://empasy.com/blog.html">
     <meta property="og:image" content="https://empasy.com/empasy-logo.png">
@@ -45,15 +45,15 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <title>Empasy技術ブログ: Syncverse Mcp Ai Orchestration Architecture</title>
-    <meta name="description" content="syncverse mcp ai orchestration architectureに関する技術的な詳細。">
+    <title>Empasy?�術ブ??��: Syncverse Mcp Ai Orchestration Architecture</title>
+    <meta name="description" content="syncverse mcp ai orchestration architecture?�関?�る?�術的?�詳細�?>
     <link rel="canonical" href="https://empasy.com/ja/blog/syncverse-mcp-ai-orchestration-architecture.html">
     <link rel="alternate" hreflang="ko" href="https://empasy.com/syncverse-mcp-ai-orchestration-architecture.html" />
     <link rel="alternate" hreflang="en" href="https://empasy.com/en/syncverse-mcp-ai-orchestration-architecture.html" />
     <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/syncverse-mcp-ai-orchestration-architecture.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/syncverse-mcp-ai-orchestration-architecture.html" />
-    <meta property="og:title" content="Empasy技術ブログ: Syncverse Mcp Ai Orchestration Architecture">
-    <meta property="og:description" content="syncverse mcp ai orchestration architectureに関する技術的な詳細。">
+    <meta property="og:title" content="Empasy?�術ブ??��: Syncverse Mcp Ai Orchestration Architecture">
+    <meta property="og:description" content="syncverse mcp ai orchestration architecture?�関?�る?�術的?�詳細�?>
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://empasy.com/syncverse-mcp-ai-orchestration-architecture.html">
     <meta property="og:locale" content="ko_KR">
@@ -61,8 +61,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "[Tech Blog] 에이전트 간 맥락을 연결하다: MCP 기반 차세대 AI 개발 생태계, SyncVerse 오케스트레이션 아키텍처",
-  "description": "글로벌 표준 MCP(Model Context Protocol)를 기반으로 코딩, QA, 배포 에이전트를 연결하는 Zero-Touch 자율 운영 생태계.",
+  "headline": "[Tech Blog] ?�이?�트 �?맥락???�결?�다: MCP 기반 차세?� AI 개발 ?�태�? SyncVerse ?��??�트?�이???�키?�처",
+  "description": "글로벌 ?��? MCP(Model Context Protocol)�?기반?�로 코딩, QA, 배포 ?�이?�트�??�결?�는 Zero-Touch ?�율 ?�영 ?�태�?",
   "author": {
     "@type": "Organization",
     "name": "Empasy Engineering Team",
@@ -83,127 +83,68 @@
 <body>
 
     <!-- Header Navigation -->
-    <header class="glass-header">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="../../ja/pages/index.html"><img src="../../assets/images/empasy-logo.png" alt="EMPASY" class="logo-img"></a>
-            </div>
-            <nav class="nav-links">
-                <!-- 1. Company Group -->
-                <div class="dropdown">
-                    <a href="../../ja/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-                    <div class="dropdown-content">
-                        <a href="../../ja/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
-                        <a href="../../ja/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
-                        <a href="../../ja/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
-                    </div>
-                </div>
-                
-                <!-- 2. Sync Series Group -->
-                <div class="dropdown">
-                    <a href="../../ja/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-                    <div class="dropdown-content">
-                        <a href="../../ja/solutions/sync-boot.html">SyncBoot</a>
-                        <a href="../../ja/solutions/sync-cms.html">SyncCMS</a>
-                        <a href="../../ja/solutions/sync-crawl.html">SyncCrawl</a>
-                        <a href="../../ja/solutions/sync-eta.html">SyncEta</a>
-                    </div>
-                </div>
-
-                <!-- 3. Insights Group (NEW) -->
-                <div class="dropdown">
-                    <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-                    <div class="dropdown-content">
-                        <a href="../../ja/blog/blog.html">Tech Blog</a>
-                        <a href="../../ja/pages/faq.html">FAQ</a>
-                        <a href="../../ja/blog/case-study-finance.html">고객 사례 상세</a>
-                    </div>
-                </div>
-                
-                <a href="../../ja/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
-                
-                <a href="../../ja/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
-            </nav>
-            <div class="nav-actions">
-                <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
-                    <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:1rem; padding: 0.5rem; cursor: pointer; display:flex; align-items:center; gap:6px;">
-                        <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> KO</span>
-                    </button>
-                    <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
-                        <a href="../../ko/blog/syncverse-mcp-ai-orchestration-architecture.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
-                        <a href="../../en/blog/syncverse-mcp-ai-orchestration-architecture.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
-                        <a href="../../ja/blog/syncverse-mcp-ai-orchestration-architecture.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JA</a>
-                    </div>
-                </div>
-                <a href="../../ja/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact">Contact</a>
-            </div>
-        </div>
-    </header>
+    {{> header_ja }}
 
     <main class="container" style="padding-top: 150px; min-height: 80vh;">
         <div class="page-header text-center fade-in-up mb-4">
             <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Insights</span>
             <h1 class="page-title" style="font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 1rem; color: var(--text-primary);">Tech Blog</h1>
-            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">エンタープライズAI導入のための実践的なガイドと最新技術トレンドをご確認ください。</p>
+            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">?�ン?�ー?�ラ?�ズAI導入??��?�の実践?�な?�イ?�と?�?��?術ト?�ン?�を?�確認く?�さ?��?/p>
         </div>
         
         <section class="section" style="padding-top: 2rem;">
             <div class="container">
-                ﻿<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-    <header style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
-        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">2026年7月18日 • AI Orchestration & MCP</div>
-        <h2 style="font-size: clamp(1.5rem, 5vw, 2rem); margin-bottom: 1rem;">[Tech Blog] エージェント間の文脈をつなぐ：MCPベースの次世代AI開発エコシステム、SyncVerseオーケストレーションアーキテクチャ</h2>
-        <div style="color: var(--primary-color); font-weight: 600;">By Empasy Engineering Team</div>
-    </header>
+                �?article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
+    {{> header_ja }}
     <div style="line-height: 1.8; color: var(--text-primary);">
-        <p>最近、開発、テスト、データ収集などを支援する様々なAIツール(Agent)が、各産業分野で個別に導入されています。しかし、これらのAIツールが有機的に意思疎通できず、各段階の文脈(Context)が断絶していれば、真の意味での無人自律運用パイプラインを構築することはできません。人間の開発者が途中でコードをコピーしてテストツールに貼り付け、デプロイコマンドを出すという断絶が依然として存在するためです。</p>
-        <p>Empasyの<strong>SyncVerse</strong>は、このようなサイロ化(Silo)現象を打破し、自社のコアソリューション(SyncBoot, SyncCMS, SyncETAなど)を独立して思考し判断する「インテリジェントエージェント」へと進化させ、一つに総括調整する<strong>中央AIオーケストレーションプラットフォーム</strong>です。本記事では、エージェント間の協業を実現するSyncVerseのコアプロトコルと、完全無人開発ライフサイクル(Zero-Touch AI DLC)アーキテクチャを紹介します。</p>
+        <p>?�近、開?�、テ?�ト?�デ?�タ?�集?�ど?�支?�す?�様?�なAI?�ー??Agent)?�、各?��??�野?�個別?�導?�さ?�て?�ま?�。し?�し?�こ?�ら?�AI?�ー?�が?�機?�に?�思疎?�で?�ず?�各段階??��??Context)?�断絶し?�い?�ば?�真??��?�で??��人自律運?�パ?�プ?�イ?�を構築?�る?�と??��?�ま?�ん?�人?�の?�発?�が?�中?�コ?�ド?�コ?�ー?�て?�ス?�ツ?�ル?�貼?�付?�、デ?�ロ?�コ?�ン?�を?�す?�い?�断絶が依然?�し??��?�す?�た?�で?��?/p>
+        <p>Empasy??strong>SyncVerse</strong>??��こ??��?�な?�イ??��(Silo)?�象?�打?�し?�自社の?�ア?�リ?�ー?�ョ??SyncBoot, SyncCMS, SyncETA?�ど)?�独立し??��考し?�断?�る?�イ?�テ?�ジ?�ン?�エ?�ジ?�ン?�」へ?�進化?�せ?��??�に総括調整?�る<strong>�?��AI?�ー?�ス?�レ?�シ?�ン?�ラ?�ト?�ォ?�ム</strong>?�す?�本記事?�は?�エ?�ジ?�ン?�間??���?��実現?�るSyncVerse??��?�プ??��?�ル?�、完?�無人開?�ラ?�フ?�イ??��(Zero-Touch AI DLC)?�ー??��??��?�を紹介?�ま?��?/p>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. グローバル標準MCPに基づくAgent-to-Agent(A2A)通信アーキテクチャ</h2>
-        <p>SyncVerseの最大の技術的強み(Moat)は、エージェント間でリアルタイムの文脈と知識を有機的に共有するために、オープンなグローバル標準プロトコルである<strong>MCP(Model Context Protocol)</strong>を全面的に採用した点です。</p>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. ?�ロ?�バ?�標準MCP?�基?�くAgent-to-Agent(A2A)?�信?�ー??��??��??/h2>
+        <p>SyncVerse???大の?�術的強み(Moat)??��エ?�ジ?�ン?�間?�リ?�ル?�イ?�の?�脈?�知識を?�機?�に?�有?�る?�め?�、オ?�プ?�な?�ロ?�バ?�標準プ??��?�ル?�あ??strong>MCP(Model Context Protocol)</strong>?�全?�的?�採?�し?�点?�す??/p>
         
         <div class="modern-flow">
-            <div class="flow-node primary">SyncVerse 中央オーケストレーター</div>
+            <div class="flow-node primary">SyncVerse �?��?�ー?�ス?�レ?�タ??/div>
             <div class="flow-branches">
                 <div class="flow-branch">
-                    <div class="flow-node">SyncBoot Agent<br><span style='font-size:0.85rem; font-weight:400; color:var(--text-secondary);'>自律ソース/DB実装</span></div>
+                    <div class="flow-node">SyncBoot Agent<br><span style='font-size:0.85rem; font-weight:400; color:var(--text-secondary);'>?�律?�ー??DB実装</span></div>
                 </div>
                 <div class="flow-branch">
-                    <div class="flow-node">SyncCMS Agent<br><span style='font-size:0.85rem; font-weight:400; color:var(--text-secondary);'>UI/コンテンツビルダー</span></div>
+                    <div class="flow-node">SyncCMS Agent<br><span style='font-size:0.85rem; font-weight:400; color:var(--text-secondary);'>UI/?�ン?�ン?�ビ?��???/span></div>
                 </div>
                 <div class="flow-branch">
                     <div class="flow-node">SyncETA Agent<br><span style='font-size:0.85rem; font-weight:400; color:var(--text-secondary);'>No-Code QA検証</span></div>
                 </div>
             </div>
-            <div style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">▲ (MCPプロトコルに基づくリアルタイムの文脈共有) ▲</div>
+            <div style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">??(MCP?�ロ?�コ?�に?�づ?�リ?�ル?�イ?�の?�脈?�有) ??/div>
         </div>
 
-        <p>従来の単純なAPI連携方式では、決められた規格のデータしかやり取りできず、突発的な例外状況や複雑な文脈を伝えるのに限界がありました。SyncVerseは、MCP標準規格に基づいて仮想化されたエージェントが単一の頭脳のようにつながっています。開発エージェントがコードを修正すると、テストエージェントは別途の指示なしに修正されたコードの文脈を把握し、自ら検証シナリオを準備できる超連結エコシステムを実現します。</p>
+        <p>従来??��純なAPI?�携?�式?�は?�決?�ら?�た規格??��?�タ?�か?�り?�り?�き?�、突?�的?�例外状況や複雑?�文?�を伝え?�の?�限?�が?�り?�し?�。SyncVerse??��MCP標準規格?�基?�い?�仮?�化?�れ?�エ?�ジ?�ン?�が?��???��?�の?�う?�つ?�が?�て?�ま?�。開?�エ?�ジ?�ン?�が?�ー?�を�???�る?�、テ?�ト?�ー?�ェ?�ト??��?�の?�示?�し?�修正さ?�た?�ー?�の?�脈?�把?�し?�自?�検証シ?�リ?�を準備?�き?�超?�結?�コ?�ス?�ム?�実?�し?�す??/p>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. Zero-Touch AI DLC (Development Life Cycle) パイプライン</h2>
-        <p>SyncVerseは、人間の介入を最小限に抑え、現場担当者の自然言語による要件指示だけでシステム全体が自ら動作する自律運用ループを実装します。</p>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. Zero-Touch AI DLC (Development Life Cycle) ?�イ?�ラ?�ン</h2>
+        <p>SyncVerse??��人?�の介入?��?小限?�抑?�、現?�担当者の?�然言語に?�る要件?�示?�け?�シ?�テ?�全体が?�ら?�作?�る?�律?�用?�ー?�を実装?�ま?��?/p>
         <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Step 1: 自然言語要件の解釈と計画策定</strong><br>現場の担当者がビジネス言語で修正要望（例：「ショッピングカート画面におすすめ商品のレイアウトを追加し、クリック時に決済ページへ連動させて」）を入力すると、SyncVerseオーケストレーターがこれを分析し、各サブエージェントに精密なタスクを割り当てます。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Step 2: 自律的なコードおよびコンポーネントの生成</strong><br><strong>SyncBoot Agent</strong>と<strong>SyncCMS Agent</strong>が起動し、指示内容に合わせたDBスキーマアーキテクチャを設計し、バックエンドのソースコードおよびフロントエンドのUIコンポーネントを自律的に修正・生成します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Step 3: AI Pull Requestの自律的申請</strong><br>ソースコードの変更が完了すると、SyncVerseはソース間の衝突の可能性を検討した後、変更点とコアロジックの説明を明確に作成し、GitリモートリポジトリにPull Request (PR)を自動的に申請します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Step 4: 無人検証と自律的なエラー復旧(Self-Healing)</strong><br>CI/CDパイプラインと結合され、<strong>SyncETA Agent</strong>が無人回帰テストを即座に作動させます。テスト中にレイアウトの欠陥やロジックの失敗箇所が検出されると、エラーログとランタイムスナップショットを再び開発エージェントにフィードバックし、数分以内に「自律的な修復および復旧サイクル」を経た後、商用サーバーへ無停止で自動デプロイします。</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Step 1: ?�然言語要件の解釈?�計?�策�?/strong><br>?�場??��当者が?�ジ?�ス言語で�??要望（例：「シ?�ッ?�ン?�カ?�ト?�面?�お?�す?�商?�の?�イ?�ウ?�を追加?�、ク?�ッ??��?�決済ペ?�ジ?�連動?�せ?�」）?�入?�す?�と?�SyncVerse?�ー?�ス?�レ?�タ?�が?�れ?�分?�し?�各?�ブ?�ー?�ェ?�ト?�精密な?�ス??��?�り当て?�す??/li>
+            <li style="margin-bottom: 0.5rem;"><strong>Step 2: ?�律?�な?�ー?�お?�び?�ン?�ー?�ン?�の?�成</strong><br><strong>SyncBoot Agent</strong>??strong>SyncCMS Agent</strong>?�起?�し?�指示内容に?�わ?�たDB?�キ?�マ?�ー??��??��?�を�?��?�、バ?�ク?�ン?�の?�ー?�コ?�ド?�よ?�フ??��?�エ?�ド?�UI?�ン?�ー?�ン?�を?�律?�に�???�生?�し?�す??/li>
+            <li style="margin-bottom: 0.5rem;"><strong>Step 3: AI Pull Request??��律的?�請</strong><br>?�ー?�コ?�ド??��?�が完了?�る?�、SyncVerse??��?�ス?�の衝突??��?�性を検討?�た後、変?�点?�コ?�ロ?�ッ??��説明?�明確に作成?�、Git?�モ?�ト?�ポ?�ト?�にPull Request (PR)?�自?�的?�申請し?�す??/li>
+            <li style="margin-bottom: 0.5rem;"><strong>Step 4: ?�人検証?�自律的?�エ?�ー復旧(Self-Healing)</strong><br>CI/CD?�イ?�ラ?�ン?�結?�さ?��?strong>SyncETA Agent</strong>?�無人回帰テ?�ト?�即座に作動?�せ?�す?�テ?�ト�?��?�イ?�ウ?�の欠陥?�ロ?�ッ??��失敗箇�??�検?�さ?�る?�、エ?�ー??��?�ラ?�タ?�ム?�ナ?�プ?�ョ?�ト?�再?�開?�エ?�ジ?�ン?�に?�ィ?�ド?�ッ??��?�数?�以?�に?�自律的?�修復お?�び復旧?�イ??��?�を経た後、商?�サ?�バ?�へ?�停止で?�動?�プ??��?�ま?��?/li>
         </ul>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. エンタープライズ導入の成果と未来価値</h2>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. ?�ン?�ー?�ラ?�ズ導入??��?�と?�来価�?/h2>
         <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>ビジネスの俊敏性の極大化:</strong> アイデアの企画から設計、開発、QA、デプロイに至るリードタイムを画期的に短縮し、市場の変化にリアルタイムで対応できる極度の俊敏性をもたらします。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>人的エラー(Human Error)の根本的遮断:</strong> 反復的なデプロイ作業や複雑な分散環境でのテスト過程で発生しうるヒューマンエラーを完全に統制し、システムの安定性を飛躍的に向上させます。</li>
+            <li style="margin-bottom: 0.5rem;"><strong>?�ジ?�ス??��?�性の極大??</strong> ?�イ?�ア??��?�か?�設計、開?�、QA?�デ?�ロ?�に?�る?�ー?�タ?�ム?�画?�的?�短�?��?�市?�の変化?�リ?�ル?�イ?�で対応?�き?�極度の俊敏?�を?�た?�し?�す??/li>
+            <li style="margin-bottom: 0.5rem;"><strong>人的?�ラ??Human Error)??��?�的??��:</strong> ?�復?�な?�プ??��作�??�複?�な?�散?�境?�の?�ス?�過程で?�生?�う?�ヒ?�ー?�ン?�ラ?�を完全?�統?�し?�シ?�テ?�の安定?�を飛躍?�に?�上?�せ?�す??/li>
         </ul>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
-        <p>SyncVerseは、単なる開発自動化ツールを超えて、企業のIT資産全体が自ら学習し進化する「自律運用フレームワーク」のビジョンを提示します。Empasyは、全製品ラインナップのエージェント化を通じて、人がより創造的で戦略的なビジネス設計に集中できるエンジニアリング環境を先導しています。</p>
+        <p>SyncVerse??��単?�る?�発?�動?�ツ?�ル?�超?�て?�企�?��IT資産?�体?�自?��?習し?�化?�る?�自律運?�フ?�ー?�ワ?�ク?�の?�ジ?�ン?�提示し?�す?�Empasy??��全製品?�イ?�ナ?�プ??��?�ジ?�ン?�化?�通じ?�、人?�よ?�創?�的?�戦?�的?�ビ?�ネ?�設計に?�中?�き?�エ?�ジ?�ア?�ン?�環境を?�導?�て?�ま?��?/p>
     </div>
 </article>
             </div>
@@ -211,35 +152,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-4">
-        <div class="container text-center fade-in-up">
-            <h2 class="footer-title" data-i18n="footer.title">엠파시와 함께 비즈니스를 가속화하세요</h2>
-            <div class="mt-4">
-                <a href="../../ja/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">Contact</a>
-            </div>
-        </div>
-        <div class="footer-bottom text-center">
-            <p data-i18n="footer.copyright">© 2026 Empasy. All rights reserved.</p>
-            <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
-                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px;">
-                    <a href="https://github.com/DramaticCollaboration" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="../../docs/index.html" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
-                        <i class="fas fa-book"></i> Documentation
-                    </a>
-                </div>
-                <address style="font-style: normal; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
-                    <strong>(주)엠파시 (Empasy IT Corp.)</strong><br>
-                    엔터프라이즈 B2B 소프트웨어 및 AI 에이전트(SyncSeries) 개발사<br>
-                    Seoul, South Korea
-                </address>
-            </div>
-        </div>
-    </footer>
+    {{> footer_ja }}
 
     <!-- Scripts -->
-    <script src="../../assets/js/i18n.js"></script>
-    <script src="../../assets/js/main.js"></script>
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>
