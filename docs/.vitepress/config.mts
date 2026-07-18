@@ -93,7 +93,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     ],
   ],
   sitemap: {
-    hostname: 'https://doc.empasy.com/',
+    hostname: 'https://empasy.io/docs/',
     transformItems: (items) => {
       // items.push(...[{url: '/synceta/'}, {url: '/syncboot/'}, {url: '/agile/'}, {url: '/logs/'}, {url: '/study/'}]);
       return items.filter( (element) => !element.url.includes('README') ).map((element) => ( {
