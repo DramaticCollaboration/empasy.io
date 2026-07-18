@@ -1,23 +1,23 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="description" content="Technical deep-dive into syncinsight on premise decision intelligence architecture.">
-    <meta name="keywords" content="기술 블로그, AI 도입, AI 에이전트, AI Ops, MSA 전환, RPA 대체, 엔터프라이즈 AI, 엠파시, Empasy">
+    <meta name="keywords" content="��� ���α�, AI ����, AI ������Ʈ, AI Ops, MSA ��ȯ, RPA ��ü, ������������ AI, ���Ľ�, Empasy">
     <meta name="author" content="Empasy">
     
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "엠파시(Empasy) 기술 블로그",
+      "name": "���Ľ�(Empasy) ��� ���α�",
       "url": "https://empasy.com/blog.html",
-      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
+      "description": "������������ AI ������Ʈ �� AI Ops ���� �ֽ� ��� �λ���Ʈ",
       "publisher": {
         "@type": "Organization",
-        "name": "엠파시(Empasy)",
+        "name": "���Ľ�(Empasy)",
         "logo": {
           "@type": "ImageObject",
           "url": "https://empasy.com/empasy-logo.png"
@@ -61,8 +61,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "[Tech Blog] 온프레미스 보안을 관통하는 최상위 의사결정 지능: SyncInsight의 멀티 에이전트 교차 분석 아키텍처",
-  "description": "사내 폐쇄망 환경에서 Context-Aware RAG와 멀티 에이전트를 가동하여 데이터 주권을 지키며 경영 인사이트를 도출하는 SyncInsight.",
+  "headline": "[Tech Blog] �������̽� ������ �����ϴ� �ֻ��� �ǻ���� ����: SyncInsight�� ��Ƽ ������Ʈ ���� �м� ��Ű��ó",
+  "description": "�系 ���� ȯ�濡�� Context-Aware RAG�� ��Ƽ ������Ʈ�� �����Ͽ� ������ �ֱ��� ��Ű�� �濵 �λ���Ʈ�� �����ϴ� SyncInsight.",
   "author": {
     "@type": "Organization",
     "name": "Empasy Engineering Team",
@@ -83,62 +83,7 @@
 <body>
 
     <!-- Header Navigation -->
-    <header class="glass-header">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="../../en/pages/index.html"><img src="../../assets/images/empasy-logo.png" alt="EMPASY" class="logo-img"></a>
-            </div>
-            <nav class="nav-links">
-                <!-- 1. Company Group -->
-                <div class="dropdown">
-                    <a href="../../en/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-                    <div class="dropdown-content">
-                        <a href="../../en/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
-                        <a href="../../en/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
-                        <a href="../../en/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
-                    </div>
-                </div>
-                
-                <!-- 2. Sync Series Group -->
-                <div class="dropdown">
-                    <a href="../../en/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-                    <div class="dropdown-content">
-                        <a href="../../en/solutions/sync-boot.html">SyncBoot</a>
-                        <a href="../../en/solutions/sync-cms.html">SyncCMS</a>
-                        <a href="../../en/solutions/sync-crawl.html">SyncCrawl</a>
-                        <a href="../../en/solutions/sync-eta.html">SyncEta</a>
-                    </div>
-                </div>
-
-                <!-- 3. Insights Group (NEW) -->
-                <div class="dropdown">
-                    <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-                    <div class="dropdown-content">
-                        <a href="../../en/blog/blog.html">Tech Blog</a>
-                        <a href="../../en/pages/faq.html">FAQ</a>
-                        <a href="../../en/blog/case-study-finance.html">고객 사례 상세</a>
-                    </div>
-                </div>
-                
-                <a href="../../en/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
-                
-                <a href="../../en/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
-            </nav>
-            <div class="nav-actions">
-                <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
-                    <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:1rem; padding: 0.5rem; cursor: pointer; display:flex; align-items:center; gap:6px;">
-                        <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> KO</span>
-                    </button>
-                    <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
-                        <a href="../../ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
-                        <a href="../../en/blog/syncinsight-on-premise-decision-intelligence-architecture.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
-                        <a href="../../ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JA</a>
-                    </div>
-                </div>
-                <a href="../../en/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact">Contact</a>
-            </div>
-        </div>
-    </header>
+    {{> header_en }}
 
     <main class="container" style="padding-top: 150px; min-height: 80vh;">
         <div class="page-header text-center fade-in-up mb-4">
@@ -149,12 +94,8 @@
         
         <section class="section" style="padding-top: 2rem;">
             <div class="container">
-                ﻿<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-    <header style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
-        <div style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">July 18, 2026 • Security & Decision Intelligence</div>
-        <h2 style="font-size: clamp(1.5rem, 5vw, 2rem); margin-bottom: 1rem;">[Tech Blog] Top-Level Decision Intelligence Penetrating On-Premise Security: SyncInsight's Multi-Agent Architecture</h2>
-        <div style="color: var(--primary-color); font-weight: 600;">By Empasy Engineering Team</div>
-    </header>
+                ?<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
+    {{> header_en }}
     <div style="line-height: 1.8; color: var(--text-primary);">
         <p>High-value information such as internal ERP, groupware, in-house Wiki, and market trend data are a company's core assets. However, indiscriminately utilizing large public cloud-based LLM services to analyze this data and derive strategies exposes companies to serious security regulatory risks of leaking sensitive corporate secrets and personal information. In addition, there was a limitation in deriving integrated insights because numerous data are thoroughly isolated (Silo) in departmental systems.</p>
         <p>Empasy's <strong>SyncInsight</strong> goes beyond simple IT infrastructure automation to become the <strong>top-tier AI decision-making intelligence platform</strong> that drives flawless knowledge creation from internal assets and strategic business actions by C-Level executives. This article shares the core technical architecture of SyncInsight that derives powerful business insights from fragmented data while perfectly maintaining in-house security.</p>
@@ -179,11 +120,11 @@
           <div class="pipeline-step">
             <div class="pipeline-title">Collector Agent</div>
             <div class="pipeline-desc">Heterogeneous data collection</div>
-          </div><div class="pipeline-arrow">➔</div>
+          </div><div class="pipeline-arrow">?</div>
           <div class="pipeline-step">
             <div class="pipeline-title">Analyst Agent</div>
             <div class="pipeline-desc">Python-based big data analysis</div>
-          </div><div class="pipeline-arrow">➔</div>
+          </div><div class="pipeline-arrow">?</div>
           <div class="pipeline-step">
             <div class="pipeline-title">Reporter Agent</div>
             <div class="pipeline-desc">SWOT & strategy report generation</div>
@@ -211,35 +152,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-4">
-        <div class="container text-center fade-in-up">
-            <h2 class="footer-title" data-i18n="footer.title">엠파시와 함께 비즈니스를 가속화하세요</h2>
-            <div class="mt-4">
-                <a href="../../en/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">Contact</a>
-            </div>
-        </div>
-        <div class="footer-bottom text-center">
-            <p data-i18n="footer.copyright">© 2026 Empasy. All rights reserved.</p>
-            <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
-                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px;">
-                    <a href="https://github.com/DramaticCollaboration" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="../../docs/index.html" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
-                        <i class="fas fa-book"></i> Documentation
-                    </a>
-                </div>
-                <address style="font-style: normal; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
-                    <strong>(주)엠파시 (Empasy IT Corp.)</strong><br>
-                    엔터프라이즈 B2B 소프트웨어 및 AI 에이전트(SyncSeries) 개발사<br>
-                    Seoul, South Korea
-                </address>
-            </div>
-        </div>
-    </footer>
+    {{> footer_en }}
 
     <!-- Scripts -->
-    <script src="../../assets/js/i18n.js"></script>
-    <script src="../../assets/js/main.js"></script>
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>

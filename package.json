@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.1",
+    "cheerio": "^1.2.0"
+  },
+  "name": "empasy.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "translate_docs.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DramaticCollaboration/empasy.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DramaticCollaboration/empasy.io/issues"
+  },
+  "homepage": "https://github.com/DramaticCollaboration/empasy.io#readme",
+  "devDependencies": {
+    "glob": "^13.0.6",
+    "handlebars": "^4.7.9",
+    "vite": "^8.1.5",
+    "vite-plugin-handlebars": "^2.0.3"
+  }
+}
