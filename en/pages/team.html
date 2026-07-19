@@ -1,333 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Team | Empasy</title>
-    <!-- 웹 폰트 (Pretendard) -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
-    
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <style>
-        :root {
-            --primary: #2563EB; /* 엠파시 블루 */
-            --primary-light: #EFF6FF;
-            --secondary: #10B981; /* 시너지 그린 */
-            --bg-color: #F8FAFC;
-            --surface: #FFFFFF;
-            --text-main: #0F172A;
-            --text-muted: #475569;
-            --border: #E2E8F0;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* 1. Hero Section (헤드카피 & 슬로건) */
-        .hero {
-            padding: 100px 20px 140px;
-            text-align: center;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
-            position: relative;
-        }
-
-        .hero h1 {
-            font-size: clamp(2rem, 6vw, 3.5rem);
-            font-weight: 800;
-            color: var(--text-main);
-            margin-bottom: 24px;
-            letter-spacing: -0.02em;
-        }
-
-        .hero h1 span {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-            word-break: keep-all;
-            font-weight: 500;
-        }
-
-        /* 2. 콘텐츠 구성 아이디어 (3가지 핵심 가치) */
-        .values {
-            max-width: 1200px;
-            margin: -80px auto 80px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 24px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .value-card {
-            background: var(--surface);
-            padding: 40px 32px;
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            border: 1px solid var(--border);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-        }
-
-        .value-badge {
-            display: inline-block;
-            padding: 6px 14px;
-            background: var(--primary-light);
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 0.9rem;
-            border-radius: 20px;
-            margin-bottom: 20px;
-        }
-
-        .value-card h3 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            line-height: 1.4;
-            word-break: keep-all;
-        }
-
-        .value-card p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            word-break: keep-all;
-        }
-
-        /* 3. 팀원 소개 섹션 (스토리텔링) */
-        .team-section {
-            padding: 40px 20px 100px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .team-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .team-header h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 16px;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 32px;
-        }
-
-        .team-card {
-            background: var(--surface);
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-            border: 1px solid var(--border);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
-
-        .team-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        .card-image {
-            height: 260px;
-            background: #E2E8F0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-            filter: contrast(1.05) saturate(1.1);
-        }
-
-        .team-card:hover .card-image img {
-            transform: scale(1.05);
-        }
-
-        .card-content {
-            padding: 32px;
-        }
-
-        .member-info {
-            margin-bottom: 20px;
-        }
-
-        .member-name {
-            font-size: 1.6rem;
-            font-weight: 800;
-            margin-bottom: 4px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .member-role {
-            font-size: 0.95rem;
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        .hashtags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 24px;
-        }
-
-        .hashtag {
-            font-size: 0.85rem;
-            background: var(--bg-color);
-            color: var(--text-muted);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-weight: 600;
-            border: 1px solid var(--border);
-            transition: all 0.2s ease;
-        }
-
-        .team-card:hover .hashtag {
-            background: var(--primary-light);
-            border-color: var(--primary-light);
-            color: var(--primary);
-        }
-
-        .quote {
-            position: relative;
-            padding: 24px;
-            background: #F8FAFC;
-            border-radius: 16px;
-            color: var(--text-main);
-            font-size: 1rem;
-            word-break: break-word;
-            line-height: 1.7;
-        }
-
-        .quote::before {
-            content: '"';
-            position: absolute;
-            top: 10px;
-            left: 14px;
-            font-size: 3rem;
-            color: rgba(37, 99, 235, 0.15);
-            font-family: Georgia, serif;
-            line-height: 1;
-        }
-
-        /* 리더급 강조 카드 (CTO) */
-        .team-card.featured {
-            grid-column: 1 / -1;
-            display: flex;
-            flex-direction: row;
-        }
-
-        .team-card.featured .card-image {
-            width: 40%;
-            height: auto;
-            min-height: 340px;
-        }
-
-        .team-card.featured .card-content {
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 48px;
-        }
-
-        .team-card.featured .quote {
-            font-size: 1.1rem;
-        }
-
-        @media (max-width: 900px) {
-            .team-card.featured {
-                flex-direction: column;
-            }
-            .team-card.featured .card-image {
-                width: 100%;
-                height: 300px;
-            }
-            .team-card.featured .card-content {
-                width: 100%;
-                padding: 32px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .hero p { font-size: 1.1rem; }
-            .values { margin-top: 40px; }
-        }
-    </style>
-
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.com/en/pages/team.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.com/team.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.com/en/team.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/team.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.com/team.html" />
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Our Team | Empasy">
-    <meta property="og:description" content="Meet the Empasy Engineering team driving the future of autonomous ecosystems.">
+    <title>Empasy | Enterprise AI Integration Platform</title>
+    <meta name="description" content="B2B Enterprise AI Integration Architecture solving DX and AI Infrastructure simultaneously.">
+    <meta name="keywords" content="Enterprise AI Ecosystem, Enterprise AI Integration Platform, DX AI Architecture, Empasy, MSA CMS AI Integration, Business Data Intelligence, SyncVerse, SyncBoot, SyncCMS, SyncInsight, SyncETA, B2B AI Solution">
+    <meta property="og:title" content="Empasy | Enterprise AI Integration Platform">
+    <meta property="og:description" content="B2B Enterprise AI Integration Architecture solving DX and AI Infrastructure simultaneously.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://empasy.com/en/team.html">
-    <meta property="og:image" content="https://empasy.com/empasy-logo.png">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Our Team | Empasy">
-    <meta name="twitter:description" content="Meet the Empasy Engineering team driving the future of autonomous ecosystems.">
-    <meta name="twitter:image" content="https://empasy.com/empasy-logo.png">
-    
-    <!-- AI & Crawling Optimization -->
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AboutPage",
-      "name": "우리의 이야기 - 엠파시(Empasy)",
-      "description": "기술로 공감을 실현하는 엠파시(Empasy) 팀의 비전과 조직 문화를 소개합니다.",
-      "sameAs": [
-        "https://github.com/DramaticCollaboration",
-        "../../docs/index.html"
-      ]
-    }
-    </script>
-
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- 웹 폰트 (Pretendard) -->    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />    <link rel="stylesheet" href="../../assets/css/style.css">    <style>        :root {            --primary: #2563EB; /* 엠파시 블루 */            --primary-light: #EFF6FF;            --secondary: #10B981; /* 시너지 그린 */            --bg-color: #F8FAFC;            --surface: #FFFFFF;            --text-main: #0F172A;            --text-muted: #475569;            --border: #E2E8F0;        }        * {            margin: 0;            padding: 0;            box-sizing: border-box;            font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;        }        body {            background-color: var(--bg-color);            color: var(--text-main);            line-height: 1.6;            -webkit-font-smoothing: antialiased;        }        /* 1. Hero Section (헤드카피 & 슬로건) */        .hero {            padding: 100px 20px 140px;            text-align: center;            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);            position: relative;        }        .hero h1 {            font-size: clamp(2rem, 6vw, 3.5rem);            font-weight: 800;            color: var(--text-main);            margin-bottom: 24px;            letter-spacing: -0.02em;        }        .hero h1 span {            background: linear-gradient(135deg, var(--primary), var(--secondary));            -webkit-background-clip: text;            -webkit-text-fill-color: transparent;        }        .hero p {            font-size: 1.3rem;            color: var(--text-muted);            max-width: 600px;            margin: 0 auto;            word-break: keep-all;            font-weight: 500;        }        /* 2. 콘텐츠 구성 아이디어 (3가지 핵심 가치) */        .values {            max-width: 1200px;            margin: -80px auto 80px;            padding: 0 20px;            display: grid;            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));            gap: 24px;            position: relative;            z-index: 10;        }        .value-card {            background: var(--surface);            padding: 40px 32px;            border-radius: 24px;            box-shadow: 0 10px 30px rgba(0,0,0,0.04);            border: 1px solid var(--border);            transition: transform 0.3s ease, box-shadow 0.3s ease;        }        .value-card:hover {            transform: translateY(-5px);            box-shadow: 0 20px 40px rgba(0,0,0,0.08);        }        .value-badge {            display: inline-block;            padding: 6px 14px;            background: var(--primary-light);            color: var(--primary);            font-weight: 700;            font-size: 0.9rem;            border-radius: 20px;            margin-bottom: 20px;        }        .value-card h3 {            font-size: 1.35rem;            font-weight: 700;            margin-bottom: 16px;            line-height: 1.4;            word-break: keep-all;        }        .value-card p {            color: var(--text-muted);            font-size: 1.05rem;            word-break: keep-all;        }        /* 3. 팀원 소개 섹션 (스토리텔링) */        .team-section {            padding: 40px 20px 100px;            max-width: 1200px;            margin: 0 auto;        }        .team-header {            text-align: center;            margin-bottom: 60px;        }        .team-header h2 {            font-size: 2.5rem;            font-weight: 800;            margin-bottom: 16px;        }        .team-grid {            display: grid;            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));            gap: 32px;        }        .team-card {            background: var(--surface);            border-radius: 24px;            overflow: hidden;            box-shadow: 0 4px 20px rgba(0,0,0,0.03);            border: 1px solid var(--border);            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);            position: relative;        }        .team-card:hover {            transform: translateY(-8px);            box-shadow: 0 20px 40px rgba(0,0,0,0.1);        }        .card-image {            height: 260px;            background: #E2E8F0;            position: relative;            overflow: hidden;        }        .card-image img {            width: 100%;            height: 100%;            object-fit: cover;            transition: transform 0.5s ease;            filter: contrast(1.05) saturate(1.1);        }        .team-card:hover .card-image img {            transform: scale(1.05);        }        .card-content {            padding: 32px;        }        .member-info {            margin-bottom: 20px;        }        .member-name {            font-size: 1.6rem;            font-weight: 800;            margin-bottom: 4px;            display: flex;            align-items: center;            gap: 12px;            flex-wrap: wrap;        }        .member-role {            font-size: 0.95rem;            color: var(--primary);            font-weight: 600;        }        .hashtags {            display: flex;            flex-wrap: wrap;            gap: 8px;            margin-bottom: 24px;        }        .hashtag {            font-size: 0.85rem;            background: var(--bg-color);            color: var(--text-muted);            padding: 6px 14px;            border-radius: 20px;            font-weight: 600;            border: 1px solid var(--border);            transition: all 0.2s ease;        }        .team-card:hover .hashtag {            background: var(--primary-light);            border-color: var(--primary-light);            color: var(--primary);        }        .quote {            position: relative;            padding: 24px;            background: #F8FAFC;            border-radius: 16px;            color: var(--text-main);            font-size: 1rem;            word-break: break-word;            line-height: 1.7;        }        .quote::before {            content: '"';            position: absolute;            top: 10px;            left: 14px;            font-size: 3rem;            color: rgba(37, 99, 235, 0.15);            font-family: Georgia, serif;            line-height: 1;        }        /* 리더급 강조 카드 (CTO) */        .team-card.featured {            grid-column: 1 / -1;            display: flex;            flex-direction: row;        }        .team-card.featured .card-image {            width: 40%;            height: auto;            min-height: 340px;        }        .team-card.featured .card-content {            width: 60%;            display: flex;            flex-direction: column;            justify-content: center;            padding: 48px;        }        .team-card.featured .quote {            font-size: 1.1rem;        }        @media (max-width: 900px) {            .team-card.featured {                flex-direction: column;            }            .team-card.featured .card-image {                width: 100%;                height: 300px;            }            .team-card.featured .card-content {                width: 100%;                padding: 32px;            }        }        @media (max-width: 768px) {            .hero h1 { font-size: 2.5rem; }            .hero p { font-size: 1.1rem; }            .values { margin-top: 40px; }        }    </style>    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.com/en/pages/team.html">    <link rel="alternate" hreflang="ko" href="https://empasy.com/team.html" />    <link rel="alternate" hreflang="en" href="https://empasy.com/en/team.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/team.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.com/team.html" />    <!-- Open Graph -->    <meta property="og:url" content="https://empasy.com/en/team.html">    <meta property="og:image" content="https://empasy.com/empasy-logo.png">    <!-- Twitter Card -->    <meta name="twitter:card" content="summary_large_image">    <meta name="twitter:title" content="Our Team | Empasy">    <meta name="twitter:description" content="Meet the Empasy Engineering team driving the future of autonomous ecosystems.">    <meta name="twitter:image" content="https://empasy.com/empasy-logo.png">    <!-- AI & Crawling Optimization -->    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "AboutPage",      "name": "우리의 이야기 - 엠파시(Empasy)",      "description": "기술로 공감을 실현하는 엠파시(Empasy) 팀의 비전과 조직 문화를 소개합니다.",      "sameAs": [        "https://github.com/DramaticCollaboration",        "../../docs/index.html"      ]    }    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!-- AI Search Optimization (AIO) Context Block -->

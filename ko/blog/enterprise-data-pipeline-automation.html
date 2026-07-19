@@ -1,86 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description" content="엠파시(Empasy) 기술 블로그. 엔터프라이즈 AI 에이전트 도입 가이드, MSA 전환 사례, 웹 크롤링 등 다양한 AI Ops 최신 인사이트를 제공합니다.">
-    <meta name="keywords" content="기술 블로그, AI 도입, AI 에이전트, AI Ops, MSA 전환, RPA 대체, 엔터프라이즈 AI, 엠파시, Empasy">
-    <meta name="author" content="Empasy">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "엠파시(Empasy) 기술 블로그",
-      "url": "https://empasy.com/blog.html",
-      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
-      "publisher": {
-        "@type": "Organization",
-        "name": "엠파시(Empasy)",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.com/empasy-logo.png"
-        }
-      }
-    }
-    </script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.com/ko/blog/enterprise-data-pipeline-automation.html">
-    <meta property="og:title" content="기술 블로그 및 인사이트 | 엠파시(Empasy)">
-    <meta property="og:description" content="엠파시(Empasy) 기술 블로그. 엔터프라이즈 AI 에이전트 도입 가이드, MSA 전환 사례 등 인사이트를 확인하세요.">
+    <title>엠파시(Empasy) | Enterprise data pipeline automation</title>
+    <meta name="description" content="디지털 전환(DX)과 AI 인프라를 한 번에 해결하는 B2B 기업용 AI 통합 아키텍처. 기획부터 운영까지 인간의 개입을 최소화하는 AI Ops 기반 생태계입니다.">
+    <meta name="keywords" content="엔터프라이즈 AI 에코시스템, 기업용 AI 통합 플랫폼, 디지털 전환 AI 아키텍처, 엠파시, Empasy, MSA CMS AI 연동 솔루션, 비즈니스 데이터 인텔리전스 패키지, SyncVerse, SyncBoot, SyncCMS, SyncInsight, SyncETA, B2B AI 솔루션">
+    <meta property="og:title" content="엠파시(Empasy) | Enterprise data pipeline automation">
+    <meta property="og:description" content="디지털 전환(DX)과 AI 인프라를 한 번에 해결하는 B2B 기업용 AI 통합 아키텍처. 기획부터 운영까지 인간의 개입을 최소화하는 AI Ops 기반 생태계입니다.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://empasy.com/blog.html">
-    <meta property="og:image" content="https://empasy.com/empasy-logo.png">
-    
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <title>LLM을 활용한 엔터프라이즈 데이터 파이프라인 자동화 사례 | Empasy Tech Blog</title>
-    <meta name="description" content="SyncSeries를 활용하여 비정형 데이터를 구조화하고 보안이 중요한 엔터프라이즈 환경에서 LLM을 어떻게 활용할 수 있는지 알아봅니다.">
-    <link rel="canonical" href="https://empasy.com/ko/blog/enterprise-data-pipeline-automation.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.com/enterprise-data-pipeline-automation.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.com/en/enterprise-data-pipeline-automation.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/enterprise-data-pipeline-automation.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/enterprise-data-pipeline-automation.html" />
-    <meta property="og:title" content="LLM을 활용한 엔터프라이즈 데이터 파이프라인 자동화 사례">
-    <meta property="og:description" content="SyncSeries를 활용하여 비정형 데이터를 구조화하고 보안이 중요한 엔터프라이즈 환경에서 LLM을 어떻게 활용할 수 있는지 알아봅니다.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://empasy.com/enterprise-data-pipeline-automation.html">
-    <meta property="og:locale" content="ko_KR">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "LLM을 활용한 엔터프라이즈 데이터 파이프라인 자동화 사례",
-  "description": "SyncSeries를 활용하여 비정형 데이터를 구조화하고 보안이 중요한 엔터프라이즈 환경에서 LLM을 어떻게 활용할 수 있는지 알아봅니다.",
-  "author": {
-    "@type": "Organization",
-    "name": "Empasy Engineering Team",
-    "url": "https://empasy.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Empasy",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://empasy.com/assets/logo.png"
-    }
-  },
-  "url": "https://empasy.com/enterprise-data-pipeline-automation.html"
-}
-    </script>
-
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Blog",      "name": "엠파시(Empasy) 기술 블로그",      "url": "https://empasy.com/blog.html",      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",      "publisher": {        "@type": "Organization",        "name": "엠파시(Empasy)",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.com/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="../../assets/css/style.css">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.com/ko/blog/enterprise-data-pipeline-automation.html">    <meta property="og:url" content="https://empasy.com/blog.html">    <meta property="og:image" content="https://empasy.com/empasy-logo.png">    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="canonical" href="https://empasy.com/ko/blog/enterprise-data-pipeline-automation.html">    <link rel="alternate" hreflang="ko" href="https://empasy.com/enterprise-data-pipeline-automation.html" />    <link rel="alternate" hreflang="en" href="https://empasy.com/en/enterprise-data-pipeline-automation.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/enterprise-data-pipeline-automation.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/enterprise-data-pipeline-automation.html" />    <meta property="og:url" content="https://empasy.com/enterprise-data-pipeline-automation.html">    <meta property="og:locale" content="ko_KR">    <script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "Article",  "headline": "LLM을 활용한 엔터프라이즈 데이터 파이프라인 자동화 사례",  "description": "SyncSeries를 활용하여 비정형 데이터를 구조화하고 보안이 중요한 엔터프라이즈 환경에서 LLM을 어떻게 활용할 수 있는지 알아봅니다.",  "author": {    "@type": "Organization",    "name": "Empasy Engineering Team",    "url": "https://empasy.com"  },  "publisher": {    "@type": "Organization",    "name": "Empasy",    "logo": {      "@type": "ImageObject",      "url": "https://empasy.com/assets/logo.png"    }  },  "url": "https://empasy.com/enterprise-data-pipeline-automation.html"}    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
