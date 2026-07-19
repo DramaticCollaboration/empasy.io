@@ -1,85 +1,13 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description" content="엠파시(Empasy) 기술 블로그. 엔터프라이즈 AI 에이전트 도입 가이드, MSA 전환 사례, 웹 크롤링 등 다양한 AI Ops 최신 인사이트를 제공합니다.">
-    <meta name="keywords" content="기술 블로그, AI 도입, AI 에이전트, AI Ops, MSA 전환, RPA 대체, 엔터프라이즈 AI, 엠파시, Empasy">
-    <meta name="author" content="Empasy">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "엠파시(Empasy) 기술 블로그",
-      "url": "https://empasy.com/blog.html",
-      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
-      "publisher": {
-        "@type": "Organization",
-        "name": "엠파시(Empasy)",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.com/empasy-logo.png"
-        }
-      }
-    }
-    </script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
-
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.com/ko/blog/empasy-core-solution-architecture-syncverse.html">
-    <meta property="og:title" content="기술 블로그 및 인사이트 | 엠파시(Empasy)">
-    <meta property="og:description" content="엠파시(Empasy) 기술 블로그. 엔터프라이즈 AI 에이전트 도입 가이드, MSA 전환 사례 등 인사이트를 확인하세요.">
+    <title>엠파시(Empasy) | Empasy core solution architecture syncverse</title>
+    <meta name="description" content="SyncVerse는 이기종 서비스를 하나로 연결하는 LLM 기반 AI 오케스트레이션 플랫폼입니다. 기업의 지능형 워크플로우를 완성하는 Agentic AI 인프라를 제공합니다.">
+    <meta name="keywords" content="엔터프라이즈 AI 에코시스템, 기업용 AI 통합 플랫폼, 디지털 전환 AI 아키텍처, 엠파시, Empasy, AI 오케스트레이션 플랫폼, 이기종 서비스 AI 통합 솔루션, 엔터프라이즈 지능형 워크플로우 자동화, LLM 기반 기업용 서비스 연동 허브, Agentic AI 인프라 통합">
+    <meta property="og:title" content="엠파시(Empasy) | Empasy core solution architecture syncverse">
+    <meta property="og:description" content="SyncVerse는 이기종 서비스를 하나로 연결하는 LLM 기반 AI 오케스트레이션 플랫폼입니다. 기업의 지능형 워크플로우를 완성하는 Agentic AI 인프라를 제공합니다.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://empasy.com/blog.html">
-    <meta property="og:image" content="https://empasy.com/empasy-logo.png">
-    
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <title>엠파시 기술 블로그: AI 자율 운영 생태계(SyncVerse)를 지탱하는 핵심 솔루션 아키텍처 분석 | Empasy Tech Blog</title>
-    <meta name="description" content="SyncEta, SyncCMS, SyncBoot, SyncVerse, SyncInsight 등 엠파시의 5대 핵심 솔루션의 기술적 페인포인트와 엔지니어링 해법을 깊이 있게 분석합니다.">
-    <link rel="canonical" href="https://empasy.com/ko/blog/empasy-core-solution-architecture-syncverse.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.com/empasy-core-solution-architecture-syncverse.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.com/en/empasy-core-solution-architecture-syncverse.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/empasy-core-solution-architecture-syncverse.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/empasy-core-solution-architecture-syncverse.html" />
-    <meta property="og:title" content="엠파시 기술 블로그: AI 자율 운영 생태계(SyncVerse)를 지탱하는 핵심 솔루션 아키텍처 분석">
-    <meta property="og:description" content="SyncEta, SyncCMS, SyncBoot, SyncVerse, SyncInsight 등 엠파시의 5대 핵심 솔루션의 기술적 페인포인트와 엔지니어링 해법을 깊이 있게 분석합니다.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://empasy.com/empasy-core-solution-architecture-syncverse.html">
-    <meta property="og:locale" content="ko_KR">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "엠파시 기술 블로그: AI 자율 운영 생태계(SyncVerse)를 지탱하는 핵심 솔루션 아키텍처 분석",
-  "description": "SyncEta, SyncCMS, SyncBoot, SyncVerse, SyncInsight 등 엠파시의 5대 핵심 솔루션의 기술적 페인포인트와 엔지니어링 해법을 깊이 있게 분석합니다.",
-  "author": {
-    "@type": "Organization",
-    "name": "Empasy Engineering Team",
-    "url": "https://empasy.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Empasy",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://empasy.com/assets/logo.png"
-    }
-  },
-  "url": "https://empasy.com/empasy-core-solution-architecture-syncverse.html"
-}
-    </script>
-
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Blog",      "name": "엠파시(Empasy) 기술 블로그",      "url": "https://empasy.com/blog.html",      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",      "publisher": {        "@type": "Organization",        "name": "엠파시(Empasy)",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.com/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.com/ko/blog/empasy-core-solution-architecture-syncverse.html">    <meta property="og:url" content="https://empasy.com/blog.html">    <meta property="og:image" content="https://empasy.com/empasy-logo.png">    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="canonical" href="https://empasy.com/ko/blog/empasy-core-solution-architecture-syncverse.html">    <link rel="alternate" hreflang="ko" href="https://empasy.com/empasy-core-solution-architecture-syncverse.html" />    <link rel="alternate" hreflang="en" href="https://empasy.com/en/empasy-core-solution-architecture-syncverse.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/empasy-core-solution-architecture-syncverse.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/empasy-core-solution-architecture-syncverse.html" />    <meta property="og:url" content="https://empasy.com/empasy-core-solution-architecture-syncverse.html">    <meta property="og:locale" content="ko_KR">    <script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "Article",  "headline": "엠파시 기술 블로그: AI 자율 운영 생태계(SyncVerse)를 지탱하는 핵심 솔루션 아키텍처 분석",  "description": "SyncEta, SyncCMS, SyncBoot, SyncVerse, SyncInsight 등 엠파시의 5대 핵심 솔루션의 기술적 페인포인트와 엔지니어링 해법을 깊이 있게 분석합니다.",  "author": {    "@type": "Organization",    "name": "Empasy Engineering Team",    "url": "https://empasy.com"  },  "publisher": {    "@type": "Organization",    "name": "Empasy",    "logo": {      "@type": "ImageObject",      "url": "https://empasy.com/assets/logo.png"    }  },  "url": "https://empasy.com/empasy-core-solution-architecture-syncverse.html"}    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <script type="module" crossorigin src="/assets/ko_blog_empasy-core-solution-architecture-syncverse-BwQenWwT.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/i18n-C83gtuKq.js">
   <link rel="stylesheet" crossorigin href="/assets/style-Bd_BCiIh.css">
@@ -316,6 +244,6 @@
     
             </div>
         </footer>
-    <!-- Scripts -->
+    <!-- Scripts -->
 </body>
 </html>

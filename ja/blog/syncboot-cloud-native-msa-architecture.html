@@ -1,85 +1,13 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description" content="syncboot cloud native msa architectureに関する技術的な詳細。">
-    <meta name="keywords" content="기술 블로그, AI 도입, AI 에이전트, AI Ops, MSA 전환, RPA 대체, 엔터프라이즈 AI, 엠파시, Empasy">
-    <meta name="author" content="Empasy">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "엠파시(Empasy) 기술 블로그",
-      "url": "https://empasy.com/blog.html",
-      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
-      "publisher": {
-        "@type": "Organization",
-        "name": "엠파시(Empasy)",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.com/empasy-logo.png"
-        }
-      }
-    }
-    </script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
-
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.com/ja/blog/syncboot-cloud-native-msa-architecture.html">
-    <meta property="og:title" content="Empasy技術ブログ: Syncboot Cloud Native Msa Architecture">
-    <meta property="og:description" content="syncboot cloud native msa architectureに関する技術的な詳細。">
+    <title>Empasy | Syncboot cloud native msa architecture</title>
+    <meta name="description" content="SyncBootはクラウドネイティブ環境に最適化されたMSA構築プラットフォームです。Spring Bootベースの柔軟なMSA移行を支援します。">
+    <meta name="keywords" content="エンタープライズAIエコシステム, 企業用AI統合プラットフォーム, DX AIアーキテクチャ, Empasy, マイクロサービスアーキテクチャ構築, Spring Boot MSAフレームワーク, クラウドネイティブ開発ソリューション, エンタープライズJava MSA移行">
+    <meta property="og:title" content="Empasy | Syncboot cloud native msa architecture">
+    <meta property="og:description" content="SyncBootはクラウドネイティブ環境に最適化されたMSA構築プラットフォームです。Spring Bootベースの柔軟なMSA移行を支援します。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://empasy.com/blog.html">
-    <meta property="og:image" content="https://empasy.com/empasy-logo.png">
-    
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <title>Empasy技術ブログ: Syncboot Cloud Native Msa Architecture</title>
-    <meta name="description" content="syncboot cloud native msa architectureに関する技術的な詳細。">
-    <link rel="canonical" href="https://empasy.com/ja/blog/syncboot-cloud-native-msa-architecture.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.com/syncboot-cloud-native-msa-architecture.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.com/en/syncboot-cloud-native-msa-architecture.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/syncboot-cloud-native-msa-architecture.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/syncboot-cloud-native-msa-architecture.html" />
-    <meta property="og:title" content="Empasy技術ブログ: Syncboot Cloud Native Msa Architecture">
-    <meta property="og:description" content="syncboot cloud native msa architectureに関する技術的な詳細。">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://empasy.com/syncboot-cloud-native-msa-architecture.html">
-    <meta property="og:locale" content="ko_KR">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "[Tech Blog] 클라우드 네이티브의 심장: 엔터프라이즈 MSA 전환을 가속하는 SyncBoot 분산 아키텍처 분석",
-  "description": "Seata, Sentinel, SkyWalking 등 100% 오픈소스를 통합하여 복잡한 마이크로서비스 인프라 환경을 단번에 구축하는 SyncBoot 아키텍처.",
-  "author": {
-    "@type": "Organization",
-    "name": "Empasy Engineering Team",
-    "url": "https://empasy.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Empasy",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://empasy.com/assets/logo.png"
-    }
-  },
-  "url": "https://empasy.com/syncboot-cloud-native-msa-architecture.html"
-}
-    </script>
-
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Blog",      "name": "엠파시(Empasy) 기술 블로그",      "url": "https://empasy.com/blog.html",      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",      "publisher": {        "@type": "Organization",        "name": "엠파시(Empasy)",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.com/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.com/ja/blog/syncboot-cloud-native-msa-architecture.html">    <meta property="og:url" content="https://empasy.com/blog.html">    <meta property="og:image" content="https://empasy.com/empasy-logo.png">    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="canonical" href="https://empasy.com/ja/blog/syncboot-cloud-native-msa-architecture.html">    <link rel="alternate" hreflang="ko" href="https://empasy.com/syncboot-cloud-native-msa-architecture.html" />    <link rel="alternate" hreflang="en" href="https://empasy.com/en/syncboot-cloud-native-msa-architecture.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/syncboot-cloud-native-msa-architecture.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/syncboot-cloud-native-msa-architecture.html" />    <meta property="og:url" content="https://empasy.com/syncboot-cloud-native-msa-architecture.html">    <meta property="og:locale" content="ko_KR">    <script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "Article",  "headline": "[Tech Blog] 클라우드 네이티브의 심장: 엔터프라이즈 MSA 전환을 가속하는 SyncBoot 분산 아키텍처 분석",  "description": "Seata, Sentinel, SkyWalking 등 100% 오픈소스를 통합하여 복잡한 마이크로서비스 인프라 환경을 단번에 구축하는 SyncBoot 아키텍처.",  "author": {    "@type": "Organization",    "name": "Empasy Engineering Team",    "url": "https://empasy.com"  },  "publisher": {    "@type": "Organization",    "name": "Empasy",    "logo": {      "@type": "ImageObject",      "url": "https://empasy.com/assets/logo.png"    }  },  "url": "https://empasy.com/syncboot-cloud-native-msa-architecture.html"}    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <script type="module" crossorigin src="/assets/ja_blog_syncboot-cloud-native-msa-architecture-BwQenWwT.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/i18n-C83gtuKq.js">
   <link rel="stylesheet" crossorigin href="/assets/style-Bd_BCiIh.css">
@@ -311,6 +239,6 @@
     
             </div>
         </footer>
-    <!-- Scripts -->
+    <!-- Scripts -->
 </body>
 </html>

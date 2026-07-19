@@ -1,85 +1,13 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description" content="엠파시(Empasy) 기술 블로그. 엔터프라이즈 AI 에이전트 도입 가이드, MSA 전환 사례, 웹 크롤링 등 다양한 AI Ops 최신 인사이트를 제공합니다.">
-    <meta name="keywords" content="기술 블로그, AI 도입, AI 에이전트, AI Ops, MSA 전환, RPA 대체, 엔터프라이즈 AI, 엠파시, Empasy">
-    <meta name="author" content="Empasy">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "엠파시(Empasy) 기술 블로그",
-      "url": "https://empasy.com/blog.html",
-      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
-      "publisher": {
-        "@type": "Organization",
-        "name": "엠파시(Empasy)",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.com/empasy-logo.png"
-        }
-      }
-    }
-    </script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
-
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.com/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html">
-    <meta property="og:title" content="기술 블로그 및 인사이트 | 엠파시(Empasy)">
-    <meta property="og:description" content="엠파시(Empasy) 기술 블로그. 엔터프라이즈 AI 에이전트 도입 가이드, MSA 전환 사례 등 인사이트를 확인하세요.">
+    <title>엠파시(Empasy) | Syncinsight on premise decision intelligence architecture</title>
+    <meta name="description" content="SyncInsight는 흩어진 서비스 데이터를 하나로 모아 분석하는 AI 기반 비즈니스 인텔리전스(BI) 플랫폼입니다. 엔터프라이즈 경영 의사결정을 위한 가시성을 확보하세요.">
+    <meta name="keywords" content="엔터프라이즈 AI 에코시스템, 기업용 AI 통합 플랫폼, 디지털 전환 AI 아키텍처, 엠파시, Empasy, 멀티 서비스 데이터 통합 분석 툴, 엔터프라이즈 데이터 가시성 솔루션, AI 기반 비즈니스 인텔리전스 BI 플랫폼, 경영 의사결정 데이터 인사이트 플랫폼">
+    <meta property="og:title" content="엠파시(Empasy) | Syncinsight on premise decision intelligence architecture">
+    <meta property="og:description" content="SyncInsight는 흩어진 서비스 데이터를 하나로 모아 분석하는 AI 기반 비즈니스 인텔리전스(BI) 플랫폼입니다. 엔터프라이즈 경영 의사결정을 위한 가시성을 확보하세요.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://empasy.com/blog.html">
-    <meta property="og:image" content="https://empasy.com/empasy-logo.png">
-    
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <title>[Tech Blog] 온프레미스 보안을 관통하는 최상위 의사결정 지능: SyncInsight의 멀티 에이전트 교차 분석 아키텍처 | Empasy Tech Blog</title>
-    <meta name="description" content="사내 폐쇄망 환경에서 Context-Aware RAG와 멀티 에이전트를 가동하여 데이터 주권을 지키며 경영 인사이트를 도출하는 SyncInsight.">
-    <link rel="canonical" href="https://empasy.com/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.com/syncinsight-on-premise-decision-intelligence-architecture.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.com/en/syncinsight-on-premise-decision-intelligence-architecture.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/syncinsight-on-premise-decision-intelligence-architecture.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/syncinsight-on-premise-decision-intelligence-architecture.html" />
-    <meta property="og:title" content="[Tech Blog] 온프레미스 보안을 관통하는 최상위 의사결정 지능: SyncInsight의 멀티 에이전트 교차 분석 아키텍처">
-    <meta property="og:description" content="사내 폐쇄망 환경에서 Context-Aware RAG와 멀티 에이전트를 가동하여 데이터 주권을 지키며 경영 인사이트를 도출하는 SyncInsight.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://empasy.com/syncinsight-on-premise-decision-intelligence-architecture.html">
-    <meta property="og:locale" content="ko_KR">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "[Tech Blog] 온프레미스 보안을 관통하는 최상위 의사결정 지능: SyncInsight의 멀티 에이전트 교차 분석 아키텍처",
-  "description": "사내 폐쇄망 환경에서 Context-Aware RAG와 멀티 에이전트를 가동하여 데이터 주권을 지키며 경영 인사이트를 도출하는 SyncInsight.",
-  "author": {
-    "@type": "Organization",
-    "name": "Empasy Engineering Team",
-    "url": "https://empasy.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Empasy",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://empasy.com/assets/logo.png"
-    }
-  },
-  "url": "https://empasy.com/syncinsight-on-premise-decision-intelligence-architecture.html"
-}
-    </script>
-
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Blog",      "name": "엠파시(Empasy) 기술 블로그",      "url": "https://empasy.com/blog.html",      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",      "publisher": {        "@type": "Organization",        "name": "엠파시(Empasy)",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.com/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.com/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html">    <meta property="og:url" content="https://empasy.com/blog.html">    <meta property="og:image" content="https://empasy.com/empasy-logo.png">    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="canonical" href="https://empasy.com/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html">    <link rel="alternate" hreflang="ko" href="https://empasy.com/syncinsight-on-premise-decision-intelligence-architecture.html" />    <link rel="alternate" hreflang="en" href="https://empasy.com/en/syncinsight-on-premise-decision-intelligence-architecture.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/syncinsight-on-premise-decision-intelligence-architecture.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/syncinsight-on-premise-decision-intelligence-architecture.html" />    <meta property="og:url" content="https://empasy.com/syncinsight-on-premise-decision-intelligence-architecture.html">    <meta property="og:locale" content="ko_KR">    <script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "Article",  "headline": "[Tech Blog] 온프레미스 보안을 관통하는 최상위 의사결정 지능: SyncInsight의 멀티 에이전트 교차 분석 아키텍처",  "description": "사내 폐쇄망 환경에서 Context-Aware RAG와 멀티 에이전트를 가동하여 데이터 주권을 지키며 경영 인사이트를 도출하는 SyncInsight.",  "author": {    "@type": "Organization",    "name": "Empasy Engineering Team",    "url": "https://empasy.com"  },  "publisher": {    "@type": "Organization",    "name": "Empasy",    "logo": {      "@type": "ImageObject",      "url": "https://empasy.com/assets/logo.png"    }  },  "url": "https://empasy.com/syncinsight-on-premise-decision-intelligence-architecture.html"}    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <script type="module" crossorigin src="/assets/ko_blog_syncinsight-on-premise-decision-intelligence-architecture-BwQenWwT.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/i18n-C83gtuKq.js">
   <link rel="stylesheet" crossorigin href="/assets/style-Bd_BCiIh.css">
@@ -293,6 +221,6 @@
     
             </div>
         </footer>
-    <!-- Scripts -->
+    <!-- Scripts -->
 </body>
 </html>
