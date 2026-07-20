@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Empasy | Syncinsight on premise decision intelligence architecture</title>
+    <meta name="description" content="SyncInsightは分散したデータを統合分析するAIベースのBIプラットフォームです。経営意思決定のためのデータ可視性を確保します。">
+    <meta name="keywords" content="エンタープライズAIエコシステム, 企業用AI統合プラットフォーム, DX AIアーキテクチャ, Empasy, マルチサービスデータ分析, エンタープライズデータ可視性, AIビジネスインテリジェンスBI, データインサイト">
+    <meta property="og:title" content="Empasy | Syncinsight on premise decision intelligence architecture">
+    <meta property="og:description" content="SyncInsightは分散したデータを統合分析するAIベースのBIプラットフォームです。経営意思決定のためのデータ可視性を確保します。">
+    <meta property="og:type" content="website">
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Blog",      "name": "엠파시(Empasy) 기술 블로그",      "url": "https://empasy.com/blog.html",      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",      "publisher": {        "@type": "Organization",        "name": "엠파시(Empasy)",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.com/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="../../assets/css/style.css">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.com/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html">    <meta property="og:url" content="https://empasy.com/blog.html">    <meta property="og:image" content="https://empasy.com/empasy-logo.png">    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="canonical" href="https://empasy.com/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html">    <link rel="alternate" hreflang="ko" href="https://empasy.com/syncinsight-on-premise-decision-intelligence-architecture.html" />    <link rel="alternate" hreflang="en" href="https://empasy.com/en/syncinsight-on-premise-decision-intelligence-architecture.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/syncinsight-on-premise-decision-intelligence-architecture.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/syncinsight-on-premise-decision-intelligence-architecture.html" />    <meta property="og:url" content="https://empasy.com/syncinsight-on-premise-decision-intelligence-architecture.html">    <meta property="og:locale" content="ko_KR">    <script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "Article",  "headline": "[Tech Blog] 온프레미스 보안을 관통하는 최상위 의사결정 지능: SyncInsight의 멀티 에이전트 교차 분석 아키텍처",  "description": "사내 폐쇄망 환경에서 Context-Aware RAG와 멀티 에이전트를 가동하여 데이터 주권을 지키며 경영 인사이트를 도출하는 SyncInsight.",  "author": {    "@type": "Organization",    "name": "Empasy Engineering Team",    "url": "https://empasy.com"  },  "publisher": {    "@type": "Organization",    "name": "Empasy",    "logo": {      "@type": "ImageObject",      "url": "https://empasy.com/assets/logo.png"    }  },  "url": "https://empasy.com/syncinsight-on-premise-decision-intelligence-architecture.html"}    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    {{> header_ja }}
+
+    <main class="container" style="padding-top: 150px; min-height: 80vh;">
+        <div class="page-header text-center fade-in-up mb-4">
+            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Insights</span>
+            <h1 class="page-title" style="font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 1rem; color: var(--text-primary);">Tech Blog</h1>
+            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">エンタープライズAI導入のための実践的なガイドと最新技術トレンドをご確認ください。</p>
+        </div>
+        
+        <section class="section" style="padding-top: 2rem;">
+            <div class="container">
+                ﻿<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
+    {{> header_ja }}
+    <div style="line-height: 1.8; color: var(--text-primary);">
+        <p>企業内部のERP、グループウェア、社内Wiki、そして市場動向データなどの高付加価値情報は、企業のコア資産です。しかし、これらのデータを分析して戦略を導き出すために、パブリッククラウドベースの大型LLMサービスを無差別に利用すると、機密の企業秘密や個人情報が外部に流出するという深刻なセキュリティ規制リスクに直面します。また、膨大なデータが部門別のシステムに徹底的に隔離(Silo)されているため、統合的な洞察を導き出すのが難しいという限界がありました。</p>
+        <p>Empasyの<strong>SyncInsight</strong>は、単なるITインフラの自動化段階を超えて、企業内部資産の完璧な知識化と最高経営陣(C-Level)の戦略的ビジネスアクションを主導する<strong>最上位のAI意思決定インテリジェンスプラットフォーム</strong>です。本記事では、社内セキュリティを完全に守りながら、断片化されたデータから強力なビジネスインサイトを導き出すSyncInsightのコア技術アーキテクチャを共有します。</p>
+
+        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. 100%社内網内在化ベースのハイブリッドオンプレミスアーキテクチャ</h2>
+        <p>SyncInsightは、データ流出リスクを根本から遮断するため、データリポジトリから大規模言語モデル(LLM)のサービングサーバー環境の全構成を、<strong>完全な社内プライベートネットワーク(Intranet)</strong>または専用の隔離ハイブリッドゾーン内にのみ構築します。</p>
+        <p>外部クラウドへの転送経路を物理的・論理的に完全に遮断することで、金融、公共、先端製造分野などの最も厳格な水準の個人情報保護法および国家セキュリティ規制要件を100%満たす強力なデータ主権(Data Sovereignty)を保証します。</p>
+
+        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. Context-Aware Advanced RAG 技術レイヤー</h2>
+        <p>単純なキーワードマッチング形式の埋め込み検索エンジンでは、複雑な企業文書の文脈を把握するのに限界があります。SyncInsightは、<strong>Spring AIおよびLangChain4jテクノロジースタックに基づくエンタープライズアーキテクチャ</strong>を精密に適用し、文書全体の深い文脈的意味を把握する<strong>Context-Aware RAGパイプライン</strong>を稼働させます。</p>
+        <p>社内Wiki、グループウェア、ERPデータはもちろん、<strong>SyncCrawl Agent</strong>が収集した外部のリアルタイム市場トレンド情報まで、異機種間で断片化された大規模な非構造化データをリアルタイムで交差埋め込み(Cross-Embedding)します。これにより、生成型AIの致命的な限界であるハルシネーション(Hallucination)現象が完全に制御された超高品質の知識データハブを恒久的に構築します。</p>
+
+        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. Multi-Agent Orchestration Loopを通じた戦略的自律分析</h2>
+        <p>SyncInsightの内部では、自ら役割を分担し協業するインテリジェントな仮想専任チームが稼働します。</p>
+        <div class="modern-pipeline">
+          <div class="pipeline-step">
+            <div class="pipeline-title">収集エージェント (Collector)</div>
+            <div class="pipeline-desc">異機種データの収集</div>
+          </div><div class="pipeline-arrow">➔</div>
+          <div class="pipeline-step">
+            <div class="pipeline-title">統計分析エージェント (Analyst)</div>
+            <div class="pipeline-desc">Pythonベースのビッグデータ分析</div>
+          </div><div class="pipeline-arrow">➔</div>
+          <div class="pipeline-step">
+            <div class="pipeline-title">レポート生成エージェント (Reporter)</div>
+            <div class="pipeline-desc">SWOTおよび戦略レポートの生成</div>
+          </div>
+        </div>
+        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
+            <li style="margin-bottom: 0.5rem;"><strong>Collector Agent:</strong> 内部システムの構造化データと外部市場指標をリアルタイムでクロールおよび収集します。</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Analyst Agent:</strong> 収集した生データ(Raw Data)に基づいてサンドボックス環境でPythonスクリプトを自律実行し、大容量の統計分析と傾向予測を実行します。</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Reporter Agent:</strong> 分析結果を精製し、最高意思決定権者がすぐに把握できる形式の視覚化チャートとSWOT戦略分析レポート文書を数分以内に自動作成します。</li>
+        </ul>
+
+        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">4. ビジネスアクションの提案とSyncVerseフィードバック連動 (Human-in-the-loop)</h2>
+        <p>SyncInsightは、単に静的なレポートを表示する段階にとどまらず、システムレイヤー間の有機的なフィードバックループを完成させます。</p>
+        <p>社内外のデータの交差分析中に危機の兆候や新規市場の機会が導き出された場合、経営陣に「特定のマーケティングプロモーションページの新設およびターゲット電子メールクロールパイプラインの稼働」といった具体的な戦略アクションを先に提案します。経営陣がシステム内でこれを承認(Human-in-the-loop 1-Click承認)すると即座に、最上位の頭脳であるSyncInsightは、下位の実行主体である<strong>SyncVerseの自律開発・デプロイベルトにコマンドプロトコルを直接送信</strong>し、システム画面に即座にリアルタイム反映させる完全な自動化意思決定シナジーを達成します。</p>
+
+        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+        <p>SyncInsightは、企業のセキュリティガイドラインを完全に遵守しながら、断片化されたビジネスデータをリアルタイムの経営資産に変換するAIソリューションの頂点です。データの収集と分析、そして実際のシステム適用まで空白なく繋がるEmpasy独自の自律運用インテリジェンスを通じて、企業のデジタルトランスフォーメーション(DX)をさらに高い段階へと導きます。</p>
+    </div>
+</article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    {{> footer_ja }}
+
+    <!-- Scripts -->
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Empasy | Synccms development oriented architecture</title>
+    <meta name="description" content="SyncCMS is a proven Java/Spring-based Enterprise CMS. Fully supports Headless CMS architectures and large-scale portal management.">
+    <meta name="keywords" content="Enterprise AI Ecosystem, Enterprise AI Integration Platform, DX AI Architecture, Empasy, Enterprise Web Content Management System, Headless CMS, Large-scale Portal Management, Java Spring CMS">
+    <meta property="og:title" content="Empasy | Synccms development oriented architecture">
+    <meta property="og:description" content="SyncCMS is a proven Java/Spring-based Enterprise CMS. Fully supports Headless CMS architectures and large-scale portal management.">
+    <meta property="og:type" content="website">
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Blog",      "name": "엠파시(Empasy) 기술 블로그",      "url": "https://empasy.com/blog.html",      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",      "publisher": {        "@type": "Organization",        "name": "엠파시(Empasy)",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.com/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="../../assets/css/style.css">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.com/en/blog/synccms-development-oriented-architecture.html">    <meta property="og:url" content="https://empasy.com/blog.html">    <meta property="og:image" content="https://empasy.com/empasy-logo.png">    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="canonical" href="https://empasy.com/en/blog/synccms-development-oriented-architecture.html">    <link rel="alternate" hreflang="ko" href="https://empasy.com/synccms-development-oriented-architecture.html" />    <link rel="alternate" hreflang="en" href="https://empasy.com/en/synccms-development-oriented-architecture.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/synccms-development-oriented-architecture.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/synccms-development-oriented-architecture.html" />    <meta property="og:url" content="https://empasy.com/synccms-development-oriented-architecture.html">    <meta property="og:locale" content="ko_KR">    <script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "Article",  "headline": "[Tech Blog] 벤더 종속성 극복과 유연한 비즈니스 확장을 위한 SyncCMS의 '개발 지향(Development-Oriented)' 아키텍처",  "description": "Spring Boot 기반 개방형 아키텍처와 FreeMarker 렌더링 엔진을 통해 엔터프라이즈의 무한한 확장을 지원하는 SyncCMS 심층 분석.",  "author": {    "@type": "Organization",    "name": "Empasy Engineering Team",    "url": "https://empasy.com"  },  "publisher": {    "@type": "Organization",    "name": "Empasy",    "logo": {      "@type": "ImageObject",      "url": "https://empasy.com/assets/logo.png"    }  },  "url": "https://empasy.com/synccms-development-oriented-architecture.html"}    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    {{> header_en }}
+
+    <main class="container" style="padding-top: 150px; min-height: 80vh;">
+        <div class="page-header text-center fade-in-up mb-4">
+            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Insights</span>
+            <h1 class="page-title" style="font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 1rem; color: var(--text-primary);">Tech Blog</h1>
+            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">Check out practical guides and the latest technology trends for enterprise AI adoption.</p>
+        </div>
+        
+        <section class="section" style="padding-top: 2rem;">
+            <div class="container">
+                ﻿<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
+    {{> header_en }}
+    <div style="line-height: 1.8; color: var(--text-primary);">
+        <p>Empasy's SyncCMS is a next-generation CMS platform that satisfies both developers' desire for technical openness and business personnel's need for easy publishing. In this article, we delve into the core technical architecture of SyncCMS.</p>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. Page Fragments and Block Assembly</h2>
+        <p>SyncCMS manages the entire web UI by modularizing it into granular <strong>Page Fragments</strong>. This is similar to React components but natively supports drag-and-drop on the server-side rendering layer.</p>
+        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. Headless Architecture Integration</h2>
+        <p>By exposing all contents through RESTful APIs and GraphQL, it allows frontend developers to freely use modern frameworks like Next.js, Nuxt.js, or SvelteKit without being tied to a specific view template.</p>
+    </div>
+</article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    {{> footer_en }}
+
+    <!-- Scripts -->
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

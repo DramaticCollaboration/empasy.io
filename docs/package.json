@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview",
+    "export-pdf": "press-export-pdf export .",
+    "prettier": "prettier . --write"
+  },
+  "dependencies": {
+    "medium-zoom": "^1.1.0",
+    "vue": "^3.5.22"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "vitepress": "2.0.0-alpha.18",
+    "gray-matter": "^4.0.3",
+    "cpy-cli": "^6.0.0",
+    "vitepress-export-pdf": "^1.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "puppeteer"
+    ]
+  }
+}

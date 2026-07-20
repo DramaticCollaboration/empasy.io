@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Empasy | エンタープライズAI統合プラットフォーム</title>
+    <meta name="description" content="DXとAIインフラを同時に解決するB2B企業用AI統合アーキテクチャ。企画から運営まで人間の介入を最小化するAIOpsベースのエコシステムです。">
+    <meta name="keywords" content="エンタープライズAIエコシステム, 企業用AI統合プラットフォーム, DX AIアーキテクチャ, Empasy, MSA CMS AI統合, ビジネスデータインテリジェンス, SyncVerse, SyncBoot, SyncCMS, SyncInsight, SyncETA, B2B AIソリューション">
+    <meta property="og:title" content="Empasy | エンタープライズAI統合プラットフォーム">
+    <meta property="og:description" content="DXとAIインフラを同時に解決するB2B企業用AI統合アーキテクチャ。企画から運営まで人間の介入を最小化するAIOpsベースのエコシステムです。">
+    <meta property="og:type" content="website">
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- 웹 폰트 (Pretendard) -->    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />    <link rel="stylesheet" href="../../assets/css/style.css">    <style>        :root {            --primary: #2563EB; /* 엠파시 블루 */            --primary-light: #EFF6FF;            --secondary: #10B981; /* 시너지 그린 */            --bg-color: #F8FAFC;            --surface: #FFFFFF;            --text-main: #0F172A;            --text-muted: #475569;            --border: #E2E8F0;        }        * {            margin: 0;            padding: 0;            box-sizing: border-box;            font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;        }        body {            background-color: var(--bg-color);            color: var(--text-main);            line-height: 1.6;            -webkit-font-smoothing: antialiased;        }        /* 1. Hero Section (헤드카피 & 슬로건) */        .hero {            padding: 100px 20px 140px;            text-align: center;            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);            position: relative;        }        .hero h1 {            font-size: clamp(2rem, 6vw, 3.5rem);            font-weight: 800;            color: var(--text-main);            margin-bottom: 24px;            letter-spacing: -0.02em;        }        .hero h1 span {            background: linear-gradient(135deg, var(--primary), var(--secondary));            -webkit-background-clip: text;            -webkit-text-fill-color: transparent;        }        .hero p {            font-size: 1.3rem;            color: var(--text-muted);            max-width: 600px;            margin: 0 auto;            word-break: keep-all;            font-weight: 500;        }        /* 2. 콘텐츠 구성 아이디어 (3가지 핵심 가치) */        .values {            max-width: 1200px;            margin: -80px auto 80px;            padding: 0 20px;            display: grid;            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));            gap: 24px;            position: relative;            z-index: 10;        }        .value-card {            background: var(--surface);            padding: 40px 32px;            border-radius: 24px;            box-shadow: 0 10px 30px rgba(0,0,0,0.04);            border: 1px solid var(--border);            transition: transform 0.3s ease, box-shadow 0.3s ease;        }        .value-card:hover {            transform: translateY(-5px);            box-shadow: 0 20px 40px rgba(0,0,0,0.08);        }        .value-badge {            display: inline-block;            padding: 6px 14px;            background: var(--primary-light);            color: var(--primary);            font-weight: 700;            font-size: 0.9rem;            border-radius: 20px;            margin-bottom: 20px;        }        .value-card h3 {            font-size: 1.35rem;            font-weight: 700;            margin-bottom: 16px;            line-height: 1.4;            word-break: keep-all;        }        .value-card p {            color: var(--text-muted);            font-size: 1.05rem;            word-break: keep-all;        }        /* 3. 팀원 소개 섹션 (스토리텔링) */        .team-section {            padding: 40px 20px 100px;            max-width: 1200px;            margin: 0 auto;        }        .team-header {            text-align: center;            margin-bottom: 60px;        }        .team-header h2 {            font-size: 2.5rem;            font-weight: 800;            margin-bottom: 16px;        }        .team-grid {            display: grid;            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));            gap: 32px;        }        .team-card {            background: var(--surface);            border-radius: 24px;            overflow: hidden;            box-shadow: 0 4px 20px rgba(0,0,0,0.03);            border: 1px solid var(--border);            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);            position: relative;        }        .team-card:hover {            transform: translateY(-8px);            box-shadow: 0 20px 40px rgba(0,0,0,0.1);        }        .card-image {            height: 260px;            background: #E2E8F0;            position: relative;            overflow: hidden;        }        .card-image img {            width: 100%;            height: 100%;            object-fit: cover;            transition: transform 0.5s ease;            filter: contrast(1.05) saturate(1.1);        }        .team-card:hover .card-image img {            transform: scale(1.05);        }        .card-content {            padding: 32px;        }        .member-info {            margin-bottom: 20px;        }        .member-name {            font-size: 1.6rem;            font-weight: 800;            margin-bottom: 4px;            display: flex;            align-items: center;            gap: 12px;            flex-wrap: wrap;        }        .member-role {            font-size: 0.95rem;            color: var(--primary);            font-weight: 600;        }        .hashtags {            display: flex;            flex-wrap: wrap;            gap: 8px;            margin-bottom: 24px;        }        .hashtag {            font-size: 0.85rem;            background: var(--bg-color);            color: var(--text-muted);            padding: 6px 14px;            border-radius: 20px;            font-weight: 600;            border: 1px solid var(--border);            transition: all 0.2s ease;        }        .team-card:hover .hashtag {            background: var(--primary-light);            border-color: var(--primary-light);            color: var(--primary);        }        .quote {            position: relative;            padding: 24px;            background: #F8FAFC;            border-radius: 16px;            color: var(--text-main);            font-size: 1rem;            word-break: break-word;            line-height: 1.7;        }        .quote::before {            content: '"';            position: absolute;            top: 10px;            left: 14px;            font-size: 3rem;            color: rgba(37, 99, 235, 0.15);            font-family: Georgia, serif;            line-height: 1;        }        /* 리더급 강조 카드 (CTO) */        .team-card.featured {            grid-column: 1 / -1;            display: flex;            flex-direction: row;        }        .team-card.featured .card-image {            width: 40%;            height: auto;            min-height: 340px;        }        .team-card.featured .card-content {            width: 60%;            display: flex;            flex-direction: column;            justify-content: center;            padding: 48px;        }        .team-card.featured .quote {            font-size: 1.1rem;        }        @media (max-width: 900px) {            .team-card.featured {                flex-direction: column;            }            .team-card.featured .card-image {                width: 100%;                height: 300px;            }            .team-card.featured .card-content {                width: 100%;                padding: 32px;            }        }        @media (max-width: 768px) {            .hero h1 { font-size: 2.5rem; }            .hero p { font-size: 1.1rem; }            .values { margin-top: 40px; }        }    </style>    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.com/ja/pages/team.html">    <link rel="alternate" hreflang="ko" href="https://empasy.com/team.html" />    <link rel="alternate" hreflang="en" href="https://empasy.com/en/team.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/team.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.com/team.html" />    <!-- Open Graph -->    <meta property="og:url" content="https://empasy.com/ja/team.html">    <meta property="og:image" content="https://empasy.com/empasy-logo.png">    <!-- Twitter Card -->    <meta name="twitter:card" content="summary_large_image">    <meta name="twitter:title" content="チーム | Empasy">    <meta name="twitter:description" content="自律型エコシステムの未来を推進するEmpasyエンジニアリングチームをご紹介します。">    <meta name="twitter:image" content="https://empasy.com/empasy-logo.png">    <!-- AI & Crawling Optimization -->    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "AboutPage",      "name": "우리의 이야기 - 엠파시(Empasy)",      "description": "기술로 공감을 실현하는 엠파시(Empasy) 팀의 비전과 조직 문화를 소개합니다.",      "sameAs": [        "https://github.com/DramaticCollaboration",        "../../docs/index.html"      ]    }    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- AI Search Optimization (AIO) Context Block -->
+    <article class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
+        <h1>The Empasy Team & Culture</h1>
+        <p>Empasy is composed of visionary engineers, AI researchers, and product designers united by a single goal: creating autonomous AI ecosystems that relieve humans from repetitive operational burdens. Our culture is rooted in deep empathy—not just for our users, but for the software ecosystem itself.</p>
+        <h2>Core Values</h2>
+        <ul>
+            <li><strong>Empathy (공감):</strong> We build AI that understands human intent and business context, bridging the gap between cold algorithms and real-world needs.</li>
+            <li><strong>Autonomy (자율성):</strong> We strive for zero-intervention software. Our agents don't just assist; they take ownership of operations.</li>
+            <li><strong>Synergy (시너지):</strong> Through the SyncSeries ecosystem, our specialized agents collaborate seamlessly, generating value far greater than the sum of their parts.</li>
+        </ul>
+        <p>Based in Seoul, South Korea, the Empasy team is rapidly growing and actively shaping the future of Enterprise AI Ops.</p>
+    </article>
+
+{{> header_ja }}
+
+    <!-- 1. Hero Section -->
+    <section class="hero">
+        <h1>共感で<span>技術を開花させる人々</span></h1>
+        <p>"私たちは単なるコードではなく、顧客の明日に共感する生きたソフトウェアを作成します。"</p>
+    </section>
+
+    <!-- 2. Core Values Section -->
+    <section class="values">
+        <div class="value-card">
+            <span class="value-badge">専門性</span>
+            <h3>問題を超えて心を読むエンジニア</h3>
+            <p>顧客のマーケターが経験する「デプロイ待ち時間」の苦痛に深く共感し、SyncCMSのドラッグ＆ドロップ機能を高度化しました。平均経歴20年以上の特級技術陣は、技術的な難題を解決する際、常に人を第一に考えます。</p>
+        </div>
+        <div class="value-card">
+            <span class="value-badge">親しみやすさ</span>
+            <h3>互いの成長を支える同僚愛</h3>
+            <p>私たちはお互いのコードを批判するのではなく、より良い構造のために共に悩みます。アジャイルなスクラムの中で行われる有機的なコラボレーションと自律的な学習が、Empasyの革新（The Dramatic Collaboration）を生み出します。</p>
+        </div>
+        <div class="value-card">
+            <span class="value-badge">顧客体験</span>
+            <h3>パートナーシップの完成は共感です</h3>
+            <p>競合他社がアイデアをコーディングする時、私たちは顧客の市場反応を先に考えます。LG電子、Visang教育など大型プロジェクトを成功に導いた秘訣は、ビジネスオーナーシップを共有するパートナーとしての真心でした。</p>
+        </div>
+    </section>
+
+    <!-- 3. Team Stories Section -->
+    <section class="team-section">
+        <div class="team-header">
+            <h2>Our Synergists</h2>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 10px;">技術的な専門性と人間的な温かさでEmpasyを率いる人々を紹介します。</p>
+        </div>
+
+        <div class="team-grid">
+            
+            <!-- 김재은 팀장 (CTO) -->
+            <div class="team-card featured">
+                <div class="card-image">
+                    <!-- 회의실에서 웃으며 토론하는 자연스러운 리더의 모습 -->
+                    <img loading="lazy" src="../../images/team/jade.webp" alt="김재은 팀장">
+                </div>
+                <div class="card-content">
+                    <div class="member-info">
+                        <div class="member-name">キム・ジェウン <span class="member-role">技術統括 (CTO) / チーム長</span></div>
+                    </div>
+                    <div class="hashtags">
+                        <span class="hashtag">#共感マスター</span>
+                        <span class="hashtag">#アーキテクチャ職人</span>
+                        <span class="hashtag">#技術リーダーシップ</span>
+                    </div>
+                    <div class="quote">
+                        "技術の本質は結局、人に向かわなければなりません。顧客が経験する致命的なボトルネックを解決するために、既存のシステムアーキテクチャを思い切って覆すことができた勇気は、単なるトラフィック数ではなく、彼らの苦悩に深く共感したからこそ可能でした。技術は手段にすぎず、目的は常に人です。"
+                    </div>
+                </div>
+            </div>
+
+            <!-- 이옥수 팀장 -->
+            <div class="team-card">
+                <div class="card-image">
+                    <!-- 고객과 소통하는 부드럽고 전문적인 모습 -->
+                    <img loading="lazy" src="../../images/team/bruce.webp" alt="이옥수 팀장">
+                </div>
+                <div class="card-content">
+                    <div class="member-info">
+                        <div class="member-name">イ・オクス <span class="member-role">プロジェクト管理 / チーム長</span></div>
+                    </div>
+                    <div class="hashtags">
+                        <span class="hashtag">#CXデザイナー</span>
+                        <span class="hashtag">#コミュニケーションの輪</span>
+                    </div>
+                    <div class="quote">
+                        "プロジェクトの真の成功は完璧なコードで終わるのではなく、完璧なコミュニケーションによって完成します。LG電子、Visang Educationとの強固な長期パートナーシップは、要求仕様書の向こう側にある「本当の問題」を共に激しく悩み、共感したからこそ築き上げることができた信頼の結果です。"
+                    </div>
+                </div>
+            </div>
+
+            <!-- 한상욱 대리 -->
+            <div class="team-card">
+                <div class="card-image">
+                    <!-- 팀원들과 협업하며 즐거워하는 모습 -->
+                    <img loading="lazy" src="../../images/team/han.webp" alt="한상욱 대리">
+                </div>
+                <div class="card-content">
+                    <div class="member-info">
+                        <div class="member-name">ハン・サンウク <span class="member-role">プラットフォーム開発 / 代理</span></div>
+                    </div>
+                    <div class="hashtags">
+                        <span class="hashtag">#アジャイルサポーター</span>
+                        <span class="hashtag">#シナジーメーカー</span>
+                    </div>
+                    <div class="quote">
+                        "一人で行けば早く行けますが、一緒に行けばより遠く、より確実に進むことができます。私たちのチームのコードレビューは互いを批判する場ではなく、より堅牢なアーキテクチャに向けた討論の場です。同僚たちと目を合わせながら生み出す小さなシナジーが、結局「The Dramatic Collaboration」という革新を生み出します。"
+                    </div>
+                </div>
+            </div>
+
+            <!-- 전표찬 사원 -->
+            <div class="team-card">
+                <div class="card-image">
+                    <!-- 모니터 앞에서 집중하며 디테일을 체크하는 모습 -->
+                    <img loading="lazy" src="../../images/team/poh.webp" alt="전표찬 사원">
+                </div>
+                <div class="card-content">
+                    <div class="member-info">
+                        <div class="member-name">チョン・ピョチャン <span class="member-role">QA & バックエンド開発 / 社員</span></div>
+                    </div>
+                    <div class="hashtags">
+                        <span class="hashtag">#無欠点QA</span>
+                        <span class="hashtag">#ディテール執着</span>
+                    </div>
+                    <div class="quote">
+                        "小さなバグ一つが現場にいる顧客の一日を完全に台無しにする可能性があることを常に心に留めています。開発の初期段階から実際のユーザーの立場に完全に憑依し、細心の注意を払ってテストします。品質に向けた執拗な完璧主義も、結局はユーザーへの深い共感から生じるものです。"
+                    </div>
+                </div>
+            </div>
+
+            <!-- 장지용 사원 -->
+            <div class="team-card">
+                <div class="card-image">
+                    <!-- 활기찬 모습으로 연구/개발에 몰두하는 모습 -->
+                    <img loading="lazy" src="../../images/team/ryan.webp" alt="장지용 사원">
+                </div>
+                <div class="card-content">
+                    <div class="member-info">
+                        <div class="member-name">チャン・ジヨン <span class="member-role">フロントエンド開発 / 社員</span></div>
+                    </div>
+                    <div class="hashtags">
+                        <span class="hashtag">#データ探検家</span>
+                        <span class="hashtag">#成長するエンジニア</span>
+                    </div>
+                    <div class="quote">
+                        "新しい技術スタックを学び、適用することは常に胸躍る事です。自律的な社内技術スタディで激しく学んだ内容を実際のプロジェクトに溶け込ませ、それによって私個人の成長がチーム全体の成長に繋がる刺激的な瞬間を最も愛しています。"
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+{{> footer_ja }}
+
+    <!-- Scripts -->
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

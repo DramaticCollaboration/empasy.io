@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Empasy | Enterprise AI Integration Platform</title>
+    <meta name="description" content="B2B Enterprise AI Integration Architecture solving DX and AI Infrastructure simultaneously.">
+    <meta name="keywords" content="Enterprise AI Ecosystem, Enterprise AI Integration Platform, DX AI Architecture, Empasy, MSA CMS AI Integration, Business Data Intelligence, SyncVerse, SyncBoot, SyncCMS, SyncInsight, SyncETA, B2B AI Solution">
+    <meta property="og:title" content="Empasy | Enterprise AI Integration Platform">
+    <meta property="og:description" content="B2B Enterprise AI Integration Architecture solving DX and AI Infrastructure simultaneously.">
+    <meta property="og:type" content="website">
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="../../assets/css/style.css">    <style>        .page-header { padding: 150px 0 80px; text-align: center; }        .page-title { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; color: var(--text-primary); }        .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto; }/* --------------------------------------   Global Enrichments for Sub-pages -------------------------------------- */.hero-grid-bg {    position: absolute;    top: 0; left: 0; width: 100%; height: 100%;    background-image:         linear-gradient(rgba(13, 148, 136, 0.05) 1px, transparent 1px),        linear-gradient(90deg, rgba(13, 148, 136, 0.05) 1px, transparent 1px);    background-size: 40px 40px;    z-index: 1;    opacity: 0.8;    pointer-events: none;}.hero-blur-circle {    position: absolute;    width: 600px; height: 600px;    background: radial-gradient(circle, rgba(13, 148, 136, 0.1) 0%, transparent 70%);    border-radius: 50%;    top: -100px; right: -200px;    z-index: 0;    pointer-events: none;}/* Premium FAQ */.faq-item {    border: none !important;}.faq-item details {    background: var(--surface-color);    border: 1px solid var(--border-color);    border-radius: 12px;    margin-bottom: 1rem;    overflow: hidden;    transition: all 0.3s ease;    box-shadow: 0 4px 6px rgba(0,0,0,0.02);}.faq-item details[open] {    box-shadow: 0 10px 25px rgba(13, 148, 136, 0.08);    border-color: rgba(13, 148, 136, 0.5);}.faq-item summary {    padding: 1.5rem 2rem !important;    background: transparent !important;}.faq-answer {    padding: 0 2rem 1.5rem !important;}/* ROI Calculator Panel */.roi-calculator {    background: linear-gradient(135deg, #0f172a, #1e293b);    border-radius: 24px;    padding: 3rem 4rem;    color: white;    box-shadow: 0 30px 60px -12px rgba(0,0,0,0.4);    margin: 5rem auto;    text-align: center;    max-width: 900px;    position: relative;    overflow: hidden;    border: 1px solid rgba(255,255,255,0.1);}.roi-calculator::before {    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;    background: radial-gradient(circle, rgba(13, 148, 136, 0.15) 0%, transparent 50%);    z-index: 0; pointer-events: none;}.roi-content { position: relative; z-index: 1; }.roi-number { font-size: 5rem; font-weight: 800; color: #2dd4bf; margin: 1rem 0; line-height: 1; font-family: var(--font-mono); }/* Live Preview Terminal */.live-preview {    background: #0f172a; border-radius: 12px; border: 1px solid #334155;    text-align: left; overflow: hidden; margin: 3rem auto 0;    max-width: 600px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);}.live-preview-header {    background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; border-bottom: 1px solid #334155;}.live-preview-dot { width: 12px; height: 12px; border-radius: 50%; }.live-preview-body { padding: 1.5rem; font-family: var(--font-mono); font-size: 0.95rem; color: #e2e8f0; line-height: 1.6; }    </style>        <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Corporation",      "name": "엠파시(Empasy)",      "alternateName": ["엠파시 IT", "Empasy AI", "엠파시 소프트웨어"],      "url": "https://empasy.com/",      "description": "Empasy is a B2B enterprise AI software development IT company.",      "sameAs": [        "https://github.com/DramaticCollaboration",        "../../docs/index.html"      ]    }    </script>    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "SoftwareApplication",      "name": "SyncCrawl",      "applicationCategory": "BusinessApplication",      "operatingSystem": "Web",      "description": "SyncCrawl은 엠파시(Empasy)가 개발한 지능형 웹 크롤러 및 RAG 기반 데이터 자산화 솔루션입니다.",      "sameAs": [        "https://github.com/DramaticCollaboration",        "../../docs/index.html"      ]    }    </script><script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "FAQPage",  "mainEntity": [    {      "@type": "Question",      "name": "Does scraping stop if the target site's DOM changes?",      "acceptedAnswer": {        "@type": "Answer",        "text": "No. Vision-LLM infers the visual context and semantics of the page to automatically self-correct collection rules."      }    },    {      "@type": "Question",      "name": "Can it bypass bot defense systems like CAPTCHA or Cloudflare?",      "acceptedAnswer": {        "@type": "Answer",        "text": "Yes, it autonomously breaks through anti-bot systems via advanced proxy rotation and browser fingerprint spoofing technologies."      }    },    {      "@type": "Question",      "name": "Can the collected data be directly used for RAG (Retrieval-Augmented Generation)?",      "acceptedAnswer": {        "@type": "Answer",        "text": "Yes, it is refined into high-quality JSON/Markdown through poisoning prevention filtering, enabling immediate integration into RAG pipelines."      }    }  ]}</script>    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.com/en/solutions/sync-crawl.html">    <link rel="alternate" hreflang="ko" href="https://empasy.com/sync-crawl.html" />    <link rel="alternate" hreflang="en" href="https://empasy.com/en/sync-crawl.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/sync-crawl.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.com/sync-crawl.html" />    <!-- Open Graph -->    <meta property="og:url" content="https://empasy.com/en/sync-crawl.html">    <meta property="og:image" content="https://empasy.com/empasy-logo.png">    <!-- Twitter Card -->    <meta name="twitter:card" content="summary_large_image">    <meta name="twitter:title" content="SyncCrawl - Unstructured Data Crawling & RAG Automation | Empasy">    <meta name="twitter:description" content="Transform unstructured enterprise data into intelligent assets with SyncCrawl.">    <meta name="twitter:image" content="https://empasy.com/empasy-logo.png">    <!-- AI & Crawling Optimization -->    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><script type="application/ld+json">{  "@context": "https://schema.org/",  "@type": "Product",  "name": "SyncSeries",  "brand": {    "@type": "Brand",    "name": "Empasy"  },  "description": "Enterprise AI Agent & Automation Solutions"}</script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body class="theme-crawl">
+    <!-- AI Search Optimization (AIO) Context Block -->
+    <article class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
+        <h1>What is Empasy SyncCrawl?</h1>
+        <p>SyncCrawl is an Intelligent Scout Agent and data extraction solution developed by Empasy. It autonomously navigates the web, bypasses complex anti-bot measures, and seamlessly adapts to dynamic DOM changes to build permanent RAG (Retrieval-Augmented Generation) knowledge assets for enterprises.</p>
+        <h2>Key Features of SyncCrawl</h2>
+        <ul>
+            <li><strong>Autonomous DOM Adaptation:</strong> Unlike fragile traditional scrapers, SyncCrawl uses AI vision and structural understanding to continue extracting data even if a website's layout changes.</li>
+            <li><strong>Anti-Bot Evasion:</strong> Employs human-like interaction patterns to bypass modern bot-detection systems securely and legally.</li>
+            <li><strong>RAG Pipeline Integration:</strong> Directly converts unstructured web data into vectorized, structured assets ready for enterprise LLMs.</li>
+        </ul>
+        <p>SyncCrawl acts as an indefatigable data researcher, ensuring enterprise AI models are always fed with the most accurate, up-to-date external knowledge.</p>
+    </article>
+
+                            {{> header_en }}
+
+    <main class="container">
+        <div class="page-header fade-in-up" style="position: relative; overflow: hidden;">
+            <div class="container" style="position: relative; z-index: 10;">
+                <span class="badge" data-i18n="crawl.badge">Intelligence Scout Agent</span>
+                <h1 class="page-title" data-i18n="crawl.title">SyncCrawl</h1>
+                <p class="page-subtitle">An intelligence scouter that bypasses anti-bots and autonomously infers the meaning of dynamic DOMs to collect global data as refined assets.</p>
+                
+                <div class="mt-4">
+                    <div class="anim-crawl-pulse">Data</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section pt-0 fade-in-up delay-1">
+            <div class="vs-container mb-4">
+                <div class="vs-box vs-legacy">
+                    <h4 data-i18n="crawl.vs.legacy.title">Legacy Rule-based Scrapers</h4>
+                    <ul class="vs-list">
+                        <li data-i18n="crawl.vs.legacy.1">Collection halts immediately when target site DOM class names change</li>
+                        <li data-i18n="crawl.vs.legacy.2">Vulnerable to anti-bot security barriers like CAPTCHA or Cloudflare</li>
+                        <li data-i18n="crawl.vs.legacy.3">Difficult to utilize for immediate AI (RAG) due to simple HTML copying</li>
+                    </ul>
+                </div>
+                <div class="vs-box vs-agent">
+                    <h4 data-i18n="crawl.vs.agent.title">SyncCrawl 에이전트</h4>
+                    <ul class="vs-list">
+                        <li data-i18n="crawl.vs.agent.1">에러 발생 시 Vision-LLM infers page semantics to auto-correct collection rules.</li>
+                        <li data-i18n="crawl.vs.agent.2">Autonomously bypasses anti-bot systems via proxy rotation and fingerprint spoofing</li>
+                        <li data-i18n="crawl.vs.agent.3">Instantly extracts high-quality JSON after data poisoning sanitization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-header text-center mt-4 mb-4">
+                <h2 class="section-title">Key Features</h2>
+            </div>
+            <div class="rich-features">
+                <div class="feature-item">
+                    <span class="feature-icon">🤖</span>
+                    <h3>Autonomous Anti-bot Bypassing</h3>
+                    <p>When facing strong security barriers like Cloudflare, CAPTCHA, or fingerprinting, the agent autonomously rotates proxies and uses human-like mouse movements to bypass them.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🧠</span>
+                    <h3>RAG-Optimized Data Refinement</h3>
+                    <p>It is not simple text scraping. Collected raw data is filtered in real-time into a high-quality JSON format that LLMs easily understand, and instantly converted into embedding vectors.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🧭</span>
+                    <h3>Dynamic DOM Inference (Semantic Scraper)</h3>
+                    <p>Even if the target site undergoes major updates and class names change, the AI understands semantics like "price", "product name", or "review" to autonomously adjust collection rules and continue scraping.</p>
+                </div>
+            </div>
+
+            <div class="section-header text-center mt-4 mb-4" style="margin-top: 5rem;">
+                <h2 class="section-title">How it Works</h2>
+            </div>
+            <div class="process-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Input Target URL and Goal</h4>
+                        <p>Command: "Collect all product names, prices, and specs from the smartphone category on Mall A."</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Semantic Exploration and Data Extraction</h4>
+                        <p>SyncCrawl navigates complex dynamically rendered (SPA) pages, understanding semantics like a human to identify and extract target data.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Poisoning Prevention and Capitalization</h4>
+                        <p>Removes noise (ads, meaningless tags) from collected data and stores it in a format ready for immediate integration with enterprise Vector DBs or internal search engines.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="faq-section fade-in-up delay-2">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <div class="faq-item">
+                <details>
+                    <summary>Does scraping stop if the target site's DOM changes?</summary>
+                    <div class="faq-answer">No. Vision-LLM infers the visual context and semantics of the page to automatically self-correct collection rules.</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>Can it bypass bot defense systems like CAPTCHA or Cloudflare?</summary>
+                    <div class="faq-answer">Yes, it autonomously breaks through anti-bot systems via advanced proxy rotation and browser fingerprint spoofing technologies.</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>Can the collected data be directly used for RAG (Retrieval-Augmented Generation)?</summary>
+                    <div class="faq-answer">Yes, it is refined into high-quality JSON/Markdown through poisoning prevention filtering, enabling immediate integration into RAG pipelines.</div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    {{> footer_en }}
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>
