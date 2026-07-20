@@ -8,12 +8,12 @@
     <meta name="generator" content="VitePress v2.0.0-alpha.18">
     <link rel="preload stylesheet" href="/docs/assets/style.B54n-KfB.css" as="style">
     <link rel="preload stylesheet" href="/docs/vp-icons.css" as="style">
-    <script type="module" src="/docs/assets/chunks/metadata.4984c422.js"></script>
-    <script type="module" src="/docs/assets/app.S8SCI_cG.js"></script>
+    <script type="module" src="/docs/assets/chunks/metadata.c40452dd.js"></script>
+    <script type="module" src="/docs/assets/app.BQA-BS02.js"></script>
     <link rel="preload" href="/docs/assets/inter-roman-latin.Cy4MYw_J.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="modulepreload" href="/docs/assets/chunks/theme.Cx5g01sx.js">
+    <link rel="modulepreload" href="/docs/assets/chunks/theme.BU4NevWZ.js">
     <link rel="modulepreload" href="/docs/assets/chunks/framework.DWKxYYJ1.js">
-    <link rel="modulepreload" href="/docs/assets/study_qwen2vlfinetuning.md.gy69e_qa.lean.js">
+    <link rel="modulepreload" href="/docs/assets/study_qwen2vlfinetuning.md.BJfRdvWx.lean.js">
     <link rel="icon" href="/images/favicon.ico">
     <meta name="author" content="엠파시">
     <meta name="keywords" content="공부기록, 학습일기, 지식저장소, 공부로그, 학습관리, 공부노트, 지식정리, 공부방법, 학습저장, 기억보조">
@@ -36,7 +36,7 @@
     <script id="check-mac-os">document.documentElement.classList.toggle(`mac`,/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
     <meta property="og:title" content="📚 두뇌 저장소 - 재미있는 공부 기록 놀이터">
     <meta property="og:description" content="까먹지 말고 재밌게 저장하자! 🎯 공부한 내용을 자유롭게 기록하는 즐거운 지식 저장소">
-    <meta property="og:image" content="https://doc.empasy.com/images/favicon.png">
+    <meta property="og:image" content="https://empasy.io/docs/images/favicon.png">
     <meta property="og:url" content="https://doc.empasy.com/study/">
   </head>
   <body>
@@ -372,7 +372,7 @@
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span></code></pre></div><h2 id="🛠️-문제-해결" tabindex="-1">🛠️ 문제 해결 <a class="header-anchor" href="#🛠️-문제-해결" aria-label="Permalink to “🛠️ 문제 해결”">​</a></h2><h3 id="common-issues" tabindex="-1"><strong>Common Issues:</strong> <a class="header-anchor" href="#common-issues" aria-label="Permalink to “Common Issues:”">​</a></h3><ol><li><strong>CUDA Out of Memory</strong>: 배치 사이즈 줄이기, 그래디언트 accumulation 사용</li><li><strong>NaN Loss</strong>: 학습률 낮추기, gradient clipping 적용</li><li><strong>Slow Training</strong>: mixed precision 사용, 데이터 로딩 최적화</li></ol><div class="language-python"><button title="Copy code" class="copy"></button><span class="lang">python</span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span style="--shiki-light:#62687b;--shiki-dark:#818e99;"># 그래디언트 클리핑</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">training_args </span><span style="--shiki-light:#c62739;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> TrainingArguments(</span></span>
 <span class="line"><span style="--shiki-light:#c13617;--shiki-dark:#FFAB70;">    max_grad_norm</span><span style="--shiki-light:#c62739;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1.0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,  </span><span style="--shiki-light:#62687b;--shiki-dark:#818e99;"># 그래디언트 클리핑</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span></code></pre></div></div></div></main><footer class="VPDocFooter" data-v-3ab2a2a8 data-v-064b7099><!--[--><!--]--><div class="edit-info" data-v-064b7099><!----><div class="last-updated" data-v-064b7099><p class="VPLastUpdated" data-v-064b7099 data-v-58e644c3>Last updated: <time datetime="2026-07-20T12:28:22.000Z" data-v-58e644c3></time></p></div></div><nav class="prev-next" aria-labelledby="doc-footer-aria-label" data-v-064b7099><span class="visually-hidden" id="doc-footer-aria-label" data-v-064b7099>Pager</span><div class="pager" data-v-064b7099><a class="VPLink link pager-link prev" href="/docs/study/rag" data-v-064b7099><!--[--><span class="desc" data-v-064b7099>Previous page</span><span class="title" data-v-064b7099>RAG</span><!--]--></a></div><div class="pager" data-v-064b7099><a class="VPLink link pager-link next" href="/docs/study/LLM%20%ED%8C%8C%EC%9D%B8%ED%8A%9C%EB%8B%9D%20%ED%9B%84%20%EC%84%B1%EB%8A%A5%20%EC%A0%80%ED%95%98%20%EC%9B%90%EC%9D%B8%20%EB%B0%8F%20%ED%95%B4%EA%B2%B0%EC%B1%85%20%EB%B6%84%EC%84%9D" data-v-064b7099><!--[--><span class="desc" data-v-064b7099>Next page</span><span class="title" data-v-064b7099>LLM 파인튜닝 후 성능 저하 원인 및 해결책 분석</span><!--]--></a></div></nav></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><!----><!--[--><!--]--></div></div>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span></code></pre></div></div></div></main><footer class="VPDocFooter" data-v-3ab2a2a8 data-v-064b7099><!--[--><!--]--><div class="edit-info" data-v-064b7099><!----><div class="last-updated" data-v-064b7099><p class="VPLastUpdated" data-v-064b7099 data-v-58e644c3>Last updated: <time datetime="2026-07-20T23:09:01.000Z" data-v-58e644c3></time></p></div></div><nav class="prev-next" aria-labelledby="doc-footer-aria-label" data-v-064b7099><span class="visually-hidden" id="doc-footer-aria-label" data-v-064b7099>Pager</span><div class="pager" data-v-064b7099><a class="VPLink link pager-link prev" href="/docs/study/rag" data-v-064b7099><!--[--><span class="desc" data-v-064b7099>Previous page</span><span class="title" data-v-064b7099>RAG</span><!--]--></a></div><div class="pager" data-v-064b7099><a class="VPLink link pager-link next" href="/docs/study/LLM%20%ED%8C%8C%EC%9D%B8%ED%8A%9C%EB%8B%9D%20%ED%9B%84%20%EC%84%B1%EB%8A%A5%20%EC%A0%80%ED%95%98%20%EC%9B%90%EC%9D%B8%20%EB%B0%8F%20%ED%95%B4%EA%B2%B0%EC%B1%85%20%EB%B6%84%EC%84%9D" data-v-064b7099><!--[--><span class="desc" data-v-064b7099>Next page</span><span class="title" data-v-064b7099>LLM 파인튜닝 후 성능 저하 원인 및 해결책 분석</span><!--]--></a></div></nav></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><!----><!--[--><!--]--></div></div>
     
     
   </body>
