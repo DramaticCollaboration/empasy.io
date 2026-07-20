@@ -7,46 +7,17 @@ hero:
     text: "Boon to business by agility."
     tagline: "「変化に最適化されたソリューション」、Sync Seriesでビジネスの俊敏性(Agility)を極大化します。"
     actions:
-      - text: SyncEta
-        link: /synceta/
+      - text: はじめる
+        link: /syncverse/
         type: primary
-
-      - text: SyncCrawl
-        link: /synccrawl/
-        type: primary
-
-      - text: SyncCms
-        link: /synccms/
-        type: primary
-    
-      - text: SyncBoot
-        link: /syncboot/
-        type: primary
-    
-      - text: SyncAdmin
-        link: /syncadmin/
-        type: primary
-    
-      - text: SyncApim
-        link: /syncapim/
-        type: primary
-    
-      - text: スクラムバン
-        link: /agile/
-        type: primary
-    
-      - text: 学習室
-        link: /study/
-        type: primary
-    
-      - text: 作業ログ
-        link: /logs/
-        type: primary
+      - text: すべての製品を見る
+        link: '#sync-series-製品群'
+        type: secondary
 
 head:
   - - meta
     - name: keywords
-      content: テスト自動化, エンパシー, Empasy, Sync Series, SyncBoot, SyncAdmin, SyncCMS, SyncEta, マイクロサービスアーキテクチャ, MSA, ソフトウェア開発, ソリューション, デジタルトランスフォーメーション, ビジネスの俊敏性, 開発プラットフォーム, バックエンド, フロントエンド, コンテンツ管理システム, CMS, AIテスト, 自動化テスト, QA, 品質保証, CI/CD, DevOps, ウェブサイト構築, システム統合, SI, ITO, カスタムソリューション, Java, Vue.js, Vue 3, Vite, TypeScript, Freemarker, Selenium
+      content: テスト自動化, エンパシー, Empasy, Sync Series, SyncVerse, SyncInsight, AIオーケストレーション, マルチエージェント, AIモニタリング, SyncBoot, SyncAdmin, SyncCMS, SyncEta, マイクロサービスアーキテクチャ, MSA, ソフトウェア開発, ソリューション, デジタルトランスフォーメーション, ビジネスの俊敏性, 開発プラットフォーム, バックエンド, フロントエンド, コンテンツ管理システム, CMS, AIテスト, 自動化テスト, QA, 品質保証, CI/CD, DevOps, ウェブサイト構築, システム統合, SI, ITO, カスタムソリューション, Java, Vue.js, Vue 3, Vite, TypeScript, Freemarker, Selenium
   - - meta
     - property: og:title
       content: "Empasy Sync Series: デジタル革新のためのMSAベースソリューション | 開発, CMS, AIテスト自動化"
@@ -90,6 +61,8 @@ footer: Copyright © 2025 Empasy
 - [SyncBoot](/syncboot/) - オープンソースのマイクロサービスベースの迅速な開発および効率的な運用環境を提供し、企業が急速に変化するビジネス環境に機敏に対応し、競争優位を確保できるよう支援するプラットフォーム。
 - [SyncAdmin](/syncadmin/) - Vue 3、Vite、TypeScriptベースのオープンソース管理システムテンプレートで、再利用可能なコンポーネントと迅速な開発環境を提供し、中大型バックオフィスの開発生産性を極大化し、変化する要件に迅速に対応できるようサポートします。
 - [SyncApim](/syncapim/) - 包括的かつ安定したAPI管理と**優れたカスタマイズ性(Customization in its DNA)**を通じて、企業がAPIによるデジタル革新を加速し、ビジネス競争力を強化できるよう支援する強力なプラットフォーム。
+- [SyncVerse](/syncverse/) - 複数の特化したAIエージェントが有機的に協調し、システムインフラとビジネスロジックを自律的に管理するLLMネイティブな中央オーケストレーションプラットフォーム。
+- [SyncInsight](/syncinsight/) - エージェントエコシステム全体の膨大なデータをリアルタイムに収集・分析し、自然言語クエリ（NLQ）を通じて直感的にビジネスインサイトを導き出すAI駆動型のインテリジェント監視センター。
 - [Agile](/agile/) - Agileの革新のためにスクラムとカンバンを組み合わせた（スクラムバン(Scrumban)）Empasyの開発方法論。
 - [Study](/study/) - Empasy 学習室。
 
@@ -174,6 +147,18 @@ Empasyはビジネスの俊敏性を確保するためのSync Series製品群を
 1. 動的テストCHAINING: 条件に応じた連鎖的なシナリオ実行。
 1. メリット: 「素早く変更するとどうしてもエラーの可能性が高まります。SyncEtaはまさにその部分を解決してくれます」、「簡単に言えば、ユーザーがウェブサイトを使用する行動を自動的にスクリプトにして、自動でテストを実行するものです」、「ユーザーフレンドリーな開発環境、IDEを提供し、テストの作成から実行、結果の報告までを非常に効率的に管理できるようにします」、「特に重要なのはCI/CD、つまり継続的統合・継続的デプロイツールと連携できる点です。開発者がコードを変更すると、自動的にテストしてデプロイまで繋げてくれるので、ソフトウェアの変更事項を本当に素早く安定して反映できるようになります」。ユーザーフレンドリー（コーディング経験の少ないユーザーでも容易）、多様なテストタイプのサポート、初期コストの削減と維持コストの最小化、効率的なリソース管理、コラボレーションの強化、スピードの向上とテスト拡張性の確保、持続可能な品質管理、顧客満足度の向上。コードなしで簡単かつ迅速なウェブテスト自動化環境を提供します。
 1. 活用事例: 自動化テストによる市場投入期間の短縮、CI/CDおよび外部システム統合、テストの品質および信頼性強化、テストの管理および実行効率の向上。
+
+### SyncVerse: インテリジェント・マルチエージェント・オーケストレーション
+
+1. 概要: 個別に動作するソフトウェアモジュールを一つの有機的なAIエコシステムに接続する中央制御プラットフォームです。
+2. 主な特徴: LLM中心のシステム運用、Agent-to-Agent（A2A）通信網の構築、自然言語ベースの対話型運用統制のサポート。
+3. メリット: 開発者がインフラ拡張から解放され、意思決定に集中できるようにエージェントが主体的にシステム変更事項を提案・実行し、プライベートAI環境で企業のセキュリティを完全に維持します。
+
+### SyncInsight: AI駆動型インテリジェントデータ監視センター
+
+1. 概要: システム内外に散在するデータを統合収集し、AIがリアルタイムで分析してビジネスの意思決定を支援する監視プラットフォームです。
+2. 主な特徴: リアルタイムデータストリーミング分析、異常検知（Anomaly Detection）、自然言語クエリ（NLQ）に基づくカスタムチャート作成。
+3. メリット: 複雑なクエリやダッシュボード設計の知識がなくても日常的な質問だけでインサイトを得ることができ、AIが問題状況に対する最適な解決アクションを先制的に提案します。
 
 ## Empasyの事業分野と競争力
 

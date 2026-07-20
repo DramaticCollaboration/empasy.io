@@ -7,46 +7,17 @@ hero:
     text: "Boon to business by agility."
     tagline: "'Solutions Optimized for Change', Maximize business agility with the Sync Series."
     actions:
-      - text: SyncEta
-        link: /synceta/
+      - text: Get Started
+        link: /syncverse/
         type: primary
-
-      - text: SyncCrawl
-        link: /synccrawl/
-        type: primary
-
-      - text: SyncCms
-        link: /synccms/
-        type: primary
-    
-      - text: SyncBoot
-        link: /syncboot/
-        type: primary
-    
-      - text: SyncAdmin
-        link: /syncadmin/
-        type: primary
-    
-      - text: SyncApim
-        link: /syncapim/
-        type: primary
-    
-      - text: Scrumban
-        link: /agile/
-        type: primary
-    
-      - text: Study Room
-        link: /study/
-        type: primary
-    
-      - text: Work Logs
-        link: /logs/
-        type: primary
+      - text: View All Products
+        link: '#sync-series-product-line'
+        type: secondary
 
 head:
   - - meta
     - name: keywords
-      content: Test Automation, Empasy, Sync Series, SyncBoot, SyncAdmin, SyncCMS, SyncEta, Microservices Architecture, MSA, Software Development, Solutions, Digital Transformation, Business Agility, Development Platform, Backend, Frontend, Content Management System, CMS, AI Testing, Automated Testing, QA, Quality Assurance, CI/CD, DevOps, Website Building, System Integration, SI, ITO, Customized Solutions, Java, Vue.js, Vue 3, Vite, TypeScript, Freemarker, Selenium
+      content: Test Automation, Empasy, Sync Series, SyncVerse, SyncInsight, AI Orchestration, Multi-Agent, AI Monitoring, SyncBoot, SyncAdmin, SyncCMS, SyncEta, Microservices Architecture, MSA, Software Development, Solutions, Digital Transformation, Business Agility, Development Platform, Backend, Frontend, Content Management System, CMS, AI Testing, Automated Testing, QA, Quality Assurance, CI/CD, DevOps, Website Building, System Integration, SI, ITO, Customized Solutions, Java, Vue.js, Vue 3, Vite, TypeScript, Freemarker, Selenium
   - - meta
     - property: og:title
       content: "Empasy Sync Series: MSA-based Solutions for Digital Transformation | Development, CMS, AI Test Automation"
@@ -90,6 +61,8 @@ Includes the following documents:
 - [SyncBoot](/syncboot/) - A platform that provides a rapid development and efficient operational environment based on open-source microservices, helping enterprises quickly respond to fast-changing business environments and secure a competitive advantage.
 - [SyncAdmin](/syncadmin/) - An open-source management system template based on Vue 3, Vite, and TypeScript. It maximizes the productivity of mid-to-large back-office development by providing reusable components and a rapid development environment, supporting swift responses to changing requirements.
 - [SyncApim](/syncapim/) - A powerful platform that accelerates digital transformation and strengthens business competitiveness through comprehensive and stable API management and **outstanding customization (Customization in its DNA)**.
+- [SyncVerse](/syncverse/) - An LLM-Native central orchestration platform where multiple specialized AI agents collaborate organically to autonomously manage system infrastructure and business logic.
+- [SyncInsight](/syncinsight/) - An AI-driven intelligent monitoring center that collects and analyzes massive amounts of data across the agent ecosystem in real-time, deriving business insights intuitively through Natural Language Queries (NLQ).
 - [Agile](/agile/) - The Empasy development methodology (Scrumban) that combines Scrum and Kanban for Agile innovation.
 - [Study](/study/) - Empasy Study Room.
 
@@ -174,6 +147,18 @@ Empasy possesses the Sync Series product line to secure business agility, and th
 1. Dynamic Test CHAINING: Sequential scenario execution based on conditions.
 1. Advantages: "Making quick changes naturally increases the chance of errors. SyncEta solves exactly that." "Simply put, it automatically scripts user actions on a website and runs tests automatically." "It provides a user-friendly development environment, an IDE, allowing highly efficient management from test creation to execution and result reporting." "What's especially important is that it integrates with CI/CD, i.e., continuous integration and deployment tools. When a developer changes code, it automatically connects testing and deployment, allowing software changes to be reflected really quickly and stably." User-friendliness (easy even for users with little coding experience), diverse test type support, initial cost reduction and maintenance cost minimization, efficient resource management, strengthened collaboration, speed improvement and test scalability securing, sustainable quality management, customer satisfaction improvement. Provides an easy and rapid codeless web test automation environment.
 1. Use Cases: Reduced time-to-market through automated testing, CI/CD and external system integration, strengthened test quality and reliability, improved test management and execution efficiency.
+
+### SyncVerse: Intelligent Multi-Agent Orchestration
+
+1. Overview: A central control platform that connects individually operating software modules into a single, organic AI ecosystem.
+2. Key Features: LLM-centric system operation, Agent-to-Agent (A2A) communication network establishment, natural language-based conversational operational control support.
+3. Advantages: Agents proactively propose and execute system changes, allowing developers to focus on decision-making rather than infrastructure expansion. It perfectly maintains corporate security in a private AI environment.
+
+### SyncInsight: AI-Driven Intelligent Data Monitoring Center
+
+1. Overview: A monitoring platform that integrally collects scattered data inside and outside the system, which AI analyzes in real-time to assist in business decision-making.
+2. Key Features: Real-time data streaming analysis, autonomous anomaly detection, customized chart generation based on Natural Language Queries (NLQ).
+3. Advantages: Even without complex query or dashboard design knowledge, users can gain insights with everyday questions, and AI proactively suggests optimal resolution actions for problematic situations.
 
 ## Empasy's Business Areas and Competitiveness
 
