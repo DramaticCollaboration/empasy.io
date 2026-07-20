@@ -55,7 +55,7 @@ head:
       content: EmpasyはSyncBoot, SyncAdmin, SyncCMS, SyncEtaで構成されるSync Seriesを通じて、企業のデジタル革新とビジネスの俊敏性を極大化します。MSAベースのバックエンド、フロントエンド、CMS、AIテスト自動化により開発速度を高め、品質を保証し、維持コストを削減します。
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/

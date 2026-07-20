@@ -13,7 +13,7 @@ head:
       content: ここはチームメンバーが自由に作業ログを記録して共有するスペースです。強制なしで必要な時に気軽に追加できる楽しい作業ログシステムを紹介します。
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/study/

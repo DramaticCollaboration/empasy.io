@@ -13,7 +13,7 @@ head:
       content: SyncAPIMはAPIゲートウェイ、開発者ポータル、分析ツールなどの総合的なAPI管理機能を提供し、安定的かつ効率的なAPI運用をサポートします。ビジネスの俊敏性のためのカスタマイズされたアーキテクチャを通じてデジタル革新をリードし、強力なセキュリティ、最適なパフォーマンス、開発効率の向上によって新たなビジネス機会を創出します。
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/syncapim/

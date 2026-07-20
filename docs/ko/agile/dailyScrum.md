@@ -13,7 +13,7 @@ head:
       content: 데일리 스크럼(Daily Scrum)의 효과적인 진행 방법을 단계별로 안내합니다. 애자일 팀의 협력 강화, 진행 상황 점검, 장애물 해결을 위한 15분 회의의 핵심 원칙과 실전 팁을 확인하세요.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/activity.html

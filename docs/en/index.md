@@ -55,7 +55,7 @@ head:
       content: Empasy maximizes corporate digital transformation and business agility through the Sync Series, consisting of SyncBoot, SyncAdmin, SyncCMS, and SyncEta. Accelerate development, guarantee quality, and reduce maintenance costs with MSA-based backend, frontend, CMS, and AI test automation.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/

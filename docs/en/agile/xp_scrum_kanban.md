@@ -13,7 +13,7 @@ head:
       content: Understand the differences and relationships between XP, Scrum, and Kanban at a glance, and we provide a detailed guide on integrating and applying these three agile methodologies in practice. Easily implement project management and software quality improvement with step-by-step checklists and diagrams.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/xp_scrum_kanban.html

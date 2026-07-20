@@ -13,7 +13,7 @@ head:
       content: AIベースのテスト自動化でQA時間を80%削減します。コードなしのテスト作成、自然言語によるシナリオ作成、多様なプラットフォームのサポートにより、QAの新しい基準を提示します。
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/synceta/

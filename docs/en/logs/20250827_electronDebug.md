@@ -13,7 +13,7 @@ head:
       content: This is a space where team members freely record and share work logs. We introduce a fun work log system that you can conveniently add to whenever you need without any force.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/study/

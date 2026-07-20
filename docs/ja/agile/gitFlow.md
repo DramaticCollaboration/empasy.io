@@ -13,7 +13,7 @@ head:
       content: チームコラボレーションのためのGit Flow完全ガイド。ブランチ構造、コミットメッセージのルール、リリースおよびホットフィックスの管理方法を段階別にわかりやすく説明します。
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/activity.html

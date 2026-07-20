@@ -13,7 +13,7 @@ head:
       content: XP、Scrum、Kanbanの違いと関係性を一目で理解し、実務でこれら3つのアジャイル方法論を統合して適用するための詳細なガイドを提供します。段階別のチェックリストと図解により、プロジェクト管理とソフトウェア品質向上を簡単に実現できます。
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/xp_scrum_kanban.html

@@ -13,7 +13,7 @@ head:
       content: 이슈를 효율적으로 생성하는 방법을 단계별로 안내합니다. LLM 프롬프트 활용, 샘플 데이터/시나리오 자동 생성, UI 시나리오 작성까지 포함한 실전 가이드.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/createIssue.html

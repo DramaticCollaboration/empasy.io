@@ -13,7 +13,7 @@ head:
       content: A step-by-step guide on how to efficiently create issues. A practical guide including the use of LLM prompts, automatic generation of sample data/scenarios, and writing UI scenarios.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/createIssue.html

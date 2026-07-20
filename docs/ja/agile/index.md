@@ -13,7 +13,7 @@ head:
       content: スクラムバン(Scrumban)はスクラムの反復的構造とカンバンのフロー管理・WIP制限を結合し、柔軟かつ効率的に作業を管理するハイブリッドアジャイル方法論です。
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/

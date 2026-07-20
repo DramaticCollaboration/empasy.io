@@ -13,7 +13,7 @@ head:
       content: 스크럼반(Scrumban)은 스크럼의 반복적 구조와 칸반의 흐름 관리·WIP 제한을 결합해 유연하고 효율적으로 작업을 관리하는 하이브리드 애자일 방법론입니다.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/activity.html

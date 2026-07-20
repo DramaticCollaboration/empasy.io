@@ -1,19 +1,19 @@
 ---
-title: "SyncBoot: Java-based MSA Rapid Development Platform | Enterprise Solution"
-description: SyncBoot is a Java-based open source Microservices Architecture (MSA) rapid development platform. It provides an E2E solution for the rapid development, deployment, and stable operation of enterprise applications, and maximizes business agility and efficiency through CI/CD, monitoring, API management, and strong security.
+title: "Autonomous Digital Agent Framework for Backend | SyncBoot"
+description: An AI-driven enterprise backend platform that monitors server status and manipulates databases via natural language. Automates complex system operations and recovery processes through MCP integration.
 head:
   - - meta
     - name: keywords
-      content: SyncBoot, Java-based, Microservices Architecture (MSA), Rapid Development, Open Source, Enterprise Application, Service Mesh, API Management, API Gateway, Cloud-native MSA, Cloud-native, Functions-as-a-Service (FaaS), AI-based Self-Healing, GitOps, Container and Orchestration, Hybrid Cloud and Distributed System, Monolithic to MSA Gradual Transition, SAGA Pattern, Event Sourcing, MSA Best Practices, Development Platform, Spring Boot, Spring Cloud, CI/CD, DevOps, Container, API Management, Monitoring, E2E Solution, Scalability, ERP System, CRM System, Back-office, Data Visualization, Cloud-native, Security, System Integration, Plugin Architecture, Low Learning Curve
+      content: SyncBoot, Java, AI Agent, Digital Engineer, Microservices (MSA), Open Source, Enterprise Applications, Model Context Protocol, MCP, Self-Healing, Context-Aware, Natural Language DB Control, Stateless Architecture, Spring Boot, CI/CD
   - - meta
     - property: og:title
-      content: "SyncBoot: Java-based MSA Rapid Development Platform | Enterprise Solution"
+      content: "Autonomous Digital Agent Framework for Backend | SyncBoot"
   - - meta
     - property: og:description
-      content: SyncBoot is a Java-based open source Microservices Architecture (MSA) rapid development platform. It provides an E2E solution for the rapid development, deployment, and stable operation of enterprise applications, and maximizes business agility and efficiency through CI/CD, monitoring, API management, and strong security.
+      content: An AI-driven enterprise backend platform that manipulates databases via natural language and self-monitors server status.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/syncboot/
@@ -22,31 +22,46 @@ dir:
   order: 1
 ---
 
-# SyncBoot
+# SyncBoot: Intelligent Backend Framework Based on Digital Engineers
 
-A Java-based open source rapid development platform designed to streamline enterprise application development. The key features and advantages are summarized as follows:
+SyncBoot goes beyond a simple API development framework; it is a next-generation Java-based enterprise platform evolved into an **'Autonomous Digital Engineer Agent'** that perceives and operates the business state of the system itself.
 
-## Tech Stack
+Based on a Microservices Architecture (MSA), it automates system control, data operations, error detection, and recovery through real-time communication with the AI agent ecosystem.
 
-1. Backend: Spring Boot, Spring Cloud, MyBatis-Plus, JWT.
-1. Frontend: Vue.js, Ant Design Vue, React (Optional).
-1. Database: MySQL, Oracle, and many others supported.
-1. Modularization: Built-in enterprise modules such as permission management, workflow, report, and dashboard.
-1. Cloud Support: Microservices Architecture (Spring Cloud) integration.
+---
 
-## Key Features
+## 1. SyncBoot's Core AI Agent Capabilities
 
-1. System Management: User/Role/Menu/Data permission management.
-1. Data Visualization: Drag & Drop dashboard, chart reports.
-1. Mobile Responsive: Responsive web design.
-1. API Documentation: Swagger integration.
+Unlike traditional systems, SyncBoot has the capability to interpret natural language commands from users or external systems to manage the backend infrastructure autonomously.
 
-## Advantages
+### I. Natural Language-Based Domain Data Operations
+- Users don't need to write complex SQL; by delivering requirements in natural language, the agent analyzes them and performs database manipulations (CRUD) and domain logic within its permissions.
+- For tasks that have a critical impact on the system, such as data schema changes, a safety mechanism ensures stability by having the AI propose the changes first and waiting for administrator approval.
 
-1. Low Learning Curve: Developer-friendly based on the standard Spring ecosystem.
-1. Active Community: Active open source community centered in China.
-1. Scalability: Easy feature extension with a plugin architecture.
+### II. Context-Aware Monitoring and Self-Diagnosis
+- In a distributed system environment, it continuously perceives and monitors the purpose and business health status of the system it is running on.
+- When an error occurs, it immediately collects logs from scattered multiple instances, analyzes the correlations, and delivers them to the central integrated control system (SyncVerse), reducing recovery time to within minutes.
 
-## Use Cases
+### III. MCP (Model Context Protocol) Support for Agent Collaboration
+- To allow AI agents to access system resources, it features a built-in remote MCP server interface based on **HTTP SSE (Server-Sent Events)**.
+- It integrates smoothly with other agent systems through tools like `read_database_schema`, `manage_database_catalog`, and `fetch_server_logs`.
 
-Suitable for small and medium-sized enterprise applications such as ERP/CRM systems, internal management platforms, and data analysis dashboards.
+---
+
+## 2. Enterprise Architecture for Large-Scale Distributed Environments
+
+A robust distributed system architecture has been applied to support AI autonomy.
+
+### Statelessness and Secure Transactions (Saga Pattern)
+All agent tasks maintain statelessness by storing short-term context in a memory store (Redis) and long-term history in the database based on a unique task identifier (`task_id`). If an error occurs during complex multi-link operations, it safely rolls back to the previous state immediately using compensation transaction tools like `revert_data_state`.
+
+### Strong Security and Dynamic Access Control (AuthZ)
+For control commands flowing in through external AI models (LLMs), it strictly controls access to permitted database schemas and system resources by verifying the role claims of JWT tokens.
+
+---
+
+## 3. Expected Benefits of Platform Adoption
+
+- **Simplified Operations Process**: Routine data operations and system control become possible solely through natural language commands, without the intervention of developers and DBAs.
+- **Shortened Mean Time To Recovery (MTTR)**: Through real-time log collection and self-diagnosis pipelines, the time from cause analysis to response during service interruptions can be drastically reduced.
+- **Progressive Transition**: It helps a smooth transition from legacy monolithic systems to a cloud-native MSA capable of autonomous AI operations.

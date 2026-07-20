@@ -13,7 +13,7 @@ head:
       content: 이슈를 효율적으로 사용하는 핵심 원칙을 소개합니다. ✅ 이슈 할당 법칙, ✅ 필수 코멘팅 가이드, ✅ 상태 관리 노하우를 통해 프로젝트 투명성과 팀 생산성을 높이는 방법을 확인해 보세요. 팀 협업을 위한 가이드입니다.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/PrinciplesForIssueUsage.html

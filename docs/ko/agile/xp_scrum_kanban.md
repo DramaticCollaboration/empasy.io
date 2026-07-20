@@ -13,7 +13,7 @@ head:
       content: XP, Scrum, Kanban의 차이점과 관계를 한눈에 이해하고, 실무에서 세 가지 애자일 방법론을 통합하여 적용하는 상세 가이드를 제공합니다. 단계별 체크리스트와 다이어그램으로 프로젝트 관리와 소프트웨어 품질 향상을 쉽게 구현할 수 있습니다.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/xp_scrum_kanban.html

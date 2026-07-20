@@ -13,7 +13,7 @@ head:
       content: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/synceta/

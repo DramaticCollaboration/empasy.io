@@ -13,7 +13,7 @@ head:
       content: A complete Git Flow guide for team collaboration. We explain step-by-step branch structure, commit message rules, and release and hotfix management methods easily.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/activity.html

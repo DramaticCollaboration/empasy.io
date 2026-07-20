@@ -13,7 +13,7 @@ head:
       content: 課題を効率的に作成する方法を段階別にご案内します。LLMプロンプトの活用、サンプルデータ/シナリオの自動生成、UIシナリオの作成までを含んだ実践ガイド。
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/createIssue.html

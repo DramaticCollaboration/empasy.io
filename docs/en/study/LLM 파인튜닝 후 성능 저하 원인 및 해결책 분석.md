@@ -13,7 +13,7 @@ head:
       content: Don't forget, let's save it for fun! 🎯 A fun knowledge repository to freely record what you've studied
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/study/

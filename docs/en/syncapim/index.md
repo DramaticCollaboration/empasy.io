@@ -13,7 +13,7 @@ head:
       content: SyncAPIM supports stable and efficient API operation by providing comprehensive API management features such as API Gateway, Developer Portal, and Analytics Tools. It leads digital transformation through an architecture customized for business agility and creates new business opportunities with strong security, optimal performance, and improved development efficiency.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/syncapim/

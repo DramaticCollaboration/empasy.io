@@ -13,7 +13,7 @@ head:
       content: 課題を効率的に使用するための核心原則を紹介します。✅ 課題割り当ての法則、✅ 必須コメントガイド、✅ ステータス管理のノウハウを通じてプロジェクトの透明性とチームの生産性を高める方法を確認してください。チームコラボレーションのためのガイドです。
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/PrinciplesForIssueUsage.html

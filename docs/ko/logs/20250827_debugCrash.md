@@ -13,7 +13,7 @@ head:
       content: 이 곳은 팀원들이 자유롭게 작업 로그를 기록하고 공유하는 공간입니다. 강제 없이 필요할 때 편하게 추가할 수 있는 재미있는 작업 로그 시스템을 소개합니다.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/study/

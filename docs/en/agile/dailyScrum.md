@@ -13,7 +13,7 @@ head:
       content: A step-by-step guide to conducting an effective Daily Scrum. Check out the core principles and practical tips of this 15-minute meeting for strengthening agile team collaboration, checking progress, and removing obstacles.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/activity.html

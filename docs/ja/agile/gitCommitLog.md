@@ -13,7 +13,7 @@ head:
       content: git commit, git commit メッセージ, git コミット ルール, git コミット コンベンション, commit message guide, commit convention, git コラボレーション, git ブランチ戦略, feat, fix, refactor
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/activity.html

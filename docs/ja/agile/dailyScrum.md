@@ -13,7 +13,7 @@ head:
       content: デイリースクラム(Daily Scrum)の効果的な進行方法を段階別にご案内します。アジャイルチームの協力強化、進捗状況の点検、障害物解決のための15分会議の核心原則と実践ヒントをご確認ください。
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/agile/activity.html

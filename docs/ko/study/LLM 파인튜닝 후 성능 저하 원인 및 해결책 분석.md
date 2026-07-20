@@ -13,7 +13,7 @@ head:
       content: 까먹지 말고 재밌게 저장하자! 🎯 공부한 내용을 자유롭게 기록하는 즐거운 지식 저장소
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
       content: https://doc.empasy.com/study/
