@@ -261,6 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateContent();
 });
 // Global intercept for SyncEta links
+/*
 document.addEventListener('click', function(e) {
     const link = e.target.closest('a');
     if (link) {
@@ -272,3 +273,4 @@ document.addEventListener('click', function(e) {
         }
     }
 });
+*/
