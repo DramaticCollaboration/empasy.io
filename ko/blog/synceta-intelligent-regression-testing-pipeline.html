@@ -8,14 +8,70 @@
     <meta property="og:description" content="SyncETA는 셀프 힐링 기술이 적용된 AI 기반 웹 테스트 자동화 솔루션입니다. Playwright와 Selenium을 뛰어넘는 지능형 E2E 회귀 테스트와 QA 파이프라인을 경험하세요.">
     <meta property="og:type" content="website">
     <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Blog",      "name": "엠파시(Empasy) 기술 블로그",      "url": "https://empasy.com/blog.html",      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",      "publisher": {        "@type": "Organization",        "name": "엠파시(Empasy)",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.com/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.com/ko/blog/synceta-intelligent-regression-testing-pipeline.html">    <meta property="og:url" content="https://empasy.com/blog.html">    <meta property="og:image" content="https://empasy.com/empasy-logo.png">    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="canonical" href="https://empasy.com/ko/blog/synceta-intelligent-regression-testing-pipeline.html">    <link rel="alternate" hreflang="ko" href="https://empasy.com/synceta-intelligent-regression-testing-pipeline.html" />    <link rel="alternate" hreflang="en" href="https://empasy.com/en/synceta-intelligent-regression-testing-pipeline.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/synceta-intelligent-regression-testing-pipeline.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/synceta-intelligent-regression-testing-pipeline.html" />    <meta property="og:url" content="https://empasy.com/synceta-intelligent-regression-testing-pipeline.html">    <meta property="og:locale" content="ko_KR">    <script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "Article",  "headline": "[Tech Blog] 기계어(JSON)에서 비즈니스 언어(Excel)로: SyncETA의 지능형 회귀 테스트 파이프라인 아키텍처",  "description": "LLM과 Playwright MCP를 결합하여 수작업 없는 No-Code 기반 지능형 QA 자동화 및 시각적 자가 치유(Self-Healing) 엔진을 구현한 SyncETA 아키텍처 리뷰.",  "author": {    "@type": "Organization",    "name": "Empasy Engineering Team",    "url": "https://empasy.com"  },  "publisher": {    "@type": "Organization",    "name": "Empasy",    "logo": {      "@type": "ImageObject",      "url": "https://empasy.com/assets/logo.png"    }  },  "url": "https://empasy.com/synceta-intelligent-regression-testing-pipeline.html"}    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <script type="module" crossorigin src="/assets/ko_blog_synceta-intelligent-regression-testing-pipeline-C-uHPbx1.js"></script>
+  <script type="module" crossorigin src="/assets/ko_blog_synceta-intelligent-regression-testing-pipeline-CRxidOfx.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/main-QV4yrTre.js">
-  <link rel="stylesheet" crossorigin href="/assets/style-Bd_BCiIh.css">
+  <link rel="stylesheet" crossorigin href="/assets/style-BCddFOL3.css">
 </head>
 <body>
 
     <!-- Header Navigation -->
-
+    <header class="glass-header">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="../../ko/pages/index.html"><img src="/assets/empasy-logo-Dx2jve9d.png" alt="EMPASY" class="logo-img"></a>
+                </div>
+                <nav class="nav-links">
+        <!-- 1. Company Group -->
+        <div class="dropdown">
+            <a href="../../ko/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+            <div class="dropdown-content">
+                <a href="../../ko/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
+                <a href="../../ko/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
+                <a href="../../ko/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
+            </div>
+        </div>
+        
+        <!-- 2. Sync Series Group -->
+        <div class="dropdown">
+            <a href="../../ko/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+            <div class="dropdown-content">
+                <a href="../../ko/solutions/sync-boot.html">SyncBoot</a>
+                <a href="../../ko/solutions/sync-cms.html">SyncCMS</a>
+                <a href="../../ko/solutions/sync-crawl.html">SyncCrawl</a>
+                <a href="../../ko/solutions/sync-eta.html">SyncEta</a>
+            </div>
+        </div>
+        <!-- 3. Insights Group (NEW) -->
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+            <div class="dropdown-content">
+                <a href="../../ko/blog/blog.html">Tech Blog</a>
+                <a href="../../ko/pages/faq.html">FAQ</a>
+                <a href="../../ko/blog/case-study-finance.html">고객 사례 상세</a>
+            </div>
+        </div>
+    
+        
+        <a href="../../ko/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
+        
+        <!-- Top-level SyncEta link added as requested -->
+        <a href="../../ko/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
+    </nav>
+                <div class="nav-actions">
+                    <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
+                        <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:1rem; padding: 0.5rem; cursor: pointer; display:flex; align-items:center; gap:6px;">
+                            <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> KO</span>
+                        </button>
+                        <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
+                            <a href="../../ko/pages/index.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
+                            <a href="../../en/pages/index.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
+                            <a href="../../ja/pages/index.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JA</a>
+                        </div>
+                    </div>
+                    <a href="../../ko/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact">Contact</a>
+                </div>
+            </div>
+        </header>
     <main class="container" style="padding-top: 150px; min-height: 80vh;">
         <div class="page-header text-center fade-in-up mb-4">
             <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Insights</span>
@@ -26,7 +82,63 @@
         <section class="section" style="padding-top: 2rem;">
             <div class="container">
                 <article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-    <div style="line-height: 1.8; color: var(--text-primary);">
+    <header class="glass-header">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="../../ko/pages/index.html"><img src="/assets/empasy-logo-Dx2jve9d.png" alt="EMPASY" class="logo-img"></a>
+                </div>
+                <nav class="nav-links">
+        <!-- 1. Company Group -->
+        <div class="dropdown">
+            <a href="../../ko/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+            <div class="dropdown-content">
+                <a href="../../ko/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
+                <a href="../../ko/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
+                <a href="../../ko/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
+            </div>
+        </div>
+        
+        <!-- 2. Sync Series Group -->
+        <div class="dropdown">
+            <a href="../../ko/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+            <div class="dropdown-content">
+                <a href="../../ko/solutions/sync-boot.html">SyncBoot</a>
+                <a href="../../ko/solutions/sync-cms.html">SyncCMS</a>
+                <a href="../../ko/solutions/sync-crawl.html">SyncCrawl</a>
+                <a href="../../ko/solutions/sync-eta.html">SyncEta</a>
+            </div>
+        </div>
+        <!-- 3. Insights Group (NEW) -->
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+            <div class="dropdown-content">
+                <a href="../../ko/blog/blog.html">Tech Blog</a>
+                <a href="../../ko/pages/faq.html">FAQ</a>
+                <a href="../../ko/blog/case-study-finance.html">고객 사례 상세</a>
+            </div>
+        </div>
+    
+        
+        <a href="../../ko/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
+        
+        <!-- Top-level SyncEta link added as requested -->
+        <a href="../../ko/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
+    </nav>
+                <div class="nav-actions">
+                    <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
+                        <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:1rem; padding: 0.5rem; cursor: pointer; display:flex; align-items:center; gap:6px;">
+                            <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> KO</span>
+                        </button>
+                        <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
+                            <a href="../../ko/pages/index.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
+                            <a href="../../en/pages/index.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
+                            <a href="../../ja/pages/index.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JA</a>
+                        </div>
+                    </div>
+                    <a href="../../ko/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact">Contact</a>
+                </div>
+            </div>
+        </header>    <div style="line-height: 1.8; color: var(--text-primary);">
         <p>소프트웨어 배포 주기가 '주 단위'에서 '일 단위'로 단축되는 애자일(Agile) 및 클라우드 네이티브 환경에서, 품질 보증(QA)은 여전히 가장 많은 수작업과 리소스 병목이 발생하는 영역입니다. UI의 작은 변경(DOM 구조, ID/Class 속성 등)에도 기존의 E2E 테스트 스크립트가 쉽게 깨지는 '유지보수 지옥(Maintenance Hell)'은 자동화의 가장 큰 걸림돌이었습니다.</p>
         <p>엠파시의 <strong>SyncETA</strong>는 이러한 한계를 극복하기 위해 <strong>"Boon to business by agility"</strong>라는 비전 아래, AI 자동 생성부터 무인 자율 운영 단계까지 아우르는 <strong>End-to-End 순환형 품질 생태계(Self-Evolving AI First QA Platform)</strong>를 구축했습니다. 본 글에서는 SyncETA의 핵심 아키텍처와 최신 엔지니어링 고도화 성과를 깊이 있게 다룹니다.</p>
 
