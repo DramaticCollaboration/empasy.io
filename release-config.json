@@ -1,0 +1,10 @@
+{
+  "version": "0.0.76",
+  "releaseNote": "",
+  "files": {
+    "winX64": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA+Setup+0.1.11.exe",
+    "winArm64": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA+Setup+0.1.11.exe",
+    "macIntel": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA-0.1.11.dmg",
+    "macSilicon": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/SyncETA-0.1.11-arm64.dmg"
+  }
+}
