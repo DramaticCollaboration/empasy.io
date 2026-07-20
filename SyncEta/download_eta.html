@@ -126,7 +126,7 @@
     <script>
         setTimeout(() => { document.querySelectorAll('.fade-in-up').forEach(el => el.classList.add('visible')); }, 300);
 
-        fetch('/release-config.json?t=' + Date.now())
+        fetch('/public/release-config.json?t=' + Date.now())
             .then(res => {
                 if (!res.ok) throw new Error('Network response was not ok');
                 return res.json();
