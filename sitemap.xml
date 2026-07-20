@@ -402,7 +402,17 @@
   </url>
   <url>
     <loc>https://empasy.io/docs/ko/syncadmin/</loc>
-    <lastmod>2026-07-18T09:37:31.732Z</lastmod>
+    <lastmod>2026-07-21T08:10:00+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/docs/ko/syncverse/</loc>
+    <lastmod>2026-07-21T08:10:00+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/docs/ko/syncinsight/</loc>
+    <lastmod>2026-07-21T08:10:00+09:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -597,7 +607,17 @@
   </url>
   <url>
     <loc>https://empasy.io/docs/ja/syncadmin/</loc>
-    <lastmod>2026-07-18T09:37:31.732Z</lastmod>
+    <lastmod>2026-07-21T08:10:00+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/docs/ja/syncverse/</loc>
+    <lastmod>2026-07-21T08:10:00+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/docs/ja/syncinsight/</loc>
+    <lastmod>2026-07-21T08:10:00+09:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -792,7 +812,17 @@
   </url>
   <url>
     <loc>https://empasy.io/docs/en/syncadmin/</loc>
-    <lastmod>2026-07-18T09:37:31.732Z</lastmod>
+    <lastmod>2026-07-21T08:10:00+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/docs/en/syncverse/</loc>
+    <lastmod>2026-07-21T08:10:00+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/docs/en/syncinsight/</loc>
+    <lastmod>2026-07-21T08:10:00+09:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
