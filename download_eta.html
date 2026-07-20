@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="SyncEta/css/eta-dashboard.css">
     <meta name="geo.region" content="KR-11" />
     <meta name="geo.placename" content="Seoul" />
@@ -47,7 +47,7 @@
     <meta name="twitter:image" content="https://empasy.com/empasy-logo.png">
     <!-- AI & Crawling Optimization -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body style="background: #f8fafc;">
@@ -120,11 +120,13 @@
             </div>
         </div>
     </main>
-    <script type="module" src="/assets/js/main.js"></script>
+
+    {{> footer_ko }}
+    <script type="module" src="assets/js/main.js"></script>
     <script>
         setTimeout(() => { document.querySelectorAll('.fade-in-up').forEach(el => el.classList.add('visible')); }, 300);
 
-        fetch('/release-config.json?t=' + Date.now())
+        fetch('release-config.json?t=' + Date.now())
             .then(res => res.json())
             .then(cfg => {
                 document.getElementById('winArm64').href = cfg.files.winArm64;
@@ -133,7 +135,7 @@
                 document.getElementById('macSilicon').href = cfg.files.macSilicon;
             });
     </script>
-    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="assets/js/i18n.js"></script>
 </body>
 
 </html>
