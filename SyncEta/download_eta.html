@@ -46,7 +46,7 @@
     <!-- AI & Crawling Optimization -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="icon" href="/assets/favicon-d62KHfr-.ico" type="image/x-icon">
-  <script type="module" crossorigin src="/assets/SyncEta_download_eta-DfJ3-IbC.js"></script>
+  <script type="module" crossorigin src="/assets/SyncEta_download_eta-gsjI5i7L.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/main-QV4yrTre.js">
   <link rel="stylesheet" crossorigin href="/assets/style-BCddFOL3.css">
   <link rel="stylesheet" crossorigin href="/assets/eta-dashboard-D_nWgSQY.css">
@@ -206,31 +206,6 @@
     
             </div>
         </footer>    
-    <script>
-        setTimeout(() => { document.querySelectorAll('.fade-in-up').forEach(el => el.classList.add('visible')); }, 300);
-
-        fetch('/public/release-config.json?t=' + Date.now())
-            .then(res => {
-                if (!res.ok) throw new Error('Network response was not ok');
-                return res.json();
-            })
-            .then(cfg => {
-                const updateLink = (id, url) => {
-                    const el = document.getElementById(id);
-                    if (el && url) {
-                        el.href = url;
-                        el.setAttribute('target', '_blank');
-                    }
-                };
-                updateLink('winArm64', cfg.files.winArm64);
-                updateLink('winX64', cfg.files.winX64);
-                updateLink('macIntel', cfg.files.macIntel);
-                updateLink('macSilicon', cfg.files.macSilicon);
-            })
-            .catch(err => {
-                console.error('Failed to load release config:', err);
-            });
-    </script>
 </body>
 
 </html>
