@@ -2,17 +2,32 @@
 <html>
 
 <head>
-    <title>엠파시(Empasy) | 엔터프라이즈 AI 통합 플랫폼</title>
-    <meta name="description" content="디지털 전환(DX)과 AI 인프라를 한 번에 해결하는 B2B 기업용 AI 통합 아키텍처. 기획부터 운영까지 인간의 개입을 최소화하는 AI Ops 기반 생태계입니다.">
-    <meta name="keywords" content="엔터프라이즈 AI 에코시스템, 기업용 AI 통합 플랫폼, 디지털 전환 AI 아키텍처, 엠파시, Empasy, MSA CMS AI 연동 솔루션, 비즈니스 데이터 인텔리전스 패키지, SyncVerse, SyncBoot, SyncCMS, SyncInsight, SyncETA, B2B AI 솔루션">
-    <meta property="og:title" content="엠파시(Empasy) | 엔터프라이즈 AI 통합 플랫폼">
-    <meta property="og:description" content="디지털 전환(DX)과 AI 인프라를 한 번에 해결하는 B2B 기업용 AI 통합 아키텍처. 기획부터 운영까지 인간의 개입을 최소화하는 AI Ops 기반 생태계입니다.">
-    <meta property="og:type" content="website">
-    <meta charset="UTF-8">    <script>        var lang = navigator.language || navigator.userLanguage;        if (lang.startsWith('en')) {            window.location.href = '/en/pages/index.html';        } else if (lang.startsWith('ja')) {            window.location.href = '/ja/pages/index.html';        } else {            window.location.href = '/ko/pages/index.html';        }    </script>    <meta http-equiv="refresh" content="0; url=/ko/pages/index.html">    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>엠파시(Empasy) | 메인 페이지로 이동 중...</title>
+    <meta name="description" content="엠파시(Empasy) 엔터프라이즈 AI 통합 플랫폼">
+    <meta charset="UTF-8">
+    <script>
+        (function () {
+            var path = window.location.pathname.toLowerCase();
+            if (path.includes('synceta')) {
+                window.location.replace('/solutions/sync-eta.html');
+            } else {
+                var lang = navigator.language || navigator.userLanguage || '';
+                var target = '/ko/pages/index.html';
+                if (lang.startsWith('en')) {
+                    target = '/en/pages/index.html';
+                } else if (lang.startsWith('ja')) {
+                    target = '/ja/pages/index.html';
+                }
+                window.location.replace(target);
+            }
+        })();
+    </script>
+    <meta http-equiv="refresh" content="0; url=/ko/pages/index.html">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <p>Page Not Found. Redirecting to <a href="/ko/pages/index.html">Empasy Homepage</a>...</p>
+    <p>요청하신 페이지를 찾을 수 없습니다. 메인 페이지로 이동합니다 (302 Redirect)...</p>
 </body>
 
 </html>
