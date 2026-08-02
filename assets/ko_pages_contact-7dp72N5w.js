@@ -1,0 +1,1 @@
+import{n as e,t}from"./i18n-BT8oeUrW.js";import{t as n}from"./contact-nCqpfX9O.js";t(),e(),n();
