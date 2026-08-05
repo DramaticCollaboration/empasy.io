@@ -177,7 +177,6 @@ footer: Copyright © 2025 Empasy
 1. SK매직 e-카달로그 시스템 구축(SyncCMS)
 1. 천재교육 T셀파 리뉴얼 구축 (SyncCMS)
 1. 비상교육 AIDT (SyncEta)
-1. LG전자 포털 (SyncEta)
 1. 현대자동차 로그 수집 (SyncEta)
 1. 펜타시큐리티 (SyncApim)
 

@@ -177,7 +177,6 @@ Empasyは多様な顧客を対象に、Sync Series製品を活用した成功的
 1. SKマジック e-カタログシステム構築 (SyncCMS)
 1. 天才教育 Tセルパ リニューアル構築 (SyncCMS)
 1. 飛上教育 AIDT (SyncEta)
-1. LG電子ポータル (SyncEta)
 1. 現代自動車 ログ収集 (SyncEta)
 1. ペンタセキュリティ (SyncApim)
 
