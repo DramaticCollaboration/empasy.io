@@ -7,7 +7,68 @@
     <meta property="og:title" content="엠파시(Empasy) | Case study finance">
     <meta property="og:description" content="디지털 전환(DX)과 AI 인프라를 한 번에 해결하는 B2B 기업용 AI 통합 아키텍처. 기획부터 운영까지 인간의 개입을 최소화하는 AI Ops 기반 생태계입니다.">
     <meta property="og:type" content="website">
-    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Article",      "headline": "엠파시 대표 프로젝트 수행 및 성공 사례",      "author": {        "@type": "Organization",        "name": "엠파시(Empasy)"      },      "publisher": {        "@type": "Organization",        "name": "엠파시(Empasy)",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.com/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="../../assets/css/style.css">    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.com/ko/blog/case-study-finance.html">    <meta property="og:url" content="https://empasy.com/case-study-finance.html">    <meta name="robots" content="index, follow">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <!-- Custom Style for Diagrams -->    <style>        .diagram-grid {            display: grid;            grid-template-columns: 1fr auto 1.2fr auto 1fr;            gap: 1rem;            align-items: stretch;        }        .diagram-box {            background: var(--bg-primary);            padding: 1.5rem;            border-radius: 8px;            box-shadow: 0 2px 10px rgba(0,0,0,0.02);            height: 100%;        }        .diagram-arrow {            color: var(--border-color);            font-size: 1.2rem;            display: flex;            align-items: center;            justify-content: center;        }        @media (max-width: 900px) {            .diagram-grid {                grid-template-columns: 1fr;            }            .diagram-arrow {                transform: rotate(90deg);                padding: 10px 0;            }        }    </style>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Empasy">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "엠파시 대표 프로젝트 수행 및 성공 사례",
+      "author": {
+        "@type": "Organization",
+        "name": "엠파시(Empasy)"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "엠파시(Empasy)",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.com/empasy-logo.png"
+        }
+      }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- SEO & AIO Tags -->
+    <link rel="canonical" href="https://empasy.com/ko/blog/case-study-finance.html">
+    <meta property="og:url" content="https://empasy.com/case-study-finance.html">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style for Diagrams -->
+    <style>
+        .diagram-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1.2fr auto 1fr;
+            gap: 1rem;
+            align-items: stretch;
+        }
+        .diagram-box {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            height: 100%;
+        }
+        .diagram-arrow {
+            color: var(--border-color);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (max-width: 900px) {
+            .diagram-grid {
+                grid-template-columns: 1fr;
+            }
+            .diagram-arrow {
+                transform: rotate(90deg);
+                padding: 10px 0;
+            }
+        }
+    </style>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -24,38 +85,6 @@
         <section class="section" style="padding-top: 2rem; padding-bottom: 5rem;">
             <div class="container" style="max-width: 1100px;">
                 <div style="display: flex; flex-direction: column; gap: 4rem;">
-                    
-                    <!-- 1. LG전자 & LG화학 -->
-                    <article class="fade-in-up" style="background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
-                        <div style="margin-bottom: 2.5rem; display: inline-block;">
-                            <h2 style="font-size: clamp(1.5rem, 5vw, 2rem); color: var(--text-primary); margin: 0;">글로벌 가치 증명 사례 (LG전자 & LG화학)</h2>
-                            <div style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 0.5rem; font-weight: 600;">프로젝트명: 글로벌 생성형 AI 진단 DX 포탈 구축 및 상시 품질 검증 체계 운영</div>
-                        </div>
-                        
-                        <div class="diagram-grid">
-                            <!-- Challenge -->
-                            <div class="diagram-box" style="border-top: 4px solid #ef4444;">
-                                <h4 style="color: #ef4444; margin-bottom: 1rem; font-size: 1.1rem;">01. 도입 배경</h4>
-                                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin:0;">글로벌 EAP 2.0 운영 시 시스템 기능의 잦은 추가와 대규모 리팩토링으로 예기치 못한 시스템 오류가 누적되었으며, 수작업 기반의 전 세계 글로벌 사이트 테스트 병목이 심각하게 발생했습니다.</p>
-                            </div>
-
-                            <div class="diagram-arrow">▶</div>
-
-                            <!-- Solution -->
-                            <div class="diagram-box" style="background: rgba(8,145,178,0.03); border-top: 4px solid var(--primary-color);">
-                                <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.1rem;">02. 엠파시 솔루션 (SyncEta)</h4>
-                                <p style="font-size: 0.95rem; color: var(--text-primary); line-height: 1.6; margin:0;">LGERP 연동 AI 대화형 '진단봇' 안착 및 <strong>SyncEta</strong> 전격 도입. 로그인·결제 등 핵심 로직에 대한 멀티 브라우저 상시 병렬 자동 검증 안전망 구축 및 픽셀 단위 AI 시각 검증 적용.</p>
-                            </div>
-
-                            <div class="diagram-arrow">▶</div>
-
-                            <!-- Results -->
-                            <div class="diagram-box" style="border-top: 4px solid #10b981;">
-                                <h4 style="color: #10b981; margin-bottom: 1rem; font-size: 1.1rem;">03. 비즈니스 성과</h4>
-                                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin:0;">사이드 이펙트 즉각 탐지/차단으로 글로벌 서비스 신뢰도 완벽 회복. Nightly Build 체계 정착으로 배포 주기 단축 및 QA 조직의 고부가가치 업무 집중 환경 실현.</p>
-                            </div>
-                        </div>
-                    </article>
 
                     <!-- 2. 경기도교육청 -->
                     <article class="fade-in-up delay-1" style="background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
