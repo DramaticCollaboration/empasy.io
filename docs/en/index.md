@@ -177,7 +177,6 @@ Empasy holds successful deployment cases utilizing Sync Series products for vari
 1. SK Magic e-Catalog System Construction (SyncCMS)
 1. Chunjae Education T-Selpa Renewal Construction (SyncCMS)
 1. Visang Education AIDT (SyncEta)
-1. LG Electronics Portal (SyncEta)
 1. Hyundai Motor Company Log Collection (SyncEta)
 1. Penta Security (SyncApim)
 
