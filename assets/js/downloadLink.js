@@ -1,11 +1,11 @@
 const downloadLink = {
-  "version": "0.0.19",
+  "version": "0.0.21",
   "releaseNote": "",
   "files": {
-    "winX64": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/releases/eta/0.0.19/win/x64/SyncETA%20Setup%200.0.19.exe",
-    "winArm64": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/releases/eta/0.0.19/win/arm64/SyncETA%20Setup%200.0.19.exe",
-    "macIntel": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/releases/SyncETA-0.0.19.dmg",
-    "macSilicon": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/releases/SyncETA-0.0.19-arm64.dmg"
+    "winX64": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/releases/eta/0.0.21/win/x64/SyncETA%20Setup%200.0.21.exe",
+    "winArm64": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/releases/eta/0.0.21/win/x64/SyncETA%20Setup%200.0.21.exe",
+    "macIntel": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/releases/SyncETA-0.0.21.dmg",
+    "macSilicon": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/releases/SyncETA-0.0.21-arm64.dmg"
   }
 };
 
