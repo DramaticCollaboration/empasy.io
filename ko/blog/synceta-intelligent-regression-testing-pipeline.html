@@ -7,7 +7,7 @@
     <meta property="og:title" content="엠파시(Empasy) | Synceta intelligent regression testing pipeline">
     <meta property="og:description" content="SyncETA는 셀프 힐링 기술이 적용된 AI 기반 웹 테스트 자동화 솔루션입니다. Playwright와 Selenium을 뛰어넘는 지능형 E2E 회귀 테스트와 QA 파이프라인을 경험하세요.">
     <meta property="og:type" content="website">
-    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Blog",      "name": "엠파시(Empasy) 기술 블로그",      "url": "https://empasy.com/blog.html",      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",      "publisher": {        "@type": "Organization",        "name": "엠파시(Empasy)",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.com/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.com/ko/blog/synceta-intelligent-regression-testing-pipeline.html">    <meta property="og:url" content="https://empasy.com/blog.html">    <meta property="og:image" content="https://empasy.com/empasy-logo.png">    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="canonical" href="https://empasy.com/ko/blog/synceta-intelligent-regression-testing-pipeline.html">    <link rel="alternate" hreflang="ko" href="https://empasy.com/synceta-intelligent-regression-testing-pipeline.html" />    <link rel="alternate" hreflang="en" href="https://empasy.com/en/synceta-intelligent-regression-testing-pipeline.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/synceta-intelligent-regression-testing-pipeline.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/synceta-intelligent-regression-testing-pipeline.html" />    <meta property="og:url" content="https://empasy.com/synceta-intelligent-regression-testing-pipeline.html">    <meta property="og:locale" content="ko_KR">    <script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "Article",  "headline": "[Tech Blog] 기계어(JSON)에서 비즈니스 언어(Excel)로: SyncETA의 지능형 회귀 테스트 파이프라인 아키텍처",  "description": "LLM과 Playwright MCP를 결합하여 수작업 없는 No-Code 기반 지능형 QA 자동화 및 시각적 자가 치유(Self-Healing) 엔진을 구현한 SyncETA 아키텍처 리뷰.",  "author": {    "@type": "Organization",    "name": "Empasy Engineering Team",    "url": "https://empasy.com"  },  "publisher": {    "@type": "Organization",    "name": "Empasy",    "logo": {      "@type": "ImageObject",      "url": "https://empasy.com/assets/logo.png"    }  },  "url": "https://empasy.com/synceta-intelligent-regression-testing-pipeline.html"}    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Blog",      "name": "엠파시(Empasy) 기술 블로그",      "url": "https://empasy.io/blog.html",      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",      "publisher": {        "@type": "Organization",        "name": "엠파시(Empasy)",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.io/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html">    <meta property="og:url" content="https://empasy.io/blog.html">    <meta property="og:image" content="https://empasy.io/empasy-logo.png">    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="canonical" href="https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html">    <link rel="alternate" hreflang="ko" href="https://empasy.io/synceta-intelligent-regression-testing-pipeline.html" />    <link rel="alternate" hreflang="en" href="https://empasy.io/en/synceta-intelligent-regression-testing-pipeline.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/synceta-intelligent-regression-testing-pipeline.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.io/en/synceta-intelligent-regression-testing-pipeline.html" />    <meta property="og:url" content="https://empasy.io/synceta-intelligent-regression-testing-pipeline.html">    <meta property="og:locale" content="ko_KR">    <script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "Article",  "headline": "[Tech Blog] 기계어(JSON)에서 비즈니스 언어(Excel)로: SyncETA의 지능형 회귀 테스트 파이프라인 아키텍처",  "description": "LLM과 Playwright MCP를 결합하여 수작업 없는 No-Code 기반 지능형 QA 자동화 및 시각적 자가 치유(Self-Healing) 엔진을 구현한 SyncETA 아키텍처 리뷰.",  "author": {    "@type": "Organization",    "name": "Empasy Engineering Team",    "url": "https://empasy.io"  },  "publisher": {    "@type": "Organization",    "name": "Empasy",    "logo": {      "@type": "ImageObject",      "url": "https://empasy.io/assets/logo.png"    }  },  "url": "https://empasy.io/synceta-intelligent-regression-testing-pipeline.html"}    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <script type="module" crossorigin src="/assets/ko_blog_synceta-intelligent-regression-testing-pipeline-DWWeyK8x.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/i18n-BT8oeUrW.js">
   <link rel="stylesheet" crossorigin href="/assets/i18n-C_Jp-ymm.css">
@@ -39,6 +39,8 @@
                 <a href="../../ko/solutions/sync-cms.html">SyncCMS</a>
                 <a href="../../ko/solutions/sync-crawl.html">SyncCrawl</a>
                 <a href="../../ko/solutions/sync-eta.html">SyncEta</a>
+                <a href="../../ko/solutions/sync-llm.html">SyncLLM</a>
+                <a href="../../ko/solutions/sync-insight.html">SyncInsight</a>
             </div>
         </div>
         <!-- 3. Insights Group (NEW) -->
@@ -54,8 +56,11 @@
         
         <a href="../../ko/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
         
-        <!-- Top-level SyncEta link added as requested -->
-        <a href="../../ko/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
+        <!-- Documentation link -->
+        <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Docs <i class="fas fa-external-link-alt" style="font-size:0.75em; margin-left:2px; opacity:0.7;"></i></a>
+    
+        <!-- Top-level SyncEta link -->
+        <a href="../../ko/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta</a>
     </nav>
                 <div class="nav-actions">
                     <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
@@ -106,6 +111,8 @@
                 <a href="../../ko/solutions/sync-cms.html">SyncCMS</a>
                 <a href="../../ko/solutions/sync-crawl.html">SyncCrawl</a>
                 <a href="../../ko/solutions/sync-eta.html">SyncEta</a>
+                <a href="../../ko/solutions/sync-llm.html">SyncLLM</a>
+                <a href="../../ko/solutions/sync-insight.html">SyncInsight</a>
             </div>
         </div>
         <!-- 3. Insights Group (NEW) -->
@@ -121,8 +128,11 @@
         
         <a href="../../ko/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
         
-        <!-- Top-level SyncEta link added as requested -->
-        <a href="../../ko/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
+        <!-- Documentation link -->
+        <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Docs <i class="fas fa-external-link-alt" style="font-size:0.75em; margin-left:2px; opacity:0.7;"></i></a>
+    
+        <!-- Top-level SyncEta link -->
+        <a href="../../ko/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta</a>
     </nav>
                 <div class="nav-actions">
                     <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
@@ -191,7 +201,7 @@
         <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. 주요 엔지니어링 고도화 성과</h2>
         
         <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">① Headless Automation Pipeline & 외부 시스템 연동 (RESTful API)</h3>
-        <p>외부 시스템이나 CI/CD 파이프라인에서 자연어 명령어 텍스트만 전송하면 즉각 백그라운드에서 테스트를 완주하는 완벽한 무인 자동화 고리를 제공합니다.</p>
+        <p>외부 시스템이나 CI/CD 파이프라인에서 자연어 명령어 텍스트만 전송하면 즉각 백그라운드에서 테스트를 완주하는 안정적인 자동화 고리를 제공합니다.</p>
         <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
             <li style="margin-bottom: 0.5rem;"><strong>Inbound 인터페이스 (POST <code>/api/v1/execute/natural-language</code>):</strong> 외부에서 프로젝트 ID와 자연어 시나리오("학생 계정 로그인 후 AI 진단평가 메뉴 진입")를 수신하면, 내장된 <strong>LLM 엔진</strong>이 문맥을 분석하여 <code>Login</code> → <code>Navigate</code> → <code>Verify Element</code> 구조의 Playwright-MCP 명령어로 실시간 변환합니다.</li>
             <li style="margin-bottom: 0.5rem;"><strong>동영상 증적 자동 매핑:</strong> 브라우저를 화면에 띄우지 않는 <strong>Headless 모드</strong>로 고속 병렬 기동하면서 실행 전 과정을 <code>.webm</code> 포맷 영상으로 실시간 녹화하며, 테스트 종료 후 <strong>AWS S3 버킷</strong>에 자동 업로드하고 고유 Public URL과 Pass/Fail 상태 로그를 외부 Callback URL로 즉시 반환(Outbound API)합니다.</li>
@@ -218,7 +228,7 @@
         <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. 엔터프라이즈 도입 성과 및 기대 효과</h2>
         <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
             <li style="margin-bottom: 0.5rem;"><strong>QA 설계 및 작성 공수 80% 절감:</strong> 국제 표준 포맷의 자연어 엑셀 양식으로 소통할 수 있어, 코딩 지식이 없는 현업 담당자, 기획자(PL)도 즉시 품질 자산을 설계 및 검증할 수 있는 <strong>'QA 민주화'</strong> 환경을 제공합니다.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>보안 퍼스트 로컬 LLM 생태계:</strong> 기업의 민감 데이터나 테스트 환경 정보 유출 리스크를 방지하기 위해, Docker 기반의 완전한 사내 폐쇄망 <strong>온프레미스(On-premise)</strong> 및 격리 클라우드 하이브리드 인프라 아키텍처로 Local LLM 모델 구축을 완벽히 지원합니다.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>보안 퍼스트 로컬 LLM 생태계:</strong> 기업의 민감 데이터나 테스트 환경 정보 유출 리스크를 방지하기 위해, Docker 기반의 완전한 사내 폐쇄망 <strong>온프레미스(On-premise)</strong> 및 격리 클라우드 하이브리드 인프라 아키텍처로 Local LLM 모델 구축을 안정적으로 지원합니다.</li>
         </ul>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
@@ -250,9 +260,10 @@
                         <i class="fas fa-book"></i> Documentation
                     </a>
                 </div>
-                <address style="font-style: normal; color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.6;">
+                <address style="font-style: normal; color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">
                     <strong style="color: rgba(255, 255, 255, 0.9);">(주)엠파시 (Empasy IT Corp.)</strong><br>
                     엔터프라이즈 B2B 소프트웨어 및 AI 에이전트(SyncSeries) 개발사<br>
+                    <span style="color: rgba(255, 255, 255, 0.85);">도입 문의 : <a href="mailto:poh@empasy.com" style="color: inherit; text-decoration: underline;">poh@empasy.com</a> &nbsp;|&nbsp; 기술 지원 : <a href="tel:0507-1360-8169" style="color: inherit; text-decoration: none;">0507-1360-8169</a></span><br>
                     Seoul, South Korea
                 </address>
             </div>
@@ -262,3 +273,4 @@
     <!-- Scripts -->
 </body>
 </html>
+

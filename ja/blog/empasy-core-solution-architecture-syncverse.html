@@ -7,7 +7,7 @@
     <meta property="og:title" content="Empasy | Empasy core solution architecture syncverse">
     <meta property="og:description" content="SyncVerseは異機種サービスを統合するLLMベースのAIオーケストレーションプラットフォームです。インテリジェントワークフローを完成させます。">
     <meta property="og:type" content="website">
-    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Blog",      "name": "엠파시(Empasy) 기술 블로그",      "url": "https://empasy.com/blog.html",      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",      "publisher": {        "@type": "Organization",        "name": "엠파시(Empasy)",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.com/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.com/ja/blog/empasy-core-solution-architecture-syncverse.html">    <meta property="og:url" content="https://empasy.com/blog.html">    <meta property="og:image" content="https://empasy.com/empasy-logo.png">    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="canonical" href="https://empasy.com/ja/blog/empasy-core-solution-architecture-syncverse.html">    <link rel="alternate" hreflang="ko" href="https://empasy.com/empasy-core-solution-architecture-syncverse.html" />    <link rel="alternate" hreflang="en" href="https://empasy.com/en/empasy-core-solution-architecture-syncverse.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/empasy-core-solution-architecture-syncverse.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/empasy-core-solution-architecture-syncverse.html" />    <meta property="og:url" content="https://empasy.com/ja/empasy-core-solution-architecture-syncverse.html">    <meta property="og:locale" content="ja_JP">    <script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "Article",  "headline": "Empasy技術ブログ：AI自律運用エコシステム(SyncVerse)を支えるコアソリューションアーキテクチャ分析",  "description": "SyncEta、SyncCMS、SyncBoot、SyncVerse、SyncInsightなど、Empasyの5大コアソリューションの技術的課題とエンジニアリングによる解決策を深掘りします。",  "author": {    "@type": "Organization",    "name": "Empasy Engineering Team",    "url": "https://empasy.com"  },  "publisher": {    "@type": "Organization",    "name": "Empasy",    "logo": {      "@type": "ImageObject",      "url": "https://empasy.com/assets/logo.png"    }  },  "url": "https://empasy.com/ja/empasy-core-solution-architecture-syncverse.html"}    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Blog",      "name": "엠파시(Empasy) 기술 블로그",      "url": "https://empasy.io/blog.html",      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",      "publisher": {        "@type": "Organization",        "name": "엠파시(Empasy)",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.io/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.io/ja/blog/empasy-core-solution-architecture-syncverse.html">    <meta property="og:url" content="https://empasy.io/blog.html">    <meta property="og:image" content="https://empasy.io/empasy-logo.png">    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="canonical" href="https://empasy.io/ja/blog/empasy-core-solution-architecture-syncverse.html">    <link rel="alternate" hreflang="ko" href="https://empasy.io/empasy-core-solution-architecture-syncverse.html" />    <link rel="alternate" hreflang="en" href="https://empasy.io/en/empasy-core-solution-architecture-syncverse.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/empasy-core-solution-architecture-syncverse.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.io/en/empasy-core-solution-architecture-syncverse.html" />    <meta property="og:url" content="https://empasy.io/ja/empasy-core-solution-architecture-syncverse.html">    <meta property="og:locale" content="ja_JP">    <script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "Article",  "headline": "Empasy技術ブログ：AI自律運用エコシステム(SyncVerse)を支えるコアソリューションアーキテクチャ分析",  "description": "SyncEta、SyncCMS、SyncBoot、SyncVerse、SyncInsightなど、Empasyの5大コアソリューションの技術的課題とエンジニアリングによる解決策を深掘りします。",  "author": {    "@type": "Organization",    "name": "Empasy Engineering Team",    "url": "https://empasy.io"  },  "publisher": {    "@type": "Organization",    "name": "Empasy",    "logo": {      "@type": "ImageObject",      "url": "https://empasy.io/assets/logo.png"    }  },  "url": "https://empasy.io/ja/empasy-core-solution-architecture-syncverse.html"}    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <script type="module" crossorigin src="/assets/ja_blog_empasy-core-solution-architecture-syncverse-DWWeyK8x.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/i18n-BT8oeUrW.js">
   <link rel="stylesheet" crossorigin href="/assets/i18n-C_Jp-ymm.css">
@@ -25,9 +25,9 @@
         <div class="dropdown">
             <a href="../../ja/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
             <div class="dropdown-content">
-                <a href="../../ja/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
-                <a href="../../ja/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
-                <a href="../../ja/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
+                <a href="../../ja/pages/index.html#philosophy" data-i18n="nav.about">会社哲学</a>
+                <a href="../../ja/pages/vision.html" data-i18n="nav.vision">ビジョン2026</a>
+                <a href="../../ja/pages/team.html" data-i18n="nav.team">開発ストーリー</a>
             </div>
         </div>
         
@@ -39,6 +39,8 @@
                 <a href="../../ja/solutions/sync-cms.html">SyncCMS</a>
                 <a href="../../ja/solutions/sync-crawl.html">SyncCrawl</a>
                 <a href="../../ja/solutions/sync-eta.html">SyncEta</a>
+                <a href="../../ja/solutions/sync-llm.html">SyncLLM</a>
+                <a href="../../ja/solutions/sync-insight.html">SyncInsight</a>
             </div>
         </div>
         <!-- 3. Insights Group (NEW) -->
@@ -47,15 +49,18 @@
             <div class="dropdown-content">
                 <a href="../../ja/blog/blog.html">Tech Blog</a>
                 <a href="../../ja/pages/faq.html">FAQ</a>
-                <a href="../../ja/blog/case-study-finance.html">Case Studies</a>
+                <a href="../../ja/blog/case-study-finance.html">導入事例</a>
             </div>
         </div>
     
         
-        <a href="../../ja/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
+        <a href="../../ja/pages/clients.html" data-i18n="nav.clients">導入実績</a>
         
-        <!-- Top-level SyncEta link added as requested -->
-        <a href="../../ja/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
+        <!-- Documentation link -->
+        <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Docs <i class="fas fa-external-link-alt" style="font-size:0.75em; margin-left:2px; opacity:0.7;"></i></a>
+    
+        <!-- Top-level SyncEta link -->
+        <a href="../../ja/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta</a>
     </nav>
                 <div class="nav-actions">
                     <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
@@ -92,9 +97,9 @@
         <div class="dropdown">
             <a href="../../ja/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
             <div class="dropdown-content">
-                <a href="../../ja/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
-                <a href="../../ja/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
-                <a href="../../ja/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
+                <a href="../../ja/pages/index.html#philosophy" data-i18n="nav.about">会社哲学</a>
+                <a href="../../ja/pages/vision.html" data-i18n="nav.vision">ビジョン2026</a>
+                <a href="../../ja/pages/team.html" data-i18n="nav.team">開発ストーリー</a>
             </div>
         </div>
         
@@ -106,6 +111,8 @@
                 <a href="../../ja/solutions/sync-cms.html">SyncCMS</a>
                 <a href="../../ja/solutions/sync-crawl.html">SyncCrawl</a>
                 <a href="../../ja/solutions/sync-eta.html">SyncEta</a>
+                <a href="../../ja/solutions/sync-llm.html">SyncLLM</a>
+                <a href="../../ja/solutions/sync-insight.html">SyncInsight</a>
             </div>
         </div>
         <!-- 3. Insights Group (NEW) -->
@@ -114,15 +121,18 @@
             <div class="dropdown-content">
                 <a href="../../ja/blog/blog.html">Tech Blog</a>
                 <a href="../../ja/pages/faq.html">FAQ</a>
-                <a href="../../ja/blog/case-study-finance.html">Case Studies</a>
+                <a href="../../ja/blog/case-study-finance.html">導入事例</a>
             </div>
         </div>
     
         
-        <a href="../../ja/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
+        <a href="../../ja/pages/clients.html" data-i18n="nav.clients">導入実績</a>
         
-        <!-- Top-level SyncEta link added as requested -->
-        <a href="../../ja/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
+        <!-- Documentation link -->
+        <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Docs <i class="fas fa-external-link-alt" style="font-size:0.75em; margin-left:2px; opacity:0.7;"></i></a>
+    
+        <!-- Top-level SyncEta link -->
+        <a href="../../ja/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta</a>
     </nav>
                 <div class="nav-actions">
                     <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
@@ -140,41 +150,41 @@
             </div>
         </header>    <div style="line-height: 1.8; color: var(--text-primary);">
         <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">01. SyncEta: No-CodeベースのインテリジェントQA自動化と視覚的自己修復(Self-Healing)エンジン</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">💡 技術的ペインポイント：「メンテナンスの地獄(Maintenance Hell)」と回帰テストのボトルネック</h3>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> 技術的ペインポイント：「メンテナンスの地獄(Maintenance Hell)」と回帰テストのボトルネック</h3>
         <p>現代のWebアプリケーションのフロントエンドでは、UIコンポーネントの頻繁なリニューアルと動的なDOM構造の変化が日常的です。従来のSeleniumや一般的なE2Eテストツールは、UIの小さな識別子(ID、Class)や1pxのレイアウト変更でも既存のテストスクリプトが簡単に壊れてしまう慢性的なメンテナンス問題を抱えており、これはアジャイルなデプロイサイクルを阻害する致命的なボトルネックでした。</p>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">🚀 SyncEtaのエンジニアリングソリューション：Playwright MCPとLLMの閉ループ(Closed-loop)</h3>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> SyncEtaのエンジニアリングソリューション：Playwright MCPとLLMの閉ループ(Closed-loop)</h3>
         <p>SyncEtaは、コーディング知識のない非専門家でも日常的なWebブラウジングだけで完璧なテストシナリオを資産化できる<strong>No-Code/Codelessプラットフォーム</strong>を目指しています。</p>
         
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
         <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">02. SyncCMS: Javaの安定性に基づくグローバルマルチWebサイトコンテンツ管理システム</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">💡 技術的ペインポイント：IT部門への依存と多言語/マルチサイトの断片化</h3>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> 技術的ペインポイント：IT部門への依存と多言語/マルチサイトの断片化</h3>
         <p>グローバルエンタープライズ環境では、国別、ブランド別に数十のマーケティングサイトが断片化されて運用されることがよくあります。簡単なテキストフレーズやバナーのレイアウトを修正するだけでも、IT開発チームのソースコード修正とデプロイパイプラインの停止フェーズを待たなければならず、マーケティングのゴールデンタイムを逃す高コストな構造を引き起こします。</p>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">🚀 SyncCMSのエンジニアリングソリューション：レゴブロック式コンポーネントの組み立てとWebの開放性</h3>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> SyncCMSのエンジニアリングソリューション：レゴブロック式コンポーネントの組み立てとWebの開放性</h3>
         <p>SyncCMSは開発者への依存構造から脱却し、現場のマーケターやプランナーが実際の画面上で直感的にWebエコシステムを完全に制御できる高性能アーキテクチャを提供します。</p>
         
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
         <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">03. SyncBoot: エンタープライズクラウドネイティブ移行のためのオープンソースベースMSA開発プラットフォーム</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">💡 技術的ペインポイント：硬直したMonolithic構造と大規模なMSA構築コスト</h3>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> 技術的ペインポイント：硬直したMonolithic構造と大規模なMSA構築コスト</h3>
         <p>ビジネスが巨大になるにつれて、既存の単一巨大レガシーシステム(Monolithic)はコード間の強い結合度により、わずかな修正でもシステム全体の障害を引き起こします。しかし、これをマイクロサービスアーキテクチャ(MSA)に移行するには、複雑な分散データ処理、Kubernetesインフラストラクチャの設定、多数のクラウド専門人材、数ヶ月にわたる初期インフラ構築リソースが投入される参入障壁が存在します。</p>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">🚀 SyncBootのエンジニアリングソリューション：すぐに使える標準化フルスタックアーキテクチャ</h3>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> SyncBootのエンジニアリングソリューション：すぐに使える標準化フルスタックアーキテクチャ</h3>
         <p>SyncBootは、JavaおよびSpring Boot標準アーキテクチャに基づいて、エンタープライズが直面するMSA移行インフラ設定段階をパッケージ化し、コアビジネスロジックにのみ集中できる<strong>超高速MSA加速インフラベルト</strong>を即座に稼働させます。</p>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
         <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">04. SyncVerse: エージェント間の文脈をつなぐMCPベースの次世代AI DLCオーケストレーションプラットフォーム</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">💡 技術的ペインポイント：AIツールの断絶と断片化(Silo現象)</h3>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> 技術的ペインポイント：AIツールの断絶と断片化(Silo現象)</h3>
         <p>最近、開発、テスト、コンテンツ生成など個別の領域に数多くのAI補助ツールが導入されていますが、これらのツールが互いに有機的にコミュニケーションできず、各段階の文脈(Context)が断絶していれば、真の意味での無人自律運用パイプラインを構築することはできません。</p>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">🚀 SyncVerseのエンジニアリングソリューション：Agent-to-Agent(A2A)通信プロトコルに基づく完全無人パイプライン</h3>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> SyncVerseのエンジニアリングソリューション：Agent-to-Agent(A2A)通信プロトコルに基づく完全無人パイプライン</h3>
         <p>SyncVerseは、Empasyの検証済み4大ソリューション(SyncBoot, SyncCMS, SyncEta, SyncCrawl)を独立して思考し判断する<strong>「独立型AIエージェント(Agent)」</strong>へと進化させ、これらを一つに総括調整する<strong>中央管制塔プラットフォーム</strong>です。</p>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
 
         <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">05. SyncInsight: オンプレミス(On-premise)のセキュリティを貫く最上位の意思決定インテリジェンスプラットフォーム</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">💡 技術的ペインポイント：社内コアデータの流出リスクと断片化されたサイロデータの分析の限界</h3>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> 技術的ペインポイント：社内コアデータの流出リスクと断片化されたサイロデータの分析の限界</h3>
         <p>高付加価値情報を分析するためにパブリッククラウドベースの大型LLMサービスを無差別に利用すると、機密の企業秘密や個人情報が外部に流出する深刻なセキュリティ規制リスクに直面します。また、内部データが部門別のシステムに徹底的に隔離(Silo)されているため、統合的な洞察の導出が不可能でした。</p>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">🚀 SyncInsightのエンジニアリングソリューション：100%社内網内在化構造とMulti-Agent交差分析</h3>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> SyncInsightのエンジニアリングソリューション：100%社内網内在化構造とMulti-Agent交差分析</h3>
         <p>SyncInsightは、単なるITインフラ自動化の段階を超えて、企業内部資産の無欠陥の知識化と最高経営陣(C-Level)の戦略的ビジネスアクションを主導する<strong>最上位のAI頭脳プラットフォーム</strong>です。</p>
     </div>
 </article>
@@ -202,9 +212,10 @@
                         <i class="fas fa-book"></i> Documentation
                     </a>
                 </div>
-                <address style="font-style: normal; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
+                <address style="font-style: normal; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.8;">
                     <strong>(주)엠파시 (Empasy IT Corp.)</strong><br>
                     エンタープライズB2BソフトウェアおよびAIエージェント（SyncSeries）開発会社<br>
+                    <span>導入のお問い合わせ : <a href="mailto:poh@empasy.com" style="color: inherit; text-decoration: underline;">poh@empasy.com</a> &nbsp;|&nbsp; 技術サポート : <a href="tel:+82-507-1360-8169" style="color: inherit; text-decoration: none;">+82-507-1360-8169</a></span><br>
                     Seoul, South Korea
                 </address>
             </div>

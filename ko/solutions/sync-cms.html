@@ -1,180 +1,121 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>엠파시(Empasy) | SyncCMS - 기업용 AI CMS</title>
-    <meta name="description" content="SyncCMS는 보안과 성능이 검증된 자바/스프링 기반 기업용 웹 콘텐츠 관리 시스템입니다. 헤드리스(Headless) 환경과 대규모 포털 관리를 완벽하게 지원합니다.">
-    <meta name="keywords" content="엔터프라이즈 AI 에코시스템, 기업용 AI 통합 플랫폼, 디지털 전환 AI 아키텍처, 엠파시, Empasy, 기업용 웹 콘텐츠 관리 시스템, 자바/스프링 기반 엔터프라이즈 CMS, 헤드리스 CMS, 대규모 포털 웹사이트 관리 솔루션, 보안인증 대기업 공공기관용 CMS">
-    <meta property="og:title" content="엠파시(Empasy) | SyncCMS - 기업용 AI CMS">
-    <meta property="og:description" content="SyncCMS는 보안과 성능이 검증된 자바/스프링 기반 기업용 웹 콘텐츠 관리 시스템입니다. 헤드리스(Headless) 환경과 대규모 포털 관리를 완벽하게 지원합니다.">
+    <title>SyncCMS - 대화형 콘텐츠 퍼블리싱 및 엔터프라이즈 CMS | 엠파시(Empasy)</title>
+    <meta name="description" content="SyncCMS는 자연어 명령 기반 레이아웃 생성과 글로벌 다국어 다국어 동기화를 지원하는 엔터프라이즈 웹 콘텐츠 관리 시스템(CMS)입니다.">
+    <meta name="keywords" content="SyncCMS, 엔터프라이즈 CMS, 헤드리스 CMS, 다국어 퍼블리싱, 웹 콘텐츠 관리, 엠파시, Empasy">
+    <meta property="og:title" content="SyncCMS - 대화형 콘텐츠 퍼블리싱 및 엔터프라이즈 CMS | 엠파시(Empasy)">
+    <meta property="og:description" content="SyncCMS는 자연어 명령 기반 레이아웃 생성과 다국어 동기화를 지원하는 엔터프라이즈 CMS입니다.">
     <meta property="og:type" content="website">
-    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <style>
+    <meta property="og:url" content="https://empasy.io/ko/solutions/sync-cms.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Empasy">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
         .page-header { padding: 150px 0 80px; text-align: center; }
         .page-title { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; color: var(--text-primary); }
         .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto; }
-/* --------------------------------------
-   Global Enrichments for Sub-pages 
--------------------------------------- */
-.hero-grid-bg {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image: 
-        linear-gradient(rgba(13, 148, 136, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(13, 148, 136, 0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
-    z-index: 1;
-    opacity: 0.8;
-    pointer-events: none;
-}
-.hero-blur-circle {
-    position: absolute;
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(13, 148, 136, 0.1) 0%, transparent 70%);
-    border-radius: 50%;
-    top: -100px; right: -200px;
-    z-index: 0;
-    pointer-events: none;
-}
-/* Premium FAQ */
-.faq-item {
-    border: none !important;
-}
-.faq-item details {
-    background: var(--surface-color);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-}
-.faq-item details[open] {
-    box-shadow: 0 10px 25px rgba(13, 148, 136, 0.08);
-    border-color: rgba(13, 148, 136, 0.5);
-}
-.faq-item summary {
-    padding: 1.5rem 2rem !important;
-    background: transparent !important;
-}
-.faq-answer {
-    padding: 0 2rem 1.5rem !important;
-}
-/* ROI Calculator Panel */
-.roi-calculator {
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    border-radius: 24px;
-    padding: 3rem 4rem;
-    color: white;
-    box-shadow: 0 30px 60px -12px rgba(0,0,0,0.4);
-    margin: 5rem auto;
-    text-align: center;
-    max-width: 900px;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-.roi-calculator::before {
-    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-    background: radial-gradient(circle, rgba(13, 148, 136, 0.15) 0%, transparent 50%);
-    z-index: 0; pointer-events: none;
-}
-.roi-content { position: relative; z-index: 1; }
-.roi-number { font-size: 5rem; font-weight: 800; color: #2dd4bf; margin: 1rem 0; line-height: 1; font-family: var(--font-mono); }
-/* Live Preview Terminal */
-.live-preview {
-    background: #0f172a; border-radius: 12px; border: 1px solid #334155;
-    text-align: left; overflow: hidden; margin: 3rem auto 0;
-    max-width: 600px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
-}
-.live-preview-header {
-    background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; border-bottom: 1px solid #334155;
-}
-.live-preview-dot { width: 12px; height: 12px; border-radius: 50%; }
-.live-preview-body { padding: 1.5rem; font-family: var(--font-mono); font-size: 0.95rem; color: #e2e8f0; line-height: 1.6; }
-    </style>        <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Corporation",      "name": "엠파시(Empasy)",      "alternateName": ["엠파시 IT", "Empasy AI", "엠파시 소프트웨어"],      "url": "https://empasy.com/",      "description": "엠파시(Empasy)는 B2B 엔터프라이즈 AI 소프트웨어 개발 IT 기업입니다.",      "sameAs": [        "https://github.com/DramaticCollaboration",        "../../docs/index.html"      ]    }    </script>    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "SoftwareApplication",      "name": "SyncCMS",      "applicationCategory": "BusinessApplication",      "operatingSystem": "Web",      "description": "SyncCMS는 엠파시(Empasy)가 개발한 대화형 AI 퍼블리셔 및 통합 콘텐츠 관리 플랫폼입니다.",      "sameAs": [        "https://github.com/DramaticCollaboration",        "../../docs/index.html"      ]    }    </script><script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "FAQPage",  "mainEntity": [    {      "@type": "Question",      "name": "코딩 지식이 없어도 페이지를 만들 수 있나요?",      "acceptedAnswer": {        "@type": "Answer",        "text": "네, 대화형 AI가 사용자의 자연어 명령을 이해하고 레이아웃과 콘텐츠를 동시에 생성합니다."      }    },    {      "@type": "Question",      "name": "다국어 번역 기능은 어떻게 작동하나요?",      "acceptedAnswer": {        "@type": "Answer",        "text": "본문을 수정하면 15개국 이상의 다국어 리소스가 AI 문맥 번역을 통해 자동으로 동기화됩니다."      }    },    {      "@type": "Question",      "name": "기존의 사내 레거시 데이터베이스와 연동되나요?",      "acceptedAnswer": {        "@type": "Answer",        "text": "SyncCMS는 유연한 API 브릿지를 제공하여 기존 데이터베이스 및 사내 ERP와 매끄럽게 연동됩니다."      }    }  ]}</script>    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.com/ko/solutions/sync-cms.html">    <link rel="alternate" hreflang="ko" href="https://empasy.com/sync-cms.html" />    <link rel="alternate" hreflang="en" href="https://empasy.com/en/sync-cms.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/sync-cms.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.com/sync-cms.html" />    <!-- Open Graph -->    <meta property="og:url" content="https://empasy.com/sync-cms.html">    <meta property="og:image" content="https://empasy.com/empasy-logo.png">    <!-- Twitter Card -->    <meta name="twitter:card" content="summary_large_image">    <meta name="twitter:title" content="SyncCMS - 대화형 AI 퍼블리셔 및 통합 콘텐츠 관리 플랫폼 | Empasy">    <meta name="twitter:description" content="SyncCMS는 자연어 명령으로 웹 레이아웃과 콘텐츠를 동시 생성하는 AI 퍼블리셔입니다. 레거시 CMS의 한계를 넘어 실시간 다국어 지원과 자동화된 유지보수를 제공합니다.">    <meta name="twitter:image" content="https://empasy.com/empasy-logo.png">    <!-- AI & Crawling Optimization -->    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><script type="application/ld+json">{  "@context": "https://schema.org/",  "@type": "Product",  "name": "SyncSeries",  "brand": {    "@type": "Brand",    "name": "Empasy"  },  "description": "Enterprise AI Agent & Automation Solutions"}</script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    </style>
+    <meta name="geo.region" content="KR-11" />
+    <meta name="geo.placename" content="Seoul" />
+    <meta name="geo.position" content="37.5665;126.9780" />
+    <meta name="ICBM" content="37.5665, 126.9780" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SyncCMS",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, Cloud",
+      "description": "대화형 콘텐츠 퍼블리싱 및 엔터프라이즈 CMS 에이전트",
+      "url": "https://empasy.io/ko/solutions/sync-cms.html"
+    }
+    </script>
+    <!-- SEO Tags -->
+    <link rel="canonical" href="https://empasy.io/ko/solutions/sync-cms.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-cms.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-cms.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-cms.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-cms.html" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <script type="module" crossorigin src="/assets/ko_solutions_sync-cms-DWWeyK8x.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/i18n-BT8oeUrW.js">
   <link rel="stylesheet" crossorigin href="/assets/i18n-C_Jp-ymm.css">
 </head>
 <body class="theme-cms">
-    <!-- AI Search Optimization (AIO) Context Block -->
-    <article class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
-        <h1>What is Empasy SyncCMS?</h1>
-        <p>SyncCMS is a Conversational AI Publisher and next-generation Content Management System developed by Empasy. It allows users to generate, modify, and publish complete web layouts and multilingual content simultaneously using simple natural language commands.</p>
-        <h2>Key Features of SyncCMS</h2>
-        <ul>
-            <li><strong>Conversational Publishing:</strong> Say goodbye to drag-and-drop. Just type what you want, and SyncCMS builds the UI components instantly.</li>
-            <li><strong>Real-time Multilingual Support:</strong> Automatically translates and culturalizes content for global audiences without manual translation efforts.</li>
-            <li><strong>Dynamic Content Assembly:</strong> Bypasses traditional static CMS bottlenecks, creating highly responsive and personalized enterprise websites.</li>
-        </ul>
-        <p>SyncCMS empowers marketers and operators to manage enterprise-scale web assets autonomously, drastically reducing time-to-market and operational costs.</p>
-    </article>
-
-                                    <header class="glass-header">
-                                            <div class="container nav-container">
-                                                <div class="logo">
-                                                    <a href="../../ko/pages/index.html"><img src="/assets/empasy-logo-Dx2jve9d.png" alt="EMPASY" class="logo-img"></a>
-                                                </div>
-                                                <nav class="nav-links">
-                                        <!-- 1. Company Group -->
-                                        <div class="dropdown">
-                                            <a href="../../ko/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-                                            <div class="dropdown-content">
-                                                <a href="../../ko/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
-                                                <a href="../../ko/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
-                                                <a href="../../ko/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- 2. Sync Series Group -->
-                                        <div class="dropdown">
-                                            <a href="../../ko/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-                                            <div class="dropdown-content">
-                                                <a href="../../ko/solutions/sync-boot.html">SyncBoot</a>
-                                                <a href="../../ko/solutions/sync-cms.html">SyncCMS</a>
-                                                <a href="../../ko/solutions/sync-crawl.html">SyncCrawl</a>
-                                                <a href="../../ko/solutions/sync-eta.html">SyncEta</a>
-                                            </div>
-                                        </div>
-                                        <!-- 3. Insights Group (NEW) -->
-                                        <div class="dropdown">
-                                            <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
-                                            <div class="dropdown-content">
-                                                <a href="../../ko/blog/blog.html">Tech Blog</a>
-                                                <a href="../../ko/pages/faq.html">FAQ</a>
-                                                <a href="../../ko/blog/case-study-finance.html">고객 사례 상세</a>
-                                            </div>
-                                        </div>
-                                    
-                                        
-                                        <a href="../../ko/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
-                                        
-                                        <!-- Top-level SyncEta link added as requested -->
-                                        <a href="../../ko/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
-                                    </nav>
-                                                <div class="nav-actions">
-                                                    <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
-                                                        <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:1rem; padding: 0.5rem; cursor: pointer; display:flex; align-items:center; gap:6px;">
-                                                            <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> KO</span>
-                                                        </button>
-                                                        <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
-                                                            <a href="../../ko/pages/index.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
-                                                            <a href="../../en/pages/index.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
-                                                            <a href="../../ja/pages/index.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JP</a>
-                                                        </div>
-                                                    </div>
-                                                    <a href="../../ko/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact">Contact</a>
-                                                </div>
-                                            </div>
-                                        </header>
+    <header class="glass-header">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="../../ko/pages/index.html"><img src="/assets/empasy-logo-Dx2jve9d.png" alt="EMPASY" class="logo-img"></a>
+                </div>
+                <nav class="nav-links">
+        <!-- 1. Company Group -->
+        <div class="dropdown">
+            <a href="../../ko/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+            <div class="dropdown-content">
+                <a href="../../ko/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
+                <a href="../../ko/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
+                <a href="../../ko/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
+            </div>
+        </div>
+        
+        <!-- 2. Sync Series Group -->
+        <div class="dropdown">
+            <a href="../../ko/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+            <div class="dropdown-content">
+                <a href="../../ko/solutions/sync-boot.html">SyncBoot</a>
+                <a href="../../ko/solutions/sync-cms.html">SyncCMS</a>
+                <a href="../../ko/solutions/sync-crawl.html">SyncCrawl</a>
+                <a href="../../ko/solutions/sync-eta.html">SyncEta</a>
+                <a href="../../ko/solutions/sync-llm.html">SyncLLM</a>
+                <a href="../../ko/solutions/sync-insight.html">SyncInsight</a>
+            </div>
+        </div>
+        <!-- 3. Insights Group (NEW) -->
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+            <div class="dropdown-content">
+                <a href="../../ko/blog/blog.html">Tech Blog</a>
+                <a href="../../ko/pages/faq.html">FAQ</a>
+                <a href="../../ko/blog/case-study-finance.html">고객 사례 상세</a>
+            </div>
+        </div>
+    
+        
+        <a href="../../ko/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
+        
+        <!-- Documentation link -->
+        <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Docs <i class="fas fa-external-link-alt" style="font-size:0.75em; margin-left:2px; opacity:0.7;"></i></a>
+    
+        <!-- Top-level SyncEta link -->
+        <a href="../../ko/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta</a>
+    </nav>
+                <div class="nav-actions">
+                    <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
+                        <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:1rem; padding: 0.5rem; cursor: pointer; display:flex; align-items:center; gap:6px;">
+                            <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> KO</span>
+                        </button>
+                        <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
+                            <a href="../../ko/pages/index.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
+                            <a href="../../en/pages/index.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
+                            <a href="../../ja/pages/index.html" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JP</a>
+                        </div>
+                    </div>
+                    <a href="../../ko/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact">Contact</a>
+                </div>
+            </div>
+        </header>
     <main class="container">
         <div class="page-header fade-in-up" style="position: relative; overflow: hidden;">
             <div class="container" style="position: relative; z-index: 10;">
                 <span class="badge" data-i18n="cms.badge">Conversational Publisher Agent</span>
                 <h1 class="page-title">SyncCMS</h1>
-                <p class="page-subtitle">단 한 줄의 코드 없이, 대화만으로 엔터프라이즈급 글로벌 플랫폼을 생성하고 통합 관리하는 AI 퍼블리셔입니다.</p>
-                
-                <div class="mt-4">
-                    <div class="anim-cms-typing">"Build a global B2B marketing site in 3 languages..."</div>
+                <p class="page-subtitle">자연어 명령으로 레이아웃과 콘텐츠를 생성하고 다국어 자원을 실시간 관리하는 퍼블리셔 에이전트입니다.</p>
+                <div class="mt-4 flex-center" style="gap: 1rem;">
+                    <a href="../pages/contact.html" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 30px;">도입 문의</a>
                 </div>
             </div>
         </div>
@@ -184,65 +125,70 @@
                 <div class="vs-box vs-legacy">
                     <h4 data-i18n="cms.vs.legacy.title">기존 레거시 CMS</h4>
                     <ul class="vs-list">
-                        <li data-i18n="cms.vs.legacy.1">관리자가 일일이 복잡한 폼을 채워야 함</li>
-                        <li data-i18n="cms.vs.legacy.2">레이아웃 수정 시 개발자 공수 발생</li>
-                        <li data-i18n="cms.vs.legacy.3">국가별/언어별 페이지를 수동으로 번역 및 생성</li>
+                        <li>복잡한 관리자 폼 입력 및 템플릿 제약</li>
+                        <li>레이아웃 및 컴포넌트 수정 시 프론트엔드 개발 공수 발생</li>
+                        <li>국가별/언어별 페이지를 수동 번역 및 개별 등록</li>
                     </ul>
                 </div>
                 <div class="vs-box vs-agent">
                     <h4 data-i18n="cms.vs.agent.title">SyncCMS 에이전트</h4>
                     <ul class="vs-list">
-                        <li data-i18n="cms.vs.agent.1">자연어 명령만으로 레이아웃과 콘텐츠 동시 생성</li>
-                        <li data-i18n="cms.vs.agent.2">화면을 보며 '이 버튼 색상을 바꿔줘' 즉시 수정</li>
-                        <li data-i18n="cms.vs.agent.3">본문 수정 시 15개국 다국어 리소스 자동 문맥 번역</li>
+                        <li>자연어 명령 기반 레이아웃 및 콘텐츠 동시 생성</li>
+                        <li>실시간 화면 프리뷰 기반의 컴포넌트 스타일 즉시 수정</li>
+                        <li>본문 수정 시 글로벌 다국어 다국어 번역 리소스 자동 동기화</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="section-header text-center mt-4 mb-4">
-                <h2 class="section-title">핵심 기능 (Key Features)</h2>
+            <div class="section-header text-center mt-5 mb-4">
+                <h2 class="section-title">핵심 기능 및 기술 아키텍처</h2>
             </div>
             <div class="rich-features">
                 <div class="feature-item">
-                    <span class="feature-icon">🎙️</span>
-                    <h3>자연어 대화형 빌더</h3>
-                    <p>복잡한 코딩이나 드래그 앤 드롭조차 필요 없습니다. 에이전트와 대화하며 "봄 시즌 프로모션 페이지 만들어줘"라고 요청하면 즉시 구조와 콘텐츠를 설계합니다.</p>
+                    <span class="badge" style="margin-bottom: 0.8rem;">01</span>
+                    <h3>자연어 프롬프트 빌더</h3>
+                    <p>페이지 목적과 구성 요소를 자연어로 전달하면 디자인 시스템 가이드라인에 부합하는 컴포넌트 구조와 본문 초안을 자동 생성합니다.</p>
                 </div>
                 <div class="feature-item">
-                    <span class="feature-icon">🌍</span>
-                    <h3>글로벌 다중 도메인 관리</h3>
-                    <p>하나의 백오피스에서 미국, 일본, 유럽 등 15개국 사이트를 통합 관리합니다. 한 국가의 콘텐츠를 수정하면 언어별 문맥에 맞게 실시간 자동 번역 및 반영됩니다.</p>
+                    <span class="badge" style="margin-bottom: 0.8rem;">02</span>
+                    <h3>글로벌 다중 로케일 동기화</h3>
+                    <p>단일 관리 콘솔에서 한국어, 영어, 일본어 등 다국어 버전을 관리하며, 기준 콘텐츠 수정 시 다국어 번역 자원을 일괄 갱신합니다.</p>
                 </div>
                 <div class="feature-item">
-                    <span class="feature-icon">⚡</span>
-                    <h3>헤드리스(Headless) 구조</h3>
-                    <p>어떤 프론트엔드 프레임워크와도 유연하게 결합되는 API First 아키텍처를 제공합니다. 기존 인프라를 수정하지 않고 콘텐츠 파이프라인만 업그레이드할 수 있습니다.</p>
+                    <span class="badge" style="margin-bottom: 0.8rem;">03</span>
+                    <h3>Headless / Headful 하이브리드 아키텍처</h3>
+                    <p>Spring Boot 및 Freemarker 기반의 안정적인 서버 렌더링과 REST API를 통한 프론트엔드 연동을 모두 지원합니다.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">04</span>
+                    <h3>Adobe InDesign 지식그래프 연동 (Web + Print)</h3>
+                    <p>전용 InDesign 플러그인과 지식그래프 파이프라인을 통해 웹 콘텐츠와 출판 인쇄 조판 데이터를 단일 소스로 일체화 동기화합니다.</p>
                 </div>
             </div>
 
-            <div class="section-header text-center mt-4 mb-4" style="margin-top: 5rem;">
+            <div class="section-header text-center mt-5 mb-4" style="margin-top: 5rem;">
                 <h2 class="section-title">작동 프로세스 (How it Works)</h2>
             </div>
             <div class="process-steps">
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h4>명령 및 프롬프트 입력</h4>
-                        <p>마케터나 기획자가 기획안 텍스트나 자연어를 에이전트에게 전달합니다.</p>
+                        <h4>요구사항 입력</h4>
+                        <p>페이지 기획안 또는 원하는 섹션 구조를 텍스트로 에이전트에게 전달합니다.</p>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h4>레이아웃 및 콘텐츠 실시간 생성</h4>
-                        <p>에이전트가 최적의 UI 컴포넌트를 조합하고, SEO에 최적화된 마케팅 문구를 생성합니다.</p>
+                        <h4>레이아웃 및 콘텐츠 생성</h4>
+                        <p>디자인 시스템 컴포넌트를 조립하고 SEO 메타데이터와 본문 콘텐츠를 생성합니다.</p>
                     </div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h4>글로벌 동시 배포</h4>
-                        <p>다국어로 즉시 번역되어 전 세계 엣지 네트워크(CDN)를 통해 무지연 배포됩니다.</p>
+                        <h4>다국어 검수 및 배포</h4>
+                        <p>로케일별 번역 상태를 확인하고 정적 페이지 빌드 또는 API 캐시를 통해 배포합니다.</p>
                     </div>
                 </div>
             </div>
@@ -252,20 +198,20 @@
             <h2>자주 묻는 질문 (FAQ)</h2>
             <div class="faq-item">
                 <details>
-                    <summary>코딩 지식이 없어도 페이지를 만들 수 있나요?</summary>
-                    <div class="faq-answer">네, 대화형 AI가 사용자의 자연어 명령을 이해하고 레이아웃과 콘텐츠를 동시에 생성합니다.</div>
+                    <summary>비개발자도 신규 페이지를 제작할 수 있나요?</summary>
+                    <div class="faq-answer">네, 기획자가 자연어 명령과 프리뷰 화면을 통해 컴포넌트를 배치하고 콘텐츠를 편집할 수 있습니다.</div>
                 </details>
             </div>
             <div class="faq-item">
                 <details>
-                    <summary>다국어 번역 기능은 어떻게 작동하나요?</summary>
-                    <div class="faq-answer">본문을 수정하면 15개국 이상의 다국어 리소스가 AI 문맥 번역을 통해 자동으로 동기화됩니다.</div>
+                    <summary>다국어 번역 리소스는 어떻게 관리되나요?</summary>
+                    <div class="faq-answer">원문 수정 시 연결된 로케일 리소스 번역이 백그라운드에서 동기화되며, 관리자 검수를 거쳐 반영됩니다.</div>
                 </details>
             </div>
             <div class="faq-item">
                 <details>
-                    <summary>기존의 사내 레거시 데이터베이스와 연동되나요?</summary>
-                    <div class="faq-answer">SyncCMS는 유연한 API 브릿지를 제공하여 기존 데이터베이스 및 사내 ERP와 매끄럽게 연동됩니다.</div>
+                    <summary>기존 사내 레거시 시스템과 연동 가능한가요?</summary>
+                    <div class="faq-answer">표준 REST API 인터페이스를 제공하여 기존 사내 데이터베이스 및 SSO 인증 체계와 연동할 수 있습니다.</div>
                 </details>
             </div>
         </section>
@@ -290,14 +236,15 @@
                         <i class="fas fa-book"></i> Documentation
                     </a>
                 </div>
-                <address style="font-style: normal; color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.6;">
+                <address style="font-style: normal; color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">
                     <strong style="color: rgba(255, 255, 255, 0.9);">(주)엠파시 (Empasy IT Corp.)</strong><br>
                     엔터프라이즈 B2B 소프트웨어 및 AI 에이전트(SyncSeries) 개발사<br>
+                    <span style="color: rgba(255, 255, 255, 0.85);">도입 문의 : <a href="mailto:poh@empasy.com" style="color: inherit; text-decoration: underline;">poh@empasy.com</a> &nbsp;|&nbsp; 기술 지원 : <a href="tel:0507-1360-8169" style="color: inherit; text-decoration: none;">0507-1360-8169</a></span><br>
                     Seoul, South Korea
                 </address>
             </div>
     
             </div>
-        </footer>    
+        </footer>    
 </body>
 </html>

@@ -7,7 +7,7 @@
     <meta property="og:title" content="Empasy | Synceta intelligent regression testing pipeline">
     <meta property="og:description" content="SyncETA is an AI-powered web test automation solution with self-healing technology. Experience intelligent E2E regression testing surpassing Playwright and Selenium.">
     <meta property="og:type" content="website">
-    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Blog",      "name": "엠파시(Empasy) 기술 블로그",      "url": "https://empasy.com/blog.html",      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",      "publisher": {        "@type": "Organization",        "name": "엠파시(Empasy)",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.com/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.com/en/blog/synceta-intelligent-regression-testing-pipeline.html">    <meta property="og:url" content="https://empasy.com/blog.html">    <meta property="og:image" content="https://empasy.com/empasy-logo.png">    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="canonical" href="https://empasy.com/en/blog/synceta-intelligent-regression-testing-pipeline.html">    <link rel="alternate" hreflang="ko" href="https://empasy.com/synceta-intelligent-regression-testing-pipeline.html" />    <link rel="alternate" hreflang="en" href="https://empasy.com/en/synceta-intelligent-regression-testing-pipeline.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.com/ja/synceta-intelligent-regression-testing-pipeline.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.com/en/synceta-intelligent-regression-testing-pipeline.html" />    <meta property="og:url" content="https://empasy.com/synceta-intelligent-regression-testing-pipeline.html">    <meta property="og:locale" content="ko_KR">    <script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "Article",  "headline": "[Tech Blog] 기계어(JSON)에서 비즈니스 언어(Excel)로: SyncETA의 지능형 회귀 테스트 파이프라인 아키텍처",  "description": "LLM과 Playwright MCP를 결합하여 수작업 없는 No-Code 기반 지능형 QA 자동화 및 시각적 자가 치유(Self-Healing) 엔진을 구현한 SyncETA 아키텍처 리뷰.",  "author": {    "@type": "Organization",    "name": "Empasy Engineering Team",    "url": "https://empasy.com"  },  "publisher": {    "@type": "Organization",    "name": "Empasy",    "logo": {      "@type": "ImageObject",      "url": "https://empasy.com/assets/logo.png"    }  },  "url": "https://empasy.com/synceta-intelligent-regression-testing-pipeline.html"}    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Blog",      "name": "엠파시(Empasy) 기술 블로그",      "url": "https://empasy.io/blog.html",      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",      "publisher": {        "@type": "Organization",        "name": "엠파시(Empasy)",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.io/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.io/en/blog/synceta-intelligent-regression-testing-pipeline.html">    <meta property="og:url" content="https://empasy.io/blog.html">    <meta property="og:image" content="https://empasy.io/empasy-logo.png">    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="canonical" href="https://empasy.io/en/blog/synceta-intelligent-regression-testing-pipeline.html">    <link rel="alternate" hreflang="ko" href="https://empasy.io/synceta-intelligent-regression-testing-pipeline.html" />    <link rel="alternate" hreflang="en" href="https://empasy.io/en/synceta-intelligent-regression-testing-pipeline.html" />    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/synceta-intelligent-regression-testing-pipeline.html" />    <link rel="alternate" hreflang="x-default" href="https://empasy.io/en/synceta-intelligent-regression-testing-pipeline.html" />    <meta property="og:url" content="https://empasy.io/synceta-intelligent-regression-testing-pipeline.html">    <meta property="og:locale" content="ko_KR">    <script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "Article",  "headline": "[Tech Blog] 기계어(JSON)에서 비즈니스 언어(Excel)로: SyncETA의 지능형 회귀 테스트 파이프라인 아키텍처",  "description": "LLM과 Playwright MCP를 결합하여 수작업 없는 No-Code 기반 지능형 QA 자동화 및 시각적 자가 치유(Self-Healing) 엔진을 구현한 SyncETA 아키텍처 리뷰.",  "author": {    "@type": "Organization",    "name": "Empasy Engineering Team",    "url": "https://empasy.io"  },  "publisher": {    "@type": "Organization",    "name": "Empasy",    "logo": {      "@type": "ImageObject",      "url": "https://empasy.io/assets/logo.png"    }  },  "url": "https://empasy.io/synceta-intelligent-regression-testing-pipeline.html"}    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <script type="module" crossorigin src="/assets/en_blog_synceta-intelligent-regression-testing-pipeline-DWWeyK8x.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/i18n-BT8oeUrW.js">
   <link rel="stylesheet" crossorigin href="/assets/i18n-C_Jp-ymm.css">
@@ -25,9 +25,9 @@
         <div class="dropdown">
             <a href="../../en/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
             <div class="dropdown-content">
-                <a href="../../en/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
-                <a href="../../en/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
-                <a href="../../en/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
+                <a href="../../en/pages/index.html#philosophy" data-i18n="nav.about">Philosophy</a>
+                <a href="../../en/pages/vision.html" data-i18n="nav.vision">Vision 2026</a>
+                <a href="../../en/pages/team.html" data-i18n="nav.team">Our Story</a>
             </div>
         </div>
         
@@ -39,6 +39,8 @@
                 <a href="../../en/solutions/sync-cms.html">SyncCMS</a>
                 <a href="../../en/solutions/sync-crawl.html">SyncCrawl</a>
                 <a href="../../en/solutions/sync-eta.html">SyncEta</a>
+                <a href="../../en/solutions/sync-llm.html">SyncLLM</a>
+                <a href="../../en/solutions/sync-insight.html">SyncInsight</a>
             </div>
         </div>
         <!-- 3. Insights Group (NEW) -->
@@ -52,10 +54,13 @@
         </div>
     
         
-        <a href="../../en/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
+        <a href="../../en/pages/clients.html" data-i18n="nav.clients">Clients</a>
         
-        <!-- Top-level SyncEta link added as requested -->
-        <a href="../../en/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
+        <!-- Documentation link -->
+        <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Docs <i class="fas fa-external-link-alt" style="font-size:0.75em; margin-left:2px; opacity:0.7;"></i></a>
+    
+        <!-- Top-level SyncEta link -->
+        <a href="../../en/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta</a>
     </nav>
                 <div class="nav-actions">
                     <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
@@ -92,9 +97,9 @@
         <div class="dropdown">
             <a href="../../en/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
             <div class="dropdown-content">
-                <a href="../../en/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
-                <a href="../../en/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
-                <a href="../../en/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
+                <a href="../../en/pages/index.html#philosophy" data-i18n="nav.about">Philosophy</a>
+                <a href="../../en/pages/vision.html" data-i18n="nav.vision">Vision 2026</a>
+                <a href="../../en/pages/team.html" data-i18n="nav.team">Our Story</a>
             </div>
         </div>
         
@@ -106,6 +111,8 @@
                 <a href="../../en/solutions/sync-cms.html">SyncCMS</a>
                 <a href="../../en/solutions/sync-crawl.html">SyncCrawl</a>
                 <a href="../../en/solutions/sync-eta.html">SyncEta</a>
+                <a href="../../en/solutions/sync-llm.html">SyncLLM</a>
+                <a href="../../en/solutions/sync-insight.html">SyncInsight</a>
             </div>
         </div>
         <!-- 3. Insights Group (NEW) -->
@@ -119,10 +126,13 @@
         </div>
     
         
-        <a href="../../en/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
+        <a href="../../en/pages/clients.html" data-i18n="nav.clients">Clients</a>
         
-        <!-- Top-level SyncEta link added as requested -->
-        <a href="../../en/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta <i class="fas fa-sparkles" style="font-size:0.8em;"></i></a>
+        <!-- Documentation link -->
+        <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Docs <i class="fas fa-external-link-alt" style="font-size:0.75em; margin-left:2px; opacity:0.7;"></i></a>
+    
+        <!-- Top-level SyncEta link -->
+        <a href="../../en/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta</a>
     </nav>
                 <div class="nav-actions">
                     <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
@@ -229,9 +239,10 @@
                         <i class="fas fa-book"></i> Documentation
                     </a>
                 </div>
-                <address style="font-style: normal; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
+                <address style="font-style: normal; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.8;">
                     <strong>(주)엠파시 (Empasy IT Corp.)</strong><br>
                     Enterprise B2B Software and AI Agent (SyncSeries) Developer<br>
+                    <span>Inquiries: <a href="mailto:poh@empasy.com" style="color: inherit; text-decoration: underline;">poh@empasy.com</a> &nbsp;|&nbsp; Tech Support: <a href="tel:+82-507-1360-8169" style="color: inherit; text-decoration: none;">+82-507-1360-8169</a></span><br>
                     Seoul, South Korea
                 </address>
             </div>
