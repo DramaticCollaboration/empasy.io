@@ -17,7 +17,7 @@
     "mermaid": "^11.17.0",
     "prettier": "^3.6.2",
     "prettier-plugin-organize-imports": "^4.3.0",
-    "vitepress": "2.0.0-alpha.18",
+    "vitepress": "2.0.0-alpha.12",
     "vitepress-export-pdf": "^1.0.0",
     "vitepress-plugin-mermaid": "^2.0.17"
   },
