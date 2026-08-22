@@ -1,4 +1,4 @@
----
+﻿---
 title: Work Log
 description: Memories fade quickly, but logs are forever! 🎯 Our team's fun and free work record space
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/study/
+      content: https://empasy.io/study/
 sort: 200
 ---
 
@@ -38,7 +38,7 @@ logs/
 
 ---
 
-## ✨ Free Writing Rules
+##  Free Writing Rules
 
 1. Write **when you want to** (No force X)
 2. Write in **any format you want** (Freedom O)
@@ -46,7 +46,7 @@ logs/
 
 ---
 
-## 🎨 Writing Example (Feel free to rewrite!)
+##  Writing Example (Feel free to rewrite!)
 
 ```markdown
 # Today's Self Interview 🎤
@@ -86,7 +86,7 @@ logs/
 
 ---
 
-## 🤝 How to participate together
+##  How to participate together
 
 1. Add logs **however you feel**
 2. Read **other people's logs** (It's fun!)

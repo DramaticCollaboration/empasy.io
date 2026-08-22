@@ -1,4 +1,4 @@
----
+﻿---
 title: ストーリーポイント
 description: ストーリーポイントは、作業の規模、複雑さ、不確実性を相対的に見積もるための単位です。絶対的な時間と直接マッピングするものではなく、スプリント単位での合理的な作業量の把握とチームのスケジュール見積もりを目的とします。
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/glossaryOfTerms.html
+      content: https://empasy.io/agile/glossaryOfTerms.html
 sort: 2000
 ---
 

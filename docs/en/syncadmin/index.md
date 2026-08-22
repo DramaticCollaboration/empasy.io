@@ -1,4 +1,4 @@
----
+﻿---
 title: "AI-Optimized Vue 3 Backoffice Framework | SyncAdmin"
 description: An intelligent admin dashboard template built on Vue 3, Vite, and TypeScript. Supports enterprise system construction through AI agent monitoring, dynamic data visualization, and granular permission management.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/syncadmin/
+      content: https://empasy.io/syncadmin/
 order: 1
 dir:
   order: 3

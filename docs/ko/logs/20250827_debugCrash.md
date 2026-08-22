@@ -1,4 +1,4 @@
----
+﻿---
 title: 리눅스 electron 디버깅 Crash
 description: 기억은 금방 사라지지만, 로그는 영원하다! 🎯 우리 팀의 재미있고 자유로운 작업 기록 공간
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/study/
+      content: https://empasy.io/study/
 sort: 400
 ---
 

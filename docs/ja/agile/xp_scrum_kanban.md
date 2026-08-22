@@ -1,4 +1,4 @@
----
+﻿---
 title: XP、Scrum、Kanbanの比較と実務への適用戦略
 description: XP、Scrum、Kanbanの違いと関係性を一目で理解し、実務でこれら3つのアジャイル方法論を統合して適用するための詳細なガイドを提供します。段階別のチェックリストと図解により、プロジェクト管理とソフトウェア品質向上を簡単に実現できます。
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/xp_scrum_kanban.html
+      content: https://empasy.io/agile/xp_scrum_kanban.html
 sort: 8000
 ---
 
@@ -246,7 +246,7 @@ flowchart TD
 
 ---
 
-## 🤖 AIと共にさらに深まるXPの問題認識
+##  AIと共にさらに深まるXPの問題認識
 
 - AIがコード生成を無労力(no-effort)にするにつれ、十分に検証されていないソフトウェアの大量生産の危険性が高まります。
 - 制約のない自動化システムが未検証のロジックを多層的に積み重ね、複雑さと脆弱性を悪化させます。
@@ -263,7 +263,7 @@ flowchart TD
 
 ---
 
-## 🚀 フィーチャーファクトリー(Feature Factory)から真の価値提供へ
+##  フィーチャーファクトリー(Feature Factory)から真の価値提供へ
 
 - 成功しているチームは、速度そのものよりもフロー(flow)とフィードバックを優先します。
 - XPの小ロット化、継続的インテグレーション、自動テスト、共同所有などの実践が、適応性とユーザー中心性に貢献します。

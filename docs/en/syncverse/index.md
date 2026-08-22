@@ -1,4 +1,4 @@
----
+﻿---
 title: "Intelligent Multi-Agent Orchestration Ecosystem | SyncVerse"
 description: An LLM-native platform where various specialized AI agents collaborate organically through Agent-to-Agent (A2A) communication to autonomously manage enterprise system operations.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/syncverse/
+      content: https://empasy.io/syncverse/
 order: 1
 dir:
   order: 5

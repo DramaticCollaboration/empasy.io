@@ -1,4 +1,4 @@
----
+﻿---
 title: Scrumban Operation Guide
 description: Scrumban is a hybrid agile methodology that combines Scrum's iterative structure with Kanban's flow management and WIP limits to manage work flexibly and efficiently.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/guide.html
+      content: https://empasy.io/agile/guide.html
 sort: 300
 ---
 

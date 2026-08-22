@@ -1,51 +1,33 @@
 ---
-title: Collection
-description: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
-head:
-  - - meta
-    - name: keywords
-      content: Test Automation, Testing Generative AI, Playwright, Selenium, Real-time Quality Feedback, Zero-downtime Testing, AI-based Test Automation, Continuous Testing, QAOps, TestOps, Codeless, Low-Code, Self-healing Test, Self-healing, AI Test Automation, Codeless Automation, QA Automation, Software Testing, Test Scenario Creation, Codeless Test, Natural Language Test, Test Automation Tool, Test Automation Platform, Test Efficiency, Playwright, Selenium, QAOps, TestOps, Shift-Left Testing, Shift-Right Testing
-  - - meta
-    - property: og:title
-      content: AI Test Automation | SyncETA
-  - - meta
-    - property: og:description
-      content: Reduce QA time by 80% with AI-based test automation. Set a new standard for QA with codeless test creation, natural language scenario writing, and multi-platform support.
-  - - meta
-    - property: og:image
-      content: https://empasy.io/docs/images/favicon.png
-  - - meta
-    - property: og:url
-      content: https://doc.empasy.com/synceta/
-sort: 600
+title: "Collection Management & Batch Execution"
+description: "Group multiple test scenarios into sequential or parallel execution suites."
+sort: 500
 ---
 
-# Collection
+# Collection Management & Batch Execution
 
-## Features of Collection
+A **'Collection'** groups related test scenarios into a unified test suite for batch execution.
 
-#### Execute multiple scenarios in series or parallel
+---
 
-::: tip Key features of Collection
-**1. Cross-browsing Test**
+## 1. Core Capabilities
 
-- By performing tests simultaneously in various browser environments, you can verify whether the website operates consistently across multiple browsers such as Chrome, Safari, and Edge.
+- **Sequential E2E Workflows**: Execute multi-step end-to-end flows in fixed sequence.
+- **Cross-Browser Suites**: Run the same collection across Chrome, Firefox, and Edge simultaneously.
 
-**2. Sequential Scenario Execution**
+---
 
-- You can maximize test efficiency by integrating and managing multiple test scenarios and optimizing the execution order.
-  :::
+## 2. Creating Collections
 
-## Create Collection
+1. Navigate to **'Collections'** ➔ Click **'New Collection'**.
+   ![New Collection](./image/collection/newcollection.png)
+2. Select target scenarios and order them by dragging.
+   ![Select Scenarios](./image/collection/collection2.png)
 
-#### Go to the Collection menu
+---
 
-![image](./image/collection/newcollection.png)
+## 3. Execution & Reporting
 
-#### Select Scenarios
-
-![image](./image/collection/collection2.png)
-
-## Run Collection
+Collections aggregate pass/fail metrics across all member scenarios into a consolidated report.
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/dsb0XpGy7A0" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>

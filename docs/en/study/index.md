@@ -1,4 +1,4 @@
----
+﻿---
 title: Let's write down what we studied
 description: Don't forget, let's save it for fun! 🎯 A fun knowledge repository to freely record what you've studied
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/study/
+      content: https://empasy.io/study/
 sort: 200
 ---
 
@@ -48,11 +48,11 @@ This is a space to have fun sharing various knowledge and realizations you've st
 ![Growth](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjEzZHlvZ3BjeHkydHMwcno3N3B3ajg4am5uNHhmbXU1cGVqdHA1ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m7YYGSBBkDM9VUbcte/giphy.gif)
 
 **Learn together, grow together!**  
-We support your learning journey ✨
+We support your learning journey 
 
 </div>
 
 ---
 
-> **💡 Final Tip:** The habit of organizing and sharing what you've learned will become your  
-> **most powerful learning weapon!** Let's do it together 🚀
+> ** Final Tip:** The habit of organizing and sharing what you've learned will become your  
+> **most powerful learning weapon!** Let's do it together 

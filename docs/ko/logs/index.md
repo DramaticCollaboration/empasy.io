@@ -1,4 +1,4 @@
----
+﻿---
 title: 작업 로그
 description: 기억은 금방 사라지지만, 로그는 영원하다! 🎯 우리 팀의 재미있고 자유로운 작업 기록 공간
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/study/
+      content: https://empasy.io/study/
 sort: 200
 ---
 
@@ -38,7 +38,7 @@ logs/
 
 ---
 
-## ✨ 자유로운 작성 규칙
+##  자유로운 작성 규칙
 
 1. **하고 싶을 때** 작성하세요 (강제 X)
 2. **원하는 형식**으로 작성하세요 (자유 O)
@@ -46,7 +46,7 @@ logs/
 
 ---
 
-## 🎨 작성 예시 (마음대로 고쳐쓰세요!)
+##  작성 예시 (마음대로 고쳐쓰세요!)
 
 ```markdown
 # 오늘의 셀프 인터뷰 🎤
@@ -86,7 +86,7 @@ logs/
 
 ---
 
-## 🤝 함께 하는 방법
+##  함께 하는 방법
 
 1. **마음가는 대로** 로그 추가
 2. **다른 사람 로그** 읽어보기 (재미있어요!)

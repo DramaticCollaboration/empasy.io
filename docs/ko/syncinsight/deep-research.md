@@ -1,4 +1,4 @@
----
+﻿---
 title: "딥 리서치 및 에이전트 라운드테이블 토론"
 sort: 2
 description: "멀티소스 기반 DeepResearch 캔버스, 다중 페르소나 에이전트 라운드테이블 토론 메커니즘, 실시간 추론 타임라인, 협업 쉐어룸 및 오디오 브리핑 기능을 설명합니다."
@@ -14,10 +14,10 @@ head:
       content: "멀티소스 분석 리포트 자동 생성과 상반된 관점의 AI 페르소나 간 토론 메커니즘"
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/syncinsight/deep-research
+      content: https://empasy.io/syncinsight/deep-research
 ---
 
 # 딥 리서치 및 에이전트 라운드테이블 토론 (Deep Research & Debate)

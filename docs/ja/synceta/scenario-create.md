@@ -1,294 +1,60 @@
 ---
-title: シナリオ / 作成
-description: AIベースのテスト自動化でQA時間を80%削減します。コードなしのテスト作成、自然言語によるシナリオ作成、多様なプラットフォームのサポートにより、QAの新しい基準を提示します。
-head:
-  - - meta
-    - name: keywords
-      content: テスト自動化, テスティング生成型AI, Playwright, Selenium, リアルタイム品質フィードバック, 無停止テスト, AIベーステスト自動化, 継続的テスト(Continuous Testing), QAOps, TestOps, コードレス(Codeless), ローコード(Low-Code), 自己修復テスト(Self-healing), AIテスト自動化, コードレス自動化, QA自動化, ソフトウェアテスト, テストシナリオ生成, コードレステスト, 自然言語テスト, テスト自動化ツール, テスト自動化プラットフォーム, テスト効率化, Playwright, Selenium, QAOps, TestOps, シフトレフト(Shift-Left)テスト, シフトライト(Shift-Right)テスト
-  - - meta
-    - property: og:title
-      content: AIテスト自動化 | SyncETA
-  - - meta
-    - property: og:description
-      content: AIベースのテスト自動化でQA時間を80%削減します。コードなしのテスト作成、自然言語によるシナリオ作成、多様なプラットフォームのサポートにより、QAの新しい基準を提示します。
-  - - meta
-    - property: og:image
-      content: https://empasy.io/docs/images/favicon.png
-  - - meta
-    - property: og:url
-      content: https://doc.empasy.com/synceta/
-sort: 500
+title: "シナリオ記録およびエディターガイド"
+description: "Webブラウザ操作のリアルタイム記録、待機条件、検証条件、復旧スクリプトを設定して安定したテストシナリオを構築する手順を説明します。"
+sort: 300
 ---
 
-# シナリオ
+# シナリオ記録およびエディターガイド
 
-SyncETAを使用して、複雑なテストコードを作成することなく、実際のUIを通じてテストケースを作成し管理できます。
+SyncETAエディターは、ブラウザ操作（クリック、入力、画面遷移）をリアルタイムに記録し、DOM情報（XPath、CSSセレクター、属性）を構造化してテストを作成します。
 
-## シナリオとは
+---
 
-#### **_「シナリオ」_** とは以下のような機能テストの単位を意味します。
+## 1. シナリオの作成手順
 
-##### [ **_「empasy」_** のホームページにアクセスして問い合わせを送信 ]
+1. **新規シナリオの開始**: 「シナリオ」メニューから「新規シナリオ」をクリックします。
+   ![New Scenario](image/scenario-create/new_scenario.png)
+2. **ブラウザ・解像度の設定**: 対象URL、ブラウザエンジン、解像度を指定します。
+   ![Settings](image/scenario-create/select_option.png)
+3. **イベント収集設定**: 収集する操作イベントを指定します（標準設定推奨）。
+   ![Filter](image/scenario-create/allow_event.png)
+4. **操作記録の実行**: 専用ブラウザでWebサイトを操作すると、各ステップが順次記録されます。
+   ![Recording](image/scenario-create/start_recording.png)
+   ![DOM Info](image/scenario-create/select_dom_info.png)
 
-1. **_「empasy」_** のホームページにアクセス。
-2. **_「お問い合わせ」_** をクリック。
-3. 問い合わせ内容を入力。
-4. 問い合わせを送信。
-5. 正常な送信を確認。
+---
 
-## シナリオ作成
+## 2. 待機条件（Wait Conditions）
 
-#### 1. シナリオメニューへ移動
+- **時間待機**: 指定したミリ秒（ms）待機
+- **要素表示待機**: 特定のDOM要素が表示されるまで待機
+- **値一致待機**: 特定要素のテキストが期待値と一致するまで待機
 
-::: info
+![Time Wait](image/scenario-create/time_wait.png)
+![DOM Wait](image/scenario-create/dom_wait.png)
+![Value Wait](image/scenario-create/value_wait.png)
 
-1. 左側のサイドバーの **_「シナリオ」_** メニューをクリック
-2. 右上の **_「新しいシナリオ」_** をクリック
-3. シナリオ録画に必要な設定モーダルが表示されます。
-   :::
-   ![シナリオ作成のクリック](image/scenario-create/new_scenario.png)
+---
 
-#### 2. 録画ブラウザの設定
+## 3. 検証条件（Assertions）
 
-::: info
+- **要素表示検証**: UI要素の存在を確認
+- **要素値検証**: テキストや数値の一致を確認
+- **Vision AI画面検証**: 画像認識によるレイアウト崩れ検知
 
-1. シナリオを作成するウェブページのURLを入力します。
-2. 録画を行うブラウザを選択します。
+![DOM Valid](image/scenario-create/valid_dom.png)
+![Value Valid](image/scenario-create/valid_value.png)
+![AI Valid](image/scenario-create/valid_ai.png)
 
-- 録画時はChrome -> 実行時はEdgeを選択可能 (クロスブラウジングテスト)
+---
 
-3. 録画を行うブラウザのサイズを設定します。
+## 4. 編集・追加機能
 
-- 録画時は1400 x 800 -> 実行時は800 x 600が可能 (レスポンシブテスト)
-  :::
-  ![シナリオ録画前の設定](image/scenario-create/select_option.png)
-
-#### 3. 収集イベントの設定
-
-::: info
-
-- 収集するイベントタイプを選択した後、モーダル右下の録画開始ボタンを押してください。  
-  基本設定で録画を進めることを推奨します。
-  :::
-  ![許可イベントの設定](image/scenario-create/allow_event.png)
-
-#### 4. 録画開始
-
-::: info
-録画を開始するとブラウザが画面に表示されます。  
-該当のブラウザで実際のテストを進めてください。  
-EX) Naverで **_「周辺の美味しい店」_** を検索
-
-写真のようにレコードが収集されたことを確認できます。
-
-1. URLへ移動
-2. 検索バーをクリック
-3. 検索ワード(**_「周辺の美味しい店」_**)を入力
-4. 検索ボタンをクリック
-   :::
-   ![録画開始](image/scenario-create/start_recording.png)
-
-#### 4. DOM情報の収集
-
-::: info
-
-- すべてのレコードはイベントが発生したDOMの情報を持っています。  
-  EX) 検索ワード(**_「周辺の美味しい店」_**)を入力したinput要素の属性を収集
-  :::
-  ![DOM情報の選択](image/scenario-create/select_dom_info.png)
-
-#### 5. 録画中に新しいタブが開いた場合
-
-::: info
-ブラウザで追加されたすべてのタブで、同様にシナリオの録画を続けることができます。
-:::
-![新しいタブ](image/scenario-create/new_tap.png)
-
-## 待機レコード
-
-::: info
-レコードの実行間に、特定の条件を満たすまで待機時間を付与する機能です。
-
-待機レコードの種類3つ
-
-1. 時間待機 - 設定した時間だけ待機します。
-2. 要素露出待機 - 画面に特定の要素が表示されるまで待機します。
-3. 要素値一致待機 - 画面に特定の値が露出するまで待機します。
-
-:::
-
-#### 1. 時間待機条件の追加
-
-::: info
-レコード実行前に待機時間を付与します。
-
-1. 待機が必要なレコードを右クリックします。
-2. 待機条件追加をクリックした後、待機時間を設定します。(1000 = 1秒)
-   :::
-   レコードを右クリック
-   ![時間待機](image/scenario-create/time_wait.png)
-   待機時間の設定
-   ![待機時間設定](image/scenario-create/time_wait2.png)
-   待機レコードの作成
-   ![待機レコード作成](image/scenario-create/time_wait3.png)
-   ::: info
-   EX) URL移動後、画面の読み込み(ネットワーク状況を考慮して約3秒)時間待機した後、検索バーをクリックするように時間待機条件を追加
-   :::
-
-#### 2. 要素露出待機条件の追加
-
-::: info
-特定の要素が画面に露出するまで待機します。
-
-1. 待機が必要なレコードを右クリックします。
-2. 待機条件追加をクリックした後、要素露出待機を選択します。
-   :::
-   レコードを右クリック
-   ![DOM待機](image/scenario-create/dom_wait.png)
-   録画中の画面で要素選択をクリックした後、  
-   録画が進行中のブラウザで待機する要素を選択します。
-   ![DOM選択](image/scenario-create/dom_wait2.png)
-   要素露出待機レコードの作成
-   ![DOM待機レコード作成](image/scenario-create/dom_wait3.png)
-   ::: info
-   EX) 検索バーをクリックする前に、実際に画面に検索バー(input)が読み込まれるまで待機
-   :::
-
-#### 3. 要素値一致待機条件の追加
-
-::: info
-特定の要素に設定した値が露出するまで待機します。
-:::
-
-レコードを右クリック
-![値待機](image/scenario-create/value_wait.png)
-録画中の画面で要素選択をクリックした後、  
-録画が進行中のブラウザで待機する要素を選択します。
-![値選択](image/scenario-create/value_wait2.png)
-::: info
-EX) ニュースのカルーセルに **_「韓国経済ビジネス」_** が露出するまで待機します
-:::
-
-## 検証レコード
-
-::: info
-レコードの実行間に、特定の要素が露出するか、特定の値が露出するかを検証する機能です。
-
-1. 特定の要素が画面に露出しているかを検証  
-   EX) 美味しい店の検索後、画面に **_「美味しい店マップ」_** が露出しているかを確認
-2. 特定の値が画面に露出しているかを検証  
-    EX) **_「プレイス」_** の最上段に **_「OOレストラン」_** が露出するかを確認
-   :::
-
-#### 1. 要素露出検証レコードの追加
-
-::: info
-特定の要素が画面に露出しているかを検証します。
-:::
-
-レコードを右クリック
-![DOM検証](image/scenario-create/valid_dom.png)
-録画中の画面で要素選択をクリックした後、  
-録画が進行中のブラウザで検証する要素を選択します。
-![DOM検証選択](image/scenario-create/valid_dom2.png)
-検証レコードの作成
-![DOM検証レコード作成](image/scenario-create/valid_dom3.png)
-::: info
-EX) Naverで **_「周辺の美味しい店」_** を検索後、**_「プレイス」_** が露出するかを検証します。
-:::
-
-#### 2. 要素値検証レコードの追加
-
-::: info
-特定の値が画面に露出しているかを検証します。
-:::
-
-レコードを右クリック
-![値検証](image/scenario-create/valid_value.png)
-録画中の画面で要素選択をクリックした後、  
-録画が進行中のブラウザで検証する要素を選択します。  
-EX) プレイスの最上段に **_「ディアリスト延南」_** が露出するかを検証
-![値検証選択](image/scenario-create/valid_value2.png)
-検証レコードの作成
-![値検証レコード作成](image/scenario-create/valid_value3.png)
-::: info
-EX) **_「プレイス」_** の最上段に **_「ディアリスト延南」_**が露出するかを確認
-:::
-
-#### 3. AIによる画面検証
-
-::: info
-画面内の特定の値や要素の露出ではなく、画像ベースの検証が必要な場合に使用します。
-:::
-
-レコードを右クリック
-![AI検証](image/scenario-create/valid_ai.png)
-AIプロンプトを選択した後、プロンプトを入力します。  
-現在のブラウザの画面をSync-ETAエージェントが自動的にキャプチャし、AIで検証します。
-::: info
-AWS Bedrock - claude-3-haikuモデルを使用中
-:::
-![AIプロンプト入力](image/scenario-create/valid_ai2.png)
-::: info
-EX) **_「周辺の美味しい店」_** を検索後、画面に **_「マップ」_** が正常に露出するかを確認
-:::
-
-## シナリオの修正
-
-::: info
-既存のシナリオの特定の部分から続けて録画を進める機能です。
-:::
-
-#### 1. 修正するシナリオの選択
-
-シナリオ修正をクリック
-![シナリオ修正](image/scenario-create/edit.png)
-続けて録画するレコードを選択します。
-![修正レコード選択](image/scenario-create/edit2.png)
-::: info
-
-1. シナリオ作成と同様に録画ブラウザが表示されます。
-2. 続けて録画を希望するレコードまでスクリプトが実行されます。
-3. 設定したレコードに到達すると、その時点からブラウザで発生するイベントを収集します。
-   :::
-   ![修正スクリプト実行](image/scenario-create/edit3.png)
-
-## 付加機能
-
-#### 1. ノート機能
-
-::: info
-レコードの内容を入力します。
-:::
-![コメント入力](image/scenario-create/comment.png)
-
-#### 2. 失敗復旧スクリプト
-
-::: info
-レコードが失敗した場合に復旧スクリプトが実行されます。
-:::
-![失敗復旧](image/scenario-create/recover.png)
-
-#### 3. データセット
-
-::: info
-入力値を指定します。  
-EX) 検索ワード(**_「周辺の美味しい店」_**)をユーザーが指定した値に置換します。  
-** 詳細な説明は **_「データセット」_** を参照
-:::
-![データセット](image/scenario-create/dataset.png)
-
-#### 4. 削除
-
-::: info
-収集したレコードを削除します。  
-EX) 録画中に間違った部分をクリックした場合、該当のレコードを削除します。
-:::
-![レコード削除](image/scenario-create/delete.png)
-
-#### 5. 無効化
-
-::: info
-収集した情報を削除せずに、実行時に除外します。
-:::
-![レコード無効化](image/scenario-create/disable.png)
+- **続きから記録**: 既存シナリオの特定ステップから追加記録
+  ![Edit](image/scenario-create/edit.png)
+- **ノート機能**: 各ステップへのメモ入力
+  ![Comment](image/scenario-create/comment.png)
+- **失敗復旧スクリプト**: エラー発生時のJavaScriptフォールバック
+  ![Recovery](image/scenario-create/recover.png)
+- **データセット変数**: 入力値のパラメータ変数化（`{{username}}`）
+  ![Dataset](image/scenario-create/dataset.png)

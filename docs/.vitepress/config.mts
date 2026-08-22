@@ -153,7 +153,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       },
       {
         text: '엠파시',
-        link: 'https://www.empasy.com',
+        link: 'https://empasy.io',
         target: '_blank',
         rel: 'noopener noreferrer', // Recommended for security
       }
@@ -166,12 +166,19 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         '/synccms/': generateKrSidebar('synccms'),
         '/synceta/': generateKrSidebar('synceta'),
         '/syncboot/': generateKrSidebar('syncboot'),
+        '/syncadmin/': generateKrSidebar('syncadmin'),
+        '/syncapim/': generateKrSidebar('syncapim'),
         '/agile/': generateKrSidebar('agile'),
         '/logs/': generateKrSidebar('logs'),
         '/study/': generateKrSidebar('study'),
     },
     outline: {
-     label: "현재 페이지",
+      level: [2, 3],
+      label: "현재 페이지",
+    },
+    docFooter: {
+      prev: '이전 페이지',
+      next: '다음 페이지',
     },
 
     search: {

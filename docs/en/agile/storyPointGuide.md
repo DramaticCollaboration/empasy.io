@@ -1,4 +1,4 @@
----
+﻿---
 title: Story Points
 description: Story points are a unit for relatively estimating the size, complexity, and uncertainty of work. They do not map directly to absolute time, and their purpose is to determine a reasonable workload per sprint and estimate the team's schedule.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/glossaryOfTerms.html
+      content: https://empasy.io/agile/glossaryOfTerms.html
 sort: 2000
 ---
 

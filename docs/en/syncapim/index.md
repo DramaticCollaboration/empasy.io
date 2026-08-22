@@ -1,4 +1,4 @@
----
+﻿---
 title: "SyncAPIM: Agility API Platform | Comprehensive API Management & Digital Transformation Solution"
 description: SyncAPIM supports stable and efficient API operation by providing comprehensive API management features such as API Gateway, Developer Portal, and Analytics Tools. It leads digital transformation through an architecture customized for business agility and creates new business opportunities with strong security, optimal performance, and improved development efficiency.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/syncapim/
+      content: https://empasy.io/syncapim/
 order: 1
 dir:
   order: 3
@@ -35,7 +35,7 @@ It supports stable API operation and improves development efficiency by providin
 1. Scalability: Capable of handling massive traffic through cloud-native architecture and flexibly responds to various environments and requirements. Supports standard APIs and various technologies.
 1. Customer-Customized (Customization in Its DNA): Designed recognizing that each customer's business environment, requirements, and tech stack are different, overcoming the limitations of standard systems. System expansion and modification are possible according to customer requirements, and cost efficiency can be improved by selectively introducing only necessary features. It is also possible to add customer-specific policy development. Supports fast progress and integration of SI projects and provides solutions optimized for the customer's business goals.
 
-## 🚀 Key Advantages and Expected Effects
+##  Key Advantages and Expected Effects
 
 1. Business Expansion: Establishing new partnerships and developer ecosystems, maximizing the utilization of API assets.
 1. Operational Efficiency Improvement: Automating API management processes, simplifying API development, deployment, and operation, increasing developer satisfaction.

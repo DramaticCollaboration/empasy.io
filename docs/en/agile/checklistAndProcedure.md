@@ -1,4 +1,4 @@
----
+﻿---
 title: Meeting Checklist and Procedure
 description: Scrumban is a hybrid agile methodology that combines Scrum's iterative structure with Kanban's flow management and WIP limits to manage work flexibly and efficiently.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/activity.html
+      content: https://empasy.io/agile/activity.html
 sort: 450
 ---
 

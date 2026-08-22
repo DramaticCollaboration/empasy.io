@@ -1,4 +1,4 @@
----
+﻿---
 title: Git Flow
 description: チームコラボレーションのためのGit Flow完全ガイド。ブランチ構造、コミットメッセージのルール、リリースおよびホットフィックスの管理方法を段階別にわかりやすく説明します。
 head:
@@ -16,11 +16,11 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/activity.html
+      content: https://empasy.io/agile/activity.html
 sort: 4000
 ---
 
-# 🚀 Git Flow ガイド
+#  Git Flow ガイド
 
 ## 1. Git Flowとは？
 

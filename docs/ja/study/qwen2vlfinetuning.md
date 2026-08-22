@@ -1,4 +1,4 @@
----
+﻿---
 title: Qwen2 VL Fine-Tuning
 description: Qwen2 VL モデル Fine-Tuning
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/study/
+      content: https://empasy.io/study/
 sort: 400
 ---
 
@@ -262,7 +262,7 @@ lora_config = LoraConfig(
 model = get_peft_model(model, lora_config)
 ```
 
-## 📝 データ前処理ユーティリティ
+##  データ前処理ユーティリティ
 
 ```python
 # data_utils.py
@@ -305,7 +305,7 @@ def save_dataset(dataset, output_path):
         json.dump(dataset, f, ensure_ascii=False, indent=2)
 ```
 
-## 🚀 学習スクリプトの例
+##  学習スクリプトの例
 
 ```bash
 #!/bin/bash
@@ -336,7 +336,7 @@ python -m torch.distributed.launch \
     --save_steps 500
 ```
 
-## 🔍 評価および推論
+##  評価および推論
 
 ```python
 # evaluate.py
@@ -363,7 +363,7 @@ print(f"Answer: {result['answer']}")
 print(f"Confidence: {result['score']:.4f}")
 ```
 
-## ⚡ 最適化のヒント
+##  最適化のヒント
 
 ### 1. **メモリ最適化**
 

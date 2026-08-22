@@ -1,4 +1,4 @@
----
+﻿---
 title: REST API & MCP Tool Reference | SyncCrawl
 description: RESTful API endpoints, request/response schemas, and Model Context Protocol (MCP) tool specifications for SyncCrawl.
 sort: 6
@@ -30,7 +30,7 @@ Register a new scheduled or on-demand crawling task.
 
 #### Request Example (cURL)
 ```bash
-curl -X POST "https://crawl.empasy.com/api/v1/crawl/jobs" \
+curl -X POST "https://empasy.io/api/v1/crawl/jobs" \
      -H "Authorization: Bearer ${SYNC_TOKEN}" \
      -H "Content-Type: application/json" \
      -d '{
@@ -77,7 +77,7 @@ Dispatch an execution run to distributed worker nodes.
 
 #### Request Example (cURL)
 ```bash
-curl -X POST "https://crawl.empasy.com/api/v1/crawl/jobs/JOB_20260823_0042/trigger" \
+curl -X POST "https://empasy.io/api/v1/crawl/jobs/JOB_20260823_0042/trigger" \
      -H "Authorization: Bearer ${SYNC_TOKEN}"
 ```
 
@@ -105,7 +105,7 @@ Retrieve structured items and execution metadata from a completed run.
 
 #### Request Example (cURL)
 ```bash
-curl -X GET "https://crawl.empasy.com/api/v1/crawl/results/EXEC_20260823_9011" \
+curl -X GET "https://empasy.io/api/v1/crawl/results/EXEC_20260823_9011" \
      -H "Authorization: Bearer ${SYNC_TOKEN}"
 ```
 

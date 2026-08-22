@@ -1,134 +1,38 @@
 ---
-title: プロジェクト
-description: AIベースのテスト自動化でQA時間を80%削減します。コードなしのテスト作成、自然言語によるシナリオ作成、多様なプラットフォームのサポートにより、QAの新しい基準を提示します。
-head:
-  - - meta
-    - name: keywords
-      content: テスト自動化, テスティング生成型AI, Playwright, Selenium, リアルタイム品質フィードバック, 無停止テスト, AIベーステスト自動化, 継続的テスト(Continuous Testing), QAOps, TestOps, コードレス(Codeless), ローコード(Low-Code), 自己修復テスト(Self-healing), AIテスト自動化, コードレス自動化, QA自動化, ソフトウェアテスト, テストシナリオ生成, コードレステスト, 自然言語テスト, テスト自動化ツール, テスト自動化プラットフォーム, テスト効率化, Playwright, Selenium, QAOps, TestOps, シフトレフト(Shift-Left)テスト, シフトライト(Shift-Right)テスト
-  - - meta
-    - property: og:title
-      content: AIテスト自動化 | SyncETA
-  - - meta
-    - property: og:description
-      content: AIベースのテスト自動化でQA時間を80%削減します。コードなしのテスト作成、自然言語によるシナリオ作成、多様なプラットフォームのサポートにより、QAの新しい基準を提示します。
-  - - meta
-    - property: og:image
-      content: https://empasy.io/docs/images/favicon.png
-  - - meta
-    - property: og:url
-      content: https://doc.empasy.com/synceta/
-sort: 400
+title: "プロジェクトおよび権限（RBAC）管理"
+description: "テスト資産の分離、メンバー招待、ロールベースの権限設定（RBAC）の手順を解説します。"
+sort: 200
 ---
 
-# プロジェクト
+# プロジェクトおよび権限（RBAC）管理
 
-SyncETAを通じて多様な **_「単体テスト」_** と **_「統合テスト」_** を管理することになります。
+**「プロジェクト」** はシナリオ、データセット、実行ログを隔離・管理する最上位の単位です。
 
-**_「プロジェクト」_** は複数のテストを管理する最も大きな分類単位です。  
-ユーザーはプロジェクトに **_「メンバー」_** として登録され、SyncETAソリューションを使用することになります。  
-プロジェクトにメンバーを招待し、メンバーごとに作業権限を付与する方法を説明します。
+---
 
-## プロジェクト作成
+## 1. プロジェクト作成
 
-::: info
-以下の3つの場合においてプロジェクトを作成する方法
+初期画面、一覧画面、またはツールバーから新規プロジェクトを作成できます。
 
-1. 所属しているプロジェクトがない場合
-2. 所属しているプロジェクトが存在する場合
-3. 他のプロジェクトで作業中の場合
-   :::
+![Project None](./image/project/project_none.png)
+![Project List](./image/project/project_list.png)
+![Create Project](./image/project/create_project.png)
 
-#### 1. 所属しているプロジェクトがない場合にプロジェクトを作成する方法。
+---
 
-::: info
-所属しているプロジェクトがない場合は、画面中央の **_「新しいプロジェクト」_** ボタンをクリックします。
-:::
-![プロジェクトなし](./image/project/project_none.png)
+## 2. ロールおよび権限設定
 
-#### 2. 所属しているプロジェクトが存在する場合にプロジェクトを追加する方法。
+プロジェクトごとにロールを作成し、シナリオ作成・実行・APIキー発行等の権限を設定します。
 
-::: info
-所属しているプロジェクトがあり、プロジェクトを追加したい場合は、プロジェクトリストの左上にある **_「新しいプロジェクト」_** ボタンをクリックします。
-:::
-![プロジェクトリストから作成する](./image/project/project_list.png)
+![New Role](./image/project/new_role.png)
+![Role Setting](./image/project/role_setting.png)
 
-#### 3. 他のプロジェクトで作業中にプロジェクトを追加する方法。
+---
 
-::: info
-画面左上のプロジェクトツールバーの **_「新しいプロジェクト」_** ボタンをクリックします。
-:::
-![プロジェクトダッシュボードから作成する](./image/project/create_project_in_dashboard.png)
+## 3. メンバー招待
 
-#### 4. プロジェクト作成
+メールアドレスでメンバーを招待し、プロジェクト固有のロールを付与します。
 
-::: info
-上記の3つの方法でプロジェクト作成画面に移動できます。  
-プロジェクトのプロフィール画像、プロジェクト名、プロジェクトの説明を入力してプロジェクトを作成します。
-:::
-![プロジェクト作成フォーム](./image/project/create_project.png)
-
-## プロジェクトリスト
-
-#### 1. プロジェクトリストへ移動
-
-::: info
-右上の **_「プロジェクトを閉じる」_** ボタンをクリックして、現在所属しているプロジェクトリストを確認できます。
-:::
-![プロジェクトリストへ移動](./image/project/goto_project_list.png)
-
-#### 2. プロジェクトリスト照会
-
-::: info
-自分が所属しているプロジェクトリストを確認できます。
-:::
-![プロジェクトリスト](./image/project/project_list_org.png)
-
-## 役割 / 権限設定
-
-::: info
-プロジェクトごとに役割(role)を作成し、権限を付与することができます。
-:::
-
-#### 1. 役割作成
-
-::: info
-役割作成画面へ移動
-:::
-![役割作成へ移動](./image/project/new_role.png)
-
-#### 2. 権限設定
-
-::: info
-役割に付与する権限を設定します。
-:::
-![役割設定](./image/project/role_setting.png)
-
-## メンバー管理
-
-::: info
-プロジェクトにメンバーを招待し、作業権限を付与します。
-:::
-
-#### 1. メンバー招待
-
-::: info
-メンバー招待画面へ移動
-:::
-![メンバー招待画面へ移動](./image/project/new_member.png)
-
-#### 2. メンバー招待
-
-::: info
-プロジェクトに招待するメンバーを選択します。
-:::
-![メンバー招待](./image/project/vite_member.png)
-
-#### 3. 権限付与
-
-::: info
-招待したメンバーに権限を付与します。
-
-- 該当の権限はプロジェクト内でのみ有効です。  
-  ex) Aプロジェクトで管理者権限を持つユーザーが、Bプロジェクトではテスター(例)権限である可能性があります。
-  :::
-  ![メンバーへの役割付与](./image/project/set_role_to_member.png)
+![New Member](./image/project/new_member.png)
+![Invite Member](./image/project/vite_member.png)
+![Set Role](./image/project/set_role_to_member.png)

@@ -1,4 +1,4 @@
----
+﻿---
 title: Daily Scrum
 description: A step-by-step guide to conducting an effective Daily Scrum. Check out the core principles and practical tips of this 15-minute meeting for strengthening agile team collaboration, checking progress, and removing obstacles.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/activity.html
+      content: https://empasy.io/agile/activity.html
 sort: 3000
 ---
 
@@ -122,7 +122,7 @@ sort: 3000
 
 ---
 
-## 💡 Tips for Operating an Effective Daily Scrum
+##  Tips for Operating an Effective Daily Scrum
 
 - **Punctuality**: Recommend standing up to keep the 15-minute rule
 - **No Problem-Solving Meetings**: Secure a separate time for deep discussions
@@ -132,7 +132,7 @@ sort: 3000
 
 ---
 
-## 📝 Example Record
+##  Example Record
 
 | Person in Charge | What was done yesterday | What to do today | Obstacles |
 | ---------------- | ----------------------- | ---------------- | --------- |
@@ -166,7 +166,7 @@ sort: 3000
 
 ---
 
-## 📝 Team Member Sharing Example Template
+##  Team Member Sharing Example Template
 
 ```
 [Name]

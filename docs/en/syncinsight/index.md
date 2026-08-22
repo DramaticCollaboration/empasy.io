@@ -1,4 +1,4 @@
----
+﻿---
 title: "AI-Driven Intelligent Business Intelligence and Control Platform | SyncInsight"
 description: A next-generation data control platform that collects, analyzes, and visualizes data across the SyncSeries ecosystem, deriving business insights based on AI inference.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/syncinsight/
+      content: https://empasy.io/syncinsight/
 order: 1
 dir:
   order: 6

@@ -1,4 +1,4 @@
----
+﻿---
 title: "시스템 아키텍처 및 MCP 연동"
 sort: 1
 description: "SyncInsight의 3-Layer 분산 아키텍처, PgVector 기반 RAG 파이프라인, Model Context Protocol(MCP) 연동 규격 및 데이터베이스 설계를 설명합니다."
@@ -14,10 +14,10 @@ head:
       content: "SyncInsight의 3-Layer 분산 아키텍처와 MCP 연동 규격 및 PgVector RAG 파이프라인 기술 명세"
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/syncinsight/architecture
+      content: https://empasy.io/syncinsight/architecture
 ---
 
 # 시스템 아키텍처 및 MCP 연동 (Architecture & Protocols)

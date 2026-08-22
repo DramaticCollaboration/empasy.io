@@ -1,4 +1,4 @@
----
+﻿---
 title: "SyncInsight: 데이터 분석 및 의사결정 지원 플랫폼"
 description: "SyncVerse 생태계의 데이터 분석 및 의사결정 지원 플랫폼입니다. 내외부 멀티소스 데이터 통합, 딥 리서치, 다중 에이전트 토론, 자율 액션 승인(HITL) 및 What-If 시뮬레이션을 제공합니다."
 head:
@@ -13,10 +13,10 @@ head:
       content: "내외부 데이터를 통합 분석하여 실행 가능한 비즈니스 액션을 도출하고 관리자 승인 기반으로 배포하는 데이터 관제 플랫폼입니다."
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/syncinsight/
+      content: https://empasy.io/syncinsight/
 order: 1
 dir:
   order: 6

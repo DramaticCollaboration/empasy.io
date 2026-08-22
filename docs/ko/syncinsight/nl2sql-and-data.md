@@ -1,4 +1,4 @@
----
+﻿---
 title: "NL2SQL 포탈 및 스마트 시트 데이터 탐색기"
 sort: 4
 description: "자연어 질의를 통해 안전하게 SQL 쿼리를 생성하고 데이터를 조회하는 NL2SQL 포탈과 셀 단위 AI 보조 기능이 포함된 스마트 시트 환경을 설명합니다."
@@ -14,10 +14,10 @@ head:
       content: "자연어 질의를 통한 읽기 전용 SQL 생성과 셀 단위 데이터 가공을 지원하는 분석 환경"
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/syncinsight/nl2sql-and-data
+      content: https://empasy.io/syncinsight/nl2sql-and-data
 ---
 
 # NL2SQL 포탈 및 스마트 시트 데이터 탐색기 (Data Exploration)

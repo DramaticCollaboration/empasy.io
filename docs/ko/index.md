@@ -1,4 +1,4 @@
----
+﻿---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
@@ -29,42 +29,58 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/
+      content: https://empasy.io/
 
 
 features:
-  - title: 비즈니스 민첩성 및 변화 대응 최적화
-    details: 빠르게 변하는 비즈니스 환경에 맞춰 소프트웨어 변경을 신속하게 지원하며, 이를 통해 기업의 민첩성을 높이고 경쟁력을 유지하도록 돕습니다. Sync Series는 개발부터 테스트까지 속도와 유연성에 초점을 맞춥니다
-  - title: 개발/운영 효율성 및 사용자 친화성
-    details: 직관적인 인터페이스와 미리 내장된 기능으로 개발자는 핵심 비즈니스 로직에 집중하며, 비전문가도 쉽게 콘텐츠를 관리하거나 테스트를 자동화할 수 있습니다
-  - title: 뛰어난 고객 맞춤화 및 유연한 확장
-    details: 고객의 다양한 비즈니스 환경과 요구사항에 맞춰 시스템 확장 및 수정이 가능하며, 필요한 기능만 선택적으로 도입하여 비용 효율성을 높일 수 있습니다
-  - title: 오픈소스 기반의 벤더 비종속성
-    details: 특정 업체에 종속되지 않는 오픈소스 기반 솔루션으로 유연성을 제공하며, 혁신적인 기술을 발 빠르게 도입하여 서비스를 고도화하기 용이합니다
-  - title: 포괄적인 통합 관리 및 E2E 솔루션
-    details: API 관리, CI/CD, 모니터링, 테스트 자동화 등 개발부터 운영까지 전체 프로세스를 통합 관리하여 업무 효율성을 극대화합니다
-  - title: 높은 안정성, 품질 및 보안 확보
-    details: 다수의 구축 사례를 통해 검증된 안정적인 솔루션이며, 지속적인 모니터링과 강력한 보안 기능으로 신뢰성 있는 서비스를 제공합니다.
+  - icon: 
+    title: SyncVerse (AI 오케스트레이션)
+    details: 분산된 도메인 에이전트들이 표준 MCP로 협업하여 시스템 자율 운영을 수행하는 LLM 네이티브 중앙 제어 플랫폼
+    link: /syncverse/
+    linkText: SyncVerse 문서 바로가기 →
+  - icon: 
+    title: SyncInsight (지능형 관제 & 분석)
+    details: 에이전트 생태계 데이터를 실시간 수집·분석하고 자연어 질의(NLQ)로 비즈니스 인사이트를 도출하는 관제 센터
+    link: /syncinsight/
+    linkText: SyncInsight 문서 바로가기 →
+  - icon: 🧪
+    title: SyncETA (AI E2E 테스트 자동화)
+    details: 코드리스 GUI 테스트 및 AI Vision 자가치유 파이프라인으로 무인 CI/CD 회귀 검증을 완결하는 테스트 플랫폼
+    link: /synceta/
+    linkText: SyncETA 문서 바로가기 →
+  - icon: 
+    title: SyncBoot (마이크로서비스 백엔드)
+    details: Spring Boot 기반 Clean Architecture & DDD와 AI Schema Studio 로우코드 생성기를 제공하는 개발 플랫폼
+    link: /syncboot/
+    linkText: SyncBoot 문서 바로가기 →
+  - icon: 🌐
+    title: SyncCMS (AI 콘텐츠 관리 시스템)
+    details: 비전문가도 직관적으로 콘텐츠를 관리하고 Live SDK와 온프레미스 AI 보안을 통해 확장하는 차세대 CMS
+    link: /synccms/
+    linkText: SyncCMS 문서 바로가기 →
+  - icon: 
+    title: SyncCrawl (적응형 크롤링 & RAG)
+    details: 웹 구조 변경에 자율 대응하고 실시간 지식 파이프라인을 구축하여 고신뢰 RAG 답변을 제공하는 수집 엔진
+    link: /synccrawl/
+    linkText: SyncCrawl 문서 바로가기 →
 
-footer: Copyright © 2025 Empasy
+footer: Copyright © 2026 Empasy Inc. All rights reserved.
 ---
 
+## 엠파시 Sync Series 문서 바로가기
 
-
-## 엠파시 문서
-
-아래 문서들 포함합니다
-
-- [SyncETA](/synceta/) - 코딩 없이 누구나 쉽게 자동화 테스트를 구축하고 CI/CD 환경에 통합하여 비즈니스 변화에 신속하고 안정적으로 대응하도록 돕는 통합 테스트 자동화 플랫폼
-- [SyncCrawl](/synccrawl/) - 자연어 명령으로 웹 데이터를 수집하고 RAG 지식 기반 구축. 웹 구조 변경에 자동 대응하여 운영 효율성을 극대화하며, LLM 환각 없는 정확하고 신뢰도 높은 답변을 제공하는 지능형 통합 크롤링 솔루션
-- [SyncCMS](/synccms/) - 비즈니스 변화에 맞춰 웹사이트를 빠르게 발전시키고, 비전문가도 쉽게 콘텐츠를 관리하며 유연하게 기능을 확장할 수 있는 효율적인 콘텐츠 관리 플랫폼
-- [SyncBoot](/syncboot/) - 오픈소스 마이크로서비스 기반의 빠른 개발 및 효율적인 운영 환경을 제공하여, 기업이 빠르게 변화하는 비즈니스 환경에 민첩하게 대응하고 경쟁 우위를 확보하도록 돕는 플랫폼
-- [SyncAdmin](/syncadmin/) - Vue 3, Vite, TypeScript 기반의 오픈소스 관리 시스템 템플릿으로, 재사용 가능한 컴포넌트와 빠른 개발 환경을 제공하여 중대형 백오피스 개발 생산성을 극대화하고 변화하는 요구사항에 신속하게 대응할 수 있도록 지원
-- [SyncApim](/syncapim/) - 종합적이고 안정적인 API 관리와 **뛰어난 맞춤화(Customization in its DNA)**를 통해 기업이 API를 통한 디지털 혁신을 가속화하고 비즈니스 경쟁력을 강화하도록 돕는 강력한 플랫폼
-- [SyncVerse](/syncverse/) - 여러 특화된 AI 에이전트들이 유기적으로 협업하여 시스템 인프라와 비즈니스 로직을 자율적으로 관리하는 LLM 네이티브(LLM-Native) 중앙 오케스트레이션 플랫폼
-- [SyncInsight](/syncinsight/) - 에이전트 생태계 전반의 방대한 데이터를 실시간으로 수집 및 분석하고, 자연어 질의(NLQ)를 통해 비즈니스 인사이트를 직관적으로 도출하는 AI 기반 지능형 관제 센터
-- [Agile](/agile/) - Agile의 혁신을 위해 스크럼과 칸반을 혼합한(스크럼반(Scrumban)) 엠파시 개발 방법론
-- [Study](/study/) - 엠파시 공부방
+| 제품군 | 주요 역할 및 핵심 가치 | 문서 링크 |
+|:---|:---|:---|
+| ** SyncVerse** | 멀티 에이전트 A2A 자율 운영 오케스트레이션 & 관제탑 | [SyncVerse 시작하기 →](/syncverse/) |
+| ** SyncInsight** | 딥 리서치, 실시간 스트리밍 분석 & NL2SQL 데이터 관제 | [SyncInsight 시작하기 →](/syncinsight/) |
+| **🧪 SyncETA** | 무인 CI/CD, 웹 자동화 테스트 & AI Vision 자가치유 | [SyncETA 시작하기 →](/synceta/) |
+| ** SyncCrawl** | 적응형 자율 크롤링 & RAG 지식 기반 파이프라인 | [SyncCrawl 시작하기 →](/synccrawl/) |
+| ** SyncBoot** | Java / Spring Boot 기반 고속 MSA 개발 플랫폼 & 로우코드 | [SyncBoot 시작하기 →](/syncboot/) |
+| **🌐 SyncCMS** | 직관적인 콘텐츠 관리, Live SDK & 온프레미스 AI 보안 CMS | [SyncCMS 시작하기 →](/synccms/) |
+| **🖥️ SyncAdmin** | Vue 3, Vite & TypeScript 기반 엔터프라이즈 관리 시스템 템플릿 | [SyncAdmin 시작하기 →](/syncadmin/) |
+| **🔌 SyncAPIM** | 엔터프라이즈 API 라이프사이클 통합 관리 & 보안 게이트웨이 | [SyncAPIM 시작하기 →](/syncapim/) |
+| **📋 Agile** | 스크럼반(Scrumban) 기반 엠파시 애자일 개발 방법론 | [Agile 가이드 →](/agile/) |
+| **📚 Study & Logs** | AI 파인튜닝, RAG 연구 및 개발 디버깅 작업 기록 | [Study](/study/) · [Logs](/logs/) |
 
 ## 개요
 
@@ -152,7 +168,7 @@ footer: Copyright © 2025 Empasy
 
 1. 개요: 개별적으로 동작하는 소프트웨어 모듈을 하나의 유기적인 AI 생태계로 연결하는 중앙 제어 플랫폼입니다.
 2. 주요 특징: LLM 중심 시스템 운영, Agent-to-Agent(A2A) 통신망 구축, 자연어 기반 대화형 운영 통제 지원.
-3. 장점: 개발자가 인프라 확장에서 벗어나 의사결정에 집중할 수 있도록 에이전트가 주도적으로 시스템 변경사항을 제안 및 실행하며, 프라이빗 AI 환경에서 기업 보안을 완벽히 유지합니다.
+3. 장점: 개발자가 인프라 확장에서 벗어나 의사결정에 집중할 수 있도록 에이전트가 주도적으로 시스템 변경사항을 제안 및 실행하며, 프라이빗 AI 환경에서 기업 보안을 철저히 유지합니다.
 
 ### SyncInsight: AI 기반 지능형 데이터 관제 센터
 
@@ -183,3 +199,4 @@ footer: Copyright © 2025 Empasy
 ## 결론
 
 엠파시의 Sync Series 제품군은 빠르게 변화하는 비즈니스 환경에서 기업이 민첩하게 대응하고 경쟁력을 확보할 수 있도록 지원하는 데 초점을 맞추고 있습니다. 각 제품은 프론트엔드 개발, 백엔드 개발, 콘텐츠 관리, 테스트 자동화, API 관리 등 소프트웨어 라이프사이클의 핵심 영역에서 속도, 효율성, 유연성을 제공하는 기술적 특징과 장점을 가지고 있습니다. "변화에 최적화된 솔루션"이라는 엠파시의 철학은 Sync Series 제품군 전반에 걸쳐 구현되어 있으며, 검증된 기술력과 풍부한 구축 경험을 바탕으로 고객의 비즈니스 성공에 기여하고 있습니다. Sync Series는 단순한 기능 목록 나열을 넘어, 기업의 변화 관리라는 어려운 숙제를 해결하기 위한 엠파시의 고민과 그 해답을 담고 있는 솔루션입니다.
+

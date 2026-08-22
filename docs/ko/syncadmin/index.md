@@ -1,4 +1,4 @@
----
+﻿---
 title: "SyncAdmin: AI 연동에 최적화된 Vue 3 백오피스 프레임워크"
 description: Vue 3, Vite, TypeScript를 기반으로 구축된 지능형 관리자 대시보드 템플릿입니다. AI 에이전트 모니터링, 동적 데이터 시각화, 세분화된 권한 관리를 통해 기업용 시스템 구축을 지원합니다.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/syncadmin/
+      content: https://empasy.io/syncadmin/
 order: 1
 dir:
   order: 3

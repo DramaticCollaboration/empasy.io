@@ -1,81 +1,31 @@
 ---
-title: アカウント
-description: AIベースのテスト自動化でQA時間を80%削減します。コードなしのテスト作成、自然言語によるシナリオ作成、多様なプラットフォームのサポートにより、QAの新しい基準を提示します。
-head:
-  - - meta
-    - name: keywords
-      content: テスト自動化, テスティング生成型AI, Playwright, Selenium, リアルタイム品質フィードバック, 無停止テスト, AIベーステスト自動化, 継続的テスト(Continuous Testing), QAOps, TestOps, コードレス(Codeless), ローコード(Low-Code), 自己修復テスト(Self-healing), AIテスト自動化, コードレス自動化, QA自動化, ソフトウェアテスト, テストシナリオ生成, コードレステスト, 自然言語テスト, テスト自動化ツール, テスト自動化プラットフォーム, テスト効率化, Playwright, Selenium, QAOps, TestOps, シフトレフト(Shift-Left)テスト, シフトライト(Shift-Right)テスト
-  - - meta
-    - property: og:title
-      content: AIテスト自動化 | SyncETA
-  - - meta
-    - property: og:description
-      content: AIベースのテスト自動化でQA時間を80%削減します。コードなしのテスト作成、自然言語によるシナリオ作成、多様なプラットフォームのサポートにより、QAの新しい基準を提示します。
-  - - meta
-    - property: og:image
-      content: https://empasy.io/docs/images/favicon.png
-  - - meta
-    - property: og:url
-      content: https://doc.empasy.com/synceta/
-sort: 7
+title: "アカウントおよびワークスペース管理"
+description: "SyncETAのアカウント作成、メール認証、プロフィールおよび環境設定の手順を案内します。"
+sort: 100
 ---
 
-# アカウント
+# アカウントおよびワークスペース管理
 
-## 会員登録
+SyncETAプラットフォームへのログイン、認証、個人設定の管理ガイドです。
 
-#### 1. SyncETAのスタート画面の下部にある **_「アカウントを作成しますか？」_** をクリックします。
+---
 
-![アカウント作成のクリック](./image/account/login_main.png)
+## 1. 会員登録および認証
 
-#### 2. メールアドレスとパスワードを入力後、 **_「認証コード送信」_** ボタンをクリックします。
+1. ログイン画面下部の **「アカウントを作成しますか？」** をクリックします。
+   ![Login](./image/account/login_main.png)
+2. メールアドレスとパスワードを入力し、認証コードを送信します。
+   ![Send Code](./image/account/send_auth_code.png)
+3. 受信した6桁の認証コードを入力して登録を完了します。
+   ![Verify](./image/account/success_certify.png)
+4. 初回ログイン時にプロフィール名とアイコンを設定します。
+   ![Profile](./image/account/set_profile.png)
 
-::: info
-入力したメールアドレスに認証コードを送信します。
-:::
+---
 
-![認証コード送信](./image/account/send_auth_code.png)
+## 2. プロフィール設定
 
-#### 3. メール認証コードを入力後、 **_「登録する」_** ボタンをクリックします。
+「マイプロフィール」より言語（韓国語・英語・日本語）、テーマ（ダークモード）、通知設定を変更できます。
 
-::: info
-正常に会員登録が完了すると、ログイン画面に移動します。
-:::
-
-![認証コード入力](./image/account/success_certify.png)
-
-#### 4. 登録したアカウントでの初回ログイン時に **_「プロフィール設定」_** 画面に移動します。
-
-::: info
-プロフィール写真と名前を設定してください。
-:::
-![プロフィール設定](./image/account/set_profile.png)
-
-## プロフィール編集
-
-#### 1. メインダッシュボードの右上にある **_「マイプロフィール」_** をクリックします。
-
-::: info
-ユーザー設定をクリックするとアカウント設定画面に移動します。
-:::
-![プロフィール編集](./image/account/update_profile.png)
-
-#### 2. プロフィールを編集することができます。
-
-::: info
-サポート機能
-
-- プロフィールの編集
-- 言語
-- テーマ(ダークモード)
-- パスワードの変更
-- プッシュ通知設定
-  :::
-  ![プロフィール編集フォーム](./image/account/update_profile_form.png)
-
-## 開発中の機能
-
-::: info
-
-- アカウントの削除
-  :::
+![Update Profile](./image/account/update_profile.png)
+![Profile Form](./image/account/update_profile_form.png)

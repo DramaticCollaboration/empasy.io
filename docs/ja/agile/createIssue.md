@@ -1,4 +1,4 @@
----
+﻿---
 title: 課題作成プロンプト
 description: Jiraを効率的に使用するための核心原則を紹介します。✅ 課題割り当ての法則、✅ 必須コメントガイド、✅ ステータス管理のノウハウを通じてプロジェクトの透明性とチームの生産性を高める方法を確認してください。チームコラボレーションのためのガイドです。
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/createIssue.html
+      content: https://empasy.io/agile/createIssue.html
 sort: 7000
 ---
 

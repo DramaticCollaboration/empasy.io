@@ -1,4 +1,4 @@
----
+﻿---
 title: 勉強したことを書いてみましょう
 description: 忘れないように楽しく保存しよう！🎯 勉強した内容を自由に記録する楽しい知識リポジトリ
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/study/
+      content: https://empasy.io/study/
 sort: 200
 ---
 
@@ -48,11 +48,11 @@ sort: 200
 ![Growth](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjEzZHlvZ3BjeHkydHMwcno3N3B3ajg4am5uNHhmbXU1cGVqdHA1ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m7YYGSBBkDM9VUbcte/giphy.gif)
 
 **共に学び、共に成長しよう！**  
-皆さんの学習の旅も応援しています ✨
+皆さんの学習の旅も応援しています 
 
 </div>
 
 ---
 
-> **💡 最後のヒント:** 学んだことを整理し、共有する習慣が  
-> **最も強力な学習の武器** になるでしょう！一緒にやりましょう 🚀
+> ** 最後のヒント:** 学んだことを整理し、共有する習慣が  
+> **最も強力な学習の武器** になるでしょう！一緒にやりましょう 

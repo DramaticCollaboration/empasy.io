@@ -1,4 +1,4 @@
----
+﻿---
 title: "AI FinOps, 거버넌스 및 시스템 관제"
 sort: 5
 description: "LLM 토큰 사용량을 모니터링하는 AI FinOps, 개인식별정보(PII) 마스킹 및 거버넌스, 그리고 시스템 이상 패턴을 감지하고 조치하는 가디언 관제 시스템을 설명합니다."
@@ -14,10 +14,10 @@ head:
       content: "LLM 토큰 비용 관리와 엔터프라이즈 PII 데이터 보호, 시스템 모니터링 체계"
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/syncinsight/finops-and-security
+      content: https://empasy.io/syncinsight/finops-and-security
 ---
 
 # AI FinOps, 거버넌스 및 시스템 관제 (Security & FinOps)

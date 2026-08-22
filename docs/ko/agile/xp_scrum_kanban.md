@@ -1,4 +1,4 @@
----
+﻿---
 title: XP, Scrum, Kanban 비교와 실무 적용 전략
 description: XP, Scrum, Kanban의 차이점과 관계를 한눈에 이해하고, 실무에서 세 가지 애자일 방법론을 통합하여 적용하는 상세 가이드를 제공합니다. 단계별 체크리스트와 다이어그램으로 프로젝트 관리와 소프트웨어 품질 향상을 쉽게 구현할 수 있습니다.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/xp_scrum_kanban.html
+      content: https://empasy.io/agile/xp_scrum_kanban.html
 sort: 8000
 ---
 
@@ -254,7 +254,7 @@ flowchart TD
 
 ---
 
-## 🤖 AI와 함께 더 심화되는 XP의 문제 인식
+##  AI와 함께 더 심화되는 XP의 문제 인식
 
 - AI가 코드 생성을 무 effort로 만들어줌에 따라, 제대로 검증되지 않은 소프트웨어의 대량 생산 위험이 커짐.
 - 제약 없는 자동화 시스템이 미검증 로직을 다층적으로 쌓아 복잡성과 취약성 악화.
@@ -271,7 +271,7 @@ flowchart TD
 
 ---
 
-## 🚀 기능공장(feature factory)에서 진짜 가치 전달로
+##  기능공장(feature factory)에서 진짜 가치 전달로
 
 - 성공적인 팀은 속도 그 자체보다 흐름(flow)과 피드백 우선.
 - XP의 소규모 배치, 지속적 통합, 자동 테스트, 공동 소유 등 실천이 적응성과 사용자 중심성에 기여.

@@ -1,4 +1,4 @@
----
+﻿---
 title: Git Flow
 description: A complete Git Flow guide for team collaboration. We explain step-by-step branch structure, commit message rules, and release and hotfix management methods easily.
 head:
@@ -16,11 +16,11 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/activity.html
+      content: https://empasy.io/agile/activity.html
 sort: 4000
 ---
 
-# 🚀 Git Flow Guide
+#  Git Flow Guide
 
 ## 1. What is Git Flow?
 

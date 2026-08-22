@@ -1,75 +1,110 @@
 ---
-title: AI-Driven Test Automation | SyncETA
-description: Streamline your QA process with automated test scenario generation and real-time validation powered by Large Language Models (LLM). Accessible to everyone through natural language-based test design.
+title: "SyncETA: Autonomous Regression Testing & Self-Healing Platform"
+description: "An enterprise test automation solution providing web browser interaction recording, Playwright-based distributed parallel execution, Vision AI visual regression analysis, and selector self-healing."
 head:
   - - meta
     - name: keywords
-      content: Test Automation, AI Testing, Generative AI for Testing, Playwright, Selenium, LLM QA, Real-time Quality Feedback, Automated Test Generation, Codeless Automation, QA Automation, Software Testing
+      content: SyncETA, Test Automation, Regression Testing, Playwright, MCP, Model Context Protocol, Visual Regression, Self-Healing, CI/CD, Enterprise QA
   - - meta
     - property: og:title
-      content: AI-Driven Test Automation | SyncETA
+      content: "SyncETA: Autonomous Regression Testing & Self-Healing Platform"
   - - meta
     - property: og:description
-      content: Streamline your QA process with automated test scenario generation and real-time validation powered by Large Language Models (LLM).
-  - - meta
-    - property: og:image
-      content: https://empasy.io/docs/images/favicon.png
-  - - meta
-    - property: og:url
-      content: https://doc.empasy.com/synceta/
-sort: 1
+      content: "Web interaction recording, Playwright MCP execution, Vision AI inspection, and self-healing pipelines."
+sort: 10
 ---
 
-# 🚀 SyncETA: AI-Centric Intelligent Test Automation Platform
+# SyncETA: Autonomous Regression Testing & Self-Healing Platform
 
-**Natural Language-Based Test Case Generation and Automated Browser Execution System**
+SyncETA is an enterprise QA platform that captures user interactions in web applications, executes automated tests via the Model Context Protocol (MCP) standard, detects visual layout anomalies, and performs selector self-healing.
 
-SyncETA is a testing platform that deeply utilizes Large Language Models (LLM) to automate software validation processes. It records user browser interactions, and AI analyzes these to convert them into human-readable and editable natural language test cases. The generated scenarios are automatically executed in a multi-browser environment in conjunction with Playwright MCP, providing a virtuous cycle where QA feedback is continuously reflected in the AI model's training.
+---
 
-## [View Product Intro](https://synceta.empasy.com/)
+## 4 Core Functional Areas
 
-## 💡 Limitations of Testing Environments Solved by SyncETA
+```mermaid
+graph LR
+    A[SyncETA 4 Core Areas] --> B[1. Interaction Recording & Normalization]
+    A --> C[2. Playwright MCP Distributed Execution]
+    A --> D[3. Vision AI Visual Regression Analysis]
+    A --> E[4. Self-Healing & Governance]
 
-Traditional test automation systems had barriers to entry due to the difficulty of script maintenance and the need for coding knowledge:
+    B -.-> B1[Selenium-based Event & DOM Extraction to JSON/YAML]
+    C -.-> C1[Chrome, Firefox, Edge Multi-Browser Concurrency]
+    D -.-> D1[Layout Distortion & Element Overlap Detection]
+    E -.-> E1[Broken Selector Detection & SyncVerse HITL Approval]
+```
 
-- **High Maintenance Costs**: There is a significant burden to manually modify automation scripts whenever the UI changes.
-- **Manual Dependency**: Test case design relies on human intuition, making it difficult to maintain consistency or avoid omissions.
-- **Technical Barriers**: Writing test scripts requires programming knowledge, limiting utilization by QA teams and non-development roles.
+1. **Interaction Recording & Normalization**:
+   - Captures user browser operations (clicks, keystrokes, navigation, tab switching) in real time.
+   - Collected events are structured with XPath, CSS Selectors, and DOM hierarchy into standardized JSON/YAML formats.
 
-SyncETA solves these structural problems through AI, providing an environment where test scenarios can be configured and executed based on natural language without writing any scripts.
+2. **Playwright MCP Distributed Execution**:
+   - Executes tests across multi-browser engines (Chromium, Firefox, WebKit) concurrently using standardized Model Context Protocol (MCP) tools.
+   - Automatically archives DOM snapshots, console logs, and synchronized video recordings upon test failure.
 
-## 🛠️ SyncETA's Core AI Technology and Operation
+3. **Vision AI Visual Regression Analysis**:
+   - Evaluates layout integrity (element overlapping, text clipping, responsiveness) from a human perception perspective rather than simple pixel diffing.
+   - Supports masking for dynamic content areas (timestamps, dynamic banners).
 
-SyncETA organically links four core modules: user behavior recording, AI-based case generation, test execution, and quality improvement feedback.
+4. **Selector Self-Healing & Governance**:
+   - When existing DOM selectors fail due to UI updates, the engine analyzes screen visual layout to locate replacement selectors.
+   - Operates under Human-in-the-Loop governance: proposed repairs are submitted to the QA approval queue rather than modifying test assets without review.
 
-### 1. User Behavior Recording (SyncETA Recorder)
-- Captures user browser interactions (clicks, inputs, page navigation, etc.) in real-time in the background.
-- Extracted actions are saved as structured data (JSON/YAML) along with URLs and selectors (XPath, ID, Class), providing an intuitive UI that allows anyone to easily control the recording process.
+---
 
-### 2. LLM-Based Automated Test Case Generation (TestCase Generator)
-- **AI Analysis**: Open-source LLMs (like Mistral) analyze the saved scenario data to understand the purpose and steps of the test.
-- **Natural Language Conversion**: Based on the analyzed results, it automatically generates natural language Excel test cases including Step, Input, and Expected Result.
-- During this process, AI uses internal domain terminology and UI patterns as context to adjust the format to meet the team's QA standards.
+## 5-Stage End-to-End Test Pipeline
 
-### 3. Intelligent Test Execution (Test Executor)
-- **Codeless Execution**: The generated test cases are automatically executed in parallel across multiple browsers via Playwright MCP without any script writing.
-- **Direct Natural Language Execution Support**: Even without recorded data, AI can directly interpret and execute natural language scenarios in Excel formats previously held by QA.
-- Upon test failure, it provides screenshots and screen recording videos of the error occurrence point to support cause analysis.
+```mermaid
+sequenceDiagram
+    autonumber
+    actor QA as QA Engineer / Tester
+    participant REC as SyncETA Recorder
+    participant MCP as Playwright MCP Server
+    participant VIS as Vision AI Engine
+    participant CTL as Control Hub (SyncVerse / CI/CD)
 
-### 4. Continuous AI Learning Loop (QA Feedback Loop)
-- Data reviewed and modified by QA engineers from AI-generated test cases is used again as training data (Fine-tuning/RAG) for the LLM.
-- Through this feedback loop, the quality of AI test case generation and domain understanding is optimized for the project environment over time.
+    QA->>REC: Record Browser Actions (Clicks / Inputs)
+    REC->>CTL: Register Normalized Scenario (JSON/YAML)
+    CTL->>MCP: run_playwright (Parallel Execution)
+    MCP-->>VIS: Send Screenshots & DOM
+    alt Verification Pass
+        VIS-->>CTL: Visual Verification Passed
+    else UI Distortion / Selector Error Detected
+        VIS-->>CTL: Defect Report + Proposed Replacement Selector
+        CTL->>QA: Request Review & Approval (Human-in-the-Loop)
+    end
+```
 
-## ✨ Key Management and Validation Features
+---
 
-- **Automated Mockup Data Generation**: AI automatically generates various types of test data sets required during scenario execution, expanding validation coverage.
-- **Dynamic Scenario Chaining**: Beyond simple sequential execution, it provides a workflow that dynamically determines the flow of the next scenario based on the validation results of the previous step.
-- **AI Screen Validation**: Moving beyond checking simple elements, AI analyzes screen capture images at each event step to detect unintended changes in UI layout.
-- **CI/CD Pipeline Integration**: Integrates into existing development and deployment environments (Jenkins, Azure DevOps, etc.) to configure a Continuous Testing environment.
+## Key Benefits
 
-## 🎯 Expected Benefits of Adoption
+- **Reduced Script Maintenance Overhead**: Rapidly recovers broken test steps caused by frontend UI updates via self-healing pipelines.
+- **Accelerated Cross-Browser Verification**: Parallel execution across multi-browser containers shortens regression test cycles.
+- **Accurate Visual Integrity**: Vision AI filtering prevents false alarms caused by minor font antialiasing while capturing genuine UI breakage.
+- **Standard Protocol Interoperability**: HTTP SSE-based MCP interface allows seamless integration with enterprise CI/CD pipelines (Jenkins, GitHub Actions) and AI orchestrators.
 
-- **Time Efficiency**: By replacing manually written scenarios with AI, the overall test design time can be significantly reduced.
-- **Resource Reallocation**: Freed from repetitive testing tasks, QA personnel can focus on more complex and exceptional quality validation.
-- **Minimized Learning Curve**: Users without development knowledge can operate an enterprise-level test automation environment through natural language.
-- **Stable Coverage Expansion**: AI-suggested edge cases and test derivations broaden the stability validation scope of the entire system.
+---
+
+## Documentation Navigation
+
+### 1. Overview & Architecture
+- [System Architecture & Pipelines](./architecture) - 4-layer architecture and component communications
+- [5-Minute QuickStart Guide](./quickstart) - Container launch and first test execution
+
+### 2. User Guides
+- [Account & Workspace Management](./account) - Signup, profiles, and environment preferences
+- [Project & RBAC Management](./project) - Projects, roles, permissions, and member invitations
+- [Scenario Recording & Studio](./scenario-create) - Browser recording, wait conditions, assertions, recovery scripts
+- [Scenario Execution & Scheduling](./scenario-run) - Cross-browser execution, headless mode, and scheduled runs
+- [Collection Management](./collection) - Batch sequential and parallel execution suites
+- [Story Workflow Studio](./story) - Flowchart-based scenario chaining and multi-tab workflows
+- [Dataset Management](./dataset) - Excel integration and Data-Driven Testing
+- [Dashboard & Failure Analysis](./dashboard) - Execution statistics, console logs, DOM snapshots, and video replay
+
+### 3. Advanced & Enterprise
+- [Visual Regression & Self-Healing](./self-healing-and-vision) - Vision AI inspection and selector repair governance
+- [MCP Protocols & CI/CD Integration](./mcp-and-cicd) - Standard Tool schemas and pipeline integration
+- [Enterprise Security & On-Premises](./enterprise-security) - Local LLM integration, air-gapped deployment, data masking
+- [Technical Glossary](./glossary) - Definitions for Record, Scenario, Collection, Story, MCP, etc.

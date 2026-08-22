@@ -1,4 +1,4 @@
----
+﻿---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
@@ -29,7 +29,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/
+      content: https://empasy.io/
 
 
 features:

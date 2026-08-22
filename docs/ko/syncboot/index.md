@@ -1,4 +1,4 @@
----
+﻿---
 title: "SyncBoot: 디지털 백엔드 프레임워크 개요"
 description: "도메인 데이터 운영과 스키마 관리를 지원하는 엔터프라이즈 백엔드 플랫폼입니다. Spring Boot 3, LangChain4j, MCP 연동을 통해 시스템 운영과 API 개발을 지원합니다."
 head:
@@ -13,10 +13,10 @@ head:
       content: 도메인 데이터 운영과 스키마 관리를 지원하는 엔터프라이즈 백엔드 플랫폼입니다.
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/syncboot/
+      content: https://empasy.io/syncboot/
 ---
 
 # SyncBoot: 디지털 백엔드 프레임워크 개요

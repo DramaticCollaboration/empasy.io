@@ -1,4 +1,4 @@
----
+﻿---
 title: 5 Core Principles of Issue Management
 description: Introducing core principles for using Jira efficiently. ✅ Discover how to increase project transparency and team productivity through issue allocation rules, ✅ essential commenting guides, and ✅ status management know-how. This is a guide for team collaboration.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/PrinciplesForIssueUsage.html
+      content: https://empasy.io/agile/PrinciplesForIssueUsage.html
 sort: 6000
 ---
 

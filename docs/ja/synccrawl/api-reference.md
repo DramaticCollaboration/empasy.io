@@ -1,4 +1,4 @@
----
+﻿---
 title: REST API＆MCP Toolリファレンス | SyncCrawl
 description: SyncCrawlの主要なデータ収集ジョブ制御、即時実行、結果照会およびModel Context Protocol (MCP)仕様を解説します。
 sort: 6
@@ -30,7 +30,7 @@ Content-Type: application/json
 
 #### リクエスト例 (cURL)
 ```bash
-curl -X POST "https://crawl.empasy.com/api/v1/crawl/jobs" \
+curl -X POST "https://empasy.io/api/v1/crawl/jobs" \
      -H "Authorization: Bearer ${SYNC_TOKEN}" \
      -H "Content-Type: application/json" \
      -d '{
@@ -77,7 +77,7 @@ curl -X POST "https://crawl.empasy.com/api/v1/crawl/jobs" \
 
 #### リクエスト例 (cURL)
 ```bash
-curl -X POST "https://crawl.empasy.com/api/v1/crawl/jobs/JOB_20260823_0042/trigger" \
+curl -X POST "https://empasy.io/api/v1/crawl/jobs/JOB_20260823_0042/trigger" \
      -H "Authorization: Bearer ${SYNC_TOKEN}"
 ```
 
@@ -105,7 +105,7 @@ curl -X POST "https://crawl.empasy.com/api/v1/crawl/jobs/JOB_20260823_0042/trigg
 
 #### リクエスト例 (cURL)
 ```bash
-curl -X GET "https://crawl.empasy.com/api/v1/crawl/results/EXEC_20260823_9011" \
+curl -X GET "https://empasy.io/api/v1/crawl/results/EXEC_20260823_9011" \
      -H "Authorization: Bearer ${SYNC_TOKEN}"
 ```
 

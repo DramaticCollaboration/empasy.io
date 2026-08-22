@@ -1,4 +1,4 @@
----
+﻿---
 title: 커밋 메세지
 description: 효율적인 Git 커밋 메시지 작성법 완전 가이드. feat, fix, refactor 등 타입별 규칙, 커밋 제목·본문 작성법과 실전 예시까지.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/activity.html
+      content: https://empasy.io/agile/activity.html
 sort: 5000
 ---
 

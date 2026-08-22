@@ -1,4 +1,4 @@
----
+﻿---
 title: 스토리 포인트
 description: 스토리 포인트는 작업의 크기, 복잡성, 불확실성을 상대적으로 추정하는 단위입니다. 절대적인 시간과 직접적으로 매칭하지 않으며, 스프린트 단위의 합리적인 업무량 파악과 팀 일정 추정을 목적으로 합니다.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/glossaryOfTerms.html
+      content: https://empasy.io/agile/glossaryOfTerms.html
 sort: 2000
 ---
 

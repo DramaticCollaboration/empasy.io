@@ -1,4 +1,4 @@
----
+﻿---
 title: スクラムバン運用ガイド
 description: スクラムバン(Scrumban)は、スクラムの反復的構造とカンバンのフロー管理・WIP制限を組み合わせ、柔軟かつ効率的に作業を管理するハイブリッドアジャイル方法論です。
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/guide.html
+      content: https://empasy.io/agile/guide.html
 sort: 300
 ---
 

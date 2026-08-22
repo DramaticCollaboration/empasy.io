@@ -1,4 +1,4 @@
----
+﻿---
 title: "AI連携に最適化されたVue 3 バックオフィス・フレームワーク | SyncAdmin"
 description: Vue 3、Vite、TypeScriptベースのインテリジェントな管理者ダッシュボードテンプレートです。AIエージェントの監視、動的なデータ視覚化、きめ細かな権限管理を通じて、エンタープライズシステムの構築をサポートします。
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/syncadmin/
+      content: https://empasy.io/syncadmin/
 order: 1
 dir:
   order: 3

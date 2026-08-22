@@ -1,4 +1,4 @@
----
+﻿---
 title: Linux Electron Debugging Crash
 description: Memories fade quickly, but logs are forever! 🎯 Our team's fun and free work record space
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/study/
+      content: https://empasy.io/study/
 sort: 400
 ---
 

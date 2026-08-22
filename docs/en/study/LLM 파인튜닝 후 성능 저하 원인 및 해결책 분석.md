@@ -1,4 +1,4 @@
----
+﻿---
 title: LLM Fine-tuning Performance Degradation Analysis and Solutions
 description: Don't forget, let's save it for fun! 🎯 A fun knowledge repository to freely record what you've studied
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/study/
+      content: https://empasy.io/study/
 sort: 500
 ---
 

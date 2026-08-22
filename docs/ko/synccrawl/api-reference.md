@@ -1,4 +1,4 @@
----
+﻿---
 title: REST API & MCP Tool 레퍼런스
 description: SyncCrawl의 핵심 수집 작업 제어, 즉시 실행, 수집 데이터 조회 및 Model Context Protocol(MCP) 도구 명세를 안내합니다.
 sort: 6
@@ -30,7 +30,7 @@ Content-Type: application/json
 
 #### 요청 예시 (cURL)
 ```bash
-curl -X POST "https://crawl.empasy.com/api/v1/crawl/jobs" \
+curl -X POST "https://empasy.io/api/v1/crawl/jobs" \
      -H "Authorization: Bearer ${SYNC_TOKEN}" \
      -H "Content-Type: application/json" \
      -d '{
@@ -77,7 +77,7 @@ curl -X POST "https://crawl.empasy.com/api/v1/crawl/jobs" \
 
 #### 요청 예시 (cURL)
 ```bash
-curl -X POST "https://crawl.empasy.com/api/v1/crawl/jobs/JOB_20260823_0042/trigger" \
+curl -X POST "https://empasy.io/api/v1/crawl/jobs/JOB_20260823_0042/trigger" \
      -H "Authorization: Bearer ${SYNC_TOKEN}"
 ```
 
@@ -105,7 +105,7 @@ curl -X POST "https://crawl.empasy.com/api/v1/crawl/jobs/JOB_20260823_0042/trigg
 
 #### 요청 예시 (cURL)
 ```bash
-curl -X GET "https://crawl.empasy.com/api/v1/crawl/results/EXEC_20260823_9011" \
+curl -X GET "https://empasy.io/api/v1/crawl/results/EXEC_20260823_9011" \
      -H "Authorization: Bearer ${SYNC_TOKEN}"
 ```
 

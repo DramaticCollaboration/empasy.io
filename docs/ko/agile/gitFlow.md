@@ -1,4 +1,4 @@
----
+﻿---
 title: Git Flow
 description: 팀 협업을 위한 Git Flow 완전 가이드. 브랜치 구조, 커밋 메시지 규칙, 릴리즈 및 핫픽스 관리 방법을 단계별로 쉽게 설명합니다.
 head:
@@ -16,11 +16,11 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/activity.html
+      content: https://empasy.io/agile/activity.html
 sort: 4000
 ---
 
-# 🚀 Git Flow 가이드
+#  Git Flow 가이드
 
 ## 1. Git Flow란?
 

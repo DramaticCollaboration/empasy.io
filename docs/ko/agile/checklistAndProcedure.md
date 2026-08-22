@@ -1,4 +1,4 @@
----
+﻿---
 title: 미팅 체크리스트 및 진행 절차
 description: 스크럼반(Scrumban)은 스크럼의 반복적 구조와 칸반의 흐름 관리·WIP 제한을 결합해 유연하고 효율적으로 작업을 관리하는 하이브리드 애자일 방법론입니다.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/activity.html
+      content: https://empasy.io/agile/activity.html
 sort: 450
 ---
 

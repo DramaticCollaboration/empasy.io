@@ -1,4 +1,4 @@
----
+﻿---
 title: コミットメッセージ
 description: 効率的なGitコミットメッセージの作成方法完全ガイド。feat、fix、refactorなどタイプ別のルール、コミットの件名・本文の作成方法と実践例まで。
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/activity.html
+      content: https://empasy.io/agile/activity.html
 sort: 5000
 ---
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "빠른 시작 및 API 가이드"
 sort: 6
 description: "Docker Compose를 활용한 SyncInsight 로컬 인스턴스 실행, 분석 보고서 생성 과정, REST API 및 MCP 도구 연동 방법을 설명합니다."
@@ -14,10 +14,10 @@ head:
       content: "Docker Compose를 통한 로컬 환경 구성과 첫 분석 보고서 실행 가이드"
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/syncinsight/quickstart
+      content: https://empasy.io/syncinsight/quickstart
 ---
 
 # 빠른 시작 및 API 가이드 (Quickstart & API Reference)

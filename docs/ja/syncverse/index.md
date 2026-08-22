@@ -1,4 +1,4 @@
----
+﻿---
 title: "マルチエージェントベースのインテリジェント・オーケストレーション・エコシステム | SyncVerse"
 description: 複数の特化したAIエージェントがAgent-to-Agent(A2A)通信を通じて有機的に協業し、エンタープライズシステムの運用全般を自律的に管理するLLMネイティブプラットフォームです。
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/syncverse/
+      content: https://empasy.io/syncverse/
 order: 1
 dir:
   order: 5

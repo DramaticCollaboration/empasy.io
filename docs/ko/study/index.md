@@ -1,4 +1,4 @@
----
+﻿---
 title: 공부 한것들을 적어 보아요
 description: 까먹지 말고 재밌게 저장하자! 🎯 공부한 내용을 자유롭게 기록하는 즐거운 지식 저장소
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/study/
+      content: https://empasy.io/study/
 sort: 200
 ---
 
@@ -48,11 +48,11 @@ sort: 200
 ![Growth](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjEzZHlvZ3BjeHkydHMwcno3N3B3ajg4am5uNHhmbXU1cGVqdHA1ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m7YYGSBBkDM9VUbcte/giphy.gif)
 
 **함께 배우고, 함께 성장해요!**  
-여러분의 학습 여정도 응원합니다 ✨
+여러분의 학습 여정도 응원합니다 
 
 </div>
 
 ---
 
-> **💡 마지막 팁:** 배운 것을 정리하고 공유하는 습관이  
-> **가장 강력한 학습 무기**가 될 거예요! 함께해요 🚀
+> ** 마지막 팁:** 배운 것을 정리하고 공유하는 습관이  
+> **가장 강력한 학습 무기**가 될 거예요! 함께해요 

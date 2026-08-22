@@ -1,4 +1,4 @@
----
+﻿---
 title: Commit Message
 description: A complete guide on how to write efficient Git commit messages. Rules by type such as feat, fix, refactor, how to write commit subjects and bodies, and practical examples.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/activity.html
+      content: https://empasy.io/agile/activity.html
 sort: 5000
 ---
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Scrumban
 description: Scrumban is a hybrid Agile methodology that combines Scrum's iterative structure with Kanban's flow management and WIP limits to flexibly and efficiently manage work.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/
+      content: https://empasy.io/agile/
 sort: 200
 ---
 

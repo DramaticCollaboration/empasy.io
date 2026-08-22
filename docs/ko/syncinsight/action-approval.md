@@ -1,4 +1,4 @@
----
+﻿---
 title: "자율 액션 승인 및 What-If 시뮬레이터"
 sort: 3
 description: "AI가 제안한 비즈니스 전략을 사전에 시뮬레이션하고, 관리자 승인(HITL)을 거쳐 하위 에이전트(SyncCMS, SyncShop)로 안전하게 전달하는 액션 실행 체계를 설명합니다."
@@ -14,10 +14,10 @@ head:
       content: "제안 전략의 사전 영향도 검증과 관리자 승인 기반의 안전한 실행(HITL) 파이프라인"
   - - meta
     - property: og:image
-      content: https://doc.empasy.com/images/favicon.png
+      content: https://empasy.io/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/syncinsight/action-approval
+      content: https://empasy.io/syncinsight/action-approval
 ---
 
 # 자율 액션 승인 및 What-If 시뮬레이터 (Action Approval & Simulation)

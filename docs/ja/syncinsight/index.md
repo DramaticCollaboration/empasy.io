@@ -1,4 +1,4 @@
----
+﻿---
 title: "AIベースのインテリジェント・ビジネスインテリジェンスおよび管制プラットフォーム | SyncInsight"
 description: SyncSeriesエコシステム全体のデータを収集、分析、視覚化し、AIの推論に基づいてビジネスインサイトを導き出す次世代のデータ管制プラットフォームです。
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/syncinsight/
+      content: https://empasy.io/syncinsight/
 order: 1
 dir:
   order: 6

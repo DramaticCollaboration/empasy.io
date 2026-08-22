@@ -1,4 +1,4 @@
----
+﻿---
 title: Electron デバッグ
 description: 記憶はすぐに消えますが、ログは永遠です！🎯 私たちのチームの楽しくて自由な作業記録スペース
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/study/
+      content: https://empasy.io/study/
 sort: 300
 ---
 

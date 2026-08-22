@@ -1,4 +1,4 @@
----
+﻿---
 title: RAG
 description: 忘れないように楽しく保存しよう！🎯 勉強した内容を自由に記録する楽しい知識リポジトリ
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/study/
+      content: https://empasy.io/study/
 sort: 300
 ---
 

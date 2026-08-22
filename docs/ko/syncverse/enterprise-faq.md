@@ -1,4 +1,4 @@
----
+﻿---
 title: "엔터프라이즈 도입 FAQ 및 프라이빗 AI 보안"
 description: "SyncVerse 도입을 검토 중인 엔터프라이즈 고객을 위한 자주 묻는 질문(FAQ), 사내 폐쇄망 온프레미스 프라이빗 AI 구축 방안, 기존 CI/CD 및 Git 시스템 연동 가이드입니다."
 head:
@@ -75,4 +75,4 @@ flowchart LR
 
 SyncVerse는 오픈소스 커뮤니티 에디션과 기업용 엔터프라이즈 에디션을 제공합니다.
 - **도입 문의 및 PoC 지원**: `contact@empasy.com`
-- **공식 기술 지원 포털**: [https://doc.empasy.com](https://doc.empasy.com)
+- **공식 기술 지원 포털**: [https://empasy.io](https://empasy.io)

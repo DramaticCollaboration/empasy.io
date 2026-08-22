@@ -1,4 +1,4 @@
----
+﻿---
 title: XP, Scrum, Kanban Comparison and Practical Application Strategy
 description: Understand the differences and relationships between XP, Scrum, and Kanban at a glance, and we provide a detailed guide on integrating and applying these three agile methodologies in practice. Easily implement project management and software quality improvement with step-by-step checklists and diagrams.
 head:
@@ -16,7 +16,7 @@ head:
       content: https://empasy.io/docs/images/favicon.png
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/agile/xp_scrum_kanban.html
+      content: https://empasy.io/agile/xp_scrum_kanban.html
 sort: 8000
 ---
 
@@ -246,7 +246,7 @@ The most important thing is for the team to recognize their own situation and pr
 
 ---
 
-## 🤖 Awareness of XP Problems Deepening with AI
+##  Awareness of XP Problems Deepening with AI
 
 - As AI makes code generation effortless, the risk of mass-producing poorly verified software increases.
 - Unconstrained automation systems layer unverified logic, worsening complexity and vulnerability.
@@ -263,7 +263,7 @@ The most important thing is for the team to recognize their own situation and pr
 
 ---
 
-## 🚀 From Feature Factory to Delivering Real Value
+##  From Feature Factory to Delivering Real Value
 
 - Successful teams prioritize flow and feedback over speed itself.
 - XP practices like small batches, continuous integration, automated testing, and collective ownership contribute to adaptability and user-centricity.
