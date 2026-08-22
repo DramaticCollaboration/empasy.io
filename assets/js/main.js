@@ -183,22 +183,22 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     addDynamicBackground();
 
-    // 8. Brand Keyword Embossing
-    const walkAndWrap = (node) => {
-        if (node.nodeType === 3) {
-            const text = node.nodeValue;
-            if (text.includes('엠파시') || text.includes('Empasy')) {
-                const regex = /(엠파시|Empasy)/g;
-                if (regex.test(text) && node.parentNode.tagName !== 'SPAN' && node.parentNode.className !== 'empasy-glow' && node.parentNode.tagName !== 'TITLE' && node.parentNode.tagName !== 'SCRIPT' && node.parentNode.tagName !== 'STYLE') {
-                    const span = document.createElement('span');
-                    span.innerHTML = text.replace(regex, '<span class="empasy-glow">$1</span>');
-                    node.parentNode.replaceChild(span, node);
-                }
+    // 8. Terminal Command Copy-to-Clipboard Functionality
+    const copyBtns = document.querySelectorAll('.terminal-copy-btn');
+    copyBtns.forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const cmdText = btn.getAttribute('data-cmd') || 'empasy eta run --target https://app.example.com --scenario "결제 검증"';
+            try {
+                await navigator.clipboard.writeText(cmdText);
+                const originalHtml = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check" style="color: #22c55e;"></i> Copied!';
+                setTimeout(() => {
+                    btn.innerHTML = originalHtml;
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy command:', err);
             }
-        } else if (node.nodeType === 1 && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') {
-            Array.from(node.childNodes).forEach(walkAndWrap);
-        }
-    };
-    walkAndWrap(document.body);
+        });
+    });
 
 });

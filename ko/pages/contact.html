@@ -99,16 +99,25 @@
                     <div class="form-group">
                         <label class="form-label" for="interest">관심 솔루션</label>
                         <select id="interest" class="form-control" style="background: rgba(0, 0, 0, 0.4);">
-                            <option>전체 (Sync Series 통합 도입)</option>
-                            <option>SyncEta (UI 테스트 자동화)</option>
-                            <option>SyncBoot (엔지니어링 백엔드)</option>
-                            <option>SyncCMS (다국어 퍼블리싱)</option>
-                            <option>SyncCrawl (데이터 수집 파이프라인)</option>
+                            <option>전체 (Sync Series 통합 자율 운영 생태계)</option>
+                            <option>SyncVerse (멀티 에이전트 A2A 오케스트레이션)</option>
+                            <option>SyncInsight (의사결정 인텔리전스 & 관제)</option>
+                            <option>SyncEta (Vision-LLM UI 테스트 자동화)</option>
+                            <option>SyncBoot (엔터프라이즈 Java MSA 백엔드)</option>
+                            <option>SyncCMS (글로벌 다국어 퍼블리싱 CMS)</option>
+                            <option>SyncCrawl (적응형 자율 크롤링 & RAG 지식)</option>
+                            <option>SyncLLM (AI 게이트웨이 & FinOps 통제)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="message">문의 내용</label>
                         <textarea id="message" class="form-control" placeholder="도입 대상 시스템 환경, 검토 일정 등 문의 내용을 작성해주세요." required></textarea>
+                    </div>
+                    <div class="form-group" style="margin: 1.5rem 0; display: flex; align-items: flex-start; gap: 10px;">
+                        <input type="checkbox" id="privacyConsent" required style="width: 18px; height: 18px; margin-top: 3px; cursor: pointer; accent-color: var(--primary-color);">
+                        <label for="privacyConsent" style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.5; cursor: pointer;">
+                            <strong>[필수]</strong> 문의 접수 및 기술 상담을 위한 <a href="../../ko/pages/privacy.html" target="_blank" style="color: var(--primary-color); text-decoration: underline;">개인정보 수집 및 이용</a>에 동의합니다.
+                        </label>
                     </div>
                     <button type="submit" class="btn btn-primary submit-btn">문의 접수하기</button>
                 </form>

@@ -1,4 +1,4 @@
-const translations = {
+﻿const translations = {
     ko: {
         "nav.about": "회사 철학",
         "nav.company": "회사 소개",
@@ -193,7 +193,6 @@ const translations = {
     }
 };
 
-
 // Determine language from URL path
 function getLangFromURL() {
     const path = window.location.pathname;
@@ -204,44 +203,33 @@ function getLangFromURL() {
 
 let currentLang = getLangFromURL();
 
-// Geo-based auto-routing on first visit
-function autoRoute() {
-    const path = window.location.pathname;
-    // Only route if we are at the root (Korean) and no manual lang is set in localStorage
-    if (path.includes('/en/') || path.includes('/ja/')) {
-        return; // Already inside localized folder
+// Dynamic Language Switcher to preserve current page path
+function updateLangSwitcherLinks() {
+    const langLinks = document.querySelectorAll('.lang-dropdown-content a');
+    if (!langLinks || langLinks.length === 0) return;
+
+    const currentPath = window.location.pathname;
+    
+    // Normalize relative path after language code
+    let relativeSubPath = 'pages/index.html';
+    if (currentPath.includes('/ko/')) {
+        relativeSubPath = currentPath.substring(currentPath.indexOf('/ko/') + 4);
+    } else if (currentPath.includes('/en/')) {
+        relativeSubPath = currentPath.substring(currentPath.indexOf('/en/') + 4);
+    } else if (currentPath.includes('/ja/')) {
+        relativeSubPath = currentPath.substring(currentPath.indexOf('/ja/') + 4);
     }
 
-    if (localStorage.getItem('empasy_lang_routed')) {
-        return; // Already routed before
-    }
-
-    try {
-        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        localStorage.setItem('empasy_lang_routed', 'true');
-        
-        // If they are in Japan, redirect to /ja/
-        if (tz === 'Asia/Tokyo') {
-            window.location.href = 'ja/index.html';
-            return;
+    langLinks.forEach(link => {
+        const href = link.getAttribute('href') || '';
+        if (href.includes('/ko/')) {
+            link.setAttribute('href', /ko/);
+        } else if (href.includes('/en/')) {
+            link.setAttribute('href', /en/);
+        } else if (href.includes('/ja/')) {
+            link.setAttribute('href', /ja/);
         }
-        // If they are not in Korea, default to English
-        if (tz !== 'Asia/Seoul') {
-            window.location.href = 'en/index.html';
-            return;
-        }
-    } catch (e) {
-        const browserLang = navigator.language.toLowerCase();
-        localStorage.setItem('empasy_lang_routed', 'true');
-        if (browserLang.startsWith('ja')) {
-            window.location.href = 'ja/index.html';
-            return;
-        }
-        if (!browserLang.startsWith('ko')) {
-            window.location.href = 'en/index.html';
-            return;
-        }
-    }
+    });
 }
 
 function updateContent() {
@@ -251,26 +239,9 @@ function updateContent() {
             el.innerHTML = translations[currentLang][key];
         }
     });
-
-    // Update active state of language buttons
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initial render
-    autoRoute();
     updateContent();
+    updateLangSwitcherLinks();
 });
-// Global intercept for SyncEta links
-/*
-document.addEventListener('click', function(e) {
-    const link = e.target.closest('a');
-    if (link) {
-        // Use the absolute URL (link.href) to reliably detect any navigation into the SyncEta folder
-        const absoluteHref = link.href;
-        if (absoluteHref && absoluteHref.includes('/SyncEta/')) {
-            e.preventDefault();
-            alert('준비중입니다. (Coming Soon)');
-        }
-    }
-});
-*/
