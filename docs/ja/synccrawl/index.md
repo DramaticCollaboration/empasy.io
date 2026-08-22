@@ -1,61 +1,79 @@
 ---
-title: AIベースのインテリジェント・クローラー | SyncCrawl
-description: SyncCrawlは、データ抽出を自動化し、AIで動的なWeb構造を処理して、エンタープライズ向けの高品質なデータを提供するインテリジェントなスクレイピングプラットフォームです。
+title: 自然言語Webクローリング＆RAGナレッジ構築プラットフォーム | SyncCrawl
+description: 自然言語による指示でWebデータを収集し、企業向けRAGナレッジベースを構築します。構造変更に柔軟に対応するWeb収集プラットフォームです。
 head:
   - - meta
     - name: keywords
-      content: SyncCrawl, Webクローラー, Webスクレイピング, AIクローリング, データ抽出, Playwright, Selenium, 動的Webスクレイピング, RAGデータ収集, 自動スクレイピング
+      content: Webクローリングソリューション, インテリジェントクローリング, クローリング自動化, データ収集, B2Bナレッジ, RAG, セマンティック検索, AIエージェント, ベクトルDB, LangChain4j, Playwright MCP
   - - meta
     - property: og:title
-      content: AIベースのインテリジェント・クローラー | SyncCrawl
+      content: 自然言語Webクローリング＆RAGナレッジ構築プラットフォーム | SyncCrawl
   - - meta
     - property: og:description
-      content: SyncCrawlは、データ抽出を自動化し、AIで動的なWeb構造を処理して、高品質なデータを提供するプラットフォームです。
+      content: 自然言語による指示でWebデータを収集し、企業向けRAGナレッジベースを構築します。
   - - meta
     - property: og:image
-      content: https://empasy.io/docs/images/favicon.png
+      content: https://empasy.io/images/solutions/synccrawl.jpg
   - - meta
     - property: og:url
-      content: https://doc.empasy.com/synccrawl/
-order: 1
-dir:
-  order: 4
+      content: https://empasy.io/docs/ja/synccrawl/
+sort: 1
 ---
 
-# SyncCrawl: データエージェントのためのインテリジェント・クローリング・パイプライン
+# SyncCrawl™: Webクローリング＆RAGナレッジ構築プラットフォーム
 
-SyncCrawlは、Web上に散在する膨大なデータを迅速かつ安定的に収集するために設計されたエンタープライズクラスの自動データ抽出プラットフォームです。
+SyncCrawl™は、データ収集、自然言語処理（NLP）、**Playwright MCPによるブラウザ自動化**、そして**RAG（検索拡張生成）ナレッジパイプライン**を連携したエンタープライズ向けWeb収集プラットフォームです。
 
-単なるHTMLパーシングから脱却し、AIアルゴリズムと分散処理技術を活用して、最新のWeb環境の動的なコンテンツと複雑な構造に能動的に対応する高度なクローリング・パイプラインを提供します。
+対象WebサイトのUIやDOM構造が変更された場合でも文脈を分析してセレクターを再構成（Self-Healing）し、収集した非構造化Webデータをクレンジング・埋め込み処理して社内ベクトル知識ベースへ変換します。
 
 ---
 
-## 1. AIベースのスマート抽出技術
+## 主な機能と構成
 
-SyncCrawlは、複雑で継続的に変化するWebページの構造に柔軟に対応し、開発者が手動で作成するパターン抽出ルールの必要性を最小限に抑えます。
+従来のクローラーにおける運用保守の課題を軽減し、データ収集からベクトルインデックス化までの工程を一元化します。
 
-- **動的DOMの理解**: Webページのレイアウトが頻繁に変更されても、画面の要素（商品の価格、作成者情報、本文など）の意味的脈絡を識別して正確なデータを抽出します。
-- **自動Anti-Bot回避**: 人の行動のようなリクエストパターンをリアルタイムで分析し、自律的にリクエスト間隔を調整しIPをローテーションさせることで、ブロックされることなく安定的にデータを収集します。
-- **視覚要素の認識**: テキスト抽出だけでなく、コンピュータビジョン技術を活用して画像内のテキスト（OCR）を読み取り、チャートや表などの複雑な構造を文脈的に分析します。
+```mermaid
+graph LR
+    A[自然言語による指示<br/>Natural Language] --> B[エージェント統合<br/>LangChain4j + MCP]
+    B --> C[Webブラウジング<br/>Playwright Self-Healing]
+    C --> D[クレンジング・分割<br/>Document Pipeline]
+    D --> E[ナレッジベース連携<br/>Vector DB / RAG QA]
+```
 
-## 2. 大規模分散処理アーキテクチャ
+### 1. 適応型クローリング (Self-Healing Crawling)
+- **自然言語指示の解釈**: 「主要機関のお知らせ最新10件と本文内容を収集」といった業務言語でジョブを登録します。
+- **適応型セレクター復旧**: サイト改編でCSS/XPathセレクターが変更されても、DOM構造とテキスト文脈を分析して対象データを再探索します。
 
-ビッグデータ収集を迅速かつターゲットサーバーに過負荷をかけることなく処理できるように設計されています。
+### 2. RAGナレッジパイプライン (Knowledge Base)
+- **文脈保持チャンキング**: HTML構造を解析し、文脈を保ったままセマンティックチャンクに分割します。
+- **多言語埋め込み対応**: 日本語および業務ドメイン用語の処理に適した埋め込みモデルをサポートします。
+- **ベクトルデータベース連携**: PGVector、Milvus、Qdrant、Weaviate等の主要Vector DBと連携し、リアルタイム同期を行います。
 
-- **分散クローリング・エージェント・クラスター**: 複数のノードに収集ターゲットを分割し、数百万件のレコードを同時に収集する際の処理時間を大幅に短縮します。
-- **非同期処理と再試行ロジック**: 途中でネットワーク障害が発生しても、メッセージキューに状態を保存して自動的に再試行を試み、データの損失を防ぎます。
-- **リソースの最適化**: ターゲットサーバーのレイテンシを監視し、スクレイピング・リクエストの同時実行数を安全な範囲内に自動調整する適応型クローリング機能を備えています。
+### 3. 分散ランタイムとセキュリティ設計 (Production Architecture)
+- **4つの独立コンテナ**: `Server`、`Agent`、`Scenario-Agent`、`Console`の4つの分散イメージにより柔軟なスケールアウトが可能です。
+- **SSRF防御機構**: 内部ネットワークアクセスおよび不正リダイレクトを検証するURL検証モジュール（`BrowserNavigateUrlValidator`）を搭載しています。
+- **閉域網（Air-Gapped）対応**: 外部インターネットと隔離されたオンプレミス環境でも、社内Private LLM（vLLM、Ollama）と連携して動作します。
 
-## 3. データパイプラインの統合
+---
 
-SyncCrawlは単なるデータ収集にとどまらず、エンタープライズのデータインフラとシームレスに連携できるようにデータを自動的に精製します。
+## 技術仕様概要
 
-- **自動クリーニングと変換**: 収集された生データの品質を評価し、ノイズ（広告、不要なHTMLタグ）を自動的に除去し、構造化されたフォーマット（JSON、CSV、データベース）に変換します。
-- **RAG環境の最適化**: 収集された非構造化データを容易にドキュメントチャンクやベクトル埋め込みに変換し、対話型AI（LLM）の知識ベースとしてすぐに活用できるようにサポートします。
-- **APIおよびWebhookの統合**: タスク完了後、リアルタイムのアラートや収集データを下流システム（SyncCMSやSyncInsightなど）に即座にプッシュし、リアルタイムデータ自動化エコシステムを実現します。
+| 区分 | サポート技術および仕様 |
+| :--- | :--- |
+| **コアバックエンド** | Java 21, Spring Boot 3.5, LangChain4j, Flyway |
+| **ブラウザ自動化** | Playwright MCP, Headless Chromium, 分散Worker |
+| **ストレージ＆キャッシュ** | PostgreSQL, Redis, MinIO / S3 オブジェクトストレージ |
+| **ベクトルデータベース** | PGVector, Milvus, Qdrant, Weaviate |
+| **運用コンソール** | Vue 3, Vite, TypeScript, Quasar Design System |
+| **デプロイインフラ** | Docker Multi-Arch (amd64/arm64), Kubernetes(AKS), Air-Gapped Runner |
 
-## 4. 主な活用事例
+---
 
-- **市場トレンドの追跡**: 競合他社の商品の価格、レビュー、プロモーションデータなどをリアルタイムで監視します。
-- **知識ベースの構築**: 専門記事、公開文書、ニュースを体系的にクロールし、企業独自のLLMデータセットを構築します。
-- **自動ブランド監視**: SNSやコミュニティフォーラムをスキャンし、キーワードごとの世論を収集して分析結果をレポートします。
+## ドキュメント一覧
+
+- [システムアーキテクチャ＆Clean Architecture](./architecture.md): 4層分散アーキテクチャとコンポーネント構成
+- [適応型クローリング＆AI自己修復エンジン](./adaptive-crawling-engine.md): Playwright MCP連携およびセレクター修復動作原理
+- [RAGナレッジパイプライン＆ベクトル連携](./rag-knowledge-pipeline.md): データクレンジング、チャンキング、Vector DB同期
+- [エンタープライズセキュリティ＆閉域網ガバナンス](./enterprise-security-governance.md): SSRF遮断、Air-Gapped運用および監査証跡
+- [REST API＆MCP Toolリファレンス](./api-reference.md): ジョブ制御、クエリ、結果取得のためのAPI仕様
+- [エンタープライズFAQ＆導入ガイド](./enterprise-faq.md): Bot対策、スケーリングおよび主要なQ&A

@@ -1,67 +1,88 @@
 ---
-title: "Autonomous Digital Agent Framework for Backend | SyncBoot"
-description: An AI-driven enterprise backend platform that monitors server status and manipulates databases via natural language. Automates complex system operations and recovery processes through MCP integration.
+title: "SyncBoot: Digital Backend Framework Overview"
+description: "An enterprise backend platform supporting domain data operations and schema governance. Integrates Spring Boot 3, LangChain4j, and Model Context Protocol (MCP) to streamline system operations and API development."
 head:
   - - meta
     - name: keywords
-      content: SyncBoot, Java, AI Agent, Digital Engineer, Microservices (MSA), Open Source, Enterprise Applications, Model Context Protocol, MCP, Self-Healing, Context-Aware, Natural Language DB Control, Stateless Architecture, Spring Boot, CI/CD
+      content: SyncBoot, Java, Spring Boot 3, LangChain4j, AI Agent, Model Context Protocol, MCP, Low-Code, Enterprise Backend, 3-File SQL, RBAC, Multi-Tenant
   - - meta
     - property: og:title
-      content: "Autonomous Digital Agent Framework for Backend | SyncBoot"
+      content: "SyncBoot: Digital Backend Framework Overview"
   - - meta
     - property: og:description
-      content: An AI-driven enterprise backend platform that manipulates databases via natural language and self-monitors server status.
-  - - meta
-    - property: og:image
-      content: https://empasy.io/docs/images/favicon.png
-  - - meta
-    - property: og:url
-      content: https://doc.empasy.com/syncboot/
-order: 1
-dir:
-  order: 1
+      content: An enterprise backend platform supporting domain data operations and schema governance.
 ---
 
-# SyncBoot: Intelligent Backend Framework Based on Digital Engineers
+# SyncBoot: Digital Backend Framework Overview
 
-SyncBoot goes beyond a simple API development framework; it is a next-generation Java-based enterprise platform evolved into an **'Autonomous Digital Engineer Agent'** that perceives and operates the business state of the system itself.
+SyncBoot is a Java-based enterprise backend platform designed to recognize business domain context and support database operations and API development.
 
-Based on a Microservices Architecture (MSA), it automates system control, data operations, error detection, and recovery through real-time communication with the AI agent ecosystem.
+Built on Spring Boot 3, LangChain4j, and the Model Context Protocol (MCP) standard, SyncBoot provides capabilities for data CRUD operations, schema management, fullstack code scaffolding, and distributed log inspection.
 
 ---
 
-## 1. SyncBoot's Core AI Agent Capabilities
+## 4 Core Functional Areas
 
-Unlike traditional systems, SyncBoot has the capability to interpret natural language commands from users or external systems to manage the backend infrastructure autonomously.
+```mermaid
+graph LR
+    A[SyncBoot 4 Core Areas] --> B[1. Domain CRUD Operations]
+    A --> C[2. 3-File Schema Governance]
+    A --> D[3. Fullstack Code Generator]
+    A --> E[4. Enterprise IAM & Multi-Tenancy]
 
-### I. Natural Language-Based Domain Data Operations
-- Users don't need to write complex SQL; by delivering requirements in natural language, the agent analyzes them and performs database manipulations (CRUD) and domain logic within its permissions.
-- For tasks that have a critical impact on the system, such as data schema changes, a safety mechanism ensures stability by having the AI propose the changes first and waiting for administrator approval.
+    B -.-> B1[Natural Language Queries & Transactions]
+    C -.-> C1[init / domain / sample Separation & Pre-Approval]
+    D -.-> D1[Spring Boot + Vue3 Scaffolding]
+    E -.-> E1[Row-Level Isolation & Column Data Masking]
+```
 
-### II. Context-Aware Monitoring and Self-Diagnosis
-- In a distributed system environment, it continuously perceives and monitors the purpose and business health status of the system it is running on.
-- When an error occurs, it immediately collects logs from scattered multiple instances, analyzes the correlations, and delivers them to the central integrated control system (SyncVerse), reducing recovery time to within minutes.
+1. **Domain CRUD Operations & Query Execution**:
+   - Supports domain data querying and manipulation through natural language queries and standardized MCP tools.
+   - Executes database operations safely within authorized transaction boundaries.
 
-### III. MCP (Model Context Protocol) Support for Agent Collaboration
-- To allow AI agents to access system resources, it features a built-in remote MCP server interface based on **HTTP SSE (Server-Sent Events)**.
-- It integrates smoothly with other agent systems through tools like `read_database_schema`, `manage_database_catalog`, and `fetch_server_logs`.
+2. **Schema Design & 3-File DDL Standard**:
+   - Organizes database scripts into the 3-File SQL standard (`init.sql`, `<domain>.sql`, `sample.sql`).
+   - Analyzes schema changes in advance and applies migrations following Human-in-the-Loop (HITL) engineer approval.
+
+3. **Low-Code Fullstack API & UI Generator**:
+   - Scaffolds Controllers, Services, Mappers, DTOs, and Ant Design Vue 3 frontend screens based on database entity metadata.
+
+4. **Multi-Tenancy & RBAC Security**:
+   - Supports tenant data isolation (both Shared DB and Dedicated DB modes), dynamic column-level data masking, and Row-Level Security (RLS) filtering.
 
 ---
 
-## 2. Enterprise Architecture for Large-Scale Distributed Environments
+## 5 Backend Worker Roles
 
-A robust distributed system architecture has been applied to support AI autonomy.
+SyncBoot modularizes operational responsibilities across 5 specialized worker roles:
 
-### Statelessness and Secure Transactions (Saga Pattern)
-All agent tasks maintain statelessness by storing short-term context in a memory store (Redis) and long-term history in the database based on a unique task identifier (`task_id`). If an error occurs during complex multi-link operations, it safely rolls back to the previous state immediately using compensation transaction tools like `revert_data_state`.
-
-### Strong Security and Dynamic Access Control (AuthZ)
-For control commands flowing in through external AI models (LLMs), it strictly controls access to permitted database schemas and system resources by verifying the role claims of JWT tokens.
+| Role Name | Primary Responsibility | Execution Model |
+| :--- | :--- | :--- |
+| **Domain Operator** | Executes domain data CRUD and business transactions | Autonomous Execution |
+| **Schema Architect** | Designs 3-File DDLs, generates ERDs, and analyzes migration impact | Proposal + Developer Approval |
+| **Security IAM** | Enforces RBAC roles, row-level filters, and dynamic data masking | Continuous Policy Enforcement |
+| **MCP Dispatcher** | Exposes standard MCP Tools and Resources via HTTP SSE for A2A integration | Standard HTTP SSE Protocol |
+| **Batch Orchestrator**| Coordinates high-volume data pipelines and scheduled Quartz/Spring Batch jobs | Scheduler-driven Execution |
 
 ---
 
-## 3. Expected Benefits of Platform Adoption
+## Key Benefits
 
-- **Simplified Operations Process**: Routine data operations and system control become possible solely through natural language commands, without the intervention of developers and DBAs.
-- **Shortened Mean Time To Recovery (MTTR)**: Through real-time log collection and self-diagnosis pipelines, the time from cause analysis to response during service interruptions can be drastically reduced.
-- **Progressive Transition**: It helps a smooth transition from legacy monolithic systems to a cloud-native MSA capable of autonomous AI operations.
+- **Reduced Development Effort**: Reduces repetitive tasks for standard CRUD APIs and administrative UI screens.
+- **Controlled Database Migrations**: Pre-migration impact analysis and approval workflows reduce risks during schema updates.
+- **Faster Incident Diagnostics**: Aggregates distributed server error logs to accelerate root-cause analysis.
+- **Standards Compliance**: Complies with Spring Boot 3, LangChain4j, OpenAPI 3.0, and Model Context Protocol (MCP) specifications.
+
+---
+
+## Documentation Navigation
+
+- [5-Minute QuickStart](./quickstart) - Launching local environment via Docker Compose
+- [System Architecture & Modules](./architecture) - 4-layer architecture and worker structure
+- [Intelligent Schema Studio](./schema-studio) - 3-File DB standard and DDL approval process
+- [Low-Code Fullstack Generator](./lowcode-generator) - Scaffolding backend APIs and Vue 3 UI
+- [Multi-Tenancy & RBAC Security](./enterprise-security) - Row-level security and data masking
+- [Batch & Job Scheduler](./batch-and-scheduler) - Spring Batch and Quartz task management
+- [LangChain4j & MCP Integration](./mcp-and-ai) - Model Context Protocol specifications
+- [Production Deployment & Metrics](./production-guide) - Container deployment and performance metrics
+- [H2 Embedded Database Setup](./h2) - Local development and unit testing setup
