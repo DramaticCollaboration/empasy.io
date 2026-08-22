@@ -51,10 +51,11 @@
     <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/contact.html" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <script type="module" crossorigin src="/assets/ko_pages_contact-7dp72N5w.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/i18n-BT8oeUrW.js">
-  <link rel="modulepreload" crossorigin href="/assets/contact-nCqpfX9O.js">
-  <link rel="stylesheet" crossorigin href="/assets/i18n-C_Jp-ymm.css">
+  <script type="module" crossorigin src="/assets/ko_pages_contact-BJM3ZvSj.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-DIAEDOzH.js">
+  <link rel="modulepreload" crossorigin href="/assets/i18n-BKOsr7l3.js">
+  <link rel="modulepreload" crossorigin href="/assets/contact-Dxg4bYIf.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-yh9C3b-n.css">
 </head>
 <body>
     <header class="glass-header">
@@ -162,16 +163,25 @@
                     <div class="form-group">
                         <label class="form-label" for="interest">관심 솔루션</label>
                         <select id="interest" class="form-control" style="background: rgba(0, 0, 0, 0.4);">
-                            <option>전체 (Sync Series 통합 도입)</option>
-                            <option>SyncEta (UI 테스트 자동화)</option>
-                            <option>SyncBoot (엔지니어링 백엔드)</option>
-                            <option>SyncCMS (다국어 퍼블리싱)</option>
-                            <option>SyncCrawl (데이터 수집 파이프라인)</option>
+                            <option>전체 (Sync Series 통합 자율 운영 생태계)</option>
+                            <option>SyncVerse (멀티 에이전트 A2A 오케스트레이션)</option>
+                            <option>SyncInsight (의사결정 인텔리전스 & 관제)</option>
+                            <option>SyncEta (Vision-LLM UI 테스트 자동화)</option>
+                            <option>SyncBoot (엔터프라이즈 Java MSA 백엔드)</option>
+                            <option>SyncCMS (글로벌 다국어 퍼블리싱 CMS)</option>
+                            <option>SyncCrawl (적응형 자율 크롤링 & RAG 지식)</option>
+                            <option>SyncLLM (AI 게이트웨이 & FinOps 통제)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="message">문의 내용</label>
                         <textarea id="message" class="form-control" placeholder="도입 대상 시스템 환경, 검토 일정 등 문의 내용을 작성해주세요." required></textarea>
+                    </div>
+                    <div class="form-group" style="margin: 1.5rem 0; display: flex; align-items: flex-start; gap: 10px;">
+                        <input type="checkbox" id="privacyConsent" required style="width: 18px; height: 18px; margin-top: 3px; cursor: pointer; accent-color: var(--primary-color);">
+                        <label for="privacyConsent" style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.5; cursor: pointer;">
+                            <strong>[필수]</strong> 문의 접수 및 기술 상담을 위한 <a href="../../ko/pages/privacy.html" target="_blank" style="color: var(--primary-color); text-decoration: underline;">개인정보 수집 및 이용</a>에 동의합니다.
+                        </label>
                     </div>
                     <button type="submit" class="btn btn-primary submit-btn">문의 접수하기</button>
                 </form>
@@ -190,12 +200,15 @@
                 <p data-i18n="footer.copyright" style="color: rgba(255, 255, 255, 0.6);">© 2026 Empasy. All rights reserved.</p>
             <!-- SEO Semantic IT Company Info -->
             <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px;">
+                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
                     <a href="https://github.com/DramaticCollaboration" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fab fa-github"></i> GitHub
                     </a>
-                    <a href="../../docs/index.html" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                    <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fas fa-book"></i> Documentation
+                    </a>
+                    <a href="../../ko/pages/privacy.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-shield-alt"></i> 개인정보 처리방침
                     </a>
                 </div>
                 <address style="font-style: normal; color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">

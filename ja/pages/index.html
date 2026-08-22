@@ -109,9 +109,10 @@
 
 
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <script type="module" crossorigin src="/assets/ja_pages_index-DWWeyK8x.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/i18n-BT8oeUrW.js">
-  <link rel="stylesheet" crossorigin href="/assets/i18n-C_Jp-ymm.css">
+  <script type="module" crossorigin src="/assets/ja_pages_index-D_-mS1WQ.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-DIAEDOzH.js">
+  <link rel="modulepreload" crossorigin href="/assets/i18n-BKOsr7l3.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-yh9C3b-n.css">
 </head>
 
 <body>
@@ -214,6 +215,9 @@
                     <div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b;"></div>
                     <div style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></div>
                     <div style="margin-left: 1rem; font-family: monospace; color: #94a3b8; font-size: 0.85rem;">empasy-agent-cli</div>
+                    <button class="terminal-copy-btn" data-cmd='empasy eta run --target https://app.example.com --scenario "決済検証"' title="コマンドをコピー">
+                        <i class="far fa-copy"></i> Copy
+                    </button>
                 </div>
                 <div style="padding: 1.5rem; font-family: monospace; font-size: 0.95rem; line-height: 1.6; color: #e2e8f0;">
                     <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
@@ -561,6 +565,58 @@
         </div>
     </section>
 
+    <!-- Quantitative Client Success Metrics Section -->
+    <section id="case-studies" class="section" style="background: rgba(15, 23, 42, 0.4); border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="section-header fade-in-up text-center mb-5">
+                <span class="badge">Proven ROI & Impact</span>
+                <h2 class="section-title">エンタープライズ検証成果 & 定量指標</h2>
+                <p class="section-desc">大手企業および主要教育・金融機関がSyncSeriesによって達成した実質的なビジネス革新指標です。</p>
+            </div>
+
+            <div class="grid grid-3" style="gap: 2rem;">
+                <!-- Visang Education -->
+                <div class="case-metric-card fade-in-up delay-1">
+                    <span class="badge" style="background: rgba(34, 197, 94, 0.15); color: #22c55e; border: 1px solid rgba(34, 197, 94, 0.3); align-self: flex-start;">SyncETA &bull; Visang AIDT</span>
+                    <div class="case-metric-val">+80%</div>
+                    <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 0.8rem;">テスト作成生産性の向上</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; flex-grow: 1;">
+                        自然言語によるテスト作成で作成時間を4時間から0.8時間に短縮。回帰テストを100%自動化し、大規模リファクタリング時にも<strong>回帰障害0件（Regression Zero）</strong>および障害率0.1%以下を達成しました。
+                    </p>
+                    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; margin-top: 1rem; color: #94a3b8; font-size: 0.85rem;">
+                        <i class="fas fa-check-circle" style="color: #22c55e;"></i> OS同時実行成功率95% &bull; UI崩れ検出精度90%
+                    </div>
+                </div>
+
+                <!-- Homeplus & SK Magic -->
+                <div class="case-metric-card fade-in-up delay-2">
+                    <span class="badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); align-self: flex-start;">SyncBoot &bull; Homeplus & SK Magic</span>
+                    <div class="case-metric-val">2x Faster</div>
+                    <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 0.8rem;">新機能リリース速度2倍向上</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; flex-grow: 1;">
+                        月単位のリリースから週/日単位への継続的デリバリーに転換し、380個のテーブル中230個（60%）の事前分析・クレンジングを完了し、<strong>開発工数・コストを20%削減</strong>しました。
+                    </p>
+                    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; margin-top: 1rem; color: #94a3b8; font-size: 0.85rem;">
+                        <i class="fas fa-check-circle" style="color: #38bdf8;"></i> 業務重複30%削減 &bull; MSA無停止移行
+                    </div>
+                </div>
+
+                <!-- LX Hausys & Chunjae -->
+                <div class="case-metric-card fade-in-up delay-3">
+                    <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); align-self: flex-start;">SyncCMS &bull; LX Hausys & Chunjae</span>
+                    <div class="case-metric-val">100% Uptime</div>
+                    <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 0.8rem;">数百万PVの大規模トラフィック無停止</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; flex-grow: 1;">
+                        単一プラットフォームで海外現地法人サイトを統合管理し、テンプレート型I18nエンジンにより<strong>新規国サイトの公開期間を大幅に短縮</strong>。日次数百万PVのトラフィックでも無停止安定稼働を実現しました。
+                    </p>
+                    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; margin-top: 1rem; color: #94a3b8; font-size: 0.85rem;">
+                        <i class="fas fa-check-circle" style="color: #f59e0b;"></i> ベンダーロックイン排除 &bull; グローバル多言語自動同期
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     
     <!-- Empasy Insights -->
     <section class="section" style="background: rgba(0,0,0,0.2); border-top: 1px solid var(--glass-border);">
@@ -601,12 +657,15 @@
                 <p data-i18n="footer.copyright">© 2026 Empasy. All rights reserved.</p>
             <!-- SEO Semantic IT Company Info -->
             <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
-                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px;">
+                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
                     <a href="https://github.com/DramaticCollaboration" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fab fa-github"></i> GitHub
                     </a>
-                    <a href="../../docs/index.html" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                    <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fas fa-book"></i> Documentation
+                    </a>
+                    <a href="../../ja/pages/privacy.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-shield-alt"></i> プライバシーポリシー
                     </a>
                 </div>
                 <address style="font-style: normal; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.8;">
