@@ -2002,3 +2002,11 @@ h1, h2, h3, h4 {
     margin: 0.5rem 0 1rem;
     font-family: var(--font-mono);
 }
+.case-metric-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+.case-metric-card p strong {
+    color: #f1f5f9;
+}
