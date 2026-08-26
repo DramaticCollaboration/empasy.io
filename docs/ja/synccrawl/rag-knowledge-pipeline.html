@@ -8,12 +8,12 @@
     <meta name="generator" content="VitePress v2.0.0-alpha.12">
     <link rel="preload stylesheet" href="/docs/assets/style.CTg4INNW.css" as="style">
     <link rel="preload stylesheet" href="/docs/vp-icons.css" as="style">
-    <script type="module" src="/docs/assets/chunks/metadata.1e48ed63.js"></script>
-    <script type="module" src="/docs/assets/app.HNRcp0Vr.js"></script>
+    <script type="module" src="/docs/assets/chunks/metadata.db90d4c2.js"></script>
+    <script type="module" src="/docs/assets/app.IkZEgF14.js"></script>
     <link rel="preload" href="/docs/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="modulepreload" href="/docs/assets/chunks/framework.DFRwgAh-.js">
-    <link rel="modulepreload" href="/docs/assets/chunks/theme.CPoBIaLl.js">
-    <link rel="modulepreload" href="/docs/assets/ja_synccrawl_rag-knowledge-pipeline.md.C8L4C9Rr.lean.js">
+    <link rel="modulepreload" href="/docs/assets/chunks/theme.D-gwNS2S.js">
+    <link rel="modulepreload" href="/docs/assets/ja_synccrawl_rag-knowledge-pipeline.md.BI5AWyrc.lean.js">
     <link rel="icon" href="/images/favicon.ico">
     <meta name="author" content="엠파시">
     <meta name="keywords" content="엠파시, Sync Series, SyncCms, SyncBoot, SyncApim, SyncEta">
@@ -49,7 +49,7 @@
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">table</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;synccrawl_knowledge_vectors&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">dimension</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1024</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// BGE-M3基準</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">build</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">();</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div><ul><li><strong>PostgreSQL (pgvector)</strong>: 専用DBを追加せず、既存のRDBMS環境でリレーショナルデータとベクトルを管理</li><li><strong>Milvus / Qdrant</strong>: 大規模ベクトルデータの分散処理と高速検索をサポート</li><li><strong>Elasticsearch / OpenSearch</strong>: BM25キーワード検索とベクトルDense Retrievalを組み合わせたハイブリッド検索に対応</li></ul><hr><h2 id="同期とライフサイクル管理" tabindex="-1">同期とライフサイクル管理 <a class="header-anchor" href="#同期とライフサイクル管理" aria-label="Permalink to “同期とライフサイクル管理”">​</a></h2><ul><li><strong>差分更新（Incremental Sync）</strong>: ページ内容に変更があった場合のみベクトルを再計算して更新します。</li><li><strong>TTLによる自動有効期限管理</strong>: 期限切れの情報は設定周期に従って自動整理可能です。</li><li><strong>ドメイン信頼度スコアリング</strong>: 公式サイトと一般サイトで重み付けを変え、検索時の優先順位を制御します。</li></ul></div></div></main><footer class="VPDocFooter" data-v-8db10a58 data-v-3a825bde><!--[--><!--]--><div class="edit-info" data-v-3a825bde><!----><div class="last-updated" data-v-3a825bde><p class="VPLastUpdated" data-v-3a825bde data-v-c3e52fec>Last updated: <time datetime="2026-08-25T11:28:34.000Z" data-v-c3e52fec></time></p></div></div><!----></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><!----><!--[--><!--]--></div></div>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div><ul><li><strong>PostgreSQL (pgvector)</strong>: 専用DBを追加せず、既存のRDBMS環境でリレーショナルデータとベクトルを管理</li><li><strong>Milvus / Qdrant</strong>: 大規模ベクトルデータの分散処理と高速検索をサポート</li><li><strong>Elasticsearch / OpenSearch</strong>: BM25キーワード検索とベクトルDense Retrievalを組み合わせたハイブリッド検索に対応</li></ul><hr><h2 id="同期とライフサイクル管理" tabindex="-1">同期とライフサイクル管理 <a class="header-anchor" href="#同期とライフサイクル管理" aria-label="Permalink to “同期とライフサイクル管理”">​</a></h2><ul><li><strong>差分更新（Incremental Sync）</strong>: ページ内容に変更があった場合のみベクトルを再計算して更新します。</li><li><strong>TTLによる自動有効期限管理</strong>: 期限切れの情報は設定周期に従って自動整理可能です。</li><li><strong>ドメイン信頼度スコアリング</strong>: 公式サイトと一般サイトで重み付けを変え、検索時の優先順位を制御します。</li></ul></div></div></main><footer class="VPDocFooter" data-v-8db10a58 data-v-3a825bde><!--[--><!--]--><div class="edit-info" data-v-3a825bde><!----><div class="last-updated" data-v-3a825bde><p class="VPLastUpdated" data-v-3a825bde data-v-c3e52fec>Last updated: <time datetime="2026-08-26T00:35:57.000Z" data-v-c3e52fec></time></p></div></div><!----></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><!----><!--[--><!--]--></div></div>
     
     
   </body>
