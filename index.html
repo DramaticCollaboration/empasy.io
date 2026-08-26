@@ -11,7 +11,8 @@
     <meta property="og:url" content="https://empasy.io/">
     <meta charset="UTF-8">
     <script>
-        var lang = navigator.language || navigator.userLanguage;
+        var preferred = localStorage.getItem('preferred_lang');
+        var lang = preferred || navigator.language || navigator.userLanguage || 'ko';
         if (lang.startsWith('en')) {
             window.location.href = './en/pages/index.html';
         } else if (lang.startsWith('ja')) {

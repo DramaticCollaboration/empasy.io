@@ -1,4 +1,4 @@
-﻿const translations = {
+const translations = {
     ko: {
         "nav.about": "회사 철학",
         "nav.company": "회사 소개",
@@ -127,7 +127,7 @@
         "footer.title": "Accelerate your business with Empasy",
         "footer.copyright": "© 2026 Empasy. All rights reserved."
     },
-    jp: {
+    ja: {
         "nav.about": "哲学",
         "nav.company": "会社について",
         "nav.solutions": "Sync Series",
@@ -193,55 +193,85 @@
     }
 };
 
+translations.jp = translations.ja;
+
 // Determine language from URL path
 function getLangFromURL() {
     const path = window.location.pathname;
     if (path.includes('/en/')) return 'en';
-    if (path.includes('/ja/')) return 'jp';
+    if (path.includes('/ja/')) return 'ja';
     return 'ko';
 }
 
 let currentLang = getLangFromURL();
+
+// Calculate target URL preserving current subpath and query/hash
+function getTargetUrl(targetLang) {
+    const path = window.location.pathname;
+    const hash = window.location.hash || '';
+    const search = window.location.search || '';
+
+    // Check if path contains /ko/, /en/, or /ja/
+    const langMatch = path.match(/\/(ko|en|ja)\/(.*)/);
+    if (langMatch) {
+        const basePath = path.substring(0, langMatch.index);
+        let subPath = langMatch[2] || 'pages/index.html';
+        return `${basePath}/${targetLang}/${subPath}${search}${hash}`;
+    }
+
+    // Default fallback if at root
+    return `/${targetLang}/pages/index.html${search}${hash}`;
+}
 
 // Dynamic Language Switcher to preserve current page path
 function updateLangSwitcherLinks() {
     const langLinks = document.querySelectorAll('.lang-dropdown-content a');
     if (!langLinks || langLinks.length === 0) return;
 
-    const currentPath = window.location.pathname;
-    
-    // Normalize relative path after language code
-    let relativeSubPath = 'pages/index.html';
-    if (currentPath.includes('/ko/')) {
-        relativeSubPath = currentPath.substring(currentPath.indexOf('/ko/') + 4);
-    } else if (currentPath.includes('/en/')) {
-        relativeSubPath = currentPath.substring(currentPath.indexOf('/en/') + 4);
-    } else if (currentPath.includes('/ja/')) {
-        relativeSubPath = currentPath.substring(currentPath.indexOf('/ja/') + 4);
-    }
-
     langLinks.forEach(link => {
-        const href = link.getAttribute('href') || '';
-        if (href.includes('/ko/')) {
-            link.setAttribute('href', /ko/);
-        } else if (href.includes('/en/')) {
-            link.setAttribute('href', /en/);
-        } else if (href.includes('/ja/')) {
-            link.setAttribute('href', /ja/);
+        let targetLang = link.getAttribute('data-lang');
+        if (!targetLang) {
+            const href = link.getAttribute('href') || '';
+            if (href.includes('/ko/')) targetLang = 'ko';
+            else if (href.includes('/en/')) targetLang = 'en';
+            else if (href.includes('/ja/')) targetLang = 'ja';
+            else if (link.textContent.includes('KO')) targetLang = 'ko';
+            else if (link.textContent.includes('EN')) targetLang = 'en';
+            else if (link.textContent.includes('JP') || link.textContent.includes('JA')) targetLang = 'ja';
+            else targetLang = 'ko';
         }
+
+        const targetUrl = getTargetUrl(targetLang);
+        link.setAttribute('href', targetUrl);
+
+        link.addEventListener('click', (e) => {
+            try {
+                localStorage.setItem('preferred_lang', targetLang);
+            } catch (err) {
+                // Ignore storage errors
+            }
+            window.location.href = targetUrl;
+            e.preventDefault();
+        });
     });
 }
 
 function updateContent() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (translations[currentLang] && translations[currentLang][key]) {
-            el.innerHTML = translations[currentLang][key];
+        const langData = translations[currentLang] || translations['ko'];
+        if (langData && langData[key]) {
+            el.innerHTML = langData[key];
         }
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        updateContent();
+        updateLangSwitcherLinks();
+    });
+} else {
     updateContent();
     updateLangSwitcherLinks();
-});
+}

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <title>엠파시 팀 소개 (Our Story) | 엠파시(Empasy)</title>
@@ -131,22 +131,6 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
-        .card-image {
-            height: 260px;
-            background: #E2E8F0;
-            position: relative;
-            overflow: hidden;
-        }
-        .card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-            filter: contrast(1.05) saturate(1.1);
-        }
-        .team-card:hover .card-image img {
-            transform: scale(1.05);
-        }
         .card-content {
             padding: 32px;
         }
@@ -210,36 +194,12 @@
         }
         .team-card.featured {
             grid-column: 1 / -1;
-            display: flex;
-            flex-direction: row;
-        }
-        .team-card.featured .card-image {
-            width: 40%;
-            height: auto;
-            min-height: 340px;
         }
         .team-card.featured .card-content {
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 48px;
+            padding: 40px 36px;
         }
         .team-card.featured .quote {
             font-size: 1.1rem;
-        }
-        @media (max-width: 900px) {
-            .team-card.featured {
-                flex-direction: column;
-            }
-            .team-card.featured .card-image {
-                width: 100%;
-                height: 300px;
-            }
-            .team-card.featured .card-content {
-                width: 100%;
-                padding: 32px;
-            }
         }
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
@@ -295,10 +255,6 @@
             
             <!-- 김재은 팀장 (CTO) -->
             <div class="team-card featured">
-                <div class="card-image">
-                    <!-- 회의실에서 웃으며 토론하는 자연스러운 리더의 모습 -->
-                    <img loading="lazy" src="../../images/team/jade.webp" alt="김재은 팀장">
-                </div>
                 <div class="card-content">
                     <div class="member-info">
                         <div class="member-name">김재은 <span class="member-role">기술 총괄 (CTO) / 팀장</span></div>
@@ -316,10 +272,6 @@
 
             <!-- 이옥수 팀장 -->
             <div class="team-card">
-                <div class="card-image">
-                    <!-- 고객과 소통하는 부드럽고 전문적인 모습 -->
-                    <img loading="lazy" src="../../images/team/bruce.webp" alt="이옥수 팀장">
-                </div>
                 <div class="card-content">
                     <div class="member-info">
                         <div class="member-name">이옥수 <span class="member-role">프로젝트 관리 / 팀장</span></div>
@@ -336,10 +288,6 @@
 
             <!-- 한상욱 대리 -->
             <div class="team-card">
-                <div class="card-image">
-                    <!-- 팀원들과 협업하며 즐거워하는 모습 -->
-                    <img loading="lazy" src="../../images/team/han.webp" alt="한상욱 대리">
-                </div>
                 <div class="card-content">
                     <div class="member-info">
                         <div class="member-name">한상욱 <span class="member-role">플랫폼 개발 / 대리</span></div>
@@ -356,10 +304,6 @@
 
             <!-- 전표찬 사원 -->
             <div class="team-card">
-                <div class="card-image">
-                    <!-- 모니터 앞에서 집중하며 디테일을 체크하는 모습 -->
-                    <img loading="lazy" src="../../images/team/poh.webp" alt="전표찬 사원">
-                </div>
                 <div class="card-content">
                     <div class="member-info">
                         <div class="member-name">전표찬 <span class="member-role">QA & 백엔드 개발 / 사원</span></div>
@@ -376,10 +320,6 @@
 
             <!-- 장지용 사원 -->
             <div class="team-card">
-                <div class="card-image">
-                    <!-- 활기찬 모습으로 연구/개발에 몰두하는 모습 -->
-                    <img loading="lazy" src="../../images/team/ryan.webp" alt="장지용 사원">
-                </div>
                 <div class="card-content">
                     <div class="member-info">
                         <div class="member-name">장지용 <span class="member-role">프론트엔드 개발 / 사원</span></div>
@@ -404,4 +344,3 @@
     <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>
-
