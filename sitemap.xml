@@ -56,6 +56,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://empasy.io/ko/pages/careers.html</loc>
+    <lastmod>2026-09-05T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://empasy.io/ko/pages/contact.html</loc>
     <lastmod>2026-07-18T16:00:19+00:00</lastmod>
     <priority>0.6</priority>

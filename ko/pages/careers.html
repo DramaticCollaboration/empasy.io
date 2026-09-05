@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>프리랜서 웹 / AI 개발자 모집 | 주식회사 엠파시(Empasy)</title>
+    <meta name="description" content="엠파시(Empasy)에서 자체 솔루션(SyncSeries) 및 기업용 엔터프라이즈 프로젝트에 즉시 투입 가능한 프리랜서 웹 / AI 개발자 및 상시 인재풀을 모집합니다.">
+    <meta name="keywords" content="엠파시 채용, 프리랜서 개발자, 백엔드 개발자, 프론트엔드 개발자, 풀스택 개발자, AI 엔지니어, LLM 엔지니어, Spring Boot, Vue3, AgentScope, 재택근무, 원격근무">
+    <meta property="og:title" content="[엠파시] 프리랜서 웹 / AI 개발자 모집 (즉시 투입 및 상시 인재풀)">
+    <meta property="og:description" content="명확한 명세서 기반 개발, AI 도구(Cursor/Copilot) 적극 권장, 1~2일 내 초고속 피드백. 엠파시와 함께할 실력 있는 파트너를 모십니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://empasy.io/ko/pages/careers.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    
+    <!-- Schema.org JobPosting Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      "title": "프리랜서 웹 / AI 개발자 모집 (즉시 투입 및 상시 인재풀)",
+      "description": "엠파시(Empasy) 자체 웹 솔루션(SyncSeries) 개발 및 다양한 기업용 웹 서비스/SI 구축 프로젝트를 수행할 백엔드(Java/Spring Boot), 프론트엔드(Vue 3/TS), 풀스택, AI/LLM 엔지니어를 모집합니다.",
+      "datePosted": "2026-09-05",
+      "employmentType": "CONTRACTOR",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "주식회사 엠파시 (Empasy)",
+        "sameAs": "https://empasy.io",
+        "logo": "https://empasy.io/empasy-logo.png"
+      },
+      "jobLocationType": "TELECOMMUTE",
+      "applicantLocationRequirements": {
+        "@type": "Country",
+        "name": "KR"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #0891B2;
+            --primary-dark: #0E7490;
+            --primary-light: #ECFEFF;
+            --secondary: #0284C7;
+            --accent: #10B981;
+            --accent-light: #ECFDF5;
+            --bg-color: #F8FAFC;
+            --surface: #FFFFFF;
+            --text-main: #0F172A;
+            --text-muted: #475569;
+            --border: #E2E8F0;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.65;
+            font-family: var(--font-sans);
+        }
+
+        .careers-hero {
+            padding: 120px 20px 80px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 20%, rgba(8, 145, 178, 0.08) 0%, rgba(248, 250, 252, 0) 70%);
+            position: relative;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #059669;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-radius: 9999px;
+            margin-bottom: 24px;
+        }
+
+        .status-badge .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #10B981;
+            border-radius: 50%;
+            animation: pulse 1.8s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        .careers-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+            word-break: keep-all;
+        }
+
+        .careers-hero h1 span {
+            background: linear-gradient(135deg, #0891B2, #0284C7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .careers-hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 760px;
+            margin: 0 auto 36px;
+            word-break: keep-all;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-apply-fast {
+            background: linear-gradient(135deg, #0891B2 0%, #0284C7 100%);
+            color: #ffffff !important;
+            padding: 14px 28px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px -5px rgba(8, 145, 178, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.25s ease;
+        }
+
+        .btn-apply-fast:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 24px -5px rgba(8, 145, 178, 0.5);
+            color: #ffffff;
+        }
+
+        .btn-secondary-action {
+            background: #FFFFFF;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 14px 24px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+        }
+
+        .btn-secondary-action:hover {
+            background: #F1F5F9;
+            border-color: #CBD5E1;
+        }
+
+        /* Culture Highlights Grid */
+        .culture-section {
+            max-width: 1200px;
+            margin: 0 auto 90px;
+            padding: 0 20px;
+        }
+
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .culture-card {
+            background: var(--surface);
+            padding: 30px 24px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+        }
+
+        .culture-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+            border-color: rgba(8, 145, 178, 0.3);
+        }
+
+        .culture-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 18px;
+        }
+
+        .culture-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .culture-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.55;
+            word-break: keep-all;
+        }
+
+        /* Positions Section */
+        .positions-section {
+            max-width: 1200px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            word-break: keep-all;
+        }
+
+        .positions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+            gap: 28px;
+        }
+
+        @media (max-width: 768px) {
+            .positions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .position-card {
+            background: var(--surface);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            padding: 36px 32px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .position-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 16px 32px -8px rgba(8, 145, 178, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .position-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+
+        .position-top {
+            margin-bottom: 24px;
+        }
+
+        .position-badges {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+
+        .badge-type {
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+        }
+
+        .badge-urgent {
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: #FEF2F2;
+            color: #DC2626;
+            border: 1px solid #FECACA;
+        }
+
+        .position-title {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .spec-group {
+            margin-bottom: 16px;
+        }
+
+        .spec-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .spec-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+            word-break: keep-all;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .tech-tag {
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            background: #F1F5F9;
+            color: #334155;
+            border-radius: 6px;
+            border: 1px solid #E2E8F0;
+        }
+
+        .position-card .card-footer {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid #F1F5F9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-card-apply {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-card-apply:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        /* Working Terms & Benefits */
+        .terms-section {
+            background: #FFFFFF;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 80px 20px;
+            margin-bottom: 90px;
+        }
+
+        .terms-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .term-box {
+            background: #F8FAFC;
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid #E2E8F0;
+        }
+
+        .term-box h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-main);
+        }
+
+        .term-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .term-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            word-break: keep-all;
+        }
+
+        .term-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        /* 3-Step Process */
+        .process-section {
+            max-width: 1100px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .step-card {
+            background: var(--surface);
+            padding: 36px 28px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .step-number {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            font-weight: 800;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 1.1rem;
+        }
+
+        .step-card h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .step-card p {
+            color: var(--text-muted);
+            font-size: 0.93rem;
+            word-break: keep-all;
+        }
+
+        .step-duration {
+            margin-top: 14px;
+            display: inline-block;
+            background: var(--accent-light);
+            color: #065F46;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        /* Application Section */
+        .apply-section {
+            max-width: 900px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+        }
+
+        .apply-card {
+            background: linear-gradient(145deg, #0F172A, #1E293B);
+            color: #FFFFFF;
+            border-radius: 24px;
+            padding: clamp(2rem, 5vw, 3.5rem);
+            box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.4);
+            text-align: center;
+        }
+
+        .apply-card h2 {
+            color: #FFFFFF;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .apply-card p {
+            color: #94A3B8;
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+            word-break: keep-all;
+        }
+
+        .email-display-box {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 14px;
+            padding: 16px 24px;
+            max-width: 500px;
+            margin: 0 auto 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .email-address {
+            font-family: var(--font-mono);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #38BDF8;
+            letter-spacing: 0.5px;
+        }
+
+        .copy-email-btn {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #FFFFFF;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .copy-email-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .checklist-grid {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+
+        .checklist-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #F8FAFC;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checklist-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 10px;
+        }
+
+        .checklist-items li {
+            font-size: 0.9rem;
+            color: #CBD5E1;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checklist-items li i {
+            color: #10B981;
+            font-size: 0.85rem;
+        }
+
+        .action-button-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-mailto-main {
+            background: linear-gradient(135deg, #0891B2, #0284C7);
+            color: #FFFFFF !important;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.25s ease;
+        }
+
+        .btn-mailto-main:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(8, 145, 178, 0.4);
+        }
+
+        .btn-copy-template {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #FFFFFF;
+            padding: 16px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-copy-template:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Toast Notification */
+        #toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #0F172A;
+            color: #FFFFFF;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 9999;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        #toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    {{> header_ko }}
+
+    <!-- Hero Section -->
+    <section class="careers-hero">
+        <div class="container">
+            <div class="status-badge">
+                <span class="pulse-dot"></span>
+                <span>착수 대기 프로젝트 즉시 투입 & 상시 인재풀 모집 중</span>
+            </div>
+            <h1>엠파시와 함께 성장할<br><span>프리랜서 웹 / AI 개발자</span>를 모십니다</h1>
+            <p>
+                주식회사 엠파시(Empasy)는 자체 엔터프라이즈 솔루션(SyncSeries) 개발 및 다양한 기업용 웹 서비스/SI 프로젝트를 수행하고 있습니다.<br>
+                현재 착수 대기 중인 프로젝트들이 있어 <strong>즉시/단기간 내 투입 가능한 개발자분</strong>들을 적극적으로 찾고 있습니다.
+            </p>
+            <div class="hero-cta-group">
+                <a href="#positions" class="btn-secondary-action">
+                    <i class="fas fa-list-ul"></i> 모집 포지션 확인
+                </a>
+                <a href="#apply" class="btn-apply-fast">
+                    <i class="fas fa-paper-plane"></i> 1초 만에 간편 지원하기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Empasy (Culture Highlights) -->
+    <section class="culture-section">
+        <div class="culture-grid">
+            <div class="culture-card">
+                <div class="culture-icon"><i class="fas fa-robot"></i></div>
+                <h3>AI 툴 활용 적극 권장</h3>
+                <p>Cursor, GitHub Copilot, Claude 등 개발 생산성을 높이는 모든 최신 AI 도구의 적극적인 활용을 지향합니다.</p>
+            </div>
+            <div class="culture-card">
+                <div class="culture-icon"><i class="fas fa-drafting-compass"></i></div>
+                <h3>명확한 스펙 & 베이스</h3>
+                <p>표준 프레임워크와 정돈된 DB/API 명세서를 바탕으로 기획과 설계가 완료된 상태에서 업무를 배정합니다.</p>
+            </div>
+            <div class="culture-card">
+                <div class="culture-icon"><i class="fas fa-comments"></i></div>
+                <h3>효율적인 비동기 협업</h3>
+                <p>Slack, Notion, GitHub 중심으로 투명하게 소통하며, 불필요한 보고와 형식적인 회의를 철저히 지양합니다.</p>
+            </div>
+            <div class="culture-card">
+                <div class="culture-icon"><i class="fas fa-bolt"></i></div>
+                <h3>1~2일 내 초고속 피드백</h3>
+                <p>지원 서류 접수 후 영업일 기준 1~2일 내 신속하게 회신하며, 20분 퀵 미팅을 통해 빠르게 일정을 확정합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Positions Section -->
+    <section id="positions" class="positions-section">
+        <div class="section-header">
+            <h2>모집 분야 (Open Positions)</h2>
+            <p>보유하신 기술 스택과 일정에 맞추어 최적의 프로젝트를 1:1 매칭해 드립니다.</p>
+        </div>
+
+        <div class="positions-grid">
+            <!-- 1. Backend -->
+            <div class="position-card">
+                <div class="position-top">
+                    <div class="position-badges">
+                        <span class="badge-type">백엔드</span>
+                        <span class="badge-urgent"><i class="fas fa-fire"></i> 즉시 투입 가능</span>
+                    </div>
+                    <h3 class="position-title">백엔드 개발자 (Backend Engineer)</h3>
+                    
+                    <div class="spec-group">
+                        <div class="spec-title"><i class="fas fa-tasks text-primary"></i> 주요 업무</div>
+                        <div class="spec-desc">Spring Boot 기반 비즈니스 REST API 개발, 핵심 비즈니스 로직 구현, DB 모델링 및 쿼리 최적화</div>
+                    </div>
+
+                    <div class="spec-group">
+                        <div class="spec-title"><i class="fas fa-check-circle text-primary"></i> 자격 요건</div>
+                        <div class="spec-desc">백엔드 실무 개발 경력 3년 이상 (또는 그에 준하는 탄탄한 실무 역량 보유자)</div>
+                    </div>
+
+                    <div class="spec-group">
+                        <div class="spec-title"><i class="fas fa-code text-primary"></i> 기술 스택</div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Java 17+</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">MyBatis / JPA</span>
+                            <span class="tech-tag">PostgreSQL / MySQL</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <span style="font-size: 0.9rem; color: var(--text-muted);"><i class="far fa-clock"></i> 전담(M/M) or 파트타임</span>
+                    <a href="mailto:contact@empasy.com?subject=%5B%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%EC%A7%80%EC%9B%90%5D%20%EB%B0%B1%EC%97%94%EB%93%9C_%EC%84%B1%ED%95%A8&body=%E2%96%A0%20%EC%A7%80%EC%9B%90%20%ED%8F%AC%EC%A7%80%EC%85%98%3A%20%EB%B0%B1%EC%97%94%EB%93%9C%20%EA%B0%9C%EB%B0%9C%EC%9E%90%0A%E2%96%A0%20%EC%84%B1%ED%95%A8%20%2F%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%20%0A%E2%96%A0%20%ED%88%AC%EC%9E%85%20%EA%B0%80%EB%8A%A5%20%EC%8B%9C%EA%B8%B0%3A%20(%EC%98%88%3A%20%EC%A6%89%EC%8B%9C%20%EA%B0%80%EB%8A%A5%20%EB%98%90%EB%8A%94%200%EC%9B%94%200%EC%9D%BC%20%EC%9D%B4%ED%9B%84)%0A%E2%96%A0%20%ED%9D%AC%EB%A7%9D%20%EB%8B%A8%EA%B0%80(M%2FM%20%EB%98%90%EB%8A%94%20%EA%B1%B4%EB%B3%84)%3A%20%0A%E2%96%A0%20%EC%84%A0%ED%98%B8%20%EA%B7%BC%EB%AC%B4%ED%98%95%ED%83%9C(%EC%9E%AC%ED%83%9D%20%2F%20%EC%83%81%EC%A3%BC%20%2F%20%EB%AC%B4%EA%B4%80)%3A%20%0A%E2%96%A0%20%EA%B9%83%ED%97%88%EB%B8%8C%20%EB%98%90%EB%8A%94%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%20%EB%A7%81%ED%81%AC%3A%20%0A%0A*%20%EC%9D%B4%EB%A0%A5%EC%84%9C%20%EB%B0%8F%20%EA%B2%BD%EB%A0%A5%EA%B8%B0%EC%88%A0%EC%84%9C%EB%A5%BC%20%EC%B2%A8%EB%B6%80%ED%95%B4%20%EC%A3%BC%EC%84%B8%EC%9A%94." class="btn-card-apply">
+                        지원하기 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. Frontend -->
+            <div class="position-card">
+                <div class="position-top">
+                    <div class="position-badges">
+                        <span class="badge-type">프론트엔드</span>
+                        <span class="badge-urgent"><i class="fas fa-fire"></i> 즉시 투입 가능</span>
+                    </div>
+                    <h3 class="position-title">프론트엔드 개발자 (Frontend Engineer)</h3>
+                    
+                    <div class="spec-group">
+                        <div class="spec-title"><i class="fas fa-tasks text-primary"></i> 주요 업무</div>
+                        <div class="spec-desc">웹 서비스 관리자(Admin) 및 사용자 반응형 화면 UI 개발, REST API 연동 및 상태 관리</div>
+                    </div>
+
+                    <div class="spec-group">
+                        <div class="spec-title"><i class="fas fa-check-circle text-primary"></i> 자격 요건</div>
+                        <div class="spec-desc">Vue 3 실무 프로젝트 유경험자, TypeScript 및 컴포넌트 기반 아키텍처 숙련자</div>
+                    </div>
+
+                    <div class="spec-group">
+                        <div class="spec-title"><i class="fas fa-code text-primary"></i> 기술 스택</div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Vue 3 (Composition API)</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Vite</span>
+                            <span class="tech-tag">Element Plus / Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <span style="font-size: 0.9rem; color: var(--text-muted);"><i class="far fa-clock"></i> 전담(M/M) or 파트타임</span>
+                    <a href="mailto:contact@empasy.com?subject=%5B%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%EC%A7%80%EC%9B%90%5D%20%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C_%EC%84%B1%ED%95%A8&body=%E2%96%A0%20%EC%A7%80%EC%9B%90%20%ED%8F%AC%EC%A7%80%EC%85%98%3A%20%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C%20%EA%B0%9C%EB%B0%9C%EC%9E%90%0A%E2%96%A0%20%EC%84%B1%ED%95%A8%20%2F%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%20%0A%E2%96%A0%20%ED%88%AC%EC%9E%85%20%EA%B0%80%EB%8A%A5%20%EC%8B%9C%EA%B8%B0%3A%20(%EC%98%88%3A%20%EC%A6%89%EC%8B%9C%20%EA%B0%80%EB%8A%A5%20%EB%98%90%EB%8A%94%200%EC%9B%94%200%EC%9D%BC%20%EC%9D%B4%ED%9B%84)%0A%E2%96%A0%20%ED%9D%AC%EB%A7%9D%20%EB%8B%A8%EA%B0%80(M%2FM%20%EB%98%90%EB%8A%94%20%EA%B1%B4%EB%B3%84)%3A%20%0A%E2%96%A0%20%EC%84%A0%ED%98%B8%20%EA%B7%BC%EB%AC%B4%ED%98%95%ED%83%9C(%EC%9E%AC%ED%83%9D%20%2F%20%EC%83%81%EC%A3%BC%20%2F%20%EB%AC%B4%EA%B4%80)%3A%20%0A%E2%96%A0%20%EA%B9%83%ED%97%88%EB%B8%8C%20%EB%98%90%EB%8A%94%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%20%EB%A7%81%ED%81%AC%3A%20%0A%0A*%20%EC%9D%B4%EB%A0%A5%EC%84%9C%20%EB%B0%8F%20%EA%B2%BD%EB%A0%A5%EA%B8%B0%EC%88%A0%EC%84%9C%EB%A5%BC%20%EC%B2%A8%EB%B6%80%ED%95%B4%20%EC%A3%BC%EC%84%B8%EC%9A%94." class="btn-card-apply">
+                        지원하기 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. Full-Stack -->
+            <div class="position-card">
+                <div class="position-top">
+                    <div class="position-badges">
+                        <span class="badge-type">풀스택</span>
+                        <span class="badge-urgent"><i class="fas fa-fire"></i> 즉시 투입 가능</span>
+                    </div>
+                    <h3 class="position-title">풀스택 개발자 (Full-Stack Engineer)</h3>
+                    
+                    <div class="spec-group">
+                        <div class="spec-title"><i class="fas fa-tasks text-primary"></i> 주요 업무</div>
+                        <div class="spec-desc">단위 화면 및 기능의 백엔드 API 설계/구현부터 프론트엔드 UI 화면까지 End-to-End 단독 개발</div>
+                    </div>
+
+                    <div class="spec-group">
+                        <div class="spec-title"><i class="fas fa-check-circle text-primary"></i> 자격 요건</div>
+                        <div class="spec-desc">Java/Spring Boot와 Vue 3/TypeScript 양쪽에 대한 이해 및 종합적인 웹 기능 구현 능력</div>
+                    </div>
+
+                    <div class="spec-group">
+                        <div class="spec-title"><i class="fas fa-code text-primary"></i> 기술 스택</div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Vue 3</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">PostgreSQL / MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <span style="font-size: 0.9rem; color: var(--text-muted);"><i class="far fa-clock"></i> 전담(M/M) or 건별 계약</span>
+                    <a href="mailto:contact@empasy.com?subject=%5B%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%EC%A7%80%EC%9B%90%5D%20%ED%92%80%EC%8A%A4%ED%83%9D_%EC%84%B1%ED%95%A8&body=%E2%96%A0%20%EC%A7%80%EC%9B%90%20%ED%8F%AC%EC%A7%80%EC%85%98%3A%20%ED%92%80%EC%8A%A4%ED%83%9D%20%EA%B0%9C%EB%B0%9C%EC%9E%90%0A%E2%96%A0%20%EC%84%B1%ED%95%A8%20%2F%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%20%0A%E2%96%A0%20%ED%88%AC%EC%9E%85%20%EA%B0%80%EB%8A%A5%20%EC%8B%9C%EA%B8%B0%3A%20(%EC%98%88%3A%20%EC%A6%89%EC%8B%9C%20%EA%B0%80%EB%8A%A5%20%EB%98%90%EB%8A%94%200%EC%9B%94%200%EC%9D%BC%20%EC%9D%B4%ED%9B%84)%0A%E2%96%A0%20%ED%9D%AC%EB%A7%9D%20%EB%8B%A8%EA%B0%80(M%2FM%20%EB%98%90%EB%8A%94%20%EA%B1%B4%EB%B3%84)%3A%20%0A%E2%96%A0%20%EC%84%A0%ED%98%B8%20%EA%B7%BC%EB%AC%B4%ED%98%95%ED%83%9C(%EC%9E%AC%ED%83%9D%20%2F%20%EC%83%81%EC%A3%BC%20%2F%20%EB%AC%B4%EA%B4%80)%3A%20%0A%E2%96%A0%20%EA%B9%83%ED%97%88%EB%B8%8C%20%EB%98%90%EB%8A%94%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%20%EB%A7%81%ED%81%AC%3A%20%0A%0A*%20%EC%9D%B4%EB%A0%A5%EC%84%9C%20%EB%B0%8F%20%EA%B2%BD%EB%A0%A5%EA%B8%B0%EC%88%A0%EC%84%9C%EB%A5%BC%20%EC%B2%A8%EB%B6%80%ED%95%B4%20%EC%A3%BC%EC%84%B8%EC%9A%94." class="btn-card-apply">
+                        지원하기 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 4. AI / LLM Engineer -->
+            <div class="position-card">
+                <div class="position-top">
+                    <div class="position-badges">
+                        <span class="badge-type">AI / LLM</span>
+                        <span class="badge-urgent"><i class="fas fa-sparkles"></i> 핵심 파트너</span>
+                    </div>
+                    <h3 class="position-title">AI / LLM 엔지니어 (AI / LLM Engineer)</h3>
+                    
+                    <div class="spec-group">
+                        <div class="spec-title"><i class="fas fa-tasks text-primary"></i> 주요 업무</div>
+                        <div class="spec-desc">LLM API(Claude, OpenAI 등) 연동, AgentScope/LangChain 기반 에이전트 구축, RAG 지식베이스 검색 파이프라인 연동</div>
+                    </div>
+
+                    <div class="spec-group">
+                        <div class="spec-title"><i class="fas fa-check-circle text-primary"></i> 자격 요건</div>
+                        <div class="spec-desc">LLM API 활용 및 프롬프트 엔지니어링 실무 경험자, Vector DB 및 에이전트 프레임워크 이해도 보유자</div>
+                    </div>
+
+                    <div class="spec-group">
+                        <div class="spec-title"><i class="fas fa-code text-primary"></i> 기술 스택</div>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python / Java</span>
+                            <span class="tech-tag">AgentScope / LangChain</span>
+                            <span class="tech-tag">Vector DB (pgvector 등)</span>
+                            <span class="tech-tag">Claude / OpenAI API</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <span style="font-size: 0.9rem; color: var(--text-muted);"><i class="far fa-clock"></i> 전담(M/M) or 건별 계약</span>
+                    <a href="mailto:contact@empasy.com?subject=%5B%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%EC%A7%80%EC%9B%90%5D%20AI%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4_%EC%84%B1%ED%95%A8&body=%E2%96%A0%20%EC%A7%80%EC%9B%90%20%ED%8F%AC%EC%A7%80%EC%85%98%3A%20AI%20%2F%20LLM%20%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%0A%E2%96%A0%20%EC%84%B1%ED%95%A8%20%2F%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%20%0A%E2%96%A0%20%ED%88%AC%EC%9E%85%20%EA%B0%80%EB%8A%A5%20%EC%8B%9C%EA%B8%B0%3A%20(%EC%98%88%3A%20%EC%A6%89%EC%8B%9C%20%EA%B0%80%EB%8A%A5%20%EB%98%90%EB%8A%94%200%EC%9B%94%200%EC%9D%BC%20%EC%9D%B4%ED%9B%84)%0A%E2%96%A0%20%ED%9D%AC%EB%A7%9D%20%EB%8B%A8%EA%B0%80(M%2FM%20%EB%98%90%EB%8A%94%20%EA%B1%B4%EB%B3%84)%3A%20%0A%E2%96%A0%20%EC%84%A0%ED%98%B8%20%EA%B7%BC%EB%AC%B4%ED%98%95%ED%83%9C(%EC%9E%AC%ED%83%9D%20%2F%20%EC%83%81%EC%A3%BC%20%2F%20%EB%AC%B4%EA%B4%80)%3A%20%0A%E2%96%A0%20%EA%B9%83%ED%97%88%EB%B8%8C%20%EB%98%90%EB%8A%94%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%20%EB%A7%81%ED%81%AC%3A%20%0A%0A*%20%EC%9D%B4%EB%A0%A5%EC%84%9C%20%EB%B0%8F%20%EA%B2%BD%EB%A0%A5%EA%B8%B0%EC%88%A0%EC%84%9C%EB%A5%BC%20%EC%B2%A8%EB%B6%80%ED%95%B4%20%EC%A3%BC%EC%84%B8%EC%9A%94." class="btn-card-apply">
+                        지원하기 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Terms & Conditions -->
+    <section class="terms-section">
+        <div class="terms-container">
+            <div class="section-header">
+                <h2>근무 형태 및 계약 조건</h2>
+                <p>개발자분들의 라이프스타일과 전문성을 존중하는 유연한 협업 방식을 제공합니다.</p>
+            </div>
+
+            <div class="terms-grid">
+                <div class="term-box">
+                    <h3><i class="fas fa-laptop-house text-primary"></i> 유연한 근무 형태</h3>
+                    <ul class="term-list">
+                        <li>프로젝트 특성 및 상황에 따라 <strong>100% 재택 / 상주 / 혼합(하이브리드)</strong> 협의</li>
+                        <li>사전에 협의된 근무 형태를 계약 시 명확하게 확정</li>
+                        <li>비동기(Async) 커뮤니케이션을 통한 자율적인 업무 환경 보장</li>
+                    </ul>
+                </div>
+
+                <div class="term-box">
+                    <h3><i class="fas fa-file-contract text-primary"></i> 맞춤형 계약 방식</h3>
+                    <ul class="term-list">
+                        <li><strong>M/M 월 단위 계약</strong>: 전담 투입 형태로 안정적인 장기 협업</li>
+                        <li><strong>프로젝트/산출물 단위 계약</strong>: 명확한 기능 단위 건별 정산</li>
+                        <li><strong>파트타임 계약</strong>: 주당 투입 가능 시간 협의를 통한 유연한 참여</li>
+                    </ul>
+                </div>
+
+                <div class="term-box">
+                    <h3><i class="fas fa-hand-holding-usd text-primary"></i> 투명한 보수 & 정산</h3>
+                    <ul class="term-list">
+                        <li>경력, 숙련도, 근무 형태를 고려하여 <strong>상호 협의 후 최적 단가 결정</strong></li>
+                        <li><strong>3.3% 사업소득 원천징수</strong> 또는 <strong>세금계산서 발행</strong> 선택 가능</li>
+                        <li>계약 시 지정된 지급일에 100% 신속하고 정확한 정산 준수</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3-Step Process -->
+    <section class="process-section">
+        <div class="section-header">
+            <h2>진행 절차 (Simple 3-Step)</h2>
+            <p>복잡하고 지루한 전형 대신 20분의 효율적인 퀵 미팅으로 빠르게 시작합니다.</p>
+        </div>
+
+        <div class="process-steps">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h4>서류 접수</h4>
+                <p>이력서/경력기술서 접수 후 영업일 기준 <strong>1~2일 내 신속 회신</strong>을 드립니다.</p>
+                <div class="step-duration">소요: 1~2 영업일</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h4>사전 퀵 미팅 (20~30분)</h4>
+                <p>Google Meet 또는 유선으로 희망 단가, 투입 가능 일정, 최적의 프로젝트를 상호 조율합니다.</p>
+                <div class="step-duration">소요: 약 20분</div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h4>프로젝트 매칭 & 계약</h4>
+                <p>적합한 프로젝트에 <strong>즉시 투입</strong>되거나, 일정에 맞춰 사전 배정 후 계약을 체결합니다.</p>
+                <div class="step-duration">투입 확정 및 착수</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application / Fast Contact -->
+    <section id="apply" class="apply-section">
+        <div class="apply-card">
+            <h2>지금 엠파시의 파트너가 되어보세요</h2>
+            <p>아래 이메일로 간단한 이력서와 희망 조건을 보내주시면 빠르게 회신드리겠습니다.</p>
+
+            <div class="email-display-box">
+                <span class="email-address">contact@empasy.com</span>
+                <button type="button" class="copy-email-btn" onclick="copyEmail()">
+                    <i class="far fa-copy"></i> 복사
+                </button>
+            </div>
+
+            <div class="checklist-grid">
+                <div class="checklist-title">
+                    <i class="fas fa-clipboard-check text-primary"></i> 지원 메일에 포함해 주실 항목
+                </div>
+                <ul class="checklist-items">
+                    <li><i class="fas fa-check"></i> 이력서 및 경력기술서 (기술스택 명시)</li>
+                    <li><i class="fas fa-check"></i> 포트폴리오 (GitHub / 산출물 링크)</li>
+                    <li><i class="fas fa-check"></i> 투입 가능 시기 (즉시 또는 가능 일자)</li>
+                    <li><i class="fas fa-check"></i> 희망 월 단가 (또는 건별/시급 단가)</li>
+                    <li><i class="fas fa-check"></i> 선호 근무 형태 (재택 / 상주 / 무관)</li>
+                </ul>
+            </div>
+
+            <div class="action-button-group">
+                <a href="mailto:contact@empasy.com?subject=%5B%ED%94%84%EB%A6%AC%EB%9E%9C%EC%84%9C%EC%A7%80%EC%9B%90%5D%20%EC%A7%80%EC%9B%90%EB%B6%84%EC%95%BC_%EC%84%B1%ED%95%A8&body=%E2%96%A0%20%EC%A7%80%EC%9B%90%20%ED%8F%AC%EC%A7%80%EC%85%98%3A%20%0A%E2%96%A0%20%EC%84%B1%ED%95%A8%20%2F%20%EC%97%B0%EB%9D%BD%EC%B2%98%3A%20%0A%E2%96%A0%20%ED%88%AC%EC%9E%85%20%EA%B0%80%EB%8A%A5%20%EC%8B%9C%EA%B8%B0%3A%20(%EC%98%88%3A%20%EC%A6%89%EC%8B%9C%20%EA%B0%80%EB%8A%A5%20%EB%98%90%EB%8A%94%200%EC%9B%94%200%EC%9D%BC%20%EC%9D%B4%ED%9B%84)%0A%E2%96%A0%20%ED%9D%AC%EB%A7%9D%20%EB%8B%A8%EA%B0%80(M%2FM%20%EB%98%90%EB%8A%94%20%EA%B1%B4%EB%B3%84)%3A%20%0A%E2%96%A0%20%EC%84%A0%ED%98%B8%20%EA%B7%BC%EB%AC%B4%ED%98%95%ED%83%9C(%EC%9E%AC%ED%83%9D%20%2F%20%EC%83%81%EC%A3%BC%20%2F%20%EB%AC%B4%EA%B4%80)%3A%20%0A%E2%96%A0%20%EA%B9%83%ED%97%88%EB%B8%8C%20%EB%98%90%EB%8A%94%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%20%EB%A7%81%ED%81%AC%3A%20%0A%0A*%20%EC%9D%B4%EB%A0%A5%EC%84%9C%20%EB%B0%8F%20%EA%B2%BD%EB%A0%A5%EA%B8%B0%EC%88%A0%EC%84%9C%EB%A5%BC%20%EC%B2%A8%EB%B6%80%ED%95%B4%20%EC%A3%BC%EC%84%B8%EC%9A%94." class="btn-mailto-main">
+                    <i class="fas fa-envelope-open-text"></i> 이메일로 바로 지원하기
+                </a>
+                <button type="button" class="btn-copy-template" onclick="copyTemplate()">
+                    <i class="fas fa-copy"></i> 지원 양식 복사하기
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification Element -->
+    <div id="toast"><i class="fas fa-check-circle" style="color: #10B981;"></i> <span id="toast-msg">복사되었습니다.</span></div>
+
+    <!-- Footer -->
+    {{> footer_ko }}
+
+    <!-- Scripts -->
+    <script>
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            toastMsg.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+
+        function copyEmail() {
+            navigator.clipboard.writeText('contact@empasy.com').then(() => {
+                showToast('이메일 주소(contact@empasy.com)가 복사되었습니다.');
+            }).catch(() => {
+                showToast('contact@empasy.com');
+            });
+        }
+
+        function copyTemplate() {
+            const template = `[프리랜서 지원 양식]
+■ 지원 포지션: 
+■ 성함 / 연락처: 
+■ 투입 가능 시기: (예: 즉시 가능 또는 0월 0일 이후)
+■ 희망 단가(M/M 또는 건별): 
+■ 선호 근무형태(재택 / 상주 / 무관): 
+■ 깃허브 또는 포트폴리오 링크: 
+
+* 이력서 및 경력기술서를 첨부하여 contact@empasy.com 으로 발송해 주세요.`;
+
+            navigator.clipboard.writeText(template).then(() => {
+                showToast('지원 양식이 클립보드에 복사되었습니다.');
+            }).catch(() => {
+                alert(template);
+            });
+        }
+    </script>
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>
