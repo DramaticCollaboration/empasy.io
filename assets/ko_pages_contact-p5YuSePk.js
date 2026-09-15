@@ -1,0 +1,1 @@
+import{t as e}from"./main-BgxXDqkb.js";import"./i18n-d99J6wys.js";import{t}from"./contact-fRxii4uT.js";e(),t();
