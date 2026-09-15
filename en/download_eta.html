@@ -1,13 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Empasy | SyncEta Desktop App Download</title>
-    <meta name="description" content="Experience seamless test automation and visual recording in your local environment with SyncEta.">
-    <meta name="keywords" content="Test Automation, Web Test Automation, AI Test Automation, SyncEta Download, Empasy">
-    <meta property="og:title" content="Empasy | SyncEta Desktop App Download">
-    <meta property="og:description" content="Experience seamless test automation and visual recording in your local environment with SyncEta.">
+    <title>SyncEta Desktop App Download & Quick Start | Empasy</title>
+    <meta name="description" content="Download the Vision-LLM based UI test automation desktop app SyncEta (v0.0.33). Record scenarios and run self-healing web regression tests locally in 3 minutes.">
+    <meta name="keywords" content="SyncEta, test automation tool, UI testing, E2E testing, desktop app download, Playwright automation, self-healing QA, Empasy">
+    <meta property="og:title" content="SyncEta Desktop App Download & Quick Start | Empasy">
+    <meta property="og:description" content="Download the Vision-LLM based UI test automation desktop app SyncEta (v0.0.33) to test local and staging web applications seamlessly.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://empasy.io/en/download_eta.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;800&display=swap" rel="stylesheet">
@@ -17,91 +19,266 @@
     <meta name="geo.placename" content="Seoul" />
     <meta name="geo.position" content="37.5665;126.9780" />
     <meta name="ICBM" content="37.5665, 126.9780" />
-    <!-- SEO & AIO Tags -->
+    <!-- SEO Tags -->
     <link rel="canonical" href="https://empasy.io/en/download_eta.html">
     <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/download_eta.html" />
     <link rel="alternate" hreflang="en" href="https://empasy.io/en/download_eta.html" />
     <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/download_eta.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/download_eta.html" />
-    <!-- Open Graph -->
-    <meta property="og:url" content="https://empasy.io/en/download_eta.html">
-    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/download_eta.html" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+    <!-- Schema.org SoftwareApplication (GEO & AEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SyncEta",
+      "softwareVersion": "0.0.33",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Windows 10, Windows 11, macOS 12+",
+      "downloadUrl": "https://empasy.io/en/download_eta.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Empasy",
+        "url": "https://empasy.io/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Vision-LLM and Playwright based desktop software for UI test automation and selector self-healing."
+    }
+    </script>
+
+    <!-- Schema.org HowTo (3-Step Quick Start) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Run Your First UI Regression Test with SyncEta Desktop",
+      "description": "A 3-step guide to installing SyncEta and executing your first recorded web regression test in under 3 minutes.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Install and Launch Desktop App",
+          "text": "Download and run the installer (.exe or .dmg) suitable for your operating system."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Enter Target URL and Record Scenario",
+          "text": "Enter the URL of your web application and record browser interactions directly."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Run Playwright Automation and Review Reports",
+          "text": "Click execute to run self-healing tests and inspect detailed execution logs and visual artifacts."
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema.org FAQPage (AEO Direct Ingestion) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is SyncEta desktop app free to download and run?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can download installers for Windows and macOS directly from empasy.io to test local and staging web applications immediately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does SyncEta selector self-healing work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When DOM hierarchies or class names change after deployments, SyncEta Vision-LLM analyzes visual context and component positioning to infer replacement selectors, preventing test pipeline failures."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can SyncEta be used within corporate private intranets or VPNs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, SyncEta controls the local Playwright browser runtime directly on your machine, enabling testing on localhost and corporate VPN environments without external cloud exposure."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
     <!-- Public Header -->
     {{> header_en }}
 
-    <main class="container" style="padding-top: 8rem; padding-bottom: 5rem; max-width: 900px;">
+    <main class="container" style="padding-top: 8rem; padding-bottom: 5rem; max-width: 960px;">
         <div class="text-center fade-in-up mb-4">
-            <h1 class="section-title">Download Desktop App</h1>
-            <p class="section-desc">Experience seamless test automation and visual recording in your local environment. Sign up directly within the app.</p>
+            <span class="badge" style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); color: #38bdf8; font-size: 0.85rem; padding: 4px 12px; border-radius: 20px;">Latest Release v0.0.33</span>
+            <h1 class="section-title" style="margin-top: 1rem;">Download SyncEta Desktop App</h1>
+            <p class="section-desc" style="max-width: 700px; margin: 0.5rem auto 2rem;">
+                Combine Vision-LLM intelligence with Playwright browser automation in a native desktop app. Run self-healing UI regression tests locally without server setup.
+            </p>
         </div>
 
-        <div class="grid grid-2 fade-in-up delay-1" style="gap: 2rem;">
+        <!-- Download Cards Grid -->
+        <div class="grid grid-2 fade-in-up delay-1" style="gap: 1.5rem; margin-bottom: 3.5rem;">
             <!-- Windows arm64 -->
-            <div class="glow-card" style="padding: 2.5rem; text-align: center;">
-                <svg width="56" height="56" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 1.5rem; fill: #00a4ef;">
+            <div class="glow-card" style="padding: 2rem; text-align: center;">
+                <svg width="48" height="48" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 1rem; fill: #00a4ef;">
                     <path d="M0 12.402l35.689-4.86v33.454H0V12.402zm35.689 39.516l-.001 33.678L0 80.732V51.918h35.689zm5.556-44.437L87.498 0v40.996H41.245V7.481zm46.253 44.437V92.99l-46.253-7.481V51.918h46.253z"/>
                 </svg>
-                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">Windows (arm64)</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Supports Windows 10, 11</p>
-                <a id="winArm64"
-                    class="btn btn-primary" style="width: 100%; box-shadow: 0 4px 15px rgba(13,148,136,0.3);">Download (.exe)</a>
+                <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.3rem;">Windows (arm64)</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Windows 11 ARM64 devices</p>
+                <a id="winArm64" class="btn btn-primary" style="width: 100%; box-shadow: 0 4px 15px rgba(13,148,136,0.3);">Download (.exe)</a>
             </div>
 
             <!-- Windows x64 -->
-            <div class="glow-card" style="padding: 2.5rem; text-align: center;">
-                <svg width="56" height="56" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 1.5rem; fill: #00a4ef;">
+            <div class="glow-card" style="padding: 2rem; text-align: center;">
+                <svg width="48" height="48" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 1rem; fill: #00a4ef;">
                     <path d="M0 12.402l35.689-4.86v33.454H0V12.402zm35.689 39.516l-.001 33.678L0 80.732V51.918h35.689zm5.556-44.437L87.498 0v40.996H41.245V7.481zm46.253 44.437V92.99l-46.253-7.481V51.918h46.253z"/>
                 </svg>
-                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">Windows (x64)</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Supports Windows 10, 11</p>
-                <a id="winX64"
-                   class="btn btn-primary" style="width: 100%; box-shadow: 0 4px 15px rgba(13,148,136,0.3);">Download (.exe)</a>
+                <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.3rem;">Windows (x64)</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Windows 10, 11 (64-bit)</p>
+                <a id="winX64" class="btn btn-primary" style="width: 100%; box-shadow: 0 4px 15px rgba(13,148,136,0.3);">Download (.exe)</a>
             </div>
 
             <!-- macOS Silicon -->
-            <div class="glow-card" style="padding: 2.5rem; text-align: center; position: relative;">
-                <svg width="56" height="56" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 1.5rem; fill: #e2e8f0;">
+            <div class="glow-card" style="padding: 2rem; text-align: center;">
+                <svg width="48" height="48" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 1rem; fill: #e2e8f0;">
                     <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.6-7.85-11.75-14.44-6.3-10.02-11.22-21.65-14.75-34.92-3.53-13.27-5.3-25.75-5.3-37.45 0-14.73 3.63-27.13 10.89-37.2 7.26-10.07 16.5-15.17 27.72-15.31 4.79 0 10.35 1.41 16.68 4.24 6.33 2.82 10.3 4.3 11.91 4.43 1.93-.13 6.08-1.68 12.45-4.66 6.37-2.97 11.75-4.3 16.14-3.99 12.39.99 22.18 5.76 29.38 14.32-10.87 6.58-16.19 15.68-15.96 27.29.23 9.07 3.73 16.71 10.51 22.92 6.78 6.21 14.78 9.87 24 10.99-2.18 6.74-4.73 13.3-7.66 19.68zM119.22 31.84c0-7.23 2.6-13.88 7.8-19.95 5.2-6.07 11.59-10.03 19.17-11.89.87 7.02-.99 13.78-5.58 20.28-4.59 6.5-10.66 10.74-18.21 12.73-.59-.39-1.18-.78-1.78-1.17h-1.4z"/>
                 </svg>
-                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">macOS (Apple Silicon)</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 2rem;">For M1, M2, M3 chips</p>
-                <!--preparing-->
-                <a id="macSilicon"
-                    class="btn btn-primary" style="width: 100%; box-shadow: 0 4px 15px rgba(13,148,136,0.3);">Download (.dmg)</a>
+                <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.3rem;">macOS (Apple Silicon)</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Apple Silicon (M1, M2, M3, M4)</p>
+                <a id="macSilicon" class="btn btn-primary" style="width: 100%; box-shadow: 0 4px 15px rgba(13,148,136,0.3);">Download (.dmg)</a>
             </div>
 
             <!-- macOS Intel -->
-            <div class="glow-card" style="padding: 2.5rem; text-align: center;">
-                <svg width="56" height="56" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 1.5rem; fill: #e2e8f0;">
+            <div class="glow-card" style="padding: 2rem; text-align: center;">
+                <svg width="48" height="48" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 1rem; fill: #e2e8f0;">
                     <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.6-7.85-11.75-14.44-6.3-10.02-11.22-21.65-14.75-34.92-3.53-13.27-5.3-25.75-5.3-37.45 0-14.73 3.63-27.13 10.89-37.2 7.26-10.07 16.5-15.17 27.72-15.31 4.79 0 10.35 1.41 16.68 4.24 6.33 2.82 10.3 4.3 11.91 4.43 1.93-.13 6.08-1.68 12.45-4.66 6.37-2.97 11.75-4.3 16.14-3.99 12.39.99 22.18 5.76 29.38 14.32-10.87 6.58-16.19 15.68-15.96 27.29.23 9.07 3.73 16.71 10.51 22.92 6.78 6.21 14.78 9.87 24 10.99-2.18 6.74-4.73 13.3-7.66 19.68zM119.22 31.84c0-7.23 2.6-13.88 7.8-19.95 5.2-6.07 11.59-10.03 19.17-11.89.87 7.02-.99 13.78-5.58 20.28-4.59 6.5-10.66 10.74-18.21 12.73-.59-.39-1.18-.78-1.78-1.17h-1.4z"/>
                 </svg>
-                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">macOS (Intel)</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Intel-based Mac processors</p>
-                <!--preparing-->
-                <a id="macIntel"
-                   class="btn btn-primary" style="width: 100%; box-shadow: 0 4px 15px rgba(13,148,136,0.3);">Download (.dmg)</a>
-            </div>
-
-            <!-- Linux -->
-            <div class="glow-card" style="padding: 2.5rem; text-align: center;">
-                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1.5rem;">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                    <line x1="8" y1="21" x2="16" y2="21"/>
-                    <line x1="12" y1="17" x2="12" y2="21"/>
-                    <path d="M7 8l3 3-3 3"/>
-                    <line x1="12" y1="14" x2="16" y2="14"/>
-                </svg>
-                <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">Linux (Debian/Ubuntu)</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 2rem;">.deb package installation</p>
-                <button class="btn btn-outline" style="width: 100%; opacity: 0.6; cursor: not-allowed;"
-                    disabled>Coming Soon</button>
+                <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.3rem;">macOS (Intel)</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Intel x64 Mac processors</p>
+                <a id="macIntel" class="btn btn-primary" style="width: 100%; box-shadow: 0 4px 15px rgba(13,148,136,0.3);">Download (.dmg)</a>
             </div>
         </div>
+
+        <!-- System Requirements Table -->
+        <section style="margin-bottom: 3.5rem; background: #0f172a; border: 1px solid #334155; border-radius: 12px; padding: 2rem;">
+            <h2 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1.2rem; color: #f8fafc;">System Requirements</h2>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid #334155; color: #94a3b8;">
+                            <th style="padding: 0.75rem 1rem;">Component</th>
+                            <th style="padding: 0.75rem 1rem;">Minimum</th>
+                            <th style="padding: 0.75rem 1rem;">Recommended</th>
+                        </tr>
+                    </thead>
+                    <tbody style="color: #cbd5e1;">
+                        <tr style="border-bottom: 1px solid #1e293b;">
+                            <td style="padding: 0.75rem 1rem; font-weight: 600;">Operating System</td>
+                            <td style="padding: 0.75rem 1rem;">Windows 10 (64-bit) / macOS 12 Monterey</td>
+                            <td style="padding: 0.75rem 1rem;">Windows 11 / macOS 14 Sonoma or higher</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #1e293b;">
+                            <td style="padding: 0.75rem 1rem; font-weight: 600;">CPU</td>
+                            <td style="padding: 0.75rem 1rem;">Intel Core i5 (8th gen) / Apple M1</td>
+                            <td style="padding: 0.75rem 1rem;">Intel Core i7+ / Apple M2 or higher</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #1e293b;">
+                            <td style="padding: 0.75rem 1rem; font-weight: 600;">Memory (RAM)</td>
+                            <td style="padding: 0.75rem 1rem;">4 GB RAM</td>
+                            <td style="padding: 0.75rem 1rem;">8 GB RAM or higher</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem 1rem; font-weight: 600;">Storage</td>
+                            <td style="padding: 0.75rem 1rem;">1 GB free disk space</td>
+                            <td style="padding: 0.75rem 1rem;">SSD with 2 GB+ free space</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 3-Step Quick Start Guide -->
+        <section style="margin-bottom: 3.5rem;">
+            <div class="text-center mb-3">
+                <h2 class="section-title" style="font-size: 1.6rem;">3-Step Quick Start Guide</h2>
+                <p class="section-desc" style="font-size: 0.95rem;">From installation to your first completed test in under 3 minutes.</p>
+            </div>
+            <div class="grid grid-3" style="gap: 1.5rem;">
+                <div class="glow-card" style="padding: 1.8rem;">
+                    <div style="font-size: 0.85rem; font-weight: 700; color: #38bdf8; margin-bottom: 0.5rem;">STEP 01</div>
+                    <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.7rem; color: #f8fafc;">Install & Create Project</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                        Launch the installed application, create a new project in the dashboard, and enter your target web application URL.
+                    </p>
+                </div>
+                <div class="glow-card" style="padding: 1.8rem;">
+                    <div style="font-size: 0.85rem; font-weight: 700; color: #38bdf8; margin-bottom: 0.5rem;">STEP 02</div>
+                    <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.7rem; color: #f8fafc;">Record Browser Scenario</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                        Perform standard user actions such as login, navigation, and checkout in the embedded browser; AI captures them as normalized steps.
+                    </p>
+                </div>
+                <div class="glow-card" style="padding: 1.8rem;">
+                    <div style="font-size: 0.85rem; font-weight: 700; color: #38bdf8; margin-bottom: 0.5rem;">STEP 03</div>
+                    <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.7rem; color: #f8fafc;">Run Automation & Inspect Logs</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                        Execute the scenario with Playwright engine. Vision-LLM automatically recovers altered selectors and generates execution reports.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- v0.0.33 Release Highlights -->
+        <section style="margin-bottom: 3.5rem; background: #0b1120; border: 1px solid #1e293b; border-radius: 12px; padding: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid #334155; padding-bottom: 0.75rem;">
+                <h2 style="font-size: 1.3rem; font-weight: 700; color: #f8fafc;">v0.0.33 Release Highlights</h2>
+                <span style="font-size: 0.85rem; color: #94a3b8;">Release Date: 2026-03</span>
+            </div>
+            <ul style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.8; padding-left: 1.2rem;">
+                <li><strong>Self-Healing Selector Accuracy</strong>: Improved visual context reasoning for dynamically generated class names in React and Vue 3 apps.</li>
+                <li><strong>Chromium Runtime Update</strong>: Updated embedded Playwright Chromium browser to the latest stable version with full CSS feature rendering.</li>
+                <li><strong>Log Viewer Performance</strong>: Reduced DOM snapshot memory footprint by ~40% during extended test executions.</li>
+                <li><strong>macOS Apple Silicon Native Tuning</strong>: Enhanced execution latency and reduced power consumption on Apple M-series silicon.</li>
+            </ul>
+        </section>
+
+        <!-- FAQ Section (AEO) -->
+        <section style="margin-bottom: 2rem;">
+            <div class="text-center mb-3">
+                <h2 class="section-title" style="font-size: 1.6rem;">Frequently Asked Questions (FAQ)</h2>
+            </div>
+            <div class="faq-accordion" style="display: flex; flex-direction: column; gap: 1rem;">
+                <details style="background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 1.2rem; cursor: pointer;">
+                    <summary style="font-weight: 600; color: #f8fafc; font-size: 1.05rem;">Is SyncEta desktop app free to download and run?</summary>
+                    <p style="color: var(--text-secondary); margin-top: 0.8rem; font-size: 0.95rem; line-height: 1.6;">
+                        Yes, you can download installers for Windows and macOS directly from empasy.io to test local and staging web applications immediately.
+                    </p>
+                </details>
+                <details style="background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 1.2rem; cursor: pointer;">
+                    <summary style="font-weight: 600; color: #f8fafc; font-size: 1.05rem;">How does SyncEta selector self-healing work?</summary>
+                    <p style="color: var(--text-secondary); margin-top: 0.8rem; font-size: 0.95rem; line-height: 1.6;">
+                        When DOM hierarchies or class names change after deployments, SyncEta Vision-LLM analyzes visual context and component positioning to infer replacement selectors, preventing test pipeline failures.
+                    </p>
+                </details>
+                <details style="background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 1.2rem; cursor: pointer;">
+                    <summary style="font-weight: 600; color: #f8fafc; font-size: 1.05rem;">Can SyncEta be used within corporate private intranets or VPNs?</summary>
+                    <p style="color: var(--text-secondary); margin-top: 0.8rem; font-size: 0.95rem; line-height: 1.6;">
+                        Yes, SyncEta controls the local Playwright browser runtime directly on your machine, enabling testing on localhost and corporate VPN environments without external cloud exposure.
+                    </p>
+                </details>
+            </div>
+        </section>
     </main>
 
     {{> footer_en }}
