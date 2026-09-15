@@ -8,17 +8,43 @@ document.addEventListener('DOMContentLoaded', () => {
         const isJa = htmlLang.startsWith('ja') || window.location.pathname.includes('/ja/');
 
         const i18nMsg = {
-            loading: isEn ? 'Sending...' : (isJa ? '送信中...' : '접수 중...'),
+            loading: isEn ? 'Submitting inquiry...' : (isJa ? '送信処理中...' : '문의를 접수하는 중입니다...'),
             consentRequired: isEn 
                 ? 'Please agree to the Privacy Policy to submit your inquiry.' 
                 : (isJa ? 'プライバシーポリシーへの同意が必要です。' : '개인정보 수집 및 이용에 동의해주세요.'),
             success: isEn 
-                ? 'Thank you! Your inquiry has been submitted successfully. We will contact you soon.' 
-                : (isJa ? 'お問い合わせが正常に受け付けられました。担当者よりご連絡いたします。' : '문의가 정상적으로 접수되었습니다. 담당자가 확인 후 신속히 회신드리겠습니다.'),
+                ? 'Thank you! Your inquiry has been submitted successfully. Our enterprise solutions specialist will contact you within 24 hours.' 
+                : (isJa ? 'お問い合わせが正常に受け付けられました。担当者より24時間以内に折り返しご連絡いたします。' : '문의가 정상적으로 접수되었습니다. 담당 솔루션 전문가가 확인 후 24시간 이내에 신속히 회신드리겠습니다.'),
             error: isEn 
-                ? 'Failed to submit inquiry. Please try again later or email us at poh@empasy.com.' 
-                : (isJa ? '送信に失敗しました。しばらく経ってから再度お試しいただくか、poh@empasy.comまでご連絡ください。' : '문의 접수 중 오류가 발생했습니다. 잠시 후 다시 시도해주시거나 poh@empasy.com으로 문의해 주세요.')
+                ? 'Failed to submit inquiry. Please try again or email us directly at poh@empasy.com.' 
+                : (isJa ? '送信に失敗しました。しばらく経ってから再度お試しいただくか、poh@empasy.comまでご連絡ください。' : '문의 접수 중 통신 오류가 발생했습니다. 잠시 후 다시 시도해주시거나 poh@empasy.com으로 직접 문의해 주세요.')
         };
+
+        // Create or get status alert banner
+        let alertBanner = document.getElementById('contactAlertBanner');
+        if (!alertBanner) {
+            alertBanner = document.createElement('div');
+            alertBanner.id = 'contactAlertBanner';
+            alertBanner.className = 'contact-alert-banner';
+            contactForm.insertBefore(alertBanner, contactForm.firstChild);
+        }
+
+        function showAlert(type, message) {
+            alertBanner.className = 'contact-alert-banner';
+            alertBanner.style.display = 'block';
+            
+            if (type === 'loading') {
+                alertBanner.classList.add('alert-loading');
+                alertBanner.innerHTML = `<span class="contact-spinner"></span> <span>${message}</span>`;
+            } else if (type === 'success') {
+                alertBanner.classList.add('alert-success');
+                alertBanner.innerHTML = `<i class="fas fa-check-circle" style="margin-right: 8px;"></i> <span>${message}</span>`;
+            } else if (type === 'error') {
+                alertBanner.classList.add('alert-error');
+                alertBanner.innerHTML = `<i class="fas fa-exclamation-triangle" style="margin-right: 8px;"></i> <span>${message}</span>`;
+            }
+            alertBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
 
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -26,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Validate privacy consent
             const consentCheckbox = document.getElementById('privacyConsent');
             if (consentCheckbox && !consentCheckbox.checked) {
-                alert(i18nMsg.consentRequired);
+                showAlert('error', i18nMsg.consentRequired);
                 consentCheckbox.focus();
                 return;
             }
@@ -36,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // UI Feedback: Loading state
             submitBtn.disabled = true;
-            submitBtn.innerText = i18nMsg.loading;
+            showAlert('loading', i18nMsg.loading);
             
             // Gather form data
             const name = document.getElementById('name').value.trim();
@@ -65,16 +91,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 );
                 
                 if (response.ok) {
-                    alert(i18nMsg.success);
+                    showAlert('success', i18nMsg.success);
                     contactForm.reset();
                 } else {
                     throw new Error('Server responded with status: ' + response.status);
                 }
             } catch (error) {
                 console.error('Contact submission error:', error);
-                alert(i18nMsg.error);
+                showAlert('error', i18nMsg.error);
             } finally {
-                // Restore button
                 submitBtn.disabled = false;
                 submitBtn.innerText = originalBtnText;
             }

@@ -1,13 +1,8 @@
 {
-  "dependencies": {
-    "cheerio": "^1.2.0",
-    "dotenv": "^17.4.2",
-    "openai": "^6.48.0"
-  },
   "name": "empasy.io",
   "version": "1.0.0",
-  "description": "",
-  "main": "translate_docs.js",
+  "description": "Empasy.io Official Corporate Website",
+  "private": true,
   "directories": {
     "doc": "docs"
   },

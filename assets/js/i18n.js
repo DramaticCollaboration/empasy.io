@@ -256,10 +256,13 @@ function updateLangSwitcherLinks() {
     });
 }
 
-function updateContent() {
+// Export updateContent for optional dynamic usage, but do not execute on page load
+// since HTML pages are statically pre-rendered per language at build time.
+export function updateContent(lang) {
+    const selectedLang = lang || currentLang;
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        const langData = translations[currentLang] || translations['ko'];
+        const langData = translations[selectedLang] || translations['ko'];
         if (langData && langData[key]) {
             el.innerHTML = langData[key];
         }
@@ -268,10 +271,9 @@ function updateContent() {
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-        updateContent();
         updateLangSwitcherLinks();
     });
 } else {
-    updateContent();
     updateLangSwitcherLinks();
 }
+

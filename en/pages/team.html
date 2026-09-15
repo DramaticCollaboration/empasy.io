@@ -14,14 +14,14 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <style>
         :root {
-            --primary: #2563EB; /* 엠파시 블루 */
-            --primary-light: #EFF6FF;
-            --secondary: #10B981; /* 시너지 그린 */
-            --bg-color: #F8FAFC;
-            --surface: #FFFFFF;
-            --text-main: #0F172A;
-            --text-muted: #475569;
-            --border: #E2E8F0;
+            --primary: #0891B2;
+            --primary-light: rgba(8, 145, 178, 0.15);
+            --secondary: #10B981;
+            --bg-color: #0B1120;
+            --surface: #0F172A;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --border: rgba(255, 255, 255, 0.1);
         }
         * {
             margin: 0;
@@ -35,11 +35,11 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
-        /* 1. Hero Section (헤드카피 & 슬로건) */
+        /* 1. Hero Section */
         .hero {
             padding: 100px 20px 140px;
             text-align: center;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(8, 145, 178, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
             position: relative;
         }
         .hero h1 {
@@ -184,12 +184,13 @@
         .quote {
             position: relative;
             padding: 24px;
-            background: #F8FAFC;
+            background: #1E293B;
             border-radius: 16px;
             color: var(--text-main);
             font-size: 1rem;
             word-break: break-word;
             line-height: 1.7;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         .quote::before {
             content: '"';
@@ -197,7 +198,7 @@
             top: 10px;
             left: 14px;
             font-size: 3rem;
-            color: rgba(37, 99, 235, 0.15);
+            color: rgba(8, 145, 178, 0.3);
             font-family: Georgia, serif;
             line-height: 1;
         }
@@ -241,7 +242,7 @@
       "description": "기술로 공감을 실현하는 엠파시(Empasy) 팀의 비전과 조직 문화를 소개합니다.",
       "sameAs": [
         "https://github.com/DramaticCollaboration",
-        "../../docs/index.html"
+        "https://doc.empasy.com/"
       ]
     }
     </script>

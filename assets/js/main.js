@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initMain() {
     // 0. Mobile Menu Injection
     const navContainer = document.querySelector('.nav-container');
     const navLinksEl = document.querySelector('.nav-links');
     const navActions = document.querySelector('.nav-actions');
 
-    if (navContainer && navLinksEl) {
+    if (navContainer && navLinksEl && !document.querySelector('.mobile-menu-btn')) {
         const mobileBtn = document.createElement('button');
         mobileBtn.className = 'mobile-menu-btn';
         mobileBtn.innerHTML = `
@@ -44,24 +44,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Intersection Observer for Fade-In-Up Animations
     const animatedElements = document.querySelectorAll('.fade-in-up');
     
+    // Immediate activation for elements already in or near viewport to prevent blank page bugs
+    animatedElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 100 && rect.bottom > -50) {
+            el.classList.add('visible');
+        }
+    });
+
     const observerOptions = {
         root: null,
-        rootMargin: '0px',
-        threshold: 0.15
+        rootMargin: '50px',
+        threshold: 0.05
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Optional: Stop observing once animated
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
     animatedElements.forEach(el => {
-        observer.observe(el);
+        if (!el.classList.contains('visible')) {
+            observer.observe(el);
+        }
     });
 
     // 2. Smooth Scrolling for Navigation Links
@@ -89,18 +98,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Header Background Change on Scroll
+    // 3. Header Background Change on Scroll (rAF Throttled + Passive)
     const header = document.querySelector('.glass-header');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.05)';
-        } else {
-            header.style.background = 'rgba(255, 255, 255, 0.8)';
-            header.style.boxShadow = 'none';
-        }
-    });
+    if (header) {
+        let ticking = false;
+        const updateHeader = () => {
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(11, 17, 32, 0.95)';
+                header.style.boxShadow = '0 10px 30px -10px rgba(0, 0, 0, 0.5)';
+                header.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+            } else {
+                header.style.background = 'rgba(11, 17, 32, 0.85)';
+                header.style.boxShadow = 'none';
+                header.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+            }
+            ticking = false;
+        };
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateHeader);
+                ticking = true;
+            }
+        }, { passive: true });
+    }
 
     // 4. Counter Animation
     const counters = document.querySelectorAll('.counter-val');
@@ -172,10 +193,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             targetSection.prepend(bgContainer);
             
-            // Bring content to front
+            // Bring content to front (preserve absolute background decorations)
+            const bgClasses = ['dynamic-bg-container', 'hero-grid-bg', 'hero-blur-circle', 'node-grid', 'verse-hero-glow'];
             Array.from(targetSection.children).forEach(child => {
-                if(child !== bgContainer) {
-                    child.style.position = 'relative';
+                const isBg = bgClasses.some(cls => child.classList.contains(cls));
+                if (!isBg && child !== bgContainer) {
+                    const compPos = window.getComputedStyle(child).position;
+                    if (compPos === 'static') {
+                        child.style.position = 'relative';
+                    }
                     child.style.zIndex = '10';
                 }
             });
@@ -201,4 +227,93 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-});
+    // 9. Interactive Agent CLI Terminal Simulator
+    const terminalTabs = document.querySelectorAll('.terminal-tab-btn');
+    const terminalInput = document.querySelector('.terminal-cmd-text');
+    const terminalOutput = document.querySelector('.terminal-output-container');
+    const terminalCopyBtn = document.querySelector('.terminal-copy-btn');
+
+    const agentTerminalData = {
+        verse: {
+            cmd: 'empasy verse dispatch --workflow "order-flow" --mode "autonomous"',
+            copyCmd: 'empasy verse dispatch --workflow "order-flow" --mode "autonomous"',
+            output: `
+                <div style="color: #38bdf8;">[SyncVerse Orchestrator]</div>
+                <div>&nbsp;↳ A2A MessageHub initialized [Agents: SyncBoot, SyncEta, SyncLLM]</div>
+                <div>&nbsp;↳ Dispatching distributed transaction... <span style="color: #22c55e;">[DISPATCHED]</span></div>
+                <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncVerse Guardrail]</div>
+                <div>&nbsp;↳ PII Masked &amp; Redis Semantic Cache HIT (Latency: 12ms) <span style="color: #22c55e;">[SAFE]</span></div>
+                <div>&nbsp;↳ All agent SLAs verified &amp; Audit Trace ID: #trc-9842a <span style="color: #22c55e;">[100% HEALTHY]</span></div>
+            `
+        },
+        eta: {
+            cmd: 'empasy eta run --target https://app.example.com --scenario "결제 검증"',
+            copyCmd: 'empasy eta run --target https://app.example.com --scenario "결제 검증"',
+            output: `
+                <div style="color: #38bdf8;">[SyncEta Engine]</div>
+                <div>&nbsp;↳ Vision-LLM 화면 요소 식별 중... <span style="color: #38bdf8;">[식별 완료: #btn-pay-submit]</span></div>
+                <div>&nbsp;↳ DOM 변경 감지: 셀렉터 자가 복구(Self-Healing) 적용... <span style="color: #22c55e;">[성공]</span></div>
+                <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncEta Inspector]</div>
+                <div>&nbsp;↳ E2E 결제 시나리오 및 트랜잭션 응답 검증... <span style="color: #22c55e;">[PASS (0.84s)]</span></div>
+            `
+        },
+        boot: {
+            cmd: 'empasy boot generate --domain "PaymentService" --pattern "Saga"',
+            copyCmd: 'empasy boot generate --domain "PaymentService" --pattern "Saga"',
+            output: `
+                <div style="color: #38bdf8;">[SyncBoot Engine]</div>
+                <div>&nbsp;↳ Analyzing domain schema &amp; DDD entity relationships... <span style="color: #22c55e;">[Done]</span></div>
+                <div>&nbsp;↳ Generating Spring Boot 3.3 / Java 21 microservices scaffolding...</div>
+                <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncBoot Verifier]</div>
+                <div>&nbsp;↳ Saga compensation transaction &amp; zero-mock tests generated... <span style="color: #22c55e;">[BUILD SUCCESS (1.2s)]</span></div>
+            `
+        },
+        cms: {
+            cmd: 'empasy cms publish --page "launch-campaign" --languages "ko,en,ja"',
+            copyCmd: 'empasy cms publish --page "launch-campaign" --languages "ko,en,ja"',
+            output: `
+                <div style="color: #38bdf8;">[SyncCMS Core]</div>
+                <div>&nbsp;↳ Natural language prompt transformed into responsive layout blocks</div>
+                <div>&nbsp;↳ Translating &amp; synchronizing resource tokens across 3 locales... <span style="color: #22c55e;">[Done]</span></div>
+                <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCMS Edge]</div>
+                <div>&nbsp;↳ Atomic cache purge &amp; Zero-Downtime multi-site deployment... <span style="color: #22c55e;">[LIVE (15+ Sites)]</span></div>
+            `
+        },
+        crawl: {
+            cmd: 'empasy crawl run --target "https://market.data.org" --schema "pricing.json"',
+            copyCmd: 'empasy crawl run --target "https://market.data.org" --schema "pricing.json"',
+            output: `
+                <div style="color: #38bdf8;">[SyncCrawl Scout]</div>
+                <div>&nbsp;↳ Rotating residential proxy session &amp; bypassing dynamic CAPTCHA... <span style="color: #22c55e;">[Success]</span></div>
+                <div>&nbsp;↳ Target DOM layout changed: Auto-inferring semantic selectors... <span style="color: #38bdf8;">[Resolved]</span></div>
+                <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCrawl Pipeline]</div>
+                <div>&nbsp;↳ Structured JSON extracted &amp; Vectorized into RAG Knowledge Base... <span style="color: #22c55e;">[1,420 Items Synced]</span></div>
+            `
+        }
+    };
+
+    if (terminalTabs.length > 0 && terminalInput && terminalOutput) {
+        terminalTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                terminalTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                const agentKey = tab.getAttribute('data-agent');
+                const data = agentTerminalData[agentKey] || agentTerminalData.verse;
+                
+                terminalInput.innerText = data.cmd;
+                if (terminalCopyBtn) {
+                    terminalCopyBtn.setAttribute('data-cmd', data.copyCmd);
+                }
+                terminalOutput.innerHTML = data.output;
+            });
+        });
+    }
+
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMain);
+} else {
+    initMain();
+}

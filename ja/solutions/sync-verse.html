@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>SyncVerse - エンタープライズ自律運用 統合管制タワー &amp; マルチエージェント基盤 | Empasy</title>
+    <meta name="description" content="SyncVerseは、SyncSeriesの全エージェント（SyncEta、SyncBoot、SyncCMS、SyncCrawl、SyncLLM、SyncInsight）を一元管理する中央管制タワー（Central Control Tower）です。標準A2A/MCPプロトコルと安全なガードレールにより、エンタープライズの自律運用を実現します。">
+    <meta name="keywords" content="SyncVerse, AIオーケストレーター, マルチエージェント, A2Aプロトコル, MCP, 自律運用, ガードレール, キルスイッチ, Empasy">
+    <meta property="og:title" content="SyncVerse - 自律運用 統合管制タワー | Empasy">
+    <meta property="og:description" content="単一管制タワーの下で各専門エージェントが有機的に連携するエンタープライズ自律運用プラットフォーム">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Empasy">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <style>
+        .page-header { padding: 150px 0 80px; text-align: center; position: relative; z-index: 10; }
+        .page-title { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; color: var(--text-primary); }
+        .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto; }
+        
+        .verse-hero-glow {
+            position: absolute;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(8, 145, 178, 0.18) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -120px; left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .layer-architecture-box {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem auto;
+            max-width: 1000px;
+            backdrop-filter: blur(12px);
+        }
+
+        .layer-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .layer-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+    </style>
+    <meta name="geo.region" content="KR-11" />
+    <meta name="geo.placename" content="Seoul" />
+    <meta name="geo.position" content="37.5665;126.9780" />
+    <meta name="ICBM" content="37.5665, 126.9780" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SyncVerse",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux, Cloud-Native, Kubernetes",
+      "description": "エンタープライズ向けマルチエージェント統合管制タワーおよび自律運用基盤",
+      "url": "https://empasy.io/ja/solutions/sync-verse.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Empasy",
+        "url": "https://empasy.io/"
+      }
+    }
+    </script>
+    
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- SEO & AIO Tags -->
+    
+    
+    <!-- SEO & AIO Tags -->
+    <link rel="canonical" href="https://empasy.io/ja/solutions/sync-verse.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-verse.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-verse.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-verse.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-verse.html" />
+    <meta property="og:url" content="https://empasy.io/ja/solutions/sync-verse.html">
+</head>
+<body class="theme-verse">
+    {{> header_ja }}
+
+    <main class="container" style="position: relative; z-index: 10;">
+        <div class="verse-hero-glow"></div>
+        <div class="page-header fade-in-up" style="position: relative; overflow: hidden;">
+            <div class="container" style="position: relative; z-index: 10;">
+                <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(8, 145, 178, 0.3);">
+                    A2A Multi-Agent Orchestrator &amp; Central Tower
+                </span>
+                <h1 class="page-title">SyncVerse</h1>
+                <p class="page-subtitle">単一の管制タワーの下で各専門エージェントが有機的に通信し、ビジネスプロセスを完遂する全社AI自律運用プラットフォームです。</p>
+                <div class="mt-4 flex-center" style="gap: 1rem; display: flex; justify-content: center; flex-wrap: wrap;">
+                    <a href="../pages/contact.html" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 30px;">導入・技術相談</a>
+                    <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 30px; border-color: rgba(255,255,255,0.2);">ドキュメントを見る <i class="fas fa-external-link-alt" style="font-size:0.8em; margin-left:6px;"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- VS Comparison Section -->
+        <section class="section pt-0 fade-in-up delay-1">
+            <div class="vs-container mb-4">
+                <div class="vs-box vs-legacy">
+                    <h4>従来のサイロ化された運用</h4>
+                    <ul class="vs-list">
+                        <li>部署やシステムごとの個別運用により障害発生時の原因特定と復旧が遅延</li>
+                        <li>コード変更、データ収集、QA検証における手動オペレーション負担の増大</li>
+                        <li>社内AIツールの乱立によるセキュリティガバナンスとコスト統制の困難さ</li>
+                    </ul>
+                </div>
+                <div class="vs-box vs-agent">
+                    <h4>SyncVerse 自律運用基盤</h4>
+                    <ul class="vs-list">
+                        <li>標準MCPおよびA2A通信による7大専門エージェントのリアルタイム協調</li>
+                        <li>Spec-First（仕様ファースト）と自動E2E検証による無停止パイプラインの実現</li>
+                        <li>緊急キルスイッチ（Kill-Switch）およびFinOps予算統制による安全性の担保</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3-Layer Architecture -->
+            <div class="layer-architecture-box fade-in-up delay-1">
+                <div class="text-center mb-4">
+                    <span class="badge">3-Layer Multi-Agent Architecture</span>
+                    <h2 class="section-title" style="font-size: 2rem;">SyncSeries 3-Layer 協調アーキテクチャ</h2>
+                    <p style="color: var(--text-secondary); max-width: 700px; margin: 0.5rem auto 0;">データ収集・知覚から自律実行、全社中央統制まで3つの階層が密連携します。</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <!-- Layer 1 -->
+                    <div class="layer-card" style="border-top: 3px solid #10b981;">
+                        <span style="color: #10b981; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Layer 1 &bull; Perception &amp; Quality</span>
+                        <h3 style="font-size: 1.2rem; color: #fff; margin: 0.6rem 0;">知覚 &amp; 品質保証</h3>
+                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">外部データ収集とVision-LLMによる自己治癒型QAテストを遂行します。</p>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); margin: 0;">SyncCrawl</span>
+                            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); margin: 0;">SyncEta</span>
+                        </div>
+                    </div>
+
+                    <!-- Layer 2 -->
+                    <div class="layer-card" style="border-top: 3px solid #0891b2;">
+                        <span style="color: #38bdf8; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Layer 2 &bull; Creation &amp; Execution</span>
+                        <h3 style="font-size: 1.2rem; color: #fff; margin: 0.6rem 0;">生成 &amp; 実行</h3>
+                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">MSAバックエンドコード自動生成と多言語コンテンツの自律配信を行います。</p>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(8, 145, 178, 0.3); margin: 0;">SyncBoot</span>
+                            <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(8, 145, 178, 0.3); margin: 0;">SyncCMS</span>
+                        </div>
+                    </div>
+
+                    <!-- Layer 3 -->
+                    <div class="layer-card" style="border-top: 3px solid #f59e0b;">
+                        <span style="color: #f59e0b; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Layer 3 &bull; Intelligence &amp; Governance</span>
+                        <h3 style="font-size: 1.2rem; color: #fff; margin: 0.6rem 0;">中央管制 &amp; 意思決定</h3>
+                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">全社オーケストレーション、インフラ診断、FinOpsガバナンスを統括します。</p>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); margin: 0;">SyncVerse</span>
+                            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); margin: 0;">SyncInsight</span>
+                            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); margin: 0;">SyncLLM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Features -->
+            <div class="section-header text-center mt-5 mb-4">
+                <span class="badge">Core Capabilities</span>
+                <h2 class="section-title">主要機能と特長</h2>
+                <p class="section-desc">ミッションクリティカルな企業環境で実証されたオーケストレーションエンジン</p>
+            </div>
+
+            <div class="rich-features">
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">01</span>
+                    <h3>A2A リアルタイムイベントブローカー</h3>
+                    <p>標準MCPインターフェースを介したエージェント間非同期メッセージハブにより、データ収集からビルド・テストまでシームレスに自動連携します。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">02</span>
+                    <h3>Spec-First 3大実行トラック</h3>
+                    <p>データ直接反映、AST構文解析パッチ、仕様書事前レビューの3系統で無用なコード生成を徹底排除します。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">03</span>
+                    <h3>緊急キルスイッチ（Kill-Switch）</h3>
+                    <p>システム異常時にワンクリックで全エージェントの書き込み権限を停止し、読み取り専用（ReadOnly Lockdown）に即座に隔離します。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">04</span>
+                    <h3>Human-in-the-Loop (HITL)</h3>
+                    <p>重大なDBマイグレーションやインフラ変更前に管理者の承認を必須化し、ハルシネーションによるリスクを根絶します。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">05</span>
+                    <h3>統合FinOps &amp; PII保護</h3>
+                    <p>日次トークン予算制限とセマンティックキャッシュ、個人情報（マイナンバー・カード情報）のリアルタイムマスキングを実施します。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">06</span>
+                    <h3>全社トレーサビリティ監査ログ</h3>
+                    <p>すべてのツール呼び出しとLLM応答をTrace IDで紐付けて完全記録し、金融・公共機関のコンプライアンス要件に適合します。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enterprise Security Section -->
+        <section class="section" style="background: rgba(15, 23, 42, 0.5); border-top: 1px solid var(--border-color); border-radius: 16px; margin: 4rem 0;">
+            <div class="container text-center">
+                <span class="badge">Security &amp; Air-Gapped</span>
+                <h2 class="section-title" style="margin-top: 1rem;">オンプレミスおよび専用VPC閉域網対応</h2>
+                <p style="color: var(--text-secondary); max-width: 700px; margin: 1rem auto 2.5rem;">機密コードやデータは外部に送信されず、お客様の専用クラウドVPCまたはオンプレミス環境に完全隔離して構築可能です。</p>
+                <a href="../pages/contact.html" class="btn btn-primary btn-lg">SyncVerse 導入のご相談 &rarr;</a>
+            </div>
+        </section>
+    </main>
+
+    {{> footer_ja }}
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>
