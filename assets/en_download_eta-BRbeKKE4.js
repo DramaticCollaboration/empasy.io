@@ -1,0 +1,1 @@
+import{t as e}from"./main-XSw1BU3t.js";/* empty css                      */import"./i18n-d99J6wys.js";e();

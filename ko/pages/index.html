@@ -43,40 +43,6 @@
                 transform: translateX(-50%);
             }
         }
-        @keyframes typing {
-            from {
-                width: 0
-            }
-            to {
-                width: 100%
-            }
-        }
-        @keyframes blink-caret {
-            from,
-            to {
-                border-color: transparent
-            }
-            50% {
-                border-color: white
-            }
-        }
-        .typewriter-text {
-            animation: typing 2s steps(40, end) forwards, blink-caret .75s step-end infinite;
-            white-space: nowrap;
-            overflow: hidden;
-            display: inline-block;
-            border-right: 2px solid white;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
     </style>
     <!-- SEO Tags -->
     <link rel="canonical" href="https://empasy.io/ko/pages/index.html">
@@ -96,10 +62,10 @@
     <!-- AI & Crawling Optimization -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <script type="module" crossorigin src="/assets/ko_pages_index-B2x4wbPL.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/main-B-Whlujh.js">
+  <script type="module" crossorigin src="/assets/ko_pages_index-1YUvIkRV.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-XSw1BU3t.js">
   <link rel="modulepreload" crossorigin href="/assets/i18n-d99J6wys.js">
-  <link rel="stylesheet" crossorigin href="/assets/main-C4gOQkUi.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-CFkT7Q6w.css">
 </head>
 
 <body>
@@ -187,33 +153,41 @@
 
             <!-- Interactive AI Terminal -->
             <div class="interactive-terminal mt-4 fade-in-up delay-2"
-                style="max-width: 800px; margin: 4rem auto 0; text-align: left; background: #0f172a; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); overflow: hidden; border: 1px solid #334155;">
+                style="max-width: 840px; margin: 4rem auto 0; text-align: left; background: #0b1120; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); overflow: hidden; border: 1px solid #334155;">
                 <div
-                    style="background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; align-items: center; border-bottom: 1px solid #334155;">
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b;"></div>
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></div>
-                    <div style="margin-left: 1rem; font-family: monospace; color: #94a3b8; font-size: 0.85rem;">
-                        empasy-agent-cli</div>
-                    <button class="terminal-copy-btn" data-cmd='empasy eta run --target https://app.example.com --scenario "결제 검증"' title="명령어 복사">
-                        <i class="far fa-copy"></i> Copy
+                    style="background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; align-items: center; border-bottom: 1px solid #334155; justify-content: space-between;">
+                    <div style="display: flex; gap: 0.5rem; align-items: center;">
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></div>
+                        <div style="margin-left: 1rem; font-family: monospace; color: #94a3b8; font-size: 0.85rem;">
+                            empasy-agent-cli (A2A Simulator)</div>
+                    </div>
+                    <button class="terminal-copy-btn" data-cmd='empasy verse dispatch --workflow "order-flow" --mode "autonomous"' title="명령어 복사">
+                        <i class="far fa-copy"></i> 복사
                     </button>
                 </div>
+                <!-- Agent Interactive Tabs -->
+                <div class="terminal-tabs">
+                    <button class="terminal-tab-btn active" data-agent="verse"><i class="fas fa-network-wired"></i> SyncVerse (관제탑)</button>
+                    <button class="terminal-tab-btn" data-agent="eta"><i class="fas fa-robot"></i> SyncEta (자가치유 QA)</button>
+                    <button class="terminal-tab-btn" data-agent="boot"><i class="fas fa-server"></i> SyncBoot (MSA 생성)</button>
+                    <button class="terminal-tab-btn" data-agent="cms"><i class="fas fa-layer-group"></i> SyncCMS (퍼블리싱)</button>
+                    <button class="terminal-tab-btn" data-agent="crawl"><i class="fas fa-spider"></i> SyncCrawl (데이터 수집)</button>
+                </div>
                 <div
-                    style="padding: 1.5rem; font-family: monospace; font-size: 0.95rem; line-height: 1.6; color: #e2e8f0;">
+                    style="padding: 1.5rem; font-family: var(--font-mono); font-size: 0.95rem; line-height: 1.6; color: #e2e8f0; min-height: 200px;">
                     <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
                         <span style="color: #22c55e;">User&gt;</span>
-                        <span class="typewriter-text">empasy eta run --target https://app.example.com --scenario "결제 검증"</span>
+                        <span class="terminal-cmd-text" style="color: #f8fafc; font-weight: 600;">empasy verse dispatch --workflow "order-flow" --mode "autonomous"</span>
                     </div>
-                    <div class="terminal-response" style="opacity: 0; animation: fadeIn 0.5s ease 2.5s forwards;">
-                        <div style="color: #38bdf8;">[SyncEta Engine]</div>
-                        <div>&nbsp;↳ Vision-LLM 화면 요소 식별 중... <span style="color: #38bdf8;">[식별 완료: #btn-pay-submit]</span></div>
-                        <div>&nbsp;↳ DOM 변경 감지: 셀렉터 자가 복구(Self-Healing) 적용... <span style="color: #22c55e;">[성공]</span></div>
-                    </div>
-                    <div class="terminal-response-2"
-                        style="opacity: 0; animation: fadeIn 0.5s ease 4s forwards; margin-top: 1rem;">
-                        <div style="color: #a78bfa;">[SyncEta Inspector]</div>
-                        <div>&nbsp;↳ E2E 결제 시나리오 및 트랜잭션 응답 검증... <span style="color: #22c55e;">[PASS (0.84s)]</span></div>
+                    <div class="terminal-output-container">
+                        <div style="color: #38bdf8;">[SyncVerse Orchestrator]</div>
+                        <div>&nbsp;↳ A2A MessageHub initialized [Agents: SyncBoot, SyncEta, SyncLLM]</div>
+                        <div>&nbsp;↳ Dispatching distributed transaction... <span style="color: #22c55e;">[DISPATCHED]</span></div>
+                        <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncVerse Guardrail]</div>
+                        <div>&nbsp;↳ PII Masked &amp; Redis Semantic Cache HIT (Latency: 12ms) <span style="color: #22c55e;">[SAFE]</span></div>
+                        <div>&nbsp;↳ All agent SLAs verified &amp; Audit Trace ID: #trc-9842a <span style="color: #22c55e;">[100% HEALTHY]</span></div>
                     </div>
                 </div>
             </div>
@@ -767,17 +741,15 @@
 
     <!-- Footer -->
     <footer class="footer mt-4">
-            <div class="container text-center fade-in-up">
-                <h2 class="footer-title" data-i18n="footer.title">엠파시와 함께 비즈니스를 가속화하세요</h2>
-                <div class="mt-4">
-                    <a href="../../ko/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">Contact</a>
-                </div>
+        <div class="container text-center fade-in-up">
+            <h2 class="footer-title" data-i18n="footer.title">엠파시와 함께 비즈니스를 가속화하세요</h2>
+            <div class="mt-4">
+                <a href="../../ko/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">도입 문의 (Contact)</a>
             </div>
-            <div class="footer-bottom text-center">
-                <p data-i18n="footer.copyright" style="color: rgba(255, 255, 255, 0.6);">© 2026 Empasy. All rights reserved.</p>
-            <!-- SEO Semantic IT Company Info -->
+        </div>
+        <div class="footer-bottom text-center">
             <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center;">
                     <a href="https://github.com/DramaticCollaboration" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fab fa-github"></i> GitHub
                     </a>
@@ -787,20 +759,29 @@
                     <a href="../../ko/pages/careers.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fas fa-user-plus"></i> 인재 영입 (Careers)
                     </a>
+                    <a href="../../ko/pages/terms.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-file-contract"></i> 서비스 이용약관
+                    </a>
                     <a href="../../ko/pages/privacy.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fas fa-shield-alt"></i> 개인정보 처리방침
                     </a>
+                    <a href="https://doc.empasy.com/ecosystem/security-and-compliance" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-lock"></i> 보안 &amp; 컴플라이언스
+                    </a>
+                    <span style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: rgba(34, 197, 94, 0.12); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 20px; font-size: 0.8rem; color: #4ade80; font-weight: 600;">
+                        <span style="width: 7px; height: 7px; border-radius: 50%; background: #22c55e; display: inline-block;"></span> All Systems Operational (SLA 99.9%)
+                    </span>
                 </div>
-                <address style="font-style: normal; color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.8;">
-                    <strong style="color: rgba(255, 255, 255, 0.9);">(주)엠파시 (Empasy IT Corp.)</strong><br>
-                    엔터프라이즈 B2B 소프트웨어 및 AI 에이전트(SyncSeries) 개발사<br>
-                    <span style="color: rgba(255, 255, 255, 0.85);">도입 문의 : <a href="mailto:poh@empasy.com" style="color: inherit; text-decoration: underline;">poh@empasy.com</a> &nbsp;|&nbsp; 기술 지원 : <a href="tel:0507-1360-8169" style="color: inherit; text-decoration: none;">0507-1360-8169</a></span><br>
-                    Seoul, South Korea
+                <address style="font-style: normal; color: rgba(255, 255, 255, 0.65); font-size: 0.85rem; line-height: 1.8;">
+                    <strong style="color: rgba(255, 255, 255, 0.95); font-size: 0.95rem;">주식회사 엠파시 (Empasy IT Corp.)</strong> &nbsp;|&nbsp; 대표이사 : 오필환<br>
+                    사업자등록번호 : 215-87-88985 &nbsp;|&nbsp; 통신판매업신고번호 : 제 2026-서울강남-01928호<br>
+                    본점 소재지 : 서울특별시 강남구 테헤란로 152 &nbsp;|&nbsp; 개인정보보호책임자 : 오필환 (<a href="mailto:poh@empasy.com" style="color: inherit; text-decoration: underline;">poh@empasy.com</a>)<br>
+                    <span style="color: rgba(255, 255, 255, 0.85);">엔터프라이즈 솔루션 도입 문의 : <a href="mailto:poh@empasy.com" style="color: #38bdf8; text-decoration: underline;">poh@empasy.com</a> &nbsp;|&nbsp; 기술 지원 및 대표번호 : <a href="tel:0507-1360-8169" style="color: #f8fafc; text-decoration: none;">0507-1360-8169</a></span>
                 </address>
+                <p data-i18n="footer.copyright" style="color: rgba(255, 255, 255, 0.45); font-size: 0.8rem; margin-top: 1rem;">© 2026 Empasy IT Corp. All rights reserved. SyncSeries® is a registered trademark of Empasy.</p>
             </div>
-    
-            </div>
-        </footer>
+        </div>
+    </footer>
     <!-- Scripts -->
 </body>
 
