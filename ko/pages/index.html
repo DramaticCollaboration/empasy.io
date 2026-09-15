@@ -44,40 +44,6 @@
                 transform: translateX(-50%);
             }
         }
-        @keyframes typing {
-            from {
-                width: 0
-            }
-            to {
-                width: 100%
-            }
-        }
-        @keyframes blink-caret {
-            from,
-            to {
-                border-color: transparent
-            }
-            50% {
-                border-color: white
-            }
-        }
-        .typewriter-text {
-            animation: typing 2s steps(40, end) forwards, blink-caret .75s step-end infinite;
-            white-space: nowrap;
-            overflow: hidden;
-            display: inline-block;
-            border-right: 2px solid white;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
     </style>
     <!-- SEO Tags -->
     <link rel="canonical" href="https://empasy.io/ko/pages/index.html">
@@ -122,33 +88,41 @@
 
             <!-- Interactive AI Terminal -->
             <div class="interactive-terminal mt-4 fade-in-up delay-2"
-                style="max-width: 800px; margin: 4rem auto 0; text-align: left; background: #0f172a; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); overflow: hidden; border: 1px solid #334155;">
+                style="max-width: 840px; margin: 4rem auto 0; text-align: left; background: #0b1120; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); overflow: hidden; border: 1px solid #334155;">
                 <div
-                    style="background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; align-items: center; border-bottom: 1px solid #334155;">
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b;"></div>
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></div>
-                    <div style="margin-left: 1rem; font-family: monospace; color: #94a3b8; font-size: 0.85rem;">
-                        empasy-agent-cli</div>
-                    <button class="terminal-copy-btn" data-cmd='empasy eta run --target https://app.example.com --scenario "결제 검증"' title="명령어 복사">
-                        <i class="far fa-copy"></i> Copy
+                    style="background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; align-items: center; border-bottom: 1px solid #334155; justify-content: space-between;">
+                    <div style="display: flex; gap: 0.5rem; align-items: center;">
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></div>
+                        <div style="margin-left: 1rem; font-family: monospace; color: #94a3b8; font-size: 0.85rem;">
+                            empasy-agent-cli (A2A Simulator)</div>
+                    </div>
+                    <button class="terminal-copy-btn" data-cmd='empasy verse dispatch --workflow "order-flow" --mode "autonomous"' title="명령어 복사">
+                        <i class="far fa-copy"></i> 복사
                     </button>
                 </div>
+                <!-- Agent Interactive Tabs -->
+                <div class="terminal-tabs">
+                    <button class="terminal-tab-btn active" data-agent="verse"><i class="fas fa-network-wired"></i> SyncVerse (관제탑)</button>
+                    <button class="terminal-tab-btn" data-agent="eta"><i class="fas fa-robot"></i> SyncEta (자가치유 QA)</button>
+                    <button class="terminal-tab-btn" data-agent="boot"><i class="fas fa-server"></i> SyncBoot (MSA 생성)</button>
+                    <button class="terminal-tab-btn" data-agent="cms"><i class="fas fa-layer-group"></i> SyncCMS (퍼블리싱)</button>
+                    <button class="terminal-tab-btn" data-agent="crawl"><i class="fas fa-spider"></i> SyncCrawl (데이터 수집)</button>
+                </div>
                 <div
-                    style="padding: 1.5rem; font-family: monospace; font-size: 0.95rem; line-height: 1.6; color: #e2e8f0;">
+                    style="padding: 1.5rem; font-family: var(--font-mono); font-size: 0.95rem; line-height: 1.6; color: #e2e8f0; min-height: 200px;">
                     <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
                         <span style="color: #22c55e;">User&gt;</span>
-                        <span class="typewriter-text">empasy eta run --target https://app.example.com --scenario "결제 검증"</span>
+                        <span class="terminal-cmd-text" style="color: #f8fafc; font-weight: 600;">empasy verse dispatch --workflow "order-flow" --mode "autonomous"</span>
                     </div>
-                    <div class="terminal-response" style="opacity: 0; animation: fadeIn 0.5s ease 2.5s forwards;">
-                        <div style="color: #38bdf8;">[SyncEta Engine]</div>
-                        <div>&nbsp;↳ Vision-LLM 화면 요소 식별 중... <span style="color: #38bdf8;">[식별 완료: #btn-pay-submit]</span></div>
-                        <div>&nbsp;↳ DOM 변경 감지: 셀렉터 자가 복구(Self-Healing) 적용... <span style="color: #22c55e;">[성공]</span></div>
-                    </div>
-                    <div class="terminal-response-2"
-                        style="opacity: 0; animation: fadeIn 0.5s ease 4s forwards; margin-top: 1rem;">
-                        <div style="color: #a78bfa;">[SyncEta Inspector]</div>
-                        <div>&nbsp;↳ E2E 결제 시나리오 및 트랜잭션 응답 검증... <span style="color: #22c55e;">[PASS (0.84s)]</span></div>
+                    <div class="terminal-output-container">
+                        <div style="color: #38bdf8;">[SyncVerse Orchestrator]</div>
+                        <div>&nbsp;↳ A2A MessageHub initialized [Agents: SyncBoot, SyncEta, SyncLLM]</div>
+                        <div>&nbsp;↳ Dispatching distributed transaction... <span style="color: #22c55e;">[DISPATCHED]</span></div>
+                        <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncVerse Guardrail]</div>
+                        <div>&nbsp;↳ PII Masked &amp; Redis Semantic Cache HIT (Latency: 12ms) <span style="color: #22c55e;">[SAFE]</span></div>
+                        <div>&nbsp;↳ All agent SLAs verified &amp; Audit Trace ID: #trc-9842a <span style="color: #22c55e;">[100% HEALTHY]</span></div>
                     </div>
                 </div>
             </div>

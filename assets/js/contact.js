@@ -70,14 +70,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = document.getElementById('email').value.trim();
             const phone = document.getElementById('phone') ? document.getElementById('phone').value.trim() : '';
             const inquiry = document.getElementById('interest') ? document.getElementById('interest').value : '';
-            const message = document.getElementById('message').value.trim();
+            const ndaChecked = document.getElementById('ndaRequired')?.checked;
+            const onPremChecked = document.getElementById('onPremisesPoc')?.checked;
+            let optionsText = '';
+            if (ndaChecked) optionsText += '\n- [요청] 사전 NDA(비밀유지계약) 체결 희망';
+            if (onPremChecked) optionsText += '\n- [요청] 온프레미스(망분리) 폐쇄망 PoC 지원 희망';
             
             // Construct payload to match empasy.io API requirements
             const payload = {
                 name: name,
                 email: email,
                 subject: '[Empasy Homepage Contact] ' + (company ? company + ' - ' + name : name),
-                content: 'Company: ' + company + '\nPhone: ' + phone + '\n\nInquiry: ' + inquiry + '\n\nMessage:\n' + message
+                content: 'Company: ' + company + '\nPhone: ' + phone + '\n\nInquiry: ' + inquiry + (optionsText ? '\n\nOptions:' + optionsText : '') + '\n\nMessage:\n' + message
             };
             
             try {
