@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SyncVerse - Central Multi-Agent Orchestrator & Control Tower | Empasy</title>
+    <meta name="description" content="SyncVerse is the central control tower orchestrating the entire SyncSeries agent federation (SyncEta, SyncBoot, SyncCMS, SyncCrawl, SyncLLM, SyncInsight). Experience autonomous operations powered by standard A2A/MCP protocols and enterprise guardrails.">
+    <meta name="keywords" content="SyncVerse, AI Orchestrator, Multi-Agent System, A2A Protocol, MCP, Model Context Protocol, Autonomous Operations, HITL, Kill-Switch, Empasy">
+    <meta property="og:title" content="SyncVerse - Multi-Agent Control Tower | Empasy">
+    <meta property="og:description" content="Enterprise multi-agent autonomous operations ecosystem unified under a single control tower.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Empasy">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        .page-header { padding: 150px 0 80px; text-align: center; position: relative; z-index: 10; }
+        .page-title { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; color: var(--text-primary); }
+        .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto; }
+        
+        .verse-hero-glow {
+            position: absolute;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(8, 145, 178, 0.18) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -120px; left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .layer-architecture-box {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem auto;
+            max-width: 1000px;
+            backdrop-filter: blur(12px);
+        }
+
+        .layer-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .layer-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+    </style>
+    <meta name="geo.region" content="KR-11" />
+    <meta name="geo.placename" content="Seoul" />
+    <meta name="geo.position" content="37.5665;126.9780" />
+    <meta name="ICBM" content="37.5665, 126.9780" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SyncVerse",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Linux, Cloud-Native, Kubernetes",
+      "description": "Enterprise Multi-Agent Orchestrator and Central Control Tower Platform",
+      "url": "https://empasy.io/en/solutions/sync-verse.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Empasy",
+        "url": "https://empasy.io/"
+      }
+    }
+    </script>
+    
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- SEO & AIO Tags -->
+    
+    
+    <!-- SEO & AIO Tags -->
+    <link rel="canonical" href="https://empasy.io/en/solutions/sync-verse.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-verse.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-verse.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-verse.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-verse.html" />
+    <meta property="og:url" content="https://empasy.io/en/solutions/sync-verse.html">
+  <script type="module" crossorigin src="/assets/en_solutions_sync-verse-B2x4wbPL.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-B-Whlujh.js">
+  <link rel="modulepreload" crossorigin href="/assets/i18n-d99J6wys.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-C4gOQkUi.css">
+</head>
+<body class="theme-verse">
+    <header class="glass-header">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="../../en/pages/index.html"><img src="/assets/logo-dark-nbvFoe-q.svg" alt="EMPASY" class="logo-img"></a>
+                </div>
+                <nav class="nav-links">
+        <!-- 1. Company Group -->
+        <div class="dropdown">
+            <a href="../../en/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+            <div class="dropdown-content">
+                <a href="../../en/pages/index.html#philosophy" data-i18n="nav.about">Philosophy</a>
+                <a href="../../en/pages/vision.html" data-i18n="nav.vision">Vision 2026</a>
+                <a href="../../en/pages/team.html" data-i18n="nav.team">Our Story</a>
+                <a href="../../ko/pages/careers.html">Careers</a>
+            </div>
+        </div>
+        
+        <!-- 2. Sync Series Group -->
+        <div class="dropdown">
+            <a href="../../en/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+            <div class="dropdown-content">
+                <a href="../../en/solutions/sync-verse.html" style="font-weight: 700; color: #38bdf8;">SyncVerse (Control Tower)</a>
+                <a href="../../en/solutions/sync-boot.html">SyncBoot</a>
+                <a href="../../en/solutions/sync-cms.html">SyncCMS</a>
+                <a href="../../en/solutions/sync-crawl.html">SyncCrawl</a>
+                <a href="../../en/solutions/sync-eta.html">SyncEta</a>
+                <a href="../../en/solutions/sync-llm.html">SyncLLM</a>
+                <a href="../../en/solutions/sync-insight.html">SyncInsight</a>
+            </div>
+        </div>
+        <!-- 3. Insights Group (NEW) -->
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
+            <div class="dropdown-content">
+                <a href="../../en/blog/blog.html">Tech Blog</a>
+                <a href="../../en/pages/faq.html">FAQ</a>
+                <a href="../../en/blog/case-study-finance.html">Case Studies</a>
+            </div>
+        </div>
+    
+        
+        <a href="../../en/pages/clients.html" data-i18n="nav.clients">Clients</a>
+        
+        <!-- Documentation link -->
+        <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Docs <i class="fas fa-external-link-alt" style="font-size:0.75em; margin-left:2px; opacity:0.7;"></i></a>
+    
+        <!-- Top-level SyncVerse link -->
+        <a href="../../en/solutions/sync-verse.html" style="color: var(--primary-color); font-weight: 700;">SyncVerse</a>
+    </nav>
+                <div class="nav-actions">
+                    <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
+                        <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:1rem; padding: 0.5rem; cursor: pointer; display:flex; align-items:center; gap:6px;">
+                            <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> EN</span>
+                        </button>
+                        <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
+                            <a href="../../ko/pages/index.html" data-lang="ko" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
+                            <a href="../../en/pages/index.html" data-lang="en" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
+                            <a href="../../ja/pages/index.html" data-lang="ja" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JP</a>
+                        </div>
+                    </div>
+                    <a href="../../en/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact">Contact</a>
+                </div>
+            </div>
+        </header>
+    <main class="container" style="position: relative; z-index: 10;">
+        <div class="verse-hero-glow"></div>
+        <div class="page-header fade-in-up" style="position: relative; overflow: hidden;">
+            <div class="container" style="position: relative; z-index: 10;">
+                <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(8, 145, 178, 0.3);">
+                    A2A Multi-Agent Orchestrator &amp; Central Tower
+                </span>
+                <h1 class="page-title">SyncVerse</h1>
+                <p class="page-subtitle">The enterprise AI operating system unifying domain agents through standard Agent-to-Agent protocols and safety guardrails.</p>
+                <div class="mt-4 flex-center" style="gap: 1rem; display: flex; justify-content: center; flex-wrap: wrap;">
+                    <a href="../pages/contact.html" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 30px;">Request Enterprise Demo</a>
+                    <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 30px; border-color: rgba(255,255,255,0.2);">Documentation <i class="fas fa-external-link-alt" style="font-size:0.8em; margin-left:6px;"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- VS Comparison Section -->
+        <section class="section pt-0 fade-in-up delay-1">
+            <div class="vs-container mb-4">
+                <div class="vs-box vs-legacy">
+                    <h4>Siloed System Operations</h4>
+                    <ul class="vs-list">
+                        <li>Fragmented toolchains delay incident response and cross-team communication</li>
+                        <li>High human overhead in manual review loops across QA, code, and deployments</li>
+                        <li>Security compliance and LLM token budget leaks across unmonitored shadow tools</li>
+                    </ul>
+                </div>
+                <div class="vs-box vs-agent">
+                    <h4>SyncVerse Autonomous Federation</h4>
+                    <ul class="vs-list">
+                        <li>Real-time event broker coordinating 7 domain agents via standard MCP &amp; A2A protocols</li>
+                        <li>Spec-First pipeline ensuring zero code hallucination and automated E2E verification</li>
+                        <li>One-click Emergency Kill-Switch and automated Redis semantic caching FinOps</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3-Layer Architecture -->
+            <div class="layer-architecture-box fade-in-up delay-1">
+                <div class="text-center mb-4">
+                    <span class="badge">3-Layer Multi-Agent Architecture</span>
+                    <h2 class="section-title" style="font-size: 2rem;">SyncSeries 3-Layer Collaborative Framework</h2>
+                    <p style="color: var(--text-secondary); max-width: 700px; margin: 0.5rem auto 0;">From environmental perception to autonomous execution and unified control.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <!-- Layer 1 -->
+                    <div class="layer-card" style="border-top: 3px solid #10b981;">
+                        <span style="color: #10b981; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Layer 1 &bull; Perception &amp; Quality</span>
+                        <h3 style="font-size: 1.2rem; color: #fff; margin: 0.6rem 0;">Perception &amp; QA</h3>
+                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">Dedicated to resilient web crawling, Vision-LLM element tracking, and self-healing testing.</p>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); margin: 0;">SyncCrawl</span>
+                            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); margin: 0;">SyncEta</span>
+                        </div>
+                    </div>
+
+                    <!-- Layer 2 -->
+                    <div class="layer-card" style="border-top: 3px solid #0891b2;">
+                        <span style="color: #38bdf8; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Layer 2 &bull; Creation &amp; Execution</span>
+                        <h3 style="font-size: 1.2rem; color: #fff; margin: 0.6rem 0;">Creation &amp; Execution</h3>
+                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">Automated microservices code scaffolding and multilingual content publishing.</p>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(8, 145, 178, 0.3); margin: 0;">SyncBoot</span>
+                            <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(8, 145, 178, 0.3); margin: 0;">SyncCMS</span>
+                        </div>
+                    </div>
+
+                    <!-- Layer 3 -->
+                    <div class="layer-card" style="border-top: 3px solid #f59e0b;">
+                        <span style="color: #f59e0b; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Layer 3 &bull; Intelligence &amp; Governance</span>
+                        <h3 style="font-size: 1.2rem; color: #fff; margin: 0.6rem 0;">Control Tower &amp; Intelligence</h3>
+                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">Enterprise orchestration, decision synthesis, and central FinOps guardrails.</p>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); margin: 0;">SyncVerse</span>
+                            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); margin: 0;">SyncInsight</span>
+                            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); margin: 0;">SyncLLM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Features -->
+            <div class="section-header text-center mt-5 mb-4">
+                <span class="badge">Core Capabilities</span>
+                <h2 class="section-title">Key Capabilities</h2>
+                <p class="section-desc">Battle-tested orchestration in mission-critical environments</p>
+            </div>
+
+            <div class="rich-features">
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">01</span>
+                    <h3>A2A Real-Time Event Broker</h3>
+                    <p>Asynchronous message exchange via standard MCP protocols, automatically triggering build, test, and deployment workflows upon event completion.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">02</span>
+                    <h3>Spec-First Triple Execution Tracks</h3>
+                    <p>Direct DB publishing for content, AST-based self-healing PRs, and PRD/spec approval tracks eliminate arbitrary code generation.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">03</span>
+                    <h3>Emergency Kill-Switch</h3>
+                    <p>Instant revocation of all agent write permissions into ReadOnly Lockdown in case of infrastructure anomalies or security alerts.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">04</span>
+                    <h3>Human-in-the-Loop (HITL)</h3>
+                    <p>Mandatory administrator sign-off for critical database migrations or cloud configuration changes to prevent hallucinations.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">05</span>
+                    <h3>Unified FinOps &amp; PII Guardrail</h3>
+                    <p>Daily token budget caps with automatic fallback routing and real-time masking of confidential numbers and credentials.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">06</span>
+                    <h3>Distributed Audit Traceability</h3>
+                    <p>Every tool call, LLM prompt, and return state is correlated with distributed Trace IDs, fulfilling regulatory compliance requirements.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enterprise Security Section -->
+        <section class="section" style="background: rgba(15, 23, 42, 0.5); border-top: 1px solid var(--border-color); border-radius: 16px; margin: 4rem 0;">
+            <div class="container text-center">
+                <span class="badge">Security &amp; Air-Gapped</span>
+                <h2 class="section-title" style="margin-top: 1rem;">Air-Gapped &amp; Dedicated VPC Deployments</h2>
+                <p style="color: var(--text-secondary); max-width: 700px; margin: 1rem auto 2.5rem;">Proprietary codebase and telemetry never leave your private network. Deploy 100% on-premises or in dedicated AWS/Azure/GCP VPCs.</p>
+                <a href="../pages/contact.html" class="btn btn-primary btn-lg">Schedule an Enterprise Consultation &rarr;</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer mt-4">
+            <div class="container text-center fade-in-up">
+                <h2 class="footer-title" data-i18n="footer.title">Accelerate your business with Empasy</h2>
+                <div class="mt-4">
+                    <a href="../../en/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p data-i18n="footer.copyright">© 2026 Empasy. All rights reserved.</p>
+            <!-- SEO Semantic IT Company Info -->
+            <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
+                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="https://github.com/DramaticCollaboration" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-book"></i> Documentation
+                    </a>
+                    <a href="../../ko/pages/careers.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-user-plus"></i> Careers
+                    </a>
+                    <a href="../../en/pages/privacy.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-shield-alt"></i> Privacy Policy
+                    </a>
+                </div>
+                <address style="font-style: normal; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.8;">
+                    <strong>(주)엠파시 (Empasy IT Corp.)</strong><br>
+                    Enterprise B2B Software and AI Agent (SyncSeries) Developer<br>
+                    <span>Inquiries: <a href="mailto:poh@empasy.com" style="color: inherit; text-decoration: underline;">poh@empasy.com</a> &nbsp;|&nbsp; Tech Support: <a href="tel:+82-507-1360-8169" style="color: inherit; text-decoration: none;">+82-507-1360-8169</a></span><br>
+                    Seoul, South Korea
+                </address>
+            </div>
+    
+            </div>
+        </footer>    
+</body>
+</html>

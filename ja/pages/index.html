@@ -20,7 +20,7 @@
       "description": "企画から運用まで人間の介入を最小限に抑えるAI-DLCベースの自律型運用エコシステムを提供します。",
       "sameAs": [
         "https://github.com/DramaticCollaboration",
-        "../../docs/index.html"
+        "https://doc.empasy.com/"
       ]
     }
     </script>
@@ -109,10 +109,10 @@
 
 
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <script type="module" crossorigin src="/assets/ja_pages_index-DLfV2ZsE.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/main-CDt7QHpx.js">
-  <link rel="modulepreload" crossorigin href="/assets/i18n-BDrWGuYc.js">
-  <link rel="stylesheet" crossorigin href="/assets/main-DGQg-eZZ.css">
+  <script type="module" crossorigin src="/assets/ja_pages_index-B2x4wbPL.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-B-Whlujh.js">
+  <link rel="modulepreload" crossorigin href="/assets/i18n-d99J6wys.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-C4gOQkUi.css">
 </head>
 
 <body>
@@ -138,7 +138,7 @@
                             <header class="glass-header">
                                     <div class="container nav-container">
                                         <div class="logo">
-                                            <a href="../../ja/pages/index.html"><img src="/assets/empasy-logo-Dx2jve9d.png" alt="EMPASY" class="logo-img"></a>
+                                            <a href="../../ja/pages/index.html"><img src="/assets/logo-dark-nbvFoe-q.svg" alt="EMPASY" class="logo-img"></a>
                                         </div>
                                         <nav class="nav-links">
                                 <!-- 1. Company Group -->
@@ -156,6 +156,7 @@
                                 <div class="dropdown">
                                     <a href="../../ja/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.8em; margin-left:4px;"></i></a>
                                     <div class="dropdown-content">
+                                        <a href="../../ja/solutions/sync-verse.html" style="font-weight: 700; color: #38bdf8;">SyncVerse (統合管制)</a>
                                         <a href="../../ja/solutions/sync-boot.html">SyncBoot</a>
                                         <a href="../../ja/solutions/sync-cms.html">SyncCMS</a>
                                         <a href="../../ja/solutions/sync-crawl.html">SyncCrawl</a>
@@ -180,8 +181,8 @@
                                 <!-- Documentation link -->
                                 <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Docs <i class="fas fa-external-link-alt" style="font-size:0.75em; margin-left:2px; opacity:0.7;"></i></a>
                             
-                                <!-- Top-level SyncEta link -->
-                                <a href="../../ja/solutions/sync-eta.html" style="color: var(--primary-color); font-weight: 700;">SyncEta</a>
+                                <!-- Top-level SyncVerse link -->
+                                <a href="../../ja/solutions/sync-verse.html" style="color: var(--primary-color); font-weight: 700;">SyncVerse</a>
                             </nav>
                                         <div class="nav-actions">
                                             <div class="dropdown lang-dropdown" style="margin-right: 0.5rem; display: flex; align-items: center;">
@@ -210,30 +211,42 @@
             </div>
 
             <!-- Interactive AI Terminal -->
-            <div class="interactive-terminal mt-4 fade-in-up delay-2" style="max-width: 800px; margin: 4rem auto 0; text-align: left; background: #0f172a; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); overflow: hidden; border: 1px solid #334155;">
-                <div style="background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; align-items: center; border-bottom: 1px solid #334155;">
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b;"></div>
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></div>
-                    <div style="margin-left: 1rem; font-family: monospace; color: #94a3b8; font-size: 0.85rem;">empasy-agent-cli</div>
-                    <button class="terminal-copy-btn" data-cmd='empasy eta run --target https://app.example.com --scenario "決済検証"' title="コマンドをコピー">
+            <div class="interactive-terminal mt-4 fade-in-up delay-2"
+                style="max-width: 840px; margin: 4rem auto 0; text-align: left; background: #0b1120; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); overflow: hidden; border: 1px solid #334155;">
+                <div
+                    style="background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; align-items: center; border-bottom: 1px solid #334155; justify-content: space-between;">
+                    <div style="display: flex; gap: 0.5rem; align-items: center;">
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></div>
+                        <div style="margin-left: 1rem; font-family: monospace; color: #94a3b8; font-size: 0.85rem;">
+                            empasy-agent-cli (A2A Simulator)</div>
+                    </div>
+                    <button class="terminal-copy-btn" data-cmd='empasy verse dispatch --workflow "order-flow" --mode "autonomous"' title="コマンドをコピー">
                         <i class="far fa-copy"></i> Copy
                     </button>
                 </div>
-                <div style="padding: 1.5rem; font-family: monospace; font-size: 0.95rem; line-height: 1.6; color: #e2e8f0;">
+                <!-- Agent Interactive Tabs -->
+                <div class="terminal-tabs">
+                    <button class="terminal-tab-btn active" data-agent="verse"><i class="fas fa-network-wired"></i> SyncVerse (管制タワー)</button>
+                    <button class="terminal-tab-btn" data-agent="eta"><i class="fas fa-robot"></i> SyncEta (自己治癒QA)</button>
+                    <button class="terminal-tab-btn" data-agent="boot"><i class="fas fa-server"></i> SyncBoot (MSA生成)</button>
+                    <button class="terminal-tab-btn" data-agent="cms"><i class="fas fa-layer-group"></i> SyncCMS (パブリッシャー)</button>
+                    <button class="terminal-tab-btn" data-agent="crawl"><i class="fas fa-spider"></i> SyncCrawl (知能スカウト)</button>
+                </div>
+                <div
+                    style="padding: 1.5rem; font-family: var(--font-mono); font-size: 0.95rem; line-height: 1.6; color: #e2e8f0; min-height: 200px;">
                     <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
                         <span style="color: #22c55e;">User&gt;</span>
-                        <span class="typewriter-text">"決済ページを作成して自動テストを実行して"</span>
+                        <span class="terminal-cmd-text" style="color: #f8fafc; font-weight: 600;">empasy verse dispatch --workflow "order-flow" --mode "autonomous"</span>
                     </div>
-                    <div class="terminal-response" style="opacity: 0; animation: fadeIn 0.5s ease 2.5s forwards;">
-                        <div style="color: #38bdf8;">[SyncCMS]</div>
-                        <div>&nbsp;↳ UIコンポーネントを組み立て中... <span>[完了]</span></div>
-                        <div>&nbsp;↳ 多言語(EN/JP)コンテキスト翻訳を適用... <span>[完了]</span></div>
-                    </div>
-                    <div class="terminal-response-2" style="opacity: 0; animation: fadeIn 0.5s ease 4s forwards; margin-top: 1rem;">
-                        <div style="color: #a78bfa;">[SyncEta]</div>
-                        <div>&nbsp;↳ 決済フロー検証シナリオを自律生成... <span>[完了]</span></div>
-                        <div>&nbsp;↳ Vision-LLM 視覚的探索とAIテスト自動化進行... <span style="color: #22c55e;">[PASS]</span></div>
+                    <div class="terminal-output-container">
+                        <div style="color: #38bdf8;">[SyncVerse Orchestrator]</div>
+                        <div>&nbsp;↳ A2A MessageHub initialized [Agents: SyncBoot, SyncEta, SyncLLM]</div>
+                        <div>&nbsp;↳ Dispatching distributed transaction... <span style="color: #22c55e;">[DISPATCHED]</span></div>
+                        <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncVerse Guardrail]</div>
+                        <div>&nbsp;↳ PII Masked &amp; Redis Semantic Cache HIT (Latency: 12ms) <span style="color: #22c55e;">[SAFE]</span></div>
+                        <div>&nbsp;↳ All agent SLAs verified &amp; Audit Trace ID: #trc-9842a <span style="color: #22c55e;">[100% HEALTHY]</span></div>
                     </div>
                 </div>
             </div>
@@ -327,7 +340,12 @@
                 </div>
                 <div class="fade-in-up delay-1 text-center" style="position: relative;">
                     <div style="width: 300px; height: 300px; background: linear-gradient(135deg, var(--primary-color), #2DD4BF); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 40px rgba(8, 145, 178, 0.2);">
-                        <span style="font-size: 4rem; color: white; font-weight: bold;">E</span>
+                        <svg viewBox="0 0 105 86.16" width="130" height="107" fill="white" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));" aria-label="Empasy Brand Symbol">
+                            <path d="M52.15,54.42c-1.13,0-2.19-.15-3.22-.46-5.61-1.68-11.4-2.52-17.19-2.52s-11.58.84-17.19,2.52c-1.03.31-2.08.46-3.22.46-6.25,0-11.34-5.09-11.34-11.34s5.19-11.34,11.34-11.34c1.13,0,2.19.15,3.22.46,5.61,1.68,11.4,2.52,17.19,2.52s11.58-.84,17.19-2.52c1.03-.31,2.08-.46,3.22-.46,6.15,0,11.34,5.19,11.34,11.34s-5.09,11.34-11.34,11.34Z"/>
+                            <circle cx="92.97" cy="43.08" r="11.34"/>
+                            <path d="M72.56,22.67c-1.13,0-2.18-.15-3.22-.46-5.61-1.68-11.4-2.52-17.19-2.52s-11.58.84-17.19,2.52c-1.03.31-2.08.46-3.22.46-6.15,0-11.34-5.19-11.34-11.34S25.6,0,31.74,0c1.13,0,2.19.15,3.22.46,5.61,1.68,11.4,2.52,17.19,2.52s11.58-.84,17.19-2.52c1.03-.31,2.08-.46,3.22-.46,6.15,0,11.34,5.19,11.34,11.34s-5.19,11.34-11.34,11.34Z"/>
+                            <path d="M72.56,86.16c-1.13,0-2.18-.15-3.22-.46-5.61-1.68-11.4-2.52-17.19-2.52s-11.58.84-17.19,2.52c-1.03.31-2.08.46-3.22.46-6.15,0-11.34-5.19-11.34-11.34s5.19-11.34,11.34-11.34c1.13,0,2.19.15,3.22.46,5.61,1.68,11.4,2.52,17.19,2.52s11.58-.84,17.19-2.52c1.03-.31,2.08-.46,3.22-.46,6.15,0,11.34,5.19,11.34,11.34s-5.19,11.34-11.34,11.34Z"/>
+                        </svg>
                     </div>
                     <div class="dynamic-orb orb-3"></div>
                 </div>
@@ -469,98 +487,239 @@
     </section>
 
     <!-- Solutions Section -->
+    <!-- Solutions Section -->
     <section id="solutions" class="section">
         <div class="container">
-            <div class="section-header fade-in-up text-center mb-4">
-                <h2 class="section-title">Sync Series</h2>
-                <p class="section-desc">ソフトウェア開発の全工程（End-to-End）においてビジネスのアジリティを最大化するソリューションエコシステム</p>
+            <div class="section-header fade-in-up text-center mb-5">
+                <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">Autonomous Operations Suite</span>
+                <h2 class="section-title mt-2">Sync Series</h2>
+                <p class="section-desc">ソフトウェア開発の全工程（End-to-End）においてビジネスのアジリティを最大化する自律運営ソリューションエコシステム</p>
             </div>
-            <div class="grid grid-2 solutions-grid">
-                <!-- SyncCMS -->
-                <div class="card surface-card glass-panel fade-in-up" style="padding: 2.5rem;">
-                    <div class="solution-header">
-                        <h3>SyncCMS</h3>
-                        <span class="badge" data-i18n="cms.badge" style="margin: 0.5rem 0;">Conversational Publisher Agent</span>
+            
+            <div class="solutions-grid">
+                <!-- 0. SyncVerse: Featured Control Tower (Flagship) -->
+                <div class="syncverse-featured-card fade-in-up">
+                    <div class="syncverse-grid-inner">
+                        <div>
+                            <div class="solution-card-header">
+                                <div class="agent-icon-box agent-icon-verse">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div class="agent-title-wrap">
+                                    <h3>SyncVerse</h3>
+                                    <span class="badge" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); width: fit-content;">AI Autonomous Operations Control Tower</span>
+                                </div>
+                            </div>
+                            <p style="color: var(--text-secondary); line-height: 1.8; margin: 1rem 0; font-size: 1.05rem;">
+                                グローバル標準 <strong>MCP(Model Context Protocol)</strong> をベースに、コーディング(Boot)、テスト(Eta)、データ収集(Crawl)、配信(CMS)、LLMゲートウェイ(LLM)、意思決定(Insight)の全エージェントをリアルタイムに指揮する <strong>Layer 1 自律統合管制塔</strong>です。
+                            </p>
+                            <ul class="feature-list" style="margin-top: 1rem;">
+                                <li><strong>Zero-Touch Swarm Orchestration</strong>: ドメインエージェント間の文脈連続性と状態の自律分散同期</li>
+                                <li><strong>Self-Healing Supervisor</strong>: パイプライン障害時の自動ロールバックおよび代替フロー自律注入</li>
+                                <li><strong>Unified Observability & HITL</strong>: 全社エージェント稼働追跡と管理者承認(Safe-Lock)ガードレール</li>
+                            </ul>
+                        </div>
+                        <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; border-left: 1px solid rgba(255, 255, 255, 0.08); padding-left: 2rem;">
+                            <div>
+                                <span style="font-size: 0.82rem; font-family: var(--font-mono); color: #38bdf8; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 0.8rem;">Core Architecture</span>
+                                <div class="tech-tag-group" style="margin: 0 0 1.5rem 0;">
+                                    <span class="tech-tag"><i class="fas fa-plug" style="color: #38bdf8; margin-right: 4px;"></i>MCP Protocol</span>
+                                    <span class="tech-tag"><i class="fas fa-comments" style="color: #818cf8; margin-right: 4px;"></i>A2A Message Hub</span>
+                                    <span class="tech-tag"><i class="fas fa-heartbeat" style="color: #34d399; margin-right: 4px;"></i>Supervisor Mesh</span>
+                                    <span class="tech-tag"><i class="fas fa-shield-alt" style="color: #fbbf24; margin-right: 4px;"></i>Zero-Touch Ops</span>
+                                </div>
+                                <p style="font-size: 0.92rem; color: #94a3b8; line-height: 1.6; margin: 0;">
+                                    分断された開発ツールを一つに統合し、企画から運用までのエンジニアリングボトルネックを解消します。
+                                </p>
+                            </div>
+                            <div style="margin-top: 1.5rem;">
+                                <a href="../../ja/solutions/sync-verse.html" class="btn btn-primary" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                                    <span>SyncVerse 統合管制塔を見る</span> <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="feature-list mt-4">
-                        <li data-i18n="cms.vs.agent.1">自然言語コマンドのみでレイアウトとコンテンツを同時生成。</li>
-                        <li data-i18n="cms.vs.agent.2">画面を見ながら「このボタンの色を変えて」と即座に修正。</li>
-                        <li data-i18n="cms.vs.agent.3">本文修正時、多言語語の多言語リソースを自動翻訳。</li>
-                    </ul>
-                    <a href="../../ja/solutions/sync-cms.html" class="btn btn-outline btn-sm mt-4">詳細を見る &rarr;</a>
                 </div>
 
-                <!-- SyncEta -->
-                <div class="card surface-card glass-panel fade-in-up delay-1" style="padding: 2.5rem;">
-                    <div class="solution-header">
-                        <h3>SyncEta</h3>
-                        <span class="badge" data-i18n="eta.badge" style="margin: 0.5rem 0;">Self-Healing QA Agent</span>
+                <!-- 1. SyncCMS -->
+                <div class="solution-card fade-in-up">
+                    <div>
+                        <div class="solution-card-header">
+                            <div class="agent-icon-box agent-icon-cms">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div class="agent-title-wrap">
+                                <h3>SyncCMS</h3>
+                                <span class="badge" data-i18n="cms.badge" style="background: rgba(8, 145, 178, 0.15); color: #22d3ee; border: 1px solid rgba(34, 211, 238, 0.3);">Conversational Publisher Agent</span>
+                            </div>
+                        </div>
+                        <ul class="feature-list mt-3">
+                            <li data-i18n="cms.vs.agent.1">自然言語コマンドのみでレイアウトとコンテンツを同時生成。</li>
+                            <li data-i18n="cms.vs.agent.2">画面を見ながら「このボタンの色を変えて」と即座に修正。</li>
+                            <li data-i18n="cms.vs.agent.3">本文修正時、多言語語の多言語リソースを自動翻訳。</li>
+                        </ul>
                     </div>
-                    <ul class="feature-list mt-4">
-                        <li data-i18n="eta.vs.agent.1">Vision LLMを活用した視覚的識別子の自己修復。</li>
-                        <li data-i18n="eta.vs.agent.2">「ユーザーの認知」に基づいた文脈的な画面崩壊の判断。</li>
-                        <li data-i18n="eta.vs.agent.3">エラー検出時の原因分析および解決コードの逆提案。</li>
-                    </ul>
-                    <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-                        <a href="../../ja/solutions/sync-eta.html" class="btn btn-outline btn-sm">詳細を見る &rarr;</a>
-                        <a href="../../ja/download_eta.html" class="btn btn-primary btn-sm" style="flex: 1;">ダウンロード</a>
+                    <div>
+                        <div class="tech-tag-group">
+                            <span class="tech-tag">Next.js / Vue</span>
+                            <span class="tech-tag">WYSIWYG Vision</span>
+                            <span class="tech-tag">Auto I18n</span>
+                        </div>
+                        <div class="solution-actions">
+                            <a href="../../ja/solutions/sync-cms.html" class="btn btn-outline btn-sm">詳細を見る &rarr;</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- SyncBoot -->
-                <div class="card surface-card glass-panel fade-in-up" style="padding: 2.5rem;">
-                    <div class="solution-header">
-                        <h3>SyncBoot</h3>
-                        <span class="badge" data-i18n="boot.badge" style="margin: 0.5rem 0;">Digital Engineer Agent</span>
+                <!-- 2. SyncEta -->
+                <div class="solution-card fade-in-up delay-1">
+                    <div>
+                        <div class="solution-card-header">
+                            <div class="agent-icon-box agent-icon-eta">
+                                <i class="fas fa-shield-halved"></i>
+                            </div>
+                            <div class="agent-title-wrap">
+                                <h3>SyncEta</h3>
+                                <span class="badge" data-i18n="eta.badge" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3);">Self-Healing QA Agent</span>
+                            </div>
+                        </div>
+                        <ul class="feature-list mt-3">
+                            <li data-i18n="eta.vs.agent.1">Vision LLMを活用した視覚的識別子の自己修復。</li>
+                            <li data-i18n="eta.vs.agent.2">「ユーザーの認知」に基づいた文脈的な画面崩壊の判断。</li>
+                            <li data-i18n="eta.vs.agent.3">エラー検出時の原因分析および解決コードの逆提案。</li>
+                        </ul>
                     </div>
-                    <ul class="feature-list mt-4">
-                        <li data-i18n="boot.vs.agent.1">自然言語コマンドのみでスキーマ生成とデータ操作。</li>
-                        <li data-i18n="boot.vs.agent.2">Sagaパターンベースのツールによる自律的な補償トランザクションの実行。</li>
-                        <li data-i18n="boot.vs.agent.3">エラー発生時にログを自動収集し、修復策を提案。</li>
-                    </ul>
-                    <a href="../../ja/solutions/sync-boot.html" class="btn btn-outline btn-sm mt-4">詳細を見る &rarr;</a>
+                    <div>
+                        <div class="tech-tag-group">
+                            <span class="tech-tag">Vision-LLM</span>
+                            <span class="tech-tag">Self-Healing</span>
+                            <span class="tech-tag">Regression AI</span>
+                        </div>
+                        <div class="solution-actions">
+                            <a href="../../ja/solutions/sync-eta.html" class="btn btn-outline btn-sm">詳細を見る &rarr;</a>
+                            <a href="../../ja/download_eta.html" class="btn btn-primary btn-sm"><i class="fas fa-download" style="margin-right: 4px;"></i>ダウンロード</a>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- SyncCrawl -->
-                <div class="card surface-card glass-panel fade-in-up delay-1" style="padding: 2.5rem;">
-                    <div class="solution-header">
-                        <h3>SyncCrawl</h3>
-                        <span class="badge" data-i18n="crawl.badge" style="margin: 0.5rem 0;">Intelligence Scout Agent</span>
+                <!-- 3. SyncBoot -->
+                <div class="solution-card fade-in-up">
+                    <div>
+                        <div class="solution-card-header">
+                            <div class="agent-icon-box agent-icon-boot">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <div class="agent-title-wrap">
+                                <h3>SyncBoot</h3>
+                                <span class="badge" data-i18n="boot.badge" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(96, 165, 250, 0.3);">Digital Engineer Agent</span>
+                            </div>
+                        </div>
+                        <ul class="feature-list mt-3">
+                            <li data-i18n="boot.vs.agent.1">自然言語コマンドのみでスキーマ生成とデータ操作。</li>
+                            <li data-i18n="boot.vs.agent.2">Sagaパターンベースのツールによる自律的な補償トランザクションの実行。</li>
+                            <li data-i18n="boot.vs.agent.3">エラー発生時にログを自動収集し、修復策を提案。</li>
+                        </ul>
                     </div>
-                    <ul class="feature-list mt-4">
-                        <li data-i18n="crawl.vs.agent.1">Vision-LLMがページの意味を推論し、収集ルールを自動補正。</li>
-                        <li data-i18n="crawl.vs.agent.2">プロキシローテーションと指紋改ざんによりアンチボットシステムを迂回。</li>
-                        <li data-i18n="crawl.vs.agent.3">データ汚染防止フィルタリングを経て高品質なJSONを抽出。</li>
-                    </ul>
-                    <a href="../../ja/solutions/sync-crawl.html" class="btn btn-outline btn-sm mt-4">詳細を見る &rarr;</a>
+                    <div>
+                        <div class="tech-tag-group">
+                            <span class="tech-tag">Cloud Native MSA</span>
+                            <span class="tech-tag">Saga Pattern</span>
+                            <span class="tech-tag">Auto-CRUD</span>
+                        </div>
+                        <div class="solution-actions">
+                            <a href="../../ja/solutions/sync-boot.html" class="btn btn-outline btn-sm">詳細を見る &rarr;</a>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- SyncLLM -->
-                <div class="card surface-card glass-panel fade-in-up" style="padding: 2.5rem;">
-                    <div class="solution-header">
-                        <h3>SyncLLM</h3>
-                        <span class="badge" style="margin: 0.5rem 0; background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">Enterprise AI Gateway & FinOps</span>
+                <!-- 4. SyncCrawl -->
+                <div class="solution-card fade-in-up delay-1">
+                    <div>
+                        <div class="solution-card-header">
+                            <div class="agent-icon-box agent-icon-crawl">
+                                <i class="fas fa-spider"></i>
+                            </div>
+                            <div class="agent-title-wrap">
+                                <h3>SyncCrawl</h3>
+                                <span class="badge" data-i18n="crawl.badge" style="background: rgba(20, 184, 166, 0.15); color: #2dd4bf; border: 1px solid rgba(45, 212, 191, 0.3);">Intelligence Scout Agent</span>
+                            </div>
+                        </div>
+                        <ul class="feature-list mt-3">
+                            <li data-i18n="crawl.vs.agent.1">Vision-LLMがページの意味を推論し、収集ルールを自動補正。</li>
+                            <li data-i18n="crawl.vs.agent.2">プロキシローテーションと指紋改ざんによりアンチボットシステムを迂回。</li>
+                            <li data-i18n="crawl.vs.agent.3">データ汚染防止フィルタリングを経て高品質なJSONを抽出。</li>
+                        </ul>
                     </div>
-                    <ul class="feature-list mt-4">
-                        <li>マルチLLM最適ルーティングおよび障害時の自動Fallback</li>
-                        <li>Redisセマンティックキャッシュによる反復クエリ費用40〜60%削減</li>
-                        <li>個人情報(PII)のリアルタイム自動マスキングと日次予算Cap統制</li>
-                    </ul>
-                    <a href="../../ja/solutions/sync-llm.html" class="btn btn-outline btn-sm mt-4">詳細を見る &rarr;</a>
+                    <div>
+                        <div class="tech-tag-group">
+                            <span class="tech-tag">Dynamic DOM</span>
+                            <span class="tech-tag">Anti-Bot Bypass</span>
+                            <span class="tech-tag">RAG Pipeline</span>
+                        </div>
+                        <div class="solution-actions">
+                            <a href="../../ja/solutions/sync-crawl.html" class="btn btn-outline btn-sm">詳細を見る &rarr;</a>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- SyncInsight -->
-                <div class="card surface-card glass-panel fade-in-up delay-1" style="padding: 2.5rem;">
-                    <div class="solution-header">
-                        <h3>SyncInsight</h3>
-                        <span class="badge" style="margin: 0.5rem 0; background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">Decision Intelligence Agent</span>
+                <!-- 5. SyncLLM -->
+                <div class="solution-card fade-in-up">
+                    <div>
+                        <div class="solution-card-header">
+                            <div class="agent-icon-box agent-icon-llm">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <div class="agent-title-wrap">
+                                <h3>SyncLLM</h3>
+                                <span class="badge" style="background: rgba(99, 102, 241, 0.15); color: #a5b4fc; border: 1px solid rgba(165, 180, 252, 0.3);">Enterprise AI Gateway & FinOps</span>
+                            </div>
+                        </div>
+                        <ul class="feature-list mt-3">
+                            <li>マルチLLM最適ルーティングおよび障害時の自動Fallback</li>
+                            <li>Redisセマンティックキャッシュによる反復クエリ費用40〜60%削減</li>
+                            <li>個人情報(PII)のリアルタイム自動マスキングと日次予算Cap統制</li>
+                        </ul>
                     </div>
-                    <ul class="feature-list mt-4">
-                        <li>社内テレメトリと市場データのリアルタイム統合ディープリサーチ</li>
-                        <li>エージェント間の多角的な仮説検証討論による施策導出</li>
-                        <li>管理者承認(HITL)に基づく安全なアクション自動実行およびロールバック</li>
-                    </ul>
-                    <a href="../../ja/solutions/sync-insight.html" class="btn btn-outline btn-sm mt-4">詳細を見る &rarr;</a>
+                    <div>
+                        <div class="tech-tag-group">
+                            <span class="tech-tag">Semantic Cache</span>
+                            <span class="tech-tag">PII Masking</span>
+                            <span class="tech-tag">Budget Cap</span>
+                        </div>
+                        <div class="solution-actions">
+                            <a href="../../ja/solutions/sync-llm.html" class="btn btn-outline btn-sm">詳細を見る &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. SyncInsight -->
+                <div class="solution-card fade-in-up delay-1">
+                    <div>
+                        <div class="solution-card-header">
+                            <div class="agent-icon-box agent-icon-insight">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="agent-title-wrap">
+                                <h3>SyncInsight</h3>
+                                <span class="badge" style="background: rgba(236, 72, 153, 0.15); color: #f472b6; border: 1px solid rgba(244, 114, 182, 0.3);">Decision Intelligence Agent</span>
+                            </div>
+                        </div>
+                        <ul class="feature-list mt-3">
+                            <li>社内テレメトリと市場データのリアルタイム統合ディープリサーチ</li>
+                            <li>エージェント間の多角的な仮説検証討論による施策導出</li>
+                            <li>管理者承認(HITL)に基づく安全なアクション自動実行およびロールバック</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="tech-tag-group">
+                            <span class="tech-tag">Deep Research</span>
+                            <span class="tech-tag">HITL Safe-Lock</span>
+                            <span class="tech-tag">Decision AI</span>
+                        </div>
+                        <div class="solution-actions">
+                            <a href="../../ja/solutions/sync-insight.html" class="btn btn-outline btn-sm">詳細を見る &rarr;</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
