@@ -1,0 +1,49 @@
+﻿# Empasy SyncSeries
+
+> Empasy is an enterprise AI integration platform providing an autonomous multi-agent ecosystem for digital transformation (DX) and AI Ops.
+
+## Overview
+Empasy SyncSeries unifies specialized AI agents under a single orchestration platform, SyncVerse. The ecosystem operates on open protocols including Anthropic Model Context Protocol (MCP) and Agent-to-Agent (A2A) distributed messaging. It enforces Spec-First Governance, Human-in-the-Loop (HITL) safety controls, and an Emergency Kill-Switch for complete enterprise reliability.
+
+## Core Products & Solutions
+
+### SyncVerse (Central Control Tower & Orchestrator)
+- URL: https://empasy.io/ko/solutions/sync-verse.html
+- Role: Real-time multi-agent orchestration, unified telemetry, dependency resolution, Emergency Kill-Switch, and enterprise governance.
+- Protocols: Model Context Protocol (MCP), Agent-to-Agent (A2A) messaging.
+
+### SyncEta (Vision-LLM QA & Test Automation)
+- URL: https://empasy.io/ko/solutions/sync-eta.html
+- Role: Autonomous web UI testing and visual regression testing using Vision-LLM models without brittle CSS/XPath selectors. Features dynamic DOM self-healing.
+- Integrations: Playwright, Selenium, Cypress wrapper.
+
+### SyncBoot (Microservices & Scaffolding Agent)
+- URL: https://empasy.io/ko/solutions/sync-boot.html
+- Role: Monolithic-to-microservice (MSA) transformation, Spring Boot backend scaffolding, DDL and CRUD API generation, Saga distributed compensation transactions.
+
+### SyncCMS (Autonomous Content & UI Agent)
+- URL: https://empasy.io/ko/solutions/sync-cms.html
+- Role: Natural-language-driven component layout, live preview visual editing, and real-time multilingual content synchronization (Korean, English, Japanese).
+
+### SyncCrawl (Intelligent Visual Extraction Agent)
+- URL: https://empasy.io/ko/solutions/sync-crawl.html
+- Role: Resilient data crawling utilizing visual layout understanding to survive markup changes and anti-bot protections; direct vector sink output (OpenSearch, Pinecone, Milvus) for RAG.
+
+### SyncInsight (On-Premise Decision Intelligence)
+- URL: https://empasy.io/ko/solutions/sync-insight.html
+- Role: Deep research fusing internal operational metrics with external market intelligence to deliver simulated, actionable decision plans with Human-in-the-Loop approval.
+
+### SyncLLM (FinOps Gateway & Token Governance)
+- URL: https://empasy.io/ko/solutions/sync-llm.html
+- Role: Multi-model intelligent routing (SLM to high-tier LLM), semantic caching, real-time PII masking, and departmental token budget controls cutting enterprise costs by up to 60%.
+
+## Security & Deployment
+- Deployments: 100% On-Premise, Air-Gapped isolated networks, dedicated AWS/Azure/GCP VPCs.
+- Local LLMs: Compatible with local runtimes including vLLM, Ollama, TGI, and OpenAI-compatible endpoints.
+- Compliance: Real-time PII redaction, immutable audit logging with distributed Trace IDs, Zero Data Leakage architecture.
+
+## Official Resources
+- Website: https://empasy.io
+- Documentation: https://doc.empasy.com
+- GitHub: https://github.com/DramaticCollaboration
+- Contact: contact@empasy.com

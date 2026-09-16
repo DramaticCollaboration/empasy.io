@@ -1,5 +1,17 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://empasy.io/sitemap.xml
+# AI Crawlers & LLM Agents
+User-agent: GPTBot
+Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://empasy.io/sitemap.xml
