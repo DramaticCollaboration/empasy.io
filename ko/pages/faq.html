@@ -1,17 +1,165 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>엠파시(Empasy) | 엔터프라이즈 AI 통합 플랫폼</title>
-    <meta name="description" content="디지털 전환(DX)과 AI 인프라를 한 번에 해결하는 B2B 기업용 AI 통합 아키텍처. 기획부터 운영까지 인간의 개입을 최소화하는 AI Ops 기반 생태계입니다.">
-    <meta name="keywords" content="엔터프라이즈 AI 에코시스템, 기업용 AI 통합 플랫폼, 디지털 전환 AI 아키텍처, 엠파시, Empasy, MSA CMS AI 연동 솔루션, 비즈니스 데이터 인텔리전스 패키지, SyncVerse, SyncBoot, SyncCMS, SyncInsight, SyncETA, B2B AI 솔루션">
-    <meta property="og:title" content="엠파시(Empasy) | 엔터프라이즈 AI 통합 플랫폼">
-    <meta property="og:description" content="디지털 전환(DX)과 AI 인프라를 한 번에 해결하는 B2B 기업용 AI 통합 아키텍처. 기획부터 운영까지 인간의 개입을 최소화하는 AI Ops 기반 생태계입니다.">
+    <title>자주 묻는 질문 (FAQ) | 엠파시(Empasy) 엔터프라이즈 AI 통합 플랫폼</title>
+    <meta name="description" content="엠파시(Empasy)의 AI 자율 운영 생태계(SyncVerse, SyncEta, SyncBoot, SyncCMS, SyncCrawl, SyncInsight, SyncLLM) 및 보안, 폐쇄망(Air-Gapped) 배포, 라이선스에 관한 자주 묻는 질문(FAQ)입니다.">
+    <meta name="keywords" content="엔터프라이즈 AI 에코시스템, 기업용 AI 통합 플랫폼, 자주 묻는 질문, FAQ, SyncVerse, SyncEta, SyncBoot, SyncCMS, SyncCrawl, SyncInsight, SyncLLM, 에어갭 배포, 온프레미스 AI">
+    <meta property="og:title" content="자주 묻는 질문 (FAQ) | 엠파시(Empasy)">
+    <meta property="og:description" content="엠파시 자율형 AI 에이전트 생태계와 엔터프라이즈 도입에 관한 핵심 질문과 답변을 확인하세요.">
     <meta property="og:type" content="website">
-    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "FAQPage",      "mainEntity": [        {          "@type": "Question",          "name": "자율형 AI 에이전트와 기존 자동화 도구(RPA)의 차이는 무엇인가요?",          "acceptedAnswer": {            "@type": "Answer",            "text": "기존 RPA는 사전에 정해진 룰과 스크립트 기반으로 동작하여 작은 UI 변경이나 시스템 업데이트에도 쉽게 오류가 발생합니다. 반면, 엠파시의 자율형 AI 에이전트는 Vision-LLM을 통해 사람처럼 화면의 요소를 시각적으로 인지하고 의미를 파악하므로, UI 구조가 완전히 변경되어도 스스로 대처하고 복구(Self-Healing)하는 능력을 갖추고 있습니다."          }        },        {          "@type": "Question",          "name": "SyncEta를 활용한 웹 UI 테스트 자동화는 동적 변화에 어떻게 대응하나요?",          "acceptedAnswer": {            "@type": "Answer",            "text": "SyncEta는 전통적인 CSS 선택자(Selector)나 XPath에 의존하지 않습니다. 비전 모델(Vision Model)이 화면 전체를 스캔하여 '로그인 버튼'이나 '장바구니 아이콘'을 인간과 동일한 방식으로 식별합니다. 따라서 개발팀이 DOM 구조를 변경하거나 A/B 테스트를 진행하더라도 테스트 스크립트 수정 없이 안정적인 QA 환경을 보장합니다."          }        },        {          "@type": "Question",          "name": "레거시 시스템을 클라우드로 전환할 때 SyncBoot가 어떻게 도움을 주나요?",          "acceptedAnswer": {            "@type": "Answer",            "text": "SyncBoot는 수십 년간 누적된 모놀리식 아키텍처의 의존성을 분석하고, 이를 독립적인 마이크로서비스(MSA) 형태로 분리하는 설계 및 초기 코드 스캐폴딩 작업을 자동화합니다. Saga 패턴 기반의 분산 트랜잭션 처리까지 AI가 제안하여, 마이그레이션에 소요되는 인력과 시간을 80% 이상 획기적으로 단축시킵니다."          }        },        {          "@type": "Question",          "name": "솔루션 도입에 소요되는 기간은 어느 정도인가요?",          "acceptedAnswer": {            "@type": "Answer",            "text": "도입할 에이전트 종류와 기업의 기존 인프라 환경에 따라 다르나, 일반적으로 PoC(개념 증명) 환경 구성에는 1~2주, 전체 시스템 연동 및 실제 운영 적용까지는 1개월 내외가 소요됩니다. 모든 과정은 엠파시의 전담 엔지니어 팀이 밀착 지원합니다."          }        },        {          "@type": "Question",          "name": "제품에 대한 상세한 개발자 문서나 API 명세는 어디서 볼 수 있나요?",          "acceptedAnswer": {            "@type": "Answer",            "text": "엠파시의 모든 솔루션 연동 가이드 및 API 명세, 기술 문서는 공식 문서 센터인 https://doc.empasy.com/ 에서 확인하실 수 있습니다. 또한 오픈소스 기여 및 플러그인은 공식 GitHub(DramaticCollaboration)를 통해 제공됩니다."          }        }      ]    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="../../assets/css/style.css">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.io/ko/pages/faq.html">    <meta property="og:url" content="https://empasy.io/ko/pages/faq.html">    <meta property="og:image" content="https://empasy.io/empasy-logo.png">    <meta name="robots" content="index, follow">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <style>        .faq-item {            border-bottom: 1px solid var(--border-color);            padding: 1.5rem 0;        }        .faq-question {            font-size: 1.25rem;            font-weight: 700;            color: var(--text-primary);            cursor: pointer;            display: flex;            justify-content: space-between;            align-items: center;        }        .faq-answer {            margin-top: 1rem;            color: var(--text-secondary);            line-height: 1.7;            display: none;        }        .faq-question.active + .faq-answer {            display: block;        }        .faq-icon {            color: var(--primary-color);            transition: transform 0.3s ease;        }        .faq-question.active .faq-icon {            transform: rotate(180deg);        }    </style><script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "FAQPage",  "mainEntity": [{    "@type": "Question",    "name": "What is SyncVerse?",    "acceptedAnswer": {      "@type": "Answer",      "text": "SyncVerse is an MCP-based AI orchestration platform."    }  }]}</script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/faq.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/faq.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/faq.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/faq.html" />
+    <meta property="og:url" content="https://empasy.io/ko/pages/faq.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Empasy">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="KR-11">
+    <meta name="geo.placename" content="Seoul">
+    <link rel="canonical" href="https://empasy.io/ko/pages/faq.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/faq.html">
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/faq.html">
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/faq.html">
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/faq.html">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "자율형 AI 에이전트와 기존 자동화 도구(RPA)의 차이는 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "기존 RPA는 사전에 정해진 규칙과 정적 셀렉터(Selector) 스크립트 기반으로 동작하여 작은 UI 변경이나 시스템 업데이트에도 쉽게 오류가 발생합니다. 반면 엠파시의 자율형 AI 에이전트는 Vision-LLM을 통해 사람처럼 화면 요소를 시각적으로 인지하고 의미를 파악하므로, UI 구조가 완전히 변경되어도 스스로 대처하고 복구(Self-Healing)하는 능력을 갖추고 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SyncVerse 중앙 관제탑과 에이전트 간(A2A) 협업은 어떻게 동작하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncVerse는 표준 Model Context Protocol(MCP)과 Agent-to-Agent(A2A) 통신 프로토콜을 기반으로 모든 하위 에이전트를 실시간 조율합니다. 기획(SyncCMS), 개발/스캐폴딩(SyncBoot), 데이터 수집(SyncCrawl), 검증(SyncEta), 의사결정 분석(SyncInsight), LLM 거버넌스(SyncLLM)가 하나의 유기적인 생태계로 작업 지시와 피드백을 주고받습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Spec-First 거버넌스와 Human-in-the-Loop(HITL) 원칙이란 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI 에이전트의 환각(Hallucination)이나 비인가 코드 생성을 방지하기 위해 엠파시는 'Spec-First 거버넌스'를 적용합니다. AI는 먼저 기획 명세서와 작업 명세를 선행 작성하고, 관리자의 디지털 서명 승인(Human-in-the-Loop)을 획득한 후에만 실제 코드 브랜치 생성 및 빌드를 실행합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "비상 상황 시 동작하는 Emergency Kill-Switch 기능은 어떤 원리인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "이상 트래픽, 비정상 토큰 급증, 모델 이상 징후 또는 보안 위협 감지 시 단 한 번의 조작이나 자동 임계치 감지로 전체 에이전트의 쓰기 권한을 즉시 박탈하고 시스템을 읽기 전용 격리(ReadOnly Lockdown)로 전환하여 기업 자산과 데이터를 안전하게 보호합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SyncEta를 활용한 웹 UI 테스트 자동화는 동적 변화에 어떻게 대응하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncEta는 전통적인 CSS 선택자(Selector)나 XPath에 의존하지 않습니다. 비전 모델(Vision Model)이 화면 전체를 스캔하여 '로그인 버튼'이나 '장바구니 아이콘'을 인간과 동일한 방식으로 식별합니다. 따라서 개발팀이 DOM 구조를 변경하거나 A/B 테스트를 진행하더라도 테스트 스크립트 수정 없이 안정적인 QA 환경을 보장합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SyncEta는 기존 Playwright, Selenium, Cypress 테스트 환경과 어떻게 통합되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "기존에 구축된 Playwright나 Selenium 테스트 파이프라인 상단에 드롭인(Drop-in) 래퍼 형태로 구동됩니다. 기존 테스트 코드를 전면 재작성할 필요 없이 비전 기반 자가 치유 레이어와 크로스 브라우저 회귀 테스트 기능만 즉시 확장할 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "레거시 시스템을 클라우드로 전환할 때 SyncBoot가 어떻게 도움을 주나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncBoot는 수십 년간 누적된 모놀리식 아키텍처의 의존성을 분석하고, 이를 독립적인 마이크로서비스(MSA) 형태로 분리하는 설계 및 초기 코드 스캐폴딩 작업을 자동화합니다. Saga 패턴 기반의 분산 트랜잭션 처리까지 AI가 제안하여, 마이그레이션에 소요되는 인력과 시간을 80% 이상 획기적으로 단축시킵니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SyncCMS는 비개발자(기획자/마케터)도 코드 없이 복잡한 콘텐츠와 화면을 관리할 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 기획자가 자연어 프롬프트와 실시간 라이브 프리뷰 화면을 통해 컴포넌트를 배치하고 콘텐츠를 편집할 수 있습니다. 원문 수정 시 연결된 다국어(한국어, 영어, 일본어) 리소스 번역이 백그라운드에서 자동 동기화되어 글로벌 배포 주기를 단축합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SyncCrawl은 웹사이트 구조 변경이나 안티봇 환경에서 어떻게 중단 없는 데이터 수집을 보장하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "시각적 렌더링 분석 엔진을 탑재하여 타깃 사이트의 마크업 구조가 변경되어도 시각적 레이아웃 기반으로 수집 룰을 실시간 자동 보정합니다. 또한 대규모 분산 워커 노드 스케일링과 RAG 표준 벡터 스토리지(OpenSearch, Pinecone, Milvus 등) 연동을 기본 지원합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "기존 대시보드(BI) 솔루션과 SyncInsight의 차이점은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "기존 BI는 과거 통계를 차트로 시각화하는 데 중점을 두지만, SyncInsight는 내외부 데이터를 결합해 원인을 분석하는 딥 리서치(Deep Research)를 수행하고, 에이전트 간 검토를 거쳐 관리자 승인 기반으로 실행 가능한 액션 플랜을 도출합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SyncLLM은 멀티 LLM 라우팅과 기업 FinOps(비용 절감)를 어떻게 실현하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "질의의 복잡도와 의도를 실시간 분석하여 단순 질의는 가벼운 SLM(Small Language Model)으로, 복잡한 추론은 고성능 LLM으로 지능형 라우팅합니다. 부서별/프로젝트별 일일 토큰 예산 Cap 설정, 실시간 PII 마스킹, 시맨틱 캐싱을 통해 LLM 운영 비용을 최대 60% 절감합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "금융, 공공, 대기업을 위한 온프레미스(On-Premise) 및 에어갭(Air-Gapped) 폐쇄망 배포가 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네. 엠파시의 모든 솔루션은 인터넷 접속이 완전히 차단된 사내 폐쇄망(Air-Gapped) 및 사내 VPC 환경에 컨테이너 기반으로 100% 격리 배포될 수 있습니다. vLLM, Ollama 등 로컬 오픈소스 LLM 런타임과 결합하여 기업의 핵심 기밀과 소스코드가 외부망으로 1바이트도 유출되지 않습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "기업 내 민감 데이터(주민등록번호, 금융정보 등)와 개인정보 보호(PII)는 어떻게 처리되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "내장된 개인정보 보호 필터가 주민번호, 연락처, 카드번호, 계좌번호 등을 사전에 감지하여 실시간 마스킹(가명화) 처리하며, 기업 요구사항에 따라 사내 구축형 로컬 LLM과의 연동을 지원하여 완벽한 데이터 주권을 보장합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "솔루션 도입에 소요되는 기간과 PoC(개념 증명) 절차는 어떻게 되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "도입할 에이전트 종류와 기업의 기존 인프라 환경에 따라 다르나, 일반적으로 PoC 환경 구성에는 1~2주, 전체 시스템 연동 및 실제 운영 적용까지는 1개월 내외가 소요됩니다. 모든 과정은 엠파시의 전담 엔지니어 팀이 밀착 지원합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "라이선스 정책 및 과금 모델은 어떻게 구성되어 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "기업의 규모와 배포 방식에 맞춰 클라우드 SaaS 구독형 및 온프레미스 영구/연간 엔터프라이즈 라이선스를 지원합니다. 노드 수 및 에이전트 모듈별 유연한 패키징이 가능하며, 세부 견적은 도입 규모 진단 상담을 통해 맞춤 제공됩니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "제품에 대한 상세한 개발자 문서나 API 명세는 어디서 볼 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "엠파시의 모든 솔루션 연동 가이드 및 API 명세, 기술 문서는 공식 문서 센터인 doc.empasy.com에서 확인하실 수 있습니다. 또한 오픈소스 기여 및 플러그인은 공식 GitHub(DramaticCollaboration)를 통해 제공됩니다."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -20,63 +168,224 @@
 
     <main class="container" style="padding-top: 150px; min-height: 80vh;">
         <div class="page-header text-center fade-in-up mb-4">
-            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Support & FAQ</span>
+            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Support &amp; FAQ</span>
             <h1 class="page-title" style="font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 1rem; color: var(--text-primary);">자주 묻는 질문</h1>
-            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">엠파시의 자율형 AI 에이전트에 대해 가장 많이 주시는 질문들을 모았습니다.</p>
+            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">엠파시의 AI 자율 운영 생태계와 엔터프라이즈 도입에 관해 자주 묻는 질문을 모았습니다.</p>
         </div>
-        
-        <section class="section" style="padding-top: 2rem;">
-            <div class="container" style="max-width: 800px;">
+
+        <!-- Category Filter Tabs -->
+        <div class="faq-category-tabs fade-in-up" role="tablist" aria-label="FAQ 카테고리 필터">
+            <button type="button" class="faq-category-btn active" data-category="all" role="tab" aria-selected="true">
+                전체보기 <span class="faq-badge-count">16</span>
+            </button>
+            <button type="button" class="faq-category-btn" data-category="core" role="tab" aria-selected="false">
+                핵심 아키텍처 &amp; SyncVerse <span class="faq-badge-count">4</span>
+            </button>
+            <button type="button" class="faq-category-btn" data-category="solutions" role="tab" aria-selected="false">
+                제품군별 솔루션 <span class="faq-badge-count">7</span>
+            </button>
+            <button type="button" class="faq-category-btn" data-category="enterprise" role="tab" aria-selected="false">
+                보안, 배포 &amp; 엔터프라이즈 <span class="faq-badge-count">5</span>
+            </button>
+        </div>
+
+        <section class="section" style="padding-top: 1rem;">
+            <div class="container" style="max-width: 850px;">
                 <div class="faq-container">
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>자율형 AI 에이전트와 기존 자동화 도구(RPA)의 차이는 무엇인가요?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            기존 RPA는 사전에 정해진 룰과 스크립트 기반으로 동작하여 작은 UI 변경이나 시스템 업데이트에도 쉽게 오류가 발생합니다. 반면, 엠파시의 자율형 AI 에이전트는 Vision-LLM을 통해 사람처럼 화면의 요소를 시각적으로 인지하고 의미를 파악하므로, UI 구조가 완전히 변경되어도 스스로 대처하고 복구(Self-Healing)하는 능력을 갖추고 있습니다.
-                        </div>
+
+                    <!-- Category: Core Architecture -->
+                    <div class="faq-item" data-category="core">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-core">핵심 아키텍처</span>
+                                <div style="margin-top: 0.2rem;">자율형 AI 에이전트와 기존 자동화 도구(RPA)의 차이는 무엇인가요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                기존 RPA는 사전에 정해진 규칙과 정적 셀렉터(Selector) 스크립트 기반으로 동작하여 작은 UI 변경이나 시스템 업데이트에도 쉽게 오류가 발생합니다. 반면 엠파시의 자율형 AI 에이전트는 Vision-LLM을 통해 사람처럼 화면 요소를 시각적으로 인지하고 의미를 파악하므로, UI 구조가 완전히 변경되어도 스스로 대처하고 복구(Self-Healing)하는 능력을 갖추고 있습니다.
+                            </div>
+                        </details>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>SyncEta를 활용한 웹 UI 테스트 자동화는 동적 변화에 어떻게 대응하나요?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            SyncEta는 전통적인 CSS 선택자(Selector)나 XPath에 의존하지 않습니다. 비전 모델(Vision Model)이 화면 전체를 스캔하여 '로그인 버튼'이나 '장바구니 아이콘'을 인간과 동일한 방식으로 식별합니다. 따라서 개발팀이 DOM 구조를 변경하거나 A/B 테스트를 진행하더라도 테스트 스크립트 수정 없이 안정적인 QA 환경을 보장합니다.
-                        </div>
+                    <div class="faq-item" data-category="core">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-core">핵심 아키텍처</span>
+                                <div style="margin-top: 0.2rem;">SyncVerse 중앙 관제탑과 에이전트 간(A2A) 협업은 어떻게 동작하나요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                SyncVerse는 표준 Model Context Protocol(MCP)과 Agent-to-Agent(A2A) 통신 프로토콜을 기반으로 모든 하위 에이전트를 실시간 조율합니다. 기획(SyncCMS), 개발/스캐폴딩(SyncBoot), 데이터 수집(SyncCrawl), 검증(SyncEta), 의사결정 분석(SyncInsight), LLM 거버넌스(SyncLLM)가 하나의 유기적인 생태계로 작업 지시와 피드백을 주고받습니다.
+                            </div>
+                        </details>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>레거시 시스템을 클라우드로 전환할 때 SyncBoot가 어떻게 도움을 주나요?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            SyncBoot는 수십 년간 누적된 모놀리식 아키텍처의 의존성을 분석하고, 이를 독립적인 마이크로서비스(MSA) 형태로 분리하는 설계 및 초기 코드 스캐폴딩 작업을 자동화합니다. Saga 패턴 기반의 분산 트랜잭션 처리까지 AI가 제안하여, 마이그레이션에 소요되는 인력과 시간을 80% 이상 획기적으로 단축시킵니다.
-                        </div>
+                    <div class="faq-item" data-category="core">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-core">핵심 아키텍처</span>
+                                <div style="margin-top: 0.2rem;">Spec-First 거버넌스와 Human-in-the-Loop(HITL) 원칙이란 무엇인가요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                AI 에이전트의 환각(Hallucination)이나 비인가 코드 생성을 방지하기 위해 엠파시는 'Spec-First 거버넌스'를 적용합니다. AI는 먼저 기획 명세서와 작업 명세를 선행 작성하고, 관리자의 디지털 서명 승인(Human-in-the-Loop)을 획득한 후에만 실제 코드 브랜치 생성 및 빌드를 실행합니다.
+                            </div>
+                        </details>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>솔루션 도입에 소요되는 기간은 어느 정도인가요?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            도입할 에이전트 종류와 기업의 기존 인프라 환경에 따라 다르나, 일반적으로 PoC(개념 증명) 환경 구성에는 1~2주, 전체 시스템 연동 및 실제 운영 적용까지는 1개월 내외가 소요됩니다. 모든 과정은 엠파시의 전담 엔지니어 팀이 밀착 지원합니다.
-                        </div>
+                    <div class="faq-item" data-category="core">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-core">핵심 아키텍처</span>
+                                <div style="margin-top: 0.2rem;">비상 상황 시 동작하는 Emergency Kill-Switch 기능은 어떤 원리인가요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                이상 트래픽, 비정상 토큰 급증, 모델 이상 징후 또는 보안 위협 감지 시 단 한 번의 조작이나 자동 임계치 감지로 전체 에이전트의 쓰기 권한을 즉시 박탈하고 시스템을 읽기 전용 격리(ReadOnly Lockdown)로 전환하여 기업 자산과 데이터를 안전하게 보호합니다.
+                            </div>
+                        </details>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>제품에 대한 상세한 개발자 문서나 API 명세는 어디서 볼 수 있나요?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            엠파시의 모든 솔루션 연동 가이드 및 API 명세, 기술 문서는 공식 문서 센터인 <a href="https://doc.empasy.com/" target="_blank" style="color:var(--primary-color); text-decoration:underline;">doc.empasy.com</a>에서 확인하실 수 있습니다. 또한 오픈소스 기여 및 플러그인은 공식 GitHub(DramaticCollaboration)를 통해 제공됩니다.
-                        </div>
+                    <!-- Category: Solutions -->
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">SyncEta (QA)</span>
+                                <div style="margin-top: 0.2rem;">SyncEta를 활용한 웹 UI 테스트 자동화는 동적 변화에 어떻게 대응하나요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                SyncEta는 전통적인 CSS 선택자(Selector)나 XPath에 의존하지 않습니다. 비전 모델(Vision Model)이 화면 전체를 스캔하여 '로그인 버튼'이나 '장바구니 아이콘'을 인간과 동일한 방식으로 식별합니다. 따라서 개발팀이 DOM 구조를 변경하거나 A/B 테스트를 진행하더라도 테스트 스크립트 수정 없이 안정적인 QA 환경을 보장합니다.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">SyncEta (QA)</span>
+                                <div style="margin-top: 0.2rem;">SyncEta는 기존 Playwright, Selenium, Cypress 테스트 환경과 어떻게 통합되나요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                기존에 구축된 Playwright나 Selenium 테스트 파이프라인 상단에 드롭인(Drop-in) 래퍼 형태로 구동됩니다. 기존 테스트 코드를 전면 재작성할 필요 없이 비전 기반 자가 치유 레이어와 크로스 브라우저 회귀 테스트 기능만 즉시 확장할 수 있습니다.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">SyncBoot (개발)</span>
+                                <div style="margin-top: 0.2rem;">레거시 시스템을 클라우드로 전환할 때 SyncBoot가 어떻게 도움을 주나요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                SyncBoot는 수십 년간 누적된 모놀리식 아키텍처의 의존성을 분석하고, 이를 독립적인 마이크로서비스(MSA) 형태로 분리하는 설계 및 초기 코드 스캐폴딩 작업을 자동화합니다. Saga 패턴 기반의 분산 트랜잭션 처리까지 AI가 제안하여, 마이그레이션에 소요되는 인력과 시간을 80% 이상 획기적으로 단축시킵니다.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">SyncCMS (콘텐츠)</span>
+                                <div style="margin-top: 0.2rem;">SyncCMS는 비개발자(기획자/마케터)도 코드 없이 복잡한 콘텐츠와 화면을 관리할 수 있나요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                네, 기획자가 자연어 프롬프트와 실시간 라이브 프리뷰 화면을 통해 컴포넌트를 배치하고 콘텐츠를 편집할 수 있습니다. 원문 수정 시 연결된 다국어(한국어, 영어, 일본어) 리소스 번역이 백그라운드에서 자동 동기화되어 글로벌 배포 주기를 단축합니다.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">SyncCrawl (수집)</span>
+                                <div style="margin-top: 0.2rem;">SyncCrawl은 웹사이트 구조 변경이나 안티봇 환경에서 어떻게 중단 없는 데이터 수집을 보장하나요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                시각적 렌더링 분석 엔진을 탑재하여 타깃 사이트의 마크업 구조가 변경되어도 시각적 레이아웃 기반으로 수집 룰을 실시간 자동 보정합니다. 또한 대규모 분산 워커 노드 스케일링과 RAG 표준 벡터 스토리지(OpenSearch, Pinecone, Milvus 등) 연동을 기본 지원합니다.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">SyncInsight (인텔리전스)</span>
+                                <div style="margin-top: 0.2rem;">기존 대시보드(BI) 솔루션과 SyncInsight의 차이점은 무엇인가요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                기존 BI는 과거 통계를 차트로 시각화하는 데 중점을 두지만, SyncInsight는 내외부 데이터를 결합해 원인을 분석하는 딥 리서치(Deep Research)를 수행하고, 에이전트 간 검토를 거쳐 관리자 승인 기반으로 실행 가능한 액션 플랜을 도출합니다.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">SyncLLM (거버넌스)</span>
+                                <div style="margin-top: 0.2rem;">SyncLLM은 멀티 LLM 라우팅과 기업 FinOps(비용 절감)를 어떻게 실현하나요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                질의의 복잡도와 의도를 실시간 분석하여 단순 질의는 가벼운 SLM(Small Language Model)으로, 복잡한 추론은 고성능 LLM으로 지능형 라우팅합니다. 부서별/프로젝트별 일일 토큰 예산 Cap 설정, 실시간 PII 마스킹, 시맨틱 캐싱을 통해 LLM 운영 비용을 최대 60% 절감합니다.
+                            </div>
+                        </details>
+                    </div>
+
+                    <!-- Category: Enterprise & Security -->
+                    <div class="faq-item" data-category="enterprise">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-enterprise">보안 및 배포</span>
+                                <div style="margin-top: 0.2rem;">금융, 공공, 대기업을 위한 온프레미스(On-Premise) 및 에어갭(Air-Gapped) 폐쇄망 배포가 가능한가요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                네. 엠파시의 모든 솔루션은 인터넷 접속이 완전히 차단된 사내 폐쇄망(Air-Gapped) 및 사내 VPC 환경에 컨테이너 기반으로 100% 격리 배포될 수 있습니다. vLLM, Ollama 등 로컬 오픈소스 LLM 런타임과 결합하여 기업의 핵심 기밀과 소스코드가 외부망으로 1바이트도 유출되지 않습니다.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="enterprise">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-enterprise">보안 및 배포</span>
+                                <div style="margin-top: 0.2rem;">기업 내 민감 데이터(주민등록번호, 금융정보 등)와 개인정보 보호(PII)는 어떻게 처리되나요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                내장된 개인정보 보호 필터가 주민번호, 연락처, 카드번호, 계좌번호 등을 사전에 감지하여 실시간 마스킹(가명화) 처리하며, 기업 요구사항에 따라 사내 구축형 로컬 LLM과의 연동을 지원하여 완벽한 데이터 주권을 보장합니다.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="enterprise">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-enterprise">엔터프라이즈 도입</span>
+                                <div style="margin-top: 0.2rem;">솔루션 도입에 소요되는 기간과 PoC(개념 증명) 절차는 어떻게 되나요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                도입할 에이전트 종류와 기업의 기존 인프라 환경에 따라 다르나, 일반적으로 PoC 환경 구성에는 1~2주, 전체 시스템 연동 및 실제 운영 적용까지는 1개월 내외가 소요됩니다. 모든 과정은 엠파시의 전담 엔지니어 팀이 밀착 지원합니다.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="enterprise">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-enterprise">라이선스</span>
+                                <div style="margin-top: 0.2rem;">라이선스 정책 및 과금 모델은 어떻게 구성되어 있나요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                기업의 규모와 배포 방식에 맞춰 클라우드 SaaS 구독형 및 온프레미스 영구/연간 엔터프라이즈 라이선스를 지원합니다. 노드 수 및 에이전트 모듈별 유연한 패키징이 가능하며, 세부 견적은 도입 규모 진단 상담을 통해 맞춤 제공됩니다.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="enterprise">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-enterprise">지원 및 문서</span>
+                                <div style="margin-top: 0.2rem;">제품에 대한 상세한 개발자 문서나 API 명세는 어디서 볼 수 있나요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                엠파시의 모든 솔루션 연동 가이드 및 API 명세, 기술 문서는 공식 문서 센터인 <a href="https://doc.empasy.com/" target="_blank" style="color:var(--primary-color); text-decoration:underline;">doc.empasy.com</a>에서 확인하실 수 있습니다. 또한 오픈소스 기여 및 플러그인은 공식 GitHub(DramaticCollaboration)를 통해 제공됩니다.
+                            </div>
+                        </details>
                     </div>
 
                 </div>
@@ -91,12 +400,33 @@
     <script type="module" src="/assets/js/i18n.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
     <script>
-        // FAQ Accordion Script
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                question.classList.toggle('active');
+        // Category Filter Tab Logic
+        (function initFaqTabs() {
+            const tabs = document.querySelectorAll('.faq-category-btn');
+            const items = document.querySelectorAll('.faq-item');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => {
+                        t.classList.remove('active');
+                        t.setAttribute('aria-selected', 'false');
+                    });
+                    tab.classList.add('active');
+                    tab.setAttribute('aria-selected', 'true');
+
+                    const category = tab.getAttribute('data-category');
+                    items.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.classList.remove('is-hidden');
+                            item.style.display = '';
+                        } else {
+                            item.classList.add('is-hidden');
+                            item.style.display = 'none';
+                        }
+                    });
+                });
             });
-        });
+        })();
     </script>
 </body>
 </html>

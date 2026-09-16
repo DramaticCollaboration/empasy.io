@@ -1,17 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Empasy | Enterprise AI Integration Platform</title>
-    <meta name="description" content="B2B Enterprise AI Integration Architecture solving DX and AI Infrastructure simultaneously.">
-    <meta name="keywords" content="Enterprise AI Ecosystem, Enterprise AI Integration Platform, DX AI Architecture, Empasy, MSA CMS AI Integration, Business Data Intelligence, SyncVerse, SyncBoot, SyncCMS, SyncInsight, SyncETA, B2B AI Solution">
-    <meta property="og:title" content="Empasy | Enterprise AI Integration Platform">
-    <meta property="og:description" content="B2B Enterprise AI Integration Architecture solving DX and AI Infrastructure simultaneously.">
+    <title>Frequently Asked Questions (FAQ) | Empasy Enterprise AI Platform</title>
+    <meta name="description" content="Frequently asked questions about Empasy's autonomous AI ecosystem (SyncVerse, SyncEta, SyncBoot, SyncCMS, SyncCrawl, SyncInsight, SyncLLM), security, air-gapped deployment, and licensing.">
+    <meta name="keywords" content="Enterprise AI Ecosystem, Enterprise AI Platform, FAQ, Frequently Asked Questions, SyncVerse, SyncEta, SyncBoot, SyncCMS, SyncCrawl, SyncInsight, SyncLLM, Air-Gapped Deployment, On-Premise AI">
+    <meta property="og:title" content="Frequently Asked Questions (FAQ) | Empasy">
+    <meta property="og:description" content="Explore key answers regarding Empasy's autonomous multi-agent ecosystem and enterprise deployment.">
     <meta property="og:type" content="website">
-    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "FAQPage",      "mainEntity": [        {          "@type": "Question",          "name": "What is the difference between autonomous AI agents and traditional automation tools (RPA)?",          "acceptedAnswer": {            "@type": "Answer",            "text": "Traditional RPA operates based on predefined rules and scripts, easily causing errors even with minor UI changes or system updates. In contrast, Empasy's autonomous AI agent visually recognizes and understands screen elements like a human through Vision-LLM, enabling it to cope and recover (Self-Healing) on its own even if the UI structure completely changes."          }        },        {          "@type": "Question",          "name": "How does web UI test automation using SyncEta respond to dynamic changes?",          "acceptedAnswer": {            "@type": "Answer",            "text": "SyncEta does not rely on traditional CSS Selectors or XPath. The Vision Model scans the entire screen to identify elements like 'login button' or 'cart icon' in the same way a human does. Therefore, even if the development team changes the DOM structure or conducts A/B testing, it guarantees a stable QA environment without modifying test scripts."          }        },        {          "@type": "Question",          "name": "How does SyncBoot help when migrating legacy systems to the cloud?",          "acceptedAnswer": {            "@type": "Answer",            "text": "SyncBoot analyzes the dependencies of monolithic architectures accumulated over decades and automates the design and initial code scaffolding to separate them into independent Microservices (MSA). AI even proposes distributed transaction processing based on the Saga pattern, dramatically reducing the manpower and time required for migration by over 80%."          }        },        {          "@type": "Question",          "name": "How long does it take to implement the solution?",          "acceptedAnswer": {            "@type": "Answer",            "text": "It varies depending on the type of agent to be introduced and the company's existing infrastructure, but typically it takes 1-2 weeks to set up a PoC (Proof of Concept) environment, and about a month for full system integration and actual operational deployment. Empasy's dedicated engineering team provides close support throughout the entire process."          }        },        {          "@type": "Question",          "name": "Where can I find detailed developer documentation or API specifications for the products?",          "acceptedAnswer": {            "@type": "Answer",            "text": "All integration guides, API specifications, and technical documentation for Empasy's solutions can be found at the official document center, https://doc.empasy.com/. Also, open-source contributions and plugins are available through our official GitHub (DramaticCollaboration)."          }        }      ]    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="../../assets/css/style.css">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <!-- SEO & AIO Tags -->    <link rel="canonical" href="https://empasy.io/en/pages/faq.html">    <meta property="og:url" content="https://empasy.io/en/pages/faq.html">    <meta property="og:image" content="https://empasy.io/empasy-logo.png">    <meta name="robots" content="index, follow">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <style>        .faq-item {            border-bottom: 1px solid var(--border-color);            padding: 1.5rem 0;        }        .faq-question {            font-size: 1.25rem;            font-weight: 700;            color: var(--text-primary);            cursor: pointer;            display: flex;            justify-content: space-between;            align-items: center;        }        .faq-answer {            margin-top: 1rem;            color: var(--text-secondary);            line-height: 1.7;            display: none;        }        .faq-question.active + .faq-answer {            display: block;        }        .faq-icon {            color: var(--primary-color);            transition: transform 0.3s ease;        }        .faq-question.active .faq-icon {            transform: rotate(180deg);        }    </style><script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "FAQPage",  "mainEntity": [{    "@type": "Question",    "name": "What is SyncVerse?",    "acceptedAnswer": {      "@type": "Answer",      "text": "SyncVerse is an MCP-based AI orchestration platform."    }  }]}</script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/faq.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/faq.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/faq.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/faq.html" />
+    <meta property="og:url" content="https://empasy.io/en/pages/faq.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Empasy">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="KR-11">
+    <meta name="geo.placename" content="Seoul">
+    <link rel="canonical" href="https://empasy.io/en/pages/faq.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/faq.html">
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/faq.html">
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/faq.html">
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/faq.html">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between autonomous AI agents and traditional automation tools (RPA)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Traditional RPA operates based on predefined static rules and selector scripts, easily causing failures with minor UI changes or system updates. In contrast, Empasy's autonomous AI agent visually recognizes and understands screen elements like a human through Vision-LLM, enabling it to cope and recover (Self-Healing) on its own even if the UI structure completely changes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the SyncVerse Central Control Tower and Agent-to-Agent (A2A) collaboration work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncVerse orchestrates all specialized agents in real time based on standard Model Context Protocol (MCP) and Agent-to-Agent (A2A) communication protocols. Planning (SyncCMS), Development/Scaffolding (SyncBoot), Web Extraction (SyncCrawl), Testing (SyncEta), Decision Intelligence (SyncInsight), and LLM Governance (SyncLLM) collaborate seamlessly in a unified ecosystem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Spec-First Governance and Human-in-the-Loop (HITL) principles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To eliminate hallucination risks and unauthorized code modifications, Empasy enforces Spec-First Governance. AI agents must first generate verifiable specification documents and test plans, and require cryptographic administrator approval (Human-in-the-Loop) before creating Git branches or executing build pipelines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Emergency Kill-Switch function work during critical anomalies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Upon detecting anomalous traffic, abnormal token surges, model degradation, or unauthorized access, a single administrator action or automated threshold alert instantly revokes write permissions across all agents and locks the system into ReadOnly Lockdown, safeguarding infrastructure and proprietary data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does web UI test automation using SyncEta respond to dynamic changes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncEta does not rely on fragile CSS Selectors or XPath. Its Vision-LLM model scans the entire screen layout to identify elements like login buttons or shopping cart icons just like a human tester. Therefore, even if the development team changes the DOM hierarchy or runs A/B experiments, QA tests execute reliably without manual script revisions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does SyncEta integrate with existing Playwright, Selenium, or Cypress environments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncEta integrates as a drop-in wrapper on top of your existing Playwright or Selenium test pipelines. You do not need to rewrite existing test suites; you can immediately leverage vision-powered self-healing regression testing across both desktop and mobile viewports."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does SyncBoot assist in migrating monolithic legacy systems to cloud-native microservices (MSA)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncBoot deeply analyzes legacy monolithic codebases, data models, and service dependencies to architect decoupled microservice boundaries. It automates Spring Boot entity generation, CRUD APIs, DDL scripts, and even generates Saga pattern distributed compensation transactions, accelerating modernization timelines by over 80%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can non-developers (planners and marketers) manage complex content without code using SyncCMS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. SyncCMS provides an intuitive visual interface where non-technical planners can arrange components and edit structured content via natural language prompts and live previews. When content is updated, multilingual translations (Korean, English, Japanese) are automatically synchronized in the background."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does SyncCrawl ensure uninterrupted data extraction amidst anti-bot defenses and layout changes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Equipped with a visual rendering intelligence engine, SyncCrawl dynamically recalibrates crawling rules based on visual layout cues when target website markup changes. It natively supports distributed worker node autoscaling and standard vector database sinks (OpenSearch, Pinecone, Milvus) for enterprise RAG pipelines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does SyncInsight differ from traditional BI dashboards, and how does it support decision-making?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While traditional BI simply aggregates past data into charts, SyncInsight autonomously conducts Deep Research by correlating internal metrics with external market signals. Through multi-agent cross-review and simulation, it synthesizes concrete, executable action plans requiring administrator sign-off."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does SyncLLM achieve multi-LLM intelligent routing and enterprise FinOps cost optimization?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncLLM analyzes query complexity and intent in real time, routing simple queries to lightweight SLMs and complex reasoning tasks to high-tier LLMs. With granular token budget caps, real-time PII masking, and semantic caching, it cuts enterprise LLM operational costs by up to 60%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the platform be deployed on-premise and in air-gapped secure networks for finance and government?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All Empasy solutions can be deployed 100% isolated in containerized on-premise environments, private VPCs, and completely air-gapped networks without external internet access. When combined with local open-source LLM runtimes (vLLM, Ollama), not a single byte of proprietary code or confidential data leaves your perimeter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is sensitive internal data (PII, financial numbers) protected during AI operations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Built-in data protection filters proactively detect resident registration numbers, phone numbers, payment card numbers, and bank account information, applying real-time pseudonymization and masking before processing, ensuring complete compliance and data sovereignty."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the typical deployment timeline and PoC (Proof of Concept) process?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Setup time depends on the chosen agents and existing infrastructure, but typically a PoC sandbox environment is established within 1 to 2 weeks, with full system integration and production deployment achieved in approximately one month, closely supported by our dedicated engineering team."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What licensing options and pricing models are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Empasy offers flexible cloud SaaS subscriptions as well as perpetual and annual on-premise enterprise licenses. Packaging is tailored based on node capacity and required agent modules, with customized quotes provided after an initial architecture consultation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can developers find API documentation, integration guides, and technical support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Comprehensive developer guides, Model Context Protocol (MCP) specifications, and REST API docs are available at doc.empasy.com. Open-source contributions and plugins are hosted on our official GitHub (DramaticCollaboration), and enterprise support is accessible via our contact page and contact@empasy.com."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -20,63 +168,224 @@
 
     <main class="container" style="padding-top: 150px; min-height: 80vh;">
         <div class="page-header text-center fade-in-up mb-4">
-            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Support & FAQ</span>
+            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Support &amp; FAQ</span>
             <h1 class="page-title" style="font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 1rem; color: var(--text-primary);">Frequently Asked Questions</h1>
-            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">We've gathered the most frequently asked questions about Empasy's autonomous AI agents.</p>
+            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">Explore answers to common questions about Empasy's autonomous AI ecosystem and enterprise integration.</p>
         </div>
-        
-        <section class="section" style="padding-top: 2rem;">
-            <div class="container" style="max-width: 800px;">
+
+        <!-- Category Filter Tabs -->
+        <div class="faq-category-tabs fade-in-up" role="tablist" aria-label="FAQ Category Filter">
+            <button type="button" class="faq-category-btn active" data-category="all" role="tab" aria-selected="true">
+                All Questions <span class="faq-badge-count">16</span>
+            </button>
+            <button type="button" class="faq-category-btn" data-category="core" role="tab" aria-selected="false">
+                Core Architecture &amp; SyncVerse <span class="faq-badge-count">4</span>
+            </button>
+            <button type="button" class="faq-category-btn" data-category="solutions" role="tab" aria-selected="false">
+                Products &amp; Solutions <span class="faq-badge-count">7</span>
+            </button>
+            <button type="button" class="faq-category-btn" data-category="enterprise" role="tab" aria-selected="false">
+                Security &amp; Enterprise <span class="faq-badge-count">5</span>
+            </button>
+        </div>
+
+        <section class="section" style="padding-top: 1rem;">
+            <div class="container" style="max-width: 850px;">
                 <div class="faq-container">
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>What is the difference between autonomous AI agents and traditional automation tools (RPA)?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            Traditional RPA operates based on predefined rules and scripts, easily causing errors even with minor UI changes or system updates. In contrast, Empasy's autonomous AI agent visually recognizes and understands screen elements like a human through Vision-LLM, enabling it to cope and recover (Self-Healing) on its own even if the UI structure completely changes.
-                        </div>
+
+                    <!-- Category: Core Architecture -->
+                    <div class="faq-item" data-category="core">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-core">Core Architecture</span>
+                                <div style="margin-top: 0.2rem;">What is the difference between autonomous AI agents and traditional automation tools (RPA)?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                Traditional RPA operates based on predefined static rules and selector scripts, easily causing failures with minor UI changes or system updates. In contrast, Empasy's autonomous AI agent visually recognizes and understands screen elements like a human through Vision-LLM, enabling it to cope and recover (Self-Healing) on its own even if the UI structure completely changes.
+                            </div>
+                        </details>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>How does web UI test automation using SyncEta respond to dynamic changes?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            SyncEta does not rely on traditional CSS Selectors or XPath. The Vision Model scans the entire screen to identify elements like 'login button' or 'cart icon' in the same way a human does. Therefore, even if the development team changes the DOM structure or conducts A/B testing, it guarantees a stable QA environment without modifying test scripts.
-                        </div>
+                    <div class="faq-item" data-category="core">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-core">Core Architecture</span>
+                                <div style="margin-top: 0.2rem;">How does the SyncVerse Central Control Tower and Agent-to-Agent (A2A) collaboration work?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                SyncVerse orchestrates all specialized agents in real time based on standard Model Context Protocol (MCP) and Agent-to-Agent (A2A) communication protocols. Planning (SyncCMS), Development/Scaffolding (SyncBoot), Web Extraction (SyncCrawl), Testing (SyncEta), Decision Intelligence (SyncInsight), and LLM Governance (SyncLLM) collaborate seamlessly in a unified ecosystem.
+                            </div>
+                        </details>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>How does SyncBoot help when migrating legacy systems to the cloud?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            SyncBoot analyzes the dependencies of monolithic architectures accumulated over decades and automates the design and initial code scaffolding to separate them into independent Microservices (MSA). AI even proposes distributed transaction processing based on the Saga pattern, dramatically reducing the manpower and time required for migration by over 80%.
-                        </div>
+                    <div class="faq-item" data-category="core">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-core">Core Architecture</span>
+                                <div style="margin-top: 0.2rem;">What are Spec-First Governance and Human-in-the-Loop (HITL) principles?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                To eliminate hallucination risks and unauthorized code modifications, Empasy enforces Spec-First Governance. AI agents must first generate verifiable specification documents and test plans, and require cryptographic administrator approval (Human-in-the-Loop) before creating Git branches or executing build pipelines.
+                            </div>
+                        </details>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>How long does it take to implement the solution?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            It varies depending on the type of agent to be introduced and the company's existing infrastructure, but typically it takes 1-2 weeks to set up a PoC (Proof of Concept) environment, and about a month for full system integration and actual operational deployment. Empasy's dedicated engineering team provides close support throughout the entire process.
-                        </div>
+                    <div class="faq-item" data-category="core">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-core">Core Architecture</span>
+                                <div style="margin-top: 0.2rem;">How does the Emergency Kill-Switch function work during critical anomalies?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                Upon detecting anomalous traffic, abnormal token surges, model degradation, or unauthorized access, a single administrator action or automated threshold alert instantly revokes write permissions across all agents and locks the system into ReadOnly Lockdown, safeguarding infrastructure and proprietary data.
+                            </div>
+                        </details>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>Where can I find detailed developer documentation or API specifications for the products?</span>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            All integration guides, API specifications, and technical documentation for Empasy's solutions can be found at the official document center, <a href="https://doc.empasy.com/" target="_blank" style="color:var(--primary-color); text-decoration:underline;">doc.empasy.com</a>. Also, open-source contributions and plugins are available through our official GitHub (DramaticCollaboration).
-                        </div>
+                    <!-- Category: Solutions -->
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">SyncEta (QA)</span>
+                                <div style="margin-top: 0.2rem;">How does web UI test automation using SyncEta respond to dynamic changes?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                SyncEta does not rely on fragile CSS Selectors or XPath. Its Vision-LLM model scans the entire screen layout to identify elements like login buttons or shopping cart icons just like a human tester. Therefore, even if the development team changes the DOM hierarchy or runs A/B experiments, QA tests execute reliably without manual script revisions.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">SyncEta (QA)</span>
+                                <div style="margin-top: 0.2rem;">How does SyncEta integrate with existing Playwright, Selenium, or Cypress environments?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                SyncEta integrates as a drop-in wrapper on top of your existing Playwright or Selenium test pipelines. You do not need to rewrite existing test suites; you can immediately leverage vision-powered self-healing regression testing across both desktop and mobile viewports.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">SyncBoot (Development)</span>
+                                <div style="margin-top: 0.2rem;">How does SyncBoot assist in migrating monolithic legacy systems to cloud-native microservices (MSA)?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                SyncBoot deeply analyzes legacy monolithic codebases, data models, and service dependencies to architect decoupled microservice boundaries. It automates Spring Boot entity generation, CRUD APIs, DDL scripts, and even generates Saga pattern distributed compensation transactions, accelerating modernization timelines by over 80%.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">SyncCMS (Content)</span>
+                                <div style="margin-top: 0.2rem;">Can non-developers (planners and marketers) manage complex content without code using SyncCMS?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                Yes. SyncCMS provides an intuitive visual interface where non-technical planners can arrange components and edit structured content via natural language prompts and live previews. When content is updated, multilingual translations (Korean, English, Japanese) are automatically synchronized in the background.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">SyncCrawl (Extraction)</span>
+                                <div style="margin-top: 0.2rem;">How does SyncCrawl ensure uninterrupted data extraction amidst anti-bot defenses and layout changes?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                Equipped with a visual rendering intelligence engine, SyncCrawl dynamically recalibrates crawling rules based on visual layout cues when target website markup changes. It natively supports distributed worker node autoscaling and standard vector database sinks (OpenSearch, Pinecone, Milvus) for enterprise RAG pipelines.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">SyncInsight (Intelligence)</span>
+                                <div style="margin-top: 0.2rem;">How does SyncInsight differ from traditional BI dashboards, and how does it support decision-making?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                While traditional BI simply aggregates past data into charts, SyncInsight autonomously conducts Deep Research by correlating internal metrics with external market signals. Through multi-agent cross-review and simulation, it synthesizes concrete, executable action plans requiring administrator sign-off.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">SyncLLM (Governance)</span>
+                                <div style="margin-top: 0.2rem;">How does SyncLLM achieve multi-LLM intelligent routing and enterprise FinOps cost optimization?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                SyncLLM analyzes query complexity and intent in real time, routing simple queries to lightweight SLMs and complex reasoning tasks to high-tier LLMs. With granular token budget caps, real-time PII masking, and semantic caching, it cuts enterprise LLM operational costs by up to 60%.
+                            </div>
+                        </details>
+                    </div>
+
+                    <!-- Category: Enterprise & Security -->
+                    <div class="faq-item" data-category="enterprise">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-enterprise">Security &amp; Deployment</span>
+                                <div style="margin-top: 0.2rem;">Can the platform be deployed on-premise and in air-gapped secure networks for finance and government?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                Yes. All Empasy solutions can be deployed 100% isolated in containerized on-premise environments, private VPCs, and completely air-gapped networks without external internet access. When combined with local open-source LLM runtimes (vLLM, Ollama), not a single byte of proprietary code or confidential data leaves your perimeter.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="enterprise">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-enterprise">Security &amp; Deployment</span>
+                                <div style="margin-top: 0.2rem;">How is sensitive internal data (PII, financial numbers) protected during AI operations?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                Built-in data protection filters proactively detect resident registration numbers, phone numbers, payment card numbers, and bank account information, applying real-time pseudonymization and masking before processing, ensuring complete compliance and data sovereignty.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="enterprise">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-enterprise">Enterprise Onboarding</span>
+                                <div style="margin-top: 0.2rem;">What is the typical deployment timeline and PoC (Proof of Concept) process?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                Setup time depends on the chosen agents and existing infrastructure, but typically a PoC sandbox environment is established within 1 to 2 weeks, with full system integration and production deployment achieved in approximately one month, closely supported by our dedicated engineering team.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="enterprise">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-enterprise">Licensing</span>
+                                <div style="margin-top: 0.2rem;">What licensing options and pricing models are available?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                Empasy offers flexible cloud SaaS subscriptions as well as perpetual and annual on-premise enterprise licenses. Packaging is tailored based on node capacity and required agent modules, with customized quotes provided after an initial architecture consultation.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="enterprise">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-enterprise">Support &amp; Docs</span>
+                                <div style="margin-top: 0.2rem;">Where can developers find API documentation, integration guides, and technical support?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                Comprehensive developer guides, Model Context Protocol (MCP) specifications, and REST API docs are available at <a href="https://doc.empasy.com/" target="_blank" style="color:var(--primary-color); text-decoration:underline;">doc.empasy.com</a>. Open-source contributions and plugins are hosted on our official GitHub (DramaticCollaboration), and enterprise support is accessible via our contact page and contact@empasy.com.
+                            </div>
+                        </details>
                     </div>
 
                 </div>
@@ -91,12 +400,33 @@
     <script type="module" src="/assets/js/i18n.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
     <script>
-        // FAQ Accordion Script
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                question.classList.toggle('active');
+        // Category Filter Tab Logic
+        (function initFaqTabs() {
+            const tabs = document.querySelectorAll('.faq-category-btn');
+            const items = document.querySelectorAll('.faq-item');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => {
+                        t.classList.remove('active');
+                        t.setAttribute('aria-selected', 'false');
+                    });
+                    tab.classList.add('active');
+                    tab.setAttribute('aria-selected', 'true');
+
+                    const category = tab.getAttribute('data-category');
+                    items.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.classList.remove('is-hidden');
+                            item.style.display = '';
+                        } else {
+                            item.classList.add('is-hidden');
+                            item.style.display = 'none';
+                        }
+                    });
+                });
             });
-        });
+        })();
     </script>
 </body>
 </html>

@@ -8,9 +8,51 @@
     <meta property="og:description" content="단일 관제탑 아래 모든 도메인 에이전트가 유기적으로 협업하는 전사 AI 자율 운영 플랫폼">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="og:url" content="https://empasy.io/ko/solutions/sync-verse.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Empasy">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="KR-11">
+    <meta name="geo.placename" content="Seoul">
+    <link rel="canonical" href="https://empasy.io/ko/solutions/sync-verse.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-verse.html">
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-verse.html">
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-verse.html">
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-verse.html">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "SyncVerse의 중앙 관제탑(Central Control Tower) 역할은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncVerse는 모든 도메인 에이전트(SyncEta, SyncBoot, SyncCMS, SyncCrawl, SyncInsight, SyncLLM)의 작업 지시, 상태 모니터링, 의존성 조율을 단일 대시보드에서 통합 관제하는 오케스트레이션 플랫폼입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Agent-to-Agent(A2A) 및 MCP 프로토콜은 어떻게 연동되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anthropic Model Context Protocol(MCP)과 표준 A2A 메시징 버스를 기반으로 각 에이전트가 도구와 컨텍스트를 동적으로 탐색하고 직접 통신하여 복잡한 크로스 도메인 워크플로우를 자율 수행합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Emergency Kill-Switch와 Human-in-the-Loop 거버넌스는 어떻게 보호하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "비인가 접근이나 모델 이상 징후 감지 시 원클릭으로 전체 에이전트의 쓰기 권한을 박탈하고 읽기 전용 격리(Lockdown)로 전환하며, 주요 배포 및 DB 변경 전 관리자의 디지털 서명 승인을 강제합니다."
+          }
+        }
+      ]
+    }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <style>
@@ -210,6 +252,29 @@
                     <h3>전사 트레이서빌리티 감사 로그</h3>
                     <p>모든 에이전트의 도구 호출, LLM 질의, 실행 결과가 분산 트레이싱 ID로 묶여 전수 기록되므로 금융·공공 컴플라이언스를 완벽히 충족합니다.</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section fade-in-up delay-2">
+            <h2>자주 묻는 질문 (FAQ)</h2>
+            <div class="faq-item">
+                <details>
+                    <summary>SyncVerse의 중앙 관제탑(Central Control Tower) 역할은 무엇인가요?</summary>
+                    <div class="faq-answer">SyncVerse는 모든 도메인 에이전트(SyncEta, SyncBoot, SyncCMS, SyncCrawl, SyncInsight, SyncLLM)의 작업 지시, 상태 모니터링, 의존성 조율을 단일 대시보드에서 통합 관제하는 오케스트레이션 플랫폼입니다.</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>Agent-to-Agent(A2A) 및 MCP 프로토콜은 어떻게 연동되나요?</summary>
+                    <div class="faq-answer">Anthropic Model Context Protocol(MCP)과 표준 A2A 메시징 버스를 기반으로 각 에이전트가 도구와 컨텍스트를 동적으로 탐색하고 직접 통신하여 복잡한 크로스 도메인 워크플로우를 자율 수행합니다.</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>Emergency Kill-Switch와 Human-in-the-Loop 거버넌스는 어떻게 보호하나요?</summary>
+                    <div class="faq-answer">비인가 접근이나 모델 이상 징후 감지 시 원클릭으로 전체 에이전트의 쓰기 권한을 박탈하고 읽기 전용 격리(Lockdown)로 전환하며, 주요 배포 및 DB 변경 전 관리자의 디지털 서명 승인을 강제합니다.</div>
+                </details>
             </div>
         </section>
 

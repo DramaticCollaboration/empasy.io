@@ -941,6 +941,75 @@ body.has-announcement-bar .top-announcement-bar {
     animation: fadeIn 0.4s ease-out;
 }
 
+/* FAQ Category Filter & Interactive Tabs */
+.faq-category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin: 2rem auto 3rem auto;
+    max-width: 900px;
+}
+.faq-category-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.55rem 1.25rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    user-select: none;
+}
+.faq-category-btn:hover {
+    color: var(--text-primary);
+    border-color: rgba(8, 145, 178, 0.5);
+    background: rgba(8, 145, 178, 0.08);
+}
+.faq-category-btn.active {
+    background: var(--gradient-primary);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 4px 14px rgba(8, 145, 178, 0.35);
+}
+.faq-category-btn .faq-badge-count {
+    font-size: 0.75rem;
+    padding: 2px 7px;
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.2);
+}
+.faq-item.is-hidden {
+    display: none !important;
+}
+.faq-category-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+.faq-category-tag.tag-core {
+    background: rgba(8, 145, 178, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+.faq-category-tag.tag-solutions {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(52, 211, 153, 0.3);
+}
+.faq-category-tag.tag-enterprise {
+    background: rgba(139, 92, 246, 0.15);
+    color: #a78bfa;
+    border: 1px solid rgba(167, 139, 250, 0.3);
+}
+
 
 /* =====================================================
    Light Theme Animation System
