@@ -23,6 +23,15 @@ function initMain() {
         });
     }
 
+    // 0.4 Announcement Bar Close Handler
+    const announcementBar = document.querySelector('.top-announcement-bar');
+    const announcementClose = document.querySelector('.announcement-close');
+    if (announcementBar && announcementClose) {
+        announcementClose.addEventListener('click', () => {
+            announcementBar.style.display = 'none';
+        });
+    }
+
     // 0.5 Mobile Menu Dropdown Toggle
     const dropdownBtns = document.querySelectorAll('.nav-container .dropdown > .dropbtn');
     dropdownBtns.forEach(btn => {

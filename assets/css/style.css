@@ -107,6 +107,104 @@ h1, h2, h3, h4 {
 }
 
 /* =========================================
+   Top Announcement Bar
+========================================= */
+.top-announcement-bar {
+    display: none;
+    background: linear-gradient(90deg, rgba(8, 145, 178, 0.18) 0%, rgba(14, 165, 233, 0.22) 50%, rgba(16, 185, 129, 0.18) 100%);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.25);
+    padding: 0.55rem 1rem;
+    text-align: center;
+    font-size: 0.88rem;
+    color: #e2e8f0;
+    line-height: 1.5;
+    position: relative;
+    z-index: 1001;
+}
+
+body.has-announcement-bar .top-announcement-bar {
+    display: block;
+}
+
+.announcement-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.6rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem 0 1rem;
+    position: relative;
+}
+
+.announcement-badge {
+    background: rgba(56, 189, 248, 0.2);
+    color: #38bdf8;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    white-space: nowrap;
+}
+
+.announcement-text {
+    color: #e2e8f0;
+}
+
+.announcement-text strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.announcement-link {
+    color: #38bdf8;
+    font-weight: 700;
+    text-decoration: underline;
+    margin-left: 0.25rem;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.announcement-link:hover {
+    color: #7dd3fc;
+    text-decoration: underline;
+}
+
+.announcement-close {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 2px 6px;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+}
+
+.announcement-close:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .top-announcement-bar {
+        font-size: 0.8rem;
+        padding: 0.45rem 1.8rem 0.45rem 0.75rem;
+    }
+    .announcement-badge {
+        font-size: 0.75rem;
+        padding: 1px 6px;
+    }
+}
+
+/* =========================================
    Header & Navigation
 ========================================= */
 .glass-header {
@@ -121,6 +219,7 @@ h1, h2, h3, h4 {
 }
 
 .nav-container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
