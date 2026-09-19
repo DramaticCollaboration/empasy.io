@@ -307,6 +307,11 @@ function initMain() {
                 terminalTabs.forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
                 
+                // Smoothly center active tab on mobile/scrollable viewports
+                if (typeof tab.scrollIntoView === 'function') {
+                    tab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                }
+                
                 const agentKey = tab.getAttribute('data-agent');
                 const data = agentTerminalData[agentKey] || agentTerminalData.verse;
                 
