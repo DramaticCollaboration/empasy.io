@@ -48,10 +48,10 @@
     <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-eta.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-eta.html" />
     <meta property="og:url" content="https://empasy.io/ja/solutions/sync-eta.html">
-  <script type="module" crossorigin src="/assets/ja_solutions_sync-eta-DkP8HBmT.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/main-V53zwc1R.js">
+  <script type="module" crossorigin src="/assets/ja_solutions_sync-eta-D1U4DVAq.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-BnIpxlDE.js">
   <link rel="modulepreload" crossorigin href="/assets/i18n-d99J6wys.js">
-  <link rel="stylesheet" crossorigin href="/assets/main-DMeVq2fp.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-BAkJEA8j.css">
 </head>
 <body class="theme-eta">
     <header class="glass-header">
@@ -214,20 +214,32 @@
             <h2>よくある質問 (FAQ)</h2>
             <div class="faq-item">
                 <details>
-                    <summary>SeleniumやPlaywrightと何が違いますか？</summary>
-                    <div class="faq-answer">SyncEtaはVision-LLMを搭載し、UIやDOMが変更されても視覚的・文脈的に要素を再特定してテストスクリプトを自動修復します。</div>
+                    <summary>コーディング経験のないQA担当者やPMでも利用できますか？</summary>
+                    <div class="faq-answer">はい、スクリプトのプログラミング不要で、通常のブラウザ操作を記録するだけでテストシナリオを自動生成できます。また、既存のエクセル(Excel)テストケースをそのまま取り込んで自動テストとして即座に実行可能です。</div>
                 </details>
             </div>
             <div class="faq-item">
                 <details>
-                    <summary>社内閉域網(オンプレミス)でも動作しますか？</summary>
-                    <div class="faq-answer">はい、外部インターネット通信を行わないオンプレミスコンテナ環境やプライベートモデルとの連携に対応しています。</div>
+                    <summary>UIやボタンの配置が変更された場合、テストスクリプトは壊れませんか？</summary>
+                    <div class="faq-answer">壊れません。画面全体の文脈と視覚要素を総合認識するため、クラス名やレイアウトが変更されても対象要素を自動特定し、中断することなくテストを継続します。リリースごとの修正工数を大幅に削減できます。</div>
                 </details>
             </div>
             <div class="faq-item">
                 <details>
-                    <summary>QAリソースの削減効果はどのくらいですか？</summary>
-                    <div class="faq-answer">テストスクリプトのメンテナンスにかかる工数を80%以上削減できます。</div>
+                    <summary>既存のテスト資産(Playwright、Selenium、Excel)はそのまま活用できますか？</summary>
+                    <div class="faq-answer">はい、既存のテスト資産を破棄する必要はありません。既存のPlaywrightやSeleniumパイプライン上に組み込んで自動修復機能を付加でき、エクセルの手動テストケースも自動実行シナリオとして即座に活用できます。</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>モバイルレスポンシブ対応や複数デバイスの検証にも対応していますか？</summary>
+                    <div class="faq-answer">はい、デスクトップブラウザだけでなく、スマートフォンやタブレットなど各解像度に応じたレスポンシブ検証を一括実行できます。画面崩れや端末固有の不具合を1回の実行で点検します。</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>社内セキュリティ網やローカル(localhost)開発環境でも動作しますか？</summary>
+                    <div class="faq-answer">はい、テストデータや画面情報が外部クラウドに送信されないよう、ローカルPCや社内閉域網(エアギャップ)環境での完全独立稼働をサポートしています。ローカル開発サーバーも安全にテスト可能です。</div>
                 </details>
             </div>
         </section>

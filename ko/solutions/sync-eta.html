@@ -68,10 +68,10 @@
     <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-eta.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-eta.html" />
     <meta property="og:url" content="https://empasy.io/ko/solutions/sync-eta.html">
-  <script type="module" crossorigin src="/assets/ko_solutions_sync-eta-DkP8HBmT.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/main-V53zwc1R.js">
+  <script type="module" crossorigin src="/assets/ko_solutions_sync-eta-D1U4DVAq.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-BnIpxlDE.js">
   <link rel="modulepreload" crossorigin href="/assets/i18n-d99J6wys.js">
-  <link rel="stylesheet" crossorigin href="/assets/main-DMeVq2fp.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-BAkJEA8j.css">
 </head>
 <body class="theme-eta">
     <header class="glass-header">
@@ -236,22 +236,34 @@
             <h2>자주 묻는 질문 (FAQ)</h2>
             <div class="faq-item">
                 <details>
-                    <summary>기존 테스트 도구(Selenium, Playwright)와 호환되나요?</summary>
-                    <div class="faq-answer">네, 기존 Playwright 및 Selenium 테스트 스크립트 위에 래퍼 형태로 구동되어 자가 복구(Self-Healing) 레이어만 추가할 수 있습니다.</div>
+                    <summary>코딩 경험이 없는 QA나 기획자도 바로 사용할 수 있나요?</summary>
+                    <div class="faq-answer">네, 스크립트 코딩 없이 브라우저 조작 녹화만으로 테스트 시나리오를 자동 생성할 수 있습니다. 또한 기존에 팀에서 관리하던 엑셀(Excel) 테스트케이스를 불러와 바로 자동화 테스트로 구동할 수 있습니다.</div>
                 </details>
             </div>
             <div class="faq-item">
                 <details>
-                    <summary>웹과 반응형 모바일 환경을 모두 지원하나요?</summary>
-                    <div class="faq-answer">데스크톱 브라우저뿐 아니라 다양한 모바일 뷰포트 해상도 환경에서의 시각적 회귀 테스트를 지원합니다.</div>
+                    <summary>화면 UI나 버튼 위치가 바뀌면 테스트 스크립트를 매번 다시 짜야 하나요?</summary>
+                    <div class="faq-answer">아닙니다. 화면의 텍스트와 레이아웃 문맥을 종합 파악하여 요소 위치나 클래스명이 변경되어도 대상을 스스로 찾아 실행을 이어갑니다. 릴리즈마다 반복되던 스크립트 수정 공수를 대폭 줄일 수 있습니다.</div>
                 </details>
             </div>
             <div class="faq-item">
                 <details>
-                    <summary>사내 폐쇄망(On-Premises) 환경에서도 구동 가능한가요?</summary>
-                    <div class="faq-answer">네, 엔터프라이즈 라이선스 고객을 위해 사내 VPC 및 에어갭 폐쇄망 내 프라이빗 LLM 인프라 배포를 지원합니다.</div>
+                    <summary>기존에 사용하던 테스트 도구(Playwright, Selenium)나 엑셀 자산도 유지되나요?</summary>
+                    <div class="faq-answer">기존 테스트 자산을 폐기할 필요가 없습니다. Playwright 및 Selenium 파이프라인 위에 바로 연동하여 문맥 인식 복구 기능을 더할 수 있으며, 엑셀로 작성된 수동 검증 목록도 즉시 자동 실행 목록으로 전환됩니다.</div>
                 </details>
             </div>
+            <div class="faq-item">
+                <details>
+                    <summary>스마트폰, 태블릿 등 모바일 반응형 환경도 함께 검증되나요?</summary>
+                    <div class="faq-answer">데스크톱 브라우저뿐만 아니라 스마트폰, 태블릿 등 기기별 해상도 환경을 지원합니다. 화면 크기별 레이아웃 깨짐이나 사용자 플로우가 정상 작동하는지 한 번의 실행으로 교차 검증할 수 있습니다.</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>사내 보안망이나 로컬(localhost) 개발 환경에서도 안심하고 쓸 수 있나요?</summary>
+                    <div class="faq-answer">외부 클라우드로 내부 데이터나 화면 정보가 유출되지 않도록 로컬 PC 및 사내 폐쇄망(에어갭) 환경에서의 독립 구동을 지원합니다. 로컬 개발 서버 URL도 제한 없이 안전하게 테스트 가능합니다.</div>
+                </details>
+            </div>
         </section>
     </main>
 
@@ -296,6 +308,6 @@
                 <p data-i18n="footer.copyright" style="color: rgba(255, 255, 255, 0.45); font-size: 0.8rem; margin-top: 1rem;">© 2026 Empasy IT Corp. All rights reserved. SyncSeries® is a registered trademark of Empasy.</p>
             </div>
         </div>
-    </footer>    
+    </footer>    
 </body>
 </html>
