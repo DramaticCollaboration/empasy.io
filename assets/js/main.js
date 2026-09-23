@@ -334,10 +334,30 @@ function initMain() {
     };
 
     if (terminalTabs.length > 0 && terminalInput && terminalOutput) {
-        terminalTabs.forEach(tab => {
+        let typingTimer = null;
+
+        // Initialize ARIA accessibility attributes
+        const tabList = terminalTabs[0].parentElement;
+        if (tabList) {
+            tabList.setAttribute('role', 'tablist');
+            tabList.setAttribute('aria-label', 'Agent Terminal Switcher');
+        }
+
+        terminalTabs.forEach((tab, index) => {
+            tab.setAttribute('role', 'tab');
+            tab.setAttribute('id', `terminal-tab-${index}`);
+            tab.setAttribute('aria-selected', tab.classList.contains('active') ? 'true' : 'false');
+            tab.setAttribute('tabindex', tab.classList.contains('active') ? '0' : '-1');
+
             tab.addEventListener('click', () => {
-                terminalTabs.forEach(t => t.classList.remove('active'));
+                terminalTabs.forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                    t.setAttribute('tabindex', '-1');
+                });
                 tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+                tab.setAttribute('tabindex', '0');
                 
                 // Smoothly center active tab on mobile/scrollable viewports
                 if (typeof tab.scrollIntoView === 'function') {
@@ -346,12 +366,29 @@ function initMain() {
                 
                 const agentKey = tab.getAttribute('data-agent');
                 const data = agentTerminalData[agentKey] || agentTerminalData.verse;
-                
-                terminalInput.innerText = data.cmd;
+
                 if (terminalCopyBtn) {
                     terminalCopyBtn.setAttribute('data-cmd', data.copyCmd);
                 }
-                terminalOutput.innerHTML = data.output;
+
+                // Smooth typing effect for terminal command
+                if (typingTimer) clearInterval(typingTimer);
+                terminalInput.innerText = '';
+                terminalOutput.style.opacity = '0.3';
+                terminalOutput.style.transition = 'opacity 0.2s ease';
+
+                let charIndex = 0;
+                const fullCmd = data.cmd;
+                typingTimer = setInterval(() => {
+                    if (charIndex < fullCmd.length) {
+                        terminalInput.innerText += fullCmd.charAt(charIndex);
+                        charIndex++;
+                    } else {
+                        clearInterval(typingTimer);
+                        terminalOutput.innerHTML = data.output;
+                        terminalOutput.style.opacity = '1';
+                    }
+                }, 12);
 
                 if (terminalRoleBanner) {
                     const tagEl = terminalRoleBanner.querySelector('.terminal-role-tag');

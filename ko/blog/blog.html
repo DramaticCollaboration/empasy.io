@@ -34,16 +34,26 @@
         
         <section class="section" style="padding-top: 2rem;">
                         <div class="container">
+                
+            <!-- Blog Category Filter Tabs -->
+            <div class="blog-filter-tabs" style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem;">
+                <button class="blog-filter-btn active" data-filter="all" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--primary-color); background: var(--primary-color); color: #fff; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">전체</button>
+                <button class="blog-filter-btn" data-filter="qa" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: rgba(15, 23, 42, 0.6); color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">QA 자동화</button>
+                <button class="blog-filter-btn" data-filter="orchestration" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: rgba(15, 23, 42, 0.6); color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">AI 오케스트레이션</button>
+                <button class="blog-filter-btn" data-filter="cloud" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: rgba(15, 23, 42, 0.6); color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">클라우드 네이티브</button>
+                <button class="blog-filter-btn" data-filter="decision" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: rgba(15, 23, 42, 0.6); color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">의사결정 지능</button>
+                <button class="blog-filter-btn" data-filter="vision" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: rgba(15, 23, 42, 0.6); color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">비전 &amp; 전략</button>
+            </div>
                 <div class="blog-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
                     <!-- Blog Card 8 -->
-                    <a href="../../ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" style="text-decoration: none; color: inherit; display: block;">
+                    <a href="../../ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" class="blog-card-item" data-category="vision" style="text-decoration: none; color: inherit; display: block;">
                         <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
                             <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
                                 <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Vision & Strategy</div>
                                 <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">Boon to Business by Agility: 엠파시가 선언하는 2026년 비전과 자율 운영 생태계의 미래</h3>
                                 <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">맥락의 연결(MCP)을 통해 기업의 코딩, 품질 검증, 의사결정 전 과정을 자율화하는 엠파시의 2026 비전 선언문.</p>
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-07-18</span>
+                                    <span><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2026-07-18 &bull; <i class="far fa-clock" style="margin: 0 4px;"></i> 5분 읽기</span>
                                     <span style="color: var(--primary-color); font-weight: 600;">자세히 읽기 ➔</span>
                                 </div>
                             </div>
@@ -51,14 +61,14 @@
                     </a>
 
                     <!-- Blog Card 7 -->
-                    <a href="../../ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" style="text-decoration: none; color: inherit; display: block;">
+                    <a href="../../ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" class="blog-card-item" data-category="decision" style="text-decoration: none; color: inherit; display: block;">
                         <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
                             <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
                                 <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Security & Decision Intelligence</div>
                                 <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">온프레미스 보안을 관통하는 최상위 의사결정 지능: SyncInsight의 멀티 에이전트 교차 분석 아키텍처</h3>
                                 <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">사내 폐쇄망 환경에서 Context-Aware RAG와 멀티 에이전트를 가동하여 데이터 주권을 지키며 경영 인사이트를 도출하는 SyncInsight.</p>
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-07-18</span>
+                                    <span><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2026-06-25 &bull; <i class="far fa-clock" style="margin: 0 4px;"></i> 7분 읽기</span>
                                     <span style="color: var(--primary-color); font-weight: 600;">자세히 읽기 ➔</span>
                                 </div>
                             </div>
@@ -66,14 +76,14 @@
                     </a>
 
                     <!-- Blog Card 6 -->
-                    <a href="../../ko/blog/syncverse-mcp-ai-orchestration-architecture.html" style="text-decoration: none; color: inherit; display: block;">
+                    <a href="../../ko/blog/syncverse-mcp-ai-orchestration-architecture.html" class="blog-card-item" data-category="orchestration" style="text-decoration: none; color: inherit; display: block;">
                         <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
                             <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
                                 <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">AI Orchestration & MCP</div>
                                 <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">에이전트 간 맥락을 연결하다: MCP 기반 차세대 AI 개발 생태계, SyncVerse 오케스트레이션 아키텍처</h3>
                                 <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">글로벌 표준 MCP(Model Context Protocol)를 기반으로 코딩, QA, 배포 에이전트를 연결하는 Zero-Touch 자율 운영 생태계.</p>
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-07-18</span>
+                                    <span><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2026-05-30 &bull; <i class="far fa-clock" style="margin: 0 4px;"></i> 6분 읽기</span>
                                     <span style="color: var(--primary-color); font-weight: 600;">자세히 읽기 ➔</span>
                                 </div>
                             </div>
@@ -81,14 +91,14 @@
                     </a>
 
                     <!-- Blog Card 5 -->
-                    <a href="../../ko/blog/syncboot-cloud-native-msa-architecture.html" style="text-decoration: none; color: inherit; display: block;">
+                    <a href="../../ko/blog/syncboot-cloud-native-msa-architecture.html" class="blog-card-item" data-category="cloud" style="text-decoration: none; color: inherit; display: block;">
                         <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
                             <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
                                 <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Cloud Native & Microservices</div>
                                 <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">클라우드 네이티브의 심장: 엔터프라이즈 MSA 전환을 가속하는 SyncBoot 분산 아키텍처 분석</h3>
                                 <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Seata, Sentinel, SkyWalking 등 100% 오픈소스를 통합하여 복잡한 마이크로서비스 인프라 환경을 단번에 구축하는 SyncBoot 아키텍처.</p>
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-07-18</span>
+                                    <span><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2026-05-12 &bull; <i class="far fa-clock" style="margin: 0 4px;"></i> 6분 읽기</span>
                                     <span style="color: var(--primary-color); font-weight: 600;">자세히 읽기 ➔</span>
                                 </div>
                             </div>
@@ -96,14 +106,14 @@
                     </a>
 
                     <!-- Blog Card 4 -->
-                    <a href="../../ko/blog/synccms-development-oriented-architecture.html" style="text-decoration: none; color: inherit; display: block;">
+                    <a href="../../ko/blog/synccms-development-oriented-architecture.html" class="blog-card-item" data-category="cloud" style="text-decoration: none; color: inherit; display: block;">
                         <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
                             <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
                                 <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Frontend & CMS Ecosystem</div>
                                 <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">벤더 종속성 극복과 유연한 비즈니스 확장을 위한 SyncCMS의 '개발 지향(Development-Oriented)' 아키텍처</h3>
                                 <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Spring Boot 기반 개방형 아키텍처와 FreeMarker 렌더링 엔진을 통해 엔터프라이즈의 무한한 확장을 지원하는 SyncCMS 심층 분석.</p>
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-07-18</span>
+                                    <span><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2026-04-20 &bull; <i class="far fa-clock" style="margin: 0 4px;"></i> 5분 읽기</span>
                                     <span style="color: var(--primary-color); font-weight: 600;">자세히 읽기 ➔</span>
                                 </div>
                             </div>
@@ -111,14 +121,14 @@
                     </a>
 
                     <!-- Blog Card 3 -->
-                    <a href="../../ko/blog/synceta-intelligent-regression-testing-pipeline.html" style="text-decoration: none; color: inherit; display: block;">
+                    <a href="../../ko/blog/synceta-intelligent-regression-testing-pipeline.html" class="blog-card-item" data-category="qa" style="text-decoration: none; color: inherit; display: block;">
                         <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
                             <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
                                 <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">AI Ops & QA Automation</div>
                                 <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">기계어(JSON)에서 비즈니스 언어(Excel)로: SyncETA의 지능형 회귀 테스트 파이프라인 아키텍처</h3>
                                 <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">LLM과 Playwright MCP를 결합하여 수작업 없는 No-Code 기반 지능형 QA 자동화 및 시각적 자가 치유(Self-Healing) 엔진을 구현한 SyncETA 아키텍처 리뷰.</p>
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-07-18</span>
+                                    <span><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2026-03-15 &bull; <i class="far fa-clock" style="margin: 0 4px;"></i> 6분 읽기</span>
                                     <span style="color: var(--primary-color); font-weight: 600;">자세히 읽기 ➔</span>
                                 </div>
                             </div>
@@ -126,14 +136,14 @@
                     </a>
 
                     <!-- Blog Card 2 -->
-                    <a href="../../ko/blog/empasy-core-solution-architecture-syncverse.html" style="text-decoration: none; color: inherit; display: block;">
+                    <a href="../../ko/blog/empasy-core-solution-architecture-syncverse.html" class="blog-card-item" data-category="orchestration" style="text-decoration: none; color: inherit; display: block;">
                         <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
                             <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
                                 <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Tech Trends & Architecture</div>
                                 <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">AI 자율 운영 생태계(SyncVerse)를 지탱하는 핵심 솔루션 아키텍처 분석</h3>
                                 <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">SyncEta, SyncCMS, SyncBoot, SyncVerse, SyncInsight 등 엠파시의 5대 핵심 솔루션의 기술적 페인포인트와 엔지니어링 해법을 깊이 있게 분석합니다.</p>
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-07-18</span>
+                                    <span><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2026-02-28 &bull; <i class="far fa-clock" style="margin: 0 4px;"></i> 8분 읽기</span>
                                     <span style="color: var(--primary-color); font-weight: 600;">자세히 읽기 ➔</span>
                                 </div>
                             </div>
@@ -141,14 +151,14 @@
                     </a>
 
                     <!-- Blog Card 1 -->
-                    <a href="../../ko/blog/enterprise-data-pipeline-automation.html" style="text-decoration: none; color: inherit; display: block;">
+                    <a href="../../ko/blog/enterprise-data-pipeline-automation.html" class="blog-card-item" data-category="qa" style="text-decoration: none; color: inherit; display: block;">
                         <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
                             <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
                                 <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">AI Ops & Architecture</div>
                                 <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">LLM을 활용한 엔터프라이즈 데이터 파이프라인 자동화 사례</h3>
                                 <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">SyncSeries를 활용하여 비정형 데이터를 구조화하고 보안이 중요한 엔터프라이즈 환경에서 LLM을 어떻게 활용할 수 있는지 알아봅니다.</p>
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-07-15</span>
+                                    <span><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2026-01-10 &bull; <i class="far fa-clock" style="margin: 0 4px;"></i> 5분 읽기</span>
                                     <span style="color: var(--primary-color); font-weight: 600;">자세히 읽기 ➔</span>
                                 </div>
                             </div>
@@ -165,5 +175,36 @@
     <!-- Scripts -->
     <script type="module" src="/assets/js/i18n.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterBtns = document.querySelectorAll('.blog-filter-btn');
+        const blogItems = document.querySelectorAll('.blog-card-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.style.background = 'rgba(15, 23, 42, 0.6)';
+                    b.style.color = 'var(--text-secondary)';
+                    b.style.borderColor = 'var(--border-color)';
+                });
+                btn.classList.add('active');
+                btn.style.background = 'var(--primary-color)';
+                btn.style.color = '#fff';
+                btn.style.borderColor = 'var(--primary-color)';
+
+                const filter = btn.getAttribute('data-filter');
+                blogItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+    </script>
 </body>
 </html>
