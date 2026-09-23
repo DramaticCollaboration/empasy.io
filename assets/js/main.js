@@ -241,11 +241,19 @@ function initMain() {
     const terminalInput = document.querySelector('.terminal-cmd-text');
     const terminalOutput = document.querySelector('.terminal-output-container');
     const terminalCopyBtn = document.querySelector('.terminal-copy-btn');
+    const terminalRoleBanner = document.querySelector('.terminal-role-banner');
+    const pageLang = document.documentElement.lang || 'ko';
 
     const agentTerminalData = {
         verse: {
             cmd: 'empasy verse dispatch --workflow "order-flow" --mode "autonomous"',
             copyCmd: 'empasy verse dispatch --workflow "order-flow" --mode "autonomous"',
+            tag: { ko: '중앙 관제탑', en: 'Control Tower', ja: '中央管制塔' },
+            desc: {
+                ko: '다중 에이전트 간 트랜잭션을 조율하고 시스템 보안 및 FinOps 가드레일을 통제합니다.',
+                en: 'Orchestrates multi-agent transactions, enforcing system security & FinOps guardrails.',
+                ja: 'マルチエージェント間のトランザクションを統調し、セキュリティとFinOpsを制御します。'
+            },
             output: `
                 <div style="color: #38bdf8;">[SyncVerse Orchestrator]</div>
                 <div>&nbsp;↳ A2A MessageHub initialized [Agents: SyncBoot, SyncEta, SyncLLM]</div>
@@ -258,6 +266,12 @@ function initMain() {
         eta: {
             cmd: 'empasy eta run --target https://app.example.com --scenario "결제 검증"',
             copyCmd: 'empasy eta run --target https://app.example.com --scenario "결제 검증"',
+            tag: { ko: '자가치유 QA', en: 'Self-Healing QA', ja: '自己修復QA' },
+            desc: {
+                ko: 'UI 레이아웃이 변경되어도 Vision-LLM이 요소를 재추적하여 테스트 스크립트 장애를 방지합니다.',
+                en: 'Vision-LLM re-identifies UI elements visually to self-heal broken test scripts.',
+                ja: 'UIが変更されてもVision-LLMが要素を再特定し、テスト障害を自己修復します。'
+            },
             output: `
                 <div style="color: #38bdf8;">[SyncEta Engine]</div>
                 <div>&nbsp;↳ Vision-LLM 화면 요소 식별 중... <span style="color: #38bdf8;">[식별 완료: #btn-pay-submit]</span></div>
@@ -269,6 +283,12 @@ function initMain() {
         boot: {
             cmd: 'empasy boot generate --domain "PaymentService" --pattern "Saga"',
             copyCmd: 'empasy boot generate --domain "PaymentService" --pattern "Saga"',
+            tag: { ko: 'MSA 생성/운영', en: 'MSA Engineer', ja: 'MSA自動構築' },
+            desc: {
+                ko: '도메인 모델 기반 Spring Boot 마이크로서비스 코드 및 Saga 분산 보상 트랜잭션을 자동화합니다.',
+                en: 'Automates Spring Boot microservices code generation and Saga distributed transactions.',
+                ja: 'ドメインモデルに基づくSpring Bootマイクロサービス生成とSaga補償トランザクションを自動化します。'
+            },
             output: `
                 <div style="color: #38bdf8;">[SyncBoot Engine]</div>
                 <div>&nbsp;↳ Analyzing domain schema &amp; DDD entity relationships... <span style="color: #22c55e;">[Done]</span></div>
@@ -280,6 +300,12 @@ function initMain() {
         cms: {
             cmd: 'empasy cms publish --page "launch-campaign" --languages "ko,en,ja"',
             copyCmd: 'empasy cms publish --page "launch-campaign" --languages "ko,en,ja"',
+            tag: { ko: '퍼블리싱 에이전트', en: 'Publisher Agent', ja: '配信エージェント' },
+            desc: {
+                ko: '자연어 명령으로 다국어 반응형 웹 레이아웃과 콘텐츠를 실시간 생성 및 동기화합니다.',
+                en: 'Generates and synchronizes multi-lingual layouts and content via natural language.',
+                ja: '自然言語のプロンプトから多言語レスポンシブWebとコンテンツをリアルタイム生成します。'
+            },
             output: `
                 <div style="color: #38bdf8;">[SyncCMS Core]</div>
                 <div>&nbsp;↳ Natural language prompt transformed into responsive layout blocks</div>
@@ -291,6 +317,12 @@ function initMain() {
         crawl: {
             cmd: 'empasy crawl run --target "https://market.data.org" --schema "pricing.json"',
             copyCmd: 'empasy crawl run --target "https://market.data.org" --schema "pricing.json"',
+            tag: { ko: '지능형 데이터 수집', en: 'Intelligence Scout', ja: 'データ収集' },
+            desc: {
+                ko: '사이트 구조 변화에 동적으로 대응하며 차단 없이 고품질 RAG 지식 데이터를 수집합니다.',
+                en: 'Dynamically adapts to DOM changes and bypasses bot defenses to extract RAG knowledge.',
+                ja: 'DOM構造の変化に動的適応し、アクセス遮断を回避して高品質RAGデータを収集します。'
+            },
             output: `
                 <div style="color: #38bdf8;">[SyncCrawl Scout]</div>
                 <div>&nbsp;↳ Rotating residential proxy session &amp; bypassing dynamic CAPTCHA... <span style="color: #22c55e;">[Success]</span></div>
@@ -320,6 +352,14 @@ function initMain() {
                     terminalCopyBtn.setAttribute('data-cmd', data.copyCmd);
                 }
                 terminalOutput.innerHTML = data.output;
+
+                if (terminalRoleBanner) {
+                    const tagEl = terminalRoleBanner.querySelector('.terminal-role-tag');
+                    const textEl = terminalRoleBanner.querySelector('.terminal-role-text');
+                    const langKey = pageLang.startsWith('en') ? 'en' : (pageLang.startsWith('ja') ? 'ja' : 'ko');
+                    if (tagEl && data.tag) tagEl.innerText = data.tag[langKey] || data.tag.ko;
+                    if (textEl && data.desc) textEl.innerText = data.desc[langKey] || data.desc.ko;
+                }
             });
         });
     }

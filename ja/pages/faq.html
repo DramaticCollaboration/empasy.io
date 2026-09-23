@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>よくある質問 (FAQ) | Empasy エンタープライズAI統合プラットフォーム</title>
-    <meta name="description" content="EmpasyのAI自律運用エコシステム（SyncVerse, SyncEta, SyncBoot, SyncCMS, SyncCrawl, SyncInsight, SyncLLM）およびセキュリティ、完全閉域網(Air-Gapped)デプロイ、ライセンスに関するよくある質問（FAQ）です。">
-    <meta name="keywords" content="エンタープライズAIエコシステム, 企業用AI統合プラットフォーム, よくある質問, FAQ, SyncVerse, SyncEta, SyncBoot, SyncCMS, SyncCrawl, SyncInsight, SyncLLM, エアギャップデプロイ, オンプレミスAI">
+    <title>よくある質問 (FAQ) | Empasy 自律型運用自動化プラットフォーム</title>
+    <meta name="description" content="Empasyの自律型運用自動化プラットフォームの導入効果、従来のRPAとの違い、安全統制（Human-in-the-Loop承認）、完全閉域網(Air-Gapped)デプロイ、PoC検証プロセスに関するよくある質問（FAQ）です。">
+    <meta name="keywords" content="運用自動化, 自律型AI運用, よくある質問, FAQ, RPA代替, SyncVerse, SyncEta, SyncBoot, オンプレミスAI, エアギャップデプロイ, PoC">
     <meta property="og:title" content="よくある質問 (FAQ) | Empasy">
-    <meta property="og:description" content="Empasyの自律型AIエージェントエコシステムとエンタープライズ導入に関する主要な質問と回答をご確認いただけます。">
+    <meta property="og:description" content="運用自動化の導入検討時に実務者や意思決定者が最も重視する効果、安全統制、セキュリティ、導入手順をまとめました。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://empasy.io/ja/pages/faq.html">
     <meta property="og:image" content="https://empasy.io/empasy-logo.png">
@@ -31,130 +31,130 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "自律型AIエージェントと従来の自動化ツール(RPA)の違いは何ですか？",
+          "name": "従来のRPAやマクロ自動化のように、画面が少し変更されるだけで停止してしまう問題は解決されますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "従来のRPAは事前に定義されたルールと静的セレクタースクリプトに基づいて動作するため、わずかなUIの変更やシステムの更新でも簡単にエラーが発生します。対照的に、Empasyの自律型AIエージェントはVision-LLMを介して人間のように画面要素を視覚적かつ文脈的に認識するため、UI構造が完全に変更されても自ら対処して復旧(Self-Healing)する能力を備えています。"
+            "text": "解決されます。従来のRPAはタグや固定座標に依存するため、UIの改修ごとにスクリプトが破損し保守工数が肥大化していました。Empasyの自律型エージェントはVision-LLMを搭載し、視覚レイアウトとテキスト文脈を総合認識するため、ボタンの位置やクラス名が変更されても人間のように対象を自動特定して作業を完遂します。"
           }
         },
         {
           "@type": "Question",
-          "name": "SyncVerse中央管制塔とエージェント間(A2A)連携はどのように機能しますか？",
+          "name": "自社システムにおいて、どのような運用業務からすぐに自動化できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "SyncVerseは、標準Model Context Protocol (MCP)およびAgent-to-Agent (A2A)通信プロトコルに基づいて、すべての専門エージェントをリアルタイムで指揮します。企画(SyncCMS)、開発/スキャフォールディング(SyncBoot)、データ収集(SyncCrawl)、検証(SyncEta)、意思決定分析(SyncInsight)、LLMガバナンス(SyncLLM)が単一のエコシステムとして作業指示とフィードバックを相互連携します。"
+            "text": "リリースごとの回帰テスト・画面崩れ検証(QA)、外部サイトの変動データ収集・DB格納、多言語コンテンツの登録・自動翻訳同期、複数システムの運用ログ分析・日次ブリーフィング作成など、手作業が反復していた中核業務に即座に適用可能です。"
           }
         },
         {
           "@type": "Question",
-          "name": "Spec-FirstガバナンスとHuman-in-the-Loop (HITL)原則とは何ですか？",
+          "name": "企画・開発・テスト・運用など複数部門が関わる複合業務も自動化できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "AIエージェントによる幻覚(Hallucination)や不正なコード生成を防ぐため、Empasyは「Spec-Firstガバナンス」を適用しています。AIはまず検証可能な仕様書とテスト計画を作成し、管理者のデジタル署名承認(Human-in-the-Loop)を取得した後にのみコードブランチ作成とビルドを実行します。"
+            "text": "はい。単一作業の自動化にとどまらず、企画(SyncCMS)、開発(SyncBoot)、検証(SyncEta)、分析(SyncInsight)の各専門エージェントが標準プロトコル(MCP/A2A)で連携するチーム構成を備えており、部門横断的な運用プロセスを一貫して処理します。"
           }
         },
         {
           "@type": "Question",
-          "name": "非常時に作動するEmergency Kill-Switch(緊急遮断)機能はどのような仕組みですか？",
+          "name": "非エンジニア(運用担当者や企画者)でもコードを書かずに自動化ルールやコンテンツを管理できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "異常トラフィック、不審なトークン急増、モデルの異常兆候、または不正アクセスを検知した場合、管理者のワンクリック操作または自動閾値検知により、全エージェントの書き込み権限を即座に剥奪し、システムを読み取り専用隔離(ReadOnly Lockdown)状態へと移行して企業資産とデータを安全に保護します。"
+            "text": "はい。複雑なプログラミング不要で、自然言語プロンプトと直感的な管理コンソールを通じて業務ルールの設定や画面コンテンツの編集が可能です。変更内容はリアルタイムプレビューで即座に確認できます。"
           }
         },
         {
           "@type": "Question",
-          "name": "SyncEtaを活用したWeb UIテスト自動化は動的な変化にどう対応しますか？",
+          "name": "リリースごとに繰り返される回帰テストやレイアウト崩れ点検を無人化できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "SyncEtaは従来の脆弱なCSSセレクターやXPathに依存しません。視覚的Vision-LLMモデルが画面全体のレイアウトをスキャンし、「ログインボタン」や「カートアイコン」などを人間のテスターと同じように識別します。したがって、開発チームがDOM構造を変更したりA/Bテストを実施したりしても、テストスクリプトを修正することなく安定したQA環境を維持できます。"
+            "text": "はい。SyncEtaを利用することで、マウス操作の録画や既存のエクセルテストケースを取り込むだけで自動化シナリオを生成・無人実行できます。UI変更時もセレクター自動修復(Self-Healing)機能が作動し、スクリプト修正工数を80%以上削減します。"
           }
         },
         {
           "@type": "Question",
-          "name": "SyncEtaは既存のPlaywright、Selenium、Cypressテスト環境とどのように統合できますか？",
+          "name": "複雑なレガシーシステムをクラウドや最新アーキテクチャへ移行する際、運用工数を削減できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "既存のPlaywrightやSeleniumテストパイプラインの上にドロップイン(Drop-in)ラッパーとして導入できます。既存のテストコードを全面的に書き直す必要はなく、ビジョンベースの自己修復レイヤーとデスクトップ・モバイル対応の回帰テスト機能のみを即座に拡張可能です。"
+            "text": "はい。SyncBootが長年蓄積されたモノリシックコードの依存関係を自動分析し、独立したマイクロサービス(MSA)構造への分離およびコードスキャフォールディングを支援することで、移行期間とリソースを大幅に短縮します。"
           }
         },
         {
           "@type": "Question",
-          "name": "レガシーシステムをクラウドに移行する際、SyncBootはどのように役立ちますか？",
+          "name": "ターゲットサイトの構造が頻繁に変更される外部データ収集でも、停止することなく維持できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "SyncBootは、数十年にわたって蓄積されたモノリシックアーキテクチャの依存関係を詳細に分析し、それらを独立したマイクロサービス(MSA)形式に分離する設計および初期コードスキャフォールディング作業を自動化します。Sagaパターンに基づく分散補償トランザクション処理までAIが提案し、移行に要する人員と時間を80%以上劇的に短縮します。"
+            "text": "はい。SyncCrawlの視覚的レンダリング分析エンジンがサイトマークアップの変更を検知し、収集ルールをリアルタイムで自動補正します。アンチボット対策と大規模分散処理により、無停止のデータパイプラインを保証します。"
           }
         },
         {
           "@type": "Question",
-          "name": "SyncCMSは非エンジニア(企画者/マーケター)でもコードなしで複雑なコンテンツを管理できますか？",
+          "name": "単なる統計グラフの表示にとどまらず、AIが原因分析や実行プランまで提案してくれますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "はい。企画者が自然言語プロンプトとリアルタイムライブプレビュー画面を通じて、直感的にコンポーネントを配置・編集できます。原本を更新すると、関連付けられた多言語(日本語、英語、韓国語)リソースの翻訳がバックグラウンドで自動同期され、グローバル展開のサイクルを短縮します。"
+            "text": "はい。従来のBIが過去実績を表示するだけだったのに対し、SyncInsightは社内外のデータを深層クロス分析して異常値の根本原因を特定し、運用者が承認して即座に実行できる具体的なアクションプラン(Action Plan)をレポートとして出力します。"
           }
         },
         {
           "@type": "Question",
-          "name": "SyncCrawlはWebサイトの構造変化やアンチボット環境下でどのように継続的なデータ収集を保証しますか？",
+          "name": "社内AIエージェントの本格導入に伴い急増するLLM推論コストはどのように抑制しますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "視覚レンダリング解析エンジンを搭載しており、対象サイトのマークアップ構造が変更されても、視覚レイアウトに基づいて収集ルールをリアルタイムで自動補正します。また、大規模な分散ワーカーノードのスケーリングやRAG標準ベクトルストレージ(OpenSearch, Pinecone, Milvus等)との連携を標準サポートしています。"
+            "text": "SyncLLMのインテリジェントルーティングがクエリの難易度に応じて軽量モデル(SLM)と高性能モデルを自動振り分けし、セマンティックキャッシングと日次予算上限(Cap)を適用することで、エンタープライズAI運用費を最大60%削減します。"
           }
         },
         {
           "@type": "Question",
-          "name": "従来のダッシュボード(BI)ソリューションとSyncInsightの違いは何ですか？",
+          "name": "AIの誤判断によるデータ改ざんや運用事故のリスクはどのように統制されますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "従来のBIが過去の統計をグラフで可視化することに留まっていたのに対し、SyncInsightは社内外のデータを結合して原因を究明するディープリサーチ(Deep Research)を実行し、エージェント間の検討を経て管理者の承認に基づく実行可能なアクションプランを導き出します。"
+            "text": "AIがシステムに対して直接書き込みを行えないよう、厳格な承認プロセスを適用しています。AIはまず作業計画書と変更仕様を作成して担当者に提出し、担当管理者のデジタル署名承認が完了した案件のみが実行される「Human-in-the-Loop(人間介入承認)」体制で統制されます。"
           }
         },
         {
           "@type": "Question",
-          "name": "SyncLLMはマルチLLMルーティングとエンタープライズFinOps(コスト削減)をどのように実現しますか？",
+          "name": "異常動作や緊急事態が発生した場合、自動化を即座に停止できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "クエリの複雑さと意図をリアルタイムで分析し、単純なクエリは軽量なSLM(Small Language Model)へ、複雑な推論は高精度なLLMへとインテリジェントにルーティングします。部門・プロジェクトごとのトークン予算Cap設定、リアルタイムPIIマスキング、セマンティックキャッシュにより、LLM運用コストを最大60%削減します。"
+            "text": "はい。管理画面の「ワンクリック・緊急キルスイッチ(Kill-Switch)」または自動閾値検知により、1秒以内に全AIエージェントの書き込み権限を剥奪し、システムを「読み取り専用」へ凍結して二次被害を遮断します。"
           }
         },
         {
           "@type": "Question",
-          "name": "金融、公共、大企業向けのオンプレミス(On-Premise)および完全閉域網(Air-Gapped)へのデプロイは可能ですか？",
+          "name": "セキュリティ基準の厳しい社内閉域網(オンプレミス)やVPC環境でも外部流出なしで利用できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "はい。Empasyのすべてのソリューションは、インターネット接続が完全に遮断された社内閉域網(Air-Gapped)や企業専用VPC環境へコンテナベースで100%隔離デプロイ可能です。vLLMやOllamaなどのローカルオープンソースLLMランタイムと連携し、企業の機密情報やソースコードが社外へ1バイトも流出することはありません。"
+            "text": "はい。外部インターネットから完全に遮断されたエアギャップ閉域網および社内VPC環境に、コンテナベースで100%隔離デプロイされます。社内ローカルLLMと連携し、企業の機密データやソースコードが外部へ1バイトも流出することはありません。"
           }
         },
         {
           "@type": "Question",
-          "name": "社内の機密データ(マイナンバー、金融情報など)や個人情報(PII)の保護はどのように処理されますか？",
+          "name": "運用中の個人情報(マイナンバー、金融情報など)がAIモデルに学習されたり漏洩する心配はありませんか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "内蔵の個人情報保護フィルターがマイナンバー、連絡先、クレジットカード番号、口座番号などを送信前にリアルタイムで検知し、不可逆ハッシュ化またはマスキング処理を行います。企業の要件に応じてオンプレミスLLMとの連携により完全なデータ主権を保証します。"
+            "text": "内蔵のPII検知フィルターが電話番号、口座番号、識別番号などをリアルタイムで検知し、自動マスキング(匿名化)処理を行います。エンタープライズライセンス環境では、お客様の運用データが外部AIの学習に利用されることは一切ありません。"
           }
         },
         {
           "@type": "Question",
-          "name": "ソリューションの導入期間とPoC(概念実証)の進め方はどのようになりますか？",
+          "name": "本格導入の前に、自社環境で効果があるかを事前に検証(PoC)することは可能ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "導入するエージェントの種類やお客様の既存インフラ環境に応じて標準化されたPoCを提供します。一般的にPoC環境の構築および検証には1〜2週間、システム全体の連携から本番運用開始までは約1ヶ月を要し、専任エンジニアリングチームが伴走支援します。"
+            "text": "はい。本格導入前に、代表的な運用業務1〜2件を選定し、約1〜2週間で実効性を検証するPoCプログラムを提供しています。専任エンジニアが実データに基づき、作業削減時間や想定ROIを定量測定いたします。"
           }
         },
         {
           "@type": "Question",
-          "name": "ライセンス体系と料金モデルはどのようになっていますか？",
+          "name": "導入費用はどのような基準で算出され、投資に対するコスト削減効果はどの程度ですか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "企業の規模とデプロイ方式に合わせて、クラウドSaaSサブスクリプションおよびオンプレミス永久/年間エンタープライズライセンスを提供しています。ノード数やエージェントモジュールに応じた柔軟なパッケージングが可能で、詳細なお見積もりは導入規模診断を経てご案内いたします。"
+            "text": "クラウドSaaSサブスクリプションおよび社内構築型(オンプレミス)ライセンスに対応し、自動化対象ノード数やエージェント種別に応じて柔軟なパッケージを提供します。導入企業では反復運用工数の平均60〜80%削減を達成しています。"
           }
         },
         {
           "@type": "Question",
-          "name": "製品に関する詳細な開発者向けドキュメントやAPI仕様はどこで確認できますか？",
+          "name": "製品の詳細な開発者向けドキュメントやAPI仕様書はどこで確認できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "公式ドキュメントセンターであるdoc.empasy.comでMCP連携ガイド、REST API仕様、各種SDKのサンプルコードをご確認いただけます。また、公式GitHub (DramaticCollaboration)やお問い合わせ窓口(contact@empasy.com)より24時間以内に技術サポートを受けられます。"
+            "text": "すべてのソリューションの連携ガイドやAPI仕様、技術ドキュメントは公式ドキュメントセンター doc.empasy.com でご確認いただけます。また、オープンソース貢献やプラグインは公式GitHub(DramaticCollaboration)にて提供しています。"
           }
         }
       ]
@@ -170,22 +170,25 @@
         <div class="page-header text-center fade-in-up mb-4">
             <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Support &amp; FAQ</span>
             <h1 class="page-title" style="font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 1rem; color: var(--text-primary);">よくある質問</h1>
-            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">EmpasyのAI自律運用エコシステムとエンタープライズ導入に関して最もよく寄せられる質問をまとめました。</p>
+            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">運用自動化の導入検討時に最も重視される効果、安全統制、セキュリティ、導入手順をまとめました。</p>
         </div>
 
         <!-- Category Filter Tabs -->
-        <div class="faq-category-tabs fade-in-up" role="tablist" aria-label="FAQ カテゴリフィルター">
+        <div class="faq-category-tabs fade-in-up" role="tablist" aria-label="FAQカテゴリーフィルター">
             <button type="button" class="faq-category-btn active" data-category="all" role="tab" aria-selected="true">
-                すべての質問 <span class="faq-badge-count">16</span>
+                すべて表示 <span class="faq-badge-count">16</span>
             </button>
-            <button type="button" class="faq-category-btn" data-category="core" role="tab" aria-selected="false">
-                コアアーキテクチャ &amp; SyncVerse <span class="faq-badge-count">4</span>
+            <button type="button" class="faq-category-btn" data-category="benefits" role="tab" aria-selected="false">
+                導入効果＆差別化 <span class="faq-badge-count">4</span>
             </button>
             <button type="button" class="faq-category-btn" data-category="solutions" role="tab" aria-selected="false">
-                製品別ソリューション <span class="faq-badge-count">7</span>
+                業務別自動化ソリューション <span class="faq-badge-count">5</span>
+            </button>
+            <button type="button" class="faq-category-btn" data-category="security" role="tab" aria-selected="false">
+                安全統制＆セキュリティ <span class="faq-badge-count">4</span>
             </button>
             <button type="button" class="faq-category-btn" data-category="enterprise" role="tab" aria-selected="false">
-                セキュリティ &amp; 導入 <span class="faq-badge-count">5</span>
+                導入手順＆費用/PoC <span class="faq-badge-count">3</span>
             </button>
         </div>
 
@@ -193,76 +196,64 @@
             <div class="container" style="max-width: 850px;">
                 <div class="faq-container">
 
-                    <!-- Category: Core Architecture -->
-                    <div class="faq-item" data-category="core">
+                    <!-- Category: Benefits & Differentiation -->
+                    <div class="faq-item" data-category="benefits">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-core">コアアーキテクチャ</span>
-                                <div style="margin-top: 0.2rem;">自律型AIエージェントと従来の自動化ツール(RPA)の違いは何ですか？</div>
+                                <span class="faq-category-tag tag-benefits">導入効果</span>
+                                <div style="margin-top: 0.2rem;">従来のRPAやマクロ自動化のように、画面が少し変更されるだけで停止してしまう問題は解決されますか？</div>
                             </summary>
                             <div class="faq-answer">
-                                従来のRPAは事前に定義されたルールと静的セレクタースクリプトに基づいて動作するため、わずかなUIの変更やシステムの更新でも簡単にエラーが発生します。対照的に、Empasyの自律型AIエージェントはVision-LLMを介して人間のように画面要素を視覚的かつ文脈的に認識するため、UI構造が完全に変更されても自ら対処して復旧(Self-Healing)する能力を備えています。
+                                解決されます。従来のRPAはタグや固定座標に依存するため、UIの改修ごとにスクリプトが破損し保守工数が肥大化していました。Empasyの自律型エージェントはVision-LLMを搭載し、視覚レイアウトとテキスト文脈を総合認識するため、ボタンの位置やクラス名が変更されても人間のように対象を自動特定して作業を完遂します。
                             </div>
                         </details>
                     </div>
 
-                    <div class="faq-item" data-category="core">
+                    <div class="faq-item" data-category="benefits">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-core">コアアーキテクチャ</span>
-                                <div style="margin-top: 0.2rem;">SyncVerse中央管制塔とエージェント間(A2A)連携はどのように機能しますか？</div>
+                                <span class="faq-category-tag tag-benefits">適用範囲</span>
+                                <div style="margin-top: 0.2rem;">自社システムにおいて、どのような運用業務からすぐに自動化できますか？</div>
                             </summary>
                             <div class="faq-answer">
-                                SyncVerseは、標準Model Context Protocol (MCP)およびAgent-to-Agent (A2A)通信プロトコルに基づいて、すべての専門エージェントをリアルタイムで指揮します。企画(SyncCMS)、開発/スキャフォールディング(SyncBoot)、データ収集(SyncCrawl)、検証(SyncEta)、意思決定分析(SyncInsight)、LLMガバナンス(SyncLLM)が単一のエコシステムとして作業指示とフィードバックを相互連携します。
+                                リリースごとの回帰テスト・画面崩れ検証(QA)、外部サイトの変動データ収集・DB格納、多言語コンテンツの登録・自動翻訳同期、複数システムの運用ログ分析・日次ブリーフィング作成など、手作業が反復していた中核業務に即座に適用可能です。
                             </div>
                         </details>
                     </div>
 
-                    <div class="faq-item" data-category="core">
+                    <div class="faq-item" data-category="benefits">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-core">コアアーキテクチャ</span>
-                                <div style="margin-top: 0.2rem;">Spec-FirstガバナンスとHuman-in-the-Loop (HITL)原則とは何ですか？</div>
+                                <span class="faq-category-tag tag-benefits">業務連携</span>
+                                <div style="margin-top: 0.2rem;">企画・開発・テスト・運用など複数部門が関わる複合業務も自動化できますか？</div>
                             </summary>
                             <div class="faq-answer">
-                                AIエージェントによる幻覚(Hallucination)や不正なコード生成を防ぐため、Empasyは「Spec-Firstガバナンス」を適用しています。AIはまず検証可能な仕様書とテスト計画を作成し、管理者のデジタル署名承認(Human-in-the-Loop)を取得した後にのみコードブランチ作成とビルドを実行します。
+                                はい。単一作業の自動化にとどまらず、企画(SyncCMS)、開発(SyncBoot)、検証(SyncEta)、分析(SyncInsight)の各専門エージェントが標準プロトコル(MCP/A2A)で連携するチーム構成を備えており、部門横断的な運用プロセスを一貫して処理します。
                             </div>
                         </details>
                     </div>
 
-                    <div class="faq-item" data-category="core">
+                    <div class="faq-item" data-category="benefits">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-core">コアアーキテクチャ</span>
-                                <div style="margin-top: 0.2rem;">非常時に作動するEmergency Kill-Switch(緊急遮断)機能はどのような仕組みですか？</div>
+                                <span class="faq-category-tag tag-benefits">利便性</span>
+                                <div style="margin-top: 0.2rem;">非エンジニア(運用担当者や企画者)でもコードを書かずに自動化ルールやコンテンツを管理できますか？</div>
                             </summary>
                             <div class="faq-answer">
-                                異常トラフィック、不審なトークン急増、モデルの異常兆候、または不正アクセスを検知した場合、管理者のワンクリック操作または自動閾値検知により、全エージェントの書き込み権限を即座に剥奪し、システムを読み取り専用隔離(ReadOnly Lockdown)状態へと移行して企業資産とデータを安全に保護します。
+                                はい。複雑なプログラミング不要で、自然言語プロンプトと直感的な管理コンソールを通じて業務ルールの設定や画面コンテンツの編集が可能です。変更内容はリアルタイムプレビューで即座に確認できます。
                             </div>
                         </details>
                     </div>
 
-                    <!-- Category: Solutions -->
+                    <!-- Category: Solutions by Domain -->
                     <div class="faq-item" data-category="solutions">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-solutions">SyncEta (QA)</span>
-                                <div style="margin-top: 0.2rem;">SyncEtaを活用したWeb UIテスト自動化は動的な変化にどう対応しますか？</div>
+                                <span class="faq-category-tag tag-solutions">品質検証 (QA)</span>
+                                <div style="margin-top: 0.2rem;">リリースごとに繰り返される回帰テストやレイアウト崩れ点検を無人化できますか？</div>
                             </summary>
                             <div class="faq-answer">
-                                SyncEtaは従来の脆弱なCSSセレクターやXPathに依存しません。視覚的Vision-LLMモデルが画面全体のレイアウトをスキャンし、「ログインボタン」や「カートアイコン」などを人間のテスターと同じように識別します。したがって、開発チームがDOM構造を変更したりA/Bテストを実施したりしても、テストスクリプトを修正することなく安定したQA環境を維持できます。
-                            </div>
-                        </details>
-                    </div>
-
-                    <div class="faq-item" data-category="solutions">
-                        <details>
-                            <summary>
-                                <span class="faq-category-tag tag-solutions">SyncEta (QA)</span>
-                                <div style="margin-top: 0.2rem;">SyncEtaは既存のPlaywright、Selenium、Cypressテスト環境とどのように統合できますか？</div>
-                            </summary>
-                            <div class="faq-answer">
-                                既存のPlaywrightやSeleniumテストパイプラインの上にドロップイン(Drop-in)ラッパーとして導入できます。既存のテストコードを全面的に書き直す必要はなく、ビジョンベースの自己修復レイヤーとデスクトップ・モバイル対応の回帰テスト機能のみを即座に拡張可能です。
+                                はい。SyncEtaを利用することで、マウス操作の録画や既存のエクセルテストケースを取り込むだけで自動化シナリオを生成・無人実行できます。UI変更時もセレクター自動修復(Self-Healing)機能が作動し、スクリプト修正工数を80%以上削減します。
                             </div>
                         </details>
                     </div>
@@ -270,11 +261,11 @@
                     <div class="faq-item" data-category="solutions">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-solutions">SyncBoot (開発)</span>
-                                <div style="margin-top: 0.2rem;">レガシーシステムをクラウドに移行する際、SyncBootはどのように役立ちますか？</div>
+                                <span class="faq-category-tag tag-solutions">システム移行 (DevOps)</span>
+                                <div style="margin-top: 0.2rem;">複雑なレガシーシステムをクラウドや最新アーキテクチャへ移行する際、運用工数を削減できますか？</div>
                             </summary>
                             <div class="faq-answer">
-                                SyncBootは、数十年にわたって蓄積されたモノリシックアーキテクチャの依存関係を詳細に分析し、それらを独立したマイクロサービス(MSA)形式に分離する設計および初期コードスキャフォールディング作業を自動化します。Sagaパターンに基づく分散補償トランザクション処理までAIが提案し、移行に要する人員と時間を80%以上劇的に短縮します。
+                                はい。SyncBootが長年蓄積されたモノリシックコードの依存関係を自動分析し、独立したマイクロサービス(MSA)構造への分離およびコードスキャフォールディングを支援することで、移行期間とリソースを大幅に短縮します。
                             </div>
                         </details>
                     </div>
@@ -282,11 +273,11 @@
                     <div class="faq-item" data-category="solutions">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-solutions">SyncCMS (コンテンツ)</span>
-                                <div style="margin-top: 0.2rem;">SyncCMSは非エンジニア(企画者/マーケター)でもコードなしで複雑なコンテンツを管理できますか？</div>
+                                <span class="faq-category-tag tag-solutions">データ収集 (Data Pipeline)</span>
+                                <div style="margin-top: 0.2rem;">ターゲットサイトの構造が頻繁に変更される外部データ収集でも、停止することなく維持できますか？</div>
                             </summary>
                             <div class="faq-answer">
-                                はい。企画者が自然言語プロンプトとリアルタイムライブプレビュー画面を通じて、直感的にコンポーネントを配置・編集できます。原本を更新すると、関連付けられた多言語(日本語、英語、韓国語)リソースの翻訳がバックグラウンドで自動同期され、グローバル展開のサイクルを短縮します。
+                                はい。SyncCrawlの視覚的レンダリング分析エンジンがサイトマークアップの変更を検知し、収集ルールをリアルタイムで自動補正します。アンチボット対策と大規模分散処理により、無停止のデータパイプラインを保証します。
                             </div>
                         </details>
                     </div>
@@ -294,11 +285,11 @@
                     <div class="faq-item" data-category="solutions">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-solutions">SyncCrawl (収集)</span>
-                                <div style="margin-top: 0.2rem;">SyncCrawlはWebサイトの構造変化やアンチボット環境下でどのように継続的なデータ収集を保証しますか？</div>
+                                <span class="faq-category-tag tag-solutions">意思決定分析 (BI)</span>
+                                <div style="margin-top: 0.2rem;">単なる統計グラフの表示にとどまらず、AIが原因分析や実行プランまで提案してくれますか？</div>
                             </summary>
                             <div class="faq-answer">
-                                視覚レンダリング解析エンジンを搭載しており、対象サイトのマークアップ構造が変更されても、視覚レイアウトに基づいて収集ルールをリアルタイムで自動補正します。また、大規模な分散ワーカーノードのスケーリングやRAG標準ベクトルストレージ(OpenSearch, Pinecone, Milvus等)との連携を標準サポートしています。
+                                はい。従来のBIが過去実績を表示するだけだったのに対し、SyncInsightは社内外のデータを深層クロス分析して異常値の根本原因を特定し、運用者が承認して即座に実行できる具体的なアクションプラン(Action Plan)をレポートとして出力します。
                             </div>
                         </details>
                     </div>
@@ -306,72 +297,73 @@
                     <div class="faq-item" data-category="solutions">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-solutions">SyncInsight (意思決定)</span>
-                                <div style="margin-top: 0.2rem;">従来のダッシュボード(BI)ソリューションとSyncInsightの違いは何ですか？</div>
+                                <span class="faq-category-tag tag-solutions">コスト最適化 (FinOps)</span>
+                                <div style="margin-top: 0.2rem;">社内AIエージェントの本格導入に伴い急増するLLM推論コストはどのように抑制しますか？</div>
                             </summary>
                             <div class="faq-answer">
-                                従来のBIが過去の統計をグラフで可視化することに留まっていたのに対し、SyncInsightは社内外のデータを結合して原因を究明するディープリサーチ(Deep Research)を実行し、エージェント間の検討を経て管理者の承認に基づく実行可能なアクションプランを導き出します。
+                                SyncLLMのインテリジェントルーティングがクエリの難易度に応じて軽量モデル(SLM)と高性能モデルを自動振り分けし、セマンティックキャッシングと日次予算上限(Cap)を適用することで、エンタープライズAI運用費を最大60%削減します。
                             </div>
                         </details>
                     </div>
 
-                    <div class="faq-item" data-category="solutions">
+                    <!-- Category: Safety & Security -->
+                    <div class="faq-item" data-category="security">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-solutions">SyncLLM (ガバナンス)</span>
-                                <div style="margin-top: 0.2rem;">SyncLLMはマルチLLMルーティングとエンタープライズFinOps(コスト削減)をどのように実現しますか？</div>
+                                <span class="faq-category-tag tag-security">リスク統制</span>
+                                <div style="margin-top: 0.2rem;">AIの誤判断によるデータ改ざんや運用事故のリスクはどのように統制されますか？</div>
                             </summary>
                             <div class="faq-answer">
-                                クエリの複雑さと意図をリアルタイムで分析し、単純なクエリは軽量なSLM(Small Language Model)へ、複雑な推論は高精度なLLMへとインテリジェントにルーティングします。部門・プロジェクトごとのトークン予算Cap設定、リアルタイムPIIマスキング、セマンティックキャッシュにより、LLM運用コストを最大60%削減します。
+                                AIがシステムに対して直接書き込みを行えないよう、厳格な承認プロセスを適用しています。AIはまず作業計画書と変更仕様を作成して担当者に提出し、担当管理者のデジタル署名承認が完了した案件のみが実行される「Human-in-the-Loop(人間介入承認)」体制で統制されます。
                             </div>
                         </details>
                     </div>
 
-                    <!-- Category: Enterprise & Security -->
+                    <div class="faq-item" data-category="security">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-security">緊急遮断</span>
+                                <div style="margin-top: 0.2rem;">異常動作や緊急事態が発生した場合、自動化を即座に停止できますか？</div>
+                            </summary>
+                            <div class="faq-answer">
+                                はい。管理画面の「ワンクリック・緊急キルスイッチ(Kill-Switch)」または自動閾値検知により、1秒以内に全AIエージェントの書き込み権限を剥奪し、システムを「読み取り専用」へ凍結して二次被害を遮断します。
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="security">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-security">閉域網デプロイ</span>
+                                <div style="margin-top: 0.2rem;">セキュリティ基準の厳しい社内閉域網(オンプレミス)やVPC環境でも外部流出なしで利用できますか？</div>
+                            </summary>
+                            <div class="faq-answer">
+                                はい。外部インターネットから完全に遮断されたエアギャップ閉域網および社内VPC環境に、コンテナベースで100%隔離デプロイされます。社内ローカルLLMと連携し、企業の機密データやソースコードが外部へ1バイトも流出することはありません。
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="security">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-security">個人情報保護</span>
+                                <div style="margin-top: 0.2rem;">運用中の個人情報(マイナンバー、金融情報など)がAIモデルに学習されたり漏洩する心配はありませんか？</div>
+                            </summary>
+                            <div class="faq-answer">
+                                内蔵のPII検知フィルターが電話番号、口座番号、識別番号などをリアルタイムで検知し、自動マスキング(匿名化)処理を行います。エンタープライズライセンス環境では、お客様の運用データが外部AIの学習に利用されることは一切ありません。
+                            </div>
+                        </details>
+                    </div>
+
+                    <!-- Category: Enterprise & Licensing -->
                     <div class="faq-item" data-category="enterprise">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-enterprise">セキュリティ &amp; デプロイ</span>
-                                <div style="margin-top: 0.2rem;">金融、公共、大企業向けのオンプレミス(On-Premise)および完全閉域網(Air-Gapped)へのデプロイは可能ですか？</div>
+                                <span class="faq-category-tag tag-enterprise">事前検証 (PoC)</span>
+                                <div style="margin-top: 0.2rem;">本格導入の前に、自社環境で効果があるかを事前に検証(PoC)することは可能ですか？</div>
                             </summary>
                             <div class="faq-answer">
-                                はい。Empasyのすべてのソリューションは、インターネット接続が完全に遮断された社内閉域網(Air-Gapped)や企業専用VPC環境へコンテナベースで100%隔離デプロイ可能です。vLLMやOllamaなどのローカルオープンソースLLMランタイムと連携し、企業の機密情報やソースコードが社外へ1バイトも流出することはありません。
-                            </div>
-                        </details>
-                    </div>
-
-                    <div class="faq-item" data-category="enterprise">
-                        <details>
-                            <summary>
-                                <span class="faq-category-tag tag-enterprise">セキュリティ &amp; デプロイ</span>
-                                <div style="margin-top: 0.2rem;">社内の機密データ(マイナンバー、金融情報など)や個人情報(PII)の保護はどのように処理されますか？</div>
-                            </summary>
-                            <div class="faq-answer">
-                                内蔵の個人情報保護フィルターがマイナンバー、連絡先、クレジットカード番号、口座番号などを送信前にリアルタイムで検知し、不可逆ハッシュ化またはマスキング処理を行います。企業の要件に応じてオンプレミスLLMとの連携により完全なデータ主権を保証します。
-                            </div>
-                        </details>
-                    </div>
-
-                    <div class="faq-item" data-category="enterprise">
-                        <details>
-                            <summary>
-                                <span class="faq-category-tag tag-enterprise">導入プロセス</span>
-                                <div style="margin-top: 0.2rem;">ソリューションの導入期間とPoC(概念実証)の進め方はどのようになりますか？</div>
-                            </summary>
-                            <div class="faq-answer">
-                                導入するエージェントの種類やお客様の既存インフラ環境に応じて標準化されたPoCを提供します。一般的にPoC環境の構築および検証には1〜2週間、システム全体の連携から本番運用開始までは約1ヶ月を要し、専任エンジニアリングチームが伴走支援します。
-                            </div>
-                        </details>
-                    </div>
-
-                    <div class="faq-item" data-category="enterprise">
-                        <details>
-                            <summary>
-                                <span class="faq-category-tag tag-enterprise">ライセンス</span>
-                                <div style="margin-top: 0.2rem;">ライセンス体系と料金モデルはどのようになっていますか？</div>
-                            </summary>
-                            <div class="faq-answer">
-                                企業の規模とデプロイ方式に合わせて、クラウドSaaSサブスクリプションおよびオンプレミス永久/年間エンタープライズライセンスを提供しています。ノード数やエージェントモジュールに応じた柔軟なパッケージングが可能で、詳細なお見積もりは導入規模診断を経てご案内いたします。
+                                はい。本格導入前に、代表的な運用業務1〜2件を選定し、約1〜2週間で実効性を検証するPoCプログラムを提供しています。専任エンジニアが実データに基づき、作業削減時間や想定ROIを定量測定いたします。
                             </div>
                         </details>
                     </div>
@@ -379,11 +371,23 @@
                     <div class="faq-item" data-category="enterprise">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-enterprise">サポート &amp; ドキュメント</span>
-                                <div style="margin-top: 0.2rem;">製品に関する詳細な開発者向けドキュメントやAPI仕様はどこで確認できますか？</div>
+                                <span class="faq-category-tag tag-enterprise">ライセンス＆ROI</span>
+                                <div style="margin-top: 0.2rem;">導入費用はどのような基準で算出され、投資に対するコスト削減効果はどの程度ですか？</div>
                             </summary>
                             <div class="faq-answer">
-                                公式ドキュメントセンターである <a href="https://doc.empasy.com/" target="_blank" style="color:var(--primary-color); text-decoration:underline;">doc.empasy.com</a> でMCP連携ガイド、REST API仕様、各種SDKのサンプルコードをご確認いただけます。また、公式GitHub (DramaticCollaboration)やお問い合わせ窓口(contact@empasy.com)より24時間以内に技術サポートを受けられます。
+                                クラウドSaaSサブスクリプションおよび社内構築型(オンプレミス)ライセンスに対応し、自動化対象ノード数やエージェント種別に応じて柔軟なパッケージを提供します。導入企業では反復運用工数の平均60〜80%削減を達成しています。
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="enterprise">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-enterprise">ドキュメント＆API</span>
+                                <div style="margin-top: 0.2rem;">製品の詳細な開発者向けドキュメントやAPI仕様書はどこで確認できますか？</div>
+                            </summary>
+                            <div class="faq-answer">
+                                すべてのソリューションの連携ガイドやAPI仕様、技術ドキュメントは公式ドキュメントセンター <a href="https://doc.empasy.com/" target="_blank" style="color:var(--primary-color); text-decoration:underline;">doc.empasy.com</a> でご確認いただけます。また、オープンソース貢献やプラグインは公式GitHub(DramaticCollaboration)にて提供しています。
                             </div>
                         </details>
                     </div>

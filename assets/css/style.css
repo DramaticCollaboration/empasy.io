@@ -995,6 +995,7 @@ body.has-announcement-bar .top-announcement-bar {
     border-radius: 4px;
     margin-bottom: 0.5rem;
 }
+.faq-category-tag.tag-benefits,
 .faq-category-tag.tag-core {
     background: rgba(8, 145, 178, 0.15);
     color: #38bdf8;
@@ -1004,6 +1005,11 @@ body.has-announcement-bar .top-announcement-bar {
     background: rgba(16, 185, 129, 0.15);
     color: #34d399;
     border: 1px solid rgba(52, 211, 153, 0.3);
+}
+.faq-category-tag.tag-security {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(248, 113, 113, 0.3);
 }
 .faq-category-tag.tag-enterprise {
     background: rgba(139, 92, 246, 0.15);
@@ -1996,6 +2002,175 @@ body.has-announcement-bar .top-announcement-bar {
     border-bottom-color: #38bdf8;
     background: rgba(8, 145, 178, 0.1);
 }
+
+.terminal-role-banner {
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid #334155;
+    padding: 0.65rem 1.2rem;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    line-height: 1.5;
+    font-family: var(--font-sans);
+}
+
+.terminal-role-tag {
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.terminal-role-text {
+    color: #e2e8f0;
+    font-weight: 500;
+}
+
+/* =========================================
+   Before vs After Comparison Section
+========================================= */
+.before-after-section {
+    padding: 4.5rem 0;
+    border-top: 1px solid var(--border-color);
+    background: rgba(11, 17, 32, 0.6);
+}
+
+.ba-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+@media (max-width: 868px) {
+    .ba-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+.ba-card {
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.ba-card:hover {
+    transform: translateY(-2px);
+}
+
+.ba-card.pain {
+    background: linear-gradient(145deg, rgba(239, 68, 68, 0.04), rgba(15, 23, 42, 0.85));
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.ba-card.gain {
+    background: linear-gradient(145deg, rgba(8, 145, 178, 0.08), rgba(15, 23, 42, 0.9));
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    box-shadow: 0 10px 30px -10px rgba(8, 145, 178, 0.2);
+}
+
+.ba-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ba-badge {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.ba-badge.pain {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.ba-badge.gain {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.ba-card-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+.ba-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.ba-item {
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+}
+
+.ba-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+.ba-icon.pain {
+    color: #f87171;
+}
+
+.ba-icon.gain {
+    color: #34d399;
+}
+
+.ba-item-content h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    margin-bottom: 0.3rem;
+}
+
+.ba-item-content p {
+    font-size: 0.92rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.hero-btn-subtext {
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.85;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
 
 /* =========================================
    Client Marquee Badges & Responsive Stats

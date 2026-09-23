@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Frequently Asked Questions (FAQ) | Empasy Enterprise AI Platform</title>
-    <meta name="description" content="Frequently asked questions about Empasy's autonomous AI ecosystem (SyncVerse, SyncEta, SyncBoot, SyncCMS, SyncCrawl, SyncInsight, SyncLLM), security, air-gapped deployment, and licensing.">
-    <meta name="keywords" content="Enterprise AI Ecosystem, Enterprise AI Platform, FAQ, Frequently Asked Questions, SyncVerse, SyncEta, SyncBoot, SyncCMS, SyncCrawl, SyncInsight, SyncLLM, Air-Gapped Deployment, On-Premise AI">
+    <title>Frequently Asked Questions (FAQ) | Empasy Autonomous Operations Platform</title>
+    <meta name="description" content="Frequently asked questions about Empasy's autonomous operations platform, ROI, differences from legacy RPA, human-in-the-loop safety governance, air-gapped deployment, and PoC onboarding.">
+    <meta name="keywords" content="Enterprise Autonomous Operations, AI Operations Automation, FAQ, Frequently Asked Questions, RPA Replacement, SyncVerse, SyncEta, SyncBoot, On-Premise AI, Air-Gapped Deployment, PoC">
     <meta property="og:title" content="Frequently Asked Questions (FAQ) | Empasy">
-    <meta property="og:description" content="Explore key answers regarding Empasy's autonomous multi-agent ecosystem and enterprise deployment.">
+    <meta property="og:description" content="Explore key answers regarding operational automation ROI, safety governance, air-gapped security, and enterprise onboarding.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://empasy.io/en/pages/faq.html">
     <meta property="og:image" content="https://empasy.io/empasy-logo.png">
@@ -31,130 +31,130 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is the difference between autonomous AI agents and traditional automation tools (RPA)?",
+          "name": "Does Empasy solve the brittle breakage problem seen in legacy RPA when UI layouts change?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Traditional RPA operates based on predefined static rules and selector scripts, easily causing failures with minor UI changes or system updates. In contrast, Empasy's autonomous AI agent visually recognizes and understands screen elements like a human through Vision-LLM, enabling it to cope and recover (Self-Healing) on its own even if the UI structure completely changes."
+            "text": "Yes. Traditional RPA fails whenever selectors or screen coordinates change. Empasy's autonomous agents combine Vision-LLM and semantic text understanding to locate target elements contextually, adapting automatically even when UI layouts or CSS classes are restructured."
           }
         },
         {
           "@type": "Question",
-          "name": "How does the SyncVerse Central Control Tower and Agent-to-Agent (A2A) collaboration work?",
+          "name": "Which operational tasks in our organization can we automate first?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "SyncVerse orchestrates all specialized agents in real time based on standard Model Context Protocol (MCP) and Agent-to-Agent (A2A) communication protocols. Planning (SyncCMS), Development/Scaffolding (SyncBoot), Web Extraction (SyncCrawl), Testing (SyncEta), Decision Intelligence (SyncInsight), and LLM Governance (SyncLLM) collaborate seamlessly in a unified ecosystem."
+            "text": "You can immediately automate routine, error-prone workflows including release regression testing (QA), recurring web data extraction and pipeline sync, multilingual product content localization, and cross-system operational log analysis with daily briefing synthesis."
           }
         },
         {
           "@type": "Question",
-          "name": "What are Spec-First Governance and Human-in-the-Loop (HITL) principles?",
+          "name": "Can complex workflows spanning planning, development, QA, and operations be automated?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "To eliminate hallucination risks and unauthorized code modifications, Empasy enforces Spec-First Governance. AI agents must first generate verifiable specification documents and test plans, and require cryptographic administrator approval (Human-in-the-Loop) before creating Git branches or executing build pipelines."
+            "text": "Yes. Rather than automating isolated tasks, Empasy deploys specialized agents (SyncCMS for planning, SyncBoot for development, SyncEta for QA, SyncInsight for analysis) that collaborate via standard protocols (MCP/A2A) to orchestrate end-to-end multi-team operations."
           }
         },
         {
           "@type": "Question",
-          "name": "How does the Emergency Kill-Switch function work during critical anomalies?",
+          "name": "Can non-technical operators and product managers manage automation rules and content without coding?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Upon detecting anomalous traffic, abnormal token surges, model degradation, or unauthorized access, a single administrator action or automated threshold alert instantly revokes write permissions across all agents and locks the system into ReadOnly Lockdown, safeguarding infrastructure and proprietary data."
+            "text": "Yes. Operators can configure business rules, trigger workflows, and manage content using natural language prompts and intuitive visual dashboards, with live real-time previews."
           }
         },
         {
           "@type": "Question",
-          "name": "How does web UI test automation using SyncEta respond to dynamic changes?",
+          "name": "Can we automate release regression testing and visual layout verification without writing scripts?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "SyncEta does not rely on fragile CSS Selectors or XPath. Its Vision-LLM model scans the entire screen layout to identify elements like login buttons or shopping cart icons just like a human tester. Therefore, even if the development team changes the DOM hierarchy or runs A/B experiments, QA tests execute reliably without manual script revisions."
+            "text": "Yes. With SyncEta, teams can record browser interactions or import existing Excel test cases to run autonomous regression passes. Its built-in self-healing engine resolves broken selectors automatically, cutting script maintenance effort by over 80%."
           }
         },
         {
           "@type": "Question",
-          "name": "How does SyncEta integrate with existing Playwright, Selenium, or Cypress environments?",
+          "name": "How does Empasy reduce operational overhead when modernizing complex legacy systems to cloud-native architectures?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "SyncEta integrates as a drop-in wrapper on top of your existing Playwright or Selenium test pipelines. You do not need to rewrite existing test suites; you can immediately leverage vision-powered self-healing regression testing across both desktop and mobile viewports."
+            "text": "SyncBoot automatically analyzes dependencies across monolithic codebases, decouples them into independent microservices (MSA), and scaffolds modern boilerplate code, dramatically shortening migration cycles and reducing engineering overhead."
           }
         },
         {
           "@type": "Question",
-          "name": "How does SyncBoot assist in migrating monolithic legacy systems to cloud-native microservices (MSA)?",
+          "name": "Can external web data extraction pipelines continue operating even when target sites change layouts or enforce anti-bot measures?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "SyncBoot deeply analyzes legacy monolithic codebases, data models, and service dependencies to architect decoupled microservice boundaries. It automates Spring Boot entity generation, CRUD APIs, DDL scripts, and even generates Saga pattern distributed compensation transactions, accelerating modernization timelines by over 80%."
+            "text": "Yes. SyncCrawl features visual rendering analysis that dynamically recalibrates scraping rules in real time whenever target sites update their markup. Combined with distributed worker scaling, it guarantees continuous data flow."
           }
         },
         {
           "@type": "Question",
-          "name": "Can non-developers (planners and marketers) manage complex content without code using SyncCMS?",
+          "name": "Beyond static BI charts, can AI diagnose root causes and recommend actionable operational plans?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. SyncCMS provides an intuitive visual interface where non-technical planners can arrange components and edit structured content via natural language prompts and live previews. When content is updated, multilingual translations (Korean, English, Japanese) are automatically synchronized in the background."
+            "text": "Yes. While conventional BI displays historical metrics, SyncInsight correlates cross-system operational data to diagnose anomalies and synthesizes concrete, approved action plans for human operators."
           }
         },
         {
           "@type": "Question",
-          "name": "How does SyncCrawl ensure uninterrupted data extraction amidst anti-bot defenses and layout changes?",
+          "name": "How do we prevent runaway LLM inference costs as autonomous agents scale across enterprise operations?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Equipped with a visual rendering intelligence engine, SyncCrawl dynamically recalibrates crawling rules based on visual layout cues when target website markup changes. It natively supports distributed worker node autoscaling and standard vector database sinks (OpenSearch, Pinecone, Milvus) for enterprise RAG pipelines."
+            "text": "SyncLLM's intelligent routing directs simple queries to lightweight SLMs and complex reasoning to high-tier LLMs. With semantic caching and departmental budget caps, enterprise inference costs are reduced by up to 60%."
           }
         },
         {
           "@type": "Question",
-          "name": "How does SyncInsight differ from traditional BI dashboards, and how does it support decision-making?",
+          "name": "How do you prevent AI agents from hallucinating, modifying unauthorized data, or causing operational accidents?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "While traditional BI simply aggregates past data into charts, SyncInsight autonomously conducts Deep Research by correlating internal metrics with external market signals. Through multi-agent cross-review and simulation, it synthesizes concrete, executable action plans requiring administrator sign-off."
+            "text": "Empasy strictly enforces Spec-First Governance and Human-in-the-Loop approval. Agents cannot perform write operations autonomously; they must first draft verifiable specifications and execution plans for human digital approval before changes are committed."
           }
         },
         {
           "@type": "Question",
-          "name": "How does SyncLLM achieve multi-LLM intelligent routing and enterprise FinOps cost optimization?",
+          "name": "Can administrators immediately freeze or halt all automation in an emergency?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "SyncLLM analyzes query complexity and intent in real time, routing simple queries to lightweight SLMs and complex reasoning tasks to high-tier LLMs. With granular token budget caps, real-time PII masking, and semantic caching, it cuts enterprise LLM operational costs by up to 60%."
+            "text": "Yes. Through the one-click Emergency Kill-Switch on the management console or via automatic anomaly thresholds, all agents' write permissions are revoked within 1 second, locking the entire system into a read-only state."
           }
         },
         {
           "@type": "Question",
-          "name": "Can the platform be deployed on-premise and in air-gapped secure networks for finance and government?",
+          "name": "Can Empasy run in strict air-gapped on-premises or VPC networks without internet connectivity?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. All Empasy solutions can be deployed 100% isolated in containerized on-premise environments, private VPCs, and completely air-gapped networks without external internet access. When combined with local open-source LLM runtimes (vLLM, Ollama), not a single byte of proprietary code or confidential data leaves your perimeter."
+            "text": "Yes. All Empasy solutions can be deployed as isolated containers within air-gapped networks and private VPCs. Paired with local open-source LLM runtimes (such as vLLM or Ollama), zero bytes of code or proprietary data ever leave your firewall."
           }
         },
         {
           "@type": "Question",
-          "name": "How is sensitive internal data (PII, financial numbers) protected during AI operations?",
+          "name": "Is customer PII (resident numbers, payment info) protected from being leaked or ingested by AI models?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Built-in data protection filters proactively detect resident registration numbers, phone numbers, payment card numbers, and bank account information, applying real-time pseudonymization and masking before processing, ensuring complete compliance and data sovereignty."
+            "text": "Built-in PII inspection filters detect and mask sensitive identifiers in real time. Under enterprise licensing, no customer operational data is ever stored or utilized for external foundation model training."
           }
         },
         {
           "@type": "Question",
-          "name": "What is the typical deployment timeline and PoC (Proof of Concept) process?",
+          "name": "Can we validate the solution on our own systems through a Proof of Concept (PoC) before committing?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Setup time depends on the chosen agents and existing infrastructure, but typically a PoC sandbox environment is established within 1 to 2 weeks, with full system integration and production deployment achieved in approximately one month, closely supported by our dedicated engineering team."
+            "text": "Yes. We offer a 1-to-2 week structured PoC program focusing on 1 or 2 of your key operational workflows. Our dedicated enterprise engineers benchmark time-saving metrics and projected ROI using your real scenarios."
           }
         },
         {
           "@type": "Question",
-          "name": "What licensing options and pricing models are available?",
+          "name": "How is pricing structured, and what is the typical return on investment (ROI)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Empasy offers flexible cloud SaaS subscriptions as well as perpetual and annual on-premise enterprise licenses. Packaging is tailored based on node capacity and required agent modules, with customized quotes provided after an initial architecture consultation."
+            "text": "We offer cloud SaaS subscriptions and on-premises perpetual/annual enterprise licenses, scaled flexibly by automated nodes and agent modules. Enterprise adopters report an average 60% to 80% reduction in routine manual maintenance overhead."
           }
         },
         {
           "@type": "Question",
-          "name": "Where can developers find API documentation, integration guides, and technical support?",
+          "name": "Where can we access detailed developer documentation and API specifications?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Comprehensive developer guides, Model Context Protocol (MCP) specifications, and REST API docs are available at doc.empasy.com. Open-source contributions and plugins are hosted on our official GitHub (DramaticCollaboration), and enterprise support is accessible via our contact page and contact@empasy.com."
+            "text": "Comprehensive integration guides, architecture specifications, and API docs are available at doc.empasy.com, with open-source plugins hosted on our official GitHub organization (DramaticCollaboration)."
           }
         }
       ]
@@ -170,22 +170,25 @@
         <div class="page-header text-center fade-in-up mb-4">
             <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Support &amp; FAQ</span>
             <h1 class="page-title" style="font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 1rem; color: var(--text-primary);">Frequently Asked Questions</h1>
-            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">Explore answers to common questions about Empasy's autonomous AI ecosystem and enterprise integration.</p>
+            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">Key answers for IT leaders and operators on automation ROI, safety safeguards, air-gapped security, and deployment.</p>
         </div>
 
         <!-- Category Filter Tabs -->
         <div class="faq-category-tabs fade-in-up" role="tablist" aria-label="FAQ Category Filter">
             <button type="button" class="faq-category-btn active" data-category="all" role="tab" aria-selected="true">
-                All Questions <span class="faq-badge-count">16</span>
+                All <span class="faq-badge-count">16</span>
             </button>
-            <button type="button" class="faq-category-btn" data-category="core" role="tab" aria-selected="false">
-                Core Architecture &amp; SyncVerse <span class="faq-badge-count">4</span>
+            <button type="button" class="faq-category-btn" data-category="benefits" role="tab" aria-selected="false">
+                Benefits &amp; Differentiation <span class="faq-badge-count">4</span>
             </button>
             <button type="button" class="faq-category-btn" data-category="solutions" role="tab" aria-selected="false">
-                Products &amp; Solutions <span class="faq-badge-count">7</span>
+                Domain Solutions <span class="faq-badge-count">5</span>
+            </button>
+            <button type="button" class="faq-category-btn" data-category="security" role="tab" aria-selected="false">
+                Safety &amp; Security <span class="faq-badge-count">4</span>
             </button>
             <button type="button" class="faq-category-btn" data-category="enterprise" role="tab" aria-selected="false">
-                Security &amp; Enterprise <span class="faq-badge-count">5</span>
+                Onboarding &amp; Pricing <span class="faq-badge-count">3</span>
             </button>
         </div>
 
@@ -193,76 +196,64 @@
             <div class="container" style="max-width: 850px;">
                 <div class="faq-container">
 
-                    <!-- Category: Core Architecture -->
-                    <div class="faq-item" data-category="core">
+                    <!-- Category: Benefits & Differentiation -->
+                    <div class="faq-item" data-category="benefits">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-core">Core Architecture</span>
-                                <div style="margin-top: 0.2rem;">What is the difference between autonomous AI agents and traditional automation tools (RPA)?</div>
+                                <span class="faq-category-tag tag-benefits">Benefits</span>
+                                <div style="margin-top: 0.2rem;">Does Empasy solve the brittle breakage problem seen in legacy RPA when UI layouts change?</div>
                             </summary>
                             <div class="faq-answer">
-                                Traditional RPA operates based on predefined static rules and selector scripts, easily causing failures with minor UI changes or system updates. In contrast, Empasy's autonomous AI agent visually recognizes and understands screen elements like a human through Vision-LLM, enabling it to cope and recover (Self-Healing) on its own even if the UI structure completely changes.
+                                Yes. Traditional RPA fails whenever selectors or screen coordinates change. Empasy's autonomous agents combine Vision-LLM and semantic text understanding to locate target elements contextually, adapting automatically even when UI layouts or CSS classes are restructured.
                             </div>
                         </details>
                     </div>
 
-                    <div class="faq-item" data-category="core">
+                    <div class="faq-item" data-category="benefits">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-core">Core Architecture</span>
-                                <div style="margin-top: 0.2rem;">How does the SyncVerse Central Control Tower and Agent-to-Agent (A2A) collaboration work?</div>
+                                <span class="faq-category-tag tag-benefits">Scope of Automation</span>
+                                <div style="margin-top: 0.2rem;">Which operational tasks in our organization can we automate first?</div>
                             </summary>
                             <div class="faq-answer">
-                                SyncVerse orchestrates all specialized agents in real time based on standard Model Context Protocol (MCP) and Agent-to-Agent (A2A) communication protocols. Planning (SyncCMS), Development/Scaffolding (SyncBoot), Web Extraction (SyncCrawl), Testing (SyncEta), Decision Intelligence (SyncInsight), and LLM Governance (SyncLLM) collaborate seamlessly in a unified ecosystem.
+                                You can immediately automate routine, error-prone workflows including release regression testing (QA), recurring web data extraction and pipeline sync, multilingual product content localization, and cross-system operational log analysis with daily briefing synthesis.
                             </div>
                         </details>
                     </div>
 
-                    <div class="faq-item" data-category="core">
+                    <div class="faq-item" data-category="benefits">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-core">Core Architecture</span>
-                                <div style="margin-top: 0.2rem;">What are Spec-First Governance and Human-in-the-Loop (HITL) principles?</div>
+                                <span class="faq-category-tag tag-benefits">Multi-Team Workflow</span>
+                                <div style="margin-top: 0.2rem;">Can complex workflows spanning planning, development, QA, and operations be automated?</div>
                             </summary>
                             <div class="faq-answer">
-                                To eliminate hallucination risks and unauthorized code modifications, Empasy enforces Spec-First Governance. AI agents must first generate verifiable specification documents and test plans, and require cryptographic administrator approval (Human-in-the-Loop) before creating Git branches or executing build pipelines.
+                                Yes. Rather than automating isolated tasks, Empasy deploys specialized agents (SyncCMS for planning, SyncBoot for development, SyncEta for QA, SyncInsight for analysis) that collaborate via standard protocols (MCP/A2A) to orchestrate end-to-end multi-team operations.
                             </div>
                         </details>
                     </div>
 
-                    <div class="faq-item" data-category="core">
+                    <div class="faq-item" data-category="benefits">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-core">Core Architecture</span>
-                                <div style="margin-top: 0.2rem;">How does the Emergency Kill-Switch function work during critical anomalies?</div>
+                                <span class="faq-category-tag tag-benefits">Ease of Use</span>
+                                <div style="margin-top: 0.2rem;">Can non-technical operators and product managers manage automation rules and content without coding?</div>
                             </summary>
                             <div class="faq-answer">
-                                Upon detecting anomalous traffic, abnormal token surges, model degradation, or unauthorized access, a single administrator action or automated threshold alert instantly revokes write permissions across all agents and locks the system into ReadOnly Lockdown, safeguarding infrastructure and proprietary data.
+                                Yes. Operators can configure business rules, trigger workflows, and manage content using natural language prompts and intuitive visual dashboards, with live real-time previews.
                             </div>
                         </details>
                     </div>
 
-                    <!-- Category: Solutions -->
+                    <!-- Category: Solutions by Domain -->
                     <div class="faq-item" data-category="solutions">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-solutions">SyncEta (QA)</span>
-                                <div style="margin-top: 0.2rem;">How does web UI test automation using SyncEta respond to dynamic changes?</div>
+                                <span class="faq-category-tag tag-solutions">Quality Assurance (QA)</span>
+                                <div style="margin-top: 0.2rem;">Can we automate release regression testing and visual layout verification without writing scripts?</div>
                             </summary>
                             <div class="faq-answer">
-                                SyncEta does not rely on fragile CSS Selectors or XPath. Its Vision-LLM model scans the entire screen layout to identify elements like login buttons or shopping cart icons just like a human tester. Therefore, even if the development team changes the DOM hierarchy or runs A/B experiments, QA tests execute reliably without manual script revisions.
-                            </div>
-                        </details>
-                    </div>
-
-                    <div class="faq-item" data-category="solutions">
-                        <details>
-                            <summary>
-                                <span class="faq-category-tag tag-solutions">SyncEta (QA)</span>
-                                <div style="margin-top: 0.2rem;">How does SyncEta integrate with existing Playwright, Selenium, or Cypress environments?</div>
-                            </summary>
-                            <div class="faq-answer">
-                                SyncEta integrates as a drop-in wrapper on top of your existing Playwright or Selenium test pipelines. You do not need to rewrite existing test suites; you can immediately leverage vision-powered self-healing regression testing across both desktop and mobile viewports.
+                                Yes. With SyncEta, teams can record browser interactions or import existing Excel test cases to run autonomous regression passes. Its built-in self-healing engine resolves broken selectors automatically, cutting script maintenance effort by over 80%.
                             </div>
                         </details>
                     </div>
@@ -270,11 +261,11 @@
                     <div class="faq-item" data-category="solutions">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-solutions">SyncBoot (Development)</span>
-                                <div style="margin-top: 0.2rem;">How does SyncBoot assist in migrating monolithic legacy systems to cloud-native microservices (MSA)?</div>
+                                <span class="faq-category-tag tag-solutions">Legacy Modernization (DevOps)</span>
+                                <div style="margin-top: 0.2rem;">How does Empasy reduce operational overhead when modernizing complex legacy systems to cloud-native architectures?</div>
                             </summary>
                             <div class="faq-answer">
-                                SyncBoot deeply analyzes legacy monolithic codebases, data models, and service dependencies to architect decoupled microservice boundaries. It automates Spring Boot entity generation, CRUD APIs, DDL scripts, and even generates Saga pattern distributed compensation transactions, accelerating modernization timelines by over 80%.
+                                SyncBoot automatically analyzes dependencies across monolithic codebases, decouples them into independent microservices (MSA), and scaffolds modern boilerplate code, dramatically shortening migration cycles and reducing engineering overhead.
                             </div>
                         </details>
                     </div>
@@ -282,11 +273,11 @@
                     <div class="faq-item" data-category="solutions">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-solutions">SyncCMS (Content)</span>
-                                <div style="margin-top: 0.2rem;">Can non-developers (planners and marketers) manage complex content without code using SyncCMS?</div>
+                                <span class="faq-category-tag tag-solutions">Resilient Data Pipeline</span>
+                                <div style="margin-top: 0.2rem;">Can external web data extraction pipelines continue operating even when target sites change layouts or enforce anti-bot measures?</div>
                             </summary>
                             <div class="faq-answer">
-                                Yes. SyncCMS provides an intuitive visual interface where non-technical planners can arrange components and edit structured content via natural language prompts and live previews. When content is updated, multilingual translations (Korean, English, Japanese) are automatically synchronized in the background.
+                                Yes. SyncCrawl features visual rendering analysis that dynamically recalibrates scraping rules in real time whenever target sites update their markup. Combined with distributed worker scaling, it guarantees continuous data flow.
                             </div>
                         </details>
                     </div>
@@ -294,11 +285,11 @@
                     <div class="faq-item" data-category="solutions">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-solutions">SyncCrawl (Extraction)</span>
-                                <div style="margin-top: 0.2rem;">How does SyncCrawl ensure uninterrupted data extraction amidst anti-bot defenses and layout changes?</div>
+                                <span class="faq-category-tag tag-solutions">Decision Intelligence (BI)</span>
+                                <div style="margin-top: 0.2rem;">Beyond static BI charts, can AI diagnose root causes and recommend actionable operational plans?</div>
                             </summary>
                             <div class="faq-answer">
-                                Equipped with a visual rendering intelligence engine, SyncCrawl dynamically recalibrates crawling rules based on visual layout cues when target website markup changes. It natively supports distributed worker node autoscaling and standard vector database sinks (OpenSearch, Pinecone, Milvus) for enterprise RAG pipelines.
+                                Yes. While conventional BI displays historical metrics, SyncInsight correlates cross-system operational data to diagnose anomalies and synthesizes concrete, approved action plans for human operators.
                             </div>
                         </details>
                     </div>
@@ -306,72 +297,73 @@
                     <div class="faq-item" data-category="solutions">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-solutions">SyncInsight (Intelligence)</span>
-                                <div style="margin-top: 0.2rem;">How does SyncInsight differ from traditional BI dashboards, and how does it support decision-making?</div>
+                                <span class="faq-category-tag tag-solutions">Cost Optimization (FinOps)</span>
+                                <div style="margin-top: 0.2rem;">How do we prevent runaway LLM inference costs as autonomous agents scale across enterprise operations?</div>
                             </summary>
                             <div class="faq-answer">
-                                While traditional BI simply aggregates past data into charts, SyncInsight autonomously conducts Deep Research by correlating internal metrics with external market signals. Through multi-agent cross-review and simulation, it synthesizes concrete, executable action plans requiring administrator sign-off.
+                                SyncLLM's intelligent routing directs simple queries to lightweight SLMs and complex reasoning to high-tier LLMs. With semantic caching and departmental budget caps, enterprise inference costs are reduced by up to 60%.
                             </div>
                         </details>
                     </div>
 
-                    <div class="faq-item" data-category="solutions">
+                    <!-- Category: Safety & Security -->
+                    <div class="faq-item" data-category="security">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-solutions">SyncLLM (Governance)</span>
-                                <div style="margin-top: 0.2rem;">How does SyncLLM achieve multi-LLM intelligent routing and enterprise FinOps cost optimization?</div>
+                                <span class="faq-category-tag tag-security">Risk Governance</span>
+                                <div style="margin-top: 0.2rem;">How do you prevent AI agents from hallucinating, modifying unauthorized data, or causing operational accidents?</div>
                             </summary>
                             <div class="faq-answer">
-                                SyncLLM analyzes query complexity and intent in real time, routing simple queries to lightweight SLMs and complex reasoning tasks to high-tier LLMs. With granular token budget caps, real-time PII masking, and semantic caching, it cuts enterprise LLM operational costs by up to 60%.
+                                Empasy strictly enforces Spec-First Governance and Human-in-the-Loop approval. Agents cannot perform write operations autonomously; they must first draft verifiable specifications and execution plans for human digital approval before changes are committed.
                             </div>
                         </details>
                     </div>
 
-                    <!-- Category: Enterprise & Security -->
+                    <div class="faq-item" data-category="security">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-security">Emergency Safeguards</span>
+                                <div style="margin-top: 0.2rem;">Can administrators immediately freeze or halt all automation in an emergency?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                Yes. Through the one-click Emergency Kill-Switch on the management console or via automatic anomaly thresholds, all agents' write permissions are revoked within 1 second, locking the entire system into a read-only state.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="security">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-security">Air-Gapped Deployment</span>
+                                <div style="margin-top: 0.2rem;">Can Empasy run in strict air-gapped on-premises or VPC networks without internet connectivity?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                Yes. All Empasy solutions can be deployed as isolated containers within air-gapped networks and private VPCs. Paired with local open-source LLM runtimes (such as vLLM or Ollama), zero bytes of code or proprietary data ever leave your firewall.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="security">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-security">Privacy &amp; PII</span>
+                                <div style="margin-top: 0.2rem;">Is customer PII (resident numbers, payment info) protected from being leaked or ingested by AI models?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                Built-in PII inspection filters detect and mask sensitive identifiers in real time. Under enterprise licensing, no customer operational data is ever stored or utilized for external foundation model training.
+                            </div>
+                        </details>
+                    </div>
+
+                    <!-- Category: Enterprise & Licensing -->
                     <div class="faq-item" data-category="enterprise">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-enterprise">Security &amp; Deployment</span>
-                                <div style="margin-top: 0.2rem;">Can the platform be deployed on-premise and in air-gapped secure networks for finance and government?</div>
+                                <span class="faq-category-tag tag-enterprise">Proof of Concept (PoC)</span>
+                                <div style="margin-top: 0.2rem;">Can we validate the solution on our own systems through a Proof of Concept (PoC) before committing?</div>
                             </summary>
                             <div class="faq-answer">
-                                Yes. All Empasy solutions can be deployed 100% isolated in containerized on-premise environments, private VPCs, and completely air-gapped networks without external internet access. When combined with local open-source LLM runtimes (vLLM, Ollama), not a single byte of proprietary code or confidential data leaves your perimeter.
-                            </div>
-                        </details>
-                    </div>
-
-                    <div class="faq-item" data-category="enterprise">
-                        <details>
-                            <summary>
-                                <span class="faq-category-tag tag-enterprise">Security &amp; Deployment</span>
-                                <div style="margin-top: 0.2rem;">How is sensitive internal data (PII, financial numbers) protected during AI operations?</div>
-                            </summary>
-                            <div class="faq-answer">
-                                Built-in data protection filters proactively detect resident registration numbers, phone numbers, payment card numbers, and bank account information, applying real-time pseudonymization and masking before processing, ensuring complete compliance and data sovereignty.
-                            </div>
-                        </details>
-                    </div>
-
-                    <div class="faq-item" data-category="enterprise">
-                        <details>
-                            <summary>
-                                <span class="faq-category-tag tag-enterprise">Enterprise Onboarding</span>
-                                <div style="margin-top: 0.2rem;">What is the typical deployment timeline and PoC (Proof of Concept) process?</div>
-                            </summary>
-                            <div class="faq-answer">
-                                Setup time depends on the chosen agents and existing infrastructure, but typically a PoC sandbox environment is established within 1 to 2 weeks, with full system integration and production deployment achieved in approximately one month, closely supported by our dedicated engineering team.
-                            </div>
-                        </details>
-                    </div>
-
-                    <div class="faq-item" data-category="enterprise">
-                        <details>
-                            <summary>
-                                <span class="faq-category-tag tag-enterprise">Licensing</span>
-                                <div style="margin-top: 0.2rem;">What licensing options and pricing models are available?</div>
-                            </summary>
-                            <div class="faq-answer">
-                                Empasy offers flexible cloud SaaS subscriptions as well as perpetual and annual on-premise enterprise licenses. Packaging is tailored based on node capacity and required agent modules, with customized quotes provided after an initial architecture consultation.
+                                Yes. We offer a 1-to-2 week structured PoC program focusing on 1 or 2 of your key operational workflows. Our dedicated enterprise engineers benchmark time-saving metrics and projected ROI using your real scenarios.
                             </div>
                         </details>
                     </div>
@@ -379,11 +371,23 @@
                     <div class="faq-item" data-category="enterprise">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-enterprise">Support &amp; Docs</span>
-                                <div style="margin-top: 0.2rem;">Where can developers find API documentation, integration guides, and technical support?</div>
+                                <span class="faq-category-tag tag-enterprise">Licensing &amp; ROI</span>
+                                <div style="margin-top: 0.2rem;">How is pricing structured, and what is the typical return on investment (ROI)?</div>
                             </summary>
                             <div class="faq-answer">
-                                Comprehensive developer guides, Model Context Protocol (MCP) specifications, and REST API docs are available at <a href="https://doc.empasy.com/" target="_blank" style="color:var(--primary-color); text-decoration:underline;">doc.empasy.com</a>. Open-source contributions and plugins are hosted on our official GitHub (DramaticCollaboration), and enterprise support is accessible via our contact page and contact@empasy.com.
+                                We offer cloud SaaS subscriptions and on-premises perpetual/annual enterprise licenses, scaled flexibly by automated nodes and agent modules. Enterprise adopters report an average 60% to 80% reduction in routine manual maintenance overhead.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="enterprise">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-enterprise">Documentation &amp; APIs</span>
+                                <div style="margin-top: 0.2rem;">Where can we access detailed developer documentation and API specifications?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                Comprehensive integration guides, architecture specifications, and API docs are available at <a href="https://doc.empasy.com/" target="_blank" style="color:var(--primary-color); text-decoration:underline;">doc.empasy.com</a>, with open-source plugins hosted on our official GitHub organization (DramaticCollaboration).
                             </div>
                         </details>
                     </div>
