@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>엠파시(Empasy) | SyncCrawl 데이터 수집 및 정제 아키텍처</title>
+    <meta name="description" content="사내 지식 검색(RAG)의 정확도를 높이기 위한 웹 데이터 분산 수집, 본문 정제, 변경 감지 파이프라인을 다루는 SyncCrawl의 아키텍처를 소개합니다.">
+    <meta name="keywords" content="엔터프라이즈 웹 크롤링, RAG 데이터 파이프라인, 본문 텍스트 정제, 분산 수집, SyncCrawl, 엠파시">
+    <meta property="og:title" content="엠파시(Empasy) | SyncCrawl 데이터 수집 및 정제 아키텍처">
+    <meta property="og:description" content="사내 지식 검색(RAG)의 정확도를 높이기 위한 웹 데이터 분산 수집, 본문 정제, 변경 감지 파이프라인을 다루는 SyncCrawl의 아키텍처를 소개합니다.">
+    <meta property="og:type" content="website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Empasy">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "엠파시(Empasy) 기술 블로그",
+      "url": "https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html",
+      "description": "엔터프라이즈 RAG 구축을 위한 웹 데이터 수집 및 정제 파이프라인 아키텍처",
+      "publisher": {
+        "@type": "Organization",
+        "name": "엠파시(Empasy)",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/empasy-logo.png"
+        }
+      }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <meta name="geo.region" content="KR-11" />
+    <meta name="geo.placename" content="Seoul" />
+    <meta name="geo.position" content="37.5665;126.9780" />
+    <meta name="ICBM" content="37.5665, 126.9780" />
+    <!-- SEO & AIO Tags -->
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta property="og:locale" content="ko_KR">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "[Tech Blog] 사내 지식 검색(RAG)을 위한 웹 데이터 수집과 정제: SyncCrawl 파이프라인 아키텍처",
+      "description": "최신 시장 정보와 기술 문서를 주기적으로 수집하여 사내 검색 시스템 및 AI가 신뢰할 수 있는 데이터로 가공하는 SyncCrawl의 분산 수집 구조를 설명합니다.",
+      "author": {
+        "@type": "Organization",
+        "name": "Empasy Engineering Team",
+        "url": "https://empasy.io"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Empasy",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/assets/logo.png"
+        }
+      },
+      "url": "https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html"
+    }
+    </script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <meta property="og:url" content="https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    {{> header_ko }}
+
+    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
+        <!-- Compact Breadcrumb / Back Link -->
+        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
+            <a href="../../ko/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
+                <span>Tech Blog 목록으로</span>
+            </a>
+            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
+        </div>
+        
+        <section style="padding: 0;">
+            <div class="container" style="padding: 0;">
+                <article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
+                    <div style="line-height: 1.8; color: var(--text-primary);">
+                        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 0.9rem;">
+                            <span>2026-09-12</span>
+                            <span>&bull;</span>
+                            <span>읽는 시간 약 6분</span>
+                            <span>&bull;</span>
+                            <span style="color: var(--primary-color); font-weight: 600;">Data Pipeline & Search</span>
+                        </div>
+
+                        <h1 style="font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.35; margin-bottom: 1.5rem; color: var(--text-primary);">사내 지식 검색(RAG)을 위한 웹 데이터 수집과 정제: SyncCrawl 파이프라인 아키텍처</h1>
+
+                        <p>사내 인공지능 지식 검색 시스템(RAG: Retrieval-Augmented Generation)의 성능은 결국 검색 대상이 되는 데이터의 품질에 좌우됩니다. 사내 문서뿐만 아니라 관련 법령, 산업 표준, 시장 보고서 등 외부 웹에서 제공되는 정보를 주기적으로 수집하여 지식 베이스에 반영해야 하는 업무가 점차 늘어나고 있습니다.</p>
+                        
+                        <p>그러나 외부 웹 페이지를 그대로 가져와 저장하면 배너 광고, 상하단 메뉴 바, 자바스크립트 코드와 같은 불필요한 정보가 다량 포함되어 AI가 엉뚱한 답변을 생성하는 원인이 됩니다. 또한 최근 웹사이트들은 자바스크립트로 화면을 동적 렌더링하기 때문에 단순 HTML 요청만으로는 본문 내용을 가져오기 어려운 환경이 많습니다.</p>
+
+                        <p>엠파시의 데이터 수집 엔진인 <strong>SyncCrawl</strong>은 대규모 웹 문서를 안정적으로 가져오고, 검색에 필요한 핵심 텍스트만 추출하여 사내 벡터 저장소로 전달하는 파이프라인 구조를 갖추고 있습니다. 본 글에서는 SyncCrawl의 수집 및 정제 처리 구조를 살펴봅니다.</p>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. SyncCrawl 데이터 수집 및 정제 파이프라인</h3>
+                        <p>웹 문서가 수집되어 사내 지식 검색 시스템에 저장되기까지는 4단계의 처리를 거칩니다.</p>
+
+                        <div class="modern-pipeline">
+                            <div class="pipeline-step">
+                                <div class="pipeline-title">1단계: 일정 기반 수집</div>
+                                <div class="pipeline-desc">정적 요청 및 브라우저 분기 처리</div>
+                            </div>
+                            <div class="pipeline-arrow">➔</div>
+                            <div class="pipeline-step">
+                                <div class="pipeline-title">2단계: 본문 텍스트 추출</div>
+                                <div class="pipeline-desc">광고·메뉴 제거 및 마크다운 변환</div>
+                            </div>
+                            <div class="pipeline-arrow">➔</div>
+                            <div class="pipeline-step">
+                                <div class="pipeline-title">3단계: 변경 감지</div>
+                                <div class="pipeline-desc">내용 해시 비교로 중복 적재 방지</div>
+                            </div>
+                            <div class="pipeline-arrow">➔</div>
+                            <div class="pipeline-step">
+                                <div class="pipeline-title">4단계: 단락 분할 및 적재</div>
+                                <div class="pipeline-desc">의미 단위 분할 후 벡터 DB 전송</div>
+                            </div>
+                        </div>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. 정적 파서와 가상 브라우저의 하이브리드 수집</h3>
+                        <p>모든 웹 페이지를 메모리를 많이 쓰는 가상 브라우저(Headless Browser)로 수집하면 서버 자원 소모가 급격히 늘어납니다. 반대로 단순 HTTP 요청만 사용하면 동적으로 렌더링되는 최신 싱글 페이지 애플리케이션(SPA)의 내용을 읽어오지 못합니다.</p>
+
+                        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 0.7rem;"><strong>초기 응답 검사:</strong> 대상 사이트의 첫 HTML 응답을 확인하여 순수 정적 콘텐츠는 가벼운 HTTP 클라이언트로 빠르게 수집합니다.</li>
+                            <li style="margin-bottom: 0.7rem;"><strong>동적 렌더링 전환:</strong> 본문이 자바스크립트 실행 후에 로딩되는 사이트인 경우에만 가상 브라우저 인스턴스를 할당하여 화면 렌더링 완료 시점의 DOM을 수집합니다.</li>
+                            <li style="margin-bottom: 0.7rem;"><strong>수집 주기 및 예의 지키기(Politeness):</strong> 대상 사이트 서버에 부하를 주지 않도록 도메인별 동시 요청 수 제한과 지연 간격(Delay)을 엄격히 적용합니다.</li>
+                        </ul>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. 본문 텍스트 추출 및 구조화</h3>
+                        <p>웹 문서에서 의미 있는 본문만 골라내는 과정은 사내 AI의 검색 품질을 결정하는 중요한 단계입니다.</p>
+
+                        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 0.7rem;"><strong>노이즈 요소 제거:</strong> 네비게이션 헤더, 푸터, 사이드바 배너, 스크립트 태그 등 본문과 무관한 HTML 태그를 우선 제거합니다.</li>
+                            <li style="margin-bottom: 0.7rem;"><strong>계층 구조 보존:</strong> 문서 내 제목(H1~H4), 표(Table), 목록(List) 등의 구조를 마크다운(Markdown) 형식으로 정리하여 문맥의 흐름을 보존합니다.</li>
+                            <li style="margin-bottom: 0.7rem;"><strong>해시 기반 변경 감지:</strong> 수집된 본문 내용의 암호화 해시값을 기존 저장된 값과 대조하여, 내용에 변화가 없는 문서는 벡터 변환 과정을 생략함으로써 시스템 자원을 절약합니다.</li>
+                        </ul>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">4. 사내 검색 데이터베이스(Vector DB) 연동</h3>
+                        <p>정제된 문서는 AI 모델이 이해하기 적합한 길이(보통 500~1,000자)로 단락을 분할(Chunking)합니다. 이때 단락 간 문맥 단절을 줄이기 위해 일정한 중첩 구간(Overlap)을 유지합니다.</p>
+
+                        <p>분할된 단락들은 임베딩 벡터로 변환되어 사내 벡터 데이터베이스에 색인되며, 최종적으로 사내 임직원이 질문을 입력했을 때 관련성이 높은 외부 지식으로서 정확하게 인용될 수 있도록 지원합니다.</p>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <p>인공지능 도입의 성패는 신선하고 신뢰할 수 있는 데이터를 얼마나 체계적으로 공급하느냐에 달려 있습니다. SyncCrawl은 불필요한 노이즈를 걷어내고 실제 필요한 지식만을 사내 인프라로 수급하는 기본기에 충실한 수집 파이프라인을 지향합니다.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    {{> footer_ko }}
+
+    <!-- Scripts -->
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

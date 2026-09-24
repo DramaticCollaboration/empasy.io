@@ -25,17 +25,30 @@
     <!-- Header Navigation -->
     {{> header_ja }}
 
-    <main class="container" style="padding-top: 150px; min-height: 80vh;">
-        <div class="page-header text-center fade-in-up mb-4">
-            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Insights</span>
-            <h1 class="page-title" style="font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 1rem; color: var(--text-primary);">Tech Blog</h1>
-            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">エンタープライズAI導入のための実践的なガイドと最新技術トレンドをご確認ください。</p>
+    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
+        <!-- Compact Breadcrumb / Back Link -->
+        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
+            <a href="../../ja/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
+                <span>Tech Blog一覧へ</span>
+            </a>
+            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
         </div>
         
-        <section class="section" style="padding-top: 2rem;">
-            <div class="container">
+        <section style="padding: 0;">
+            <div class="container" style="padding: 0;">
                 <article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
     <div style="line-height: 1.8; color: var(--text-primary);">
+                    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.2rem; color: var(--text-secondary); font-size: 0.9rem; flex-wrap: wrap;">
+                        <span>2026-02-28</span>
+                        <span>&bull;</span>
+                        <span>所要時間 約8分</span>
+                        <span>&bull;</span>
+                        <span style="color: var(--primary-color); font-weight: 600;">Tech Trends & Architecture</span>
+                    </div>
+
+                    <h1 style="font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.35; margin-bottom: 1.8rem; color: var(--text-primary);">AI自律運用エコシステムを支える中核ソリューションアーキテクチャ分析</h1>
+
         <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">01. SyncEta: No-CodeベースのインテリジェントQA自動化と視覚的自己修復(Self-Healing)エンジン</h2>
         <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> 技術的ペインポイント：「メンテナンスの地獄(Maintenance Hell)」と回帰テストのボトルネック</h3>
         <p>現代のWebアプリケーションのフロントエンドでは、UIコンポーネントの頻繁なリニューアルと動的なDOM構造の変化が日常的です。従来のSeleniumや一般的なE2Eテストツールは、UIの小さな識別子(ID、Class)や1pxのレイアウト変更でも既存のテストスクリプトが簡単に壊れてしまう慢性的なメンテナンス問題を抱えており、これはアジャイルなデプロイサイクルを阻害する致命的なボトルネックでした。</p>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Empasy | SyncCrawl Web Data Collection and Preprocessing Architecture</title>
+    <meta name="description" content="Discover how SyncCrawl handles distributed web scraping, content extraction, and change detection to feed high-fidelity data into enterprise RAG systems.">
+    <meta name="keywords" content="Enterprise Web Crawling, RAG Data Pipeline, Web Content Extraction, Distributed Scraping, SyncCrawl, Empasy">
+    <meta property="og:title" content="Empasy | SyncCrawl Web Data Collection and Preprocessing Architecture">
+    <meta property="og:description" content="Discover how SyncCrawl handles distributed web scraping, content extraction, and change detection to feed high-fidelity data into enterprise RAG systems.">
+    <meta property="og:type" content="website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Empasy">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Empasy Tech Blog",
+      "url": "https://empasy.io/en/blog/synccrawl-distributed-web-data-pipeline.html",
+      "description": "Web data collection and content extraction pipeline architecture for enterprise RAG systems",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Empasy",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/empasy-logo.png"
+        }
+      }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <meta name="geo.region" content="KR-11" />
+    <meta name="geo.placename" content="Seoul" />
+    <meta name="geo.position" content="37.5665;126.9780" />
+    <meta name="ICBM" content="37.5665, 126.9780" />
+    <!-- SEO & AIO Tags -->
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta property="og:locale" content="en_US">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "[Tech Blog] Web Data Collection and Preprocessing for Enterprise RAG: SyncCrawl Pipeline Architecture",
+      "description": "Understand how SyncCrawl gathers external technical documents and market data periodically, purifying HTML down to clean Markdown for enterprise search.",
+      "author": {
+        "@type": "Organization",
+        "name": "Empasy Engineering Team",
+        "url": "https://empasy.io"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Empasy",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/assets/logo.png"
+        }
+      },
+      "url": "https://empasy.io/en/blog/synccrawl-distributed-web-data-pipeline.html"
+    }
+    </script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://empasy.io/en/blog/synccrawl-distributed-web-data-pipeline.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <meta property="og:url" content="https://empasy.io/en/blog/synccrawl-distributed-web-data-pipeline.html">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    {{> header_en }}
+
+    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
+        <!-- Compact Breadcrumb / Back Link -->
+        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
+            <a href="../../en/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
+                <span>Back to Tech Blog</span>
+            </a>
+            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
+        </div>
+        
+        <section style="padding: 0;">
+            <div class="container" style="padding: 0;">
+                <article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
+                    <div style="line-height: 1.8; color: var(--text-primary);">
+                        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 0.9rem;">
+                            <span>2026-09-12</span>
+                            <span>&bull;</span>
+                            <span>6 min read</span>
+                            <span>&bull;</span>
+                            <span style="color: var(--primary-color); font-weight: 600;">Data Pipeline & Search</span>
+                        </div>
+
+                        <h1 style="font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.35; margin-bottom: 1.5rem; color: var(--text-primary);">Web Data Collection and Preprocessing for Enterprise RAG: SyncCrawl Pipeline Architecture</h1>
+
+                        <p>The operational quality of an enterprise Retrieval-Augmented Generation (RAG) system directly reflects the caliber of its reference corpus. Beyond internal documents, modern teams increasingly need to gather regulatory updates, industry standards, and market releases published on external web sources.</p>
+                        
+                        <p>Directly ingesting raw web pages without curation, however, introduces noisy artifacts—such as advertisement scripts, navigation menus, and boilerplate markup—that confuse language models and degrade retrieval precision. Moreover, modern dynamic single-page applications (SPAs) require client-side execution that basic HTTP crawlers cannot parse.</p>
+
+                        <p><strong>SyncCrawl</strong>, the data gathering engine in the Empasy SyncSeries, provides a structured pipeline for collecting web documents reliably, isolating essential text, and feeding clean context into enterprise vector repositories. This article details SyncCrawl's collection and extraction architecture.</p>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. SyncCrawl End-to-End Processing Stages</h3>
+                        <p>Web content transitions through four structured phases before being indexed into an internal retrieval system:</p>
+
+                        <div class="modern-pipeline">
+                            <div class="pipeline-step">
+                                <div class="pipeline-title">Stage 1: Adaptive Fetch</div>
+                                <div class="pipeline-desc">Static HTTP and browser routing</div>
+                            </div>
+                            <div class="pipeline-arrow">➔</div>
+                            <div class="pipeline-step">
+                                <div class="pipeline-title">Stage 2: Text Extraction</div>
+                                <div class="pipeline-desc">Strip boilerplate & format Markdown</div>
+                            </div>
+                            <div class="pipeline-arrow">➔</div>
+                            <div class="pipeline-step">
+                                <div class="pipeline-title">Stage 3: Change Check</div>
+                                <div class="pipeline-desc">Hash comparison to skip duplicates</div>
+                            </div>
+                            <div class="pipeline-arrow">➔</div>
+                            <div class="pipeline-step">
+                                <div class="pipeline-title">Stage 4: Chunk & Load</div>
+                                <div class="pipeline-desc">Contextual chunking to Vector DB</div>
+                            </div>
+                        </div>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. Hybrid Retrieval: Lightweight HTTP and Headless Browsers</h3>
+                        <p>Processing every target URL using resource-intensive headless browser sessions consumes prohibitive amounts of compute memory. Conversely, relying solely on static HTTP GET requests fails when encountering client-rendered JavaScript applications.</p>
+
+                        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 0.7rem;"><strong>Static Fast Path:</strong> SyncCrawl evaluates initial response headers and markup. For static HTML pages, lightweight non-blocking HTTP clients retrieve payloads rapidly.</li>
+                            <li style="margin-bottom: 0.7rem;"><strong>Dynamic Fallback:</strong> If significant content depends on JavaScript execution, the task delegates to a pooled headless browser session to capture the fully rendered DOM.</li>
+                            <li style="margin-bottom: 0.7rem;"><strong>Politeness Throttling:</strong> To respect remote server capacity, SyncCrawl enforces domain-specific concurrency caps and configurable request intervals.</li>
+                        </ul>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. Structural Noise Reduction and Content Normalization</h3>
+                        <p>Extracting clean body text while preserving semantic structure is pivotal for high-relevance vector searches.</p>
+
+                        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 0.7rem;"><strong>Boilerplate Pruning:</strong> Header banners, cookie consent dialogs, sidebar links, and footer disclaimers are removed via structural heuristics.</li>
+                            <li style="margin-bottom: 0.7rem;"><strong>Format Conversion:</strong> Remaining content is normalized into clean Markdown, preserving heading hierarchies, table relationships, and ordered list structures.</li>
+                            <li style="margin-bottom: 0.7rem;"><strong>Cryptographic Change Detection:</strong> Hash signatures of extracted text are matched against existing records. Unchanged pages bypass re-embedding steps, saving substantial computing overhead.</li>
+                        </ul>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">4. Chunking and Vector Database Loading</h3>
+                        <p>Cleaned articles are partitioned into digestible segments (typically 500 to 1,000 characters) with balanced sentence boundaries and slight inter-chunk overlap to preserve context across splits.</p>
+
+                        <p>These chunks are subsequently transformed into vector embeddings and stored in enterprise knowledge databases, ready to be referenced as grounded citations when employees submit workplace queries.</p>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <p>Enterprise AI effectiveness begins with disciplined data collection. By systematically removing noise and maintaining structured text flows, SyncCrawl provides the foundational data hygiene required for reliable corporate retrieval systems.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    {{> footer_en }}
+
+    <!-- Scripts -->
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

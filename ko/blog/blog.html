@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <title>엠파시(Empasy) | Blog</title>
@@ -25,7 +25,7 @@
     <!-- Header Navigation -->
     {{> header_ko }}
 
-    <main class="container" style="padding-top: 150px; min-height: 80vh;">
+    <main class="container" style="padding-top: 105px; min-height: 80vh;">
         <div class="page-header text-center fade-in-up mb-4">
             <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Insights</span>
             <h1 class="page-title" style="font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 1rem; color: var(--text-primary);">Tech Blog</h1>
@@ -45,6 +45,51 @@
                 <button class="blog-filter-btn" data-filter="vision" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: rgba(15, 23, 42, 0.6); color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">비전 &amp; 전략</button>
             </div>
                 <div class="blog-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+                    <!-- Blog Card 11 -->
+                    <a href="../../ko/blog/synccrawl-distributed-web-data-pipeline.html" class="blog-card-item" data-category="qa" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
+                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Data Pipeline &amp; Search</div>
+                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">사내 지식 검색(RAG)을 위한 웹 데이터 수집과 정제: SyncCrawl 파이프라인 아키텍처</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">최신 시장 정보와 기술 문서를 주기적으로 수집하여 사내 검색 시스템 및 AI가 신뢰할 수 있는 데이터로 가공하는 SyncCrawl의 분산 수집 구조를 설명합니다.</p>
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
+                                    <span><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2026-09-12 &bull; <i class="far fa-clock" style="margin: 0 4px;"></i> 6분 읽기</span>
+                                    <span style="color: var(--primary-color); font-weight: 600;">자세히 읽기 ➔</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Blog Card 10 -->
+                    <a href="../../ko/blog/syncllm-cost-optimization-semantic-cache-gateway.html" class="blog-card-item" data-category="decision" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
+                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">AI Infrastructure &amp; Cost</div>
+                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">기업용 AI API 비용 절감과 응답 속도 개선: SyncLLM 게이트웨이 아키텍처</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">여러 부서에서 사용하는 다양한 인공지능 모델의 호출 비용을 관리하고, 의미 기반 캐시와 지능형 라우팅으로 응답 속도와 예산을 효율화하는 SyncLLM의 기술 구조를 정리합니다.</p>
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
+                                    <span><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2026-08-25 &bull; <i class="far fa-clock" style="margin: 0 4px;"></i> 7분 읽기</span>
+                                    <span style="color: var(--primary-color); font-weight: 600;">자세히 읽기 ➔</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Blog Card 9 -->
+                    <a href="../../ko/blog/syncshop-batch-pricing-margin-protection-architecture.html" class="blog-card-item" data-category="orchestration" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
+                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">E-Commerce &amp; Operations</div>
+                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">최소 마진율 보호와 안전한 대량 가격 변경: SyncShop의 가격 관리 및 복구 아키텍처</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">수많은 상품의 가격과 할인 정책을 일괄 변경할 때 발생할 수 있는 마진 손실과 오작동을 방지하는 SyncShop의 안전장치와 실시간 복구 방식을 살펴봅니다.</p>
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
+                                    <span><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2026-08-10 &bull; <i class="far fa-clock" style="margin: 0 4px;"></i> 6분 읽기</span>
+                                    <span style="color: var(--primary-color); font-weight: 600;">자세히 읽기 ➔</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
                     <!-- Blog Card 8 -->
                     <a href="../../ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" class="blog-card-item" data-category="vision" style="text-decoration: none; color: inherit; display: block;">
                         <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">

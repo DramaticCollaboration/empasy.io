@@ -66,6 +66,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://empasy.io/ko/blog/syncshop-batch-pricing-margin-protection-architecture.html</loc>
+    <lastmod>2026-08-10T00:00:00+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/syncllm-cost-optimization-semantic-cache-gateway.html</loc>
+    <lastmod>2026-08-25T00:00:00+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html</loc>
+    <lastmod>2026-09-12T00:00:00+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://empasy.io/ko/pages/clients.html</loc>
     <lastmod>2026-07-18T16:00:19+00:00</lastmod>
     <priority>0.6</priority>
@@ -176,6 +191,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://empasy.io/en/blog/syncshop-batch-pricing-margin-protection-architecture.html</loc>
+    <lastmod>2026-08-10T00:00:00+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/syncllm-cost-optimization-semantic-cache-gateway.html</loc>
+    <lastmod>2026-08-25T00:00:00+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/synccrawl-distributed-web-data-pipeline.html</loc>
+    <lastmod>2026-09-12T00:00:00+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://empasy.io/en/pages/clients.html</loc>
     <lastmod>2026-07-18T16:00:19+00:00</lastmod>
     <priority>0.6</priority>
@@ -278,6 +308,21 @@
   <url>
     <loc>https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html</loc>
     <lastmod>2026-07-18T16:00:19+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/syncshop-batch-pricing-margin-protection-architecture.html</loc>
+    <lastmod>2026-08-10T00:00:00+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/syncllm-cost-optimization-semantic-cache-gateway.html</loc>
+    <lastmod>2026-08-25T00:00:00+00:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/synccrawl-distributed-web-data-pipeline.html</loc>
+    <lastmod>2026-09-12T00:00:00+00:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
