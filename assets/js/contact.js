@@ -219,8 +219,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const onPremChecked = document.getElementById('onPremisesPoc')?.checked;
 
             let optionsText = '';
-            if (ndaChecked) optionsText += '\n- [요청] 사전 NDA(비밀유지계약) 체결 희망';
-            if (onPremChecked) optionsText += '\n- [요청] 온프레미스(망분리) 폐쇄망 PoC 지원 희망';
+            if (ndaChecked) {
+                optionsText += isEn
+                    ? '\n- [Request] Mutual Non-Disclosure Agreement (NDA) required'
+                    : (isJa ? '\n- [要望] 相互秘密保持契約(NDA)の締結希望' : '\n- [요청] 사전 NDA(비밀유지계약) 체결 희망');
+            }
+            if (onPremChecked) {
+                optionsText += isEn
+                    ? '\n- [Request] On-Premises (Air-Gapped) PoC support required'
+                    : (isJa ? '\n- [要望] オンプレミス(閉域網)PoC支援希望' : '\n- [요청] 온프레미스(망분리) 폐쇄망 PoC 지원 희망');
+            }
             
             // Construct payload to match empasy.io API requirements
             const payload = {

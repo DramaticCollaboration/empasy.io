@@ -220,9 +220,17 @@ function initMain() {
 
     // 8. Terminal Command Copy-to-Clipboard Functionality
     const copyBtns = document.querySelectorAll('.terminal-copy-btn');
+    const pageLang = document.documentElement.lang || 'ko';
+    const langKey = pageLang.startsWith('en') ? 'en' : (pageLang.startsWith('ja') ? 'ja' : 'ko');
+
     copyBtns.forEach(btn => {
         btn.addEventListener('click', async () => {
-            const cmdText = btn.getAttribute('data-cmd') || 'empasy eta run --target https://app.example.com --scenario "결제 검증"';
+            const defaultCmd = langKey === 'en'
+                ? 'empasy eta run --target https://app.example.com --scenario "checkout-verification"'
+                : (langKey === 'ja'
+                    ? 'empasy eta run --target https://app.example.com --scenario "決済検証"'
+                    : 'empasy eta run --target https://app.example.com --scenario "결제 검증"');
+            const cmdText = btn.getAttribute('data-cmd') || defaultCmd;
             try {
                 await navigator.clipboard.writeText(cmdText);
                 const originalHtml = btn.innerHTML;
@@ -242,94 +250,215 @@ function initMain() {
     const terminalOutput = document.querySelector('.terminal-output-container');
     const terminalCopyBtn = document.querySelector('.terminal-copy-btn');
     const terminalRoleBanner = document.querySelector('.terminal-role-banner');
-    const pageLang = document.documentElement.lang || 'ko';
 
     const agentTerminalData = {
         verse: {
-            cmd: 'empasy verse dispatch --workflow "order-flow" --mode "autonomous"',
-            copyCmd: 'empasy verse dispatch --workflow "order-flow" --mode "autonomous"',
+            cmd: {
+                ko: 'empasy verse dispatch --workflow "order-flow" --mode "autonomous"',
+                en: 'empasy verse dispatch --workflow "order-flow" --mode "autonomous"',
+                ja: 'empasy verse dispatch --workflow "order-flow" --mode "autonomous"'
+            },
+            copyCmd: {
+                ko: 'empasy verse dispatch --workflow "order-flow" --mode "autonomous"',
+                en: 'empasy verse dispatch --workflow "order-flow" --mode "autonomous"',
+                ja: 'empasy verse dispatch --workflow "order-flow" --mode "autonomous"'
+            },
             tag: { ko: '중앙 관제탑', en: 'Control Tower', ja: '中央管制塔' },
             desc: {
                 ko: '다중 에이전트 간 트랜잭션을 조율하고 시스템 보안 및 FinOps 가드레일을 통제합니다.',
                 en: 'Orchestrates multi-agent transactions, enforcing system security & FinOps guardrails.',
                 ja: 'マルチエージェント間のトランザクションを統調し、セキュリティとFinOpsを制御します。'
             },
-            output: `
-                <div style="color: #38bdf8;">[SyncVerse Orchestrator]</div>
-                <div>&nbsp;↳ A2A MessageHub initialized [Agents: SyncBoot, SyncEta, SyncLLM]</div>
-                <div>&nbsp;↳ Dispatching distributed transaction... <span style="color: #22c55e;">[DISPATCHED]</span></div>
-                <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncVerse Guardrail]</div>
-                <div>&nbsp;↳ PII Masked &amp; Redis Semantic Cache HIT (Latency: 12ms) <span style="color: #22c55e;">[SAFE]</span></div>
-                <div>&nbsp;↳ All agent SLAs verified &amp; Audit Trace ID: #trc-9842a <span style="color: #22c55e;">[100% HEALTHY]</span></div>
-            `
+            output: {
+                ko: `
+                    <div style="color: #38bdf8;">[SyncVerse Orchestrator]</div>
+                    <div>&nbsp;↳ A2A MessageHub initialized [Agents: SyncBoot, SyncEta, SyncLLM]</div>
+                    <div>&nbsp;↳ Dispatching distributed transaction... <span style="color: #22c55e;">[DISPATCHED]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncVerse Guardrail]</div>
+                    <div>&nbsp;↳ PII Masked &amp; Redis Semantic Cache HIT (Latency: 12ms) <span style="color: #22c55e;">[SAFE]</span></div>
+                    <div>&nbsp;↳ All agent SLAs verified &amp; Audit Trace ID: #trc-9842a <span style="color: #22c55e;">[100% HEALTHY]</span></div>
+                `,
+                en: `
+                    <div style="color: #38bdf8;">[SyncVerse Orchestrator]</div>
+                    <div>&nbsp;↳ A2A MessageHub initialized [Agents: SyncBoot, SyncEta, SyncLLM]</div>
+                    <div>&nbsp;↳ Dispatching distributed transaction... <span style="color: #22c55e;">[DISPATCHED]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncVerse Guardrail]</div>
+                    <div>&nbsp;↳ PII Masked &amp; Redis Semantic Cache HIT (Latency: 12ms) <span style="color: #22c55e;">[SAFE]</span></div>
+                    <div>&nbsp;↳ All agent SLAs verified &amp; Audit Trace ID: #trc-9842a <span style="color: #22c55e;">[100% HEALTHY]</span></div>
+                `,
+                ja: `
+                    <div style="color: #38bdf8;">[SyncVerse Orchestrator]</div>
+                    <div>&nbsp;↳ A2A MessageHub initialized [Agents: SyncBoot, SyncEta, SyncLLM]</div>
+                    <div>&nbsp;↳ Dispatching distributed transaction... <span style="color: #22c55e;">[DISPATCHED]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncVerse Guardrail]</div>
+                    <div>&nbsp;↳ PII Masked &amp; Redis Semantic Cache HIT (Latency: 12ms) <span style="color: #22c55e;">[SAFE]</span></div>
+                    <div>&nbsp;↳ All agent SLAs verified &amp; Audit Trace ID: #trc-9842a <span style="color: #22c55e;">[100% HEALTHY]</span></div>
+                `
+            }
         },
         eta: {
-            cmd: 'empasy eta run --target https://app.example.com --scenario "결제 검증"',
-            copyCmd: 'empasy eta run --target https://app.example.com --scenario "결제 검증"',
+            cmd: {
+                ko: 'empasy eta run --target https://app.example.com --scenario "결제 검증"',
+                en: 'empasy eta run --target https://app.example.com --scenario "checkout-verification"',
+                ja: 'empasy eta run --target https://app.example.com --scenario "決済検証"'
+            },
+            copyCmd: {
+                ko: 'empasy eta run --target https://app.example.com --scenario "결제 검증"',
+                en: 'empasy eta run --target https://app.example.com --scenario "checkout-verification"',
+                ja: 'empasy eta run --target https://app.example.com --scenario "決済検証"'
+            },
             tag: { ko: '자가치유 QA', en: 'Self-Healing QA', ja: '自己修復QA' },
             desc: {
                 ko: 'UI 레이아웃이 변경되어도 Vision-LLM이 요소를 재추적하여 테스트 스크립트 장애를 방지합니다.',
                 en: 'Vision-LLM re-identifies UI elements visually to self-heal broken test scripts.',
                 ja: 'UIが変更されてもVision-LLMが要素を再特定し、テスト障害を自己修復します。'
             },
-            output: `
-                <div style="color: #38bdf8;">[SyncEta Engine]</div>
-                <div>&nbsp;↳ Vision-LLM 화면 요소 식별 중... <span style="color: #38bdf8;">[식별 완료: #btn-pay-submit]</span></div>
-                <div>&nbsp;↳ DOM 변경 감지: 셀렉터 자가 복구(Self-Healing) 적용... <span style="color: #22c55e;">[성공]</span></div>
-                <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncEta Inspector]</div>
-                <div>&nbsp;↳ E2E 결제 시나리오 및 트랜잭션 응답 검증... <span style="color: #22c55e;">[PASS (0.84s)]</span></div>
-            `
+            output: {
+                ko: `
+                    <div style="color: #38bdf8;">[SyncEta Engine]</div>
+                    <div>&nbsp;↳ Vision-LLM 화면 요소 식별 중... <span style="color: #38bdf8;">[식별 완료: #btn-pay-submit]</span></div>
+                    <div>&nbsp;↳ DOM 변경 감지: 셀렉터 자가 복구(Self-Healing) 적용... <span style="color: #22c55e;">[성공]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncEta Inspector]</div>
+                    <div>&nbsp;↳ E2E 결제 시나리오 및 트랜잭션 응답 검증... <span style="color: #22c55e;">[PASS (0.84s)]</span></div>
+                `,
+                en: `
+                    <div style="color: #38bdf8;">[SyncEta Engine]</div>
+                    <div>&nbsp;↳ Vision-LLM identifying UI elements... <span style="color: #38bdf8;">[Identified: #btn-pay-submit]</span></div>
+                    <div>&nbsp;↳ DOM mutation detected: Applying Self-Healing selector... <span style="color: #22c55e;">[Success]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncEta Inspector]</div>
+                    <div>&nbsp;↳ E2E checkout scenario &amp; transaction response verified... <span style="color: #22c55e;">[PASS (0.84s)]</span></div>
+                `,
+                ja: `
+                    <div style="color: #38bdf8;">[SyncEta Engine]</div>
+                    <div>&nbsp;↳ Vision-LLMが画面要素を識別中... <span style="color: #38bdf8;">[識別完了: #btn-pay-submit]</span></div>
+                    <div>&nbsp;↳ DOM変更を検知: セレクター自己修復(Self-Healing)を適用... <span style="color: #22c55e;">[成功]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncEta Inspector]</div>
+                    <div>&nbsp;↳ E2E決済シナリオおよびトランザクション応答検証... <span style="color: #22c55e;">[PASS (0.84s)]</span></div>
+                `
+            }
         },
         boot: {
-            cmd: 'empasy boot generate --domain "PaymentService" --pattern "Saga"',
-            copyCmd: 'empasy boot generate --domain "PaymentService" --pattern "Saga"',
+            cmd: {
+                ko: 'empasy boot generate --domain "PaymentService" --pattern "Saga"',
+                en: 'empasy boot generate --domain "PaymentService" --pattern "Saga"',
+                ja: 'empasy boot generate --domain "PaymentService" --pattern "Saga"'
+            },
+            copyCmd: {
+                ko: 'empasy boot generate --domain "PaymentService" --pattern "Saga"',
+                en: 'empasy boot generate --domain "PaymentService" --pattern "Saga"',
+                ja: 'empasy boot generate --domain "PaymentService" --pattern "Saga"'
+            },
             tag: { ko: 'MSA 생성/운영', en: 'MSA Engineer', ja: 'MSA自動構築' },
             desc: {
                 ko: '도메인 모델 기반 Spring Boot 마이크로서비스 코드 및 Saga 분산 보상 트랜잭션을 자동화합니다.',
                 en: 'Automates Spring Boot microservices code generation and Saga distributed transactions.',
                 ja: 'ドメインモデルに基づくSpring Bootマイクロサービス生成とSaga補償トランザクションを自動化します。'
             },
-            output: `
-                <div style="color: #38bdf8;">[SyncBoot Engine]</div>
-                <div>&nbsp;↳ Analyzing domain schema &amp; DDD entity relationships... <span style="color: #22c55e;">[Done]</span></div>
-                <div>&nbsp;↳ Generating Spring Boot 3.3 / Java 21 microservices scaffolding...</div>
-                <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncBoot Verifier]</div>
-                <div>&nbsp;↳ Saga compensation transaction &amp; zero-mock tests generated... <span style="color: #22c55e;">[BUILD SUCCESS (1.2s)]</span></div>
-            `
+            output: {
+                ko: `
+                    <div style="color: #38bdf8;">[SyncBoot Engine]</div>
+                    <div>&nbsp;↳ Analyzing domain schema &amp; DDD entity relationships... <span style="color: #22c55e;">[Done]</span></div>
+                    <div>&nbsp;↳ Generating Spring Boot 3.3 / Java 21 microservices scaffolding...</div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncBoot Verifier]</div>
+                    <div>&nbsp;↳ Saga compensation transaction &amp; zero-mock tests generated... <span style="color: #22c55e;">[BUILD SUCCESS (1.2s)]</span></div>
+                `,
+                en: `
+                    <div style="color: #38bdf8;">[SyncBoot Engine]</div>
+                    <div>&nbsp;↳ Analyzing domain schema &amp; DDD entity relationships... <span style="color: #22c55e;">[Done]</span></div>
+                    <div>&nbsp;↳ Generating Spring Boot 3.3 / Java 21 microservices scaffolding...</div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncBoot Verifier]</div>
+                    <div>&nbsp;↳ Saga compensation transaction &amp; zero-mock tests generated... <span style="color: #22c55e;">[BUILD SUCCESS (1.2s)]</span></div>
+                `,
+                ja: `
+                    <div style="color: #38bdf8;">[SyncBoot Engine]</div>
+                    <div>&nbsp;↳ Analyzing domain schema &amp; DDD entity relationships... <span style="color: #22c55e;">[Done]</span></div>
+                    <div>&nbsp;↳ Generating Spring Boot 3.3 / Java 21 microservices scaffolding...</div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncBoot Verifier]</div>
+                    <div>&nbsp;↳ Saga compensation transaction &amp; zero-mock tests generated... <span style="color: #22c55e;">[BUILD SUCCESS (1.2s)]</span></div>
+                `
+            }
         },
         cms: {
-            cmd: 'empasy cms publish --page "launch-campaign" --languages "ko,en,ja"',
-            copyCmd: 'empasy cms publish --page "launch-campaign" --languages "ko,en,ja"',
+            cmd: {
+                ko: 'empasy cms publish --page "launch-campaign" --languages "ko,en,ja"',
+                en: 'empasy cms publish --page "launch-campaign" --languages "ko,en,ja"',
+                ja: 'empasy cms publish --page "launch-campaign" --languages "ko,en,ja"'
+            },
+            copyCmd: {
+                ko: 'empasy cms publish --page "launch-campaign" --languages "ko,en,ja"',
+                en: 'empasy cms publish --page "launch-campaign" --languages "ko,en,ja"',
+                ja: 'empasy cms publish --page "launch-campaign" --languages "ko,en,ja"'
+            },
             tag: { ko: '퍼블리싱 에이전트', en: 'Publisher Agent', ja: '配信エージェント' },
             desc: {
                 ko: '자연어 명령으로 다국어 반응형 웹 레이아웃과 콘텐츠를 실시간 생성 및 동기화합니다.',
                 en: 'Generates and synchronizes multi-lingual layouts and content via natural language.',
                 ja: '自然言語のプロンプトから多言語レスポンシブWebとコンテンツをリアルタイム生成します。'
             },
-            output: `
-                <div style="color: #38bdf8;">[SyncCMS Core]</div>
-                <div>&nbsp;↳ Natural language prompt transformed into responsive layout blocks</div>
-                <div>&nbsp;↳ Translating &amp; synchronizing resource tokens across 3 locales... <span style="color: #22c55e;">[Done]</span></div>
-                <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCMS Edge]</div>
-                <div>&nbsp;↳ Atomic cache purge &amp; Zero-Downtime multi-site deployment... <span style="color: #22c55e;">[LIVE (15+ Sites)]</span></div>
-            `
+            output: {
+                ko: `
+                    <div style="color: #38bdf8;">[SyncCMS Core]</div>
+                    <div>&nbsp;↳ Natural language prompt transformed into responsive layout blocks</div>
+                    <div>&nbsp;↳ Translating &amp; synchronizing resource tokens across 3 locales... <span style="color: #22c55e;">[Done]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCMS Edge]</div>
+                    <div>&nbsp;↳ Atomic cache purge &amp; Zero-Downtime multi-site deployment... <span style="color: #22c55e;">[LIVE (15+ Sites)]</span></div>
+                `,
+                en: `
+                    <div style="color: #38bdf8;">[SyncCMS Core]</div>
+                    <div>&nbsp;↳ Natural language prompt transformed into responsive layout blocks</div>
+                    <div>&nbsp;↳ Translating &amp; synchronizing resource tokens across 3 locales... <span style="color: #22c55e;">[Done]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCMS Edge]</div>
+                    <div>&nbsp;↳ Atomic cache purge &amp; Zero-Downtime multi-site deployment... <span style="color: #22c55e;">[LIVE (15+ Sites)]</span></div>
+                `,
+                ja: `
+                    <div style="color: #38bdf8;">[SyncCMS Core]</div>
+                    <div>&nbsp;↳ Natural language prompt transformed into responsive layout blocks</div>
+                    <div>&nbsp;↳ Translating &amp; synchronizing resource tokens across 3 locales... <span style="color: #22c55e;">[Done]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCMS Edge]</div>
+                    <div>&nbsp;↳ Atomic cache purge &amp; Zero-Downtime multi-site deployment... <span style="color: #22c55e;">[LIVE (15+ Sites)]</span></div>
+                `
+            }
         },
         crawl: {
-            cmd: 'empasy crawl run --target "https://market.data.org" --schema "pricing.json"',
-            copyCmd: 'empasy crawl run --target "https://market.data.org" --schema "pricing.json"',
+            cmd: {
+                ko: 'empasy crawl run --target "https://market.data.org" --schema "pricing.json"',
+                en: 'empasy crawl run --target "https://market.data.org" --schema "pricing.json"',
+                ja: 'empasy crawl run --target "https://market.data.org" --schema "pricing.json"'
+            },
+            copyCmd: {
+                ko: 'empasy crawl run --target "https://market.data.org" --schema "pricing.json"',
+                en: 'empasy crawl run --target "https://market.data.org" --schema "pricing.json"',
+                ja: 'empasy crawl run --target "https://market.data.org" --schema "pricing.json"'
+            },
             tag: { ko: '지능형 데이터 수집', en: 'Intelligence Scout', ja: 'データ収集' },
             desc: {
                 ko: '사이트 구조 변화에 동적으로 대응하며 차단 없이 고품질 RAG 지식 데이터를 수집합니다.',
                 en: 'Dynamically adapts to DOM changes and bypasses bot defenses to extract RAG knowledge.',
                 ja: 'DOM構造の変化に動的適応し、アクセス遮断を回避して高品質RAGデータを収集します。'
             },
-            output: `
-                <div style="color: #38bdf8;">[SyncCrawl Scout]</div>
-                <div>&nbsp;↳ Rotating residential proxy session &amp; bypassing dynamic CAPTCHA... <span style="color: #22c55e;">[Success]</span></div>
-                <div>&nbsp;↳ Target DOM layout changed: Auto-inferring semantic selectors... <span style="color: #38bdf8;">[Resolved]</span></div>
-                <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCrawl Pipeline]</div>
-                <div>&nbsp;↳ Structured JSON extracted &amp; Vectorized into RAG Knowledge Base... <span style="color: #22c55e;">[1,420 Items Synced]</span></div>
-            `
+            output: {
+                ko: `
+                    <div style="color: #38bdf8;">[SyncCrawl Scout]</div>
+                    <div>&nbsp;↳ Rotating residential proxy session &amp; bypassing dynamic CAPTCHA... <span style="color: #22c55e;">[Success]</span></div>
+                    <div>&nbsp;↳ Target DOM layout changed: Auto-inferring semantic selectors... <span style="color: #38bdf8;">[Resolved]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCrawl Pipeline]</div>
+                    <div>&nbsp;↳ Structured JSON extracted &amp; Vectorized into RAG Knowledge Base... <span style="color: #22c55e;">[1,420 Items Synced]</span></div>
+                `,
+                en: `
+                    <div style="color: #38bdf8;">[SyncCrawl Scout]</div>
+                    <div>&nbsp;↳ Rotating residential proxy session &amp; bypassing dynamic CAPTCHA... <span style="color: #22c55e;">[Success]</span></div>
+                    <div>&nbsp;↳ Target DOM layout changed: Auto-inferring semantic selectors... <span style="color: #38bdf8;">[Resolved]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCrawl Pipeline]</div>
+                    <div>&nbsp;↳ Structured JSON extracted &amp; Vectorized into RAG Knowledge Base... <span style="color: #22c55e;">[1,420 Items Synced]</span></div>
+                `,
+                ja: `
+                    <div style="color: #38bdf8;">[SyncCrawl Scout]</div>
+                    <div>&nbsp;↳ Rotating residential proxy session &amp; bypassing dynamic CAPTCHA... <span style="color: #22c55e;">[Success]</span></div>
+                    <div>&nbsp;↳ Target DOM layout changed: Auto-inferring semantic selectors... <span style="color: #38bdf8;">[Resolved]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCrawl Pipeline]</div>
+                    <div>&nbsp;↳ Structured JSON extracted &amp; Vectorized into RAG Knowledge Base... <span style="color: #22c55e;">[1,420 Items Synced]</span></div>
+                `
+            }
         }
     };
 
@@ -366,9 +495,12 @@ function initMain() {
                 
                 const agentKey = tab.getAttribute('data-agent');
                 const data = agentTerminalData[agentKey] || agentTerminalData.verse;
+                const activeCmd = (data.cmd && (data.cmd[langKey] || data.cmd.ko)) || '';
+                const activeCopyCmd = (data.copyCmd && (data.copyCmd[langKey] || data.copyCmd.ko)) || activeCmd;
+                const activeOutput = (data.output && (data.output[langKey] || data.output.ko)) || '';
 
                 if (terminalCopyBtn) {
-                    terminalCopyBtn.setAttribute('data-cmd', data.copyCmd);
+                    terminalCopyBtn.setAttribute('data-cmd', activeCopyCmd);
                 }
 
                 // Smooth typing effect for terminal command
@@ -378,14 +510,14 @@ function initMain() {
                 terminalOutput.style.transition = 'opacity 0.2s ease';
 
                 let charIndex = 0;
-                const fullCmd = data.cmd;
+                const fullCmd = activeCmd;
                 typingTimer = setInterval(() => {
                     if (charIndex < fullCmd.length) {
                         terminalInput.innerText += fullCmd.charAt(charIndex);
                         charIndex++;
                     } else {
                         clearInterval(typingTimer);
-                        terminalOutput.innerHTML = data.output;
+                        terminalOutput.innerHTML = activeOutput;
                         terminalOutput.style.opacity = '1';
                     }
                 }, 12);
@@ -393,7 +525,6 @@ function initMain() {
                 if (terminalRoleBanner) {
                     const tagEl = terminalRoleBanner.querySelector('.terminal-role-tag');
                     const textEl = terminalRoleBanner.querySelector('.terminal-role-text');
-                    const langKey = pageLang.startsWith('en') ? 'en' : (pageLang.startsWith('ja') ? 'ja' : 'ko');
                     if (tagEl && data.tag) tagEl.innerText = data.tag[langKey] || data.tag.ko;
                     if (textEl && data.desc) textEl.innerText = data.desc[langKey] || data.desc.ko;
                 }
