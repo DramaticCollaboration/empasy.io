@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>엠파시(Empasy) | SyncShop 가격 관리 및 마진 보호 아키텍처</title>
+    <meta name="description" content="수많은 상품의 가격과 할인 정책을 일괄 변경할 때 발생하는 오작동과 마진 손실을 줄이는 SyncShop의 가격 검증 및 복구 아키텍처를 소개합니다.">
+    <meta name="keywords" content="엔터프라이즈 이커머스 솔루션, 상품 가격 일괄 변경, 마진 보호, 실시간 스냅샷, 데이터 복구, SyncShop, 엠파시">
+    <meta property="og:title" content="엠파시(Empasy) | SyncShop 가격 관리 및 마진 보호 아키텍처">
+    <meta property="og:description" content="수많은 상품의 가격과 할인 정책을 일괄 변경할 때 발생하는 오작동과 마진 손실을 줄이는 SyncShop의 가격 검증 및 복구 아키텍처를 소개합니다.">
+    <meta property="og:type" content="website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Empasy">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "엠파시(Empasy) 기술 블로그",
+      "url": "https://empasy.io/ko/blog/syncshop-batch-pricing-margin-protection-architecture.html",
+      "description": "엔터프라이즈 커머스 시스템의 안전한 가격 변경과 데이터 보호 아키텍처",
+      "publisher": {
+        "@type": "Organization",
+        "name": "엠파시(Empasy)",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/empasy-logo.png"
+        }
+      }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <meta name="geo.region" content="KR-11" />
+    <meta name="geo.placename" content="Seoul" />
+    <meta name="geo.position" content="37.5665;126.9780" />
+    <meta name="ICBM" content="37.5665, 126.9780" />
+    <!-- SEO & AIO Tags -->
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta property="og:locale" content="ko_KR">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "[Tech Blog] 최소 마진율 보호와 안전한 대량 가격 변경: SyncShop의 가격 관리 및 복구 아키텍처",
+      "description": "수많은 상품의 가격과 할인 정책을 일괄 변경할 때 발생할 수 있는 마진 손실과 오작동을 방지하는 SyncShop의 안전장치와 실시간 복구 방식을 살펴봅니다.",
+      "author": {
+        "@type": "Organization",
+        "name": "Empasy Engineering Team",
+        "url": "https://empasy.io"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Empasy",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/assets/logo.png"
+        }
+      },
+      "url": "https://empasy.io/ko/blog/syncshop-batch-pricing-margin-protection-architecture.html"
+    }
+    </script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://empasy.io/ko/blog/syncshop-batch-pricing-margin-protection-architecture.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncshop-batch-pricing-margin-protection-architecture.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncshop-batch-pricing-margin-protection-architecture.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncshop-batch-pricing-margin-protection-architecture.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncshop-batch-pricing-margin-protection-architecture.html" />
+    <meta property="og:url" content="https://empasy.io/ko/blog/syncshop-batch-pricing-margin-protection-architecture.html">
+  <script type="module" crossorigin src="/assets/ko_blog_syncshop-batch-pricing-margin-protection-architecture-DHsCItxS.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-0HPlSwZO.js">
+  <link rel="modulepreload" crossorigin href="/assets/i18n-d99J6wys.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-eyLql9aY.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="glass-header">
+        <!-- Top Announcement Bar -->
+        <div class="top-announcement-bar">
+            <div class="container announcement-container">
+                <span class="announcement-badge">[배포 안내]</span>
+                <span class="announcement-text">Vision-LLM 기반 자가 치유 QA 솔루션 <strong>SyncEta</strong> 데스크톱 앱을 다운로드하여 바로 실행해볼 수 있습니다.</span>
+                <a href="/ko/download_eta.html" class="announcement-link">다운로드 페이지 바로가기 →</a>
+                <button type="button" class="announcement-close" aria-label="닫기">&times;</button>
+            </div>
+        </div>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/ko/pages/index.html">
+                    <img src="/images/logo-dark.svg" alt="EMPASY" class="logo-img" onerror="this.onerror=null; this.src='/assets/images/logo-dark.svg';">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <!-- 1. Company Group -->
+                <div class="dropdown">
+                    <a href="/ko/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/ko/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
+                        <a href="/ko/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
+                        <a href="/ko/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
+                        <a href="/ko/pages/careers.html">채용 (Careers)</a>
+                    </div>
+                </div>
+                
+                <!-- 2. Sync Series Group -->
+                <div class="dropdown">
+                    <a href="/ko/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/ko/solutions/sync-verse.html" style="font-weight: 700; color: #38bdf8;">SyncVerse (관제탑)</a>
+                        <a href="/ko/solutions/sync-boot.html">SyncBoot</a>
+                        <a href="/ko/solutions/sync-cms.html">SyncCMS</a>
+                        <a href="/ko/solutions/sync-crawl.html">SyncCrawl</a>
+                        <a href="/ko/solutions/sync-eta.html">SyncEta <span style="font-size: 0.75rem; padding: 2px 6px; border-radius: 4px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; margin-left: 4px;">데스크톱 앱</span></a>
+                        <a href="/ko/solutions/sync-llm.html">SyncLLM</a>
+                        <a href="/ko/solutions/sync-insight.html">SyncInsight</a>
+                    </div>
+                </div>
+    
+                <!-- 3. Insights Group -->
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/ko/blog/blog.html">Tech Blog</a>
+                        <a href="/ko/pages/faq.html">FAQ</a>
+                        <a href="/ko/blog/case-study-finance.html">고객 사례 상세</a>
+                    </div>
+                </div>
+    
+                <a href="/ko/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
+                
+                <!-- Documentation link -->
+                <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Docs <i class="fas fa-external-link-alt" style="font-size:0.7em; margin-left:2px; opacity:0.7;"></i></a>
+            </nav>
+            <div class="nav-actions">
+                <a href="/ko/download_eta.html" class="btn btn-outline btn-sm" style="font-weight: 600; border-color: rgba(56, 189, 248, 0.4); color: #38bdf8; white-space: nowrap;">SyncEta 다운로드</a>
+                <div class="dropdown lang-dropdown" style="display: flex; align-items: center;">
+                    <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:0.95rem; padding: 0.4rem 0.5rem; cursor: pointer; display:flex; align-items:center; gap:5px;">
+                        <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> KO</span>
+                        <i class="fas fa-chevron-down" style="font-size:0.7em; opacity:0.7;"></i>
+                    </button>
+                    <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
+                        <a href="/ko/pages/index.html" data-lang="ko" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
+                        <a href="/en/pages/index.html" data-lang="en" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
+                        <a href="/ja/pages/index.html" data-lang="ja" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JP</a>
+                    </div>
+                </div>
+                <a href="/ko/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact" style="white-space: nowrap;">Contact</a>
+            </div>
+        </div>
+    </header>
+    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
+        <!-- Compact Breadcrumb / Back Link -->
+        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
+            <a href="../../ko/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
+                <span>Tech Blog 목록으로</span>
+            </a>
+            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
+        </div>
+        
+        <section style="padding: 0;">
+            <div class="container" style="padding: 0;">
+                <article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
+                    <div style="line-height: 1.8; color: var(--text-primary);">
+                        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 0.9rem;">
+                            <span>2026-08-10</span>
+                            <span>&bull;</span>
+                            <span>읽는 시간 약 6분</span>
+                            <span>&bull;</span>
+                            <span style="color: var(--primary-color); font-weight: 600;">E-Commerce & Operations</span>
+                        </div>
+
+                        <h1 style="font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.35; margin-bottom: 1.5rem; color: var(--text-primary);">최소 마진율 보호와 안전한 대량 가격 변경: SyncShop의 가격 관리 및 복구 아키텍처</h1>
+
+                        <p>수만 개 이상의 상품을 취급하는 대규모 쇼핑몰에서는 시즌 기획전이나 프로모션 때마다 가격을 한꺼번에 변경하는 작업이 빈번하게 일어납니다. 할인율 계산 공식이 복잡해지거나 입력 과정에서 작은 실수가 발생하면, 상품 원가보다 낮은 가격으로 판매되어 기업에 직접적인 손실을 주기도 합니다. 또한 작업 중간에 네트워크나 시스템 장애가 생기면 일부 상품만 가격이 바뀌어 정합성이 깨지는 문제가 발생하기 쉽습니다.</p>
+                        
+                        <p>엠파시의 커머스 모듈인 <strong>SyncShop</strong>은 대규모 가격 변경 과정에서 발생할 수 있는 손실 위험을 줄이고, 이상 징후가 있을 때 이전 상태로 되돌릴 수 있는 안전장치를 중심으로 설계되었습니다. 본 글에서는 SyncShop이 상품 마진을 보호하고 대량 변경 작업을 안정적으로 처리하는 방식을 살펴봅니다.</p>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. 가격 변경 파이프라인의 전체 흐름</h3>
+                        <p>SyncShop의 대량 가격 변경 작업은 입력부터 실제 반영까지 4단계의 검증 과정을 거칩니다. 각 단계가 성공적으로 끝나야 다음 단계로 진행되도록 구성되어 있습니다.</p>
+
+                        <div class="modern-pipeline">
+                            <div class="pipeline-step">
+                                <div class="pipeline-title">1단계: 대상 조회</div>
+                                <div class="pipeline-desc">카테고리 및 조건별 상품 필터링</div>
+                            </div>
+                            <div class="pipeline-arrow">➔</div>
+                            <div class="pipeline-step">
+                                <div class="pipeline-title">2단계: 마진 사전 검증</div>
+                                <div class="pipeline-desc">원가 및 수수료 기반 최소 마진 확인</div>
+                            </div>
+                            <div class="pipeline-arrow">➔</div>
+                            <div class="pipeline-step">
+                                <div class="pipeline-title">3단계: 스냅샷 저장</div>
+                                <div class="pipeline-desc">변경 직전 가격 데이터 백업 보관</div>
+                            </div>
+                            <div class="pipeline-arrow">➔</div>
+                            <div class="pipeline-step">
+                                <div class="pipeline-title">4단계: 분할 일괄 반영</div>
+                                <div class="pipeline-desc">DB 트랜잭션 단위 안전 업데이트</div>
+                            </div>
+                        </div>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. 최소 마진율 보호 규칙 (Margin Guard)</h3>
+                        <p>가격 변경 작업에서 가장 우선시되는 기준은 이익률입니다. 담당자가 '전 품목 20% 추가 할인'과 같은 대량 변경 규칙을 실행하더라도, 개별 상품마다 기본 매입 원가와 플랫폼 수수료율이 다르기 때문에 일부 상품은 마이너스 마진이 발생할 수 있습니다.</p>
+                        
+                        <p>SyncShop은 변경 대상에 포함된 모든 상품에 대해 다음 산식을 먼저 대입합니다:</p>
+                        <div style="background: rgba(15, 23, 42, 0.4); padding: 1rem 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color); margin: 1.5rem 0; font-family: monospace;">
+                            예상 마진율 = (변경 예정 판매가 - 매입 원가 - 정산 수수료) / 변경 예정 판매가
+                        </div>
+
+                        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 0.7rem;"><strong>하한선 필터링:</strong> 카테고리별로 정해진 최소 허용 마진율(예: 최저 8%) 미만으로 떨어지는 상품이 발견되면 해당 상품을 즉시 제외 목록으로 분리합니다.</li>
+                            <li style="margin-bottom: 0.7rem;"><strong>사전 검토 보고:</strong> 전체 변경 대상 건수 중 정상 반영 대상과 마진 미달로 제외된 상품 목록을 관리자 화면에 명확한 수치로 제시하여, 담당자가 확인 후 진행 여부를 결정할 수 있도록 돕습니다.</li>
+                        </ul>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. 작업 직전 스냅샷 저장 및 롤백 기능</h3>
+                        <p>데이터베이스의 값을 실제로 바꾸기 직전, 변경 대상 상품들의 기존 가격과 할인 정보는 별도의 스냅샷 저장소에 기록됩니다.</p>
+
+                        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 0.7rem;"><strong>작업 단위 식별자 부여:</strong> 대량 변경이 요청될 때마다 고유한 작업 ID(Job ID)가 발급되며, 해당 작업에 묶인 모든 상품의 이전 상태가 함께 묶여 저장됩니다.</li>
+                            <li style="margin-bottom: 0.7rem;"><strong>신속한 이전 상태 복원:</strong> 변경 반영 후 외부 마켓과의 연동 오류나 운영상의 판단으로 이전 상태 복구가 필요할 경우, 해당 작업 ID를 기준으로 1회 클릭만으로 변경 직전 가격으로 되돌리는 복원(Rollback) 기능을 제공합니다.</li>
+                            <li style="margin-bottom: 0.7rem;"><strong>기록 보존:</strong> 언제, 누가, 어떤 조건으로 가격을 변경했는지에 대한 감사 이력이 함께 보관되어 사후 확인이 용이합니다.</li>
+                        </ul>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">4. 분할 처리(Chunking)를 통한 데이터베이스 부하 분산</h3>
+                        <p>수십만 건의 레코드를 단일 트랜잭션으로 한꺼번에 업데이트하면 데이터베이스 락(Lock)이 길어져 일반 구매 고객의 결제나 장바구니 조회가 지연될 수 있습니다.</p>
+
+                        <p>SyncShop은 대량 변경 작업을 500건에서 1,000건 단위의 묶음(Chunk)으로 나누어 순차적으로 처리합니다. 각 묶음이 완료될 때마다 진행률이 갱신되며, 도중에 오류가 발생한 묶음이 있더라도 이미 정상 처리된 내역과 실패한 내역을 분리하여 재시도할 수 있도록 지원합니다.</p>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <p>가격 관리는 쇼핑몰의 수익성과 직결되는 핵심 영역입니다. SyncShop은 화려한 자동화에 앞서 실무 운영자가 안심하고 작업할 수 있는 안전장치와 복구 경로를 마련하는 데 중점을 두었습니다. 이를 통해 운영 위험을 줄이고 반복적인 대량 변경 작업을 체계적으로 관리할 수 있습니다.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-4">
+        <div class="container text-center fade-in-up">
+            <h2 class="footer-title" data-i18n="footer.title">엠파시와 함께 비즈니스를 가속화하세요</h2>
+            <div class="mt-4">
+                <a href="/ko/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">도입 문의 (Contact)</a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center;">
+                    <a href="https://github.com/DramaticCollaboration" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-book"></i> Documentation
+                    </a>
+                    <a href="/ko/pages/careers.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-user-plus"></i> 인재 영입 (Careers)
+                    </a>
+                    <a href="/ko/pages/terms.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-file-contract"></i> 서비스 이용약관
+                    </a>
+                    <a href="/ko/pages/privacy.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-shield-alt"></i> 개인정보 처리방침
+                    </a>
+                    <a href="https://doc.empasy.com/ecosystem/security-and-compliance" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-lock"></i> 보안 &amp; 컴플라이언스
+                    </a>
+                    <span style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: rgba(34, 197, 94, 0.12); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 20px; font-size: 0.8rem; color: #4ade80; font-weight: 600;">
+                        <span style="width: 7px; height: 7px; border-radius: 50%; background: #22c55e; display: inline-block;"></span> All Systems Operational (SLA 99.9%)
+                    </span>
+                </div>
+                <address style="font-style: normal; color: rgba(255, 255, 255, 0.65); font-size: 0.85rem; line-height: 1.8;">
+                    <strong style="color: rgba(255, 255, 255, 0.95); font-size: 0.95rem;">주식회사 엠파시 (Empasy IT Corp.)</strong> &nbsp;|&nbsp; 대표이사 : 오병문<br>
+                    사업자등록번호 : 547-81-03408<br>
+                    본점 소재지 : 서울 금천구 가산디지털1로 205-27 2층 208호 &nbsp;|&nbsp; 개인정보보호책임자 : 오병문 (<a href="mailto:poh@empasy.com" style="color: inherit; text-decoration: underline;">poh@empasy.com</a>)<br>
+                    <span style="color: rgba(255, 255, 255, 0.85);">엔터프라이즈 솔루션 도입 문의 : <a href="mailto:poh@empasy.com" style="color: #38bdf8; text-decoration: underline;">poh@empasy.com</a> &nbsp;|&nbsp; 기술 지원 및 대표번호 : <a href="tel:0507-1360-8169" style="color: #f8fafc; text-decoration: none;">0507-1360-8169</a></span>
+                </address>
+                <p data-i18n="footer.copyright" style="color: rgba(255, 255, 255, 0.45); font-size: 0.8rem; margin-top: 1rem;">© 2026 Empasy IT Corp. All rights reserved. SyncSeries® is a registered trademark of Empasy.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+</body>
+</html>

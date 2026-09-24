@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Empasy | SyncCrawl Webデータ収集および前処理アーキテクチャ</title>
+    <meta name="description" content="社内ナレッジ検索（RAG）の検索精度を高めるためのWebデータ分散収集、本文抽出、変更検知パイプラインを担うSyncCrawlのアーキテクチャを解説します。">
+    <meta name="keywords" content="エンタープライズWebクローリング, RAGデータパイプライン, 本文テキスト抽出, 分散収集, SyncCrawl, Empasy">
+    <meta property="og:title" content="Empasy | SyncCrawl Webデータ収集および前処理アーキテクチャ">
+    <meta property="og:description" content="社内ナレッジ検索（RAG）の検索精度を高めるためのWebデータ分散収集、本文抽出、変更検知パイプラインを担うSyncCrawlのアーキテクチャを解説します。">
+    <meta property="og:type" content="website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Empasy">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Empasy 技術ブログ",
+      "url": "https://empasy.io/ja/blog/synccrawl-distributed-web-data-pipeline.html",
+      "description": "エンタープライズRAG構築に向けたWebデータ収集および前処理パイプラインアーキテクチャ",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Empasy",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/empasy-logo.png"
+        }
+      }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <meta name="geo.region" content="KR-11" />
+    <meta name="geo.placename" content="Seoul" />
+    <meta name="geo.position" content="37.5665;126.9780" />
+    <meta name="ICBM" content="37.5665, 126.9780" />
+    <!-- SEO & AIO Tags -->
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta property="og:locale" content="ja_JP">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "[Tech Blog] 社内ナレッジ検索（RAG）に向けたWebデータ収集と前処理：SyncCrawlパイプラインアーキテクチャ",
+      "description": "最新の市場動向や技術文書を定期的に収集し、社内検索システムやAIが活用しやすい形式へ整えるSyncCrawlの分散収集構造を解説します。",
+      "author": {
+        "@type": "Organization",
+        "name": "Empasy Engineering Team",
+        "url": "https://empasy.io"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Empasy",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/assets/logo.png"
+        }
+      },
+      "url": "https://empasy.io/ja/blog/synccrawl-distributed-web-data-pipeline.html"
+    }
+    </script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://empasy.io/ja/blog/synccrawl-distributed-web-data-pipeline.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <meta property="og:url" content="https://empasy.io/ja/blog/synccrawl-distributed-web-data-pipeline.html">
+  <script type="module" crossorigin src="/assets/ja_blog_synccrawl-distributed-web-data-pipeline-DHsCItxS.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-0HPlSwZO.js">
+  <link rel="modulepreload" crossorigin href="/assets/i18n-d99J6wys.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-eyLql9aY.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="glass-header">
+        <!-- Top Announcement Bar -->
+        <div class="top-announcement-bar">
+            <div class="container announcement-container">
+                <span class="announcement-badge">[リリース]</span>
+                <span class="announcement-text">Vision-LLM基盤の自己修復QAソリューション <strong>SyncEta</strong> デスクトップアプリを今すぐダウンロードしてお試しください。</span>
+                <a href="/ja/download_eta.html" class="announcement-link">ダウンロードページへ →</a>
+                <button type="button" class="announcement-close" aria-label="閉じる">&times;</button>
+            </div>
+        </div>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/ja/pages/index.html">
+                    <img src="/images/logo-dark.svg" alt="EMPASY" class="logo-img" onerror="this.onerror=null; this.src='/assets/images/logo-dark.svg';">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <!-- 1. Company Group -->
+                <div class="dropdown">
+                    <a href="/ja/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/ja/pages/index.html#philosophy" data-i18n="nav.about">企業理念</a>
+                        <a href="/ja/pages/vision.html" data-i18n="nav.vision">ビジョン 2026</a>
+                        <a href="/ja/pages/team.html" data-i18n="nav.team">チーム紹介</a>
+                        <a href="/ko/pages/careers.html">採用情報</a>
+                    </div>
+                </div>
+                
+                <!-- 2. Sync Series Group -->
+                <div class="dropdown">
+                    <a href="/ja/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/ja/solutions/sync-verse.html" style="font-weight: 700; color: #38bdf8;">SyncVerse (統制タワー)</a>
+                        <a href="/ja/solutions/sync-boot.html">SyncBoot</a>
+                        <a href="/ja/solutions/sync-cms.html">SyncCMS</a>
+                        <a href="/ja/solutions/sync-crawl.html">SyncCrawl</a>
+                        <a href="/ja/solutions/sync-eta.html">SyncEta <span style="font-size: 0.75rem; padding: 2px 6px; border-radius: 4px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; margin-left: 4px;">デスクトップアプリ</span></a>
+                        <a href="/ja/solutions/sync-llm.html">SyncLLM</a>
+                        <a href="/ja/solutions/sync-insight.html">SyncInsight</a>
+                    </div>
+                </div>
+    
+                <!-- 3. Insights Group -->
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/ja/blog/blog.html">Tech Blog</a>
+                        <a href="/ja/pages/faq.html">FAQ</a>
+                        <a href="/ja/blog/case-study-finance.html">導入事例詳細</a>
+                    </div>
+                </div>
+    
+                <a href="/ja/pages/clients.html" data-i18n="nav.clients">導入実績</a>
+                
+                <!-- Documentation link -->
+                <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Docs <i class="fas fa-external-link-alt" style="font-size:0.7em; margin-left:2px; opacity:0.7;"></i></a>
+            </nav>
+            <div class="nav-actions">
+                <a href="/ja/download_eta.html" class="btn btn-outline btn-sm" style="font-weight: 600; border-color: rgba(56, 189, 248, 0.4); color: #38bdf8; white-space: nowrap;">SyncEta ダウンロード</a>
+                <div class="dropdown lang-dropdown" style="display: flex; align-items: center;">
+                    <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:0.95rem; padding: 0.4rem 0.5rem; cursor: pointer; display:flex; align-items:center; gap:5px;">
+                        <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> JP</span>
+                        <i class="fas fa-chevron-down" style="font-size:0.7em; opacity:0.7;"></i>
+                    </button>
+                    <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
+                        <a href="/ko/pages/index.html" data-lang="ko" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
+                        <a href="/en/pages/index.html" data-lang="en" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
+                        <a href="/ja/pages/index.html" data-lang="ja" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JP</a>
+                    </div>
+                </div>
+                <a href="/ja/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact" style="white-space: nowrap;">Contact</a>
+            </div>
+        </div>
+    </header>
+    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
+        <!-- Compact Breadcrumb / Back Link -->
+        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
+            <a href="../../ja/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
+                <span>Tech Blog一覧へ</span>
+            </a>
+            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
+        </div>
+        
+        <section style="padding: 0;">
+            <div class="container" style="padding: 0;">
+                <article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
+                    <div style="line-height: 1.8; color: var(--text-primary);">
+                        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 0.9rem;">
+                            <span>2026-09-12</span>
+                            <span>&bull;</span>
+                            <span>所要時間 約6分</span>
+                            <span>&bull;</span>
+                            <span style="color: var(--primary-color); font-weight: 600;">Data Pipeline & Search</span>
+                        </div>
+
+                        <h1 style="font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.35; margin-bottom: 1.5rem; color: var(--text-primary);">社内ナレッジ検索（RAG）に向けたWebデータ収集と前処理：SyncCrawlパイプラインアーキテクチャ</h1>
+
+                        <p>社内のAIナレッジ検索システム（RAG: Retrieval-Augmented Generation）の応答精度は、参照するデータの品質に大きく依存します。社内文書だけでなく、関連法令、業界標準、最新の市場レポートなど、外部Webサイト上の情報を定期的に収集してナレッジベースを更新する要件が増加しています。</p>
+                        
+                        <p>しかし外部Webページをそのまま保存すると、広告バナー、ヘッダー・フッターのメニュー、JavaScriptコードなどの不要な情報が混入し、AIが誤った回答を導く原因となります。また近年のWebサイトは動的なJavaScript描画（SPA）が多く、単なるHTML取得のみでは本文を取得しにくい環境も存在します。</p>
+
+                        <p>Empasyのデータ収集エンジンである<strong>SyncCrawl</strong>は、大規模なWeb文書を安定して取得し、検索に必要な本文テキストのみを抽出して社内ベクトルDBへ届けるパイプラインを備えています。本記事では、SyncCrawlの収集・前処理構造を解説します。</p>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. SyncCrawl データ処理パイプライン</h3>
+                        <p>Web文書が収集されて社内検索システムへ登録されるまで、4つのステップを経由します：</p>
+
+                        <div class="modern-pipeline">
+                            <div class="pipeline-step">
+                                <div class="pipeline-title">ステップ1: 収集実行</div>
+                                <div class="pipeline-desc">静的HTTPとブラウザの使い分け</div>
+                            </div>
+                            <div class="pipeline-arrow">➔</div>
+                            <div class="pipeline-step">
+                                <div class="pipeline-title">ステップ2: 本文抽出</div>
+                                <div class="pipeline-desc">広告・不要タグの除去とMarkdown化</div>
+                            </div>
+                            <div class="pipeline-arrow">➔</div>
+                            <div class="pipeline-step">
+                                <div class="pipeline-title">ステップ3: 変更検知</div>
+                                <div class="pipeline-desc">ハッシュ比較による重複処理の除外</div>
+                            </div>
+                            <div class="pipeline-arrow">➔</div>
+                            <div class="pipeline-step">
+                                <div class="pipeline-title">ステップ4: 分割と登録</div>
+                                <div class="pipeline-desc">段落分割後にベクトルDBへ格納</div>
+                            </div>
+                        </div>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. 静的パーサーと仮想ブラウザのハイブリッド運用</h3>
+                        <p>すべてのページをメモリ消費の大きい仮想ブラウザ（Headless Browser）で処理すると、サーバ負荷が跳ね上がります。逆に単純なHTTP取得のみでは、JavaScriptで動的に生成される本文を取得できません。</p>
+
+                        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 0.7rem;"><strong>静的パス：</strong> 初回レスポンスを評価し、静的なHTML構成であれば軽量なHTTPクライアントで高速に取得します。</li>
+                            <li style="margin-bottom: 0.7rem;"><strong>動的パス：</strong> 本文の表示にJavaScript実行が必要なサイトの場合に限り、仮想ブラウザを用いて描画完了後のDOMを取得します。</li>
+                            <li style="margin-bottom: 0.7rem;"><strong>アクセス頻度制御（Politeness）：</strong> 相手方サーバに過度な負荷を与えないよう、ドメインごとの同時接続数制限とリクエスト間隔を厳密に管理します。</li>
+                        </ul>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. 本文テキストの抽出と構造化</h3>
+                        <p>収集したページから不要な装飾を取り除き、文脈を維持したテキストを抽出することが検索品質の土台となります。</p>
+
+                        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 0.7rem;"><strong>不要要素の除去：</strong> ナビゲーションバー、フッター、広告バナー、スクリプトタグなどを自動で除去します。</li>
+                            <li style="margin-bottom: 0.7rem;"><strong>階層構造の保持：</strong> 見出し（H1〜H4）、表（テーブル）、箇条書きなどの文書構造をMarkdown形式へ変換し、文脈の前後関係を保持します。</li>
+                            <li style="margin-bottom: 0.7rem;"><strong>ハッシュによる差分判定：</strong> 抽出した本文のハッシュ値を過去データと比較し、変更のないページはベクトル化工程をスキップしてリソースを節約します。</li>
+                        </ul>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">4. 社内ナレッジ検索（Vector DB）との連携</h3>
+                        <p>整形された文書は、AIモデルが処理しやすい長さ（通常500〜1,000文字程度）で段落に分割（チャンキング）されます。その際、文脈の断絶を防ぐために一定の重複（オーバーラップ）を設けます。</p>
+
+                        <p>分割された段落はベクトル化されて社内ベクトルデータベースに格納され、社員が業務上の質問を行った際に精度の高い外部参照情報として活用されます。</p>
+
+                        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+
+                        <p>AIシステムの成否は、確かなデータをいかに継続して供給できるかにかかっています。SyncCrawlはノイズを抑え、実務に必要な情報だけを社内インフラへ取り込むためのデータ収集パイプラインを提供します。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-4">
+        <div class="container text-center fade-in-up">
+            <h2 class="footer-title" data-i18n="footer.title">Empasyと共にビジネスを加速させましょう</h2>
+            <div class="mt-4">
+                <a href="/ja/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">導入のお問い合わせ (Contact)</a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center;">
+                    <a href="https://github.com/DramaticCollaboration" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-book"></i> Documentation
+                    </a>
+                    <a href="/ko/pages/careers.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-user-plus"></i> 採用情報 (Careers)
+                    </a>
+                    <a href="/ja/pages/terms.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-file-contract"></i> 利用規約
+                    </a>
+                    <a href="/ja/pages/privacy.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-shield-alt"></i> プライバシーポリシー
+                    </a>
+                    <a href="https://doc.empasy.com/ecosystem/security-and-compliance" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-lock"></i> セキュリティ&amp;コンプライアンス
+                    </a>
+                    <span style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: rgba(34, 197, 94, 0.12); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 20px; font-size: 0.8rem; color: #4ade80; font-weight: 600;">
+                        <span style="width: 7px; height: 7px; border-radius: 50%; background: #22c55e; display: inline-block;"></span> 稼働ステータス: 正常 (SLA 99.9%)
+                    </span>
+                </div>
+                <address style="font-style: normal; color: rgba(255, 255, 255, 0.65); font-size: 0.85rem; line-height: 1.8;">
+                    <strong style="color: rgba(255, 255, 255, 0.95); font-size: 0.95rem;">株式会社エムパシー (Empasy IT Corp.)</strong> &nbsp;|&nbsp; 代表取締役 : オ・ビョンムン<br>
+                    事業者登録番号 : 547-81-03408<br>
+                    本社所在地 : 大韓民国ソウル特別市衿川区加山デジタル1路205-27 2階208号 &nbsp;|&nbsp; 個人情報保護責任者 : オ・ビョンムン<br>
+                    <span style="color: rgba(255, 255, 255, 0.85);">エンタープライズ導入相談 : <a href="mailto:poh@empasy.com" style="color: #38bdf8; text-decoration: underline;">poh@empasy.com</a> &nbsp;|&nbsp; 技術サポート : <a href="tel:+82-507-1360-8169" style="color: #f8fafc; text-decoration: none;">+82-507-1360-8169</a></span>
+                </address>
+                <p data-i18n="footer.copyright" style="color: rgba(255, 255, 255, 0.45); font-size: 0.8rem; margin-top: 1rem;">© 2026 Empasy IT Corp. All rights reserved. SyncSeries® is a registered trademark of Empasy.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+</body>
+</html>

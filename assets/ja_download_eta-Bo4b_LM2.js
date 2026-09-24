@@ -1,1 +1,0 @@
-import{t as e}from"./main-CAkwZCGm.js";import{t}from"./downloadLink-B3MDVS29.js";import"./i18n-d99J6wys.js";e(),t();
