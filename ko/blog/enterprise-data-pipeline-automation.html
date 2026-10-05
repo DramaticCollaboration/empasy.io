@@ -7,7 +7,61 @@
     <meta property="og:title" content="엠파시(Empasy) | Enterprise data pipeline automation">
     <meta property="og:description" content="디지털 전환(DX)과 AI 인프라를 한 번에 해결하는 B2B 기업용 AI 통합 아키텍처. 기획부터 운영까지 인간의 개입을 최소화하는 AI Ops 기반 생태계입니다.">
     <meta property="og:type" content="website">
-    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Blog",      "name": "엠파시(Empasy) 기술 블로그",      "url": "https://empasy.io/ko/blog/enterprise-data-pipeline-automation.html",      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",      "publisher": {        "@type": "Organization",        "name": "엠파시(Empasy)",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.io/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <!-- SEO & AIO Tags -->        <meta property="og:image" content="https://empasy.io/empasy-logo.png">    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">        <meta property="og:locale" content="ko_KR">    <script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "Article",  "headline": "LLM을 활용한 엔터프라이즈 데이터 파이프라인 자동화 사례",  "description": "SyncSeries를 활용하여 비정형 데이터를 구조화하고 보안이 중요한 엔터프라이즈 환경에서 LLM을 어떻게 활용할 수 있는지 알아봅니다.",  "author": {    "@type": "Organization",    "name": "Empasy Engineering Team",    "url": "https://empasy.io"  },  "publisher": {    "@type": "Organization",    "name": "Empasy",    "logo": {      "@type": "ImageObject",      "url": "https://empasy.io/assets/logo.png"    }  },  "url": "https://empasy.io/ko/blog/enterprise-data-pipeline-automation.html"}    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Empasy">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "엠파시(Empasy) 기술 블로그",
+      "url": "https://empasy.io/ko/blog/enterprise-data-pipeline-automation.html",
+      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
+      "publisher": {
+        "@type": "Organization",
+        "name": "엠파시(Empasy)",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/empasy-logo.png"
+        }
+      }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <meta name="geo.region" content="KR-11" />
+    <meta name="geo.placename" content="Seoul" />
+    <meta name="geo.position" content="37.5665;126.9780" />
+    <meta name="ICBM" content="37.5665, 126.9780" />
+    <!-- SEO & AIO Tags -->
+    
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <meta property="og:locale" content="ko_KR">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "LLM을 활용한 엔터프라이즈 데이터 파이프라인 자동화 사례",
+  "description": "SyncSeries를 활용하여 비정형 데이터를 구조화하고 보안이 중요한 엔터프라이즈 환경에서 LLM을 어떻게 활용할 수 있는지 알아봅니다.",
+  "author": {
+    "@type": "Organization",
+    "name": "Empasy Engineering Team",
+    "url": "https://empasy.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Empasy",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://empasy.io/assets/logo.png"
+    }
+  },
+  "url": "https://empasy.io/ko/blog/enterprise-data-pipeline-automation.html"
+}
+    </script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- SEO & AIO Tags -->
     
@@ -50,7 +104,7 @@
                     <div class="dropdown-content">
                         <a href="/ko/pages/index.html#philosophy" data-i18n="nav.about">회사 철학</a>
                         <a href="/ko/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
-                        <a href="/ko/pages/team.html" data-i18n="nav.team">우리의 이야기</a>
+                        <a href="/ko/pages/team.html" data-i18n="nav.team">회사 소개</a>
                         <a href="/ko/pages/careers.html">채용 (Careers)</a>
                     </div>
                 </div>
@@ -137,7 +191,7 @@
             <li style="margin-bottom: 0.5rem;"><strong>1단계 (턴 기반 - 결과 확인):</strong> 사용자가 지시할 때마다 수행하고 결과를 확인받는 단계입니다.</li>
             <li style="margin-bottom: 0.5rem;"><strong>2단계 (목표 기반 - 종료 조건 위임):</strong> "테스트 시나리오 전수 통과 시 종료"와 같이 특정 최종 조건을 인지하고 스스로 반복 수행하도록 조율합니다.</li>
             <li style="margin-bottom: 0.5rem;"><strong>3단계 (시간 기반 - 시작 시점 자율화):</strong> 정해진 주기나 이벤트 트리거(Code Commit 등 Webhook 연동)에 맞춰 무인 실행을 능동적으로 시작합니다.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>4단계 (능동형 - 과업 자율 결정):</strong> 시스템 장애나 결함이 올라오면 스스로 판단하여 무엇을 할지 결정하고 자율 복구 워크플로우를 가동하는 완전한 AI Ops 단계입니다.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>4단계 (능동형 - 과업 자율 결정):</strong> 시스템 장애나 결함이 발생하면 사전에 검증된 안전 정책에 따라 장애를 신속히 격리하고 보상 워크플로우를 수행하는 체계적인 AI Ops 단계입니다.</li>
         </ul>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
@@ -260,6 +314,6 @@
             </div>
         </div>
     </footer>
-    <!-- Scripts -->
+    <!-- Scripts -->
 </body>
 </html>
