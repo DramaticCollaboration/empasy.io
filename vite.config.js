@@ -16,6 +16,9 @@ htmlFiles.forEach((file) => {
 });
 
 export default defineConfig({
+    server: {
+        port: 5174
+    },
     build: {
         rollupOptions: {
             input

@@ -1,6 +1,6 @@
 ﻿---
 title: 리눅스 electron 디버깅 Crash
-description: 기억은 금방 사라지지만, 로그는 영원하다! 🎯 우리 팀의 재미있고 자유로운 작업 기록 공간
+description: 분산 트랜잭션, 메모리 최적화 등 실무 이슈 분석 및 트러블슈팅 엔지니어링 로그입니다.
 head:
   - - meta
     - name: keywords

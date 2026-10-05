@@ -1,6 +1,6 @@
 ﻿---
 title: 공부 한것들을 적어 보아요
-description: 까먹지 말고 재밌게 저장하자! 🎯 공부한 내용을 자유롭게 기록하는 즐거운 지식 저장소
+description: SyncSeries 엔지니어링 팀의 아키텍처 연구 및 기술 실증 지식 베이스입니다.
 head:
   - - meta
     - name: keywords
@@ -10,7 +10,7 @@ head:
       content: 📚 두뇌 저장소 - 재미있는 공부 기록 놀이터
   - - meta
     - property: og:description
-      content: 까먹지 말고 재밌게 저장하자! 🎯 공부한 내용을 자유롭게 기록하는 즐거운 지식 저장소
+      content: SyncSeries 엔지니어링 팀의 아키텍처 연구 및 기술 실증 지식 베이스입니다.
   - - meta
     - property: og:image
       content: https://empasy.io/docs/images/favicon.png
@@ -29,7 +29,7 @@ sort: 200
 ## "가르치는 만큼 더 깊이 이해한다"
 
 **"배운 것을 나누면 기쁨이 두 배!"**  
-공부한 다양한 지식들과 깨달음을 재미있게 공유하는 공간입니다 🎯
+SyncSeries 엔지니어링 팀의 아키텍처 연구 및 기술 실증 지식 베이스입니다.
 
 </div>
 

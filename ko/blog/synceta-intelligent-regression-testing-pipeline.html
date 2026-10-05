@@ -7,7 +7,62 @@
     <meta property="og:title" content="엠파시(Empasy) | Synceta intelligent regression testing pipeline">
     <meta property="og:description" content="SyncETA는 셀프 힐링 기술이 적용된 AI 기반 웹 테스트 자동화 솔루션입니다. Playwright와 Selenium을 뛰어넘는 지능형 E2E 회귀 테스트와 QA 파이프라인을 경험하세요.">
     <meta property="og:type" content="website">
-    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Blog",      "name": "엠파시(Empasy) 기술 블로그",      "url": "https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html",      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",      "publisher": {        "@type": "Organization",        "name": "엠파시(Empasy)",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.io/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="../../assets/css/style.css">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <!-- SEO & AIO Tags -->        <meta property="og:image" content="https://empasy.io/empasy-logo.png">    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">        <meta property="og:locale" content="ko_KR">    <script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "Article",  "headline": "[Tech Blog] 기계어(JSON)에서 비즈니스 언어(Excel)로: SyncETA의 지능형 회귀 테스트 파이프라인 아키텍처",  "description": "LLM과 Playwright MCP를 결합하여 수작업 없는 No-Code 기반 지능형 QA 자동화 및 시각적 자가 치유(Self-Healing) 엔진을 구현한 SyncETA 아키텍처 리뷰.",  "author": {    "@type": "Organization",    "name": "Empasy Engineering Team",    "url": "https://empasy.io"  },  "publisher": {    "@type": "Organization",    "name": "Empasy",    "logo": {      "@type": "ImageObject",      "url": "https://empasy.io/assets/logo.png"    }  },  "url": "https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html"}    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Empasy">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "엠파시(Empasy) 기술 블로그",
+      "url": "https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html",
+      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
+      "publisher": {
+        "@type": "Organization",
+        "name": "엠파시(Empasy)",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/empasy-logo.png"
+        }
+      }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <meta name="geo.region" content="KR-11" />
+    <meta name="geo.placename" content="Seoul" />
+    <meta name="geo.position" content="37.5665;126.9780" />
+    <meta name="ICBM" content="37.5665, 126.9780" />
+    <!-- SEO & AIO Tags -->
+    
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <meta property="og:locale" content="ko_KR">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "[Tech Blog] 기계어(JSON)에서 비즈니스 언어(Excel)로: SyncETA의 지능형 회귀 테스트 파이프라인 아키텍처",
+  "description": "LLM과 Playwright MCP를 결합하여 수작업 없는 No-Code 기반 지능형 QA 자동화 및 시각적 자가 치유(Self-Healing) 엔진을 구현한 SyncETA 아키텍처 리뷰.",
+  "author": {
+    "@type": "Organization",
+    "name": "Empasy Engineering Team",
+    "url": "https://empasy.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Empasy",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://empasy.io/assets/logo.png"
+    }
+  },
+  "url": "https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html"
+}
+    </script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- SEO & AIO Tags -->
     
@@ -93,7 +148,7 @@
     </div>
   </div></div>
 
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">핵심 차별성: 연간 LLM 비용의 99% 절감 아키텍처</h3>
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">핵심 차별성: 반복 실행 단계 LLM 호출 비용 제로화 아키텍처</h3>
         <p>기존 AI 도구들과 달리 SyncETA는 <strong>'시나리오 생성 시점에만 LLM을 1회 활용'</strong>하고, 이후 실제 테스트 실행 단계에서는 LLM API 호출 없이 <strong>결정론적인 레코드 재생 엔진</strong>을 통해 실행됩니다. 이를 통해 엔터프라이즈 환경에서 수천 번 반복되는 회귀 테스트 비용을 최대 99% 혁신적으로 절감합니다.</p>
 
         <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">

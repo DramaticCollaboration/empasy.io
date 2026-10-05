@@ -10,7 +10,7 @@ head:
       content: 📚 두뇌 저장소 - 재미있는 공부 기록 놀이터
   - - meta
     - property: og:description
-      content: 까먹지 말고 재밌게 저장하자! 🎯 공부한 내용을 자유롭게 기록하는 즐거운 지식 저장소
+      content: SyncSeries 엔지니어링 팀의 아키텍처 연구 및 기술 실증 지식 베이스입니다.
   - - meta
     - property: og:image
       content: https://empasy.io/docs/images/favicon.png
@@ -22,7 +22,7 @@ sort: 400
 
 # Qwen2-VL 파인튜닝 가이드 by LLM
 
-## 🎯 파인튜닝 전 준비사항
+## 파인튜닝 전 준비사항
 
 ### 1. **환경 설정**
 
@@ -49,7 +49,7 @@ pip install git+https://github.com/QwenLM/Qwen2-VL.git
   - LoRA Fine-tuning: 24GB+ (RTX 4090)
   - QLoRA: 16GB+ (V100 16GB)
 
-## 📊 데이터셋 형식
+## 데이터셋 형식
 
 ### 1. **표준 데이터 형식**
 
@@ -399,7 +399,7 @@ scheduler = get_cosine_schedule_with_warmup(
 )
 ```
 
-## 🎯 특정 태스크 파인튜닝 예제
+## 특정 태스크 파인튜닝 예제
 
 ### 1. **이미지 캡셔닝**
 
@@ -436,7 +436,7 @@ def prepare_vqa_data(questions_file, annotations_file, image_dir):
     return vqa_dataset
 ```
 
-## 📊 모니터링 및 로깅
+## 모니터링 및 로깅
 
 ```python
 # wandb 연동
@@ -452,7 +452,7 @@ training_args = TrainingArguments(
 )
 ```
 
-## 🛠️ 문제 해결
+## 문제 해결
 
 ### **Common Issues:**
 
