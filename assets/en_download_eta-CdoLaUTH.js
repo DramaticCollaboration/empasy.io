@@ -1,1 +1,0 @@
-import{t as e}from"./main-DP660-wB.js";import{t}from"./downloadLink-DfiA0nep.js";import"./i18n-d99J6wys.js";e(),t();
