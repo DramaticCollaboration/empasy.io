@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Empasy.io Official Corporate Website",
   "private": true,
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
