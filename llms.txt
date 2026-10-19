@@ -1,4 +1,4 @@
-﻿# Empasy SyncSeries
+# Empasy SyncSeries
 
 > Empasy is an enterprise AI integration platform providing an autonomous multi-agent ecosystem for digital transformation (DX) and AI Ops.
 
@@ -24,6 +24,10 @@ Empasy SyncSeries unifies specialized AI agents under a single orchestration pla
 ### SyncCMS (Autonomous Content & UI Agent)
 - URL: https://empasy.io/ko/solutions/sync-cms.html
 - Role: Natural-language-driven component layout, live preview visual editing, and real-time multilingual content synchronization (Korean, English, Japanese).
+
+### SyncShop (Autonomous E-Commerce & Merchandising Agent)
+- URL: https://empasy.io/ko/solutions/sync-shop.html
+- Role: Distributed microservices e-commerce engine with AI merchandising, dynamic pricing, pgvector semantic product discovery, and A2A supply chain orchestration.
 
 ### SyncCrawl (Intelligent Visual Extraction Agent)
 - URL: https://empasy.io/ko/solutions/sync-crawl.html
