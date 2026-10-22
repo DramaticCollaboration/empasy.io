@@ -216,10 +216,16 @@ function getTargetUrl(targetLang) {
     if (langMatch) {
         const basePath = path.substring(0, langMatch.index);
         let subPath = langMatch[2] || 'pages/index.html';
+        if (targetLang === 'ko' && (subPath === 'pages/index.html' || subPath === 'pages/' || subPath === '')) {
+            return `${basePath || '/'}${search}${hash}`;
+        }
         return `${basePath}/${targetLang}/${subPath}${search}${hash}`;
     }
 
     // Default fallback if at root
+    if (targetLang === 'ko') {
+        return `/${search}${hash}`;
+    }
     return `/${targetLang}/pages/index.html${search}${hash}`;
 }
 

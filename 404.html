@@ -18,26 +18,37 @@
     })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
     <!-- End Google Tag Manager -->
     <title>엠파시(Empasy) | 메인 페이지로 이동 중...</title>
-    <meta name="description" content="엠파시(Empasy) 엔터프라이즈 AI 통합 플랫폼">
+    <meta name="description" content="엠파시(Empasy) 엔터프라이즈 AI 통합 플랫폼 공식 홈페이지">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://empasy.io/">
     <meta charset="UTF-8">
     <script>
         (function () {
-            var path = window.location.pathname.toLowerCase();
-            if (path.includes('synceta')) {
-                window.location.replace('/solutions/sync-eta.html');
+            var rawPath = window.location.pathname;
+            var path = rawPath.toLowerCase();
+            if (path.indexOf('/docs/') === 0 || path === '/docs') {
+                var docSubPath = rawPath.replace(/^\/docs(\/(ko|en|ja))?/i, '') || '/';
+                window.location.replace('https://doc.empasy.com' + docSubPath);
+            } else if (path.includes('synceta')) {
+                window.location.replace('/ko/solutions/sync-eta.html');
+            } else if (path === '/en' || path === '/en/') {
+                window.location.replace('/en/pages/index.html');
+            } else if (path === '/ja' || path === '/ja/') {
+                window.location.replace('/ja/pages/index.html');
             } else {
-                var lang = navigator.language || navigator.userLanguage || '';
-                var target = '/ko/pages/index.html';
-                if (lang.startsWith('en')) {
+                var preferred = '';
+                try { preferred = localStorage.getItem('preferred_lang') || ''; } catch (e) {}
+                var target = '/';
+                if (preferred === 'en') {
                     target = '/en/pages/index.html';
-                } else if (lang.startsWith('ja')) {
+                } else if (preferred === 'ja') {
                     target = '/ja/pages/index.html';
                 }
                 window.location.replace(target);
             }
         })();
     </script>
-    <meta http-equiv="refresh" content="0; url=/ko/pages/index.html">
+    <meta http-equiv="refresh" content="0; url=/">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -46,7 +57,7 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <p>요청하신 페이지를 찾을 수 없습니다. 메인 페이지로 이동합니다 (302 Redirect)...</p>
+    <p>요청하신 페이지를 찾을 수 없습니다. <a href="https://empasy.io/">엠파시 공식 홈페이지(empasy.io)</a>로 이동합니다...</p>
 </body>
 
 </html>
