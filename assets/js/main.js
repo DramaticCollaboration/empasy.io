@@ -358,21 +358,21 @@ function initMain() {
                 ko: `
                     <div style="color: #38bdf8;">[SyncBoot Engine]</div>
                     <div>&nbsp;↳ Analyzing domain schema &amp; DDD entity relationships... <span style="color: #22c55e;">[Done]</span></div>
-                    <div>&nbsp;↳ Generating Spring Boot 3.3 / Java 21 microservices scaffolding...</div>
+                    <div>&nbsp;↳ Generating Spring Boot 3.5.16 / Java 25 microservices scaffolding...</div>
                     <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncBoot Verifier]</div>
                     <div>&nbsp;↳ Saga compensation transaction &amp; zero-mock tests generated... <span style="color: #22c55e;">[BUILD SUCCESS (1.2s)]</span></div>
                 `,
                 en: `
                     <div style="color: #38bdf8;">[SyncBoot Engine]</div>
                     <div>&nbsp;↳ Analyzing domain schema &amp; DDD entity relationships... <span style="color: #22c55e;">[Done]</span></div>
-                    <div>&nbsp;↳ Generating Spring Boot 3.3 / Java 21 microservices scaffolding...</div>
+                    <div>&nbsp;↳ Generating Spring Boot 3.5.16 / Java 25 microservices scaffolding...</div>
                     <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncBoot Verifier]</div>
                     <div>&nbsp;↳ Saga compensation transaction &amp; zero-mock tests generated... <span style="color: #22c55e;">[BUILD SUCCESS (1.2s)]</span></div>
                 `,
                 ja: `
                     <div style="color: #38bdf8;">[SyncBoot Engine]</div>
                     <div>&nbsp;↳ Analyzing domain schema &amp; DDD entity relationships... <span style="color: #22c55e;">[Done]</span></div>
-                    <div>&nbsp;↳ Generating Spring Boot 3.3 / Java 21 microservices scaffolding...</div>
+                    <div>&nbsp;↳ Generating Spring Boot 3.5.16 / Java 25 microservices scaffolding...</div>
                     <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncBoot Verifier]</div>
                     <div>&nbsp;↳ Saga compensation transaction &amp; zero-mock tests generated... <span style="color: #22c55e;">[BUILD SUCCESS (1.2s)]</span></div>
                 `

@@ -282,4 +282,3 @@ if (document.readyState === 'loading') {
 } else {
     updateLangSwitcherLinks();
 }
-

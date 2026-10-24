@@ -49,5 +49,5 @@ Empasy SyncSeries unifies specialized AI agents under a single orchestration pla
 ## Official Resources
 - Website: https://empasy.io
 - Documentation: https://doc.empasy.com
-- GitHub: https://github.com/DramaticCollaboration
+- GitHub: https://github.com/empasy
 - Contact: contact@empasy.com
