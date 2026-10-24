@@ -1,7 +1,10 @@
 import { defineConfig } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
-import { resolve } from 'path';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
 import { globSync } from 'glob';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Find all HTML files, excluding node_modules, components, and build output
 const htmlFiles = globSync('**/*.html', {

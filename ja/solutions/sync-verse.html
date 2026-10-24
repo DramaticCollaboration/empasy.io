@@ -158,8 +158,9 @@
                 <h1 class="page-title">SyncVerse</h1>
                 <p class="page-subtitle">単一の管制タワーの下で各専門エージェントが有機的に通信し、ビジネスプロセスを完遂する全社AI自律運用プラットフォームです。</p>
                 <div class="mt-4 flex-center" style="gap: 1rem; display: flex; justify-content: center; flex-wrap: wrap;">
-                    <a href="../pages/contact.html" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 30px;">導入・技術相談</a>
-                    <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 30px; border-color: rgba(255,255,255,0.2);">ドキュメントを見る <i class="fas fa-external-link-alt" style="font-size:0.8em; margin-left:6px;"></i></a>
+                    <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 30px;"><i class="fas fa-play-circle" style="margin-right:6px;"></i>統合デモポータル体験</a>
+                    <a href="https://doc.empasy.com/syncverse/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 30px; border-color: rgba(255,255,255,0.2);">SyncVerse 技術ドキュメント <i class="fas fa-external-link-alt" style="font-size:0.8em; margin-left:6px;"></i></a>
+                    <a href="/downloads/proposals/SyncVerse_Proposal.pdf" download class="btn btn-outline" style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 30px; border-color: rgba(255,255,255,0.25);"><i class="fas fa-file-pdf" style="margin-right:6px;"></i>提案書 PDF</a>
                 </div>
             </div>
         </div>
@@ -178,53 +179,64 @@
                 <div class="vs-box vs-agent">
                     <h4>SyncVerse 自律運用基盤</h4>
                     <ul class="vs-list">
-                        <li>標準MCPおよびA2A通信による7大専門エージェントのリアルタイム協調</li>
+                        <li>標準MCPおよびA2A通信による9大専門エージェントのリアルタイム協調</li>
                         <li>Spec-First（仕様ファースト）と自動E2E検証による無停止パイプラインの実現</li>
                         <li>緊急キルスイッチ（Kill-Switch）およびFinOps予算統制による安全性の担保</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- 3-Layer Architecture -->
+            <!-- 4-Tier Architecture -->
             <div class="layer-architecture-box fade-in-up delay-1">
                 <div class="text-center mb-4">
-                    <span class="badge">3-Layer Multi-Agent Architecture</span>
-                    <h2 class="section-title" style="font-size: 2rem;">SyncSeries 3-Layer 協調アーキテクチャ</h2>
-                    <p style="color: var(--text-secondary); max-width: 700px; margin: 0.5rem auto 0;">データ収集・知覚から自律実行、全社中央統制まで3つの階層が密連携します。</p>
+                    <span class="badge">4-Tier Enterprise Multi-Agent Architecture</span>
+                    <h2 class="section-title" style="font-size: 2rem;">SyncSeries 4-Tier 協調アーキテクチャ</h2>
+                    <p style="color: var(--text-secondary); max-width: 740px; margin: 0.5rem auto 0;">Tier 1 中央統制から Tier 2 意思決定・FinOps、Tier 3 ドメインエージェント群、Tier 4 自律実行・品質検証まで9大ソリューションが有機的に連携します。</p>
                 </div>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-                    <!-- Layer 1 -->
-                    <div class="layer-card" style="border-top: 3px solid #10b981;">
-                        <span style="color: #10b981; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Layer 1 &bull; Perception &amp; Quality</span>
-                        <h3 style="font-size: 1.2rem; color: #fff; margin: 0.6rem 0;">知覚 &amp; 品質保証</h3>
-                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">外部データ収集とVision-LLMによる自己治癒型QAテストを遂行します。</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
+                    <!-- Tier 1 -->
+                    <div class="layer-card" style="border-top: 3px solid #f59e0b;">
+                        <span style="color: #f59e0b; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Tier 1 &bull; Control Tower</span>
+                        <h3 style="font-size: 1.2rem; color: #fff; margin: 0.6rem 0;">中央オーケストレーター</h3>
+                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">全社A2Aイベントブローカー、ワークフロー指揮、緊急Kill-Switch、HITLガバナンスを統括します。</p>
                         <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); margin: 0;">SyncCrawl</span>
-                            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); margin: 0;">SyncEta</span>
+                            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); margin: 0;">SyncVerse</span>
                         </div>
                     </div>
 
-                    <!-- Layer 2 -->
+                    <!-- Tier 2 -->
+                    <div class="layer-card" style="border-top: 3px solid #a855f7;">
+                        <span style="color: #c084fc; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Tier 2 &bull; Intelligence &amp; FinOps</span>
+                        <h3 style="font-size: 1.2rem; color: #fff; margin: 0.6rem 0;">意思決定知能 &amp; LLMゲートウェイ</h3>
+                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">オンプレミス経営分析(RAG)、マルチモデルルーティング、セマンティックキャッシュ、PIIマスキングを統制します。</p>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <span class="badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); margin: 0;">SyncInsight</span>
+                            <span class="badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); margin: 0;">SyncLLM</span>
+                        </div>
+                    </div>
+
+                    <!-- Tier 3 -->
                     <div class="layer-card" style="border-top: 3px solid #0891b2;">
-                        <span style="color: #38bdf8; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Layer 2 &bull; Creation &amp; Execution</span>
-                        <h3 style="font-size: 1.2rem; color: #fff; margin: 0.6rem 0;">生成 &amp; 実行</h3>
-                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">MSAバックエンドコード自動生成と多言語コンテンツの自律配信を行います。</p>
+                        <span style="color: #38bdf8; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Tier 3 &bull; Domain Agent Swarms</span>
+                        <h3 style="font-size: 1.2rem; color: #fff; margin: 0.6rem 0;">エンタープライズドメイン群</h3>
+                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">MSA自動生成、Nuxt 3自律型CMS、AIコマース利益率保護、SI PMOデュアル単価損益・保証・研究ノートを遂行します。</p>
                         <div style="display: flex; gap: 8px; flex-wrap: wrap;">
                             <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(8, 145, 178, 0.3); margin: 0;">SyncBoot</span>
                             <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(8, 145, 178, 0.3); margin: 0;">SyncCMS</span>
+                            <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(8, 145, 178, 0.3); margin: 0;">SyncShop</span>
+                            <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(8, 145, 178, 0.3); margin: 0;">SyncOps</span>
                         </div>
                     </div>
 
-                    <!-- Layer 3 -->
-                    <div class="layer-card" style="border-top: 3px solid #f59e0b;">
-                        <span style="color: #f59e0b; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Layer 3 &bull; Intelligence &amp; Governance</span>
-                        <h3 style="font-size: 1.2rem; color: #fff; margin: 0.6rem 0;">中央管制 &amp; 意思決定</h3>
-                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">全社オーケストレーション、インフラ診断、FinOpsガバナンスを統括します。</p>
+                    <!-- Tier 4 -->
+                    <div class="layer-card" style="border-top: 3px solid #10b981;">
+                        <span style="color: #10b981; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Tier 4 &bull; Execution &amp; QA</span>
+                        <h3 style="font-size: 1.2rem; color: #fff; margin: 0.6rem 0;">自律実行 &amp; 品質検証</h3>
+                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">Vision-LLMによる自己修復型QAテストとアンチボット対応RAGデータ収集パイプラインを遂行します。</p>
                         <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); margin: 0;">SyncVerse</span>
-                            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); margin: 0;">SyncInsight</span>
-                            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); margin: 0;">SyncLLM</span>
+                            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); margin: 0;">SyncEta</span>
+                            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); margin: 0;">SyncCrawl</span>
                         </div>
                     </div>
                 </div>

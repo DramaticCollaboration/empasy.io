@@ -56,6 +56,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://empasy.io/ko/solutions/sync-ops.html</loc>
+    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://empasy.io/ko/solutions/sync-verse.html</loc>
     <lastmod>2026-10-22T00:00:00+00:00</lastmod>
     <priority>0.9</priority>
@@ -206,9 +211,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://empasy.io/en/solutions/sync-ops.html</loc>
+    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://empasy.io/en/solutions/sync-verse.html</loc>
     <lastmod>2026-10-22T00:00:00+00:00</lastmod>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/pages/careers.html</loc>
+    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://empasy.io/en/pages/clients.html</loc>
@@ -351,9 +366,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://empasy.io/ja/solutions/sync-ops.html</loc>
+    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://empasy.io/ja/solutions/sync-verse.html</loc>
     <lastmod>2026-10-22T00:00:00+00:00</lastmod>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/pages/careers.html</loc>
+    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://empasy.io/ja/pages/clients.html</loc>

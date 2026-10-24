@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 interest: isEn ? 'Solution' : (isJa ? '関心ソリューション' : '관심 솔루션'),
                 options: isEn ? 'Options' : (isJa ? '選択オプション' : '요청 옵션')
             },
-            homeUrl: isEn ? '/en/' : (isJa ? '/ja/' : '/ko/'),
+            homeUrl: isEn ? '/en/pages/index.html' : (isJa ? '/ja/pages/index.html' : '/'),
             btnHome: isEn ? 'Back to Home' : (isJa ? 'ホームへ戻る' : '메인으로 이동'),
             btnNewInquiry: isEn ? 'Submit Another Inquiry' : (isJa ? '新しいお問い合わせを作成' : '추가 문의 접수하기')
         };

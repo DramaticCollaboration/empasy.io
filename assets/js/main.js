@@ -296,6 +296,88 @@ function initMain() {
                 `
             }
         },
+        insight: {
+            cmd: {
+                ko: 'empasy insight analyze --topic "Q4-pricing-strategy" --debate-agents 3',
+                en: 'empasy insight analyze --topic "Q4-pricing-strategy" --debate-agents 3',
+                ja: 'empasy insight analyze --topic "Q4-pricing-strategy" --debate-agents 3'
+            },
+            copyCmd: {
+                ko: 'empasy insight analyze --topic "Q4-pricing-strategy" --debate-agents 3',
+                en: 'empasy insight analyze --topic "Q4-pricing-strategy" --debate-agents 3',
+                ja: 'empasy insight analyze --topic "Q4-pricing-strategy" --debate-agents 3'
+            },
+            tag: { ko: '전략 의사결정', en: 'Decision Intelligence', ja: '戦略意思決定' },
+            desc: {
+                ko: '내외부 빅데이터 통합 분석 및 멀티 에이전트 토론을 통해 최적의 경영 전략을 도출합니다.',
+                en: 'Synthesizes internal telemetry and market data via multi-agent debate for strategic decisions.',
+                ja: '社内外データの統合分析とマルチエージェント討論により最適な経営戦略を導出します。'
+            },
+            output: {
+                ko: `
+                    <div style="color: #38bdf8;">[SyncInsight Debate Engine]</div>
+                    <div>&nbsp;↳ Aggregating SyncCrawl market feeds &amp; SyncShop conversion telemetry... <span style="color: #22c55e;">[Synced]</span></div>
+                    <div>&nbsp;↳ Running 3-Agent Roundtable (Growth vs Margin vs Risk)... <span style="color: #38bdf8;">[Consensus: +6.8% Net Margin]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncInsight Action Dispatch]</div>
+                    <div>&nbsp;↳ Executive brief generated &amp; HITL approval queued for SyncShop/SyncCMS <span style="color: #22c55e;">[READY]</span></div>
+                `,
+                en: `
+                    <div style="color: #38bdf8;">[SyncInsight Debate Engine]</div>
+                    <div>&nbsp;↳ Aggregating SyncCrawl market feeds &amp; SyncShop conversion telemetry... <span style="color: #22c55e;">[Synced]</span></div>
+                    <div>&nbsp;↳ Running 3-Agent Roundtable (Growth vs Margin vs Risk)... <span style="color: #38bdf8;">[Consensus: +6.8% Net Margin]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncInsight Action Dispatch]</div>
+                    <div>&nbsp;↳ Executive brief generated &amp; HITL approval queued for SyncShop/SyncCMS <span style="color: #22c55e;">[READY]</span></div>
+                `,
+                ja: `
+                    <div style="color: #38bdf8;">[SyncInsight Debate Engine]</div>
+                    <div>&nbsp;↳ Aggregating SyncCrawl market feeds &amp; SyncShop conversion telemetry... <span style="color: #22c55e;">[Synced]</span></div>
+                    <div>&nbsp;↳ Running 3-Agent Roundtable (Growth vs Margin vs Risk)... <span style="color: #38bdf8;">[Consensus: +6.8% Net Margin]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncInsight Action Dispatch]</div>
+                    <div>&nbsp;↳ Executive brief generated &amp; HITL approval queued for SyncShop/SyncCMS <span style="color: #22c55e;">[READY]</span></div>
+                `
+            }
+        },
+        llm: {
+            cmd: {
+                ko: 'empasy llm route --models "gpt-4o,claude-3-7,vllm-local" --pii-mask strict',
+                en: 'empasy llm route --models "gpt-4o,claude-3-7,vllm-local" --pii-mask strict',
+                ja: 'empasy llm route --models "gpt-4o,claude-3-7,vllm-local" --pii-mask strict'
+            },
+            copyCmd: {
+                ko: 'empasy llm route --models "gpt-4o,claude-3-7,vllm-local" --pii-mask strict',
+                en: 'empasy llm route --models "gpt-4o,claude-3-7,vllm-local" --pii-mask strict',
+                ja: 'empasy llm route --models "gpt-4o,claude-3-7,vllm-local" --pii-mask strict'
+            },
+            tag: { ko: 'AI 게이트웨이/FinOps', en: 'AI Gateway & FinOps', ja: 'AIゲートウェイ' },
+            desc: {
+                ko: '멀티 LLM 지능형 라우팅, 시맨틱 캐싱 및 실시간 PII 마스킹으로 비용과 보안을 통제합니다.',
+                en: 'Controls token costs and security via multi-LLM routing, semantic caching, and PII masking.',
+                ja: 'マルチLLMルーティング、セマンティックキャッシュ、PIIマスキングでコストと安全性を制御します。'
+            },
+            output: {
+                ko: `
+                    <div style="color: #38bdf8;">[SyncLLM Gateway]</div>
+                    <div>&nbsp;↳ PII Guardrail: Masked 2 sensitive fields (SSN, Phone) prior to egress <span style="color: #22c55e;">[PROTECTED]</span></div>
+                    <div>&nbsp;↳ Redis pgvector Semantic Cache lookup... <span style="color: #38bdf8;">[CACHE HIT: Saved 4,200 tokens]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncLLM FinOps]</div>
+                    <div>&nbsp;↳ Dept budget usage: 41.2% | Cost reduction this month: -54.8% <span style="color: #22c55e;">[OPTIMAL]</span></div>
+                `,
+                en: `
+                    <div style="color: #38bdf8;">[SyncLLM Gateway]</div>
+                    <div>&nbsp;↳ PII Guardrail: Masked 2 sensitive fields (SSN, Phone) prior to egress <span style="color: #22c55e;">[PROTECTED]</span></div>
+                    <div>&nbsp;↳ Redis pgvector Semantic Cache lookup... <span style="color: #38bdf8;">[CACHE HIT: Saved 4,200 tokens]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncLLM FinOps]</div>
+                    <div>&nbsp;↳ Dept budget usage: 41.2% | Cost reduction this month: -54.8% <span style="color: #22c55e;">[OPTIMAL]</span></div>
+                `,
+                ja: `
+                    <div style="color: #38bdf8;">[SyncLLM Gateway]</div>
+                    <div>&nbsp;↳ PII Guardrail: Masked 2 sensitive fields (SSN, Phone) prior to egress <span style="color: #22c55e;">[PROTECTED]</span></div>
+                    <div>&nbsp;↳ Redis pgvector Semantic Cache lookup... <span style="color: #38bdf8;">[CACHE HIT: Saved 4,200 tokens]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncLLM FinOps]</div>
+                    <div>&nbsp;↳ Dept budget usage: 41.2% | Cost reduction this month: -54.8% <span style="color: #22c55e;">[OPTIMAL]</span></div>
+                `
+            }
+        },
         eta: {
             cmd: {
                 ko: 'empasy eta run --target https://app.example.com --scenario "결제 검증"',
@@ -391,31 +473,113 @@ function initMain() {
             },
             tag: { ko: '퍼블리싱 에이전트', en: 'Publisher Agent', ja: '配信エージェント' },
             desc: {
-                ko: '자연어 명령으로 다국어 반응형 웹 레이아웃과 콘텐츠를 실시간 생성 및 동기화합니다.',
-                en: 'Generates and synchronizes multi-lingual layouts and content via natural language.',
-                ja: '自然言語のプロンプトから多言語レスポンシブWebとコンテンツをリアルタイム生成します。'
+                ko: 'Nuxt 3 SSR 및 3-Agent Swarm 기반으로 다국어 반응형 웹과 콘텐츠를 실시간 생성·배포합니다.',
+                en: 'Generates and deploys multi-lingual responsive web pages via Nuxt 3 SSR & 3-Agent Swarm.',
+                ja: 'Nuxt 3 SSRと3-Agent Swarmにより多言語レスポンシブWebとコンテンツをリアルタイム生成・配信します。'
             },
             output: {
                 ko: `
-                    <div style="color: #38bdf8;">[SyncCMS Core]</div>
-                    <div>&nbsp;↳ Natural language prompt transformed into responsive layout blocks</div>
+                    <div style="color: #38bdf8;">[SyncCMS 3-Agent Swarm]</div>
+                    <div>&nbsp;↳ Copywriter &amp; SEO Agents synthesized Nuxt 3 SSR Page Fragments</div>
                     <div>&nbsp;↳ Translating &amp; synchronizing resource tokens across 3 locales... <span style="color: #22c55e;">[Done]</span></div>
-                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCMS Edge]</div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCMS Publisher Edge]</div>
                     <div>&nbsp;↳ Atomic cache purge &amp; Zero-Downtime multi-site deployment... <span style="color: #22c55e;">[LIVE (15+ Sites)]</span></div>
                 `,
                 en: `
-                    <div style="color: #38bdf8;">[SyncCMS Core]</div>
-                    <div>&nbsp;↳ Natural language prompt transformed into responsive layout blocks</div>
+                    <div style="color: #38bdf8;">[SyncCMS 3-Agent Swarm]</div>
+                    <div>&nbsp;↳ Copywriter &amp; SEO Agents synthesized Nuxt 3 SSR Page Fragments</div>
                     <div>&nbsp;↳ Translating &amp; synchronizing resource tokens across 3 locales... <span style="color: #22c55e;">[Done]</span></div>
-                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCMS Edge]</div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCMS Publisher Edge]</div>
                     <div>&nbsp;↳ Atomic cache purge &amp; Zero-Downtime multi-site deployment... <span style="color: #22c55e;">[LIVE (15+ Sites)]</span></div>
                 `,
                 ja: `
-                    <div style="color: #38bdf8;">[SyncCMS Core]</div>
-                    <div>&nbsp;↳ Natural language prompt transformed into responsive layout blocks</div>
+                    <div style="color: #38bdf8;">[SyncCMS 3-Agent Swarm]</div>
+                    <div>&nbsp;↳ Copywriter &amp; SEO Agents synthesized Nuxt 3 SSR Page Fragments</div>
                     <div>&nbsp;↳ Translating &amp; synchronizing resource tokens across 3 locales... <span style="color: #22c55e;">[Done]</span></div>
-                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCMS Edge]</div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCMS Publisher Edge]</div>
                     <div>&nbsp;↳ Atomic cache purge &amp; Zero-Downtime multi-site deployment... <span style="color: #22c55e;">[LIVE (15+ Sites)]</span></div>
+                `
+            }
+        },
+        shop: {
+            cmd: {
+                ko: 'empasy shop optimize --catalog "electronics" --strategy "dynamic-margin"',
+                en: 'empasy shop optimize --catalog "electronics" --strategy "dynamic-margin"',
+                ja: 'empasy shop optimize --catalog "electronics" --strategy "dynamic-margin"'
+            },
+            copyCmd: {
+                ko: 'empasy shop optimize --catalog "electronics" --strategy "dynamic-margin"',
+                en: 'empasy shop optimize --catalog "electronics" --strategy "dynamic-margin"',
+                ja: 'empasy shop optimize --catalog "electronics" --strategy "dynamic-margin"'
+            },
+            tag: { ko: '자율형 커머스', en: 'Commerce Agent', ja: '自律型コマース' },
+            desc: {
+                ko: '분산 MSA 기반으로 상품 카탈로그 생성, pgvector 시맨틱 검색, 다이내믹 프라이싱을 자율 수행합니다.',
+                en: 'Autonomously executes catalog enrichment, pgvector semantic search, and dynamic pricing on MSA.',
+                ja: '分散MSA基盤でカタログ生成、pgvectorセマンティック検索、動的価格設定を自律遂行します。'
+            },
+            output: {
+                ko: `
+                    <div style="color: #38bdf8;">[SyncShop Merchandiser]</div>
+                    <div>&nbsp;↳ Indexing 12,400 SKUs into PostgreSQL 17 pgvector hybrid search... <span style="color: #22c55e;">[Indexed]</span></div>
+                    <div>&nbsp;↳ Competitor price shift detected via SyncCrawl: Adjusting dynamic margin... <span style="color: #38bdf8;">[+4.2% Rev]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncShop OMS/PMS]</div>
+                    <div>&nbsp;↳ Distributed order saga &amp; personalized promotion dispatched <span style="color: #22c55e;">[ACTIVE]</span></div>
+                `,
+                en: `
+                    <div style="color: #38bdf8;">[SyncShop Merchandiser]</div>
+                    <div>&nbsp;↳ Indexing 12,400 SKUs into PostgreSQL 17 pgvector hybrid search... <span style="color: #22c55e;">[Indexed]</span></div>
+                    <div>&nbsp;↳ Competitor price shift detected via SyncCrawl: Adjusting dynamic margin... <span style="color: #38bdf8;">[+4.2% Rev]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncShop OMS/PMS]</div>
+                    <div>&nbsp;↳ Distributed order saga &amp; personalized promotion dispatched <span style="color: #22c55e;">[ACTIVE]</span></div>
+                `,
+                ja: `
+                    <div style="color: #38bdf8;">[SyncShop Merchandiser]</div>
+                    <div>&nbsp;↳ Indexing 12,400 SKUs into PostgreSQL 17 pgvector hybrid search... <span style="color: #22c55e;">[Indexed]</span></div>
+                    <div>&nbsp;↳ Competitor price shift detected via SyncCrawl: Adjusting dynamic margin... <span style="color: #38bdf8;">[+4.2% Rev]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncShop OMS/PMS]</div>
+                    <div>&nbsp;↳ Distributed order saga &amp; personalized promotion dispatched <span style="color: #22c55e;">[ACTIVE]</span></div>
+                `
+            }
+        },
+        ops: {
+            cmd: {
+                ko: 'empasy ops audit-profit --year 2026 --check-subcontract-overdue',
+                en: 'empasy ops audit-profit --year 2026 --check-subcontract-overdue',
+                ja: 'empasy ops audit-profit --year 2026 --check-subcontract-overdue'
+            },
+            copyCmd: {
+                ko: 'empasy ops audit-profit --year 2026 --check-subcontract-overdue',
+                en: 'empasy ops audit-profit --year 2026 --check-subcontract-overdue',
+                ja: 'empasy ops audit-profit --year 2026 --check-subcontract-overdue'
+            },
+            tag: { ko: 'SI 사업/손익 관제', en: 'SI PMO & Profit', ja: 'SI事業・損益管制' },
+            desc: {
+                ko: '듀얼단가 실시간 영업이익률, KOSA 가동률 매트릭스, 4대 보증보험 및 하도급 60일 기일을 관제합니다.',
+                en: 'Governs Dual-Rate P&L, KOSA M/M utilization matrix, 4 surety bonds, and 60-day subcontract compliance.',
+                ja: 'デュアル単価損益、KOSA稼働率マトリックス、4大保証保険および下請法60日期日を統合管制します。'
+            },
+            output: {
+                ko: `
+                    <div style="color: #38bdf8;">[SyncOps Profit &amp; PMO Engine]</div>
+                    <div>&nbsp;↳ Dual-Rate P&amp;L Pivot (Contract vs Actual Cost): 24 Active Projects... <span style="color: #22c55e;">[Avg Margin: 22.4%]</span></div>
+                    <div>&nbsp;↳ KOSA Grade M/M Matrix &amp; 4-Surety Bond expiry scan... <span style="color: #38bdf8;">[All Bonds Valid]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncOps Compliance Guard]</div>
+                    <div>&nbsp;↳ Subcontract Act 60-day payment check &amp; R&amp;D Note SHA-256 verified <span style="color: #22c55e;">[0 OVERDUE]</span></div>
+                `,
+                en: `
+                    <div style="color: #38bdf8;">[SyncOps Profit &amp; PMO Engine]</div>
+                    <div>&nbsp;↳ Dual-Rate P&amp;L Pivot (Contract vs Actual Cost): 24 Active Projects... <span style="color: #22c55e;">[Avg Margin: 22.4%]</span></div>
+                    <div>&nbsp;↳ KOSA Grade M/M Matrix &amp; 4-Surety Bond expiry scan... <span style="color: #38bdf8;">[All Bonds Valid]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncOps Compliance Guard]</div>
+                    <div>&nbsp;↳ Subcontract Act 60-day payment check &amp; R&amp;D Note SHA-256 verified <span style="color: #22c55e;">[0 OVERDUE]</span></div>
+                `,
+                ja: `
+                    <div style="color: #38bdf8;">[SyncOps Profit &amp; PMO Engine]</div>
+                    <div>&nbsp;↳ Dual-Rate P&amp;L Pivot (Contract vs Actual Cost): 24 Active Projects... <span style="color: #22c55e;">[Avg Margin: 22.4%]</span></div>
+                    <div>&nbsp;↳ KOSA Grade M/M Matrix &amp; 4-Surety Bond expiry scan... <span style="color: #38bdf8;">[All Bonds Valid]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncOps Compliance Guard]</div>
+                    <div>&nbsp;↳ Subcontract Act 60-day payment check &amp; R&amp;D Note SHA-256 verified <span style="color: #22c55e;">[0 OVERDUE]</span></div>
                 `
             }
         },
