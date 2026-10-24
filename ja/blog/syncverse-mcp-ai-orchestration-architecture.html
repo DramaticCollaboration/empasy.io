@@ -34,9 +34,7 @@
     <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncverse-mcp-ai-orchestration-architecture.html" />
     <meta property="og:url" content="https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html">
-  <script type="module" crossorigin src="/assets/ja_blog_syncverse-mcp-ai-orchestration-architecture-CRFE7kPw.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/main-BV0MKBOf.js">
-  <link rel="modulepreload" crossorigin href="/assets/i18n-Dyy8FdjW.js">
+  <script type="module" crossorigin src="/assets/main-BInP593K.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/main-eyLql9aY.css">
 </head>
 <body>
@@ -49,9 +47,10 @@
         <!-- Top Announcement Bar -->
         <div class="top-announcement-bar">
             <div class="container announcement-container">
-                <span class="announcement-badge">[リリース]</span>
-                <span class="announcement-text">Vision-LLM基盤の自己修復QAソリューション <strong>SyncEta</strong> デスクトップアプリを今すぐダウンロードしてお試しください。</span>
-                <a href="/ja/download_eta.html" class="announcement-link">ダウンロードページへ →</a>
+                <span class="announcement-badge">[SyncSeries 2026]</span>
+                <span class="announcement-text">エンタープライズ9大AIエージェント統合デモポータル <strong>sync.empasy.io</strong> および <strong>SyncEta v0.0.44</strong> が公開されました。</span>
+                <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" class="announcement-link" style="margin-right: 12px;">統合デモポータルへ →</a>
+                <a href="/ja/download_eta.html" class="announcement-link">SyncEta ダウンロード →</a>
                 <button type="button" class="announcement-close" aria-label="閉じる">&times;</button>
             </div>
         </div>
@@ -69,7 +68,7 @@
                         <a href="/ja/pages/index.html#philosophy" data-i18n="nav.about">企業理念</a>
                         <a href="/ja/pages/vision.html" data-i18n="nav.vision">ビジョン 2026</a>
                         <a href="/ja/pages/team.html" data-i18n="nav.team">チーム紹介</a>
-                        <a href="/ko/pages/careers.html">採用情報</a>
+                        <a href="/ja/pages/careers.html">採用情報</a>
                     </div>
                 </div>
                 
@@ -78,13 +77,14 @@
                     <a href="/ja/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
                     <div class="dropdown-content">
                         <a href="/ja/solutions/sync-verse.html" style="font-weight: 700; color: #38bdf8;">SyncVerse (統制タワー)</a>
-                        <a href="/ja/solutions/sync-boot.html">SyncBoot</a>
-                        <a href="/ja/solutions/sync-cms.html">SyncCMS</a>
-                        <a href="/ja/solutions/sync-shop.html">SyncShop</a>
-                        <a href="/ja/solutions/sync-crawl.html">SyncCrawl</a>
+                        <a href="/ja/solutions/sync-insight.html">SyncInsight (意思決定知能)</a>
+                        <a href="/ja/solutions/sync-llm.html">SyncLLM (FinOpsゲートウェイ)</a>
+                        <a href="/ja/solutions/sync-boot.html">SyncBoot (MSA開発基盤)</a>
+                        <a href="/ja/solutions/sync-cms.html">SyncCMS (自律型CMS)</a>
+                        <a href="/ja/solutions/sync-shop.html">SyncShop (自律型コマース)</a>
+                        <a href="/ja/solutions/sync-ops.html">SyncOps (SI PMO・損益統制)</a>
                         <a href="/ja/solutions/sync-eta.html">SyncEta <span style="font-size: 0.75rem; padding: 2px 6px; border-radius: 4px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; margin-left: 4px;">デスクトップアプリ</span></a>
-                        <a href="/ja/solutions/sync-llm.html">SyncLLM</a>
-                        <a href="/ja/solutions/sync-insight.html">SyncInsight</a>
+                        <a href="/ja/solutions/sync-crawl.html">SyncCrawl (RAGパイプライン)</a>
                     </div>
                 </div>
     
@@ -102,6 +102,7 @@
                 
                 <!-- Documentation link -->
                 <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Docs <i class="fas fa-external-link-alt" style="font-size:0.7em; margin-left:2px; opacity:0.7;"></i></a>
+                <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8;">統合デモポータル <i class="fas fa-external-link-alt" style="font-size:0.7em; margin-left:2px; opacity:0.8;"></i></a>
             </nav>
             <div class="nav-actions">
                 <a href="/ja/download_eta.html" class="btn btn-outline btn-sm" style="font-weight: 600; border-color: rgba(56, 189, 248, 0.4); color: #38bdf8; white-space: nowrap;">SyncEta ダウンロード</a>
@@ -120,6 +121,7 @@
             </div>
         </div>
     </header>
+
     <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
         <!-- Compact Breadcrumb / Back Link -->
         <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
@@ -202,20 +204,42 @@
     <footer class="footer mt-4">
         <div class="container text-center fade-in-up">
             <h2 class="footer-title" data-i18n="footer.title">Empasyと共にビジネスを加速させましょう</h2>
-            <div class="mt-4">
-                <a href="/ja/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">導入のお問い合わせ (Contact)</a>
+            <div class="mt-4" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg"><i class="fas fa-play-circle"></i> 統合デモポータル体験</a>
+                <a href="/ja/pages/contact.html" class="btn btn-outline btn-lg" data-i18n="nav.contact">導入のお問い合わせ (Contact)</a>
             </div>
         </div>
         <div class="footer-bottom text-center">
             <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <div class="seo-links" style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; align-items: center; font-size: 0.88rem;">
+                    <span style="color: var(--text-secondary); font-weight: 700;">SyncSeries 9大ソリューション:</span>
+                    <a href="/ja/solutions/sync-verse.html" style="color: #38bdf8; text-decoration: none; font-weight: 600;">SyncVerse</a>
+                    <a href="/ja/solutions/sync-insight.html" style="color: inherit; text-decoration: none;">SyncInsight</a>
+                    <a href="/ja/solutions/sync-llm.html" style="color: inherit; text-decoration: none;">SyncLLM</a>
+                    <a href="/ja/solutions/sync-boot.html" style="color: inherit; text-decoration: none;">SyncBoot</a>
+                    <a href="/ja/solutions/sync-cms.html" style="color: inherit; text-decoration: none;">SyncCMS</a>
+                    <a href="/ja/solutions/sync-shop.html" style="color: inherit; text-decoration: none;">SyncShop</a>
+                    <a href="/ja/solutions/sync-ops.html" style="color: inherit; text-decoration: none;">SyncOps</a>
+                    <a href="/ja/solutions/sync-eta.html" style="color: inherit; text-decoration: none;">SyncEta</a>
+                    <a href="/ja/solutions/sync-crawl.html" style="color: inherit; text-decoration: none;">SyncCrawl</a>
+                </div>
                 <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center;">
-                    <a href="https://github.com/empasy" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                    <a href="https://github.com/DramaticCollaboration/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-desktop"></i> 統合デモポータル
                     </a>
                     <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fas fa-book"></i> Documentation
                     </a>
-                    <a href="/ko/pages/careers.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                    <a href="https://doc.empasy.com/downloads/SyncSeries_Brochure_v1.0.pdf" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-file-pdf"></i> 統合パンフレット (PDF)
+                    </a>
+                    <a href="https://doc.empasy.com/downloads/SyncSeries_Business_Proposal_v1.0.pdf" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-file-signature"></i> 技術提案書 (PDF)
+                    </a>
+                    <a href="/ja/pages/careers.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fas fa-user-plus"></i> 採用情報 (Careers)
                     </a>
                     <a href="/ja/pages/terms.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
@@ -241,6 +265,7 @@
             </div>
         </div>
     </footer>
+
     <!-- Scripts -->
 </body>
 </html>

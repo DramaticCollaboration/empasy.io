@@ -93,9 +93,7 @@
     <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/case-study-finance.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/case-study-finance.html" />
     <meta property="og:url" content="https://empasy.io/ko/blog/case-study-finance.html">
-  <script type="module" crossorigin src="/assets/ko_blog_case-study-finance-CRFE7kPw.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/main-BV0MKBOf.js">
-  <link rel="modulepreload" crossorigin href="/assets/i18n-Dyy8FdjW.js">
+  <script type="module" crossorigin src="/assets/main-BInP593K.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/main-eyLql9aY.css">
 </head>
 <body>
@@ -108,9 +106,10 @@
         <!-- Top Announcement Bar -->
         <div class="top-announcement-bar">
             <div class="container announcement-container">
-                <span class="announcement-badge">[배포 안내]</span>
-                <span class="announcement-text">Vision-LLM 기반 자가 치유 QA 솔루션 <strong>SyncEta</strong> 데스크톱 앱을 다운로드하여 바로 실행해볼 수 있습니다.</span>
-                <a href="/ko/download_eta.html" class="announcement-link">다운로드 페이지 바로가기 →</a>
+                <span class="announcement-badge">[SyncSeries 2026]</span>
+                <span class="announcement-text">엔터프라이즈 9대 멀티 에이전트 통합 관제 데모 포털 <strong>sync.empasy.io</strong> 및 <strong>SyncEta v0.0.44</strong> 데스크톱 앱이 배포되었습니다.</span>
+                <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" class="announcement-link" style="margin-right: 12px;">통합 데모 포털 체험 →</a>
+                <a href="/ko/download_eta.html" class="announcement-link">SyncEta 다운로드 →</a>
                 <button type="button" class="announcement-close" aria-label="닫기">&times;</button>
             </div>
         </div>
@@ -136,14 +135,15 @@
                 <div class="dropdown">
                     <a href="/#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
                     <div class="dropdown-content">
-                        <a href="/ko/solutions/sync-verse.html" style="font-weight: 700; color: #38bdf8;">SyncVerse (관제탑)</a>
-                        <a href="/ko/solutions/sync-boot.html">SyncBoot</a>
-                        <a href="/ko/solutions/sync-cms.html">SyncCMS</a>
-                        <a href="/ko/solutions/sync-shop.html">SyncShop</a>
-                        <a href="/ko/solutions/sync-crawl.html">SyncCrawl</a>
+                        <a href="/ko/solutions/sync-verse.html" style="font-weight: 700; color: #38bdf8;">SyncVerse (Tier 1 관제탑)</a>
+                        <a href="/ko/solutions/sync-insight.html">SyncInsight (의사결정 지능)</a>
+                        <a href="/ko/solutions/sync-llm.html">SyncLLM (FinOps 게이트웨이)</a>
+                        <a href="/ko/solutions/sync-boot.html">SyncBoot (MSA 스캐폴딩)</a>
+                        <a href="/ko/solutions/sync-cms.html">SyncCMS (자율형 CMS 스웜)</a>
+                        <a href="/ko/solutions/sync-shop.html">SyncShop (자율형 커머스)</a>
+                        <a href="/ko/solutions/sync-ops.html">SyncOps (SI PMO &amp; 손익/보증 관제)</a>
                         <a href="/ko/solutions/sync-eta.html">SyncEta <span style="font-size: 0.75rem; padding: 2px 6px; border-radius: 4px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; margin-left: 4px;">데스크톱 앱</span></a>
-                        <a href="/ko/solutions/sync-llm.html">SyncLLM</a>
-                        <a href="/ko/solutions/sync-insight.html">SyncInsight</a>
+                        <a href="/ko/solutions/sync-crawl.html">SyncCrawl (RAG 데이터 파이프라인)</a>
                     </div>
                 </div>
     
@@ -161,6 +161,7 @@
                 
                 <!-- Documentation link -->
                 <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Docs <i class="fas fa-external-link-alt" style="font-size:0.7em; margin-left:2px; opacity:0.7;"></i></a>
+                <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8;">통합 데모 포털 <i class="fas fa-external-link-alt" style="font-size:0.7em; margin-left:2px; opacity:0.8;"></i></a>
             </nav>
             <div class="nav-actions">
                 <a href="/ko/download_eta.html" class="btn btn-outline btn-sm" style="font-weight: 600; border-color: rgba(56, 189, 248, 0.4); color: #38bdf8; white-space: nowrap;">SyncEta 다운로드</a>
@@ -179,6 +180,7 @@
             </div>
         </div>
     </header>
+
     <main class="container" style="padding-top: 105px; min-height: 80vh;">
         <div class="page-header text-center fade-in-up mb-4">
             <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Case Studies / Portfolio</span>
@@ -295,18 +297,40 @@
     <footer class="footer mt-4">
         <div class="container text-center fade-in-up">
             <h2 class="footer-title" data-i18n="footer.title">엠파시와 함께 비즈니스를 가속화하세요</h2>
-            <div class="mt-4">
-                <a href="/ko/pages/contact.html" class="btn btn-primary btn-lg" data-i18n="nav.contact">도입 문의 (Contact)</a>
+            <div class="mt-4" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg"><i class="fas fa-play-circle"></i> 통합 데모 포털 체험</a>
+                <a href="/ko/pages/contact.html" class="btn btn-outline btn-lg" data-i18n="nav.contact">도입 문의 (Contact)</a>
             </div>
         </div>
         <div class="footer-bottom text-center">
             <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <div class="seo-links" style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; align-items: center; font-size: 0.88rem;">
+                    <span style="color: var(--text-secondary); font-weight: 700;">SyncSeries 9대 솔루션:</span>
+                    <a href="/ko/solutions/sync-verse.html" style="color: #38bdf8; text-decoration: none; font-weight: 600;">SyncVerse</a>
+                    <a href="/ko/solutions/sync-insight.html" style="color: inherit; text-decoration: none;">SyncInsight</a>
+                    <a href="/ko/solutions/sync-llm.html" style="color: inherit; text-decoration: none;">SyncLLM</a>
+                    <a href="/ko/solutions/sync-boot.html" style="color: inherit; text-decoration: none;">SyncBoot</a>
+                    <a href="/ko/solutions/sync-cms.html" style="color: inherit; text-decoration: none;">SyncCMS</a>
+                    <a href="/ko/solutions/sync-shop.html" style="color: inherit; text-decoration: none;">SyncShop</a>
+                    <a href="/ko/solutions/sync-ops.html" style="color: inherit; text-decoration: none;">SyncOps</a>
+                    <a href="/ko/solutions/sync-eta.html" style="color: inherit; text-decoration: none;">SyncEta</a>
+                    <a href="/ko/solutions/sync-crawl.html" style="color: inherit; text-decoration: none;">SyncCrawl</a>
+                </div>
                 <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center;">
-                    <a href="https://github.com/empasy" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                    <a href="https://github.com/DramaticCollaboration/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-desktop"></i> 통합 데모 포털
                     </a>
                     <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fas fa-book"></i> Documentation
+                    </a>
+                    <a href="https://doc.empasy.com/downloads/SyncSeries_Brochure_v1.0.pdf" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-file-pdf"></i> 통합 브로셔 (PDF)
+                    </a>
+                    <a href="https://doc.empasy.com/downloads/SyncSeries_Business_Proposal_v1.0.pdf" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-file-signature"></i> 기술 제안서 (PDF)
                     </a>
                     <a href="/ko/pages/careers.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fas fa-user-plus"></i> 인재 영입 (Careers)
@@ -334,6 +358,7 @@
             </div>
         </div>
     </footer>
+
     <!-- Scripts -->
 </body>
 </html>

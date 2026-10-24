@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6BNPM5TX7C');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
+    <!-- End Google Tag Manager -->
+    <title>엠파시(Empasy) | SyncOps - 한국형 SI/솔루션 사업운영 & 듀얼단가 손익·보증·연구노트 관제 플랫폼</title>
+    <meta name="description" content="SyncOps는 계약단가와 실투입원가 이원화 기반 프로젝트 실시간 손익(P&L) 분석, KOSA 소프트웨어 기술자 등급 및 M/M 가동률 매트릭스, 4대 보증보험 만기 추적, 하도급법 60일 지급기일 경보, SHA-256 전자연구노트를 제공하는 엔터프라이즈 SI PMO 플랫폼입니다.">
+    <meta name="keywords" content="SyncOps, SI PMO, 프로젝트 손익관리, 듀얼단가 손익, KOSA 기술자 등급, M/M 가동률 매트릭스, 4대 보증보험 관리, 하도급법 60일 지급기일, 전자연구노트 SHA-256, 조특법 R&D 세액공제, 엠파시, Empasy">
+    <meta property="og:title" content="엠파시(Empasy) | SyncOps - 한국형 SI/솔루션 사업운영 & 손익/컴플라이언스 관제 플랫폼">
+    <meta property="og:description" content="계약단가 vs 실투입원가 듀얼단가 실시간 영업이익률 분석부터 KOSA 인력 가동률, 4대 보증보험, 하도급법 60일 기일, SHA-256 전자연구노트까지 단일 플랫폼으로 관제합니다.">
+    <meta property="og:type" content="website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Empasy">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header { padding: 150px 0 80px; text-align: center; position: relative; z-index: 10; }
+        .page-title { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; color: var(--text-primary); }
+        .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 820px; margin: 0 auto; }
+        .hero-grid-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px; z-index: 1; opacity: 0.8; pointer-events: none;
+        }
+        .hero-blur-circle {
+            position: absolute; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, transparent 70%);
+            border-radius: 50%; top: -100px; right: -200px; z-index: 0; pointer-events: none;
+        }
+        .faq-item { border: none !important; }
+        .faq-item details {
+            background: var(--surface-color); border: 1px solid var(--border-color);
+            border-radius: 12px; margin-bottom: 1rem; overflow: hidden; transition: all 0.3s ease;
+        }
+        .faq-item details[open] {
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.5);
+        }
+        .faq-item summary { padding: 1.5rem 2rem !important; background: transparent !important; }
+        .faq-answer { padding: 0 2rem 1.5rem !important; }
+        .roi-calculator {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            border-radius: 24px; padding: 3rem 4rem; color: white;
+            box-shadow: 0 30px 60px -12px rgba(0,0,0,0.4); margin: 5rem auto;
+            text-align: center; max-width: 900px; position: relative; overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .roi-content { position: relative; z-index: 1; }
+        .roi-number { font-size: 4.5rem; font-weight: 800; color: #34d399; margin: 1rem 0; line-height: 1; font-family: var(--font-mono); }
+        .live-preview {
+            background: #0f172a; border-radius: 12px; border: 1px solid #334155;
+            text-align: left; overflow: hidden; margin: 3rem auto 0;
+            max-width: 680px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+        }
+        .live-preview-header { background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; border-bottom: 1px solid #334155; align-items: center; }
+        .live-preview-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .live-preview-body { padding: 1.5rem; font-family: var(--font-mono); font-size: 0.92rem; color: #e2e8f0; line-height: 1.65; }
+    </style>
+    <meta name="geo.region" content="KR-11" />
+    <meta name="geo.placename" content="Seoul" />
+    <meta name="geo.position" content="37.5665;126.9780" />
+    <meta name="ICBM" content="37.5665, 126.9780" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SyncOps",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "SyncOps는 계약단가 vs 실투입원가 듀얼단가 기반 실시간 프로젝트 손익(P&L) 관제, KOSA 기술자 등급 및 M/M 가동률 매트릭스, 4대 보증보험 추적, 하도급법 60일 기일 감시, SHA-256 전자연구노트를 제공하는 한국형 SI/솔루션 사업운영 플랫폼입니다.",
+      "sameAs": [
+        "https://github.com/DramaticCollaboration/",
+        "https://doc.empasy.com/syncops/"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "계약단가와 실투입원가가 다른 SI 프로젝트의 실시간 영업이익률을 어떻게 계산하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncOps의 듀얼단가(Dual-Rate) 손익 엔진은 발주처 도급 계약단가(매출 기준)와 내부 정규직 급여·외주 프리랜서/하도급 지급단가(실제 원가 기준)를 이원화하여 프로젝트별·부서별·월별 영업이익률과 원가율을 실시간 피벗으로 산출합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "하도급법 60일 지급기일 및 4대 보증보험 누락 리스크를 어떻게 예방하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "세금계산서 발행일 및 검수일 기준 하도급 대금 60일 법정 지급기일을 실시간 추적하여 D-14/D-7 조기 경보와 초과 시 법정 지연이자를 자동 계산하며, 입찰·계약·선급금·하자 4대 보증보험 만기 일정을 자동 알림으로 관제합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "조세특례제한법 R&D 세액공제를 위한 연구노트 요건을 충족하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 부설연구소 전담요원의 연구개발 기록물에 대해 작성자·검토자 전자서명과 SHA-256 해시 시점인증(Timestamping)을 부여하여 위변조 불가능한 전자연구노트 감사 증적을 유지합니다."
+          }
+        }
+      ]
+    }
+    </script>
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://empasy.io/ko/solutions/sync-ops.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-ops.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-ops.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-ops.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-ops.html" />
+    <meta property="og:url" content="https://empasy.io/ko/solutions/sync-ops.html">
+  <script type="module" crossorigin src="/assets/main-BInP593K.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-eyLql9aY.css">
+</head>
+<body class="theme-insight">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="glass-header">
+        <!-- Top Announcement Bar -->
+        <div class="top-announcement-bar">
+            <div class="container announcement-container">
+                <span class="announcement-badge">[SyncSeries 2026]</span>
+                <span class="announcement-text">엔터프라이즈 9대 멀티 에이전트 통합 관제 데모 포털 <strong>sync.empasy.io</strong> 및 <strong>SyncEta v0.0.44</strong> 데스크톱 앱이 배포되었습니다.</span>
+                <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" class="announcement-link" style="margin-right: 12px;">통합 데모 포털 체험 →</a>
+                <a href="/ko/download_eta.html" class="announcement-link">SyncEta 다운로드 →</a>
+                <button type="button" class="announcement-close" aria-label="닫기">&times;</button>
+            </div>
+        </div>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/logo-dark.svg" alt="EMPASY" class="logo-img" onerror="this.onerror=null; this.src='/assets/images/logo-dark.svg';">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <!-- 1. Company Group -->
+                <div class="dropdown">
+                    <a href="/#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/#philosophy" data-i18n="nav.about">회사 철학</a>
+                        <a href="/ko/pages/vision.html" data-i18n="nav.vision">비전 2026</a>
+                        <a href="/ko/pages/team.html" data-i18n="nav.team">회사 소개</a>
+                        <a href="/ko/pages/careers.html">채용 (Careers)</a>
+                    </div>
+                </div>
+                
+                <!-- 2. Sync Series Group -->
+                <div class="dropdown">
+                    <a href="/#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/ko/solutions/sync-verse.html" style="font-weight: 700; color: #38bdf8;">SyncVerse (Tier 1 관제탑)</a>
+                        <a href="/ko/solutions/sync-insight.html">SyncInsight (의사결정 지능)</a>
+                        <a href="/ko/solutions/sync-llm.html">SyncLLM (FinOps 게이트웨이)</a>
+                        <a href="/ko/solutions/sync-boot.html">SyncBoot (MSA 스캐폴딩)</a>
+                        <a href="/ko/solutions/sync-cms.html">SyncCMS (자율형 CMS 스웜)</a>
+                        <a href="/ko/solutions/sync-shop.html">SyncShop (자율형 커머스)</a>
+                        <a href="/ko/solutions/sync-ops.html">SyncOps (SI PMO &amp; 손익/보증 관제)</a>
+                        <a href="/ko/solutions/sync-eta.html">SyncEta <span style="font-size: 0.75rem; padding: 2px 6px; border-radius: 4px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; margin-left: 4px;">데스크톱 앱</span></a>
+                        <a href="/ko/solutions/sync-crawl.html">SyncCrawl (RAG 데이터 파이프라인)</a>
+                    </div>
+                </div>
+    
+                <!-- 3. Insights Group -->
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/ko/blog/blog.html">Tech Blog</a>
+                        <a href="/ko/pages/faq.html">FAQ</a>
+                        <a href="/ko/blog/case-study-finance.html">고객 사례 상세</a>
+                    </div>
+                </div>
+    
+                <a href="/ko/pages/clients.html" data-i18n="nav.clients">레퍼런스</a>
+                
+                <!-- Documentation link -->
+                <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Docs <i class="fas fa-external-link-alt" style="font-size:0.7em; margin-left:2px; opacity:0.7;"></i></a>
+                <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8;">통합 데모 포털 <i class="fas fa-external-link-alt" style="font-size:0.7em; margin-left:2px; opacity:0.8;"></i></a>
+            </nav>
+            <div class="nav-actions">
+                <a href="/ko/download_eta.html" class="btn btn-outline btn-sm" style="font-weight: 600; border-color: rgba(56, 189, 248, 0.4); color: #38bdf8; white-space: nowrap;">SyncEta 다운로드</a>
+                <div class="dropdown lang-dropdown" style="display: flex; align-items: center;">
+                    <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:0.95rem; padding: 0.4rem 0.5rem; cursor: pointer; display:flex; align-items:center; gap:5px;">
+                        <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> KO</span>
+                        <i class="fas fa-chevron-down" style="font-size:0.7em; opacity:0.7;"></i>
+                    </button>
+                    <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
+                        <a href="/" data-lang="ko" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
+                        <a href="/en/pages/index.html" data-lang="en" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
+                        <a href="/ja/pages/index.html" data-lang="ja" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JP</a>
+                    </div>
+                </div>
+                <a href="/ko/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact" style="white-space: nowrap;">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header fade-in-up" style="overflow: hidden;">
+            <div class="hero-grid-bg"></div>
+            <div class="hero-blur-circle"></div>
+            <div class="container" style="position: relative; z-index: 2;">
+                <span class="badge">Enterprise SI PMO &amp; Profit/Compliance Platform (Tier 3)</span>
+                <h1 class="page-title">SyncOps</h1>
+                <p class="page-subtitle">한국형 SI/솔루션 사업운영 &amp; 듀얼단가 손익·4대 보증보험·하도급법·전자연구노트 통합 관제 플랫폼</p>
+                <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fas fa-play-circle"></i> 통합 데모 포털 체험</a>
+                    <a href="https://doc.empasy.com/syncops/" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fas fa-book"></i> SyncOps 기술 문서</a>
+                    <a href="/downloads/proposals/07_SyncOps_Proposal.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-file-pdf"></i> 제품 제안서 PDF</a>
+                </div>
+                <div class="live-preview fade-in-up delay-1">
+                    <div class="live-preview-header">
+                        <div class="live-preview-dot" style="background: #ef4444;"></div>
+                        <div class="live-preview-dot" style="background: #f59e0b;"></div>
+                        <div class="live-preview-dot" style="background: #10b981;"></div>
+                        <span style="margin-left: 0.5rem; font-size: 0.8rem; color: #94a3b8; font-family: var(--font-mono);">sync-ops-pmo-agent — bash</span>
+                    </div>
+                    <div class="live-preview-body">
+                        <div><span style="color: #34d399;">$</span> empasy ops audit-profit --year 2026 --check-subcontract-overdue</div>
+                        <div style="color: #94a3b8; margin-top: 0.5rem;">[PMO Agent] Aggregating Dual-Rate P&amp;L across 18 active SI/Solution contracts...</div>
+                        <div style="color: #38bdf8;">[P&amp;L Pivot] FY2026 Revenue: ₩14.8B | Actual Cost (M/M + Subcontract): ₩10.9B | Operating Margin: 26.3%</div>
+                        <div style="color: #f59e0b;">[Subcontract Act Guard] 1 invoice approaching 60-day statutory limit (D-5: PRJ-2026-014, ₩42,000,000)</div>
+                        <div style="color: #a855f7;">[Surety &amp; R&amp;D Note] 4 Surety Bonds verified | 124 R&amp;D Lab Notes anchored with SHA-256 timestamp</div>
+                        <div style="color: #4ade80; margin-top: 0.5rem;">✔ Executive PMO Audit Report dispatched to SyncVerse Control Tower.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="solution-row fade-in-up" style="margin-bottom: 4rem;">
+                    <div class="solution-content">
+                        <h3>엑셀 수작업으로 파편화된 SI 프로젝트 손익과 법적 컴플라이언스 리스크를 종식합니다</h3>
+                        <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;">
+                            IT 서비스(SI/SM) 및 솔루션 기업의 수익성은 <strong>발주처 도급 계약단가와 실투입 인력 원가(정규직·프리랜서·외주 하도급)의 정밀한 대조</strong>에서 결정됩니다. 그러나 대다수 기업이 공수(M/M) 배정, 기성 청구, 보증보험 만기, 하도급 대금 지급기일을 파편화된 엑셀에 의존하여 프로젝트 종료 후에야 적자를 인지하거나 법적 과징금 리스크에 노출됩니다.<br><br>
+                            <strong>SyncOps</strong>는 한국형 SI/솔루션 산업의 실무 표준을 완벽히 내재화한 엔터프라이즈 PSA(Professional Services Automation) 및 PMO 자율 관제 플랫폼입니다. 듀얼단가 실시간 손익 피벗부터 KOSA 기술자 등급 기반 인력 가동률, 4대 보증보험, 하도급법 60일 기일 감시, 조특법 R&amp;D 전자연구노트까지 단일 워크스페이스에서 완벽히 통제합니다.
+                        </p>
+
+                        <div class="vs-container mt-4">
+                            <div class="vs-box legacy">
+                                <h5>기존 엑셀 및 일반 ERP 기반 사업관리</h5>
+                                <ul>
+                                    <li>계약단가와 실투입원가 분리 계산 불가로 프로젝트 중도 적자 전환 파악 실패</li>
+                                    <li>인력별 월별 M/M 중복 배정 및 유휴(Bench) 인력 가동률 파악 지연</li>
+                                    <li>입찰·계약·선급금·하자 4대 보증보험 갱신 누락으로 기성금 수금 지연</li>
+                                    <li>하도급법 60일 지급기일 초과로 인한 공정위 시정명령 및 지연이자(연 15.5%) 발생</li>
+                                </ul>
+                            </div>
+                            <div class="vs-box agent">
+                                <h5>SyncOps 엔터프라이즈 PMO 플랫폼</h5>
+                                <ul>
+                                    <li><strong>듀얼단가(Dual-Rate) 실시간 P&amp;L 피벗:</strong> 도급 매출액 대비 실투입 인건비·외주비를 실시간 대조하여 프로젝트별·부서별 영업이익률 즉시 산출</li>
+                                    <li><strong>KOSA 등급 &amp; M/M 가동률 매트릭스:</strong> 한국소프트웨어산업협회 기술자 등급 산정 및 전사 월별 M/M 투입률·가용 인력 AI 자동 매칭</li>
+                                    <li><strong>4대 보증보험 &amp; 기성/수금 추적:</strong> 입찰·계약·선급금·하자보증 만기 D-Day 알림 및 착수·중도·잔금 세금계산서 연동</li>
+                                    <li><strong>하도급법 60일 경보 &amp; SHA-256 연구노트:</strong> 하도급 지급기일 자동 경보 및 조특법 R&amp;D 세액공제용 시점인증 전자연구노트 완비</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 Core Pillars -->
+                <div class="mt-4 pt-4 fade-in-up" style="border-top: 1px solid var(--border-color);">
+                    <h3 class="text-center" style="margin-bottom: 1rem; font-size: 2rem;">SyncOps 5대 핵심 엔지니어링 필러</h3>
+                    <p class="text-center" style="color: var(--text-secondary); max-width: 760px; margin: 0 auto 3rem;">SI/솔루션 기업의 매출총이익(GP) 방어와 법률 컴플라이언스 무결성을 동시에 보장합니다.</p>
+                    <div class="vision-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                        <div class="vision-card">
+                            <div class="icon-box"><i class="fas fa-chart-pie"></i></div>
+                            <h4>1. 듀얼단가(Dual-Rate) 실시간 손익 피벗</h4>
+                            <p class="text-secondary mt-2">발주처 계약단가(청구 기준)와 내부 실투입원가(급여·4대보험·프리랜서/하도급 지급단가)를 이원화 관리합니다. 다차원 피벗 그리드를 통해 프로젝트별·고객사별·수행부서별 공헌이익과 영업이익률(OPM) 추이를 실시간으로 관제합니다.</p>
+                        </div>
+                        <div class="vision-card">
+                            <div class="icon-box"><i class="fas fa-users-cog"></i></div>
+                            <h4>2. KOSA 기술자 등급 &amp; M/M 가동률 매트릭스</h4>
+                            <p class="text-secondary mt-2">학력·자격증·경력 연차를 기반으로 KOSA(한국소프트웨어산업협회) 소프트웨어 기술자 등급을 자동 산정합니다. 12개월 롤링 M/M(Man-Month) 매트릭스로 인력별 과부하 및 유휴(Bench) 공수를 시각화하고 최적 대체 인력을 AI로 추천합니다.</p>
+                        </div>
+                        <div class="vision-card">
+                            <div class="icon-box"><i class="fas fa-file-shield"></i></div>
+                            <h4>3. 4대 보증보험 라이프사이클 &amp; 원·하도급 계약</h4>
+                            <p class="text-secondary mt-2">입찰보증, 계약보증, 선급금보증, 하자보수보증 등 서울보증보험(SGI)/소프트웨어공제조합 4대 보증증권의 발급 금액, 보험기간, 만기 갱신 일정을 프로젝트 기성 마일스톤과 1:1로 연동하여 수금 지연을 원천 차단합니다.</p>
+                        </div>
+                        <div class="vision-card">
+                            <div class="icon-box"><i class="fas fa-scale-balanced"></i></div>
+                            <h4>4. 하도급법 60일 지급기일 감시 &amp; 지연이자 산출</h4>
+                            <p class="text-secondary mt-2">하도급거래 공정화에 관한 법률에 따른 목적물 수령·검수일로부터 60일 이내 대금 지급 의무를 자동 감시합니다. 미지급 건에 대해 D-14/D-7 조기 경보를 발령하고, 기일 도과 시 법정 지연이자율(연 15.5%)을 일할 자동 산출합니다.</p>
+                        </div>
+                        <div class="vision-card">
+                            <div class="icon-box"><i class="fas fa-stamp"></i></div>
+                            <h4>5. 조특법 R&amp;D 세액공제용 SHA-256 전자연구노트</h4>
+                            <p class="text-secondary mt-2">기업부설연구소 및 연구개발전담부서 인력의 연구 수행 기록에 대해 작성자·검토자 전자서명과 SHA-256 암호화 해시 체인 및 시점인증(Timestamp)을 부여하여 조세특례제한법상 R&amp;D 세액공제 사후 검증 요건을 완벽히 충족합니다.</p>
+                        </div>
+                        <div class="vision-card">
+                            <div class="icon-box"><i class="fas fa-network-wired"></i></div>
+                            <h4>6. SyncVerse &amp; SyncInsight A2A 자율 연동</h4>
+                            <p class="text-secondary mt-2">목표 영업이익률 하회 또는 하도급 지급기일 임박 이벤트 발생 시 MCP 프로토콜을 통해 SyncVerse 관제탑과 SyncInsight 경영진 대시보드로 즉각 경보를 전파하고 인력 재배치 시뮬레이션 시나리오를 보고합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="roi-calculator fade-in-up">
+                    <div class="roi-content">
+                        <span class="badge" style="background: rgba(52, 211, 153, 0.2); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.4);">Expected Business Impact</span>
+                        <h3 style="font-size: 2.2rem; margin-top: 1rem; color: white;">프로젝트 원가 누수 차단 및 유휴 M/M 가동률 극대화</h3>
+                        <p style="color: #94a3b8; font-size: 1.1rem; max-width: 640px; margin: 0 auto;">실시간 듀얼단가 손익 관제와 법정 기일 자동화로 프로젝트 영업이익률을 평균 8.4%p 개선하고 컴플라이언스 리스크를 100% 예방합니다.</p>
+                        <div class="roi-number">+8.4%p</div>
+                        <p style="color: #cbd5e1; font-weight: 600;">평균 프로젝트 영업이익률(OPM) 향상 &amp; 하도급법/보증보험 사고 Zero</p>
+                        <div style="margin-top: 2.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                            <a href="/ko/pages/contact.html" class="btn btn-primary" style="background: #10b981; color: #0f172a; font-weight: 700; border: none; padding: 1rem 2.5rem; font-size: 1.1rem;">SyncOps 도입 문의하기</a>
+                            <a href="https://doc.empasy.com/syncops/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff; padding: 1rem 2rem; font-size: 1.1rem;">아키텍처 문서 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer mt-4">
+        <div class="container text-center fade-in-up">
+            <h2 class="footer-title" data-i18n="footer.title">엠파시와 함께 비즈니스를 가속화하세요</h2>
+            <div class="mt-4" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg"><i class="fas fa-play-circle"></i> 통합 데모 포털 체험</a>
+                <a href="/ko/pages/contact.html" class="btn btn-outline btn-lg" data-i18n="nav.contact">도입 문의 (Contact)</a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <div class="seo-links" style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; align-items: center; font-size: 0.88rem;">
+                    <span style="color: var(--text-secondary); font-weight: 700;">SyncSeries 9대 솔루션:</span>
+                    <a href="/ko/solutions/sync-verse.html" style="color: #38bdf8; text-decoration: none; font-weight: 600;">SyncVerse</a>
+                    <a href="/ko/solutions/sync-insight.html" style="color: inherit; text-decoration: none;">SyncInsight</a>
+                    <a href="/ko/solutions/sync-llm.html" style="color: inherit; text-decoration: none;">SyncLLM</a>
+                    <a href="/ko/solutions/sync-boot.html" style="color: inherit; text-decoration: none;">SyncBoot</a>
+                    <a href="/ko/solutions/sync-cms.html" style="color: inherit; text-decoration: none;">SyncCMS</a>
+                    <a href="/ko/solutions/sync-shop.html" style="color: inherit; text-decoration: none;">SyncShop</a>
+                    <a href="/ko/solutions/sync-ops.html" style="color: inherit; text-decoration: none;">SyncOps</a>
+                    <a href="/ko/solutions/sync-eta.html" style="color: inherit; text-decoration: none;">SyncEta</a>
+                    <a href="/ko/solutions/sync-crawl.html" style="color: inherit; text-decoration: none;">SyncCrawl</a>
+                </div>
+                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center;">
+                    <a href="https://github.com/DramaticCollaboration/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-desktop"></i> 통합 데모 포털
+                    </a>
+                    <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-book"></i> Documentation
+                    </a>
+                    <a href="https://doc.empasy.com/downloads/SyncSeries_Brochure_v1.0.pdf" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-file-pdf"></i> 통합 브로셔 (PDF)
+                    </a>
+                    <a href="https://doc.empasy.com/downloads/SyncSeries_Business_Proposal_v1.0.pdf" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-file-signature"></i> 기술 제안서 (PDF)
+                    </a>
+                    <a href="/ko/pages/careers.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-user-plus"></i> 인재 영입 (Careers)
+                    </a>
+                    <a href="/ko/pages/terms.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-file-contract"></i> 서비스 이용약관
+                    </a>
+                    <a href="/ko/pages/privacy.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-shield-alt"></i> 개인정보 처리방침
+                    </a>
+                    <a href="https://doc.empasy.com/ecosystem/security-and-compliance" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-lock"></i> 보안 &amp; 컴플라이언스
+                    </a>
+                    <span style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: rgba(34, 197, 94, 0.12); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 20px; font-size: 0.8rem; color: #4ade80; font-weight: 600;">
+                        <span style="width: 7px; height: 7px; border-radius: 50%; background: #22c55e; display: inline-block;"></span> All Systems Operational (SLA 99.9%)
+                    </span>
+                </div>
+                <address style="font-style: normal; color: rgba(255, 255, 255, 0.65); font-size: 0.85rem; line-height: 1.8;">
+                    <strong style="color: rgba(255, 255, 255, 0.95); font-size: 0.95rem;">주식회사 엠파시 (Empasy IT Corp.)</strong> &nbsp;|&nbsp; 대표이사 : 오병문<br>
+                    사업자등록번호 : 547-81-03408<br>
+                    본점 소재지 : 서울 금천구 가산디지털1로 205-27 2층 208호 &nbsp;|&nbsp; 개인정보보호책임자 : 오병문 (<a href="mailto:poh@empasy.com" style="color: inherit; text-decoration: underline;">poh@empasy.com</a>)<br>
+                    <span style="color: rgba(255, 255, 255, 0.85);">엔터프라이즈 솔루션 도입 문의 : <a href="mailto:poh@empasy.com" style="color: #38bdf8; text-decoration: underline;">poh@empasy.com</a> &nbsp;|&nbsp; 기술 지원 및 대표번호 : <a href="tel:0507-1360-8169" style="color: #f8fafc; text-decoration: none;">0507-1360-8169</a></span>
+                </address>
+                <p data-i18n="footer.copyright" style="color: rgba(255, 255, 255, 0.45); font-size: 0.8rem; margin-top: 1rem;">© 2026 Empasy IT Corp. All rights reserved. SyncSeries® is a registered trademark of Empasy.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
