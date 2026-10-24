@@ -1,8 +1,9 @@
 {
-  "name": "empasy.io",
+  "name": "@empasy/empasy-io",
   "version": "1.0.0",
   "description": "Empasy.io Official Corporate Website",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,16 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/empasy/empasy.io.git"
+    "url": "git+https://github.com/DramaticCollaboration/empasy.io.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Empasy",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/empasy/empasy.io/issues"
+    "url": "https://github.com/DramaticCollaboration/empasy.io/issues"
   },
-  "homepage": "https://github.com/empasy/empasy.io#readme",
+  "homepage": "https://github.com/DramaticCollaboration/empasy.io#readme",
   "devDependencies": {
     "glob": "^13.0.6",
     "handlebars": "^4.7.9",
