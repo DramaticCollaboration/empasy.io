@@ -39,6 +39,168 @@ document.addEventListener('DOMContentLoaded', () => {
             btnNewInquiry: isEn ? 'Submit Another Inquiry' : (isJa ? '新しいお問い合わせを作成' : '추가 문의 접수하기')
         };
 
+        // Enhance native <select id="interest"> with Custom Dark Glassmorphic Dropdown
+        const interestSelect = document.getElementById('interest');
+        if (interestSelect && !interestSelect.dataset.customized) {
+            interestSelect.dataset.customized = 'true';
+
+            const wrapper = document.createElement('div');
+            wrapper.className = 'custom-select-wrapper';
+            interestSelect.parentNode.insertBefore(wrapper, interestSelect);
+            wrapper.appendChild(interestSelect);
+
+            interestSelect.style.position = 'absolute';
+            interestSelect.style.opacity = '0';
+            interestSelect.style.pointerEvents = 'none';
+            interestSelect.style.width = '0';
+            interestSelect.style.height = '0';
+            interestSelect.setAttribute('tabindex', '-1');
+            interestSelect.setAttribute('aria-hidden', 'true');
+
+            const trigger = document.createElement('button');
+            trigger.type = 'button';
+            trigger.className = 'custom-select-trigger';
+            trigger.setAttribute('role', 'combobox');
+            trigger.setAttribute('aria-expanded', 'false');
+            trigger.setAttribute('aria-haspopup', 'listbox');
+            trigger.setAttribute('aria-controls', 'interest-listbox');
+
+            const selectedTextSpan = document.createElement('span');
+            selectedTextSpan.className = 'custom-select-trigger-text';
+            selectedTextSpan.textContent = interestSelect.options[interestSelect.selectedIndex]?.text || '';
+
+            const chevronIcon = document.createElement('span');
+            chevronIcon.innerHTML = `<svg class="custom-select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
+
+            trigger.appendChild(selectedTextSpan);
+            trigger.appendChild(chevronIcon.firstElementChild);
+
+            const menu = document.createElement('div');
+            menu.id = 'interest-listbox';
+            menu.className = 'custom-select-menu';
+            menu.setAttribute('role', 'listbox');
+
+            let focusedIndex = interestSelect.selectedIndex >= 0 ? interestSelect.selectedIndex : 0;
+            const optionEls = [];
+
+            Array.from(interestSelect.options).forEach((opt, idx) => {
+                const item = document.createElement('div');
+                item.className = 'custom-select-option' + (idx === interestSelect.selectedIndex ? ' is-selected' : '');
+                item.setAttribute('role', 'option');
+                item.setAttribute('aria-selected', idx === interestSelect.selectedIndex ? 'true' : 'false');
+                item.dataset.index = String(idx);
+
+                const labelSpan = document.createElement('span');
+                labelSpan.textContent = opt.text;
+
+                const checkSvg = document.createElement('span');
+                checkSvg.innerHTML = `<svg class="custom-select-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+
+                item.appendChild(labelSpan);
+                item.appendChild(checkSvg.firstElementChild);
+
+                item.addEventListener('click', () => {
+                    selectOptionByIndex(idx);
+                    closeMenu();
+                    trigger.focus();
+                });
+
+                optionEls.push(item);
+                menu.appendChild(item);
+            });
+
+            wrapper.appendChild(trigger);
+            wrapper.appendChild(menu);
+
+            function selectOptionByIndex(idx) {
+                if (idx < 0 || idx >= optionEls.length) return;
+                interestSelect.selectedIndex = idx;
+                focusedIndex = idx;
+                selectedTextSpan.textContent = interestSelect.options[idx].text;
+                optionEls.forEach((el, i) => {
+                    const isSel = i === idx;
+                    el.classList.toggle('is-selected', isSel);
+                    el.classList.remove('is-focused');
+                    el.setAttribute('aria-selected', isSel ? 'true' : 'false');
+                });
+                interestSelect.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+
+            function setFocusIndex(idx) {
+                if (idx < 0) idx = optionEls.length - 1;
+                if (idx >= optionEls.length) idx = 0;
+                focusedIndex = idx;
+                optionEls.forEach((el, i) => {
+                    el.classList.toggle('is-focused', i === focusedIndex);
+                });
+                const activeEl = optionEls[focusedIndex];
+                if (activeEl && typeof activeEl.scrollIntoView === 'function') {
+                    activeEl.scrollIntoView({ block: 'nearest' });
+                }
+            }
+
+            function openMenu() {
+                wrapper.classList.add('is-open');
+                trigger.setAttribute('aria-expanded', 'true');
+                setFocusIndex(interestSelect.selectedIndex >= 0 ? interestSelect.selectedIndex : 0);
+            }
+
+            function closeMenu() {
+                wrapper.classList.remove('is-open');
+                trigger.setAttribute('aria-expanded', 'false');
+                optionEls.forEach(el => el.classList.remove('is-focused'));
+            }
+
+            trigger.addEventListener('click', () => {
+                if (wrapper.classList.contains('is-open')) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            });
+
+            trigger.addEventListener('keydown', (e) => {
+                const isOpen = wrapper.classList.contains('is-open');
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    if (!isOpen) openMenu();
+                    else setFocusIndex(focusedIndex + 1);
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    if (!isOpen) openMenu();
+                    else setFocusIndex(focusedIndex - 1);
+                } else if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    if (isOpen) {
+                        selectOptionByIndex(focusedIndex);
+                        closeMenu();
+                    } else {
+                        openMenu();
+                    }
+                } else if (e.key === 'Escape') {
+                    if (isOpen) {
+                        e.preventDefault();
+                        closeMenu();
+                    }
+                } else if (e.key === 'Tab') {
+                    closeMenu();
+                }
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!wrapper.contains(e.target)) {
+                    closeMenu();
+                }
+            });
+
+            // Sync custom select when form is reset
+            contactForm.addEventListener('reset', () => {
+                setTimeout(() => {
+                    selectOptionByIndex(interestSelect.selectedIndex >= 0 ? interestSelect.selectedIndex : 0);
+                }, 0);
+            });
+        }
+
         // Create or get status alert banner (for validation & error messages)
         let alertBanner = document.getElementById('contactAlertBanner');
         if (!alertBanner) {

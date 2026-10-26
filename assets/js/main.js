@@ -113,11 +113,11 @@ function initMain() {
         let ticking = false;
         const updateHeader = () => {
             if (window.scrollY > 50) {
-                header.style.background = 'rgba(11, 17, 32, 0.95)';
+                header.style.background = 'rgba(11, 17, 32, 0.97)';
                 header.style.boxShadow = '0 10px 30px -10px rgba(0, 0, 0, 0.5)';
                 header.style.borderColor = 'rgba(255, 255, 255, 0.12)';
             } else {
-                header.style.background = 'rgba(11, 17, 32, 0.85)';
+                header.style.background = 'rgba(11, 17, 32, 0.94)';
                 header.style.boxShadow = 'none';
                 header.style.borderColor = 'rgba(255, 255, 255, 0.08)';
             }

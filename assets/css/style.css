@@ -75,8 +75,8 @@ body {
     box-shadow: var(--shadow-sm);
     border-radius: var(--border-radius);
     transition: all 0.4s ease;
-    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
 }
 .glow-card:hover, .glass-panel:hover {
     box-shadow: var(--shadow-hover);
@@ -222,9 +222,9 @@ body.has-announcement-bar .top-announcement-bar {
 .glass-header {
     position: fixed;
     top: 0; left: 0; width: 100%;
-    background: rgba(11, 17, 32, 0.88);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(11, 17, 32, 0.94);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(180%);
     border-bottom: 1px solid var(--glass-border);
     z-index: 1000;
     transition: all 0.3s ease;
@@ -868,8 +868,8 @@ body.has-announcement-bar .top-announcement-bar {
   border: 1px solid var(--glass-border);
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   transition: all 0.3s ease;
 }
 .surface-card:hover {
@@ -1168,8 +1168,8 @@ body.has-announcement-bar .top-announcement-bar {
   border: 1px solid var(--glass-border);
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   transition: all 0.3s ease;
 }
 .surface-card:hover {
@@ -1323,8 +1323,8 @@ body.has-announcement-bar .top-announcement-bar {
 /* ── Glassmorphism panels ── */
 .glass-panel {
   background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
 }
@@ -1406,7 +1406,7 @@ body.has-announcement-bar .top-announcement-bar {
   .logo-img { width: 160px; height: auto; }
   .mobile-menu-btn { order: 2; display: block; z-index: 1002; margin-left: auto; color: var(--text-primary); }
   
-  .nav-container { flex-wrap: wrap; height: auto; padding: 15px 20px; justify-content: space-between; align-items: center; background: rgba(11, 17, 32, 0.98); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--glass-border); }
+  .nav-container { flex-wrap: wrap; height: auto; padding: 15px 20px; justify-content: space-between; align-items: center; background: rgba(11, 17, 32, 0.98); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border-bottom: 1px solid var(--glass-border); }
   
   /* Toggled Menu Areas */
   .nav-links { order: 3; display: none; width: 100%; flex-direction: column; background: transparent; margin-top: 15px; padding: 10px 0; border-top: 1px solid var(--glass-border); }
@@ -1506,8 +1506,8 @@ body.has-announcement-bar .top-announcement-bar {
     border: 1px solid var(--border-color);
     margin: 2rem 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 .pipeline-step {
@@ -1561,8 +1561,8 @@ body.has-announcement-bar .top-announcement-bar {
     border: 1px solid var(--border-color);
     margin: 2rem 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 .stack-layer {
@@ -1610,8 +1610,8 @@ body.has-announcement-bar .top-announcement-bar {
     border: 1px solid var(--border-color);
     margin: 2rem 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 .flow-node {
@@ -2574,8 +2574,8 @@ body.has-announcement-bar .top-announcement-bar {
     border-radius: 16px;
     background: rgba(15, 23, 42, 0.75);
     border: 1px solid var(--glass-border);
-    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
 }
@@ -2700,4 +2700,335 @@ body.has-announcement-bar .top-announcement-bar {
 .insight-card-link:hover .insight-read-more {
     gap: 10px;
     color: #38bdf8;
+}
+
+
+/* =========================================
+   Enterprise Contact Form & Custom Dark Select
+========================================= */
+.contact-form {
+    background: linear-gradient(165deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.92) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(8, 145, 178, 0.08);
+    padding: clamp(1.5rem, 5vw, 3rem);
+    border-radius: 16px;
+    max-width: 800px;
+    margin: 0 auto 5rem;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+}
+
+.contact-form .grid-2 {
+    gap: 1.25rem 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 0.55rem;
+    color: #f1f5f9;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: -0.01em;
+}
+
+.form-required-dot {
+    color: #38bdf8;
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.9rem 1.1rem;
+    background: rgba(2, 6, 23, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 10px;
+    color: #f8fafc;
+    font-family: inherit;
+    font-size: 0.96rem;
+    line-height: 1.5;
+    transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control::placeholder {
+    color: #64748b;
+}
+
+.form-control:hover {
+    border-color: rgba(56, 189, 248, 0.35);
+    background: rgba(2, 6, 23, 0.7);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: rgba(2, 6, 23, 0.85);
+    box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.22);
+}
+
+/* Native Select Fallback (Solid Dark Slate for OS Popup & Custom SVG Arrow) */
+select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #0f172a !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.1rem center;
+    background-size: 16px;
+    padding-right: 2.8rem;
+    cursor: pointer;
+    color: #f8fafc;
+}
+
+select.form-control option {
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 10px 14px;
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Custom Dark Glassmorphic Select Dropdown */
+.custom-select-wrapper {
+    position: relative;
+    width: 100%;
+    z-index: 30;
+}
+
+.custom-select-wrapper.is-open {
+    z-index: 60;
+}
+
+.custom-select-trigger {
+    width: 100%;
+    padding: 0.9rem 1.1rem;
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 10px;
+    color: #f8fafc;
+    font-family: inherit;
+    font-size: 0.96rem;
+    line-height: 1.5;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-select-trigger:hover {
+    border-color: rgba(56, 189, 248, 0.45);
+    background: #131c31;
+}
+
+.custom-select-wrapper.is-open .custom-select-trigger,
+.custom-select-trigger:focus-visible {
+    outline: none;
+    border-color: var(--primary-color);
+    background: #131c31;
+    box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.22);
+}
+
+.custom-select-trigger-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.custom-select-chevron {
+    width: 18px;
+    height: 18px;
+    color: #38bdf8;
+    flex-shrink: 0;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.custom-select-wrapper.is-open .custom-select-chevron {
+    transform: rotate(180deg);
+}
+
+.custom-select-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: #0f172a;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 12px;
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.06);
+    padding: 0.45rem;
+    max-height: 320px;
+    overflow-y: auto;
+    display: none;
+    z-index: 100;
+    scrollbar-width: thin;
+    scrollbar-color: #334155 #0f172a;
+}
+
+.custom-select-wrapper.is-open .custom-select-menu {
+    display: block;
+    animation: selectMenuFadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes selectMenuFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.custom-select-option {
+    padding: 0.7rem 0.9rem;
+    border-radius: 8px;
+    color: #cbd5e1;
+    font-size: 0.93rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+    user-select: none;
+}
+
+.custom-select-option:hover,
+.custom-select-option.is-focused {
+    background: rgba(8, 145, 178, 0.18);
+    color: #ffffff;
+}
+
+.custom-select-option.is-selected {
+    background: rgba(8, 145, 178, 0.25);
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+.custom-select-check {
+    width: 16px;
+    height: 16px;
+    color: #38bdf8;
+    flex-shrink: 0;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.custom-select-option.is-selected .custom-select-check {
+    opacity: 1;
+}
+
+/* Enterprise Security & Verification Options Box */
+.enterprise-options-box {
+    background: rgba(2, 6, 23, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.25rem 1.35rem;
+    margin-bottom: 1.5rem;
+}
+
+.enterprise-options-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #38bdf8;
+    margin-bottom: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.enterprise-option-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0.55rem 0.7rem;
+    margin: 0 -0.7rem 0.35rem;
+    border-radius: 8px;
+    transition: background-color 0.15s ease;
+}
+
+.enterprise-option-item:last-child {
+    margin-bottom: 0;
+}
+
+.enterprise-option-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.enterprise-option-item input[type="checkbox"],
+.privacy-consent-row input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.enterprise-option-item label {
+    color: #e2e8f0;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.enterprise-option-tag {
+    color: #94a3b8;
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.privacy-consent-row {
+    margin: 1.5rem 0;
+    padding: 0.75rem 1rem;
+    background: rgba(8, 145, 178, 0.06);
+    border: 1px solid rgba(56, 189, 248, 0.18);
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.privacy-consent-row label {
+    color: #cbd5e1;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1.05rem 1.5rem;
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    border-radius: 10px !important;
+    background: linear-gradient(135deg, #0891B2 0%, #0284C7 100%);
+    box-shadow: 0 8px 22px -4px rgba(8, 145, 178, 0.45);
+    letter-spacing: 0.01em;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #0E7490 0%, #0369A1 100%);
+    box-shadow: 0 12px 28px -4px rgba(8, 145, 178, 0.6);
+    transform: translateY(-1px);
 }
