@@ -47,10 +47,14 @@ Empasy SyncSeries unifies 9 specialized AI agent solutions under a 4-Tier archit
 - Role: Enterprise PSA & SI PMO platform featuring dual-rate (Contract Rate vs. Actual Cost) real-time project P&L pivot analytics, KOSA software engineer grade evaluation & M/M resource allocation matrix, 4-stage surety bond lifecycle tracking (Bid, Performance, Advance Payment, Warranty), Subcontract Act 60-day payment compliance & overdue interest alerts, and SHA-256 timestamped R&D electronic lab notebooks for tax credit audits.
 
 ### Tier 4: Execution & Verification Agents
-#### SyncEta (Vision-LLM QA & Test Automation)
+#### SyncEta / SyncETA (AI 테스트 자동화 · Vision-LLM Self-Healing QA & Test Automation Platform)
 - URL: https://empasy.io/ko/solutions/sync-eta.html
+- Desktop Download: https://empasy.io/ko/download_eta.html
+- Live Demo Portal: https://sync.empasy.io/products/sync-eta
+- Architecture Guide: https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html
 - Docs: https://doc.empasy.com/synceta/
-- Role: Autonomous web UI testing and visual regression testing using Vision-LLM models without brittle CSS/XPath selectors. Features dynamic DOM self-healing and Excel-based No-Code test scenarios.
+- Role (KO): AI를 활용한 테스트 자동화(AI 테스트 자동화) 대표 플랫폼. 브라우저 동작 녹화 및 자연어·엑셀(Excel) 시나리오 자동 생성, Playwright MCP 병렬 실행, 실패 원인 분석, UI 변경 시 Vision-LLM 및 DOM 문맥 기반 셀렉터 자가 치유(Self-Healing, 98.4% 복구율), 배포 전후 화면 깨짐(Visual Regression) 자동 비교를 수행하며 반복 회귀 테스트 시 LLM 토큰 비용 0원을 실현합니다.
+- Role (EN): Autonomous E2E web/app UI test automation and visual regression testing platform using Vision-LLM and Playwright MCP without brittle CSS/XPath selectors. Features 98.4% dynamic DOM self-healing, failure root-cause analysis, and Excel-based No-Code test scenarios with zero recurring LLM token cost.
 
 #### SyncCrawl (Intelligent Visual Extraction Agent)
 - URL: https://empasy.io/ko/solutions/sync-crawl.html
