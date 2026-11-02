@@ -85,6 +85,21 @@
                 <button class="blog-filter-btn" data-filter="vision" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: rgba(15, 23, 42, 0.6); color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">비전 &amp; 전략</button>
             </div>
                 <div class="blog-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+                    <!-- Blog Card: ETA Autoscaling -->
+                    <a href="../../ko/blog/eta-autoscaling-worker-scaling.html" class="blog-card-item" data-category="cloud" style="text-decoration: none; color: inherit; display: block;">
+                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid rgba(56, 189, 248, 0.45); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
+                                <div style="color: #38bdf8; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase;">Cloud Native &amp; Autoscaling</div>
+                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">ETA 오토스케일링 적용기 (1) — 워커를 언제 늘려야 할까?</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">ETA는 테스트 시나리오를 정해진 시간에 자동 실행할 수 있는 스케줄 기능을 제공한다. 평소에는 별 문제가 없는 기능이지만 분기별 테스트처럼 특정 시간에 작업이 한꺼번에 몰리는 경우가 있다. 이때 워커가 부족하면 실행을 기다리는 시나리오가 계속 쌓인다.</p>
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
+                                    <span><i class="far fa-calendar-alt" style="margin-right: 4px;"></i> 2026-11-03 &bull; <i class="far fa-clock" style="margin: 0 4px;"></i> 4분 읽기</span>
+                                    <span style="color: var(--primary-color); font-weight: 600;">자세히 읽기 ➔</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
                     <!-- Featured Blog Card: SyncETA AI Test Automation -->
                     <a href="../../ko/blog/synceta-intelligent-regression-testing-pipeline.html" class="blog-card-item" data-category="qa" style="text-decoration: none; color: inherit; display: block;">
                         <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid rgba(56, 189, 248, 0.45); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
