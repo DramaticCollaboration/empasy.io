@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6BNPM5TX7C');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETA 오토스케일링 적용기 (1) — 워커를 언제 늘려야 할까? | 엠파시 기술 블로그</title>
+    <meta name="description" content="ETA는 테스트 시나리오를 정해진 시간에 자동 실행할 수 있는 스케줄 기능을 제공한다.">
+    <meta property="og:title" content="ETA 오토스케일링 적용기 (1) — 워커를 언제 늘려야 할까?">
+    <meta property="og:description" content="ETA는 테스트 시나리오를 정해진 시간에 자동 실행할 수 있는 스케줄 기능을 제공한다.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:url" content="https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <link rel="canonical" href="https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <script type="module" crossorigin src="/assets/main-C-tuPnb9.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-CIBPJjKC.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="glass-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/logo-dark.svg" alt="EMPASY" class="logo-img" onerror="this.onerror=null; this.src='/assets/images/logo-dark.svg';">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <!-- 1. Company Group -->
+                <div class="dropdown">
+                    <a href="/#philosophy" class="dropbtn" data-i18n="nav.company">회사 소개 <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/#philosophy" data-i18n="nav.about">핵심 가치</a>
+                        <a href="/ko/pages/vision.html" data-i18n="nav.vision">비전</a>
+                        <a href="/ko/pages/team.html" data-i18n="nav.team">팀 소개</a>
+                        <a href="/ko/pages/careers.html">채용 안내</a>
+                    </div>
+                </div>
+                
+                <!-- 2. Sync Series Group -->
+                <div class="dropdown">
+                    <a href="/#solutions" class="dropbtn" data-i18n="nav.solutions">솔루션 <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/ko/solutions/sync-verse.html" style="font-weight: 700; color: #38bdf8;">SyncVerse (AI 통합 관제)</a>
+                        <a href="/ko/solutions/sync-insight.html">SyncInsight (데이터 분석·의사결정)</a>
+                        <a href="/ko/solutions/sync-llm.html">SyncLLM (AI 비용·보안 관리)</a>
+                        <a href="/ko/solutions/sync-boot.html">SyncBoot (백엔드 자동 개발)</a>
+                        <a href="/ko/solutions/sync-cms.html">SyncCMS (웹사이트 자동 제작)</a>
+                        <a href="/ko/solutions/sync-shop.html">SyncShop (AI 쇼핑몰 운영)</a>
+                        <a href="/ko/solutions/sync-ops.html">SyncOps (프로젝트·손익 관리)</a>
+                        <a href="/ko/solutions/sync-eta.html">SyncEta (AI 테스트 자동화) <span style="font-size: 0.75rem; padding: 2px 6px; border-radius: 4px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; margin-left: 4px;">데스크톱 앱</span></a>
+                        <a href="/ko/solutions/sync-crawl.html">SyncCrawl (웹 데이터 수집)</a>
+                    </div>
+                </div>
+    
+                <!-- 3. Insights Group -->
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">인사이트 <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/ko/blog/blog.html">기술 블로그</a>
+                        <a href="/ko/pages/faq.html">자주 묻는 질문</a>
+                        <a href="/ko/blog/case-study-finance.html">도입 사례 상세</a>
+                    </div>
+                </div>
+    
+                <a href="/ko/pages/clients.html" data-i18n="nav.clients">고객 사례</a>
+                
+                <!-- Documentation & Demo Portal links -->
+                <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">문서 <i class="fas fa-external-link-alt" style="font-size:0.7em; margin-left:2px; opacity:0.7;"></i></a>
+                <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8;">통합 데모 포털 <i class="fas fa-external-link-alt" style="font-size:0.7em; margin-left:2px; opacity:0.8;"></i></a>
+            </nav>
+            <div class="nav-actions">
+                <a href="/ko/download_eta.html" class="btn btn-outline btn-sm" style="font-weight: 600; border-color: rgba(56, 189, 248, 0.4); color: #38bdf8; white-space: nowrap;">SyncEta 다운로드</a>
+                <div class="dropdown lang-dropdown" style="display: flex; align-items: center;">
+                    <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:0.95rem; padding: 0.4rem 0.5rem; cursor: pointer; display:flex; align-items:center; gap:5px;">
+                        <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> KO</span>
+                        <i class="fas fa-chevron-down" style="font-size:0.7em; opacity:0.7;"></i>
+                    </button>
+                    <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
+                        <a href="/" data-lang="ko" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
+                        <a href="/en/pages/index.html" data-lang="en" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
+                        <a href="/ja/pages/index.html" data-lang="ja" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JP</a>
+                    </div>
+                </div>
+                <a href="/ko/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact" style="white-space: nowrap;">문의하기</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
+        <!-- Compact Breadcrumb / Back Link -->
+        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
+            <a href="../../ko/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
+                <span>Tech Blog 목록으로</span>
+            </a>
+            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
+        </div>
+        
+        <section style="padding: 0;">
+            <div class="container" style="padding: 0;">
+                <article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
+                    <div style="line-height: 1.8; color: var(--text-primary);">
+<h1 style="margin-top: 2rem; font-size: clamp(1.5rem, 4vw, 2.1rem); margin-bottom: 1rem;">ETA 오토스케일링 적용기 (1) — 워커를 언제 늘려야 할까?</h1>
+
+<p style=" margin-bottom: 1rem;">ETA는 테스트 시나리오를 정해진 시간에 자동 실행할 수 있는 스케줄 기능을 제공한다.</p>
+
+<p style=" margin-bottom: 1rem;">평소에는 별 문제가 없는 기능이지만 분기별 테스트처럼 특정 시간에 작업이 한꺼번에 몰리는 경우가 있다. 이때 워커가 부족하면 실행을 기다리는 시나리오가 계속 쌓인다.</p>
+
+<p style=" margin-bottom: 1rem;">그렇다고 이벤트가 많이 쌓일 때마다 사람이 직접 Pod 수를 늘리고, 끝나면 다시 줄이는 게 최선일까?</p>
+
+<p style=" margin-bottom: 1rem;">자동화 솔루션을 운영하면서 정작 워커 증설은 수동으로 해야 한다는 것은 용납할 수 없다.</p>
+
+<h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">일단 HPA를 쓰면 되는 거 아닌가?</h2>
+
+<p style=" margin-bottom: 1rem;">Kubernetes에는 HPA(Horizontal Pod Autoscaler)가 있다. CPU나 메모리 사용률 등을 기준으로 Pod 수를 자동 조절하는 기능이다.</p>
+
+<p style=" margin-bottom: 1rem;">처음에는 ETA 워커에도 HPA를 적용하면 되겠다고 생각했다. 하지만 워커의 실행 구조를 생각해 보니 문제가 있었다.</p>
+
+<p style=" margin-bottom: 1rem;"><strong>ETA의 워커 Pod 하나는 한 번에 시나리오 하나만 실행한다.</strong> 그리고 Pod 안에서는 브라우저, 워커 프로세스, Playwright MCP 서버가 함께 동작한다. 하나의 시나리오를 실행하는 데에도 꽤 많은 리소스가 필요하다.</p>
+
+<p style=" margin-bottom: 1rem;">즉, 워커가 시나리오를 실행 중이라면 워커 pod에 할당받은 CPU와 메모리를 전부 사용한다.<br>
+고로, 리소스 사용량을 기준으로 파드 수를 늘리게 되면 시나리오가 고작 하나 실행중인 경우에도 오토스케일링이 될 수 있는 것이다.(극단적인 예시..)</p>
+
+<p style=" margin-bottom: 1rem;">결국 <strong>리소스 사용률보다 중요한 건 실행을 기다리는 시나리오가 얼마나 있는지</strong>였다.</p>
+
+<h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">그러면 대기열을 보면 되잖아?</h2>
+
+<p style=" margin-bottom: 1rem;">현재 ETA의 스케줄 실행 흐름은 비교적 단순하다.</p>
+
+<pre style="overflow-x: auto; padding: 1rem;"><code>[WAS]
+  사용자가 Cron 스케줄 등록
+            ↓
+  실행 시점에 Redis Queue에 Job 등록
+            ↓
+[Redis Queue]
+  실행 대기 중인 Job
+            ↓
+[Worker Pod]
+  Job을 가져와 시나리오 실행</code></pre>
+
+<p style=" margin-bottom: 1rem;">여기서 문득 생각이 들었다.</p>
+
+<p style=" margin-bottom: 1rem;">이미 Redis에 실행 대기 중인 작업이 쌓이고 있는데, <strong>이 대기열 길이를 기준으로 워커를 늘리면 되는 것 아닐까?</strong></p>
+
+<p style=" margin-bottom: 1rem;">예를 들어 워커가 모두 바쁘고 대기 중인 Job이 10개라면, 그만큼 워커를 추가로 띄워서 처리하도록 만드는 것이다. 물론 서버 자원이 무한한 것은 아니니 최대 Pod 수는 제한해야 한다.</p>
+
+<p style=" margin-bottom: 1rem;">문제는 일반적인 CPU·메모리 지표 대신 Redis Queue의 대기열을 어떻게 스케일링 기준으로 삼느냐였다.</p>
+
+<h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">역시 이런 고민을 나만 한 건 아니었다</h2>
+
+<p style=" margin-bottom: 1rem;">조금 찾아보니 KEDA(Kubernetes Event-driven Autoscaling)라는 스킬이 있었다.</p>
+
+<p style=" margin-bottom: 1rem;">KEDA는 CPU 사용률 같은 리소스 지표뿐 아니라 Redis, Kafka, RabbitMQ 등 외부 시스템의 이벤트나 지표를 기준으로 Kubernetes 워크로드를 확장할 수 있게 해준다.</p>
+
+<p style=" margin-bottom: 1rem;">딱 지금 필요한 방식이었다.</p>
+
+<p style=" margin-bottom: 1rem;">ETA에서는 Redis Queue에 쌓인 <strong>대기 Job 수</strong>를 기준으로 워커 Pod 수를 조절하는 방향을 검토해 보기로 했다.</p>
+
+<p style=" margin-bottom: 1rem;">다만 Redis를 쓴다고 설정 하나로 무조건 끝나는 건 아니다. 실제 Queue 구현 방식에 따라 KEDA에서 지원하는 Scaler와 대기열을 측정하는 방법이 달라질 수 있으니 먼저 확인해야 한다.</p>
+
+<h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">그런데 늘리는 것보다 줄이는 게 더 걱정이다</h2>
+
+<p style=" margin-bottom: 1rem;">Pod를 늘리는 건 비교적 명확하다. 대기 중인 Job이 많아지면 워커를 추가하면 된다.</p>
+
+<p style=" margin-bottom: 1rem;">하지만 작업이 끝나고 대기열이 0이 됐다고 해서 모든 워커를 바로 줄여도 될까?</p>
+
+<p style=" margin-bottom: 1rem;">그건 아니다. <strong>Queue는 비어 있어도 이미 Job을 가져간 워커에서는 시나리오가 실행 중일 수 있다.</strong> 이때 Pod가 종료되면 브라우저와 MCP 서버도 함께 내려가고, 실행 중이던 테스트가 중단될 수 있다.</p>
+
+<p style=" margin-bottom: 1rem;">따라서 단순히 Queue 길이만 보는 것에서 끝내지 않고, 실행 중인 Job을 보호할 수 있는 종료 처리와 스케일인 정책도 함께 설계해야 한다.</p>
+
+<h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">이번에 해보려는 것</h2>
+
+<p style=" margin-bottom: 1rem;">우선 목표는 명확하다.</p>
+
+<p style=" margin-bottom: 1rem;"><strong>대기 중인 시나리오가 늘어나면 워커 Pod가 자동으로 증가하고, 작업이 줄어들면 실행 중인 시나리오를 안전하게 마친 뒤 Pod가 감소하도록 만드는 것.</strong></p>
+
+<p style=" margin-bottom: 1rem;">이를 위해 Redis Queue의 실제 구조를 확인하고, KEDA ScaledObject 설정과 최대 Pod 수, 스케일링 기준, 종료 정책을 차례대로 검증해 보려고 한다.</p>
+
+<p style=" margin-bottom: 1rem;">다음 편에서는 KEDA를 설치하고 ETA의 Redis Queue와 연결해 볼 예정이다.</p>
+
+
+<p style=" margin-bottom: 1rem;">P.S.<br>
+처음 Kubernetes로 전환했을 때가 생각난다.<br>
+당시에는 내가 이걸 직접 구축한다는 것 자체가 너무 재미있어서 금요일부터 일요일까지 주말 내내 거의 밤새 작업했던 기억이 있다.<br>
+처음 해보는 작업이다 보니 '이게 진짜 되나?' 싶기도 했고, 반신반의하면서 하나씩 붙여 나갔는데 어느 순간 실제로 서비스가 돌아가는 걸 보니 꽤 신기했다.<br>
+그때 구성했던 CI/CD 파이프라인과 GitHub Actions 기반 배포 워크플로우가 지금까지 큰 오류 없이 잘 돌아가고 있다는 것도 여전히 신기하다.<br>
+사실 대단한 인프라를 구축한 것도 아니고, 누군가에게는 별것 아닌 작업일 수도 있겠지만, 직접 고민하고 하나씩 구축해서 그런지 유독 인프라 쪽에 애정이 가는 것 같다.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-4">
+        <div class="container text-center fade-in-up">
+            <h2 class="footer-title" data-i18n="footer.title">우리 회사에 맞는 AI 자동화, 지금 상담해 보세요</h2>
+            <p style="color: var(--text-secondary); font-size: 1.05rem; margin-top: 0.5rem;">도입 환경 진단부터 맞춤형 구축까지 엠파시 전문 엔지니어가 안내해 드립니다.</p>
+            <div class="mt-4" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg"><i class="fas fa-play-circle"></i> 통합 데모 포털 체험</a>
+                <a href="/ko/pages/contact.html" class="btn btn-outline btn-lg" data-i18n="nav.contact">도입 문의하기</a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <div class="seo-links" style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; align-items: center; font-size: 0.88rem;">
+                    <span style="color: var(--text-secondary); font-weight: 700;">Sync Series:</span>
+                    <a href="/ko/solutions/sync-verse.html" style="color: #38bdf8; text-decoration: none; font-weight: 600;">SyncVerse</a>
+                    <a href="/ko/solutions/sync-insight.html" style="color: inherit; text-decoration: none;">SyncInsight</a>
+                    <a href="/ko/solutions/sync-llm.html" style="color: inherit; text-decoration: none;">SyncLLM</a>
+                    <a href="/ko/solutions/sync-boot.html" style="color: inherit; text-decoration: none;">SyncBoot</a>
+                    <a href="/ko/solutions/sync-cms.html" style="color: inherit; text-decoration: none;">SyncCMS</a>
+                    <a href="/ko/solutions/sync-shop.html" style="color: inherit; text-decoration: none;">SyncShop</a>
+                    <a href="/ko/solutions/sync-ops.html" style="color: inherit; text-decoration: none;">SyncOps</a>
+                    <a href="/ko/solutions/sync-eta.html" style="color: inherit; text-decoration: none;">SyncEta</a>
+                    <a href="/ko/solutions/sync-crawl.html" style="color: inherit; text-decoration: none;">SyncCrawl</a>
+                </div>
+                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center;">
+                    <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-desktop"></i> 통합 데모 포털
+                    </a>
+                    <a href="/ko/download_eta.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-download"></i> SyncEta 다운로드
+                    </a>
+                    <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-book"></i> 기술 문서
+                    </a>
+                    <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" download style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-book-open"></i> 요약 브로셔 (PDF)
+                    </a>
+                    <a href="/downloads/proposals/SyncSeries_Master_Proposal.pdf" download style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-file-pdf"></i> 통합 제안서 (PDF)
+                    </a>
+                    <a href="https://doc.empasy.com/proposals/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-folder-open"></i> 제안서 자료실
+                    </a>
+                    <a href="/ko/pages/careers.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-user-plus"></i> 채용 안내
+                    </a>
+                    <a href="/ko/pages/terms.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-file-contract"></i> 이용약관
+                    </a>
+                    <a href="/ko/pages/privacy.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-shield-alt"></i> 개인정보 처리방침
+                    </a>
+                </div>
+                <address style="font-style: normal; color: rgba(255, 255, 255, 0.65); font-size: 0.85rem; line-height: 1.8;">
+                    <strong style="color: rgba(255, 255, 255, 0.95); font-size: 0.95rem;">주식회사 엠파시 (Empasy IT Corp.)</strong> &nbsp;|&nbsp; 대표이사 : 오병문<br>
+                    사업자등록번호 : 547-81-03408 &nbsp;|&nbsp; 본점 소재지 : 서울 금천구 가산디지털1로 205-27 2층 208호<br>
+                    <span style="color: rgba(255, 255, 255, 0.85);">도입 문의 : <a href="mailto:poh@empasy.com" style="color: #38bdf8; text-decoration: underline;">poh@empasy.com</a> &nbsp;|&nbsp; 대표번호 : <a href="tel:0507-1360-8169" style="color: #f8fafc; text-decoration: none;">0507-1360-8169</a></span>
+                </address>
+                <p data-i18n="footer.copyright" style="color: rgba(255, 255, 255, 0.45); font-size: 0.8rem; margin-top: 1rem;">© 2026 Empasy IT Corp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+</body>
+</html>
