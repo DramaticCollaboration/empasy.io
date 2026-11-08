@@ -623,11 +623,184 @@ function initMain() {
                     <div>&nbsp;↳ Structured JSON extracted &amp; Vectorized into RAG Knowledge Base... <span style="color: #22c55e;">[1,420 Items Synced]</span></div>
                 `
             }
+        },
+        apim: {
+            cmd: {
+                ko: 'empasy apim inspect --gateway "mcp-edge" --zero-trust "strict"',
+                en: 'empasy apim inspect --gateway "mcp-edge" --zero-trust "strict"',
+                ja: 'empasy apim inspect --gateway "mcp-edge" --zero-trust "strict"'
+            },
+            copyCmd: {
+                ko: 'empasy apim inspect --gateway "mcp-edge" --zero-trust "strict"',
+                en: 'empasy apim inspect --gateway "mcp-edge" --zero-trust "strict"',
+                ja: 'empasy apim inspect --gateway "mcp-edge" --zero-trust "strict"'
+            },
+            tag: { ko: 'API 보안·트래픽 관제', en: 'API Security Gateway', ja: 'APIセキュリティ統制' },
+            desc: {
+                ko: '사내외 API와 AI 에이전트 통신의 불법 접근을 차단하고 개인정보 유출을 실시간 방어합니다.',
+                en: 'Blocks unauthorized API/MCP traffic, prevents PII leaks, and enforces real-time rate limits.',
+                ja: '社内外APIおよびAI通信の不正アクセスを遮断し、個人情報漏洩をリアルタイム防御します。'
+            },
+            output: {
+                ko: `
+                    <div style="color: #38bdf8;">[SyncAPIM 보안 게이트웨이]</div>
+                    <div>&nbsp;↳ 전사 API 및 AI 에이전트 통신 실시간 검사... <span style="color: #22c55e;">[지연 0.8ms]</span></div>
+                    <div>&nbsp;↳ 비인가 외부 호출 차단 및 민감 개인정보 자동 마스킹... <span style="color: #38bdf8;">[방어 완료]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[트래픽 제어 및 감사]</div>
+                    <div>&nbsp;↳ 과부하 방지(Rate Limit) 정상 작동 및 무결성 감사 로그 기록 <span style="color: #22c55e;">[100% 안전]</span></div>
+                `,
+                en: `
+                    <div style="color: #38bdf8;">[SyncAPIM Security Gateway]</div>
+                    <div>&nbsp;↳ Real-time Zero-Trust inspection across API &amp; MCP channels... <span style="color: #22c55e;">[0.8ms Overhead]</span></div>
+                    <div>&nbsp;↳ Unauthorized token blocked &amp; sensitive payload masked... <span style="color: #38bdf8;">[Protected]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[Traffic Control &amp; Audit]</div>
+                    <div>&nbsp;↳ Rate-limiting active &amp; immutable audit trail recorded <span style="color: #22c55e;">[100% SECURE]</span></div>
+                `,
+                ja: `
+                    <div style="color: #38bdf8;">[SyncAPIM Security Gateway]</div>
+                    <div>&nbsp;↳ Real-time Zero-Trust inspection across API &amp; MCP channels... <span style="color: #22c55e;">[0.8ms Overhead]</span></div>
+                    <div>&nbsp;↳ Unauthorized token blocked &amp; sensitive payload masked... <span style="color: #38bdf8;">[Protected]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[Traffic Control &amp; Audit]</div>
+                    <div>&nbsp;↳ Rate-limiting active &amp; immutable audit trail recorded <span style="color: #22c55e;">[100% SECURE]</span></div>
+                `
+            }
+        }
+    };
+
+    const agentVisualMeta = {
+        verse: {
+            slug: 'sync-verse',
+            demoUrl: 'https://verse-admin.empasy.io',
+            screenUrl: '/images/screenshots/sync-verse/screen_01.png',
+            caption: {
+                ko: 'SyncVerse 실제 관제 화면 — 10대 AI 에이전트 상태·승인·보안 통합 대시보드',
+                en: 'SyncVerse Live Console — Multi-Agent Orchestration & HITL Governance Dashboard',
+                ja: 'SyncVerse 実画面 — マルチエージェント統合管制・承認ダッシュボード'
+            }
+        },
+        insight: {
+            slug: 'sync-insight',
+            demoUrl: 'https://insight-admin.empasy.io',
+            screenUrl: '/images/screenshots/sync-insight/screen_01.png',
+            caption: {
+                ko: 'SyncInsight 실제 분석 화면 — 다중 AI 토론 기반 경영 전략·수익성 시뮬레이션',
+                en: 'SyncInsight Live Console — Multi-Agent Strategic Debate & ROI Simulation',
+                ja: 'SyncInsight 実画面 — マルチAI討論に基づく経営戦略・収益性シミュレーション'
+            }
+        },
+        llm: {
+            slug: 'sync-llm',
+            demoUrl: 'https://llm-admin.empasy.io',
+            screenUrl: '/images/screenshots/sync-llm/screen_01.png',
+            caption: {
+                ko: 'SyncLLM 실제 대시보드 — AI 모델 라우팅, 토큰 비용 절감 및 개인정보 가림 관제',
+                en: 'SyncLLM Live Console — Multi-LLM Routing, Token FinOps & PII Guardrail',
+                ja: 'SyncLLM 実画面 — マルチLLMルーティング・トークンコスト削減・PII保護'
+            }
+        },
+        apim: {
+            slug: 'sync-apim',
+            demoUrl: 'https://apim-admin.empasy.io',
+            screenUrl: '/images/screenshots/sync-apim/screen_01.png',
+            caption: {
+                ko: 'SyncAPIM 실제 관제 화면 — 실시간 API·AI 통신 보안 위협 차단 및 트래픽 제어',
+                en: 'SyncAPIM Live Console — Zero-Trust API/MCP Security & Traffic Control',
+                ja: 'SyncAPIM 実画面 — API・AI通信のセキュリティ脅威遮断およびトラフィック制御'
+            }
+        },
+        boot: {
+            slug: 'sync-boot',
+            demoUrl: 'https://boot-admin.empasy.io',
+            screenUrl: '/images/screenshots/sync-boot/screen_01.png',
+            caption: {
+                ko: 'SyncBoot 실제 관리 화면 — 자연어 설계 기반 백엔드 서버·API·권한 자동 생성',
+                en: 'SyncBoot Live Console — Autonomous Spring Boot MSA & RBAC Code Generation',
+                ja: 'SyncBoot 実画面 — バックエンドサーバー・API・権限管理の自動構築'
+            }
+        },
+        cms: {
+            slug: 'sync-cms',
+            demoUrl: 'https://cms-admin.empasy.io',
+            screenUrl: '/images/screenshots/sync-cms/screen_01.png',
+            caption: {
+                ko: 'SyncCMS 실제 운영 화면 — 웹사이트 페이지 자동 제작 및 15개국 다국어 동시 배포',
+                en: 'SyncCMS Live Console — Autonomous Web Publishing & 15+ Language Localization',
+                ja: 'SyncCMS 実画面 — Webページ自動生成および15カ国語同時翻訳・配信'
+            }
+        },
+        shop: {
+            slug: 'sync-shop',
+            demoUrl: 'https://shop-admin.empasy.io',
+            screenUrl: '/images/screenshots/sync-shop/screen_01.png',
+            caption: {
+                ko: 'SyncShop 실제 커머스 화면 — 맞춤형 상품 추천, 다이내믹 가격 조정 및 주문 관리',
+                en: 'SyncShop Live Console — AI Merchandising, Dynamic Pricing & Order Operations',
+                ja: 'SyncShop 実画面 — AI商品推薦・ダイナミックプライシング・注文統合管理'
+            }
+        },
+        ops: {
+            slug: 'sync-ops',
+            demoUrl: 'https://ops-admin.empasy.io',
+            screenUrl: '/images/screenshots/sync-ops/screen_01.png',
+            caption: {
+                ko: 'SyncOps 실제 손익 화면 — 프로젝트별 실시간 수익률·인력 투입·보증보험 통합 관리',
+                en: 'SyncOps Live Console — Real-Time Project P&L, Resource M/M & Surety Bond Guard',
+                ja: 'SyncOps 実画面 — プロジェクト別リアルタイム損益・要員稼働・保証保険管理'
+            }
+        },
+        eta: {
+            slug: 'sync-eta',
+            demoUrl: 'https://sync.empasy.io/eta/',
+            screenUrl: '/images/screenshots/sync-eta/screen_01.png',
+            caption: {
+                ko: 'SyncETA 실제 스튜디오 화면 — 화면이 바뀌어도 스스로 복구하는 AI 시각 인식 테스트',
+                en: 'SyncETA Live Studio — Vision-LLM Self-Healing UI Test Automation',
+                ja: 'SyncETA 実画面 — UI変更を自動認識・自己修復するAIテスト自動化スタジオ'
+            }
+        },
+        crawl: {
+            slug: 'sync-crawl',
+            demoUrl: 'https://sync.empasy.io/crawl/',
+            screenUrl: '/images/screenshots/sync-crawl/screen_01.png',
+            caption: {
+                ko: 'SyncCrawl 실제 파이프라인 화면 — 사이트 변경 자동 대응 웹 수집 및 정제 대시보드',
+                en: 'SyncCrawl Live Console — Self-Adapting Web Extraction & RAG Knowledge Pipeline',
+                ja: 'SyncCrawl 実画面 — サイト構造変化に自動対応するWeb収集・データ精製'
+            }
         }
     };
 
     if (terminalTabs.length > 0 && terminalInput && terminalOutput) {
         let typingTimer = null;
+        const langPrefix = langKey === 'en' ? '/en' : (langKey === 'ja' ? '/ja' : '/ko');
+
+        // Ensure Visual Screen Preview Banner exists inside .interactive-terminal
+        let screenPreviewBox = document.querySelector('.terminal-screen-preview');
+        if (!screenPreviewBox && terminalRoleBanner && terminalRoleBanner.parentElement) {
+            screenPreviewBox = document.createElement('div');
+            screenPreviewBox.className = 'terminal-screen-preview';
+            screenPreviewBox.style.cssText = 'padding: 1rem 1.25rem; background: rgba(15, 23, 42, 0.92); border-bottom: 1px solid #334155; display: flex; flex-direction: column; gap: 0.75rem;';
+            const initMeta = agentVisualMeta.verse;
+            const liveBtnLabel = langKey === 'en' ? 'Launch Live Demo' : (langKey === 'ja' ? 'ライブデモを開く' : '실제 구동 데모 열기');
+            const detailBtnLabel = langKey === 'en' ? 'Solution Details' : (langKey === 'ja' ? '製品詳細を見る' : '솔루션 상세 보기');
+            const badgeLabel = langKey === 'en' ? 'LIVE UI SCREENSHOT' : (langKey === 'ja' ? '実際の稼働画面' : '실제 제품 구동 화면');
+            screenPreviewBox.innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                    <div style="display: flex; align-items: center; gap: 0.55rem; min-width: 0;">
+                        <span style="font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 999px; background: rgba(56, 189, 248, 0.16); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); white-space: nowrap;"><i class="fas fa-desktop" style="margin-right: 4px;"></i>${badgeLabel}</span>
+                        <span class="terminal-screen-caption" style="font-size: 0.86rem; color: #e2e8f0; font-weight: 600;">${initMeta.caption[langKey] || initMeta.caption.ko}</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; align-items: center;">
+                        <a class="terminal-screen-demo-link" href="${initMeta.demoUrl}" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; font-weight: 700; padding: 0.35rem 0.75rem; border-radius: 6px; background: rgba(56, 189, 248, 0.18); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); text-decoration: none;"><i class="fas fa-external-link-alt" style="margin-right: 4px;"></i>${liveBtnLabel}</a>
+                        <a class="terminal-screen-detail-link" href="${langPrefix}/solutions/${initMeta.slug}.html" style="font-size: 0.78rem; font-weight: 600; padding: 0.35rem 0.75rem; border-radius: 6px; background: rgba(255, 255, 255, 0.06); color: #cbd5e1; border: 1px solid rgba(255, 255, 255, 0.14); text-decoration: none;">${detailBtnLabel} &rarr;</a>
+                    </div>
+                </div>
+                <a class="terminal-screen-img-link" href="${initMeta.demoUrl}" target="_blank" rel="noopener noreferrer" style="display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(148, 163, 184, 0.25); background: #020617; max-height: 290px; position: relative;">
+                    <img class="terminal-screen-img" src="${initMeta.screenUrl}" alt="${initMeta.caption[langKey] || initMeta.caption.ko}" loading="eager" style="width: 100%; height: 290px; object-fit: cover; object-position: top center; display: block; transition: opacity 0.2s ease;" />
+                </a>
+            `;
+            terminalRoleBanner.insertAdjacentElement('afterend', screenPreviewBox);
+        }
 
         // Initialize ARIA accessibility attributes
         const tabList = terminalTabs[0].parentElement;
@@ -692,9 +865,134 @@ function initMain() {
                     if (tagEl && data.tag) tagEl.innerText = data.tag[langKey] || data.tag.ko;
                     if (textEl && data.desc) textEl.innerText = data.desc[langKey] || data.desc.ko;
                 }
+
+                const vMeta = agentVisualMeta[agentKey] || agentVisualMeta.verse;
+                if (screenPreviewBox && vMeta) {
+                    const capEl = screenPreviewBox.querySelector('.terminal-screen-caption');
+                    const demoLinkEl = screenPreviewBox.querySelector('.terminal-screen-demo-link');
+                    const detailLinkEl = screenPreviewBox.querySelector('.terminal-screen-detail-link');
+                    const imgLinkEl = screenPreviewBox.querySelector('.terminal-screen-img-link');
+                    const imgEl = screenPreviewBox.querySelector('.terminal-screen-img');
+                    const capText = (vMeta.caption && (vMeta.caption[langKey] || vMeta.caption.ko)) || '';
+                    if (capEl) capEl.innerText = capText;
+                    if (demoLinkEl) demoLinkEl.href = vMeta.demoUrl;
+                    if (detailLinkEl) detailLinkEl.href = `${langPrefix}/solutions/${vMeta.slug}.html`;
+                    if (imgLinkEl) imgLinkEl.href = vMeta.demoUrl;
+                    if (imgEl) {
+                        imgEl.style.opacity = '0.4';
+                        imgEl.src = vMeta.screenUrl;
+                        imgEl.alt = capText;
+                        setTimeout(() => { imgEl.style.opacity = '1'; }, 80);
+                    }
+                }
             });
         });
     }
+
+    // 10. Solution Detail Page Visual Screenshot Showcase Injection
+    const solMatch = (window.location.pathname || '').match(/\/solutions\/(sync-(?:verse|insight|llm|apim|boot|cms|shop|ops|eta|crawl))\.html/i);
+    if (solMatch && !document.querySelector('.solution-visual-showcase')) {
+        const slug = solMatch[1].toLowerCase();
+        const shortKey = slug.replace('sync-', '');
+        const vMeta = agentVisualMeta[shortKey];
+        const heroSection = document.querySelector('main .page-header, main section.hero');
+        if (vMeta && heroSection) {
+            const showcaseSec = document.createElement('section');
+            showcaseSec.className = 'section solution-visual-showcase fade-in-up visible';
+            showcaseSec.style.cssText = 'padding-top: 0.5rem; padding-bottom: 2.5rem;';
+            const titleText = langKey === 'en' ? 'Live Product Screen Preview' : (langKey === 'ja' ? '実際の製品稼働画面プレビュー' : '실제 구동 대시보드 화면 미리보기');
+            const subText = langKey === 'en'
+                ? 'Explore the real enterprise web console screens before launching the interactive cloud demo.'
+                : (langKey === 'ja'
+                    ? 'クラウドデモを起動する前に、実際の管理コンソール画面と主要機能をご確認いただけます。'
+                    : '로그인 없이 실제 관리자 콘솔 화면과 핵심 기능 가이드를 먼저 확인하고, 클릭 한 번으로 라이브 데모를 체험해 보세요.');
+            const tab1Label = langKey === 'en' ? '1. Main Operations Dashboard' : (langKey === 'ja' ? '1. メイン管制ダッシュボード' : '1. 메인 운영 대시보드 화면');
+            const tab2Label = langKey === 'en' ? '2. Feature Guide (Annotated)' : (langKey === 'ja' ? '2. 主要機能ガイド (注釈付き)' : '2. 핵심 기능 포인트 안내 (가이드)');
+            const tab3Label = langKey === 'en' ? '3. Detailed Workflow View' : (langKey === 'ja' ? '3. 詳細ワークフロー画面' : '3. 상세 워크플로우·분석 화면');
+            const demoBtnLabel = langKey === 'en' ? 'Open Live Cloud Demo' : (langKey === 'ja' ? 'ライブデモを直接操作する' : '이 화면 라이브 데모로 직접 조작하기');
+            const portalBtnLabel = langKey === 'en' ? 'Demo Account Guide' : (langKey === 'ja' ? 'デモアカウント案内' : '체험 계정 1초 복사 안내');
+
+            const img1 = `/images/screenshots/${slug}/screen_01.png`;
+            const img2 = `/images/screenshots/${slug}/screen_01_annotated.png`;
+            const img3 = `/images/screenshots/${slug}/screen_02.png`;
+            const capText = (vMeta.caption && (vMeta.caption[langKey] || vMeta.caption.ko)) || '';
+
+            showcaseSec.innerHTML = `
+                <div class="glass-card" style="padding: 2rem; border-radius: 16px; border: 1px solid rgba(56, 189, 248, 0.25); background: rgba(15, 23, 42, 0.78);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+                        <div>
+                            <span class="badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); margin-bottom: 0.5rem;">REAL UI SCREENSHOT</span>
+                            <h2 style="font-size: 1.55rem; color: #f8fafc; margin: 0.25rem 0;">${titleText}</h2>
+                            <p style="color: #94a3b8; font-size: 0.95rem; margin: 0;">${subText}</p>
+                        </div>
+                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+                            <a href="${vMeta.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="font-weight: 700;"><i class="fas fa-external-link-alt" style="margin-right: 5px;"></i>${demoBtnLabel}</a>
+                            <a href="https://sync.empasy.io/products/${slug}#demo" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">${portalBtnLabel}</a>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                        <button type="button" class="sol-screen-tab active" data-img="${img1}" style="padding: 0.55rem 1rem; border-radius: 8px; border: 1px solid #38bdf8; background: rgba(56, 189, 248, 0.18); color: #f8fafc; font-weight: 700; font-size: 0.88rem; cursor: pointer;">${tab1Label}</button>
+                        <button type="button" class="sol-screen-tab" data-img="${img2}" style="padding: 0.55rem 1rem; border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.28); background: rgba(15, 23, 42, 0.7); color: #cbd5e1; font-weight: 600; font-size: 0.88rem; cursor: pointer;">${tab2Label}</button>
+                        <button type="button" class="sol-screen-tab" data-img="${img3}" style="padding: 0.55rem 1rem; border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.28); background: rgba(15, 23, 42, 0.7); color: #cbd5e1; font-weight: 600; font-size: 0.88rem; cursor: pointer;">${tab3Label}</button>
+                    </div>
+                    <div style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(148, 163, 184, 0.25); background: #020617;">
+                        <img class="sol-screen-main-img" src="${img1}" alt="${capText}" style="width: 100%; height: auto; max-height: 540px; object-fit: cover; object-position: top center; display: block; transition: opacity 0.2s ease;" />
+                    </div>
+                    <div style="margin-top: 0.75rem; font-size: 0.88rem; color: #94a3b8; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                        <span><i class="fas fa-info-circle" style="color: #38bdf8; margin-right: 5px;"></i>${capText}</span>
+                        <span style="color: #38bdf8; font-weight: 600;">Zero-Mock Live Environment (1920×1080)</span>
+                    </div>
+                </div>
+            `;
+            heroSection.insertAdjacentElement('afterend', showcaseSec);
+
+            const solTabs = showcaseSec.querySelectorAll('.sol-screen-tab');
+            const solMainImg = showcaseSec.querySelector('.sol-screen-main-img');
+            solTabs.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    solTabs.forEach(b => {
+                        b.classList.remove('active');
+                        b.style.borderColor = 'rgba(148, 163, 184, 0.28)';
+                        b.style.background = 'rgba(15, 23, 42, 0.7)';
+                        b.style.color = '#cbd5e1';
+                    });
+                    btn.classList.add('active');
+                    btn.style.borderColor = '#38bdf8';
+                    btn.style.background = 'rgba(56, 189, 248, 0.18)';
+                    btn.style.color = '#f8fafc';
+                    if (solMainImg) {
+                        solMainImg.style.opacity = '0.4';
+                        solMainImg.src = btn.getAttribute('data-img');
+                        setTimeout(() => { solMainImg.style.opacity = '1'; }, 80);
+                    }
+                });
+            });
+        }
+    }
+
+    // 11. Solution Grid Card Thumbnail Preview Injection
+    document.querySelectorAll('.solution-card').forEach(card => {
+        if (card.querySelector('.solution-card-screen-thumb')) return;
+        const linkEl = card.querySelector('a[href*="sync-"]');
+        const headerEl = card.querySelector('.solution-card-header');
+        if (!linkEl || !headerEl) return;
+        const m = (linkEl.getAttribute('href') || '').match(/(sync-(?:verse|insight|llm|apim|boot|cms|shop|ops|eta|crawl))/i);
+        if (!m) return;
+        const slug = m[1].toLowerCase();
+        const shortKey = slug.replace('sync-', '');
+        const vMeta = agentVisualMeta[shortKey];
+        if (!vMeta) return;
+        const thumbWrap = document.createElement('a');
+        thumbWrap.className = 'solution-card-screen-thumb';
+        thumbWrap.href = linkEl.getAttribute('href');
+        thumbWrap.style.cssText = 'display: block; margin-top: 0.9rem; margin-bottom: 0.4rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(148, 163, 184, 0.2); background: #020617; position: relative;';
+        const badgeText = langKey === 'en' ? 'Live Console UI' : (langKey === 'ja' ? '実稼働画面' : '실제 대시보드 화면');
+        thumbWrap.innerHTML = `
+            <img src="${vMeta.screenUrl}" alt="${slug} UI" loading="lazy" style="width: 100%; height: 148px; object-fit: cover; object-position: top center; display: block; opacity: 0.92; transition: transform 0.25s ease, opacity 0.25s ease;" />
+            <span style="position: absolute; top: 8px; right: 8px; font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: rgba(15, 23, 42, 0.85); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); backdrop-filter: blur(4px);">${badgeText}</span>
+        `;
+        headerEl.insertAdjacentElement('afterend', thumbWrap);
+    });
 
 }
 

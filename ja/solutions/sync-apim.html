@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>SyncAPIM - AI・APIセキュリティおよびトラフィック統制 | Empasy</title>
+    <meta name="description" content="SyncAPIMは社内外のAPIおよびAIエージェント通信の不正アクセスを遮断し、個人情報マスキングと過負荷防止を実現するAPIセキュリティ基盤です。">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header { padding: 150px 0 80px; text-align: center; }
+        .page-title { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; color: var(--text-primary); }
+        .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto; }
+    </style>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body class="theme-llm">
+    {{> header_ja }}
+    <main class="container">
+        <div class="page-header fade-in-up">
+            <div class="container">
+                <span class="badge">AI・APIセキュリティおよびトラフィック統制</span>
+                <h1 class="page-title">SyncAPIM</h1>
+                <p class="page-subtitle">社内外APIとAIエージェント間通信の不正アクセスをリアルタイム遮断し、個人情報マスキングと過負荷防止を一元管理するセキュリティゲートウェイです。</p>
+                <div class="mt-4 flex-center" style="gap: 1rem; display: flex; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://apim-admin.empasy.io" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.9rem 2.2rem; border-radius: 30px; font-weight: 700;"><i class="fas fa-play-circle" style="margin-right: 6px;"></i>ライブデモを体験</a>
+                    <a href="/ja/pages/contact.html" class="btn btn-outline" style="padding: 0.9rem 2.2rem; border-radius: 30px;">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+        <section class="section pt-0 fade-in-up delay-1">
+            <div class="rich-features">
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">01</span>
+                    <h3>Web API &amp; AI通信の統合ゼロトラスト関門</h3>
+                    <p>REST APIとAIエージェント間通信(MCP)の権限をリアルタイム検証し、未承認アクセスを遮断します。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">02</span>
+                    <h3>リアルタイム個人情報マスキング・脅威防御</h3>
+                    <p>送受信データ内の機密情報や個人情報を自動マスキングし、不正な攻撃ペイロードを即座にブロックします。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">03</span>
+                    <h3>トラフィック過負荷防止・監査ログ記録</h3>
+                    <p>レート制限とサーキットブレーカーによりシステム障害を防ぎ、全通信履歴を監査ログとして安全に保存します。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    {{> footer_ja }}
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>
