@@ -670,7 +670,6 @@ function initMain() {
     const agentVisualMeta = {
         verse: {
             slug: 'sync-verse',
-            demoUrl: 'https://verse-admin.empasy.io',
             screenUrl: '/images/screenshots/sync-verse/screen_01.png',
             caption: {
                 ko: 'SyncVerse 실제 관제 화면 — 10대 AI 에이전트 상태·승인·보안 통합 대시보드',
@@ -680,7 +679,6 @@ function initMain() {
         },
         insight: {
             slug: 'sync-insight',
-            demoUrl: 'https://insight-admin.empasy.io',
             screenUrl: '/images/screenshots/sync-insight/screen_01.png',
             caption: {
                 ko: 'SyncInsight 실제 분석 화면 — 다중 AI 토론 기반 경영 전략·수익성 시뮬레이션',
@@ -690,7 +688,6 @@ function initMain() {
         },
         llm: {
             slug: 'sync-llm',
-            demoUrl: 'https://llm-admin.empasy.io',
             screenUrl: '/images/screenshots/sync-llm/screen_01.png',
             caption: {
                 ko: 'SyncLLM 실제 대시보드 — AI 모델 라우팅, 토큰 비용 절감 및 개인정보 가림 관제',
@@ -700,7 +697,6 @@ function initMain() {
         },
         apim: {
             slug: 'sync-apim',
-            demoUrl: 'https://apim-admin.empasy.io',
             screenUrl: '/images/screenshots/sync-apim/screen_01.png',
             caption: {
                 ko: 'SyncAPIM 실제 관제 화면 — 실시간 API·AI 통신 보안 위협 차단 및 트래픽 제어',
@@ -710,7 +706,6 @@ function initMain() {
         },
         boot: {
             slug: 'sync-boot',
-            demoUrl: 'https://boot-admin.empasy.io',
             screenUrl: '/images/screenshots/sync-boot/screen_01.png',
             caption: {
                 ko: 'SyncBoot 실제 관리 화면 — 자연어 설계 기반 백엔드 서버·API·권한 자동 생성',
@@ -720,7 +715,6 @@ function initMain() {
         },
         cms: {
             slug: 'sync-cms',
-            demoUrl: 'https://cms-admin.empasy.io',
             screenUrl: '/images/screenshots/sync-cms/screen_01.png',
             caption: {
                 ko: 'SyncCMS 실제 운영 화면 — 웹사이트 페이지 자동 제작 및 15개국 다국어 동시 배포',
@@ -730,7 +724,6 @@ function initMain() {
         },
         shop: {
             slug: 'sync-shop',
-            demoUrl: 'https://shop-admin.empasy.io',
             screenUrl: '/images/screenshots/sync-shop/screen_01.png',
             caption: {
                 ko: 'SyncShop 실제 커머스 화면 — 맞춤형 상품 추천, 다이내믹 가격 조정 및 주문 관리',
@@ -740,7 +733,6 @@ function initMain() {
         },
         ops: {
             slug: 'sync-ops',
-            demoUrl: 'https://ops-admin.empasy.io',
             screenUrl: '/images/screenshots/sync-ops/screen_01.png',
             caption: {
                 ko: 'SyncOps 실제 손익 화면 — 프로젝트별 실시간 수익률·인력 투입·보증보험 통합 관리',
@@ -750,7 +742,6 @@ function initMain() {
         },
         eta: {
             slug: 'sync-eta',
-            demoUrl: 'https://sync.empasy.io/eta/',
             screenUrl: '/images/screenshots/sync-eta/screen_01.png',
             caption: {
                 ko: 'SyncETA 실제 스튜디오 화면 — 화면이 바뀌어도 스스로 복구하는 AI 시각 인식 테스트',
@@ -760,7 +751,6 @@ function initMain() {
         },
         crawl: {
             slug: 'sync-crawl',
-            demoUrl: 'https://sync.empasy.io/crawl/',
             screenUrl: '/images/screenshots/sync-crawl/screen_01.png',
             caption: {
                 ko: 'SyncCrawl 실제 파이프라인 화면 — 사이트 변경 자동 대응 웹 수집 및 정제 대시보드',
@@ -772,7 +762,6 @@ function initMain() {
 
     if (terminalTabs.length > 0 && terminalInput && terminalOutput) {
         let typingTimer = null;
-        const langPrefix = langKey === 'en' ? '/en' : (langKey === 'ja' ? '/ja' : '/ko');
 
         // Ensure Visual Screen Preview Banner exists inside .interactive-terminal
         let screenPreviewBox = document.querySelector('.terminal-screen-preview');
@@ -781,8 +770,6 @@ function initMain() {
             screenPreviewBox.className = 'terminal-screen-preview';
             screenPreviewBox.style.cssText = 'padding: 1rem 1.25rem; background: rgba(15, 23, 42, 0.92); border-bottom: 1px solid #334155; display: flex; flex-direction: column; gap: 0.75rem;';
             const initMeta = agentVisualMeta.verse;
-            const liveBtnLabel = langKey === 'en' ? 'Launch Live Demo' : (langKey === 'ja' ? 'ライブデモを開く' : '실제 구동 데모 열기');
-            const detailBtnLabel = langKey === 'en' ? 'Solution Details' : (langKey === 'ja' ? '製品詳細を見る' : '솔루션 상세 보기');
             const badgeLabel = langKey === 'en' ? 'LIVE UI SCREENSHOT' : (langKey === 'ja' ? '実際の稼働画面' : '실제 제품 구동 화면');
             screenPreviewBox.innerHTML = `
                 <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
@@ -790,14 +777,10 @@ function initMain() {
                         <span style="font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 999px; background: rgba(56, 189, 248, 0.16); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); white-space: nowrap;"><i class="fas fa-desktop" style="margin-right: 4px;"></i>${badgeLabel}</span>
                         <span class="terminal-screen-caption" style="font-size: 0.86rem; color: #e2e8f0; font-weight: 600;">${initMeta.caption[langKey] || initMeta.caption.ko}</span>
                     </div>
-                    <div style="display: flex; gap: 0.5rem; align-items: center;">
-                        <a class="terminal-screen-demo-link" href="${initMeta.demoUrl}" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; font-weight: 700; padding: 0.35rem 0.75rem; border-radius: 6px; background: rgba(56, 189, 248, 0.18); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); text-decoration: none;"><i class="fas fa-external-link-alt" style="margin-right: 4px;"></i>${liveBtnLabel}</a>
-                        <a class="terminal-screen-detail-link" href="${langPrefix}/solutions/${initMeta.slug}.html" style="font-size: 0.78rem; font-weight: 600; padding: 0.35rem 0.75rem; border-radius: 6px; background: rgba(255, 255, 255, 0.06); color: #cbd5e1; border: 1px solid rgba(255, 255, 255, 0.14); text-decoration: none;">${detailBtnLabel} &rarr;</a>
-                    </div>
                 </div>
-                <a class="terminal-screen-img-link" href="${initMeta.demoUrl}" target="_blank" rel="noopener noreferrer" style="display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(148, 163, 184, 0.25); background: #020617; max-height: 290px; position: relative;">
+                <div class="terminal-screen-img-wrap" style="display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(148, 163, 184, 0.25); background: #020617; max-height: 290px; position: relative;">
                     <img class="terminal-screen-img" src="${initMeta.screenUrl}" alt="${initMeta.caption[langKey] || initMeta.caption.ko}" loading="eager" style="width: 100%; height: 290px; object-fit: cover; object-position: top center; display: block; transition: opacity 0.2s ease;" />
-                </a>
+                </div>
             `;
             terminalRoleBanner.insertAdjacentElement('afterend', screenPreviewBox);
         }
@@ -842,7 +825,7 @@ function initMain() {
 
                 // Smooth typing effect for terminal command
                 if (typingTimer) clearInterval(typingTimer);
-                terminalInput.innerText = '';
+                terminalInput.textContent = '';
                 terminalOutput.style.opacity = '0.3';
                 terminalOutput.style.transition = 'opacity 0.2s ease';
 
@@ -850,8 +833,8 @@ function initMain() {
                 const fullCmd = activeCmd;
                 typingTimer = setInterval(() => {
                     if (charIndex < fullCmd.length) {
-                        terminalInput.innerText += fullCmd.charAt(charIndex);
                         charIndex++;
+                        terminalInput.textContent = fullCmd.slice(0, charIndex);
                     } else {
                         clearInterval(typingTimer);
                         terminalOutput.innerHTML = activeOutput;
@@ -869,15 +852,9 @@ function initMain() {
                 const vMeta = agentVisualMeta[agentKey] || agentVisualMeta.verse;
                 if (screenPreviewBox && vMeta) {
                     const capEl = screenPreviewBox.querySelector('.terminal-screen-caption');
-                    const demoLinkEl = screenPreviewBox.querySelector('.terminal-screen-demo-link');
-                    const detailLinkEl = screenPreviewBox.querySelector('.terminal-screen-detail-link');
-                    const imgLinkEl = screenPreviewBox.querySelector('.terminal-screen-img-link');
                     const imgEl = screenPreviewBox.querySelector('.terminal-screen-img');
                     const capText = (vMeta.caption && (vMeta.caption[langKey] || vMeta.caption.ko)) || '';
                     if (capEl) capEl.innerText = capText;
-                    if (demoLinkEl) demoLinkEl.href = vMeta.demoUrl;
-                    if (detailLinkEl) detailLinkEl.href = `${langPrefix}/solutions/${vMeta.slug}.html`;
-                    if (imgLinkEl) imgLinkEl.href = vMeta.demoUrl;
                     if (imgEl) {
                         imgEl.style.opacity = '0.4';
                         imgEl.src = vMeta.screenUrl;
@@ -902,15 +879,13 @@ function initMain() {
             showcaseSec.style.cssText = 'padding-top: 0.5rem; padding-bottom: 2.5rem;';
             const titleText = langKey === 'en' ? 'Live Product Screen Preview' : (langKey === 'ja' ? '実際の製品稼働画面プレビュー' : '실제 구동 대시보드 화면 미리보기');
             const subText = langKey === 'en'
-                ? 'Explore the real enterprise web console screens before launching the interactive cloud demo.'
+                ? 'Explore the real enterprise web console screens and key operational features.'
                 : (langKey === 'ja'
-                    ? 'クラウドデモを起動する前に、実際の管理コンソール画面と主要機能をご確認いただけます。'
-                    : '로그인 없이 실제 관리자 콘솔 화면과 핵심 기능 가이드를 먼저 확인하고, 클릭 한 번으로 라이브 데모를 체험해 보세요.');
+                    ? '実際の管理コンソール画面と主要機能をご確認いただけます。'
+                    : '로그인 없이 실제 관리자 콘솔 화면과 핵심 기능 가이드를 먼저 확인해 보세요.');
             const tab1Label = langKey === 'en' ? '1. Main Operations Dashboard' : (langKey === 'ja' ? '1. メイン管制ダッシュボード' : '1. 메인 운영 대시보드 화면');
             const tab2Label = langKey === 'en' ? '2. Feature Guide (Annotated)' : (langKey === 'ja' ? '2. 主要機能ガイド (注釈付き)' : '2. 핵심 기능 포인트 안내 (가이드)');
             const tab3Label = langKey === 'en' ? '3. Detailed Workflow View' : (langKey === 'ja' ? '3. 詳細ワークフロー画面' : '3. 상세 워크플로우·분석 화면');
-            const demoBtnLabel = langKey === 'en' ? 'Open Live Cloud Demo' : (langKey === 'ja' ? 'ライブデモを直接操作する' : '이 화면 라이브 데모로 직접 조작하기');
-            const portalBtnLabel = langKey === 'en' ? 'Demo Account Guide' : (langKey === 'ja' ? 'デモアカウント案内' : '체험 계정 1초 복사 안내');
 
             const img1 = `/images/screenshots/${slug}/screen_01.png`;
             const img2 = `/images/screenshots/${slug}/screen_01_annotated.png`;
@@ -924,10 +899,6 @@ function initMain() {
                             <span class="badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); margin-bottom: 0.5rem;">REAL UI SCREENSHOT</span>
                             <h2 style="font-size: 1.55rem; color: #f8fafc; margin: 0.25rem 0;">${titleText}</h2>
                             <p style="color: #94a3b8; font-size: 0.95rem; margin: 0;">${subText}</p>
-                        </div>
-                        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-                            <a href="${vMeta.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="font-weight: 700;"><i class="fas fa-external-link-alt" style="margin-right: 5px;"></i>${demoBtnLabel}</a>
-                            <a href="https://sync.empasy.io/products/${slug}#demo" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">${portalBtnLabel}</a>
                         </div>
                     </div>
                     <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
