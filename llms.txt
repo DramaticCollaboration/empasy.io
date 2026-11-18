@@ -3,7 +3,7 @@
 > Empasy is an enterprise AI integration platform providing an autonomous multi-agent ecosystem for digital transformation (DX) and AI Ops.
 
 ## Overview
-Empasy SyncSeries unifies 9 specialized AI agent solutions under a 4-Tier architecture orchestrated by SyncVerse. The ecosystem operates on open protocols including Anthropic Model Context Protocol (MCP) and Agent-to-Agent (A2A) distributed messaging (`AgentScope Java`). It enforces Spec-First Governance, Human-in-the-Loop (HITL) safety controls, and an Emergency Kill-Switch for complete enterprise reliability.
+Empasy SyncSeries unifies 11 specialized AI agent solutions under a 4-Tier architecture orchestrated by SyncVerse. The ecosystem operates on open protocols including Anthropic Model Context Protocol (MCP) and Agent-to-Agent (A2A) distributed messaging (`AgentScope Java`). It enforces Spec-First Governance, Human-in-the-Loop (HITL) safety controls, and an Emergency Kill-Switch for complete enterprise reliability.
 
 ## 4-Tier Core Products & Solutions
 
@@ -11,35 +11,45 @@ Empasy SyncSeries unifies 9 specialized AI agent solutions under a 4-Tier archit
 #### SyncVerse (Central Control Tower & Orchestrator)
 - URL: https://empasy.io/ko/solutions/sync-verse.html
 - Docs: https://doc.empasy.com/syncverse/
-- Role: Real-time multi-agent orchestration, unified telemetry, dependency resolution, Emergency Kill-Switch, and enterprise governance.
+- Role: Real-time multi-agent orchestration across 11 specialized AI agents, unified telemetry, dependency resolution, Emergency Kill-Switch, and enterprise governance.
 - Protocols: Model Context Protocol (MCP), Agent-to-Agent (A2A) messaging.
 
-### Tier 2: Intelligence & FinOps Gateway
+### Tier 2: Intelligence, Security & Cost Control
 #### SyncInsight (On-Premise Decision Intelligence)
 - URL: https://empasy.io/ko/solutions/sync-insight.html
 - Docs: https://doc.empasy.com/syncinsight/
-- Role: Deep research fusing internal operational metrics with external market intelligence to deliver simulated, actionable decision plans with Human-in-the-Loop approval.
+- Role: Deep research and Read-Only safe NL2SQL across PostgreSQL 18.6 multi-datasources, fusing internal operational metrics with external market intelligence to deliver simulated, actionable decision plans with Human-in-the-Loop approval.
 
 #### SyncLLM (FinOps Gateway & Token Governance)
 - URL: https://empasy.io/ko/solutions/sync-llm.html
 - Docs: https://doc.empasy.com/syncllm/
-- Role: Multi-model intelligent routing (SLM to high-tier LLM), pgvector semantic caching, real-time PII masking, and departmental token budget controls cutting enterprise costs by up to 60%.
+- Role: Multi-model intelligent routing (OpenAI, Anthropic, Gemini, Qwen, DeepSeek, local vLLM), PostgreSQL 18.6 pgvector semantic caching, real-time PII masking, AES-256 key vault, and departmental token budget controls cutting enterprise costs by up to 60%.
+
+#### SyncAPIM (Zero-Trust API & WAF Security Gateway)
+- URL: https://empasy.io/ko/solutions/sync-apim.html
+- Docs: https://doc.empasy.com/syncapim/
+- Role: High-throughput API Monitoring & WAF Security Agent featuring deterministic lexical token fingerprint analysis (`SqlXssLexicalTokenizer`), `SyncWatch` real-time attack pattern detection & pinpoint virtual patching (`ApimDefensePack` / `SandboxedDefenseEvaluator`), kernel eBPF blocking, Shadow API discovery, OpenAPI 3.0 contract drift auditing, and 8-pattern PII masking.
+
+#### SyncWatch (AI Security Threat Intelligence & Rule Compiler Agent)
+- URL: https://empasy.io/ko/solutions/sync-watch.html
+- Docs: https://doc.empasy.com/syncwatch/
+- Role: Enterprise security threat intelligence and rule compiler agent that ingests global threat feeds (NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, Nuclei, OWASP CRS, KISA) under a 5-stage SSRF guard to compile and broadcast `VerseAuditPack` (Shift-Left code audit for `SyncVerse`) and `ApimDefensePack` (Shift-Right runtime defense for `SyncAPIM`).
 
 ### Tier 3: Enterprise Domain Agent Swarms
-#### SyncBoot (Microservices & Scaffolding Agent)
+#### SyncBoot (Enterprise Back-Office Core & Low-Code Platform)
 - URL: https://empasy.io/ko/solutions/sync-boot.html
 - Docs: https://doc.empasy.com/syncboot/
-- Role: Monolithic-to-microservice (MSA) transformation, Spring Boot backend scaffolding, DDL and CRUD API generation, Saga distributed compensation transactions.
+- Role: Enterprise standard back-office core platform with dynamic Org/Role/Menu/Button RBAC, multi-stage Korean electronic approval workflows, executive performance reports, 71 standard administrative screens, low-code Spring Boot CRUD/API generation, Saga distributed compensation transactions, and real-time audit logs.
 
 #### SyncCMS (Autonomous Content & UI Agent Swarm)
 - URL: https://empasy.io/ko/solutions/sync-cms.html
 - Docs: https://doc.empasy.com/synccms/
-- Role: Nuxt 3 SSR hybrid architecture with Copywriter-SEO-Publisher 3-Agent Swarm, natural-language-driven component layout, and real-time multilingual content synchronization (Korean, English, Japanese).
+- Role: Nuxt 3 SSR hybrid architecture with Copywriter-SEO-Publisher 3-Agent Swarm, pre-publication AI content safety auditing, natural-language-driven component layout, and real-time multilingual content synchronization (15+ languages).
 
 #### SyncShop (Autonomous E-Commerce & Merchandising Agent)
 - URL: https://empasy.io/ko/solutions/sync-shop.html
 - Docs: https://doc.empasy.com/syncshop/
-- Role: Distributed microservices e-commerce engine with AI merchandising, dynamic pricing, minimum margin guardrails, pgvector semantic product discovery, and A2A supply chain orchestration.
+- Role: Distributed microservices (MSA) e-commerce engine with AI merchandising, margin-protected dynamic pricing, PostgreSQL 18.6 pgvector semantic product discovery, flash-sale promotions, and A2A supply chain orchestration.
 
 #### SyncOps (Enterprise SI PMO & Dual-Rate Profit/Compliance Platform)
 - URL: https://empasy.io/ko/solutions/sync-ops.html
@@ -59,17 +69,7 @@ Empasy SyncSeries unifies 9 specialized AI agent solutions under a 4-Tier archit
 #### SyncCrawl (Intelligent Visual Extraction Agent)
 - URL: https://empasy.io/ko/solutions/sync-crawl.html
 - Docs: https://doc.empasy.com/synccrawl/
-- Role: Resilient data crawling utilizing visual layout understanding to survive markup changes and anti-bot protections; direct vector sink output (PostgreSQL pgvector, OpenSearch, Milvus) for RAG.
-
-### 10. SyncAPIM (Tier 2 — Zero-Trust API & WAF Security Gateway)
-- URL: https://empasy.io/ko/solutions/sync-apim.html
-- Docs: https://doc.empasy.com/syncapim/
-- Role: 4-JVM high-throughput API Monitoring & WAF Security Agent featuring deterministic lexical token fingerprint analysis (`SqlXssLexicalTokenizer`), `SyncWatch` real-time attack pattern detection & pinpoint virtual patching (`ApimDefensePack` / `SandboxedDefenseEvaluator`), kernel eBPF blocking, Shadow API discovery, OpenAPI 3.0 contract drift auditing, and 8-pattern PII masking.
-
-### 11. SyncWatch (Tier 2 — AI Security Threat Intelligence & Rule Compiler Agent)
-- URL: https://empasy.io/ko/solutions/sync-watch.html
-- Docs: https://doc.empasy.com/syncwatch/
-- Role: Enterprise security threat intelligence and rule compiler agent that ingests global threat feeds (NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, Nuclei, OWASP CRS, KISA) under a 5-stage SSRF guard to compile and broadcast `VerseAuditPack` (Shift-Left code audit for `SyncVerse`) and `ApimDefensePack` (Shift-Right runtime defense for `SyncAPIM`).
+- Role: Resilient data crawling utilizing visual layout understanding to survive markup changes while enforcing robots.txt and per-domain rate-limit policies; direct vector sink output (PostgreSQL 18.6 pgvector, OpenSearch, Milvus) for RAG.
 
 ## Security & Deployment
 - Deployments: 100% On-Premise, Air-Gapped isolated networks, dedicated AWS/Azure/GCP VPCs.
@@ -80,9 +80,9 @@ Empasy SyncSeries unifies 9 specialized AI agent solutions under a 4-Tier archit
 - Website: https://empasy.io
 - Integrated Live Demo Portal: https://sync.empasy.io
 - Documentation Hub: https://doc.empasy.com
-- Master Brochure PDF: https://doc.empasy.com/downloads/SyncSeries_Brochure_v1.0.pdf
-- Business Proposal PDF: https://doc.empasy.com/downloads/SyncSeries_Business_Proposal_v1.0.pdf
+- Master Brochure PDF: https://empasy.io/downloads/proposals/SyncSeries_Brochure_v1.0.pdf
+- Business Proposal PDF: https://empasy.io/downloads/proposals/SyncSeries_Master_Proposal.pdf
 - GitHub: https://github.com/DramaticCollaboration/
-- Contact: contact@empasy.com
+- Contact: poh@empasy.com
 - Venture Enterprise Certification: Certified Venture Enterprise - Innovative Growth Type (혁신성장유형 벤처기업 확인, Cert. No. 20261111030084, Valid 2026-11-11 ~ 2029-11-10, Business Reg. 547-81-03408)
 - Headquarters: 2F #208, 205-27 Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea

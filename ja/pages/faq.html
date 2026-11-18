@@ -85,10 +85,50 @@
         },
         {
           "@type": "Question",
-          "name": "複雑なレガシーシステムをクラウドや最新アーキテクチャへ移行する際、運用工数を削減できますか？",
+          "name": "社内バックオフィスの新規構築やレガシーシステムの刷新時に、開発期間をどの程度短縮できますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "はい。SyncBootが長年蓄積されたモノリシックコードの依存関係を自動分析し、独立したマイクロサービス(MSA)構造への分離およびコードスキャフォールディングを支援することで、移行期間とリソースを大幅に短縮します。"
+            "text": "SyncBootは組織図・ロール・メニュー・ボタン単位の動的RBAC権限、多段階電子決裁ウィザード、経営実績レポートなど71種の標準業務画面を標準内蔵しており、ローコードCRUD・サーバーAPI自動生成とSaga補償トランザクション復旧により開発工数とコストを劇的に削減します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "未登録のシャドーAPIやインジェクション攻撃、個人情報流出脅威はどのように防御できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncAPIMがリアルタイムトラフィックから仕様書外のシャドーAPIを自動検出・隔離し、構文トークン指紋(AST Fingerprint)とMITRE攻撃技法マッチングによってSQLi/XSSやプロンプト脱獄試行をミリ秒単位で遮断、さらに個人情報を自動マスキングします。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "新たに公開されるグローバルセキュリティ脆弱性(CVE)に社内システムが影響を受けるか即座に確認・防御できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。SyncWatchがOSV.dev、CISA KEV、NVD、KISAなど8大グローバル脅威チャネルを24時間収集・正規化して全社SBOMと即座に照合し、コード監査ルール(SyncVerse)とAPIゲートウェイ防御ポリシー(SyncAPIM)へデュアルコンパイルして無停止配備します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "グローバル多言語Webサイト運用において、コンテンツ作成・自動翻訳・法令コンプライアンス検閲を自動化できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。SyncCMSがAI下書き生成から公開前の本文・添付ファイルにおける広告規制禁止語および個人情報リスクの自動検閲、ブランド用語集に基づく6ヶ国語自動翻訳、マルチサイト無停止配信までを一貫して処理します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ECサイトの大規模商品カタログ管理や競合価格に応じたダイナミックプライシングもAIが自律処理しますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。SyncShopは分散マイクロサービス(MSA)とPostgreSQL 18.6 pgvectorセマンティック検索を基盤に、商品カタログ整備、利益率保護ダイナミックプライシング、統合注文・配送追跡、およびタイムセールプロモーション制御を自律的に遂行します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SI・ITプロジェクトの技術者稼働率、実原価ベースの損益、下請代金支払期日を一元管理できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。SyncOpsが契約請求単価と実投入原価を対比する多次元（要員・プロジェクト・四半期別）損益ピボット分析、技術等級別アサイン日程、4大保証証券の満期、および下請法60日支払期日(D-Day)をリアルタイムで管制し経営リスクを未然に防ぎます。"
           }
         },
         {
@@ -174,7 +214,7 @@
       ]
     }
     </script>
-  <script type="module" crossorigin src="/assets/main-CBcjV-Ix.js"></script>
+  <script type="module" crossorigin src="/assets/main-DeXQFFRX.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/main-C4y1mBWi.css">
 </head>
 <body>
@@ -211,7 +251,7 @@
                         <a href="/ja/solutions/sync-llm.html">SyncLLM (FinOpsゲートウェイ)</a>
                         <a href="/ja/solutions/sync-apim.html">SyncAPIM (APIセキュリティ統制)</a>
                         <a href="/ja/solutions/sync-watch.html">SyncWatch (脅威インテリジェンス・ルールコンパイラ)</a>
-                        <a href="/ja/solutions/sync-boot.html">SyncBoot (MSA開発基盤)</a>
+                        <a href="/ja/solutions/sync-boot.html">SyncBoot (バックオフィス・ローコード)</a>
                         <a href="/ja/solutions/sync-cms.html">SyncCMS (自律型CMS)</a>
                         <a href="/ja/solutions/sync-shop.html">SyncShop (自律型コマース)</a>
                         <a href="/ja/solutions/sync-ops.html">SyncOps (SI PMO・損益統制)</a>
@@ -264,13 +304,13 @@
         <!-- Category Filter Tabs -->
         <div class="faq-category-tabs fade-in-up" role="tablist" aria-label="FAQカテゴリーフィルター">
             <button type="button" class="faq-category-btn active" data-category="all" role="tab" aria-selected="true">
-                すべて表示 <span class="faq-badge-count">16</span>
+                すべて表示 <span class="faq-badge-count">21</span>
             </button>
             <button type="button" class="faq-category-btn" data-category="benefits" role="tab" aria-selected="false">
                 導入効果＆差別化 <span class="faq-badge-count">4</span>
             </button>
             <button type="button" class="faq-category-btn" data-category="solutions" role="tab" aria-selected="false">
-                業務別自動化ソリューション <span class="faq-badge-count">5</span>
+                業務別自動化ソリューション <span class="faq-badge-count">10</span>
             </button>
             <button type="button" class="faq-category-btn" data-category="security" role="tab" aria-selected="false">
                 安全統制＆セキュリティ <span class="faq-badge-count">4</span>
@@ -349,11 +389,71 @@
                     <div class="faq-item" data-category="solutions">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-solutions">システム移行 (DevOps)</span>
-                                <div style="margin-top: 0.2rem;">複雑なレガシーシステムをクラウドや最新アーキテクチャへ移行する際、運用工数を削減できますか？</div>
+                                <span class="faq-category-tag tag-solutions">バックオフィスコア・ローコード</span>
+                                <div style="margin-top: 0.2rem;">社内バックオフィスの新規構築やレガシーシステムの刷新時に、開発期間をどの程度短縮できますか？</div>
                             </summary>
                             <div class="faq-answer">
-                                はい。SyncBootが長年蓄積されたモノリシックコードの依存関係を自動分析し、独立したマイクロサービス(MSA)構造への分離およびコードスキャフォールディングを支援することで、移行期間とリソースを大幅に短縮します。
+                                SyncBootは組織図・ロール・メニュー・ボタン単位の動的RBAC権限、多段階電子決裁ウィザード、経営実績レポートなど71種の標準業務画面を標準内蔵しており、ローコードCRUD・サーバーAPI自動生成とSaga補償トランザクション復旧により開発工数とコストを劇的に削減します。
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">APIセキュリティゲートウェイ</span>
+                                <div style="margin-top: 0.2rem;">未登録のシャドーAPIやインジェクション攻撃、個人情報流出脅威はどのように防御できますか？</div>
+                            </summary>
+                            <div class="faq-answer">
+                                SyncAPIMがリアルタイムトラフィックから仕様書外のシャドーAPIを自動検出・隔離し、構文トークン指紋(AST Fingerprint)とMITRE攻撃技法マッチングによってSQLi/XSSやプロンプト脱獄試行をミリ秒単位で遮断、さらに個人情報を自動マスキングします。
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">グローバル脅威インテリジェンス</span>
+                                <div style="margin-top: 0.2rem;">新たに公開されるグローバルセキュリティ脆弱性(CVE)に社内システムが影響を受けるか即座に確認・防御できますか？</div>
+                            </summary>
+                            <div class="faq-answer">
+                                はい。SyncWatchがOSV.dev、CISA KEV、NVD、KISAなど8大グローバル脅威チャネルを24時間収集・正規化して全社SBOMと即座に照合し、コード監査ルール(SyncVerse)とAPIゲートウェイ防御ポリシー(SyncAPIM)へデュアルコンパイルして無停止配備します。
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">多言語Web・安全検閲</span>
+                                <div style="margin-top: 0.2rem;">グローバル多言語Webサイト運用において、コンテンツ作成・自動翻訳・法令コンプライアンス検閲を自動化できますか？</div>
+                            </summary>
+                            <div class="faq-answer">
+                                はい。SyncCMSがAI下書き生成から公開前の本文・添付ファイルにおける広告規制禁止語および個人情報リスクの自動検閲、ブランド用語集に基づく6ヶ国語自動翻訳、マルチサイト無停止配信までを一貫して処理します。
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">自律型コマース運用</span>
+                                <div style="margin-top: 0.2rem;">ECサイトの大規模商品カタログ管理や競合価格に応じたダイナミックプライシングもAIが自律処理しますか？</div>
+                            </summary>
+                            <div class="faq-answer">
+                                はい。SyncShopは分散マイクロサービス(MSA)とPostgreSQL 18.6 pgvectorセマンティック検索を基盤に、商品カタログ整備、利益率保護ダイナミックプライシング、統合注文・配送追跡、およびタイムセールプロモーション制御を自律的に遂行します。
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">SI事業損益・下請法管制</span>
+                                <div style="margin-top: 0.2rem;">SI・ITプロジェクトの技術者稼働率、実原価ベースの損益、下請代金支払期日を一元管理できますか？</div>
+                            </summary>
+                            <div class="faq-answer">
+                                はい。SyncOpsが契約請求単価と実投入原価を対比する多次元（要員・プロジェクト・四半期別）損益ピボット分析、技術等級別アサイン日程、4大保証証券の満期、および下請法60日支払期日(D-Day)をリアルタイムで管制し経営リスクを未然に防ぎます。
                             </div>
                         </details>
                     </div>
@@ -517,14 +617,20 @@
                     <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fas fa-desktop"></i> 統合デモポータル
                     </a>
+                    <a href="/ja/download_eta.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-download"></i> SyncETA ダウンロード
+                    </a>
                     <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fas fa-book"></i> Documentation
                     </a>
-                    <a href="https://doc.empasy.com/downloads/SyncSeries_Brochure_v1.0.pdf" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
-                        <i class="fas fa-file-pdf"></i> 統合パンフレット (PDF)
+                    <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" download style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-book-open"></i> 統合パンフレット (PDF)
                     </a>
-                    <a href="https://doc.empasy.com/downloads/SyncSeries_Business_Proposal_v1.0.pdf" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
-                        <i class="fas fa-file-signature"></i> 技術提案書 (PDF)
+                    <a href="/downloads/proposals/SyncSeries_Master_Proposal.pdf" download style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-file-pdf"></i> 統合提案書 (PDF)
+                    </a>
+                    <a href="https://doc.empasy.com/proposals/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-folder-open"></i> 提案書ライブラリ
                     </a>
                     <a href="/ja/pages/careers.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
                         <i class="fas fa-user-plus"></i> 採用情報 (Careers)

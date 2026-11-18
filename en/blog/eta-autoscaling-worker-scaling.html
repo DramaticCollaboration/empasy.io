@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6BNPM5TX7C');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyncEta Autoscaling in Practice (1) — When Should We Scale Out Workers? | Empasy Tech Blog</title>
+    <meta name="description" content="Why CPU-based HPA falls short for Playwright MCP browser workers, and how SyncEta uses KEDA and Redis Queue depth for event-driven worker autoscaling.">
+    <meta name="keywords" content="SyncEta, SyncETA, Kubernetes Autoscaling, KEDA, HPA, Redis Queue, Playwright MCP, QA Automation, Empasy">
+    <meta property="og:title" content="SyncEta Autoscaling in Practice (1) — When Should We Scale Out Workers? | Empasy Tech Blog">
+    <meta property="og:description" content="Why CPU-based HPA falls short for Playwright MCP browser workers, and how SyncEta uses KEDA and Redis Queue depth for event-driven worker autoscaling.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <link rel="canonical" href="https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html" />
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "SyncEta Autoscaling in Practice (1) — When Should We Scale Out Workers?",
+      "description": "Why CPU-based HPA falls short for Playwright MCP browser workers, and how SyncEta uses KEDA and Redis Queue depth for event-driven worker autoscaling.",
+      "datePublished": "2026-11-03",
+      "author": {
+        "@type": "Organization",
+        "name": "Empasy Engineering Team",
+        "url": "https://empasy.io"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Empasy",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/empasy-logo.png"
+        }
+      },
+      "url": "https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html"
+    }
+    </script>
+  <script type="module" crossorigin src="/assets/main-DeXQFFRX.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-C4y1mBWi.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="glass-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/en/pages/index.html">
+                    <img src="/images/logo-dark.svg" alt="EMPASY" class="logo-img" onerror="this.onerror=null; this.src='/assets/images/logo-dark.svg';">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <!-- 1. Company Group -->
+                <div class="dropdown">
+                    <a href="/en/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/en/pages/index.html#philosophy" data-i18n="nav.about">Philosophy</a>
+                        <a href="/en/pages/vision.html" data-i18n="nav.vision">Vision 2026</a>
+                        <a href="/en/pages/team.html" data-i18n="nav.team">Our Story</a>
+                        <a href="/en/pages/careers.html">Careers</a>
+                    </div>
+                </div>
+                
+                <!-- 2. Sync Series Group -->
+                <div class="dropdown">
+                    <a href="/en/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/en/solutions/sync-verse.html" style="font-weight: 700; color: #38bdf8;">SyncVerse (Control Tower)</a>
+                        <a href="/en/solutions/sync-insight.html">SyncInsight (Decision AI)</a>
+                        <a href="/en/solutions/sync-llm.html">SyncLLM (FinOps Gateway)</a>
+                        <a href="/en/solutions/sync-apim.html">SyncAPIM (API Security Gateway)</a>
+                        <a href="/en/solutions/sync-watch.html">SyncWatch (Threat Intel &amp; Rule Compiler)</a>
+                        <a href="/en/solutions/sync-boot.html">SyncBoot (Back-Office &amp; Low-Code)</a>
+                        <a href="/en/solutions/sync-cms.html">SyncCMS (Autonomous CMS)</a>
+                        <a href="/en/solutions/sync-shop.html">SyncShop (AI Commerce)</a>
+                        <a href="/en/solutions/sync-ops.html">SyncOps (SI PMO &amp; P&amp;L)</a>
+                        <a href="/en/solutions/sync-eta.html">SyncETA <span style="font-size: 0.75rem; padding: 2px 6px; border-radius: 4px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; margin-left: 4px;">Desktop App</span></a>
+                        <a href="/en/solutions/sync-crawl.html">SyncCrawl (RAG Pipeline)</a>
+                    </div>
+                </div>
+    
+                <!-- 3. Insights Group -->
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/en/blog/blog.html">Tech Blog</a>
+                        <a href="/en/pages/faq.html">FAQ</a>
+                        <a href="/en/blog/case-study-finance.html">Case Studies</a>
+                    </div>
+                </div>
+    
+                <a href="/en/pages/clients.html" data-i18n="nav.clients">Clients</a>
+                
+                <!-- Documentation link -->
+                <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Docs <i class="fas fa-external-link-alt" style="font-size:0.7em; margin-left:2px; opacity:0.7;"></i></a>
+                <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8;">Live Demo Portal <i class="fas fa-external-link-alt" style="font-size:0.7em; margin-left:2px; opacity:0.8;"></i></a>
+            </nav>
+            <div class="nav-actions">
+                <a href="/en/download_eta.html" class="btn btn-outline btn-sm" style="font-weight: 600; border-color: rgba(56, 189, 248, 0.4); color: #38bdf8; white-space: nowrap;">Download SyncETA</a>
+                <div class="dropdown lang-dropdown" style="display: flex; align-items: center;">
+                    <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:0.95rem; padding: 0.4rem 0.5rem; cursor: pointer; display:flex; align-items:center; gap:5px;">
+                        <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> EN</span>
+                        <i class="fas fa-chevron-down" style="font-size:0.7em; opacity:0.7;"></i>
+                    </button>
+                    <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
+                        <a href="/" data-lang="ko" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
+                        <a href="/en/pages/index.html" data-lang="en" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
+                        <a href="/ja/pages/index.html" data-lang="ja" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JP</a>
+                    </div>
+                </div>
+                <a href="/en/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact" style="white-space: nowrap;">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
+        <!-- Compact Breadcrumb / Back Link -->
+        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
+            <a href="../../en/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
+                <span>Back to Tech Blog</span>
+            </a>
+            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
+        </div>
+        
+        <section style="padding: 0;">
+            <div class="container" style="padding: 0;">
+                <article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
+                    <div style="line-height: 1.8; color: var(--text-primary);">
+                        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.2rem; color: var(--text-secondary); font-size: 0.9rem; flex-wrap: wrap;">
+                            <span>2026-11-03</span>
+                            <span>&bull;</span>
+                            <span>4 min read</span>
+                            <span>&bull;</span>
+                            <span style="color: var(--primary-color); font-weight: 600;">QA Automation &amp; Kubernetes</span>
+                        </div>
+
+                        <h1 style="margin-top: 1rem; font-size: clamp(1.5rem, 4vw, 2.1rem); margin-bottom: 1.5rem;">SyncEta Autoscaling in Practice (1) — When Should We Scale Out Workers?</h1>
+
+                        <p style="margin-bottom: 1rem;">SyncEta (ETA) provides a scheduled execution feature that runs E2E test scenarios automatically at designated times.</p>
+
+                        <p style="margin-bottom: 1rem;">Under normal day-to-day traffic, a fixed worker pool handles scheduled runs smoothly. However, during quarterly release audits or major regression windows, hundreds of test scenarios are triggered simultaneously. When worker capacity is insufficient, scenarios pile up in the waiting queue.</p>
+
+                        <p style="margin-bottom: 1rem;">Should an operator manually scale up the Kubernetes Pod count every time a burst arrives and scale it back down afterward?</p>
+
+                        <p style="margin-bottom: 1rem;">Operating an autonomous test automation platform while relying on manual worker scaling is simply unacceptable.</p>
+
+                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">Why Not Just Use Standard Kubernetes HPA?</h2>
+
+                        <p style="margin-bottom: 1rem;">Kubernetes includes HPA (Horizontal Pod Autoscaler), which adjusts Pod replicas automatically based on resource metrics such as CPU or memory utilization.</p>
+
+                        <p style="margin-bottom: 1rem;">At first glance, applying standard HPA to ETA worker Pods seemed straightforward. Looking closely at how an ETA worker actually executes a scenario, however, revealed a fundamental mismatch.</p>
+
+                        <p style="margin-bottom: 1rem;"><strong>Each ETA worker Pod executes exactly one test scenario at a time.</strong> Inside that single Pod, a headless Chromium browser, the worker process, and the Playwright MCP server run together. Executing even a single scenario consumes substantial CPU and memory.</p>
+
+                        <p style="margin-bottom: 1rem;">In other words, whenever a worker Pod is actively running a scenario, it utilizes nearly 100% of its allocated CPU and memory.<br>
+                        If we scale Pods based on resource utilization, HPA could trigger a scale-out even when only a single scenario is running and zero jobs are waiting in the queue.</p>
+
+                        <p style="margin-bottom: 1rem;">Ultimately, <strong>what matters far more than CPU or memory utilization is how many scenarios are waiting in the queue to be executed.</strong></p>
+
+                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">Scaling Directly on Redis Queue Depth</h2>
+
+                        <p style="margin-bottom: 1rem;">The scheduled execution pipeline in SyncEta follows a clean queue-driven flow:</p>
+
+<pre style="overflow-x: auto; padding: 1rem;"><code>[WAS]
+  User registers Cron schedule
+            ↓
+  Enqueues Job into Redis Queue at trigger time
+            ↓
+[Redis Queue]
+  Pending Jobs waiting for execution
+            ↓
+[Worker Pod]
+  Dequeues Job and runs Playwright MCP scenario</code></pre>
+
+                        <p style="margin-bottom: 1rem;">Since pending jobs already accumulate in Redis, <strong>why not use the Redis queue length directly as our autoscaling signal?</strong></p>
+
+                        <p style="margin-bottom: 1rem;">For example, if all active workers are busy and 10 jobs are waiting in Redis, the cluster can spin up additional worker Pods proportional to the backlog—bounded by a configured maximum Pod limit to protect cluster capacity.</p>
+
+                        <p style="margin-bottom: 1rem;">The key engineering question was how to feed Redis Queue depth into Kubernetes autoscaling instead of standard CPU/memory metrics.</p>
+
+                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">Enter KEDA (Kubernetes Event-driven Autoscaling)</h2>
+
+                        <p style="margin-bottom: 1rem;">This is exactly the problem KEDA (Kubernetes Event-driven Autoscaling) was designed to solve.</p>
+
+                        <p style="margin-bottom: 1rem;">KEDA extends Kubernetes autoscaling beyond resource metrics, allowing workloads to scale based on external event sources and queue metrics from Redis, Kafka, RabbitMQ, and more.</p>
+
+                        <p style="margin-bottom: 1rem;">We decided to drive ETA worker Pod scaling using the <strong>pending job count in the Redis Queue</strong> via a KEDA <code>ScaledObject</code>.</p>
+
+                        <p style="margin-bottom: 1rem;">Of course, adopting KEDA with Redis requires more than a single YAML flag. Depending on whether the queue is implemented with Redis Lists, Streams, or sorted structures, the exact KEDA scaler type and queue-length inspection query must match the underlying queue semantics.</p>
+
+                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">Why Scaling In Is Harder Than Scaling Out</h2>
+
+                        <p style="margin-bottom: 1rem;">Scaling out is straightforward: when pending jobs increase, add worker Pods.</p>
+
+                        <p style="margin-bottom: 1rem;">What happens, however, when the Redis queue length drops back to 0? Can we immediately terminate extra worker Pods?</p>
+
+                        <p style="margin-bottom: 1rem;">Not immediately. <strong>Even when the Redis queue is empty, workers that already dequeued a job may still be in the middle of running a multi-minute browser scenario.</strong> If Kubernetes terminates that Pod prematurely, the Chromium browser and Playwright MCP server shut down mid-flight, aborting a valid test run.</p>
+
+                        <p style="margin-bottom: 1rem;">Therefore, queue-length autoscaling must be paired with graceful termination hooks (<code>terminationGracePeriodSeconds</code> / preStop lifecycle coordination) and safe scale-in stabilization policies that protect in-flight test executions.</p>
+
+                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">What We Are Validating Next</h2>
+
+                        <p style="margin-bottom: 1rem;">Our engineering objective is clear:</p>
+
+                        <p style="margin-bottom: 1rem;"><strong>Automatically scale out worker Pods when pending scenarios accumulate in Redis, and safely scale in Pods only after in-flight browser scenarios finish cleanly.</strong></p>
+
+                        <p style="margin-bottom: 1rem;">In Part 2, we will walk through our exact Redis Queue structure, KEDA <code>ScaledObject</code> configuration, maximum replica guardrails, and graceful scale-in lifecycle policies in production.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-4">
+        <div class="container text-center fade-in-up">
+            <h2 class="footer-title" data-i18n="footer.title">Accelerate your business with Empasy</h2>
+            <div class="mt-4" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg"><i class="fas fa-play-circle"></i> Live Demo Portal</a>
+                <a href="/en/pages/contact.html" class="btn btn-outline btn-lg" data-i18n="nav.contact">Contact Enterprise Sales</a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <div class="seo-links" style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; align-items: center; font-size: 0.88rem;">
+                    <span style="color: var(--text-secondary); font-weight: 700;">SyncSeries 11 Solutions:</span>
+                    <a href="/en/solutions/sync-verse.html" style="color: #38bdf8; text-decoration: none; font-weight: 600;">SyncVerse</a>
+                    <a href="/en/solutions/sync-insight.html" style="color: inherit; text-decoration: none;">SyncInsight</a>
+                    <a href="/en/solutions/sync-llm.html" style="color: inherit; text-decoration: none;">SyncLLM</a>
+                    <a href="/en/solutions/sync-apim.html" style="color: inherit; text-decoration: none;">SyncAPIM</a>
+                    <a href="/en/solutions/sync-watch.html" style="color: inherit; text-decoration: none;">SyncWatch</a>
+                    <a href="/en/solutions/sync-boot.html" style="color: inherit; text-decoration: none;">SyncBoot</a>
+                    <a href="/en/solutions/sync-cms.html" style="color: inherit; text-decoration: none;">SyncCMS</a>
+                    <a href="/en/solutions/sync-shop.html" style="color: inherit; text-decoration: none;">SyncShop</a>
+                    <a href="/en/solutions/sync-ops.html" style="color: inherit; text-decoration: none;">SyncOps</a>
+                    <a href="/en/solutions/sync-eta.html" style="color: inherit; text-decoration: none;">SyncETA</a>
+                    <a href="/en/solutions/sync-crawl.html" style="color: inherit; text-decoration: none;">SyncCrawl</a>
+                </div>
+                <div class="seo-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center;">
+                    <a href="https://github.com/DramaticCollaboration/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-desktop"></i> Live Demo Portal
+                    </a>
+                    <a href="/en/download_eta.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-download"></i> Download SyncETA
+                    </a>
+                    <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-book"></i> Documentation
+                    </a>
+                    <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" download style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-book-open"></i> Brochure (PDF)
+                    </a>
+                    <a href="/downloads/proposals/SyncSeries_Master_Proposal.pdf" download style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-file-pdf"></i> Master Proposal (PDF)
+                    </a>
+                    <a href="https://doc.empasy.com/proposals/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-folder-open"></i> Proposal Library
+                    </a>
+                    <a href="/en/pages/careers.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-user-plus"></i> Careers
+                    </a>
+                    <a href="/en/pages/terms.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-file-contract"></i> Terms of Service
+                    </a>
+                    <a href="/en/pages/privacy.html" style="color: inherit; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-shield-alt"></i> Privacy Policy
+                    </a>
+                    <a href="https://doc.empasy.com/ecosystem/security-and-compliance" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-lock"></i> Security &amp; Compliance
+                    </a>
+                    <span style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: rgba(34, 197, 94, 0.12); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 20px; font-size: 0.8rem; color: #4ade80; font-weight: 600;">
+                        <span style="width: 7px; height: 7px; border-radius: 50%; background: #22c55e; display: inline-block;"></span> All Systems Operational (SLA 99.9%)
+                    </span>
+                </div>
+                <address style="font-style: normal; color: rgba(255, 255, 255, 0.65); font-size: 0.85rem; line-height: 1.8;">
+                    <strong style="color: rgba(255, 255, 255, 0.95); font-size: 0.95rem;">Empasy IT Corp.</strong> &nbsp;|&nbsp; CEO : Byungmoon Oh &nbsp;|&nbsp; <span style="color: #fbbf24; font-weight: 600;"><i class="fas fa-award" style="margin-right: 4px;"></i>Certified Venture Enterprise (Innovative Growth &middot; No. 20261111030084)</span><br>
+                    Business Registration : 547-81-03408 &nbsp;|&nbsp; Headquarters : 2F #208, 205-27 Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea<br>
+                    <span style="color: rgba(255, 255, 255, 0.85);">Enterprise Inquiries : <a href="mailto:poh@empasy.com" style="color: #38bdf8; text-decoration: underline;">poh@empasy.com</a> &nbsp;|&nbsp; Tech Support : <a href="tel:+82-507-1360-8169" style="color: #f8fafc; text-decoration: none;">+82-507-1360-8169</a></span>
+                </address>
+                <p data-i18n="footer.copyright" style="color: rgba(255, 255, 255, 0.45); font-size: 0.8rem; margin-top: 1rem;">© 2026 Empasy IT Corp. All rights reserved. SyncSeries® is a registered trademark of Empasy.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+</body>
+</html>

@@ -1189,9 +1189,9 @@ html, body {
     
             <div class="mock-schema-view">
                 <div class="schema-tree">
-                    <div class="st-file active">📄 01. init.sql (시스템 공통)</div>
-                    <div class="st-file active" style="color:#FF4D00;">📄 02. syncboot_payment.sql (도메인 DDL)</div>
-                    <div class="st-file">📄 03. sample.sql (테스트 데이터)</div>
+                    <div class="st-file active"> 01. init.sql (시스템 공통)</div>
+                    <div class="st-file active" style="color:#FF4D00;"> 02. syncboot_payment.sql (도메인 DDL)</div>
+                    <div class="st-file"> 03. sample.sql (테스트 데이터)</div>
                 </div>
                 <div class="schema-code-box">
                     <pre>CREATE TABLE `tb_subscription_pay` (
@@ -1701,9 +1701,9 @@ html, body {
     
             <div class="mock-schema-view">
                 <div class="schema-tree">
-                    <div class="st-file active">📄 01. init.sql (시스템 공통)</div>
-                    <div class="st-file active" style="color:#FF4D00;">📄 02. syncboot_payment.sql (도메인 DDL)</div>
-                    <div class="st-file">📄 03. sample.sql (테스트 데이터)</div>
+                    <div class="st-file active"> 01. init.sql (시스템 공통)</div>
+                    <div class="st-file active" style="color:#FF4D00;"> 02. syncboot_payment.sql (도메인 DDL)</div>
+                    <div class="st-file"> 03. sample.sql (테스트 데이터)</div>
                 </div>
                 <div class="schema-code-box">
                     <pre>CREATE TABLE `tb_subscription_pay` (
@@ -1818,12 +1818,12 @@ html, body {
                     <span class="cg-pkg">Package: com.empasy.syncboot.payment</span>
                 </div>
                 <div class="cg-files-grid">
-                    <div class="cg-card">✔ SubscriptionPayEntity.java</div>
-                    <div class="cg-card">✔ SubscriptionPayDto.java</div>
-                    <div class="cg-card">✔ SubscriptionPayMapper.xml</div>
-                    <div class="cg-card">✔ SubscriptionPayService.java</div>
-                    <div class="cg-card">✔ SubscriptionPayController.java</div>
-                    <div class="cg-card" style="border-color:#FF4D00; color:#FF4D00;">✔ SubscriptionPayAdmin.vue</div>
+                    <div class="cg-card">[OK] SubscriptionPayEntity.java</div>
+                    <div class="cg-card">[OK] SubscriptionPayDto.java</div>
+                    <div class="cg-card">[OK] SubscriptionPayMapper.xml</div>
+                    <div class="cg-card">[OK] SubscriptionPayService.java</div>
+                    <div class="cg-card">[OK] SubscriptionPayController.java</div>
+                    <div class="cg-card" style="border-color:#FF4D00; color:#FF4D00;">[OK] SubscriptionPayAdmin.vue</div>
                 </div>
                 <div class="cg-action-box">
                     <button class="mock-btn primary">풀스택 코드 일괄 생성 및 Git 브랜치 커밋</button>
@@ -1924,16 +1924,16 @@ html, body {
                 <div class="iam-split">
                     <div class="iam-tree-card">
                         <div class="iam-th">역할 및 메뉴 접근 권한 (RBAC)</div>
-                        <div class="iam-item">📁 결제 관리자 (ROLE_PAY_ADMIN)</div>
-                        <div class="iam-item" style="padding-left:24px;">✔ 결제 내역 조회 (SELECT)</div>
-                        <div class="iam-item" style="padding-left:24px;">✔ 수동 환불 승인 (EXECUTE)</div>
-                        <div class="iam-item" style="padding-left:24px;">✖ 시스템 설정 변경 (DENIED)</div>
+                        <div class="iam-item"> 결제 관리자 (ROLE_PAY_ADMIN)</div>
+                        <div class="iam-item" style="padding-left:24px;">[OK] 결제 내역 조회 (SELECT)</div>
+                        <div class="iam-item" style="padding-left:24px;">[OK] 수동 환불 승인 (EXECUTE)</div>
+                        <div class="iam-item" style="padding-left:24px;">[X] 시스템 설정 변경 (DENIED)</div>
                     </div>
                     <div class="iam-mask-card">
                         <div class="iam-th">동적 데이터 마스킹 정책</div>
-                        <div class="iam-rule">주민등록번호 ➔ <b>950101-*******</b> (완전 마스킹)</div>
-                        <div class="iam-rule">휴대폰 번호 ➔ <b>010-****-5678</b> (중간 4자리)</div>
-                        <div class="iam-rule">결제 카드번호 ➔ <b>****-****-****-1234</b></div>
+                        <div class="iam-rule">주민등록번호 &rarr; <b>950101-*******</b> (완전 마스킹)</div>
+                        <div class="iam-rule">휴대폰 번호 &rarr; <b>010-****-5678</b> (중간 4자리)</div>
+                        <div class="iam-rule">결제 카드번호 &rarr; <b>****-****-****-1234</b></div>
                     </div>
                 </div>
             </div>
@@ -2610,7 +2610,7 @@ html, body {
     </div>
 
     <div class="adopt-integration-box">
-        <div class="adopt-int-title">⚙ 이미 쓰고 계신 인프라와 연결</div>
+        <div class="adopt-int-title"> 이미 쓰고 계신 인프라와 연결</div>
         <div class="adopt-int-desc">데이터베이스 (MySQL / PostgreSQL / Oracle) · 캐시 (Redis Cluster) · 메시징 (Kafka / RabbitMQ) · 중앙관제 (SyncVerse MCP)</div>
     </div>
 
