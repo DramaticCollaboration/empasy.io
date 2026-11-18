@@ -94,19 +94,79 @@
             </div>
             <div class="rich-features">
                 <div class="feature-item">
-                    <span class="badge" style="margin-bottom: 0.8rem;">01</span>
-                    <h3>Multi-Model Intelligent Routing & Fallback</h3>
-                    <p>Dynamically routes prompts to optimal models based on task context and complexity, with instant fallback upon upstream vendor outages.</p>
+                    <span class="feature-icon"><i class="fas fa-random"></i></span>
+                    <h3>Multi-Model Optimal Routing &amp; Automatic Failover</h3>
+                    <p>Dynamically connects OpenAI, Anthropic, Gemini, Qwen, DeepSeek, and internal AI models based on task complexity and cost, with automatic switching during vendor outages.</p>
                 </div>
                 <div class="feature-item">
-                    <span class="badge" style="margin-bottom: 0.8rem;">02</span>
-                    <h3>FinOps Token Guardrails & Semantic Caching</h3>
-                    <p>Accelerates responses and slashes API expenditures via in-memory semantic caching while enforcing strict budget thresholds.</p>
+                    <span class="feature-icon"><i class="fas fa-coins"></i></span>
+                    <h3>Department AI Budget Limits &amp; Similar-Answer Reuse</h3>
+                    <p>Cuts recurring AI API costs by 40–60% by reusing cached answers to similar questions while enforcing department-level daily and monthly budget caps.</p>
                 </div>
                 <div class="feature-item">
-                    <span class="badge" style="margin-bottom: 0.8rem;">03</span>
-                    <h3>Real-Time PII Masking & Access Control (RBAC)</h3>
-                    <p>Automatically sanitizes personally identifiable information before external egress and governs model access via JWT role claims.</p>
+                    <span class="feature-icon"><i class="fas fa-user-lock"></i></span>
+                    <h3>Personal Data Auto-Redaction, Encrypted Key Vault &amp; Usage Logs</h3>
+                    <p>Automatically masks personal and confidential information before external transmission, stores provider API keys in an AES-256 vault, and logs every call with cache hit status and response time.</p>
+                </div>
+            </div>
+
+            <div class="section-header text-center mt-5 mb-4" style="margin-top: 5rem;">
+                <h2 class="section-title">How It Works</h2>
+            </div>
+            <div class="process-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Prompt Ingress &amp; Automatic PII Redaction</h4>
+                        <p>Intercepts enterprise AI requests and masks sensitive personal data (SSNs, phone numbers, account numbers) and confidential tokens prior to external egress.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Semantic Cache Lookup &amp; Optimal Model Routing</h4>
+                        <p>Returns instant verified responses on a semantic CACHE HIT, or routes novel prompts to the optimal LLM provider based on cost/latency policies.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Real-Time Token Metering &amp; Department Budget Control</h4>
+                        <p>Aggregates input/output token consumption per department and user in real time, triggering alerts or cost-saving model fallbacks when budgets near threshold limits.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section fade-in-up delay-2">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <div class="faq-item">
+                <details>
+                    <summary>Can SyncLLM connect to air-gapped on-premise LLM servers?</summary>
+                    <div class="faq-answer">Yes. SyncLLM natively supports local open-weights models (vLLM, Ollama, SGLang) alongside cloud providers (OpenAI, Anthropic, Gemini, Qwen, DeepSeek) under a unified OpenAI-compatible API endpoint.</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>What happens when a department exceeds its allocated monthly AI budget?</summary>
+                    <div class="faq-answer">Administrators can configure daily and monthly budget caps per department or project. As usage approaches the threshold, SyncLLM sends automated alerts and can dynamically switch requests to lower-cost or local models to prevent budget overruns.</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>Do we need to rewrite our existing internal applications to adopt SyncLLM?</summary>
+                    <div class="faq-answer">No code rewrite is needed. Simply point your application's base LLM URL and API key to the SyncLLM gateway endpoint to immediately enable routing, caching, PII masking, and FinOps auditing.</div>
+                </details>
+            </div>
+        </section>
+
+        <section class="section cta-box" style="background: rgba(15, 23, 42, 0.5); border: 1px solid var(--border-color); border-radius: 16px; margin: 4rem 0; padding: 3.5rem 2rem;">
+            <div class="container text-center">
+                <h2 class="section-title" style="margin-bottom: 1rem;">Govern Enterprise AI Security and Token Costs in One Gateway</h2>
+                <p style="color: var(--text-secondary); max-width: 680px; margin: 0 auto 2rem;">Explore a tailored multi-LLM routing and FinOps governance architecture designed for your organization's security policies.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://sync.empasy.io/products/sync-llm#demo-console-section" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg"><i class="fas fa-play-circle" style="margin-right: 6px;"></i>Launch Live Demo</a>
+                    <a href="/en/pages/contact.html" class="btn btn-outline btn-lg">Contact Sales</a>
                 </div>
             </div>
         </section>

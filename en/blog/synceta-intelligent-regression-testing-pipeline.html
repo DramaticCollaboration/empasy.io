@@ -22,7 +22,62 @@
     <meta property="og:title" content="AI Test Automation Guide: From Scenario Generation to Self-Healing E2E Testing — SyncETA | Empasy">
     <meta property="og:description" content="SyncETA is an AI test automation platform featuring no-code/Excel scenario generation, Playwright parallel execution, failure root-cause analysis, and Vision-LLM self-healing selectors.">
     <meta property="og:type" content="website">
-    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="author" content="Empasy">    <script type="application/ld+json">    {      "@context": "https://schema.org",      "@type": "Blog",      "name": "Empasy Tech Blog",      "url": "https://empasy.io/en/blog/synceta-intelligent-regression-testing-pipeline.html",      "description": "Latest technical insights on Enterprise AI Agents and AI Ops",      "publisher": {        "@type": "Organization",        "name": "Empasy",        "logo": {          "@type": "ImageObject",          "url": "https://empasy.io/empasy-logo.png"        }      }    }    </script>    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="../../assets/css/style.css">    <meta name="geo.region" content="KR-11" />    <meta name="geo.placename" content="Seoul" />    <meta name="geo.position" content="37.5665;126.9780" />    <meta name="ICBM" content="37.5665, 126.9780" />    <!-- SEO & AIO Tags -->        <meta property="og:image" content="https://empasy.io/empasy-logo.png">    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">        <meta property="og:locale" content="en_US">    <script type="application/ld+json">{  "@context": "https://schema.org",  "@type": "Article",  "headline": "[Tech Blog] From Machine Code (JSON) to Business Language (Excel): SyncETA's Intelligent Regression Testing Pipeline Architecture",  "description": "Reviewing SyncETA architecture that combines LLMs and Playwright MCP to implement no-code intelligent QA automation and visual self-healing engines.",  "author": {    "@type": "Organization",    "name": "Empasy Engineering Team",    "url": "https://empasy.io"  },  "publisher": {    "@type": "Organization",    "name": "Empasy",    "logo": {      "@type": "ImageObject",      "url": "https://empasy.io/assets/logo.png"    }  },  "url": "https://empasy.io/en/blog/synceta-intelligent-regression-testing-pipeline.html"}    </script>    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Empasy">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Empasy Tech Blog",
+      "url": "https://empasy.io/en/blog/synceta-intelligent-regression-testing-pipeline.html",
+      "description": "Latest technical insights on Enterprise AI Agents and AI Ops",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Empasy",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/empasy-logo.png"
+        }
+      }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <meta name="geo.region" content="KR-11" />
+    <meta name="geo.placename" content="Seoul" />
+    <meta name="geo.position" content="37.5665;126.9780" />
+    <meta name="ICBM" content="37.5665, 126.9780" />
+    <!-- SEO & AIO Tags -->
+    
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <meta property="og:locale" content="en_US">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "[Tech Blog] From Machine Code (JSON) to Business Language (Excel): SyncETA's Intelligent Regression Testing Pipeline Architecture",
+  "description": "Reviewing SyncETA architecture that combines LLMs and Playwright MCP to implement no-code intelligent QA automation and visual self-healing engines.",
+  "author": {
+    "@type": "Organization",
+    "name": "Empasy Engineering Team",
+    "url": "https://empasy.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Empasy",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://empasy.io/empasy-logo.png"
+    }
+  },
+  "url": "https://empasy.io/en/blog/synceta-intelligent-regression-testing-pipeline.html"
+}
+    </script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- SEO & AIO Tags -->
     
@@ -76,28 +131,28 @@
             <div class="stack-label">LAYER 01</div>
             <div style="flex-grow: 1;">
                 <div class="stack-content">Data Collection</div>
-                <div class="stack-desc">Precise capture of browser events & DOM Context (Selenium based) ➔ Machine Log / JSON format</div>
+                <div class="stack-desc">Precise capture of browser events & DOM Context (Selenium based) &rarr; Machine Log / JSON format</div>
             </div>
           </div>
           <div class="stack-layer">
             <div class="stack-label">LAYER 02</div>
             <div style="flex-grow: 1;">
                 <div class="stack-content">AI Processing</div>
-                <div class="stack-desc">Natural language (Excel) test case generation via LLM Semantic Parser ➔ International standard Excel template</div>
+                <div class="stack-desc">Natural language (Excel) test case generation via LLM Semantic Parser &rarr; International standard Excel template</div>
             </div>
           </div>
           <div class="stack-layer">
             <div class="stack-label">LAYER 03</div>
             <div style="flex-grow: 1;">
                 <div class="stack-content">Verification & Iteration</div>
-                <div class="stack-desc">QA Engineer feedback loop (LoRA fine-tuning / System self-evolution) ➔ Confirmed natural language commands</div>
+                <div class="stack-desc">QA Engineer feedback loop (LoRA fine-tuning / System self-evolution) &rarr; Confirmed natural language commands</div>
             </div>
           </div>
           <div class="stack-layer">
             <div class="stack-label">LAYER 04</div>
             <div style="flex-grow: 1;">
                 <div class="stack-content">Intelligent Execution</div>
-                <div class="stack-desc">Playwright MCP based background headless ultra-fast parallel distributed execution ➔ Failure snapshot & .webm video mapping</div>
+                <div class="stack-desc">Playwright MCP based background headless ultra-fast parallel distributed execution &rarr; Failure snapshot & .webm video mapping</div>
             </div>
           </div>
           <div class="stack-layer">

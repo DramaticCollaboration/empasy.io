@@ -1,55 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>SyncWatch - AI Security Threat Intelligence &amp; Rule Compiler Agent | Empasy</title>
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6BNPM5TX7C');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
+    <!-- End Google Tag Manager -->
+    <title>SyncWatch - AI Security Threat Intelligence &amp; Dual Rule Compiler Agent | Empasy</title>
     <meta name="description" content="SyncWatch ingests and normalizes global security threats (NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, Nuclei, OWASP CRS, KISA) to compile and broadcast VerseAuditPack for SyncVerse and ApimDefensePack for SyncAPIM in real time.">
+    <meta name="keywords" content="SyncWatch, Threat Intelligence Hub, CVE Automation, VerseAuditPack, ApimDefensePack, Autonomous DevSecOps, SBOM Matching, Empasy">
+    <meta property="og:title" content="SyncWatch - AI Security Threat Intelligence &amp; Dual Rule Compiler Agent | Empasy">
+    <meta property="og:description" content="Enterprise threat intelligence observatory that compiles Shift-Left code audit packs and Shift-Right virtual defense packs with TP 100% / FP 0% sandbox verification.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SyncWatch - AI Threat Intelligence &amp; Rule Compiler | Empasy">
+    <meta name="twitter:description" content="Bridge global threat feeds to Shift-Left code audits and Shift-Right runtime virtual patching.">
+    <meta name="twitter:image" content="https://empasy.io/empasy-logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <meta name="author" content="Empasy">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .page-header { padding: 150px 0 80px; text-align: center; }
+        .page-header { padding: 150px 0 80px; text-align: center; position: relative; z-index: 10; }
         .page-title { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; color: var(--text-primary); }
         .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 840px; margin: 0 auto; }
+        .faq-item { border: none !important; }
+        .faq-item details {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-item summary { padding: 1.5rem 2rem !important; background: transparent !important; }
+        .faq-answer { padding: 0 2rem 1.5rem !important; }
     </style>
+    <meta name="geo.region" content="KR-11" />
+    <meta name="geo.placename" content="Seoul" />
+    <meta name="geo.position" content="37.5665;126.9780" />
+    <meta name="ICBM" content="37.5665, 126.9780" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SyncWatch",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web, Cloud, Kubernetes",
+      "description": "Global threat intelligence ingestion and dual security rule compiler agent broadcasting VerseAuditPack to SyncVerse and ApimDefensePack to SyncAPIM.",
+      "url": "https://empasy.io/en/solutions/sync-watch.html",
+      "sameAs": [
+        "https://github.com/DramaticCollaboration/",
+        "https://doc.empasy.com/"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How fast are defense rules deployed when a new CVE is announced?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As soon as a new advisory is ingested from NVD, CISA KEV, OSV.dev, GHSA, or KISA, SyncWatch normalizes the threat, verifies rules in its sandbox, and broadcasts both VerseAuditPack and ApimDefensePack within minutes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does SyncWatch prevent false positives from blocking legitimate production traffic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncWatch validates every compiled rule against positive attack payloads and negative normal business payloads in an isolated sandbox, broadcasting only rules that achieve TP 100% and FP 0%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we ingest internal pentest reports or custom security advisories?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Alongside automated global threat feeds, security teams can upload internal penetration test reports or custom advisories to normalize and compile them into enterprise-wide audit and defense packs."
+          }
+        }
+      ]
+    }
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="canonical" href="https://empasy.io/en/solutions/sync-watch.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-watch.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-watch.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-watch.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-watch.html" />
+    <meta property="og:url" content="https://empasy.io/en/solutions/sync-watch.html">
 </head>
 <body class="theme-llm">
+    <!-- AI Search Optimization (AIO) Context Block -->
+    <article class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
+        <h1>What is Empasy SyncWatch?</h1>
+        <p>SyncWatch is an AI Security Threat Intelligence and Dual Rule Compiler Agent developed by Empasy. It ingests global threat feeds (NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, Nuclei, OWASP CRS, KISA) under a 5-stage SSRF guard and compiles sandbox-verified VerseAuditPack rules for SyncVerse and ApimDefensePack rules for SyncAPIM.</p>
+    </article>
+
     {{> header_en }}
-    <main class="container">
-        <div class="page-header fade-in-up">
-            <div class="container">
-                <span class="badge">AI Security Threat Intelligence &amp; Rule Compiler Agent</span>
+
+    <main class="container" style="position: relative; z-index: 10;">
+        <div class="page-header fade-in-up" style="position: relative; overflow: hidden;">
+            <div class="node-grid"></div>
+            <div class="container" style="position: relative; z-index: 10;">
+                <span class="badge" data-i18n="watch.badge">Global Vulnerability Monitoring &amp; Automated Defense Deployment</span>
                 <h1 class="page-title">SyncWatch</h1>
-                <p class="page-subtitle">Enterprise security observatory that ingests and normalizes global threat feeds (NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, Nuclei, OWASP CRS, KISA) and security audit documents, compiling and broadcasting VerseAuditPack to SyncVerse and ApimDefensePack to SyncAPIM in real time.</p>
+                <p class="page-subtitle">Monitors 8 global security agencies (CISA, NVD, OSV, KISA, etc.) 24/7 to check whether newly disclosed vulnerabilities affect your company's software, then automatically generates and deploys both code inspection rules (SyncVerse) and live API blocking policies (SyncAPIM).</p>
                 <div class="mt-4 flex-center" style="gap: 1rem; display: flex; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://sync.empasy.io/products/sync-watch#demo-console-section" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.9rem 2.2rem; border-radius: 30px; font-weight: 700;"><i class="fas fa-play-circle" style="margin-right: 6px;"></i>Launch Live Demo</a>
-                    <a href="/en/pages/contact.html" class="btn btn-outline" style="padding: 0.9rem 2.2rem; border-radius: 30px;">Contact Sales</a>
+                    <a href="https://sync.empasy.io/products/sync-watch#demo-console-section" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.9rem 2.2rem; font-size: 1.05rem; border-radius: 30px; font-weight: 700;"><i class="fas fa-play-circle" style="margin-right: 6px;"></i>Launch Live Demo</a>
+                    <a href="/downloads/proposals/SyncWatch_Proposal.pdf" download class="btn btn-outline" style="padding: 0.9rem 2.2rem; font-size: 1.05rem; border-radius: 30px;"><i class="fas fa-file-pdf" style="margin-right: 6px;"></i>Proposal PDF</a>
+                    <a href="/en/pages/contact.html" class="btn btn-outline" style="padding: 0.9rem 2.2rem; font-size: 1.05rem; border-radius: 30px;">Contact Sales</a>
                 </div>
             </div>
         </div>
+
         <section class="section pt-0 fade-in-up delay-1">
+            <div class="vs-container mb-4">
+                <div class="vs-box vs-legacy">
+                    <h4 data-i18n="watch.vs.legacy.title">Legacy Manual Advisory Monitoring &amp; Siloed Response</h4>
+                    <ul class="vs-list">
+                        <li data-i18n="watch.vs.legacy.1">Security analysts manually poll NVD, CISA, and vendor advisories and cross-check affected internal repositories</li>
+                        <li data-i18n="watch.vs.legacy.2">Disconnected workflows between dev team code patching and security team WAF rules leave zero-day exposure gaps</li>
+                        <li data-i18n="watch.vs.legacy.3">Unverified emergency firewall regexes cause false-positive outages that block legitimate customer API traffic</li>
+                    </ul>
+                </div>
+                <div class="vs-box vs-agent">
+                    <h4 data-i18n="watch.vs.agent.title">After Adopting SyncWatch Automated Security</h4>
+                    <ul class="vs-list">
+                        <li data-i18n="watch.vs.agent.1">24/7 automated collection across 8 global security agencies and internal audit reports in one unified hub</li>
+                        <li data-i18n="watch.vs.agent.2">Simultaneously generates code inspection rules for SyncVerse and live API blocking policies for SyncAPIM</li>
+                        <li data-i18n="watch.vs.agent.3">Pre-tests every rule in an isolated sandbox (0% false positives verified) before company-wide deployment</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-header text-center mt-5 mb-4">
+                <h2 class="section-title">3-Step Automated Defense: From Threat Alert to Code Fix &amp; Live Blocking</h2>
+            </div>
             <div class="rich-features">
                 <div class="feature-item">
                     <span class="badge" style="margin-bottom: 0.8rem;">01</span>
-                    <h3>SyncWatch: Threat Ingestion &amp; Dual Rule Compilation</h3>
-                    <p>Collects 7 global threat feeds and audit reports under a 5-stage SSRF guard, compiling both Shift-Left audit rules and Shift-Right defense rules with self-sandbox verification (TP 100%, FP 0%).</p>
+                    <h3>24/7 Global Vulnerability Collection &amp; Company Impact Check</h3>
+                    <p>Continuously collects security alerts from CISA, NVD, OSV.dev, GitHub GHSA, and KISA alongside internal audit reports, matching them against your software inventory (SBOM) immediately.</p>
                 </div>
                 <div class="feature-item">
                     <span class="badge" style="margin-bottom: 0.8rem;">02</span>
-                    <h3>SyncVerse: Shift-Left Code Audit &amp; Automated Patch PRs</h3>
-                    <p>Receives VerseAuditPack (SCA dependency ranges, SAST regex patterns, and DAST pentest probes) to scan enterprise repositories and generate automated security patch PRs.</p>
+                    <h3>Automated Code Inspection &amp; Fix Proposals (SyncVerse Integration)</h3>
+                    <p>Generates code and dependency inspection rules (VerseAuditPack) so SyncVerse can automatically scan internal repositories and propose safe remediation patches.</p>
                 </div>
                 <div class="feature-item">
                     <span class="badge" style="margin-bottom: 0.8rem;">03</span>
-                    <h3>SyncAPIM: Shift-Right Runtime Attack Blocking</h3>
-                    <p>Receives ApimDefensePack (lexical token fingerprints, location-specific regexes, and Restricted SpEL) for zero-downtime virtual patching via SandboxedDefenseEvaluator and kernel eBPF blocking.</p>
+                    <h3>Zero-Downtime Live API Attack Blocking (SyncAPIM Integration)</h3>
+                    <p>Pre-verifies rules to prevent false blocks on normal traffic, then deploys runtime defense policies (ApimDefensePack) to SyncAPIM to block attacks without restarting servers.</p>
+                </div>
+            </div>
+
+            <div class="section-header text-center mt-5 mb-4" style="margin-top: 5rem;">
+                <h2 class="section-title">How It Works</h2>
+            </div>
+            <div class="process-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Global Threat Feed Ingestion &amp; CWE/MITRE Normalization</h4>
+                        <p>Collects external threat feeds (`watch_feed_source`) and security audit reports, normalizing them into a unified CWE, MITRE ATT&amp;CK, and SBOM ecosystem ledger (`watch_security_advisory`).</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Dual Rule Compilation &amp; Self-Sandbox Verification</h4>
+                        <p>Simultaneously compiles code audit rules and runtime virtual patch rules, testing each against attack (Positive) and benign (Negative) sample payloads to guarantee zero false positives.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Real-Time Broadcast to SyncVerse &amp; SyncAPIM with Feedback Telemetry</h4>
+                        <p>Broadcasts verified security packs enterprise-wide and tracks repository audit findings and gateway block counts in the central dispatch ledger (`watch_dispatch_history`).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section fade-in-up delay-2">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <div class="faq-item">
+                <details>
+                    <summary>How fast are defense rules deployed when a new CVE vulnerability is disclosed?</summary>
+                    <div class="faq-answer">As soon as a new advisory is collected from NVD, CISA KEV, OSV.dev, GHSA, or KISA, SyncWatch normalizes the CVE, runs sandbox verification, and broadcasts both the SyncVerse code audit pack and SyncAPIM runtime virtual patch pack within minutes.</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>How does SyncWatch prevent auto-compiled rules from blocking legitimate traffic (False Positives)?</summary>
+                    <div class="faq-answer">SyncWatch never broadcasts unverified rules. Every compiled rule must pass an isolated sandbox test demonstrating 100% True Positive detection on exploit samples and 0% False Positive hits on normal production payloads.</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>Can we upload internal penetration test reports or custom security advisories?</summary>
+                    <div class="faq-answer">Yes. In addition to automated global threat channels, security engineers can upload internal audit documents or custom advisories, which SyncWatch normalizes into CWE/MITRE entries and compiles into dual enforcement rules.</div>
+                </details>
+            </div>
+        </section>
+
+        <section class="section cta-box" style="background: rgba(15, 23, 42, 0.5); border: 1px solid var(--border-color); border-radius: 16px; margin: 4rem 0; padding: 3.5rem 2rem;">
+            <div class="container text-center">
+                <h2 class="section-title" style="margin-bottom: 1rem;">Unify Threat Intelligence, Code Patching, and Runtime Virtual Patching</h2>
+                <p style="color: var(--text-secondary); max-width: 680px; margin: 0 auto 2rem;">Experience the SyncWatch · SyncVerse · SyncAPIM Triad DevSecOps loop live in our interactive demo console.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://sync.empasy.io/products/sync-watch#demo-console-section" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg"><i class="fas fa-play-circle" style="margin-right: 6px;"></i>Launch Live Demo</a>
+                    <a href="/en/pages/contact.html" class="btn btn-outline btn-lg">Contact Sales</a>
                 </div>
             </div>
         </section>
     </main>
+
     {{> footer_en }}
     <script type="module" src="/assets/js/i18n.js"></script>
     <script type="module" src="/assets/js/main.js"></script>

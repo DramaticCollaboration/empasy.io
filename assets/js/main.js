@@ -263,11 +263,11 @@ function initMain() {
                 en: 'empasy verse dispatch --workflow "order-flow" --mode "autonomous"',
                 ja: 'empasy verse dispatch --workflow "order-flow" --mode "autonomous"'
             },
-            tag: { ko: '통합 관제', en: 'Control Tower', ja: '中央管制塔' },
+            tag: { ko: '통합 관제', en: 'Control Tower', ja: '統合管制' },
             desc: {
-                ko: '여러 AI의 작업 순서를 조율하고 보안과 예산을 실시간으로 관리합니다.',
-                en: 'Orchestrates multi-agent transactions, enforcing system security & FinOps guardrails.',
-                ja: 'マルチエージェント間のトランザクションを統調し、セキュリティとFinOpsを制御します。'
+                ko: '11가지 전문 AI의 작업 순서를 조율하고 담당자 승인과 보안·예산을 한곳에서 관리합니다.',
+                en: 'Coordinates all 11 specialized AI agents, managing step-by-step approvals, security, and budgets in one place.',
+                ja: '11種の専門AIの作業順序を調整し、段階別承認とセキュリティ・予算を一元管理します。'
             },
             output: {
                 ko: `
@@ -287,12 +287,12 @@ function initMain() {
                     <div>&nbsp;↳ All agent SLAs verified &amp; Audit Trace ID: #trc-9842a <span style="color: #22c55e;">[100% HEALTHY]</span></div>
                 `,
                 ja: `
-                    <div style="color: #38bdf8;">[SyncVerse Orchestrator]</div>
-                    <div>&nbsp;↳ A2A MessageHub initialized [Agents: SyncBoot, SyncEta, SyncLLM]</div>
-                    <div>&nbsp;↳ Dispatching distributed transaction... <span style="color: #22c55e;">[DISPATCHED]</span></div>
-                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncVerse Guardrail]</div>
-                    <div>&nbsp;↳ PII Masked &amp; Redis Semantic Cache HIT (Latency: 12ms) <span style="color: #22c55e;">[SAFE]</span></div>
-                    <div>&nbsp;↳ All agent SLAs verified &amp; Audit Trace ID: #trc-9842a <span style="color: #22c55e;">[100% HEALTHY]</span></div>
+                    <div style="color: #38bdf8;">[SyncVerse 統合管制]</div>
+                    <div>&nbsp;↳ 注文・決済ワークフロー自動化を開始 [連携AI: SyncBoot, SyncEta, SyncLLM]</div>
+                    <div>&nbsp;↳ 段階別タスクの自動配分および実行中... <span style="color: #22c55e;">[配信完了]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[セキュリティおよびFinOps保護]</div>
+                    <div>&nbsp;↳ 個人情報(PII)自動マスキングおよびセマンティックキャッシュ適用 (応答: 12ms) <span style="color: #22c55e;">[安全]</span></div>
+                    <div>&nbsp;↳ 全エージェントSLA検証完了 (監査トレースID: #trc-9842a) <span style="color: #22c55e;">[100% 正常]</span></div>
                 `
             }
         },
@@ -307,11 +307,11 @@ function initMain() {
                 en: 'empasy insight analyze --topic "Q4-pricing-strategy" --debate-agents 3',
                 ja: 'empasy insight analyze --topic "Q4-pricing-strategy" --debate-agents 3'
             },
-            tag: { ko: '데이터 분석', en: 'Decision Intelligence', ja: '戦略意思決定' },
+            tag: { ko: '데이터 분석', en: 'Data & Strategy', ja: 'データ分析・戦略' },
             desc: {
-                ko: '사내 운영 데이터와 시장 동향을 함께 분석해 최적의 비즈니스 전략을 제안합니다.',
-                en: 'Synthesizes internal telemetry and market data via multi-agent debate for strategic decisions.',
-                ja: '社内外データの統合分析とマルチエージェント討論により最適な経営戦略を導出します。'
+                ko: '일상 언어로 질문하면 사내 데이터와 시장 동향을 함께 분석해 최적의 비즈니스 전략을 제안합니다.',
+                en: 'Ask questions in plain language to analyze internal data and market trends for optimal business decisions.',
+                ja: '日常の言葉で質問するだけで社内データと市場動向を統合分析し、最適な経営戦略を提案します。'
             },
             output: {
                 ko: `
@@ -329,11 +329,11 @@ function initMain() {
                     <div>&nbsp;↳ Executive brief generated &amp; HITL approval queued for SyncShop/SyncCMS <span style="color: #22c55e;">[READY]</span></div>
                 `,
                 ja: `
-                    <div style="color: #38bdf8;">[SyncInsight Debate Engine]</div>
-                    <div>&nbsp;↳ Aggregating SyncCrawl market feeds &amp; SyncShop conversion telemetry... <span style="color: #22c55e;">[Synced]</span></div>
-                    <div>&nbsp;↳ Running 3-Agent Roundtable (Growth vs Margin vs Risk)... <span style="color: #38bdf8;">[Consensus: +6.8% Net Margin]</span></div>
-                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncInsight Action Dispatch]</div>
-                    <div>&nbsp;↳ Executive brief generated &amp; HITL approval queued for SyncShop/SyncCMS <span style="color: #22c55e;">[READY]</span></div>
+                    <div style="color: #38bdf8;">[SyncInsight 分析エンジン]</div>
+                    <div>&nbsp;↳ SyncCrawl市場価格動向およびSyncShop売上テレメトリを統合中... <span style="color: #22c55e;">[同期完了]</span></div>
+                    <div>&nbsp;↳ 3エージェント討論(成長性・収益率・リスク)シミュレーション完了... <span style="color: #38bdf8;">[予想利益率 +6.8% 改善]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncInsight 実行計画配信]</div>
+                    <div>&nbsp;↳ 経営ブリーフィング生成およびSyncShop/SyncCMS向けHITL承認キュー登録 <span style="color: #22c55e;">[準備完了]</span></div>
                 `
             }
         },
@@ -348,11 +348,11 @@ function initMain() {
                 en: 'empasy llm route --models "gpt-4o,claude-3-7,vllm-local" --pii-mask strict',
                 ja: 'empasy llm route --models "gpt-4o,claude-3-7,vllm-local" --pii-mask strict'
             },
-            tag: { ko: '비용·보안 관리', en: 'AI Gateway & FinOps', ja: 'AIゲートウェイ' },
+            tag: { ko: 'AI 비용·보안 관리', en: 'AI Cost & Privacy', ja: 'AI費用・情報保護' },
             desc: {
-                ko: '민감한 개인정보를 자동으로 가리고, 중복 질문을 재사용해 AI 비용을 아껴줍니다.',
-                en: 'Controls token costs and security via multi-LLM routing, semantic caching, and PII masking.',
-                ja: 'マルチLLMルーティング、セマンティックキャッシュ、PIIマスキングでコストと安全性を制御します。'
+                ko: '민감한 개인정보를 자동으로 가리고, 중복 질문을 재사용해 AI 사용 요금을 40~60% 아껴줍니다.',
+                en: 'Automatically masks sensitive personal data and reuses repeated answers to cut AI token costs by 40-60%.',
+                ja: '機密・個人情報を自動マスキングし、重複質問の回答再利用でAI利用コストを40〜60%削減します。'
             },
             output: {
                 ko: `
@@ -370,11 +370,11 @@ function initMain() {
                     <div>&nbsp;↳ Dept budget usage: 41.2% | Cost reduction this month: -54.8% <span style="color: #22c55e;">[OPTIMAL]</span></div>
                 `,
                 ja: `
-                    <div style="color: #38bdf8;">[SyncLLM Gateway]</div>
-                    <div>&nbsp;↳ PII Guardrail: Masked 2 sensitive fields (SSN, Phone) prior to egress <span style="color: #22c55e;">[PROTECTED]</span></div>
-                    <div>&nbsp;↳ Redis pgvector Semantic Cache lookup... <span style="color: #38bdf8;">[CACHE HIT: Saved 4,200 tokens]</span></div>
-                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncLLM FinOps]</div>
-                    <div>&nbsp;↳ Dept budget usage: 41.2% | Cost reduction this month: -54.8% <span style="color: #22c55e;">[OPTIMAL]</span></div>
+                    <div style="color: #38bdf8;">[SyncLLM セキュリティゲートウェイ]</div>
+                    <div>&nbsp;↳ PIIガードレール: 外部送信前に機密情報2件(個人番号・連絡先)を自動マスキング <span style="color: #22c55e;">[保護済]</span></div>
+                    <div>&nbsp;↳ pgvector セマンティックキャッシュ照会... <span style="color: #38bdf8;">[CACHE HIT: 4,200トークン節約]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncLLM FinOps コスト統制]</div>
+                    <div>&nbsp;↳ 部門予算消化率: 41.2% | 今月のコスト削減率: -54.8% <span style="color: #22c55e;">[良好]</span></div>
                 `
             }
         },
@@ -389,11 +389,11 @@ function initMain() {
                 en: 'empasy eta run --target https://app.example.com --scenario "checkout-verification"',
                 ja: 'empasy eta run --target https://app.example.com --scenario "決済検証"'
             },
-            tag: { ko: '자동 테스트', en: 'Self-Healing QA', ja: '自己修復QA' },
+            tag: { ko: '자동 화면 테스트', en: 'Self-Healing UI Testing', ja: '画面自動テスト' },
             desc: {
-                ko: '화면 디자인이 바뀌어도 AI가 버튼을 스스로 찾아 끊김 없이 테스트합니다.',
-                en: 'Vision-LLM re-identifies UI elements visually to self-heal broken test scripts.',
-                ja: 'UIが変更されてもVision-LLMが要素を再特定し、テスト障害を自己修復します。'
+                ko: '화면 디자인이나 버튼 위치가 바뀌어도 AI가 스스로 찾아 끊김 없이 웹·앱 품질을 테스트합니다.',
+                en: 'Visually recognizes buttons even after UI redesigns to run uninterrupted web and app quality tests.',
+                ja: '画面デザインやボタン位置が変わってもAIが自ら見つけ出し、中断なくWeb・アプリ品質をテストします。'
             },
             output: {
                 ko: `
@@ -430,11 +430,11 @@ function initMain() {
                 en: 'empasy boot generate --domain "PaymentService" --pattern "Saga"',
                 ja: 'empasy boot generate --domain "PaymentService" --pattern "Saga"'
             },
-            tag: { ko: '백엔드 개발', en: 'MSA Engineer', ja: 'MSA自動構築' },
+            tag: { ko: '백오피스 코어·로우코드', en: 'Back-Office & Low-Code', ja: 'バックオフィス・ローコード' },
             desc: {
-                ko: '설계 문서에 맞춰 서버 코드와 데이터베이스 구조를 자동으로 생성합니다.',
-                en: 'Automates Spring Boot microservices code generation and Saga distributed transactions.',
-                ja: 'ドメインモデルに基づくSpring Bootマイクロサービス生成とSaga補償トランザクションを自動化します。'
+                ko: '조직도·직책별 권한, 전자결재, 71종 표준 업무 화면을 기본 제공하고 신규 기능을 빠르게 생성합니다.',
+                en: 'Provides built-in org permissions, e-approval, and 71 standard screens while generating new features via low-code.',
+                ja: '組織図・役職別権限、電子決裁、71種の標準業務画面を基本搭載し、新機能をローコードで迅速に生成します。'
             },
             output: {
                 ko: `
@@ -452,11 +452,11 @@ function initMain() {
                     <div>&nbsp;↳ Saga compensation transaction &amp; zero-mock tests generated... <span style="color: #22c55e;">[BUILD SUCCESS (1.2s)]</span></div>
                 `,
                 ja: `
-                    <div style="color: #38bdf8;">[SyncBoot Engine]</div>
-                    <div>&nbsp;↳ Analyzing domain schema &amp; DDD entity relationships... <span style="color: #22c55e;">[Done]</span></div>
-                    <div>&nbsp;↳ Generating Spring Boot 3.5.16 / Java 25 microservices scaffolding...</div>
-                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncBoot Verifier]</div>
-                    <div>&nbsp;↳ Saga compensation transaction &amp; zero-mock tests generated... <span style="color: #22c55e;">[BUILD SUCCESS (1.2s)]</span></div>
+                    <div style="color: #38bdf8;">[SyncBoot バックエンド生成]</div>
+                    <div>&nbsp;↳ 決済サービスのDBスキーマおよびDDDエンティティ関連を分析中... <span style="color: #22c55e;">[完了]</span></div>
+                    <div>&nbsp;↳ Spring Boot 3.5.16 / Java 25 サーバーAPIおよびRBACコード自動生成中...</div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncBoot 品質検証]</div>
+                    <div>&nbsp;↳ Saga補償トランザクションおよび単体テスト検証完了... <span style="color: #22c55e;">[ビルド成功 (1.2秒)]</span></div>
                 `
             }
         },
@@ -471,11 +471,11 @@ function initMain() {
                 en: 'empasy cms publish --page "launch-campaign" --languages "ko,en,ja"',
                 ja: 'empasy cms publish --page "launch-campaign" --languages "ko,en,ja"'
             },
-            tag: { ko: '웹 제작', en: 'Publisher Agent', ja: '配信エージェント' },
+            tag: { ko: '웹 제작·다국어 배포', en: 'Web & Global Publishing', ja: 'Web制作・多言語配信' },
             desc: {
-                ko: '요구사항에 맞는 웹페이지와 다국어 콘텐츠를 자동으로 만들고 배포합니다.',
-                en: 'Generates and deploys multi-lingual responsive web pages via Nuxt 3 SSR & 3-Agent Swarm.',
-                ja: 'Nuxt 3 SSRと3-Agent Swarmにより多言語レスポンシブWebとコンテンツをリアルタイム生成・配信します。'
+                ko: 'AI 초안 작성부터 광고법·개인정보 안전 검수, 다국어 자동 번역 및 글로벌 사이트 배포를 한 번에 처리합니다.',
+                en: 'Automates AI content drafting, compliance inspection, multilingual translation, and multi-site publishing.',
+                ja: 'AI下書き作成から広告法・個人情報検閲、多言語自動翻訳およびグローバルサイト配信まで一括処理します。'
             },
             output: {
                 ko: `
@@ -493,11 +493,11 @@ function initMain() {
                     <div>&nbsp;↳ Atomic cache purge &amp; Zero-Downtime multi-site deployment... <span style="color: #22c55e;">[LIVE (15+ Sites)]</span></div>
                 `,
                 ja: `
-                    <div style="color: #38bdf8;">[SyncCMS 3-Agent Swarm]</div>
-                    <div>&nbsp;↳ Copywriter &amp; SEO Agents synthesized Nuxt 3 SSR Page Fragments</div>
-                    <div>&nbsp;↳ Translating &amp; synchronizing resource tokens across 3 locales... <span style="color: #22c55e;">[Done]</span></div>
-                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCMS Publisher Edge]</div>
-                    <div>&nbsp;↳ Atomic cache purge &amp; Zero-Downtime multi-site deployment... <span style="color: #22c55e;">[LIVE (15+ Sites)]</span></div>
+                    <div style="color: #38bdf8;">[SyncCMS Web自動制作]</div>
+                    <div>&nbsp;↳ 新規キャンペーンページのレイアウトおよびSEO最適化コピーを生成</div>
+                    <div>&nbsp;↳ 韓国語・英語・日本語など多言語リソースの自動翻訳・同期... <span style="color: #22c55e;">[完了]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCMS マルチサイト配信]</div>
+                    <div>&nbsp;↳ 無停止キャッシュ更新およびグローバルサイト同時反映... <span style="color: #22c55e;">[配信完了 (15+ サイト)]</span></div>
                 `
             }
         },
@@ -512,11 +512,11 @@ function initMain() {
                 en: 'empasy shop optimize --catalog "electronics" --strategy "dynamic-margin"',
                 ja: 'empasy shop optimize --catalog "electronics" --strategy "dynamic-margin"'
             },
-            tag: { ko: '쇼핑몰 운영', en: 'Commerce Agent', ja: '自律型コマース' },
+            tag: { ko: '쇼핑몰 자율 운영', en: 'Autonomous Commerce', ja: 'EC自律運営' },
             desc: {
-                ko: '시장 가격과 고객 검색 의도를 분석해 상품 추천과 판매가를 자동으로 최적화합니다.',
-                en: 'Autonomously executes catalog enrichment, pgvector semantic search, and dynamic pricing on MSA.',
-                ja: '分散MSA基盤でカタログ生成、pgvectorセマンティック検索、動的価格設定を自律遂行します。'
+                ko: '상품 등록·재고 관리부터 목표 수익률을 지키는 가격 조정, 주문·배송 및 타임세일까지 자동화합니다.',
+                en: 'Automates product catalogs, margin-safe dynamic pricing, order fulfillment, and flash sale promotions.',
+                ja: '商品登録・在庫管理から利益率を守る価格調整、注文・配送追跡およびタイムセールまで自動化します。'
             },
             output: {
                 ko: `
@@ -528,17 +528,17 @@ function initMain() {
                 `,
                 en: `
                     <div style="color: #38bdf8;">[SyncShop Merchandiser]</div>
-                    <div>&nbsp;↳ Indexing 12,400 SKUs into PostgreSQL 17 pgvector hybrid search... <span style="color: #22c55e;">[Indexed]</span></div>
+                    <div>&nbsp;↳ Indexing 12,400 SKUs into PostgreSQL 18.6 pgvector hybrid search... <span style="color: #22c55e;">[Indexed]</span></div>
                     <div>&nbsp;↳ Competitor price shift detected via SyncCrawl: Adjusting dynamic margin... <span style="color: #38bdf8;">[+4.2% Rev]</span></div>
                     <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncShop OMS/PMS]</div>
                     <div>&nbsp;↳ Distributed order saga &amp; personalized promotion dispatched <span style="color: #22c55e;">[ACTIVE]</span></div>
                 `,
                 ja: `
-                    <div style="color: #38bdf8;">[SyncShop Merchandiser]</div>
-                    <div>&nbsp;↳ Indexing 12,400 SKUs into PostgreSQL 17 pgvector hybrid search... <span style="color: #22c55e;">[Indexed]</span></div>
-                    <div>&nbsp;↳ Competitor price shift detected via SyncCrawl: Adjusting dynamic margin... <span style="color: #38bdf8;">[+4.2% Rev]</span></div>
-                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncShop OMS/PMS]</div>
-                    <div>&nbsp;↳ Distributed order saga &amp; personalized promotion dispatched <span style="color: #22c55e;">[ACTIVE]</span></div>
+                    <div style="color: #38bdf8;">[SyncShop 商品・検索最適化]</div>
+                    <div>&nbsp;↳ 12,400商品のPostgreSQL 18.6 pgvectorハイブリッド検索インデックス更新... <span style="color: #22c55e;">[完了]</span></div>
+                    <div>&nbsp;↳ 競合価格変動を検知: 最適販売価格およびマージンを自動調整... <span style="color: #38bdf8;">[予想売上 +4.2%]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncShop プロモーション配信]</div>
+                    <div>&nbsp;↳ 顧客別パーソナライズ推薦およびタイムセール割引を自動適用 <span style="color: #22c55e;">[適用済]</span></div>
                 `
             }
         },
@@ -553,11 +553,11 @@ function initMain() {
                 en: 'empasy ops audit-profit --year 2026 --check-subcontract-overdue',
                 ja: 'empasy ops audit-profit --year 2026 --check-subcontract-overdue'
             },
-            tag: { ko: '프로젝트·손익 관리', en: 'SI PMO & Profit', ja: 'SI事業・損益管制' },
+            tag: { ko: '프로젝트·손익 관리', en: 'Project & Profit Control', ja: '事業損益・要員管理' },
             desc: {
-                ko: '프로젝트별 실시간 수익률과 인력 투입 현황, 보증보험·하도급 지급 기일을 관리합니다.',
-                en: 'Governs Dual-Rate P&L, KOSA M/M utilization matrix, 4 surety bonds, and 60-day subcontract compliance.',
-                ja: 'デュアル単価損益、KOSA稼働率マトリックス、4大保証保険および下請法60日期日を統合管制します。'
+                ko: '프로젝트별 실제 수익률과 인력 투입 일정, 보증보험 만기일·하도급 대금 지급기한을 한눈에 관리합니다.',
+                en: 'Tracks real-time project profitability, engineer schedules, surety bond expiries, and subcontract payment deadlines.',
+                ja: 'プロジェクト別の実質利益率と要員投入日程、保証証券満期・下請代金支払期限を一目で管理します。'
             },
             output: {
                 ko: `
@@ -575,11 +575,11 @@ function initMain() {
                     <div>&nbsp;↳ Subcontract Act 60-day payment check &amp; R&amp;D Note SHA-256 verified <span style="color: #22c55e;">[0 OVERDUE]</span></div>
                 `,
                 ja: `
-                    <div style="color: #38bdf8;">[SyncOps Profit &amp; PMO Engine]</div>
-                    <div>&nbsp;↳ Dual-Rate P&amp;L Pivot (Contract vs Actual Cost): 24 Active Projects... <span style="color: #22c55e;">[Avg Margin: 22.4%]</span></div>
-                    <div>&nbsp;↳ KOSA Grade M/M Matrix &amp; 4-Surety Bond expiry scan... <span style="color: #38bdf8;">[All Bonds Valid]</span></div>
-                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncOps Compliance Guard]</div>
-                    <div>&nbsp;↳ Subcontract Act 60-day payment check &amp; R&amp;D Note SHA-256 verified <span style="color: #22c55e;">[0 OVERDUE]</span></div>
+                    <div style="color: #38bdf8;">[SyncOps 損益・PMO分析]</div>
+                    <div>&nbsp;↳ 進行中24プロジェクトの契約額対実投入原価ピボット算出... <span style="color: #22c55e;">[平均利益率: 22.4%]</span></div>
+                    <div>&nbsp;↳ 月別要員稼働率(M/M)および4大保証保険満期日を点検... <span style="color: #38bdf8;">[異常なし]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncOps 法規コンプライアンス点検]</div>
+                    <div>&nbsp;↳ 下請代金60日支払期日および研究ノートSHA-256証跡確認 <span style="color: #22c55e;">[遅延 0件]</span></div>
                 `
             }
         },
@@ -594,11 +594,11 @@ function initMain() {
                 en: 'empasy crawl run --target "https://market.data.org" --schema "pricing.json"',
                 ja: 'empasy crawl run --target "https://market.data.org" --schema "pricing.json"'
             },
-            tag: { ko: '데이터 수집', en: 'Intelligence Scout', ja: 'データ収集' },
+            tag: { ko: '외부 데이터 수집·정제', en: 'Web Data Collection', ja: '外部データ収集・精製' },
             desc: {
-                ko: '웹사이트 구조가 바뀌어도 필요한 데이터를 중단 없이 수집하고 깔끔하게 정리합니다.',
-                en: 'Dynamically adapts to DOM changes and bypasses bot defenses to extract RAG knowledge.',
-                ja: 'DOM構造の変化に動的適応し、アクセス遮断を回避して高品質RAGデータを収集します。'
+                ko: '외부 사이트 구조가 바뀌어도 중단 없이 데이터를 수집하고, 광고와 개인정보를 제거해 깔끔하게 정리합니다.',
+                en: 'Continuously collects web data even when site layouts change, stripping ads and personal data into clean documents.',
+                ja: '外部サイトの構造が変わっても中断なくデータを収集し、広告や個人情報を除去して綺麗に整理します。'
             },
             output: {
                 ko: `
@@ -610,17 +610,17 @@ function initMain() {
                 `,
                 en: `
                     <div style="color: #38bdf8;">[SyncCrawl Scout]</div>
-                    <div>&nbsp;↳ Rotating residential proxy session &amp; bypassing dynamic CAPTCHA... <span style="color: #22c55e;">[Success]</span></div>
+                    <div>&nbsp;↳ Establishing compliant rate-limited session to target domain... <span style="color: #22c55e;">[Success]</span></div>
                     <div>&nbsp;↳ Target DOM layout changed: Auto-inferring semantic selectors... <span style="color: #38bdf8;">[Resolved]</span></div>
                     <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCrawl Pipeline]</div>
                     <div>&nbsp;↳ Structured JSON extracted &amp; Vectorized into RAG Knowledge Base... <span style="color: #22c55e;">[1,420 Items Synced]</span></div>
                 `,
                 ja: `
-                    <div style="color: #38bdf8;">[SyncCrawl Scout]</div>
-                    <div>&nbsp;↳ Rotating residential proxy session &amp; bypassing dynamic CAPTCHA... <span style="color: #22c55e;">[Success]</span></div>
-                    <div>&nbsp;↳ Target DOM layout changed: Auto-inferring semantic selectors... <span style="color: #38bdf8;">[Resolved]</span></div>
-                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCrawl Pipeline]</div>
-                    <div>&nbsp;↳ Structured JSON extracted &amp; Vectorized into RAG Knowledge Base... <span style="color: #22c55e;">[1,420 Items Synced]</span></div>
+                    <div style="color: #38bdf8;">[SyncCrawl データ収集]</div>
+                    <div>&nbsp;↳ 対象ドメインへの安全なレート制御接続およびポリシー検証... <span style="color: #22c55e;">[成功]</span></div>
+                    <div>&nbsp;↳ サイト画面構造の変更を検知: セマンティックセレクターを自動補正... <span style="color: #38bdf8;">[完了]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncCrawl データ精製・RAG反映]</div>
+                    <div>&nbsp;↳ 構造化JSON抽出・個人情報マスキングおよび社内知識DB反映完了... <span style="color: #22c55e;">[1,420件 反映]</span></div>
                 `
             }
         },
@@ -635,11 +635,11 @@ function initMain() {
                 en: 'empasy apim inspect --tokenizer "SqlXssLexicalTokenizer" --defense-pack "sync-watch"',
                 ja: 'empasy apim inspect --tokenizer "SqlXssLexicalTokenizer" --defense-pack "sync-watch"'
             },
-            tag: { ko: 'API 보안·트래픽 관제', en: 'API Security Gateway', ja: 'APIセキュリティ統制' },
+            tag: { ko: 'API 보안 게이트웨이', en: 'API Security Gateway', ja: 'APIセキュリティ統制' },
             desc: {
-                ko: '구문 토큰 지문 분석기(SqlXssLexicalTokenizer)와 SyncWatch 연동 핀셋 가상 패치(SandboxedDefenseEvaluator), 커널 eBPF 차단으로 위협을 방어합니다.',
-                en: 'Defends APIs via SqlXssLexicalTokenizer fingerprint analysis, SyncWatch pinpoint virtual patching (SandboxedDefenseEvaluator), and kernel eBPF blocking.',
-                ja: '構文トークン指紋分析器(SqlXssLexicalTokenizer)とSyncWatch連動ピンセット仮想パッチ(SandboxedDefenseEvaluator)、カーネルeBPF遮断で脅威を防御します。'
+                ko: '관리되지 않는 숨은 API를 찾아내고, 해킹 공격과 개인정보 유출을 실시간으로 차단합니다.',
+                en: 'Discovers unmanaged hidden APIs and blocks cyberattacks and personal data leaks in real time.',
+                ja: '未管理の隠れたAPIを検出し、サイバー攻撃と個人情報流出をリアルタイムに遮断します。'
             },
             output: {
                 ko: `
@@ -676,11 +676,11 @@ function initMain() {
                 en: 'empasy watch compile --feeds "nvd,cisa-kev,osv,ghsa,kisa" --broadcast "verse,apim"',
                 ja: 'empasy watch compile --feeds "nvd,cisa-kev,osv,ghsa,kisa" --broadcast "verse,apim"'
             },
-            tag: { ko: '보안 위협 관측·룰 컴파일', en: 'Threat Intel & Rule Compiler', ja: '脅威インテリジェンス・ルールコンパイラ' },
+            tag: { ko: '보안 위협 관측·방어', en: 'Threat Watch & Defense', ja: '脅威観測・自動防御' },
             desc: {
-                ko: '글로벌 보안 위협을 단일 허브로 수집·정규화하여 SyncVerse 점검 팩(VerseAuditPack)과 SyncAPIM 방어 팩(ApimDefensePack)을 실시간 컴파일·배포합니다.',
-                en: 'Ingests global threat feeds to compile and broadcast VerseAuditPack (Shift-Left code audit) and ApimDefensePack (Shift-Right runtime defense).',
-                ja: 'グローバル脅威フィードを単一ハブで収集・正規化し、VerseAuditPackとApimDefensePackをリアルタイムでコンパイル・配信します。'
+                ko: '전 세계 신규 보안 취약점을 24시간 수집해 우리 회사 영향도를 진단하고 방어 규칙을 자동 배포합니다.',
+                en: 'Monitors global security vulnerabilities 24/7, checks company impact, and automatically deploys defense rules.',
+                ja: '世界の最新セキュリティ脆弱性を24時間収集し、自社影響度の診断と防御ルールの自動配信を行います。'
             },
             output: {
                 ko: `
@@ -713,123 +713,554 @@ function initMain() {
             slug: 'sync-verse',
             screenUrl: '/images/screenshots/sync-verse/screen_01.png',
             caption: {
-                ko: 'SyncVerse 실제 관제 화면 — 11대 AI 에이전트 상태·승인·보안 통합 대시보드',
-                en: 'SyncVerse Live Console — Multi-Agent Orchestration & HITL Governance Dashboard',
-                ja: 'SyncVerse 実画面 — マルチエージェント統合管制・承認ダッシュボード'
-            }
+                ko: 'SyncVerse 통합 관제 화면 — 11대 AI 가동 상태·단계별 승인·보안 통합 대시보드',
+                en: 'SyncVerse Live Console — 11-Agent Status, Step-by-Step Approval & Security Dashboard',
+                ja: 'SyncVerse 実画面 — 11種AIの稼働状態・段階別承認・セキュリティ統合ダッシュボード'
+            },
+            screens: [
+                {
+                    idx: 1,
+                    tab: { ko: '1. 통합 관제 대시보드', en: '1. Control Dashboard', ja: '1. 統合管制ダッシュボード' },
+                    caption: {
+                        ko: '전사 AI 가동 상태 · 실시간 작업 흐름 · 승인 대기 현황을 한눈에 확인',
+                        en: 'Monitor all AI agents, live activity streams, and pending approvals at a glance',
+                        ja: '全社AIの稼働状態・リアルタイム作業フロー・承認待ち状況を一目で確認'
+                    }
+                },
+                {
+                    idx: 2,
+                    tab: { ko: '2. AI 작업 진행 목록', en: '2. AI Task Progress', ja: '2. AI作業進行一覧' },
+                    caption: {
+                        ko: '요구사항 분석부터 코드 작성 · 자동 품질 검증까지의 진행 현황',
+                        en: 'Track progress from requirement analysis to automated coding and quality checks',
+                        ja: '要件分析からコード作成・自動品質検証までの進行状況'
+                    }
+                },
+                {
+                    idx: 3,
+                    tab: { ko: '3. 웹 품질 · 검색 진단', en: '3. Web Quality Audit', ja: '3. Web品質・検索診断' },
+                    caption: {
+                        ko: '전사 웹사이트의 검색 노출 · AI 답변 최적화 · 성능 점수 현황판',
+                        en: 'Company-wide website search visibility, AI answer readiness, and performance scores',
+                        ja: '全社Webサイトの検索露出・AI回答最適化・性能スコア状況板'
+                    }
+                },
+                {
+                    idx: 4,
+                    tab: { ko: '4. 직책별 승인 · 원클릭 복구', en: '4. Role Approval & Instant Rollback', ja: '4. 役職別承認・ワンクリック復旧' },
+                    caption: {
+                        ko: '4단계 담당자 결재 대기함과 문제 발생 시 이전 상태 즉시 복구',
+                        en: '4-stage manager approval queue and one-click recovery to a safe snapshot',
+                        ja: '4段階の担当者決裁待機箱および問題発生時の即時ロールバック制御'
+                    }
+                }
+            ]
         },
         insight: {
             slug: 'sync-insight',
             screenUrl: '/images/screenshots/sync-insight/screen_01.png',
             caption: {
-                ko: 'SyncInsight 실제 분석 화면 — 다중 AI 토론 기반 경영 전략·수익성 시뮬레이션',
-                en: 'SyncInsight Live Console — Multi-Agent Strategic Debate & ROI Simulation',
-                ja: 'SyncInsight 実画面 — マルチAI討論に基づく経営戦略・収益性シミュレーション'
-            }
+                ko: 'SyncInsight 데이터 분석 화면 — 일상 언어 데이터 조회 및 경영 전략 시뮬레이션',
+                en: 'SyncInsight Live Console — Plain-Language Data Inquiry & Strategy Simulation',
+                ja: 'SyncInsight 実画面 — 自然言語でのデータ照会および経営戦略シミュレーション'
+            },
+            screens: [
+                {
+                    idx: 1,
+                    tab: { ko: '1. 일상 언어 데이터 질문', en: '1. Plain-Language Data Search', ja: '1. 自然言語データ質問' },
+                    caption: {
+                        ko: '한국어로 질문하면 안전한 읽기 전용 데이터 조회와 표·차트로 즉시 변환',
+                        en: 'Ask in plain language to instantly get safe read-only data tables and charts',
+                        ja: '日常語で質問すると安全な読み取り専用データ照会と表・チャートへ即時変換'
+                    }
+                },
+                {
+                    idx: 2,
+                    tab: { ko: '2. 심층 원인 분석 보고서', en: '2. Deep Root-Cause Report', ja: '2. 深層原因分析レポート' },
+                    caption: {
+                        ko: '전사 매출·거래 내역과 시스템 지연 원인을 교차 분석한 요약 리포트',
+                        en: 'Cross-analyzed executive summary of transaction trends and system bottlenecks',
+                        ja: '全社取引履歴とシステム遅延原因を交差分析した要約レポート'
+                    }
+                },
+                {
+                    idx: 3,
+                    tab: { ko: '3. 분석 대상 DB 안전 연결', en: '3. Safe Database Connections', ja: '3. 分析対象DB安全接続' },
+                    caption: {
+                        ko: '사내 데이터베이스 다중 연결 및 원본 데이터 훼손 방지 읽기 전용 보호',
+                        en: 'Connect multiple internal databases with strict read-only data protection',
+                        ja: '社内データベース多重接続および原本保護のための読み取り専用ガード'
+                    }
+                },
+                {
+                    idx: 4,
+                    tab: { ko: '4. 화면-서버-DB 영향도 추적', en: '4. End-to-End Impact Tracking', ja: '4. 画面・サーバー・DB影響度追跡' },
+                    caption: {
+                        ko: '화면부터 서버 API · 데이터베이스까지 변경 시 영향을 받는 범위를 한눈에 파악',
+                        en: 'Trace how a change affects screens, APIs, services, and database tables',
+                        ja: '画面からAPI・DBテーブルまで変更時の影響範囲を一目で把握'
+                    }
+                }
+            ]
         },
         llm: {
             slug: 'sync-llm',
             screenUrl: '/images/screenshots/sync-llm/screen_01.png',
             caption: {
-                ko: 'SyncLLM 실제 대시보드 — AI 모델 라우팅, 토큰 비용 절감 및 개인정보 가림 관제',
-                en: 'SyncLLM Live Console — Multi-LLM Routing, Token FinOps & PII Guardrail',
-                ja: 'SyncLLM 実画面 — マルチLLMルーティング・トークンコスト削減・PII保護'
-            }
+                ko: 'SyncLLM 비용·보안 화면 — AI 모델 자동 배분, 요금 절감 및 개인정보 보호 대시보드',
+                en: 'SyncLLM Live Console — Smart Model Routing, Cost Savings & Privacy Protection',
+                ja: 'SyncLLM 実画面 — AIモデル自動振り分け・利用料金削減・個人情報保護ダッシュボード'
+            },
+            screens: [
+                {
+                    idx: 1,
+                    tab: { ko: '1. AI 비용 · 사용량 현황판', en: '1. Cost & Usage Dashboard', ja: '1. AI費用・使用量状況板' },
+                    caption: {
+                        ko: '월간 AI 호출 건수 · 부서별 예산 사용률 및 장애 시 우회 처리 내역',
+                        en: 'Monthly AI call volume, department budget usage, and automatic failover logs',
+                        ja: '月間AI呼出件数・部門別予算使用率および障害時の自動切替履歴'
+                    }
+                },
+                {
+                    idx: 2,
+                    tab: { ko: '2. 다중 AI 모델 통합 연결', en: '2. Multi-AI Model Connections', ja: '2. マルチAIモデル統合接続' },
+                    caption: {
+                        ko: 'OpenAI · Claude · Gemini · 사내 구축형 AI 연결 및 암호화 키 안전 보관',
+                        en: 'Connect OpenAI, Claude, Gemini, and private models with encrypted key storage',
+                        ja: 'OpenAI・Claude・Gemini・社内AIの連携および暗号化キー安全保管'
+                    }
+                },
+                {
+                    idx: 3,
+                    tab: { ko: '3. 모델별 요금 · 자동 배분', en: '3. Model Pricing & Smart Routing', ja: '3. モデル別料金・自動振り分け' },
+                    caption: {
+                        ko: '질문 난이도에 맞춰 가성비 높은 AI 모델로 자동 연결하는 요금 최적화',
+                        en: 'Automatically route queries to the most cost-effective AI model by complexity',
+                        ja: '質問の難易度に合わせて最適なAIモデルへ自動接続するコスト最適化'
+                    }
+                },
+                {
+                    idx: 4,
+                    tab: { ko: '4. 부서별 사용 기록 · 절감 내역', en: '4. Department Usage & Savings Log', ja: '4. 部門別利用記録・削減内訳' },
+                    caption: {
+                        ko: '부서·사용자별 AI 질문 내역과 중복 답변 재사용으로 절약한 비용 확인',
+                        en: 'Audit AI queries by team and track costs saved through answer caching',
+                        ja: '部門・ユーザー別の利用履歴と回答キャッシュで節約したコストを確認'
+                    }
+                }
+            ]
         },
         apim: {
             slug: 'sync-apim',
             screenUrl: '/images/screenshots/sync-apim/screen_01.png',
             caption: {
-                ko: 'SyncAPIM 실제 관제 화면 — 구문 토큰 지문 분석, SyncWatch 핀셋 가상 패치 및 커널 eBPF 차단',
-                en: 'SyncAPIM Live Console — Lexical Token Fingerprint, SyncWatch Virtual Patch & Kernel eBPF Security',
-                ja: 'SyncAPIM 実画面 — 構文トークン指紋分析・SyncWatch仮想パッチ・カーネルeBPF遮断'
-            }
+                ko: 'SyncAPIM 보안 관제 화면 — 숨은 API 자동 탐지, 해킹 공격 실시간 차단 및 개인정보 보호',
+                en: 'SyncAPIM Live Console — Hidden API Discovery, Real-Time Attack Blocking & Data Masking',
+                ja: 'SyncAPIM 実画面 — 隠れたAPIの自動検出・サイバー攻撃のリアルタイム遮断・個人情報保護'
+            },
+            screens: [
+                {
+                    idx: 1,
+                    tab: { ko: '1. API 보안 통합 현황판', en: '1. API Security Dashboard', ja: '1. APIセキュリティ統合状況板' },
+                    caption: {
+                        ko: '전체 API 소통량 · 보안 점검 점수 · 실시간 공격 차단 추이를 한눈에 확인',
+                        en: 'Real-time API traffic volume, security health scores, and blocked attack trends',
+                        ja: '全API通信量・セキュリティ点検スコア・リアルタイム攻撃遮断推移を一目で確認'
+                    }
+                },
+                {
+                    idx: 2,
+                    tab: { ko: '2. 전체 API 목록 · 숨은 API 탐지', en: '2. API Inventory & Hidden APIs', ja: '2. 全API一覧・未登録API検出' },
+                    caption: {
+                        ko: '실제 통신을 분석해 문서에 없는 미등록 API를 찾아내고 위험도를 진단',
+                        en: 'Automatically discover undocumented APIs from live traffic and score their risk',
+                        ja: '通信トラフィックから仕様書外の未登録APIを自動検出し危険度を診断'
+                    }
+                },
+                {
+                    idx: 3,
+                    tab: { ko: '3. 해킹 공격 실시간 차단', en: '3. Real-Time Attack Blocking', ja: '3. サイバー攻撃リアルタイム遮断' },
+                    caption: {
+                        ko: '변형된 해킹 시도와 AI 악용 공격을 0.03밀리초 내에 차단하고 개인정보를 가림 처리',
+                        en: 'Block disguised injection attacks in 0.03ms and automatically mask sensitive data',
+                        ja: '巧妙化した攻撃やAI悪用を0.03ミリ秒で遮断し個人情報を自動マスキング'
+                    }
+                },
+                {
+                    idx: 4,
+                    tab: { ko: '4. 업무별 맞춤형 보호 규칙', en: '4. Custom Protection Policies', ja: '4. 業務別カスタム保護ルール' },
+                    caption: {
+                        ko: '인증 위변조 방지 · 결제 보호 · AI 프롬프트 방화벽 · 미등록 API 격리 설정',
+                        en: 'Configure token integrity, payment protection, AI firewall, and API quarantine rules',
+                        ja: '認証改ざん防止・決済保護・AIプロンプト防御・未登録API隔離設定'
+                    }
+                }
+            ]
         },
         watch: {
             slug: 'sync-watch',
             screenUrl: '/images/screenshots/sync-watch/screen_01.png',
             caption: {
-                ko: 'SyncWatch 실제 관제 화면 — 7대 글로벌 위협 수집 및 VerseAuditPack·ApimDefensePack 듀얼 컴파일·배포',
-                en: 'SyncWatch Live Console — Global Threat Intelligence & Dual Security Rule Compiler',
-                ja: 'SyncWatch 実画面 — グローバル脅威収集およびデュアルセキュリティルールコンパイラ'
-            }
+                ko: 'SyncWatch 위협 관제 화면 — 글로벌 보안 취약점 수집, 사내 영향도 진단 및 방어 규칙 자동 배포',
+                en: 'SyncWatch Live Console — Global Vulnerability Monitoring, Impact Analysis & Auto-Defense',
+                ja: 'SyncWatch 実画面 — グローバル脆弱性収集・社内影響度診断および防御ルール自動配信'
+            },
+            screens: [
+                {
+                    idx: 1,
+                    tab: { ko: '1. 보안 위협 관측 대시보드', en: '1. Threat Monitoring Dashboard', ja: '1. セキュリティ脅威観測ダッシュボード' },
+                    caption: {
+                        ko: '8대 국내외 보안 기관의 최신 취약점 수집 현황과 방어 규칙 배포 상태',
+                        en: 'Live feed status across 8 global security agencies and automated defense deployment',
+                        ja: '8大国内外セキュリティ機関の最新脆弱性収集状況と防御ルール配信ステータス'
+                    }
+                },
+                {
+                    idx: 2,
+                    tab: { ko: '2. 국내외 위협 수집 채널', en: '2. Official Security Feed Channels', ja: '2. 国内外セキュリティ収集チャネル' },
+                    caption: {
+                        ko: '미국 CISA · NVD · 한국 KISA 등 공식 보안 정보원 연결 상태와 수집 주기 관리',
+                        en: 'Manage connection health and collection schedules for CISA, NVD, OSV, and KISA feeds',
+                        ja: 'CISA・NVD・OSV・KISAなど公式セキュリティ情報源の接続状態と収集周期管理'
+                    }
+                },
+                {
+                    idx: 3,
+                    tab: { ko: '3. 보안 취약점 · 사내 영향도', en: '3. Vulnerability & Impact Check', ja: '3. 脆弱性警報・社内影響度照合' },
+                    caption: {
+                        ko: '새로 발표된 보안 경보가 우리 회사 시스템에 영향을 주는지 즉시 대조',
+                        en: 'Instantly match newly disclosed security alerts against your company software assets',
+                        ja: '新たに公開されたセキュリティ警報が自社システムに影響するか即座に照合'
+                    }
+                },
+                {
+                    idx: 4,
+                    tab: { ko: '4. 방어 규칙 자동 생성 · 배포', en: '4. Auto-Generated Defense Rules', ja: '4. 防御ルール自動生成・一括配信' },
+                    caption: {
+                        ko: '서버 재시작 없이 개발 코드 점검 규칙과 API 차단 규칙을 전사에 동시 적용',
+                        en: 'Deploy code inspection rules and live API blocking policies without server restarts',
+                        ja: 'サーバー再起動なしでコード点検ルールとAPI遮断ルールを全社へ同時適用'
+                    }
+                }
+            ]
         },
         boot: {
             slug: 'sync-boot',
             screenUrl: '/images/screenshots/sync-boot/screen_01.png',
             caption: {
-                ko: 'SyncBoot 실제 관리 화면 — 자연어 설계 기반 백엔드 서버·API·권한 자동 생성',
-                en: 'SyncBoot Live Console — Autonomous Spring Boot MSA & RBAC Code Generation',
-                ja: 'SyncBoot 実画面 — バックエンドサーバー・API・権限管理の自動構築'
-            }
+                ko: 'SyncBoot 실제 관리 화면 — 기업 표준 백오피스, 직책별 권한 관리 및 전자결재 플랫폼',
+                en: 'SyncBoot Live Console — Enterprise Back-Office Core, Role Permissions & E-Approval Platform',
+                ja: 'SyncBoot 実画面 — 企業標準バックオフィス・役職別権限管理・電子決裁プラットフォーム'
+            },
+            screens: [
+                {
+                    idx: 1,
+                    tab: { ko: '1. 백오피스 경영 리포트', en: '1. Executive Management Report', ja: '1. バックオフィス経営レポート' },
+                    caption: {
+                        ko: '부서별 예산 집행 현황 · 자동화 비용 절감액 · 결재 처리 속도 통합 리포트',
+                        en: 'Department budget execution, automation cost savings, and approval turnaround metrics',
+                        ja: '部門別予算執行状況・自動化コスト削減額・決裁処理速度の統合レポート'
+                    }
+                },
+                {
+                    idx: 2,
+                    tab: { ko: '2. 조직 · 직책별 권한 관리', en: '2. Org & Role Permission Control', ja: '2. 組織・役職別権限管理' },
+                    caption: {
+                        ko: '부서 조직도와 연동된 임직원 계정 및 직책별 메뉴·버튼 접근 권한 설정',
+                        en: 'Manage employee accounts linked to org charts with granular menu and button permissions',
+                        ja: '組織図と連動した社員アカウントおよび役職別メニュー・ボタン権限設定'
+                    }
+                },
+                {
+                    idx: 3,
+                    tab: { ko: '3. 다단계 전자결재 문서함', en: '3. Multi-Stage Electronic Approval', ja: '3. 多段階電子決裁ドキュメント箱' },
+                    caption: {
+                        ko: '기안부터 검토 · 합의 · 최종 승인까지 한국 기업형 전자결재 진행 및 품의 관리',
+                        en: 'Track enterprise requisitions from drafting and review to consensus and final sign-off',
+                        ja: '起案から検討・合議・最終承認まで企業標準の電子決裁進行および稟議管理'
+                    }
+                },
+                {
+                    idx: 4,
+                    tab: { ko: '4. 실시간 시스템 감사 기록', en: '4. Real-Time System Audit Log', ja: '4. リアルタイムシステム監査記録' },
+                    caption: {
+                        ko: '권한 변경 · 결재 승인 · 정기 자동 작업 등 모든 시스템 활동 기록을 투명하게 추적',
+                        en: 'Transparently track permission updates, approval sign-offs, and scheduled background jobs',
+                        ja: '権限変更・決裁承認・定期自動バッチなど全システム活動履歴を透明に追跡'
+                    }
+                }
+            ]
         },
         cms: {
             slug: 'sync-cms',
             screenUrl: '/images/screenshots/sync-cms/screen_01.png',
             caption: {
-                ko: 'SyncCMS 실제 운영 화면 — 웹사이트 페이지 자동 제작 및 15개국 다국어 동시 배포',
-                en: 'SyncCMS Live Console — Autonomous Web Publishing & 15+ Language Localization',
-                ja: 'SyncCMS 実画面 — Webページ自動生成および15カ国語同時翻訳・配信'
-            }
+                ko: 'SyncCMS 실제 운영 화면 — 멀티사이트 콘텐츠 관리, 안전 검수 및 다국어 자동 번역',
+                en: 'SyncCMS Live Console — Multi-Site Content Management, Safety Audit & AI Translation',
+                ja: 'SyncCMS 実画面 — マルチサイトコンテンツ管理・安全検閲および多言語自動翻訳'
+            },
+            screens: [
+                {
+                    idx: 1,
+                    tab: { ko: '1. 멀티사이트 운영 현황판', en: '1. Multi-Site Operations Dashboard', ja: '1. マルチサイト運営状況板' },
+                    caption: {
+                        ko: '전체 회원 · 게시글 · 방문자 추이와 다국어 사이트별 콘텐츠 현황을 한눈에 확인',
+                        en: 'Monitor member growth, content volume, visitor trends, and multi-region portals',
+                        ja: '全会員・記事数・訪問者推移および多言語サイト別コンテンツ状況を一目で確認'
+                    }
+                },
+                {
+                    idx: 2,
+                    tab: { ko: '2. 게시글 · AI 초안 관리', en: '2. Content & AI Draft Management', ja: '2. 記事・AI下書き管理' },
+                    caption: {
+                        ko: '카테고리별 콘텐츠 분류, AI 초안 자동 작성 및 단계별 발행 승인 관리',
+                        en: 'Organize category trees, generate AI article drafts, and manage staged publishing approvals',
+                        ja: 'カテゴリ別コンテンツ分類、AI下書き自動作成および段階別公開承認管理'
+                    }
+                },
+                {
+                    idx: 3,
+                    tab: { ko: '3. 발행 전 콘텐츠 안전 검수', en: '3. Pre-Publish Safety Inspection', ja: '3. 公開前コンテンツ安全検閲' },
+                    caption: {
+                        ko: '본문 · 첨부파일 · 댓글 내 개인정보 노출과 표시광고법 위반 문구를 사전 점검',
+                        en: 'Automatically scan articles and attachments for privacy leaks and regulatory banned terms',
+                        ja: '本文・添付ファイル・コメント内の個人情報露出や広告規制違反表現を事前点検'
+                    }
+                },
+                {
+                    idx: 4,
+                    tab: { ko: '4. 다국어 AI 자동 번역', en: '4. Brand-Aligned AI Translation', ja: '4. 多言語AI自動翻訳' },
+                    caption: {
+                        ko: '브랜드 고유 용어를 유지하며 영·일·중·독·스페인어로 번역하고 원문과 나란히 비교',
+                        en: 'Translate into EN, JA, ZH, DE, and ES with brand glossary consistency and side-by-side preview',
+                        ja: 'ブランド固有用語を維持した英・日・中・独・西語翻訳と原文・訳文の並列比較'
+                    }
+                }
+            ]
         },
         shop: {
             slug: 'sync-shop',
             screenUrl: '/images/screenshots/sync-shop/screen_01.png',
             caption: {
-                ko: 'SyncShop 실제 커머스 화면 — 맞춤형 상품 추천, 다이내믹 가격 조정 및 주문 관리',
-                en: 'SyncShop Live Console — AI Merchandising, Dynamic Pricing & Order Operations',
-                ja: 'SyncShop 実画面 — AI商品推薦・ダイナミックプライシング・注文統合管理'
-            }
+                ko: 'SyncShop 실제 커머스 화면 — 상품·재고 관리, 마진 보호 가격 최적화 및 통합 주문 대시보드',
+                en: 'SyncShop Live Console — Catalog & Inventory, Margin-Safe Pricing & Unified Order Management',
+                ja: 'SyncShop 実画面 — 商品・在庫管理、利益率保護プライシングおよび統合注文ダッシュボード'
+            },
+            screens: [
+                {
+                    idx: 1,
+                    tab: { ko: '1. 쇼핑몰 매출 · 운영 현황판', en: '1. Store Revenue & Ops Dashboard', ja: '1. ショップ売上・運営状況板' },
+                    caption: {
+                        ko: '배송 · 반품 · 고객 문의 실시간 지표와 일별 매출·카테고리별 판매 비중 분석',
+                        en: 'Real-time shipping, return, and inquiry metrics alongside daily sales and category share',
+                        ja: '配送・返品・顧客問合せ指標および日別売上・カテゴリ別販売比率の分析'
+                    }
+                },
+                {
+                    idx: 2,
+                    tab: { ko: '2. 상품 카탈로그 · 재고 관리', en: '2. Product Catalog & Inventory', ja: '2. 商品カタログ・在庫管理' },
+                    caption: {
+                        ko: '수만 개 상품 정보와 옵션별 실시간 재고, 최소 마진을 보장하는 판매가 관리',
+                        en: 'Manage multi-store catalogs, live SKU inventory, and minimum-margin protected prices',
+                        ja: 'マルチストア商品カタログ・リアルタイム在庫および最低利益率を守る販売価格管理'
+                    }
+                },
+                {
+                    idx: 3,
+                    tab: { ko: '3. 통합 주문 · 배송 추적', en: '3. Unified Order & Delivery Tracking', ja: '3. 統合注文・配送追跡' },
+                    caption: {
+                        ko: '결제 완료부터 출고 지시 · 배송 완료까지 전 과정의 주문 상태를 한곳에서 관리',
+                        en: 'Track every order from payment confirmation to warehouse dispatch and delivery',
+                        ja: '決済完了から出庫指示・配送完了まで全過程の注文ステータスを一元管理'
+                    }
+                },
+                {
+                    idx: 4,
+                    tab: { ko: '4. 타임세일 · 프로모션 관리', en: '4. Flash Sales & Promotions', ja: '4. タイムセール・販促管理' },
+                    caption: {
+                        ko: '시즌별 특가 행사 일정 설정과 AI 추천 할인 상품 구성을 클릭 한 번으로 적용',
+                        en: 'Schedule seasonal flash deals and launch AI-recommended discount campaigns in one click',
+                        ja: 'シーズン別特売イベントの日程設定とAI推薦割引キャンペーンをワンクリック適用'
+                    }
+                }
+            ]
         },
         ops: {
             slug: 'sync-ops',
             screenUrl: '/images/screenshots/sync-ops/screen_01.png',
             caption: {
-                ko: 'SyncOps 실제 손익 화면 — 프로젝트별 실시간 수익률·인력 투입·보증보험 통합 관리',
-                en: 'SyncOps Live Console — Real-Time Project P&L, Resource M/M & Surety Bond Guard',
-                ja: 'SyncOps 実画面 — プロジェクト別リアルタイム損益・要員稼働・保証保険管理'
-            }
+                ko: 'SyncOps 실제 경영 화면 — 프로젝트별 실시간 손익, 인력 투입 일정 및 하도급·보증 기한 관리',
+                en: 'SyncOps Live Console — Real-Time Project Profitability, Staffing Schedule & Legal Compliance',
+                ja: 'SyncOps 実画面 — プロジェクト別リアルタイム損益・要員投入日程および下請・保証期限管理'
+            },
+            screens: [
+                {
+                    idx: 1,
+                    tab: { ko: '1. 전사 프로젝트 경영 현황판', en: '1. Executive Project Dashboard', ja: '1. 全社プロジェクト経営状況板' },
+                    caption: {
+                        ko: '전사 인력 가동률 · 영업이익 · 대기 인력 · 미수금 총액 및 위험 프로젝트 경보',
+                        en: 'Company-wide utilization, operating profit, available staff, unpaid receivables, and risk alerts',
+                        ja: '全社稼働率・営業利益・待機要員・未収金総額およびリスクプロジェクト警報'
+                    }
+                },
+                {
+                    idx: 2,
+                    tab: { ko: '2. 인원 · 프로젝트 · 분기별 손익표', en: '2. Multi-View Profit & Loss Table', ja: '2. 要員・案件・四半期別損益表' },
+                    caption: {
+                        ko: '계약 금액 대비 실제 투입 원가를 계산해 프로젝트별·분기별(1Q~4Q) 순이익을 비교',
+                        en: 'Compare contract revenue against actual labor costs by person, project, and quarter',
+                        ja: '契約金額に対する実投入原価を算出し、案件別・四半期別(1Q〜4Q)の純利益を比較'
+                    }
+                },
+                {
+                    idx: 3,
+                    tab: { ko: '3. 하도급 지급기한 · 보증보험 점검', en: '3. Subcontract & Surety Deadline Guard', ja: '3. 下請支払期限・保証証券点検' },
+                    caption: {
+                        ko: '하도급 대금 60일 지급 마감일(D-Day) 알림과 4대 보증증권 만기일 사전 점검',
+                        en: 'Monitor 60-day subcontract payment deadlines (D-Day) and 4 major surety bond expiration dates',
+                        ja: '下請代金60日支払期限(D-Day)アラートおよび4大保証証券の満期日事前点検'
+                    }
+                },
+                {
+                    idx: 4,
+                    tab: { ko: '4. 엔지니어 투입 일정 · 단가 관리', en: '4. Staffing Schedule & Margin Matrix', ja: '4. 技術者投入日程・単価管理' },
+                    caption: {
+                        ko: '기술등급별 인력 투입 기간과 청구 단가 대비 실제 원가·순익을 한눈에 관리',
+                        en: 'Manage engineer assignment timelines, billing rates vs. actual costs, and net contribution',
+                        ja: '技術等級別の要員投入期間および請求単価対実原価・純利益を一目で管理'
+                    }
+                }
+            ]
         },
         eta: {
             slug: 'sync-eta',
             screenUrl: '/images/screenshots/sync-eta/screen_01.png',
             caption: {
-                ko: 'SyncETA 실제 스튜디오 화면 — 화면이 바뀌어도 스스로 복구하는 AI 시각 인식 테스트',
-                en: 'SyncETA Live Studio — Vision-LLM Self-Healing UI Test Automation',
-                ja: 'SyncETA 実画面 — UI変更を自動認識・自己修復するAIテスト自動化スタジオ'
-            }
+                ko: 'SyncETA 실제 테스트 화면 — 화면 개편에도 멈추지 않는 자동 복구 테스트 및 배포 전후 비교',
+                en: 'SyncETA Live Studio — Uninterrupted Self-Healing UI Testing & Pre/Post-Deploy Visual Comparison',
+                ja: 'SyncETA 実画面 — UI改修でも止まらない自動復旧テストおよびリリース前後の画面比較'
+            },
+            screens: [
+                {
+                    idx: 1,
+                    tab: { ko: '1. 자동 품질 검증 현황판', en: '1. Automated Quality Dashboard', ja: '1. 自動品質検証ダッシュボード' },
+                    caption: {
+                        ko: '전체 테스트 시나리오 통과율 · 4단계 품질 점검 현황 및 AI 비용 절감 지표',
+                        en: 'Overall scenario pass rate, 4-stage quality pipeline health, and token cost savings',
+                        ja: '全テストシナリオ通過率・4段階品質点検状況およびAIコスト削減指標'
+                    }
+                },
+                {
+                    idx: 2,
+                    tab: { ko: '2. 바뀐 버튼 자동 찾기 (자동 복구)', en: '2. Automatic Button Recovery', ja: '2. 変更ボタンの自動検出・復旧' },
+                    caption: {
+                        ko: '화면 개편으로 위치나 이름이 바뀐 버튼을 AI가 스스로 찾아 복구한 내역과 정확도',
+                        en: 'See how AI locates and heals moved or renamed UI buttons after screen updates',
+                        ja: '画面改修で位置や名前が変わったボタンをAIが自動特定・復旧した履歴と精度'
+                    }
+                },
+                {
+                    idx: 3,
+                    tab: { ko: '3. 배포 전후 화면 깨짐 비교', en: '3. Pre/Post-Update Screen Comparison', ja: '3. リリース前後の画面崩れ比較' },
+                    caption: {
+                        ko: 'PC · 모바일 화면에서 업데이트 전후 레이아웃이 어긋난 곳을 빨간색으로 자동 표시',
+                        en: 'Automatically highlight visual layout shifts across desktop and mobile screens before release',
+                        ja: 'PC・モバイル画面で更新前後のレイアウトずれ箇所を自動で視覚ハイライト'
+                    }
+                },
+                {
+                    idx: 4,
+                    tab: { ko: '4. 서비스별 테스트 실행 기록', en: '4. Service Test Execution History', ja: '4. サービス別テスト実行履歴' },
+                    caption: {
+                        ko: '주요 업무 시나리오별 성공률과 오류 발생 시점의 화면 캡처 증적 조회',
+                        en: 'Review pass rates by business flow with step-by-step screenshot evidence',
+                        ja: '主要業務シナリオ別の成功率とエラー発生時点の画面キャプチャ証跡照会'
+                    }
+                }
+            ]
         },
         crawl: {
             slug: 'sync-crawl',
             screenUrl: '/images/screenshots/sync-crawl/screen_01.png',
             caption: {
-                ko: 'SyncCrawl 실제 파이프라인 화면 — 사이트 변경 자동 대응 웹 수집 및 정제 대시보드',
-                en: 'SyncCrawl Live Console — Self-Adapting Web Extraction & RAG Knowledge Pipeline',
-                ja: 'SyncCrawl 実画面 — サイト構造変化に自動対応するWeb収集・データ精製'
-            }
+                ko: 'SyncCrawl 실제 수집 화면 — 사이트 개편 자동 대응 데이터 수집 및 개인정보 가림 정제',
+                en: 'SyncCrawl Live Console — Layout-Adaptive Web Collection & Privacy-Safe Document Cleaning',
+                ja: 'SyncCrawl 実画面 — サイト改修に自動対応するデータ収集および個人情報マスキング精製'
+            },
+            screens: [
+                {
+                    idx: 1,
+                    tab: { ko: '1. 데이터 수집 현황 대시보드', en: '1. Data Collection Dashboard', ja: '1. データ収集状況ダッシュボード' },
+                    caption: {
+                        ko: '수집 대상 사이트 연결 상태 · 일일 수집 건수 · 성공률 및 자동 복구 현황',
+                        en: 'Target site health, daily collection volume, success rates, and auto-recovery status',
+                        ja: '収集対象サイトの接続状態・日次収集件数・成功率および自動復旧状況'
+                    }
+                },
+                {
+                    idx: 2,
+                    tab: { ko: '2. 수집 대상 사이트 · 주기 설정', en: '2. Target Websites & Schedules', ja: '2. 収集対象サイト・周期設定' },
+                    caption: {
+                        ko: '수집할 웹사이트 주소 등록과 로그인 방식, 정기 수집 시간표(매일/매시간) 관리',
+                        en: 'Register target URLs, configure login profiles, and set hourly or daily collection schedules',
+                        ja: '収集するWebサイトURL登録、ログイン方式および定期収集スケジュール管理'
+                    }
+                },
+                {
+                    idx: 3,
+                    tab: { ko: '3. 본문 정제 · 개인정보 가림', en: '3. Clean Text & Privacy Masking', ja: '3. 本文抽出・個人情報マスキング' },
+                    caption: {
+                        ko: '불필요한 광고 메뉴를 걷어내고 본문만 깔끔하게 추출하며 개인정보를 안전하게 가림 처리',
+                        en: 'Strip ads and navigation clutter into clean documents while masking personal information',
+                        ja: '不要な広告やメニューを除去して本文のみを抽出し、個人情報を安全にマスキング'
+                    }
+                },
+                {
+                    idx: 4,
+                    tab: { ko: '4. 안전한 수집 속도 · 규정 준수', en: '4. Safe Speed & Policy Compliance', ja: '4. 安全な収集速度・規約遵守' },
+                    caption: {
+                        ko: '대상 사이트의 수집 허용 규칙(robots.txt)을 지키고 과부하를 막는 접속 속도 제어',
+                        en: 'Enforce robots.txt rules and polite request intervals to prevent server overload or blocks',
+                        ja: '対象サイトの収集規約(robots.txt)を遵守し負荷を防ぐリクエスト速度制御'
+                    }
+                }
+            ]
         }
     };
 
-    if (terminalTabs.length > 0 && terminalInput && terminalOutput) {
-        let typingTimer = null;
+    if (terminalTabs.length > 0) {
+        // Hide noisy CLI copy button and raw console output box so visual screen preview is the centerpiece
+        if (terminalCopyBtn) {
+            terminalCopyBtn.style.display = 'none';
+        }
+        if (terminalInput && terminalInput.parentElement && terminalInput.parentElement.parentElement) {
+            terminalInput.parentElement.parentElement.style.display = 'none';
+        }
+
+        const detailBtnLabel = langKey === 'en'
+            ? 'View Solution Details &rarr;'
+            : (langKey === 'ja' ? '詳細を見る &rarr;' : '이 솔루션 자세히 보기 &rarr;');
 
         // Ensure Visual Screen Preview Banner exists inside .interactive-terminal
         let screenPreviewBox = document.querySelector('.terminal-screen-preview');
         if (!screenPreviewBox && terminalRoleBanner && terminalRoleBanner.parentElement) {
             screenPreviewBox = document.createElement('div');
             screenPreviewBox.className = 'terminal-screen-preview';
-            screenPreviewBox.style.cssText = 'padding: 1rem 1.25rem; background: rgba(15, 23, 42, 0.92); border-bottom: 1px solid #334155; display: flex; flex-direction: column; gap: 0.75rem;';
+            screenPreviewBox.style.cssText = 'padding: 1.25rem 1.5rem 1.5rem; background: rgba(15, 23, 42, 0.95); display: flex; flex-direction: column; gap: 0.9rem;';
             const initMeta = agentVisualMeta.verse;
-            const badgeLabel = langKey === 'en' ? 'LIVE UI SCREENSHOT' : (langKey === 'ja' ? '実際の稼働画面' : '실제 제품 구동 화면');
+            const badgeLabel = langKey === 'en' ? 'LIVE PRODUCT SCREEN' : (langKey === 'ja' ? '実際の稼働画面' : '실제 제품 구동 화면');
             screenPreviewBox.innerHTML = `
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-                    <div style="display: flex; align-items: center; gap: 0.55rem; min-width: 0;">
-                        <span style="font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 999px; background: rgba(56, 189, 248, 0.16); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); white-space: nowrap;"><i class="fas fa-desktop" style="margin-right: 4px;"></i>${badgeLabel}</span>
-                        <span class="terminal-screen-caption" style="font-size: 0.86rem; color: #e2e8f0; font-weight: 600;">${initMeta.caption[langKey] || initMeta.caption.ko}</span>
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+                    <div style="display: flex; align-items: center; gap: 0.6rem; min-width: 0; flex-wrap: wrap;">
+                        <span style="font-size: 0.74rem; font-weight: 700; padding: 0.22rem 0.65rem; border-radius: 999px; background: rgba(56, 189, 248, 0.16); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); white-space: nowrap;"><i class="fas fa-desktop" style="margin-right: 5px;"></i>${badgeLabel}</span>
+                        <span class="terminal-screen-caption" style="font-size: 0.92rem; color: #f8fafc; font-weight: 600;">${initMeta.caption[langKey] || initMeta.caption.ko}</span>
                     </div>
+                    <a class="terminal-detail-link" href="/${langKey}/solutions/${initMeta.slug}.html" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.95rem; border-radius: 8px; background: rgba(56, 189, 248, 0.18); border: 1px solid rgba(56, 189, 248, 0.45); color: #38bdf8; font-size: 0.85rem; font-weight: 700; text-decoration: none; white-space: nowrap; transition: all 0.2s ease;">
+                        ${detailBtnLabel}
+                    </a>
                 </div>
-                <div class="terminal-screen-img-wrap" style="display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(148, 163, 184, 0.25); background: #020617; max-height: 290px; position: relative;">
-                    <img class="terminal-screen-img" src="${initMeta.screenUrl}" alt="${initMeta.caption[langKey] || initMeta.caption.ko}" loading="eager" style="width: 100%; height: 290px; object-fit: cover; object-position: top center; display: block; transition: opacity 0.2s ease;" />
+                <div class="terminal-screen-img-wrap" style="display: block; border-radius: 10px; overflow: hidden; border: 1px solid rgba(148, 163, 184, 0.28); background: #020617; max-height: 480px; position: relative; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);">
+                    <img class="terminal-screen-img" src="${initMeta.screenUrl}" alt="${initMeta.caption[langKey] || initMeta.caption.ko}" loading="eager" style="width: 100%; height: auto; max-height: 480px; object-fit: contain; display: block; transition: opacity 0.2s ease;" />
                 </div>
             `;
             terminalRoleBanner.insertAdjacentElement('afterend', screenPreviewBox);
@@ -839,7 +1270,7 @@ function initMain() {
         const tabList = terminalTabs[0].parentElement;
         if (tabList) {
             tabList.setAttribute('role', 'tablist');
-            tabList.setAttribute('aria-label', 'Agent Terminal Switcher');
+            tabList.setAttribute('aria-label', 'Solution Live Screen Preview Switcher');
         }
 
         terminalTabs.forEach((tab, index) => {
@@ -857,40 +1288,13 @@ function initMain() {
                 tab.classList.add('active');
                 tab.setAttribute('aria-selected', 'true');
                 tab.setAttribute('tabindex', '0');
-                
-                // Smoothly center active tab on mobile/scrollable viewports
+
                 if (typeof tab.scrollIntoView === 'function') {
                     tab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
                 }
-                
+
                 const agentKey = tab.getAttribute('data-agent');
                 const data = agentTerminalData[agentKey] || agentTerminalData.verse;
-                const activeCmd = (data.cmd && (data.cmd[langKey] || data.cmd.ko)) || '';
-                const activeCopyCmd = (data.copyCmd && (data.copyCmd[langKey] || data.copyCmd.ko)) || activeCmd;
-                const activeOutput = (data.output && (data.output[langKey] || data.output.ko)) || '';
-
-                if (terminalCopyBtn) {
-                    terminalCopyBtn.setAttribute('data-cmd', activeCopyCmd);
-                }
-
-                // Smooth typing effect for terminal command
-                if (typingTimer) clearInterval(typingTimer);
-                terminalInput.textContent = '';
-                terminalOutput.style.opacity = '0.3';
-                terminalOutput.style.transition = 'opacity 0.2s ease';
-
-                let charIndex = 0;
-                const fullCmd = activeCmd;
-                typingTimer = setInterval(() => {
-                    if (charIndex < fullCmd.length) {
-                        charIndex++;
-                        terminalInput.textContent = fullCmd.slice(0, charIndex);
-                    } else {
-                        clearInterval(typingTimer);
-                        terminalOutput.innerHTML = activeOutput;
-                        terminalOutput.style.opacity = '1';
-                    }
-                }, 12);
 
                 if (terminalRoleBanner) {
                     const tagEl = terminalRoleBanner.querySelector('.terminal-role-tag');
@@ -903,8 +1307,10 @@ function initMain() {
                 if (screenPreviewBox && vMeta) {
                     const capEl = screenPreviewBox.querySelector('.terminal-screen-caption');
                     const imgEl = screenPreviewBox.querySelector('.terminal-screen-img');
+                    const linkEl = screenPreviewBox.querySelector('.terminal-detail-link');
                     const capText = (vMeta.caption && (vMeta.caption[langKey] || vMeta.caption.ko)) || '';
                     if (capEl) capEl.innerText = capText;
+                    if (linkEl) linkEl.href = `/${langKey}/solutions/${vMeta.slug}.html`;
                     if (imgEl) {
                         imgEl.style.opacity = '0.4';
                         imgEl.src = vMeta.screenUrl;
@@ -929,18 +1335,43 @@ function initMain() {
             showcaseSec.style.cssText = 'padding-top: 0.5rem; padding-bottom: 2.5rem;';
             const titleText = langKey === 'en' ? 'Live Product Screen Preview' : (langKey === 'ja' ? '実際の製品稼働画面プレビュー' : '실제 구동 대시보드 화면 미리보기');
             const subText = langKey === 'en'
-                ? 'Explore the real enterprise web console screens and key operational features.'
+                ? 'Explore the 4 real enterprise web console screens and toggle the annotated feature guide.'
                 : (langKey === 'ja'
-                    ? '実際の管理コンソール画面と主要機能をご確認いただけます。'
-                    : '로그인 없이 실제 관리자 콘솔 화면과 핵심 기능 가이드를 먼저 확인해 보세요.');
-            const tab1Label = langKey === 'en' ? '1. Main Operations Dashboard' : (langKey === 'ja' ? '1. メイン管制ダッシュボード' : '1. 메인 운영 대시보드 화면');
-            const tab2Label = langKey === 'en' ? '2. Feature Guide (Annotated)' : (langKey === 'ja' ? '2. 主要機能ガイド (注釈付き)' : '2. 핵심 기능 포인트 안내 (가이드)');
-            const tab3Label = langKey === 'en' ? '3. Detailed Workflow View' : (langKey === 'ja' ? '3. 詳細ワークフロー画面' : '3. 상세 워크플로우·분석 화면');
+                    ? '4つの実際の管理コンソール画面と主要機能ガイドオーバーレイをご確認いただけます。'
+                    : '로그인 없이 4가지 실제 관리자 콘솔 핵심 화면과 기능 포인트 가이드를 확인해 보세요.');
+            const guideOnLabel = langKey === 'en' ? 'Guide Overlay: ON' : (langKey === 'ja' ? 'ガイド表示: ON' : '가이드 오버레이: ON');
+            const guideOffLabel = langKey === 'en' ? 'Guide Overlay: OFF' : (langKey === 'ja' ? 'ガイド表示: OFF' : '가이드 오버레이: OFF');
+            const envMetaLabel = langKey === 'en'
+                ? 'Live Enterprise Console Capture (1920×1080 HD)'
+                : (langKey === 'ja' ? '実稼働コンソール画面キャプチャ (1920×1080 HD)' : '실제 운영 화면 캡처 (1920×1080 HD)');
 
-            const img1 = `/images/screenshots/${slug}/screen_01.png`;
-            const img2 = `/images/screenshots/${slug}/screen_01_annotated.png`;
-            const img3 = `/images/screenshots/${slug}/screen_02.png`;
-            const capText = (vMeta.caption && (vMeta.caption[langKey] || vMeta.caption.ko)) || '';
+            const screensList = Array.isArray(vMeta.screens) && vMeta.screens.length > 0
+                ? vMeta.screens
+                : [
+                    { idx: 1, tab: { ko: '1. 메인 화면', en: '1. Main View', ja: '1. メイン画面' }, caption: vMeta.caption },
+                    { idx: 2, tab: { ko: '2. 상세 화면', en: '2. Detail View', ja: '2. 詳細画面' }, caption: vMeta.caption },
+                    { idx: 3, tab: { ko: '3. 분석 화면', en: '3. Analysis View', ja: '3. 分析画面' }, caption: vMeta.caption },
+                    { idx: 4, tab: { ko: '4. 설정 화면', en: '4. Policy View', ja: '4. 設定画面' }, caption: vMeta.caption }
+                ];
+
+            const firstScreen = screensList[0];
+            const firstImg = `/images/screenshots/${slug}/screen_01.png`;
+            const firstCap = (firstScreen.caption && (firstScreen.caption[langKey] || firstScreen.caption.ko))
+                || (vMeta.caption && (vMeta.caption[langKey] || vMeta.caption.ko))
+                || '';
+
+            const tabsHtml = screensList.map((sc, idx) => {
+                const padIdx = String(sc.idx || (idx + 1)).padStart(2, '0');
+                const rawUrl = `/images/screenshots/${slug}/screen_${padIdx}.png`;
+                const annUrl = `/images/screenshots/${slug}/screen_${padIdx}_annotated.png`;
+                const tabLabel = (sc.tab && (sc.tab[langKey] || sc.tab.ko)) || `Screen ${idx + 1}`;
+                const scCaption = (sc.caption && (sc.caption[langKey] || sc.caption.ko)) || firstCap;
+                const isActive = idx === 0;
+                const btnStyle = isActive
+                    ? 'padding: 0.55rem 1rem; border-radius: 8px; border: 1px solid #38bdf8; background: rgba(56, 189, 248, 0.18); color: #f8fafc; font-weight: 700; font-size: 0.88rem; cursor: pointer;'
+                    : 'padding: 0.55rem 1rem; border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.28); background: rgba(15, 23, 42, 0.7); color: #cbd5e1; font-weight: 600; font-size: 0.88rem; cursor: pointer;';
+                return `<button type="button" class="sol-screen-tab${isActive ? ' active' : ''}" data-img="${rawUrl}" data-annotated="${annUrl}" data-caption="${scCaption.replace(/"/g, '&quot;')}" style="${btnStyle}">${tabLabel}</button>`;
+            }).join('');
 
             showcaseSec.innerHTML = `
                 <div class="glass-card" style="padding: 2rem; border-radius: 16px; border: 1px solid rgba(56, 189, 248, 0.25); background: rgba(15, 23, 42, 0.78);">
@@ -950,18 +1381,19 @@ function initMain() {
                             <h2 style="font-size: 1.55rem; color: #f8fafc; margin: 0.25rem 0;">${titleText}</h2>
                             <p style="color: #94a3b8; font-size: 0.95rem; margin: 0;">${subText}</p>
                         </div>
+                        <button type="button" class="sol-guide-toggle" aria-pressed="false" style="padding: 0.5rem 0.95rem; border-radius: 999px; border: 1px solid rgba(167, 139, 250, 0.45); background: rgba(15, 23, 42, 0.85); color: #c4b5fd; font-weight: 700; font-size: 0.82rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;">
+                            <i class="fas fa-magic"></i><span class="sol-guide-toggle-text">${guideOffLabel}</span>
+                        </button>
                     </div>
                     <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
-                        <button type="button" class="sol-screen-tab active" data-img="${img1}" style="padding: 0.55rem 1rem; border-radius: 8px; border: 1px solid #38bdf8; background: rgba(56, 189, 248, 0.18); color: #f8fafc; font-weight: 700; font-size: 0.88rem; cursor: pointer;">${tab1Label}</button>
-                        <button type="button" class="sol-screen-tab" data-img="${img2}" style="padding: 0.55rem 1rem; border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.28); background: rgba(15, 23, 42, 0.7); color: #cbd5e1; font-weight: 600; font-size: 0.88rem; cursor: pointer;">${tab2Label}</button>
-                        <button type="button" class="sol-screen-tab" data-img="${img3}" style="padding: 0.55rem 1rem; border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.28); background: rgba(15, 23, 42, 0.7); color: #cbd5e1; font-weight: 600; font-size: 0.88rem; cursor: pointer;">${tab3Label}</button>
+                        ${tabsHtml}
                     </div>
                     <div style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(148, 163, 184, 0.25); background: #020617;">
-                        <img class="sol-screen-main-img" src="${img1}" alt="${capText}" style="width: 100%; height: auto; max-height: 540px; object-fit: cover; object-position: top center; display: block; transition: opacity 0.2s ease;" />
+                        <img class="sol-screen-main-img" src="${firstImg}" alt="${firstCap}" style="width: 100%; height: auto; object-fit: contain; display: block; transition: opacity 0.2s ease;" />
                     </div>
                     <div style="margin-top: 0.75rem; font-size: 0.88rem; color: #94a3b8; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-                        <span><i class="fas fa-info-circle" style="color: #38bdf8; margin-right: 5px;"></i>${capText}</span>
-                        <span style="color: #38bdf8; font-weight: 600;">Zero-Mock Live Environment (1920×1080)</span>
+                        <span><i class="fas fa-info-circle" style="color: #38bdf8; margin-right: 5px;"></i><span class="sol-screen-caption">${firstCap}</span></span>
+                        <span style="color: #38bdf8; font-weight: 600;">${envMetaLabel}</span>
                     </div>
                 </div>
             `;
@@ -969,6 +1401,24 @@ function initMain() {
 
             const solTabs = showcaseSec.querySelectorAll('.sol-screen-tab');
             const solMainImg = showcaseSec.querySelector('.sol-screen-main-img');
+            const solCapEl = showcaseSec.querySelector('.sol-screen-caption');
+            const guideToggleBtn = showcaseSec.querySelector('.sol-guide-toggle');
+            const guideToggleText = showcaseSec.querySelector('.sol-guide-toggle-text');
+            let showAnnotated = false;
+
+            const syncShowcaseScreen = (activeBtn) => {
+                if (!activeBtn || !solMainImg) return;
+                const nextSrc = showAnnotated
+                    ? (activeBtn.getAttribute('data-annotated') || activeBtn.getAttribute('data-img'))
+                    : activeBtn.getAttribute('data-img');
+                const nextCap = activeBtn.getAttribute('data-caption') || firstCap;
+                solMainImg.style.opacity = '0.4';
+                solMainImg.src = nextSrc;
+                solMainImg.alt = nextCap;
+                if (solCapEl) solCapEl.textContent = nextCap;
+                setTimeout(() => { solMainImg.style.opacity = '1'; }, 80);
+            };
+
             solTabs.forEach(btn => {
                 btn.addEventListener('click', () => {
                     solTabs.forEach(b => {
@@ -981,13 +1431,24 @@ function initMain() {
                     btn.style.borderColor = '#38bdf8';
                     btn.style.background = 'rgba(56, 189, 248, 0.18)';
                     btn.style.color = '#f8fafc';
-                    if (solMainImg) {
-                        solMainImg.style.opacity = '0.4';
-                        solMainImg.src = btn.getAttribute('data-img');
-                        setTimeout(() => { solMainImg.style.opacity = '1'; }, 80);
-                    }
+                    syncShowcaseScreen(btn);
                 });
             });
+
+            if (guideToggleBtn) {
+                guideToggleBtn.addEventListener('click', () => {
+                    showAnnotated = !showAnnotated;
+                    guideToggleBtn.setAttribute('aria-pressed', showAnnotated ? 'true' : 'false');
+                    guideToggleBtn.style.background = showAnnotated ? 'rgba(139, 92, 246, 0.28)' : 'rgba(15, 23, 42, 0.85)';
+                    guideToggleBtn.style.borderColor = showAnnotated ? '#a78bfa' : 'rgba(167, 139, 250, 0.45)';
+                    guideToggleBtn.style.color = showAnnotated ? '#f8fafc' : '#c4b5fd';
+                    if (guideToggleText) {
+                        guideToggleText.textContent = showAnnotated ? guideOnLabel : guideOffLabel;
+                    }
+                    const currentActive = showcaseSec.querySelector('.sol-screen-tab.active') || solTabs[0];
+                    syncShowcaseScreen(currentActive);
+                });
+            }
         }
     }
 

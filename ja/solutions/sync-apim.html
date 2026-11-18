@@ -1,54 +1,243 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>SyncAPIM - AI・APIセキュリティおよびトラフィック統制 | Empasy</title>
-    <meta name="description" content="SyncAPIMは社内外のAPIおよびAIエージェント通信の不正アクセスを遮断し、個人情報マスキングと過負荷防止を実現するAPIセキュリティ基盤です。">
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6BNPM5TX7C');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
+    <!-- End Google Tag Manager -->
+    <title>SyncAPIM - AI・APIセキュリティおよびトラフィック統制ゲートウェイ | Empasy</title>
+    <meta name="description" content="SyncAPIMは構文トークン指紋分析器(SqlXssLexicalTokenizer)とSyncWatch連動ピンセット仮想パッチ、カーネルeBPF遮断、未登録シャドーAPI検出、8大機密情報マスキングを0.03msの超低遅延で実現するAPIセキュリティ基盤です。">
+    <meta name="keywords" content="SyncAPIM, APIセキュリティゲートウェイ, AI通信セキュリティ, ゼロトラスト, SqlXssLexicalTokenizer, 仮想パッチ, シャドーAPI検出, PIIマスキング, Empasy">
+    <meta property="og:title" content="SyncAPIM - AI・APIセキュリティおよびトラフィック統制ゲートウェイ | Empasy">
+    <meta property="og:description" content="社内外APIおよびAIエージェント(MCP)通信の不正アクセスを0.03msで遮断し、個人情報流出をリアルタイム防御するセキュリティゲートウェイ。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SyncAPIM - AI・APIセキュリティゲートウェイ | Empasy">
+    <meta name="twitter:description" content="構文指紋分析・SyncWatch仮想パッチ・シャドーAPI検知・個人情報マスキングを統合したゼロトラストゲートウェイ。">
+    <meta name="twitter:image" content="https://empasy.io/empasy-logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <meta name="author" content="Empasy">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .page-header { padding: 150px 0 80px; text-align: center; }
+        .page-header { padding: 150px 0 80px; text-align: center; position: relative; z-index: 10; }
         .page-title { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; color: var(--text-primary); }
-        .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto; }
+        .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 840px; margin: 0 auto; }
+        .faq-item { border: none !important; }
+        .faq-item details {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-item summary { padding: 1.5rem 2rem !important; background: transparent !important; }
+        .faq-answer { padding: 0 2rem 1.5rem !important; }
     </style>
+    <meta name="geo.region" content="KR-11" />
+    <meta name="geo.placename" content="Seoul" />
+    <meta name="geo.position" content="37.5665;126.9780" />
+    <meta name="ICBM" content="37.5665, 126.9780" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SyncAPIM",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web, Cloud, Kubernetes, Linux eBPF",
+      "description": "構文トークン指紋分析、SyncWatchピンセット仮想パッチ、カーネルeBPF遮断、シャドーAPI検出および個人情報マスキングを備えたエンタープライズAI・APIセキュリティゲートウェイ。",
+      "url": "https://empasy.io/ja/solutions/sync-apim.html",
+      "sameAs": [
+        "https://github.com/DramaticCollaboration/",
+        "https://doc.empasy.com/"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "SyncLLMとSyncAPIMにはどのような違いがありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncLLMはマルチLLM接続、セマンティックキャッシュ、トークンコスト削減(FinOps)に特化しています。一方、SyncAPIMは全社のWeb APIとAIエージェント通信の関門で不正アクセス遮断、シャドーAPI検知、過負荷制御、セキュリティ監査を担当します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "セキュリティ検査を通すとAPIの応答速度が遅くなりませんか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "高速な非同期ストリーミングエンジンと決定論的構文トークナイザ(SqlXssLexicalTokenizer)により、平均遅延は1ms未満(構文分析0.03ms)に抑えられ、速度低下を一切感じさせません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "稼働中の既存レガシーサーバーの前段にもそのまま配置できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。既存のバックエンドサーバーのコードを修正することなく、前段ゲートウェイとして配置するだけで即座にセキュリティポリシーとトラフィック制御を適用できます。"
+          }
+        }
+      ]
+    }
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://empasy.io/ja/solutions/sync-apim.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-apim.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-apim.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-apim.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-apim.html" />
+    <meta property="og:url" content="https://empasy.io/ja/solutions/sync-apim.html">
 </head>
 <body class="theme-llm">
+    <!-- AI Search Optimization (AIO) Context Block -->
+    <article class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
+        <h1>Empasy SyncAPIMとは？</h1>
+        <p>SyncAPIMは、Empasyが開発したAIネイティブAPIセキュリティおよびトラフィック統制ゲートウェイです。構文トークン指紋分析器(SqlXssLexicalTokenizer)、SyncWatch連動ピンセット仮想パッチ(SandboxedDefenseEvaluator)、カーネルeBPF遮断、未登録シャドーAPI自動発見、8大機密情報マスキングを提供します。</p>
+    </article>
+
     {{> header_ja }}
-    <main class="container">
-        <div class="page-header fade-in-up">
-            <div class="container">
-                <span class="badge">AI・APIセキュリティおよびトラフィック統制</span>
+
+    <main class="container" style="position: relative; z-index: 10;">
+        <div class="page-header fade-in-up" style="position: relative; overflow: hidden;">
+            <div class="node-grid"></div>
+            <div class="container" style="position: relative; z-index: 10;">
+                <span class="badge" data-i18n="apim.badge">AI・APIセキュリティおよびトラフィック統制</span>
                 <h1 class="page-title">SyncAPIM</h1>
-                <p class="page-subtitle">構文トークン指紋分析器(SqlXssLexicalTokenizer)とSyncWatch連動リアルタイム攻撃パターン検知・ピンセット仮想パッチ(SandboxedDefenseEvaluator)、カーネルeBPF遮断により高度な脅威を防御し、未登録シャドーAPI検出と8大機密情報マスキングを実現するセキュリティゲートウェイです。</p>
+                <p class="page-subtitle">未管理の隠れたAPI（シャドーAPI）を自動検出し、巧妙化したサイバー攻撃やAIプロンプト悪用を0.03ミリ秒でリアルタイム遮断、さらに応答データ内の8大機密・個人情報を自動マスキングするAPIセキュリティ管制ゲートウェイです。</p>
                 <div class="mt-4 flex-center" style="gap: 1rem; display: flex; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://sync.empasy.io/products/sync-apim#demo-console-section" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.9rem 2.2rem; border-radius: 30px; font-weight: 700;"><i class="fas fa-play-circle" style="margin-right: 6px;"></i>ライブデモを体験</a>
-                    <a href="/ja/pages/contact.html" class="btn btn-outline" style="padding: 0.9rem 2.2rem; border-radius: 30px;">お問い合わせ</a>
+                    <a href="https://sync.empasy.io/products/sync-apim#demo-console-section" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.9rem 2.2rem; font-size: 1.05rem; border-radius: 30px; font-weight: 700;"><i class="fas fa-play-circle" style="margin-right: 6px;"></i>ライブデモを体験</a>
+                    <a href="/downloads/proposals/SyncAPIM_Proposal.pdf" download class="btn btn-outline" style="padding: 0.9rem 2.2rem; font-size: 1.05rem; border-radius: 30px;"><i class="fas fa-file-pdf" style="margin-right: 6px;"></i>提案書 PDF</a>
+                    <a href="/ja/pages/contact.html" class="btn btn-outline" style="padding: 0.9rem 2.2rem; font-size: 1.05rem; border-radius: 30px;">導入のお問い合わせ</a>
                 </div>
             </div>
         </div>
+
         <section class="section pt-0 fade-in-up delay-1">
+            <div class="vs-container mb-4">
+                <div class="vs-box vs-legacy">
+                    <h4 data-i18n="apim.vs.legacy.title">従来のAPIゲートウェイ運用時</h4>
+                    <ul class="vs-list">
+                        <li data-i18n="apim.vs.legacy.1">一般的なWeb APIのみを管理し、AIエージェント間呼出や多重エンコード攻撃・プロンプト攻撃を防げない</li>
+                        <li data-i18n="apim.vs.legacy.2">応答データに含まれるマイナンバー・口座番号・カード番号などの機密個人情報が外部へそのまま露出するリスク</li>
+                        <li data-i18n="apim.vs.legacy.3">特定サービスへのアクセス集中により連鎖障害が発生し、業務システム全体が停止</li>
+                        <li>セキュリティポリシー変更のたびにサーバー再起動や多数の設定ファイルの手動修正が必要</li>
+                    </ul>
+                </div>
+                <div class="vs-box vs-agent">
+                    <h4 data-i18n="apim.vs.agent.title">SyncAPIM 導入後</h4>
+                    <ul class="vs-list">
+                        <li data-i18n="apim.vs.agent.1">社内外Web APIとAIエージェント(MCP)通信を単一関門でリアルタイム検査し、不正アクセスを即時遮断</li>
+                        <li data-i18n="apim.vs.agent.2">1ms未満の超低遅延ストリーミング検査で個人情報と機密データを自動マスキングし流出を根本防御</li>
+                        <li data-i18n="apim.vs.agent.3">レート制限(Rate Limit)と自動サーキットブレーカーにより大規模トラフィック急増時も無停止保護</li>
+                        <li>Web管理コンソールから無停止でセキュリティ・ルーティング設定を即時配信し、全区間の監査ログを確保</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-header text-center mt-5 mb-4">
+                <h2 class="section-title">主な機能 (Key Features)</h2>
+            </div>
             <div class="rich-features">
                 <div class="feature-item">
                     <span class="badge" style="margin-bottom: 0.8rem;">01</span>
-                    <h3>構文トークン指紋分析器(SqlXssLexicalTokenizer) &amp; カーネルeBPF遮断</h3>
-                    <p>多重デコード後にSQLi・XSS構文指紋を0.05ms以内で決定論的に識別し、カーネルeBPF(XDP/TC)連携で攻撃元IPおよび悪性パケットを超低遅延で遮断します。</p>
+                    <h3>文脈ベースのサイバー攻撃リアルタイム遮断（構文トークン指紋分析）</h3>
+                    <p>複雑に偽装・多重エンコードされたSQLインジェクションやXSS攻撃も、文脈構造（構文トークン指紋、SqlXssLexicalTokenizer）の解析により0.05ミリ秒以内で正確に識別し、ネットワーク入口で即座に遮断します。</p>
                 </div>
                 <div class="feature-item">
                     <span class="badge" style="margin-bottom: 0.8rem;">02</span>
-                    <h3>SyncWatch連動リアルタイム攻撃パターン検知・ピンセット仮想パッチ</h3>
-                    <p>SyncWatchがコンパイル・検証して配信したApimDefensePackをSandboxedDefenseEvaluatorで無停止適用し、ゼロデイ脆弱性をピンセット仮想パッチで即座に防御します。</p>
+                    <h3>サーバー再起動なしの新規脆弱性即時防御（無停止仮想パッチ）</h3>
+                    <p>SyncWatchが収集・検証した最新の防御ルールをサーバー再デプロイや停止なしでリアルタイムに反映（仮想パッチ）し、プログラム改修前でもゼロデイ攻撃を確実に防ぎます。</p>
                 </div>
                 <div class="feature-item">
                     <span class="badge" style="margin-bottom: 0.8rem;">03</span>
-                    <h3>シャドーAPI自動発見・OpenAPIドリフト診断・8大機密情報マスキング</h3>
-                    <p>実トラフィックから未登録シャドーAPIやOpenAPI 3.0仕様不一致を自動診断し、口座番号・カード番号・マイナンバー等の機密情報をリアルタイムでマスキングします。</p>
+                    <h3>隠れた未登録APIの自動検出および8大機密・個人情報の自動マスキング</h3>
+                    <p>実際の通信トラフィックから仕様書にない未登録API（シャドーAPI）を自動検出し、マイナンバー・口座番号・カード番号など8大機密情報が外部に露出しないようリアルタイムでマスキングします。</p>
+                </div>
+            </div>
+
+            <div class="section-header text-center mt-5 mb-4" style="margin-top: 5rem;">
+                <h2 class="section-title">動作プロセス (How It Works)</h2>
+            </div>
+            <div class="process-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>統合ゲートウェイ流入およびアクセス権限検証</h4>
+                        <p>外部クライアントや社内AIエージェントからのAPI呼出が流入すると、JWT認証トークンと詳細ロール権限を即座に検証します。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>リアルタイム脅威遮断および個人情報マスキング</h4>
+                        <p>異常な大量呼出や攻撃構文トークンを遮断し、応答本文に含まれる機密個人情報を自動的にマスキング処理します。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>リアルタイム管制ダッシュボード可視化および監査記録</h4>
+                        <p>全区間の応答速度、MITRE攻撃分類、遮断状況をダッシュボードにリアルタイム表示し、セキュリティ監査ログを安全に保管します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section fade-in-up delay-2">
+            <h2>よくあるご質問 (FAQ)</h2>
+            <div class="faq-item">
+                <details>
+                    <summary>SyncLLMとSyncAPIMにはどのような違いがありますか？</summary>
+                    <div class="faq-answer">SyncLLMは複数AIモデル（OpenAI、Claude、Gemini、社内LLM）の接続とトークンコスト削減に特化しており、SyncAPIMは企業全体のWeb APIとAIエージェント通信の関門でハッキング・不正アクセス遮断、トラフィック過負荷制御、シャドーAPIセキュリティ監査を専任します。</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>セキュリティ検査を通すとAPIの応答速度が遅くなりませんか？</summary>
+                    <div class="faq-answer">高性能な非同期ストリーミングエンジンおよび決定論的構文トークナイザとして設計されており、セキュリティ検査による遅延時間は平均1ms未満（構文指紋分析0.03ms）のため、速度差を全く感じさせません。</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>稼働中のレガシーサーバーの前段にもそのまま適用できますか？</summary>
+                    <div class="faq-answer">はい。既存のバックエンドサーバーコードを修正する必要なく、前段ゲートウェイとして配置するだけで即座に仮想パッチ、セキュリティポリシー、トラフィック制御を適用できます。</div>
+                </details>
+            </div>
+        </section>
+
+        <section class="section cta-box" style="background: rgba(15, 23, 42, 0.5); border: 1px solid var(--border-color); border-radius: 16px; margin: 4rem 0; padding: 3.5rem 2rem;">
+            <div class="container text-center">
+                <h2 class="section-title" style="margin-bottom: 1rem;">企業のあらゆるAPIとAI通信を隙なく保護しましょう</h2>
+                <p style="color: var(--text-secondary); max-width: 680px; margin: 0 auto 2rem;">クラウドから社内閉域網まで、企業のセキュリティ基準に合わせた最適なAPI管制環境を構築いたします。</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://sync.empasy.io/products/sync-apim#demo-console-section" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg"><i class="fas fa-play-circle" style="margin-right: 6px;"></i>ライブデモを体験</a>
+                    <a href="/ja/pages/contact.html" class="btn btn-outline btn-lg">導入のお問い合わせ</a>
                 </div>
             </div>
         </section>
     </main>
+
     {{> footer_ja }}
     <script type="module" src="/assets/js/i18n.js"></script>
     <script type="module" src="/assets/js/main.js"></script>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6BNPM5TX7C');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETA オートスケーリング導入記 (1) — ワーカーをいつ増やすべきか？ | Empasy 技術ブログ</title>
+    <meta name="description" content="Playwright MCPブラウザワーカーにおいてCPUベースのHPAが適さない理由と、KEDAおよびRedis Queue待機数を基準としたイベント駆動型オートスケーリング設計を解説します。">
+    <meta name="keywords" content="SyncEta, SyncETA, Kubernetes オートスケーリング, KEDA, HPA, Redis Queue, Playwright MCP, QA自動化, Empasy">
+    <meta property="og:title" content="ETA オートスケーリング導入記 (1) — ワーカーをいつ増やすべきか？ | Empasy 技術ブログ">
+    <meta property="og:description" content="Playwright MCPブラウザワーカーにおいてCPUベースのHPAが適さない理由と、KEDAおよびRedis Queue待機数を基準としたイベント駆動型オートスケーリング設計を解説します。">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:url" content="https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <link rel="canonical" href="https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html" />
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "ETA オートスケーリング導入記 (1) — ワーカーをいつ増やすべきか？",
+      "description": "Playwright MCPブラウザワーカーにおいてCPUベースのHPAが適さない理由と、KEDAおよびRedis Queue待機数を基準としたイベント駆動型オートスケーリング設計を解説します。",
+      "datePublished": "2026-11-03",
+      "author": {
+        "@type": "Organization",
+        "name": "Empasy Engineering Team",
+        "url": "https://empasy.io"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Empasy",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/empasy-logo.png"
+        }
+      },
+      "url": "https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html"
+    }
+    </script>
+</head>
+<body>
+    {{> header_ja }}
+
+    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
+        <!-- Compact Breadcrumb / Back Link -->
+        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
+            <a href="../../ja/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
+                <span>Tech Blog 一覧へ</span>
+            </a>
+            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
+        </div>
+        
+        <section style="padding: 0;">
+            <div class="container" style="padding: 0;">
+                <article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
+                    <div style="line-height: 1.8; color: var(--text-primary);">
+                        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.2rem; color: var(--text-secondary); font-size: 0.9rem; flex-wrap: wrap;">
+                            <span>2026-11-03</span>
+                            <span>&bull;</span>
+                            <span>所要時間 約4分</span>
+                            <span>&bull;</span>
+                            <span style="color: var(--primary-color); font-weight: 600;">QA自動化 &amp; Kubernetes</span>
+                        </div>
+
+                        <h1 style="margin-top: 1rem; font-size: clamp(1.5rem, 4vw, 2.1rem); margin-bottom: 1.5rem;">ETA オートスケーリング導入記 (1) — ワーカーをいつ増やすべきか？</h1>
+
+                        <p style="margin-bottom: 1rem;">SyncEta（ETA）は、テストシナリオを指定した時刻に自動実行できるスケジュール機能を提供しています。</p>
+
+                        <p style="margin-bottom: 1rem;">通常運用では問題になりませんが、四半期ごとの大規模リグレッションテストのように特定の時間帯にジョブが一斉に集中するケースがあります。このときワーカー数が不足していると、実行待ちのシナリオが滞留し続けます。</p>
+
+                        <p style="margin-bottom: 1rem;">かといって、イベントが集中するたびに運用者が手動でPod数を増やし、終了後にまた手動で減らすのが最善でしょうか？</p>
+
+                        <p style="margin-bottom: 1rem;">テスト自動化ソリューションを運用しながら、肝心のワーカー増設を手動で行うというのは到底受け入れられません。</p>
+
+                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">通常のHPAを使えばよいのではないか？</h2>
+
+                        <p style="margin-bottom: 1rem;">KubernetesにはHPA（Horizontal Pod Autoscaler）があり、CPUやメモリ使用率などを基準にPod数を自動調整できます。</p>
+
+                        <p style="margin-bottom: 1rem;">当初はETAのワーカーにもHPAを適用すればよいと考えていましたが、ワーカーの実行構造を改めて整理すると大きな問題がありました。</p>
+
+                        <p style="margin-bottom: 1rem;"><strong>ETAのワーカーPod 1つは、一度に1つのシナリオのみを実行します。</strong>そしてPod内部ではヘッドレスブラウザ、ワーカープロセス、Playwright MCPサーバーが同時に動作するため、1つのシナリオを実行するだけでも多くのリソースを消費します。</p>
+
+                        <p style="margin-bottom: 1rem;">つまり、ワーカーがシナリオを実行中であれば、Podに割り当てられたCPUとメモリをほぼすべて使い切ります。<br>
+                        そのため、リソース使用率を基準にPod数を増やす設定にすると、シナリオがわずか1つ実行されているだけでもオートスケーリングが発動してしまう恐れがあります。</p>
+
+                        <p style="margin-bottom: 1rem;">結論として、<strong>リソース使用率よりも重要なのは「実行を待っているシナリオがどれだけ存在するか（待機キューの長さ）」</strong>でした。</p>
+
+                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">待機キュー（Redis Queue）を基準にスケールする</h2>
+
+                        <p style="margin-bottom: 1rem;">現在、ETAのスケジュール実行フローは以下のようなシンプルな構成になっています。</p>
+
+<pre style="overflow-x: auto; padding: 1rem;"><code>[WAS]
+  ユーザーがCronスケジュールを登録
+            ↓
+  実行時刻にRedis QueueへJobを登録
+            ↓
+[Redis Queue]
+  実行待機中のJob
+            ↓
+[Worker Pod]
+  Jobを取得してシナリオを実行</code></pre>
+
+                        <p style="margin-bottom: 1rem;">すでにRedis上に実行待ちのジョブが蓄積されているため、<strong>この待機キューの長さを基準にワーカーを増減させればよいのではないか</strong>と考えました。</p>
+
+                        <p style="margin-bottom: 1rem;">たとえば全ワーカーが稼働中で待機Jobが10件あるなら、その分だけワーカーPodを追加起動して並列処理させます。もちろんクラスタ資源は有限であるため、最大Pod数の上限（maxReplicaCount）は設けます。</p>
+
+                        <p style="margin-bottom: 1rem;">課題は、一般的なCPU・メモリ指標ではなくRedis Queueの待機数をどのようにKubernetesのスケーリング指標として連携するかでした。</p>
+
+                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">KEDA（Kubernetes Event-driven Autoscaling）の採用</h2>
+
+                        <p style="margin-bottom: 1rem;">調査を進めると、まさにこの用途に向けたKEDA（Kubernetes Event-driven Autoscaling）という仕組みがありました。</p>
+
+                        <p style="margin-bottom: 1rem;">KEDAはCPU使用率のようなリソース指標だけでなく、Redis、Kafka、RabbitMQなど外部システムのイベントやキュー長を基準にKubernetesワークロードを拡張できます。</p>
+
+                        <p style="margin-bottom: 1rem;">ETAでは、Redis Queueに積まれた<strong>待機Job数</strong>を基準にワーカーPod数を制御する方針を採用しました。</p>
+
+                        <p style="margin-bottom: 1rem;">ただし、実際のQueue実装方式（List、Streamなど）によってKEDAで使用するScalerや待機数の計測方法が異なるため、内部データ構造に合わせた設定検証が必要です。</p>
+
+                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">増やすことよりも「減らす（スケールイン）」方が難しい</h2>
+
+                        <p style="margin-bottom: 1rem;">Podを増やす条件は明確です。待機Jobが増えればワーカーを追加すればよいからです。</p>
+
+                        <p style="margin-bottom: 1rem;">しかし、キューからジョブが取り出されて待機数が0になった瞬間に、すべてのワーカーPodを即座に縮小してもよいでしょうか？</p>
+
+                        <p style="margin-bottom: 1rem;">そうではありません。<strong>Redis Queueが空であっても、すでにJobを取得したワーカーPod内ではシナリオがまだ実行中である可能性があります。</strong>この状態でPodが強制終了されると、ブラウザとMCPサーバーも同時に停止し、実行中のテストが中断されてしまいます。</p>
+
+                        <p style="margin-bottom: 1rem;">したがって、単にQueue長を見るだけでなく、実行中のJobを保護するためのグレースフルシャットダウン処理とスケールインポリシーを併せて設計する必要があります。</p>
+
+                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">今後の検証ステップ</h2>
+
+                        <p style="margin-bottom: 1rem;">目標は明確です。</p>
+
+                        <p style="margin-bottom: 1rem;"><strong>待機中のシナリオが増えればワーカーPodが自動的にスケールアウトし、ジョブが減れば実行中のシナリオを安全に完了させた後にPodがスケールインする仕組みを構築すること。</strong></p>
+
+                        <p style="margin-bottom: 1rem;">次回（第2回）では、実際のRedis Queue構造の確認とKEDA <code>ScaledObject</code>設定、最大Pod数制限、そして実行中ジョブを保護する終了ポリシーの実装について詳しく紹介します。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    {{> footer_ja }}
+
+    <!-- Scripts -->
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

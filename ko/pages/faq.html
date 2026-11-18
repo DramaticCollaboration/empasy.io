@@ -86,10 +86,50 @@
         },
         {
           "@type": "Question",
-          "name": "오래된 사내 시스템을 최신 환경으로 개편할 때 개발 기간을 줄일 수 있나요?",
+          "name": "사내 백오피스 구축이나 오래된 시스템을 개편할 때 개발 기간을 얼마나 줄일 수 있나요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "네. SyncBoot가 기존 시스템의 데이터 구조를 분석하고 서버 코드와 관리자 화면을 자동으로 생성해주어, 시스템 개편에 걸리는 시간과 비용을 크게 줄여줍니다."
+            "text": "SyncBoot는 조직도·역할 기반 동적 권한(RBAC), 한국형 다단계 전자결재 위저드, 경영 실적 리포트 등 71종의 표준 백오피스 화면을 기본 내장하고 있으며, 로우코드 CRUD·서버 API 자동 생성과 오류 자동 복구(Saga)를 지원해 구축 기간과 비용을 획기적으로 단축합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "미등록 섀도우 API나 비정상적인 대량 호출·개인정보 유출 위협은 어떻게 방어하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncAPIM이 실시간 트래픽을 분석해 명세서에 없는 섀도우 API를 자동 탐지·격리하고, 구문 토큰 지문(AST Fingerprint)과 MITRE 공격 기법 매칭을 통해 인젝션·프롬프트 탈옥 시도를 밀리초 단위로 차단하며 민감 개인정보를 자동 마스킹합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "새롭게 발표되는 글로벌 보안 취약점(CVE)에 사내 시스템이 노출되었는지 즉시 확인하고 방어할 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncWatch가 OSV.dev, CISA KEV, NVD, KISA 등 8대 글로벌 위협 채널을 24시간 수집·정규화하여 전사 소프트웨어 자산(SBOM)과 즉시 대조하고, 코드 점검 룰(SyncVerse)과 API 게이트웨이 차단 정책(SyncAPIM)으로 동시 변환해 무중단 배포합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "글로벌 다국어 웹사이트 운영 시 콘텐츠 작성과 번역, 표시광고법 검수를 자동화할 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네. SyncCMS가 AI 초안 작성부터 발행 전 본문·첨부파일의 표시광고법 금칙어 및 개인정보 위험도 자동 검수, 브랜드 용어집 기반의 6개 국어(한·영·일·중·독·스페인어) 자동 번역 및 멀티사이트 무중단 배포까지 한 흐름으로 처리합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "이커머스 쇼핑몰의 수많은 상품 카탈로그 관리와 경쟁사 가격 대응도 AI가 대신해 주나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네. SyncShop은 분산 마이크로서비스(MSA)와 PostgreSQL 18.6 pgvector 의미 기반 검색을 바탕으로 상품 카탈로그 정제, 마진 보호 다이내믹 프라이싱, 통합 주문·배송 추적 및 시즌별 타임세일 프로모션 추천을 자율적으로 수행합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SI·IT 프로젝트의 인력 가동률, 실원가 손익, 하도급 대금 지급기한까지 한곳에서 관리할 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네. SyncOps가 계약 청구단가와 실투입 원가를 대조하는 다차원(인원·프로젝트·분기별) 손익 피벗 분석, SW 기술등급별 인력 투입 일정, 4대 보증증권 만기 및 하도급법 제13조 60일 지급기한(D-Day)을 실시간으로 관제하여 경영 리스크를 예방합니다."
           }
         },
         {
@@ -191,13 +231,13 @@
         <!-- Category Filter Tabs -->
         <div class="faq-category-tabs fade-in-up" role="tablist" aria-label="FAQ 카테고리 필터">
             <button type="button" class="faq-category-btn active" data-category="all" role="tab" aria-selected="true">
-                전체보기 <span class="faq-badge-count">16</span>
+                전체보기 <span class="faq-badge-count">21</span>
             </button>
             <button type="button" class="faq-category-btn" data-category="benefits" role="tab" aria-selected="false">
                 도입 효과 &amp; 차별점 <span class="faq-badge-count">4</span>
             </button>
             <button type="button" class="faq-category-btn" data-category="solutions" role="tab" aria-selected="false">
-                업무별 자동화 솔루션 <span class="faq-badge-count">5</span>
+                업무별 자동화 솔루션 <span class="faq-badge-count">10</span>
             </button>
             <button type="button" class="faq-category-btn" data-category="security" role="tab" aria-selected="false">
                 안전장치 &amp; 보안 <span class="faq-badge-count">4</span>
@@ -276,11 +316,71 @@
                     <div class="faq-item" data-category="solutions">
                         <details>
                             <summary>
-                                <span class="faq-category-tag tag-solutions">자동 개발</span>
-                                <div style="margin-top: 0.2rem;">오래된 사내 시스템을 최신 환경으로 개편할 때 개발 기간을 줄일 수 있나요?</div>
+                                <span class="faq-category-tag tag-solutions">백오피스 코어 · 로우코드</span>
+                                <div style="margin-top: 0.2rem;">사내 백오피스 구축이나 오래된 시스템을 개편할 때 개발 기간을 얼마나 줄일 수 있나요?</div>
                             </summary>
                             <div class="faq-answer">
-                                네. SyncBoot가 기존 시스템의 데이터 구조를 분석하고 서버 코드와 관리자 화면을 자동으로 생성해주어, 시스템 개편에 걸리는 시간과 비용을 크게 줄여줍니다.
+                                SyncBoot는 조직도·역할 기반 동적 권한(RBAC), 한국형 다단계 전자결재 위저드, 경영 실적 리포트 등 71종의 표준 백오피스 화면을 기본 내장하고 있으며, 로우코드 CRUD·서버 API 자동 생성과 오류 자동 복구(Saga)를 지원해 구축 기간과 비용을 획기적으로 단축합니다.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">API 보안 게이트웨이</span>
+                                <div style="margin-top: 0.2rem;">미등록 섀도우 API나 비정상적인 대량 호출·개인정보 유출 위협은 어떻게 방어하나요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                SyncAPIM이 실시간 트래픽을 분석해 명세서에 없는 섀도우 API를 자동 탐지·격리하고, 구문 토큰 지문(AST Fingerprint)과 MITRE 공격 기법 매칭을 통해 인젝션·프롬프트 탈옥 시도를 밀리초 단위로 차단하며 민감 개인정보를 자동 마스킹합니다.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">글로벌 위협 관제</span>
+                                <div style="margin-top: 0.2rem;">새롭게 발표되는 글로벌 보안 취약점(CVE)에 사내 시스템이 노출되었는지 즉시 확인하고 방어할 수 있나요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                SyncWatch가 OSV.dev, CISA KEV, NVD, KISA 등 8대 글로벌 위협 채널을 24시간 수집·정규화하여 전사 소프트웨어 자산(SBOM)과 즉시 대조하고, 코드 점검 룰(SyncVerse)과 API 게이트웨이 차단 정책(SyncAPIM)으로 동시 변환해 무중단 배포합니다.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">웹 콘텐츠 · 다국어 번역</span>
+                                <div style="margin-top: 0.2rem;">글로벌 다국어 웹사이트 운영 시 콘텐츠 작성과 번역, 표시광고법 검수를 자동화할 수 있나요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                네. SyncCMS가 AI 초안 작성부터 발행 전 본문·첨부파일의 표시광고법 금칙어 및 개인정보 위험도 자동 검수, 브랜드 용어집 기반의 6개 국어(한·영·일·중·독·스페인어) 자동 번역 및 멀티사이트 무중단 배포까지 한 흐름으로 처리합니다.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">자율형 커머스 운영</span>
+                                <div style="margin-top: 0.2rem;">이커머스 쇼핑몰의 수많은 상품 카탈로그 관리와 경쟁사 가격 대응도 AI가 대신해 주나요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                네. SyncShop은 분산 마이크로서비스(MSA)와 PostgreSQL 18.6 pgvector 의미 기반 검색을 바탕으로 상품 카탈로그 정제, 마진 보호 다이내믹 프라이싱, 통합 주문·배송 추적 및 시즌별 타임세일 프로모션 추천을 자율적으로 수행합니다.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-item" data-category="solutions">
+                        <details>
+                            <summary>
+                                <span class="faq-category-tag tag-solutions">프로젝트 손익 · 하도급 관리</span>
+                                <div style="margin-top: 0.2rem;">SI·IT 프로젝트의 인력 가동률, 실원가 손익, 하도급 대금 지급기한까지 한곳에서 관리할 수 있나요?</div>
+                            </summary>
+                            <div class="faq-answer">
+                                네. SyncOps가 계약 청구단가와 실투입 원가를 대조하는 다차원(인원·프로젝트·분기별) 손익 피벗 분석, SW 기술등급별 인력 투입 일정, 4대 보증증권 만기 및 하도급법 제13조 60일 지급기한(D-Day)을 실시간으로 관제하여 경영 리스크를 예방합니다.
                             </div>
                         </details>
                     </div>

@@ -94,19 +94,79 @@
             </div>
             <div class="rich-features">
                 <div class="feature-item">
-                    <span class="badge" style="margin-bottom: 0.8rem;">01</span>
-                    <h3>マルチモデル最適ルーティング & 障害Fallback</h3>
-                    <p>タスクの難易度や文脈に応じて最適モデルに自動ルーティングし、API障害時には待機系モデルへ即座に迂回します。</p>
+                    <span class="feature-icon"><i class="fas fa-random"></i></span>
+                    <h3>複数AIモデルの自動選択および障害時自動切替</h3>
+                    <p>OpenAI、Anthropic、Gemini、Qwen、DeepSeekおよび社内AIを統合管理し、費用と質問内容に応じて最適モデルへ自動接続・障害時即時迂回します。</p>
                 </div>
                 <div class="feature-item">
-                    <span class="badge" style="margin-bottom: 0.8rem;">02</span>
-                    <h3>FinOpsトークンガードレール & キャッシング</h3>
-                    <p>Redisセマンティックキャッシュによりコストを削減し、日次・月次の予算Capを超過した際の費用急増を確実に防ぎます。</p>
+                    <span class="feature-icon"><i class="fas fa-coins"></i></span>
+                    <h3>部門別AI予算上限管理 &amp; 類似質問回答の再利用</h3>
+                    <p>類似質問の回答を再利用するキャッシュ機能でAI利用料金を40〜60%削減し、部門別の日次・月次予算上限で費用急増を防ぎます。</p>
                 </div>
                 <div class="feature-item">
-                    <span class="badge" style="margin-bottom: 0.8rem;">03</span>
-                    <h3>リアルタイムPIIマスキング & RBAC制御</h3>
-                    <p>外部送信前に個人情報を自動マスキングし、JWTロールに基づきモデル利用権限を厳格に制御します。</p>
+                    <span class="feature-icon"><i class="fas fa-user-lock"></i></span>
+                    <h3>個人情報自動マスク・暗号化キー管理・利用監査ログ</h3>
+                    <p>外部送信前に個人情報を自動マスクし、AES-256暗号化キー保管と部門・ユーザー別の呼出履歴・キャッシュ利用・応答時間の完全記録を実現します。</p>
+                </div>
+            </div>
+
+            <div class="section-header text-center mt-5 mb-4" style="margin-top: 5rem;">
+                <h2 class="section-title">動作プロセス (How It Works)</h2>
+            </div>
+            <div class="process-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>プロンプト受付および個人情報(PII)自動マスキング</h4>
+                        <p>社内システムからのAI質問リクエストを受け取り、マイナンバー・電話番号・口座番号などの機密情報を外部送信前に自動マスキングします。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>セマンティックキャッシュ照会および最適モデル接続</h4>
+                        <p>過去に処理した類似質問があれば保存済み回答を即座に返却(CACHE HIT)し、新規質問はコストと性能を考慮して最適LLMへルーティングします。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>リアルタイム使用量集計および部門別予算統制</h4>
+                        <p>応答と同時に部門・ユーザー別のトークン消費量と費用をリアルタイム集計し、予算上限に応じたアラートおよびモデル自動切替を行います。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section fade-in-up delay-2">
+            <h2>よくあるご質問 (FAQ)</h2>
+            <div class="faq-item">
+                <details>
+                    <summary>外部インターネットが遮断された社内サーバーの独自AIモデルとも連携できますか？</summary>
+                    <div class="faq-answer">はい。オンプレミス環境に構築されたローカルLLM（vLLM、Ollamaなど）とも標準API方式でシームレスに連携し、外部通信なしで安全に利用できます。</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>AI利用料金が設定した予算を超過しそうな場合はどう制御されますか？</summary>
+                    <div class="faq-answer">部門別・プロジェクト別に日次および月次の予算上限を設定でき、上限に近づくと担当者へ通知を送るか、自動的に高コスパモデルや社内LLMへ切り替えて予算超過を防ぎます。</div>
+                </details>
+            </div>
+            <div class="faq-item">
+                <details>
+                    <summary>稼働中の既存社内プログラムを大幅に改修する必要がありますか？</summary>
+                    <div class="faq-answer">既存システムを新規開発し直す必要はなく、AI接続先URLと認証キーをSyncLLMゲートウェイに変更するだけですぐに適用できます。</div>
+                </details>
+            </div>
+        </section>
+
+        <section class="section cta-box" style="background: rgba(15, 23, 42, 0.5); border: 1px solid var(--border-color); border-radius: 16px; margin: 4rem 0; padding: 3.5rem 2rem;">
+            <div class="container text-center">
+                <h2 class="section-title" style="margin-bottom: 1rem;">企業のAIセキュリティとトークンコストを一箇所で安全に統制しましょう</h2>
+                <p style="color: var(--text-secondary); max-width: 680px; margin: 0 auto 2rem;">社内セキュリティ規定と予算規模に合わせた最適なAIゲートウェイ構築プランをご案内いたします。</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://sync.empasy.io/products/sync-llm#demo-console-section" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg"><i class="fas fa-play-circle" style="margin-right: 6px;"></i>ライブデモ体験</a>
+                    <a href="/ja/pages/contact.html" class="btn btn-outline btn-lg">導入のお問い合わせ</a>
                 </div>
             </div>
         </section>

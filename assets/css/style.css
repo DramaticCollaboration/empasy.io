@@ -501,8 +501,8 @@ body.has-announcement-bar .top-announcement-bar {
     background: var(--gradient-primary); color: #fff; border-radius: 12px; margin-left: 10px;
 }
 .vs-list li { margin-bottom: 1rem; color: var(--text-secondary); padding-left: 1.5rem; position: relative; line-height: 1.4; }
-.vs-legacy .vs-list li::before { content: '✕'; color: #ef4444; position: absolute; left: 0; font-weight: bold; }
-.vs-agent .vs-list li::before { content: '✓'; color: var(--accent-color); position: absolute; left: 0; font-weight: bold; }
+.vs-legacy .vs-list li::before { content: '\2715'; color: #ef4444; position: absolute; left: 0; font-weight: bold; }
+.vs-agent .vs-list li::before { content: '\2713'; color: var(--accent-color); position: absolute; left: 0; font-weight: bold; }
 
 /* =========================================
    Animations

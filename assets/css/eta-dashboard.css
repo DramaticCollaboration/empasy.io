@@ -221,7 +221,7 @@ input:checked + .slider:before { transform: translateX(26px); }
     color: var(--text-secondary);
 }
 .pricing-features li::before {
-    content: "✓";
+    content: "\2713";
     color: var(--eta-primary);
     font-weight: bold;
     margin-right: 10px;
