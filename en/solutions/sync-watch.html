@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SyncWatch - AI Security Threat Intelligence &amp; Rule Compiler Agent | Empasy</title>
+    <meta name="description" content="SyncWatch ingests and normalizes global security threats (NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, Nuclei, OWASP CRS, KISA) to compile and broadcast VerseAuditPack for SyncVerse and ApimDefensePack for SyncAPIM in real time.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header { padding: 150px 0 80px; text-align: center; }
+        .page-title { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; color: var(--text-primary); }
+        .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 840px; margin: 0 auto; }
+    </style>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://empasy.io/en/solutions/sync-watch.html">
+</head>
+<body class="theme-llm">
+    {{> header_en }}
+    <main class="container">
+        <div class="page-header fade-in-up">
+            <div class="container">
+                <span class="badge">AI Security Threat Intelligence &amp; Rule Compiler Agent</span>
+                <h1 class="page-title">SyncWatch</h1>
+                <p class="page-subtitle">Enterprise security observatory that ingests and normalizes global threat feeds (NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, Nuclei, OWASP CRS, KISA) and security audit documents, compiling and broadcasting VerseAuditPack to SyncVerse and ApimDefensePack to SyncAPIM in real time.</p>
+                <div class="mt-4 flex-center" style="gap: 1rem; display: flex; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://sync.empasy.io/products/sync-watch#demo-console-section" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.9rem 2.2rem; border-radius: 30px; font-weight: 700;"><i class="fas fa-play-circle" style="margin-right: 6px;"></i>Launch Live Demo</a>
+                    <a href="/en/pages/contact.html" class="btn btn-outline" style="padding: 0.9rem 2.2rem; border-radius: 30px;">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+        <section class="section pt-0 fade-in-up delay-1">
+            <div class="rich-features">
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">01</span>
+                    <h3>SyncWatch: Threat Ingestion &amp; Dual Rule Compilation</h3>
+                    <p>Collects 7 global threat feeds and audit reports under a 5-stage SSRF guard, compiling both Shift-Left audit rules and Shift-Right defense rules with self-sandbox verification (TP 100%, FP 0%).</p>
+                </div>
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">02</span>
+                    <h3>SyncVerse: Shift-Left Code Audit &amp; Automated Patch PRs</h3>
+                    <p>Receives VerseAuditPack (SCA dependency ranges, SAST regex patterns, and DAST pentest probes) to scan enterprise repositories and generate automated security patch PRs.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="badge" style="margin-bottom: 0.8rem;">03</span>
+                    <h3>SyncAPIM: Shift-Right Runtime Attack Blocking</h3>
+                    <p>Receives ApimDefensePack (lexical token fingerprints, location-specific regexes, and Restricted SpEL) for zero-downtime virtual patching via SandboxedDefenseEvaluator and kernel eBPF blocking.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    {{> footer_en }}
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -61,6 +61,16 @@ Empasy SyncSeries unifies 9 specialized AI agent solutions under a 4-Tier archit
 - Docs: https://doc.empasy.com/synccrawl/
 - Role: Resilient data crawling utilizing visual layout understanding to survive markup changes and anti-bot protections; direct vector sink output (PostgreSQL pgvector, OpenSearch, Milvus) for RAG.
 
+### 10. SyncAPIM (Tier 2 — Zero-Trust API & WAF Security Gateway)
+- URL: https://empasy.io/ko/solutions/sync-apim.html
+- Docs: https://doc.empasy.com/syncapim/
+- Role: 4-JVM high-throughput API Monitoring & WAF Security Agent featuring deterministic lexical token fingerprint analysis (`SqlXssLexicalTokenizer`), `SyncWatch` real-time attack pattern detection & pinpoint virtual patching (`ApimDefensePack` / `SandboxedDefenseEvaluator`), kernel eBPF blocking, Shadow API discovery, OpenAPI 3.0 contract drift auditing, and 8-pattern PII masking.
+
+### 11. SyncWatch (Tier 2 — AI Security Threat Intelligence & Rule Compiler Agent)
+- URL: https://empasy.io/ko/solutions/sync-watch.html
+- Docs: https://doc.empasy.com/syncwatch/
+- Role: Enterprise security threat intelligence and rule compiler agent that ingests global threat feeds (NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, Nuclei, OWASP CRS, KISA) under a 5-stage SSRF guard to compile and broadcast `VerseAuditPack` (Shift-Left code audit for `SyncVerse`) and `ApimDefensePack` (Shift-Right runtime defense for `SyncAPIM`).
+
 ## Security & Deployment
 - Deployments: 100% On-Premise, Air-Gapped isolated networks, dedicated AWS/Azure/GCP VPCs.
 - Local LLMs: Compatible with local runtimes including vLLM, Ollama, TGI, and OpenAI-compatible endpoints.

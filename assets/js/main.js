@@ -626,42 +626,83 @@ function initMain() {
         },
         apim: {
             cmd: {
-                ko: 'empasy apim inspect --gateway "mcp-edge" --zero-trust "strict"',
-                en: 'empasy apim inspect --gateway "mcp-edge" --zero-trust "strict"',
-                ja: 'empasy apim inspect --gateway "mcp-edge" --zero-trust "strict"'
+                ko: 'empasy apim inspect --tokenizer "SqlXssLexicalTokenizer" --defense-pack "sync-watch"',
+                en: 'empasy apim inspect --tokenizer "SqlXssLexicalTokenizer" --defense-pack "sync-watch"',
+                ja: 'empasy apim inspect --tokenizer "SqlXssLexicalTokenizer" --defense-pack "sync-watch"'
             },
             copyCmd: {
-                ko: 'empasy apim inspect --gateway "mcp-edge" --zero-trust "strict"',
-                en: 'empasy apim inspect --gateway "mcp-edge" --zero-trust "strict"',
-                ja: 'empasy apim inspect --gateway "mcp-edge" --zero-trust "strict"'
+                ko: 'empasy apim inspect --tokenizer "SqlXssLexicalTokenizer" --defense-pack "sync-watch"',
+                en: 'empasy apim inspect --tokenizer "SqlXssLexicalTokenizer" --defense-pack "sync-watch"',
+                ja: 'empasy apim inspect --tokenizer "SqlXssLexicalTokenizer" --defense-pack "sync-watch"'
             },
             tag: { ko: 'API 보안·트래픽 관제', en: 'API Security Gateway', ja: 'APIセキュリティ統制' },
             desc: {
-                ko: '사내외 API와 AI 에이전트 통신의 불법 접근을 차단하고 개인정보 유출을 실시간 방어합니다.',
-                en: 'Blocks unauthorized API/MCP traffic, prevents PII leaks, and enforces real-time rate limits.',
-                ja: '社内外APIおよびAI通信の不正アクセスを遮断し、個人情報漏洩をリアルタイム防御します。'
+                ko: '구문 토큰 지문 분석기(SqlXssLexicalTokenizer)와 SyncWatch 연동 핀셋 가상 패치(SandboxedDefenseEvaluator), 커널 eBPF 차단으로 위협을 방어합니다.',
+                en: 'Defends APIs via SqlXssLexicalTokenizer fingerprint analysis, SyncWatch pinpoint virtual patching (SandboxedDefenseEvaluator), and kernel eBPF blocking.',
+                ja: '構文トークン指紋分析器(SqlXssLexicalTokenizer)とSyncWatch連動ピンセット仮想パッチ(SandboxedDefenseEvaluator)、カーネルeBPF遮断で脅威を防御します。'
             },
             output: {
                 ko: `
-                    <div style="color: #38bdf8;">[SyncAPIM 보안 게이트웨이]</div>
-                    <div>&nbsp;↳ 전사 API 및 AI 에이전트 통신 실시간 검사... <span style="color: #22c55e;">[지연 0.8ms]</span></div>
-                    <div>&nbsp;↳ 비인가 외부 호출 차단 및 민감 개인정보 자동 마스킹... <span style="color: #38bdf8;">[방어 완료]</span></div>
-                    <div style="margin-top: 0.8rem; color: #a78bfa;">[트래픽 제어 및 감사]</div>
-                    <div>&nbsp;↳ 과부하 방지(Rate Limit) 정상 작동 및 무결성 감사 로그 기록 <span style="color: #22c55e;">[100% 안전]</span></div>
+                    <div style="color: #38bdf8;">[SyncAPIM 구문 토큰 지문 분석 · 핀셋 방어]</div>
+                    <div>&nbsp;↳ SqlXssLexicalTokenizer 구문 토큰 지문 분석 및 다중 인코딩 우회 탐지... <span style="color: #22c55e;">[지연 0.03ms]</span></div>
+                    <div>&nbsp;↳ SyncWatch ApimDefensePack 수신 → SandboxedDefenseEvaluator 핀셋 가상 패치 및 커널 eBPF 차단... <span style="color: #38bdf8;">[방어 완료]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[섀도우 API 진단 및 민감정보 마스킹]</div>
+                    <div>&nbsp;↳ 미등록 섀도우 API 차단 및 8대 개인·금융 민감정보 실시간 마스킹 <span style="color: #22c55e;">[100% 안전]</span></div>
                 `,
                 en: `
-                    <div style="color: #38bdf8;">[SyncAPIM Security Gateway]</div>
-                    <div>&nbsp;↳ Real-time Zero-Trust inspection across API &amp; MCP channels... <span style="color: #22c55e;">[0.8ms Overhead]</span></div>
-                    <div>&nbsp;↳ Unauthorized token blocked &amp; sensitive payload masked... <span style="color: #38bdf8;">[Protected]</span></div>
-                    <div style="margin-top: 0.8rem; color: #a78bfa;">[Traffic Control &amp; Audit]</div>
-                    <div>&nbsp;↳ Rate-limiting active &amp; immutable audit trail recorded <span style="color: #22c55e;">[100% SECURE]</span></div>
+                    <div style="color: #38bdf8;">[SyncAPIM Lexical Fingerprint &amp; Pinpoint Defense]</div>
+                    <div>&nbsp;↳ SqlXssLexicalTokenizer grammar fingerprint inspection across API traffic... <span style="color: #22c55e;">[0.03ms Latency]</span></div>
+                    <div>&nbsp;↳ SyncWatch ApimDefensePack hot-swapped via SandboxedDefenseEvaluator + Kernel eBPF block... <span style="color: #38bdf8;">[Protected]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[Shadow API &amp; PII Masking]</div>
+                    <div>&nbsp;↳ Shadow API blocked &amp; 8 sensitive PII patterns masked in real time <span style="color: #22c55e;">[100% SECURE]</span></div>
                 `,
                 ja: `
-                    <div style="color: #38bdf8;">[SyncAPIM Security Gateway]</div>
-                    <div>&nbsp;↳ Real-time Zero-Trust inspection across API &amp; MCP channels... <span style="color: #22c55e;">[0.8ms Overhead]</span></div>
-                    <div>&nbsp;↳ Unauthorized token blocked &amp; sensitive payload masked... <span style="color: #38bdf8;">[Protected]</span></div>
-                    <div style="margin-top: 0.8rem; color: #a78bfa;">[Traffic Control &amp; Audit]</div>
-                    <div>&nbsp;↳ Rate-limiting active &amp; immutable audit trail recorded <span style="color: #22c55e;">[100% SECURE]</span></div>
+                    <div style="color: #38bdf8;">[SyncAPIM 構文指紋分析・ピンセット仮想パッチ]</div>
+                    <div>&nbsp;↳ SqlXssLexicalTokenizer 構文トークン指紋検査および多重エンコード回避検知... <span style="color: #22c55e;">[0.03ms 遅延]</span></div>
+                    <div>&nbsp;↳ SyncWatch ApimDefensePack 受信 → SandboxedDefenseEvaluator 仮想パッチ + カーネルeBPF遮断... <span style="color: #38bdf8;">[防御完了]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[シャドーAPI診断・PIIマスキング]</div>
+                    <div>&nbsp;↳ 未登録シャドーAPI遮断および8大機密情報のリアルタイムマスキング完了 <span style="color: #22c55e;">[100% 安全]</span></div>
+                `
+            }
+        },
+        watch: {
+            cmd: {
+                ko: 'empasy watch compile --feeds "nvd,cisa-kev,osv,ghsa,kisa" --broadcast "verse,apim"',
+                en: 'empasy watch compile --feeds "nvd,cisa-kev,osv,ghsa,kisa" --broadcast "verse,apim"',
+                ja: 'empasy watch compile --feeds "nvd,cisa-kev,osv,ghsa,kisa" --broadcast "verse,apim"'
+            },
+            copyCmd: {
+                ko: 'empasy watch compile --feeds "nvd,cisa-kev,osv,ghsa,kisa" --broadcast "verse,apim"',
+                en: 'empasy watch compile --feeds "nvd,cisa-kev,osv,ghsa,kisa" --broadcast "verse,apim"',
+                ja: 'empasy watch compile --feeds "nvd,cisa-kev,osv,ghsa,kisa" --broadcast "verse,apim"'
+            },
+            tag: { ko: '보안 위협 관측·룰 컴파일', en: 'Threat Intel & Rule Compiler', ja: '脅威インテリジェンス・ルールコンパイラ' },
+            desc: {
+                ko: '글로벌 보안 위협을 단일 허브로 수집·정규화하여 SyncVerse 점검 팩(VerseAuditPack)과 SyncAPIM 방어 팩(ApimDefensePack)을 실시간 컴파일·배포합니다.',
+                en: 'Ingests global threat feeds to compile and broadcast VerseAuditPack (Shift-Left code audit) and ApimDefensePack (Shift-Right runtime defense).',
+                ja: 'グローバル脅威フィードを単一ハブで収集・正規化し、VerseAuditPackとApimDefensePackをリアルタイムでコンパイル・配信します。'
+            },
+            output: {
+                ko: `
+                    <div style="color: #38bdf8;">[SyncWatch 글로벌 위협 수집 허브]</div>
+                    <div>&nbsp;↳ NVD CVE · CISA KEV · OSV.dev · GitHub GHSA · KISA 보안 권고 동기화 (5단계 SSRF 가드)... <span style="color: #22c55e;">[정규화 완료]</span></div>
+                    <div>&nbsp;↳ WatchRuleCompilerService 듀얼 컴파일: VerseAuditPack(SCA/SAST/DAST) + ApimDefensePack(구문 지문·SpEL)... <span style="color: #38bdf8;">[TP 100% / FP 0%]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[3각 자율 DevSecOps 실시간 배포]</div>
+                    <div>&nbsp;↳ SyncVerse 코드 보안 감사 및 SyncAPIM 런타임 핀셋 가상 패치 동시 브로드캐스트 완료 <span style="color: #22c55e;">[전파됨]</span></div>
+                `,
+                en: `
+                    <div style="color: #38bdf8;">[SyncWatch Threat Intelligence Hub]</div>
+                    <div>&nbsp;↳ Ingested NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, KISA feeds via 5-Stage SSRF Guard... <span style="color: #22c55e;">[Normalized]</span></div>
+                    <div>&nbsp;↳ Dual Rule Compilation: VerseAuditPack (SCA/SAST/DAST) + ApimDefensePack (Lexical/SpEL) sandbox verified... <span style="color: #38bdf8;">[TP 100% / FP 0%]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[Triad DevSecOps Broadcast]</div>
+                    <div>&nbsp;↳ Dispatched to SyncVerse (Shift-Left PR Patch) &amp; SyncAPIM (Shift-Right Virtual Patch) <span style="color: #22c55e;">[DISPATCHED]</span></div>
+                `,
+                ja: `
+                    <div style="color: #38bdf8;">[SyncWatch 脅威インテリジェンスハブ]</div>
+                    <div>&nbsp;↳ NVD CVE・CISA KEV・OSV.dev・GitHub GHSA・KISA 脅威フィード収集 (5段階SSRFガード)... <span style="color: #22c55e;">[正規化完了]</span></div>
+                    <div>&nbsp;↳ デュアルルールコンパイル: VerseAuditPack + ApimDefensePack サンドボックス検証通過... <span style="color: #38bdf8;">[TP 100% / FP 0%]</span></div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[3角自律DevSecOpsリアルタイム配信]</div>
+                    <div>&nbsp;↳ SyncVerse(コード監査・自動パッチPR)およびSyncAPIM(ランタイム仮想パッチ)へ同時配信完了 <span style="color: #22c55e;">[配信済]</span></div>
                 `
             }
         }
@@ -672,7 +713,7 @@ function initMain() {
             slug: 'sync-verse',
             screenUrl: '/images/screenshots/sync-verse/screen_01.png',
             caption: {
-                ko: 'SyncVerse 실제 관제 화면 — 10대 AI 에이전트 상태·승인·보안 통합 대시보드',
+                ko: 'SyncVerse 실제 관제 화면 — 11대 AI 에이전트 상태·승인·보안 통합 대시보드',
                 en: 'SyncVerse Live Console — Multi-Agent Orchestration & HITL Governance Dashboard',
                 ja: 'SyncVerse 実画面 — マルチエージェント統合管制・承認ダッシュボード'
             }
@@ -699,9 +740,18 @@ function initMain() {
             slug: 'sync-apim',
             screenUrl: '/images/screenshots/sync-apim/screen_01.png',
             caption: {
-                ko: 'SyncAPIM 실제 관제 화면 — 실시간 API·AI 통신 보안 위협 차단 및 트래픽 제어',
-                en: 'SyncAPIM Live Console — Zero-Trust API/MCP Security & Traffic Control',
-                ja: 'SyncAPIM 実画面 — API・AI通信のセキュリティ脅威遮断およびトラフィック制御'
+                ko: 'SyncAPIM 실제 관제 화면 — 구문 토큰 지문 분석, SyncWatch 핀셋 가상 패치 및 커널 eBPF 차단',
+                en: 'SyncAPIM Live Console — Lexical Token Fingerprint, SyncWatch Virtual Patch & Kernel eBPF Security',
+                ja: 'SyncAPIM 実画面 — 構文トークン指紋分析・SyncWatch仮想パッチ・カーネルeBPF遮断'
+            }
+        },
+        watch: {
+            slug: 'sync-watch',
+            screenUrl: '/images/screenshots/sync-apim/screen_01.png',
+            caption: {
+                ko: 'SyncWatch 실제 관제 화면 — 7대 글로벌 위협 수집 및 VerseAuditPack·ApimDefensePack 듀얼 컴파일·배포',
+                en: 'SyncWatch Live Console — Global Threat Intelligence & Dual Security Rule Compiler',
+                ja: 'SyncWatch 実画面 — グローバル脅威収集およびデュアルセキュリティルールコンパイラ'
             }
         },
         boot: {
