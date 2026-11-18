@@ -56,7 +56,7 @@
     <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-apim.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-apim.html" />
     <meta property="og:url" content="https://empasy.io/ko/solutions/sync-apim.html">
-  <script type="module" crossorigin src="/assets/main-D5Q0awuV.js"></script>
+  <script type="module" crossorigin src="/assets/main-DCXNXlH-.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/main-C4y1mBWi.css">
 </head>
 <body class="theme-llm">
@@ -90,6 +90,7 @@
                         <a href="/ko/solutions/sync-insight.html">SyncInsight (데이터 분석·의사결정)</a>
                         <a href="/ko/solutions/sync-llm.html">SyncLLM (AI 비용·보안 관리)</a>
                         <a href="/ko/solutions/sync-apim.html">SyncAPIM (API 보안·트래픽 관제)</a>
+                        <a href="/ko/solutions/sync-watch.html">SyncWatch (보안 위협 관측·룰 컴파일)</a>
                         <a href="/ko/solutions/sync-boot.html">SyncBoot (백엔드 자동 개발)</a>
                         <a href="/ko/solutions/sync-cms.html">SyncCMS (웹사이트 자동 제작)</a>
                         <a href="/ko/solutions/sync-shop.html">SyncShop (AI 쇼핑몰 운영)</a>
@@ -138,7 +139,7 @@
             <div class="container" style="position: relative; z-index: 10;">
                 <span class="badge">AI · API 보안 및 트래픽 관제</span>
                 <h1 class="page-title">SyncAPIM</h1>
-                <p class="page-subtitle">사내외 API와 AI 에이전트 간 통신의 불법 접근을 실시간으로 차단하고, 민감 개인정보 자동 마스킹과 과부하 방지(Rate Limit)를 한곳에서 통제하는 보안 관제 게이트웨이입니다.</p>
+                <p class="page-subtitle">구문 토큰 지문 분석기(SqlXssLexicalTokenizer)와 SyncWatch 연동 실시간 공격 패턴 탐지·핀셋 가상 패치(SandboxedDefenseEvaluator), 커널 eBPF 차단으로 고위험 위협을 방어하고, 미등록 섀도우 API 식별과 8대 민감 개인정보 마스킹을 수행하는 보안 관제 게이트웨이입니다.</p>
                 <div class="mt-4 flex-center" style="gap: 1rem; display: flex; justify-content: center; flex-wrap: wrap;">
                     <a href="https://sync.empasy.io/products/sync-apim#demo-console-section" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.9rem 2.2rem; font-size: 1.05rem; border-radius: 30px; font-weight: 700;"><i class="fas fa-play-circle" style="margin-right: 6px;"></i>실시간 데모 체험</a>
                     <a href="/ko/pages/contact.html" class="btn btn-outline" style="padding: 0.9rem 2.2rem; font-size: 1.05rem; border-radius: 30px;">도입 문의하기</a>
@@ -174,18 +175,18 @@
             <div class="rich-features">
                 <div class="feature-item">
                     <span class="badge" style="margin-bottom: 0.8rem;">01</span>
-                    <h3>웹 API &amp; AI 통신 통합 제로트러스트 관문</h3>
-                    <p>사내외 REST API뿐만 아니라 AI 에이전트 간 도구 호출(MCP)까지 모든 통신의 신원과 권한을 매 순간 검증하여 허가되지 않은 접근을 원천 차단합니다.</p>
+                    <h3>구문 토큰 지문 분석기(SqlXssLexicalTokenizer) &amp; 커널 eBPF 차단</h3>
+                    <p>다중 인코딩 해제 후 SQLi·XSS 문법 토큰 지문(s&amp;1, sUE, ;k, x_script 등)을 0.05ms 이내에 결정론적으로 식별하고, 커널 eBPF(XDP/TC) 연동으로 악성 공격원을 초저지연 차단합니다.</p>
                 </div>
                 <div class="feature-item">
                     <span class="badge" style="margin-bottom: 0.8rem;">02</span>
-                    <h3>초고속 개인정보 자동 마스킹 및 위협 방어</h3>
-                    <p>주고받는 데이터 속 주민등록번호, 연락처, API 비밀키, 악성 명령어 주입 시도를 실시간으로 탐지해 자동으로 가림 처리하거나 차단합니다.</p>
+                    <h3>SyncWatch 연동 실시간 공격 패턴 탐지·핀셋 가상 패치</h3>
+                    <p>SyncWatch가 컴파일·검증하여 배포한 ApimDefensePack을 SandboxedDefenseEvaluator로 무중단 핫스왑 적용하여, 서버 재배포 없이 제로데이 취약점을 핀셋 가상 패치로 즉시 방어합니다.</p>
                 </div>
                 <div class="feature-item">
                     <span class="badge" style="margin-bottom: 0.8rem;">03</span>
-                    <h3>과부하 방지(Rate Limit) 및 무결성 감사 추적</h3>
-                    <p>파트너사·부서·에이전트별 초당 호출 한도를 정밀하게 제어해 서버 다운을 막고, 모든 API 호출과 차단 이력을 위변조 불가능한 감사 로그로 기록합니다.</p>
+                    <h3>섀도우 API 자동 발견, 스펙 드리프트 진단 &amp; 8대 민감정보 마스킹</h3>
+                    <p>실트래픽에서 미등록 섀도우 API와 OpenAPI 3.0 명세 불일치(Drift)를 자동 진단하고, 주민등록번호·계좌번호·카드번호 등 8대 민감정보를 실시간 마스킹합니다.</p>
                 </div>
             </div>
 
@@ -263,11 +264,12 @@
         <div class="footer-bottom text-center">
             <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
                 <div class="seo-links" style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; align-items: center; font-size: 0.88rem;">
-                    <span style="color: var(--text-secondary); font-weight: 700;">Sync Series 10대 솔루션:</span>
+                    <span style="color: var(--text-secondary); font-weight: 700;">Sync Series 11대 솔루션:</span>
                     <a href="/ko/solutions/sync-verse.html" style="color: #38bdf8; text-decoration: none; font-weight: 600;">SyncVerse</a>
                     <a href="/ko/solutions/sync-insight.html" style="color: inherit; text-decoration: none;">SyncInsight</a>
                     <a href="/ko/solutions/sync-llm.html" style="color: inherit; text-decoration: none;">SyncLLM</a>
                     <a href="/ko/solutions/sync-apim.html" style="color: inherit; text-decoration: none;">SyncAPIM</a>
+                    <a href="/ko/solutions/sync-watch.html" style="color: inherit; text-decoration: none;">SyncWatch</a>
                     <a href="/ko/solutions/sync-boot.html" style="color: inherit; text-decoration: none;">SyncBoot</a>
                     <a href="/ko/solutions/sync-cms.html" style="color: inherit; text-decoration: none;">SyncCMS</a>
                     <a href="/ko/solutions/sync-shop.html" style="color: inherit; text-decoration: none;">SyncShop</a>

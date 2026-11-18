@@ -134,7 +134,7 @@
             } catch (e) {}
         })();
     </script>
-  <script type="module" crossorigin src="/assets/main-D5Q0awuV.js"></script>
+  <script type="module" crossorigin src="/assets/main-DCXNXlH-.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/main-C4y1mBWi.css">
 </head>
 
@@ -171,6 +171,7 @@
                         <a href="/ko/solutions/sync-insight.html">SyncInsight (데이터 분석·의사결정)</a>
                         <a href="/ko/solutions/sync-llm.html">SyncLLM (AI 비용·보안 관리)</a>
                         <a href="/ko/solutions/sync-apim.html">SyncAPIM (API 보안·트래픽 관제)</a>
+                        <a href="/ko/solutions/sync-watch.html">SyncWatch (보안 위협 관측·룰 컴파일)</a>
                         <a href="/ko/solutions/sync-boot.html">SyncBoot (백엔드 자동 개발)</a>
                         <a href="/ko/solutions/sync-cms.html">SyncCMS (웹사이트 자동 제작)</a>
                         <a href="/ko/solutions/sync-shop.html">SyncShop (AI 쇼핑몰 운영)</a>
@@ -261,7 +262,7 @@
                         <div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b;"></div>
                         <div style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></div>
                         <div class="terminal-title-text" style="margin-left: 0.8rem; font-family: monospace; color: #94a3b8; font-size: 0.85rem;">
-                            empasy-agent-cli (10대 AI 실제 구동 화면 &amp; 자동화 실행 예시)</div>
+                            empasy-agent-cli (11대 AI 실제 구동 화면 &amp; 자동화 실행 예시)</div>
                     </div>
                     <button class="terminal-copy-btn" data-cmd='empasy verse dispatch --workflow "order-flow" --mode "autonomous"' title="명령어 복사">
                         <i class="far fa-copy"></i> 복사
@@ -273,6 +274,7 @@
                     <button class="terminal-tab-btn" data-agent="insight"><i class="fas fa-chart-line"></i> <span>SyncInsight</span></button>
                     <button class="terminal-tab-btn" data-agent="llm"><i class="fas fa-microchip"></i> <span>SyncLLM</span></button>
                     <button class="terminal-tab-btn" data-agent="apim"><i class="fas fa-shield-alt"></i> <span>SyncAPIM</span></button>
+                    <button class="terminal-tab-btn" data-agent="watch"><i class="fas fa-shield-virus"></i> <span>SyncWatch</span></button>
                     <button class="terminal-tab-btn" data-agent="boot"><i class="fas fa-server"></i> <span>SyncBoot</span></button>
                     <button class="terminal-tab-btn" data-agent="cms"><i class="fas fa-layer-group"></i> <span>SyncCMS</span></button>
                     <button class="terminal-tab-btn" data-agent="shop"><i class="fas fa-shopping-bag"></i> <span>SyncShop</span></button>
@@ -509,8 +511,8 @@
         <div class="container">
             <div class="section-header fade-in-up text-center mb-4">
                 <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">Sync Series</span>
-                <h2 class="section-title mt-2">10대 전문 AI 솔루션</h2>
-                <p class="section-desc">필요한 솔루션만 단독으로 도입하거나, 전체를 하나로 연결해 사용할 수 있습니다.</p>
+                <h2 class="section-title mt-2">11대 전문 AI 솔루션 및 3각 자율 DevSecOps 아키텍처</h2>
+                <p class="section-desc">SyncWatch(위협 수집·듀얼 룰 컴파일) → SyncVerse(Shift-Left 코드 보안 점검 &amp; 자동 패치 PR) → SyncAPIM(Shift-Right 런타임 공격 패턴 차단)으로 이어지는 3각 자율 DevSecOps 보안 체계를 갖추고 있습니다.</p>
             </div>
 
             <div class="solutions-grid">
@@ -613,13 +615,36 @@
                             </div>
                         </div>
                         <ul class="feature-list mt-3">
-                            <li>사내외 API와 에이전트 통신의 비인가 접근을 차단하고 민감정보를 1ms 미만으로 가림 처리합니다.</li>
-                            <li>대규모 트래픽 폭주 시 호출량을 자동 조절(Rate Limit)하여 서버 중단을 예방합니다.</li>
+                            <li>구문 토큰 지문 분석기(SqlXssLexicalTokenizer)와 SyncWatch 연동 실시간 공격 패턴 탐지·핀셋 가상 패치(SandboxedDefenseEvaluator), 커널 eBPF 차단으로 고위험 위협을 방어합니다.</li>
+                            <li>미등록 섀도우 API와 OpenAPI 스펙 불일치를 진단하고 8대 민감정보를 실시간 마스킹합니다.</li>
                         </ul>
                     </div>
                     <div class="solution-actions">
                         <a href="/ko/solutions/sync-apim.html" class="btn btn-outline btn-sm">자세히 보기 &rarr;</a>
                         <a href="https://sync.empasy.io/products/sync-apim#demo-console-section" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="fas fa-play" style="margin-right: 4px;"></i>데모 체험</a>
+                    </div>
+                </div>
+
+                <!-- 3-2. SyncWatch -->
+                <div class="solution-card fade-in-up delay-1">
+                    <div>
+                        <div class="solution-card-header">
+                            <div class="agent-icon-box" style="background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(251, 113, 133, 0.3);">
+                                <i class="fas fa-shield-virus"></i>
+                            </div>
+                            <div class="agent-title-wrap">
+                                <h3>SyncWatch</h3>
+                                <span class="badge" style="background: rgba(244, 63, 94, 0.15); color: #fda4af; border: 1px solid rgba(253, 164, 175, 0.3);">보안 위협 관측 · 룰 컴파일</span>
+                            </div>
+                        </div>
+                        <ul class="feature-list mt-3">
+                            <li>글로벌 7대 위협 피드(NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, Nuclei, OWASP CRS, KISA)와 진단 문서를 단일 허브로 수집·정규화합니다.</li>
+                            <li>SyncVerse용 코드 보안 점검 팩(VerseAuditPack)과 SyncAPIM용 런타임 공격 패턴 팩(ApimDefensePack)을 자체 샌드박스 검증 후 실시간 컴파일·배포합니다.</li>
+                        </ul>
+                    </div>
+                    <div class="solution-actions">
+                        <a href="/ko/solutions/sync-watch.html" class="btn btn-outline btn-sm">자세히 보기 &rarr;</a>
+                        <a href="https://sync.empasy.io/products/sync-watch#demo-console-section" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="fas fa-play" style="margin-right: 4px;"></i>데모 체험</a>
                     </div>
                 </div>
 
@@ -933,11 +958,12 @@
         <div class="footer-bottom text-center">
             <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
                 <div class="seo-links" style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; align-items: center; font-size: 0.88rem;">
-                    <span style="color: var(--text-secondary); font-weight: 700;">Sync Series 10대 솔루션:</span>
+                    <span style="color: var(--text-secondary); font-weight: 700;">Sync Series 11대 솔루션:</span>
                     <a href="/ko/solutions/sync-verse.html" style="color: #38bdf8; text-decoration: none; font-weight: 600;">SyncVerse</a>
                     <a href="/ko/solutions/sync-insight.html" style="color: inherit; text-decoration: none;">SyncInsight</a>
                     <a href="/ko/solutions/sync-llm.html" style="color: inherit; text-decoration: none;">SyncLLM</a>
                     <a href="/ko/solutions/sync-apim.html" style="color: inherit; text-decoration: none;">SyncAPIM</a>
+                    <a href="/ko/solutions/sync-watch.html" style="color: inherit; text-decoration: none;">SyncWatch</a>
                     <a href="/ko/solutions/sync-boot.html" style="color: inherit; text-decoration: none;">SyncBoot</a>
                     <a href="/ko/solutions/sync-cms.html" style="color: inherit; text-decoration: none;">SyncCMS</a>
                     <a href="/ko/solutions/sync-shop.html" style="color: inherit; text-decoration: none;">SyncShop</a>

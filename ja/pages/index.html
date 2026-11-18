@@ -89,7 +89,7 @@
     <!-- AI & Crawling Optimization -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <script type="module" crossorigin src="/assets/main-D5Q0awuV.js"></script>
+  <script type="module" crossorigin src="/assets/main-DCXNXlH-.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/main-C4y1mBWi.css">
 </head>
 
@@ -144,6 +144,7 @@
                         <a href="/ja/solutions/sync-insight.html">SyncInsight (意思決定知能)</a>
                         <a href="/ja/solutions/sync-llm.html">SyncLLM (FinOpsゲートウェイ)</a>
                         <a href="/ja/solutions/sync-apim.html">SyncAPIM (APIセキュリティ統制)</a>
+                        <a href="/ja/solutions/sync-watch.html">SyncWatch (脅威インテリジェンス・ルールコンパイラ)</a>
                         <a href="/ja/solutions/sync-boot.html">SyncBoot (MSA開発基盤)</a>
                         <a href="/ja/solutions/sync-cms.html">SyncCMS (自律型CMS)</a>
                         <a href="/ja/solutions/sync-shop.html">SyncShop (自律型コマース)</a>
@@ -248,6 +249,7 @@
                     <button class="terminal-tab-btn" data-agent="insight"><i class="fas fa-chart-line"></i> <span>SyncInsight</span> <span class="tab-sub">(意思決定)</span></button>
                     <button class="terminal-tab-btn" data-agent="llm"><i class="fas fa-microchip"></i> <span>SyncLLM</span> <span class="tab-sub">(FinOps)</span></button>
                     <button class="terminal-tab-btn" data-agent="apim"><i class="fas fa-shield-alt"></i> <span>SyncAPIM</span> <span class="tab-sub">(API統制)</span></button>
+                    <button class="terminal-tab-btn" data-agent="watch"><i class="fas fa-shield-virus"></i> <span>SyncWatch</span> <span class="tab-sub">(脅威観測)</span></button>
                     <button class="terminal-tab-btn" data-agent="boot"><i class="fas fa-server"></i> <span>SyncBoot</span> <span class="tab-sub">(MSA生成)</span></button>
                     <button class="terminal-tab-btn" data-agent="cms"><i class="fas fa-layer-group"></i> <span>SyncCMS</span> <span class="tab-sub">(配信)</span></button>
                     <button class="terminal-tab-btn" data-agent="shop"><i class="fas fa-shopping-bag"></i> <span>SyncShop</span> <span class="tab-sub">(コマース)</span></button>
@@ -600,7 +602,7 @@
             <div class="section-header fade-in-up text-center mb-4">
                 <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">4-Tier 9-Solution Autonomous Suite</span>
                 <h2 class="section-title mt-2">Sync Series</h2>
-                <p class="section-desc">企画・開発・EC・SI事業損益管制・QA・データ収集の全工程を自律化する9種AIエージェントラインナップ</p>
+                <p class="section-desc">SyncWatch（脅威収集・ルールコンパイル）→ SyncVerse（Shift-Left コードセキュリティ点検＆自動パッチPR）→ SyncAPIM（Shift-Right ランタイム攻撃パターン遮断）へと連動する3角自律DevSecOpsアーキテクチャを実現します。</p>
             </div>
             
             <div class="solutions-grid">
@@ -704,6 +706,66 @@
                         </div>
                         <div class="solution-actions">
                             <a href="../../ja/solutions/sync-llm.html" class="btn btn-outline btn-sm">詳細を見る &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2-2. SyncAPIM -->
+                <div class="solution-card fade-in-up">
+                    <div>
+                        <div class="solution-card-header">
+                            <div class="agent-icon-box" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(192, 132, 252, 0.3);">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="agent-title-wrap">
+                                <h3>SyncAPIM</h3>
+                                <span class="badge" style="background: rgba(168, 85, 247, 0.15); color: #d8b4fe; border: 1px solid rgba(216, 180, 254, 0.3);">Tier 2 &bull; APIセキュリティ・WAF統制</span>
+                            </div>
+                        </div>
+                        <ul class="feature-list mt-3">
+                            <li>構文トークン指紋分析器(SqlXssLexicalTokenizer)およびカーネルeBPF遮断による高速脅威防御。</li>
+                            <li>SyncWatch連動リアルタイム攻撃パターン検知・ピンセット仮想パッチ(SandboxedDefenseEvaluator)。</li>
+                            <li>未登録シャドーAPI自動発見・OpenAPI 3.0ドリフト診断・8大機密情報リアルタイムマスキング。</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="tech-tag-group">
+                            <span class="tech-tag">SqlXssLexicalTokenizer</span>
+                            <span class="tech-tag">Pinpoint Virtual Patch</span>
+                            <span class="tech-tag">Kernel eBPF</span>
+                        </div>
+                        <div class="solution-actions">
+                            <a href="../../ja/solutions/sync-apim.html" class="btn btn-outline btn-sm">詳細を見る &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2-3. SyncWatch -->
+                <div class="solution-card fade-in-up delay-1">
+                    <div>
+                        <div class="solution-card-header">
+                            <div class="agent-icon-box" style="background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(251, 113, 133, 0.3);">
+                                <i class="fas fa-shield-virus"></i>
+                            </div>
+                            <div class="agent-title-wrap">
+                                <h3>SyncWatch</h3>
+                                <span class="badge" style="background: rgba(244, 63, 94, 0.15); color: #fda4af; border: 1px solid rgba(253, 164, 175, 0.3);">Tier 2 &bull; AI Security Threat Intelligence &amp; Rule Compiler Agent</span>
+                            </div>
+                        </div>
+                        <ul class="feature-list mt-3">
+                            <li>7大グローバルセキュリティ脅威(NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, Nuclei, OWASP CRS, KISA)および診断文書を単一ハブで収集・正規化。</li>
+                            <li>SyncVerse向けコード点検パック(VerseAuditPack)とSyncAPIM向け攻撃パターンパック(ApimDefensePack)を同時コンパイル。</li>
+                            <li>自己サンドボックス検証(TP 100%, FP 0%)を通過したルールのみを全社へリアルタイム配信。</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="tech-tag-group">
+                            <span class="tech-tag">VerseAuditPack</span>
+                            <span class="tech-tag">ApimDefensePack</span>
+                            <span class="tech-tag">3角自律DevSecOps</span>
+                        </div>
+                        <div class="solution-actions">
+                            <a href="../../ja/solutions/sync-watch.html" class="btn btn-outline btn-sm">詳細を見る &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -1075,11 +1137,12 @@
         <div class="footer-bottom text-center">
             <div class="container text-center" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
                 <div class="seo-links" style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; align-items: center; font-size: 0.88rem;">
-                    <span style="color: var(--text-secondary); font-weight: 700;">SyncSeries 10大ソリューション:</span>
+                    <span style="color: var(--text-secondary); font-weight: 700;">SyncSeries 11大ソリューション:</span>
                     <a href="/ja/solutions/sync-verse.html" style="color: #38bdf8; text-decoration: none; font-weight: 600;">SyncVerse</a>
                     <a href="/ja/solutions/sync-insight.html" style="color: inherit; text-decoration: none;">SyncInsight</a>
                     <a href="/ja/solutions/sync-llm.html" style="color: inherit; text-decoration: none;">SyncLLM</a>
                     <a href="/ja/solutions/sync-apim.html" style="color: inherit; text-decoration: none;">SyncAPIM</a>
+                    <a href="/ja/solutions/sync-watch.html" style="color: inherit; text-decoration: none;">SyncWatch</a>
                     <a href="/ja/solutions/sync-boot.html" style="color: inherit; text-decoration: none;">SyncBoot</a>
                     <a href="/ja/solutions/sync-cms.html" style="color: inherit; text-decoration: none;">SyncCMS</a>
                     <a href="/ja/solutions/sync-shop.html" style="color: inherit; text-decoration: none;">SyncShop</a>
