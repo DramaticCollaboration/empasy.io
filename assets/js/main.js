@@ -747,7 +747,7 @@ function initMain() {
         },
         watch: {
             slug: 'sync-watch',
-            screenUrl: '/images/screenshots/sync-apim/screen_01.png',
+            screenUrl: '/images/screenshots/sync-watch/screen_01.png',
             caption: {
                 ko: 'SyncWatch 실제 관제 화면 — 7대 글로벌 위협 수집 및 VerseAuditPack·ApimDefensePack 듀얼 컴파일·배포',
                 en: 'SyncWatch Live Console — Global Threat Intelligence & Dual Security Rule Compiler',
@@ -917,7 +917,7 @@ function initMain() {
     }
 
     // 10. Solution Detail Page Visual Screenshot Showcase Injection
-    const solMatch = (window.location.pathname || '').match(/\/solutions\/(sync-(?:verse|insight|llm|apim|boot|cms|shop|ops|eta|crawl))\.html/i);
+    const solMatch = (window.location.pathname || '').match(/\/solutions\/(sync-(?:verse|insight|llm|apim|watch|boot|cms|shop|ops|eta|crawl))\.html/i);
     if (solMatch && !document.querySelector('.solution-visual-showcase')) {
         const slug = solMatch[1].toLowerCase();
         const shortKey = slug.replace('sync-', '');
@@ -997,7 +997,7 @@ function initMain() {
         const linkEl = card.querySelector('a[href*="sync-"]');
         const headerEl = card.querySelector('.solution-card-header');
         if (!linkEl || !headerEl) return;
-        const m = (linkEl.getAttribute('href') || '').match(/(sync-(?:verse|insight|llm|apim|boot|cms|shop|ops|eta|crawl))/i);
+        const m = (linkEl.getAttribute('href') || '').match(/(sync-(?:verse|insight|llm|apim|watch|boot|cms|shop|ops|eta|crawl))/i);
         if (!m) return;
         const slug = m[1].toLowerCase();
         const shortKey = slug.replace('sync-', '');

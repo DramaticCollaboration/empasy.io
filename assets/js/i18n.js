@@ -9,7 +9,7 @@ const translations = {
         "nav.contact": "문의하기",
         "hero.badge": "Empasy AI",
         "hero.title": "개발부터 테스트·운영까지,<br>스스로 일하는 <span style='color: var(--primary-color);'>AI 업무 자동화</span>",
-        "hero.subtitle": "<strong style='color: var(--text-primary);'>살아 있는 소프트웨어는 엠파시가 만듭니다.</strong><br>반복되는 코딩, 화면이 바뀔 때마다 깨지는 테스트, 번거로운 데이터 수집과 운영까지.<br>9가지 전문 AI가 하나의 팀처럼 움직여 기업의 IT 업무를 자동화합니다.",
+        "hero.subtitle": "<strong style='color: var(--text-primary);'>살아 있는 소프트웨어는 엠파시가 만듭니다.</strong><br>반복되는 코딩, 화면이 바뀔 때마다 깨지는 테스트, 번거로운 데이터 수집과 운영까지.<br>11가지 전문 AI가 하나의 팀처럼 움직여 기업의 IT 업무를 자동화합니다.",
         "hero.btn": "솔루션 살펴보기",
         
         "cms.badge": "웹사이트 자동 제작",
