@@ -1,12 +1,31 @@
 function initMain() {
-    // 0. Mobile Menu Injection
+    // 0. Mobile Menu Injection & Background Scroll Lock
     const navContainer = document.querySelector('.nav-container');
     const navLinksEl = document.querySelector('.nav-links');
     const navActions = document.querySelector('.nav-actions');
 
+    const setMobileMenuOpen = (isOpen) => {
+        if (!navContainer || !navLinksEl) return;
+        navLinksEl.classList.toggle('active', isOpen);
+        if (navActions) navActions.classList.toggle('active', isOpen);
+        navContainer.classList.toggle('active', isOpen);
+        document.documentElement.classList.toggle('mobile-menu-open', isOpen);
+        document.body.classList.toggle('mobile-menu-open', isOpen);
+        const btn = navContainer.querySelector('.mobile-menu-btn');
+        if (btn) {
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+        if (!isOpen) {
+            navContainer.scrollTop = 0;
+        }
+    };
+
     if (navContainer && navLinksEl && !document.querySelector('.mobile-menu-btn')) {
         const mobileBtn = document.createElement('button');
         mobileBtn.className = 'mobile-menu-btn';
+        mobileBtn.setAttribute('type', 'button');
+        mobileBtn.setAttribute('aria-label', 'Menu');
+        mobileBtn.setAttribute('aria-expanded', 'false');
         mobileBtn.innerHTML = `
             <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -17,9 +36,22 @@ function initMain() {
         navContainer.appendChild(mobileBtn);
 
         mobileBtn.addEventListener('click', () => {
-            navLinksEl.classList.toggle('active');
-            if (navActions) navActions.classList.toggle('active');
-            navContainer.classList.toggle('active');
+            const nextOpen = !navContainer.classList.contains('active');
+            setMobileMenuOpen(nextOpen);
+        });
+
+        navContainer.querySelectorAll('a:not(.dropbtn)').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 1023 && navContainer.classList.contains('active')) {
+                    setMobileMenuOpen(false);
+                }
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1023 && navContainer.classList.contains('active')) {
+                setMobileMenuOpen(false);
+            }
         });
     }
 
