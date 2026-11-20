@@ -1,191 +1,103 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-6BNPM5TX7C');
-    </script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
-    <!-- End Google Tag Manager -->
-    <title>SyncEta - AI自己修復型Webテスト自動化 | Empasy</title>
-    <meta name="description" content="SyncEtaはVision-LLM自己修復セレクター、Excelテストケース直接実行、L1-L5階層別深層品質検証を提供するAIテスト自動化ソリューションです。">
-    <meta name="keywords" content="SyncEta, AI QA, テスト自動化, 自己修復セレクター, Playwright, Excelテスト実行, Empasy">
-    <meta property="og:title" content="SyncEta - AI自己修復型Webテスト自動化 | Empasy">
-    <meta property="og:description" content="SyncEtaはVision-LLM自己修復セレクター、Excelテストケース直接実行、L1-L5階層別深層品質検証を提供するAIテスト自動化ソリューションです。">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Empasy">
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .page-header { padding: 150px 0 80px; text-align: center; }
-        .page-title { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; color: var(--text-primary); }
-        .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto; }
-        .code-diff-box {
-            background: #f8fafc;
-            border-radius: 12px;
-            padding: 1.5rem;
-            font-family: monospace;
-            font-size: 0.95rem;
-            line-height: 1.7;
-            text-align: left;
-            max-width: 800px;
-            margin: 2rem auto;
-            border: 1px solid #334155;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-        .diff-remove { color: #f87171; display: block; }
-        .diff-add { color: #4ade80; display: block; font-weight: bold; }
-    </style>
-    <!-- SEO Tags -->
-    
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <title>SyncETA 公式製品ページ | Empasy</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://eta.empasy.io/">
+    <meta http-equiv="refresh" content="0;url=https://eta.empasy.io/">
+    <script>window.location.replace('https://eta.empasy.io/');</script>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- SEO & AIO Tags -->
-    
-    
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.io/ja/solutions/sync-eta.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-eta.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-eta.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-eta.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-eta.html" />
-    <meta property="og:url" content="https://empasy.io/ja/solutions/sync-eta.html">
+    <style>
+        body {
+            margin: 0;
+            font-family: Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+            background: #ffffff;
+            color: #0f172a;
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+        .redirect-card {
+            max-width: 460px;
+            width: 100%;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 36px 32px;
+            text-align: center;
+            box-shadow: 0 12px 32px -20px rgba(15, 23, 42, 0.14);
+        }
+        .redirect-brand {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #0e7490;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0 0 10px;
+            line-height: 1.35;
+        }
+        p {
+            font-size: 0.94rem;
+            color: #475569;
+            margin: 0 0 24px;
+            line-height: 1.65;
+            word-break: keep-all;
+        }
+        .redirect-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 8px;
+            background: #0f172a;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+        }
+        .btn-primary:hover {
+            background: #1e293b;
+        }
+        .link-home {
+            font-size: 0.88rem;
+            color: #475569;
+            text-decoration: underline;
+            margin-top: 4px;
+        }
+        .link-home:hover {
+            color: #0f172a;
+        }
+    </style>
 </head>
-<body class="theme-eta">
-    {{> header_ja }}
-
-    <main class="container">
-        <div class="page-header fade-in-up" style="position: relative; overflow: hidden;">
-            <div class="container" style="position: relative; z-index: 10;">
-                <span class="badge" data-i18n="eta.badge">Self-Healing QA Agent</span>
-                <h1 class="page-title">SyncEta</h1>
-                <p class="page-subtitle">画面レイアウトと文脈を正確に理解し、UI改修時にもテストシナリオを自動自己修復する高信頼AI QAエージェントです。</p>
-                <div class="mt-4 flex-center" style="gap: 1rem; flex-wrap: wrap;">
-                    <a href="../download_eta.html" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.05rem; border-radius: 30px;">デスクトップ版ダウンロード</a>
-                    <a href="https://doc.empasy.com/synceta/" target="_blank" rel="noopener" class="btn btn-outline" style="padding: 1rem 2rem; font-size: 1.05rem; border-radius: 30px;"><i class="fas fa-book"></i> 技術ドキュメント</a>
-                    <a href="https://sync.empasy.io/products/sync-eta#demo-console-section" target="_blank" rel="noopener" class="btn btn-outline" style="padding: 1rem 2rem; font-size: 1.05rem; border-radius: 30px;"><i class="fas fa-desktop"></i> SyncEta ポータル詳細</a>
-                    <a href="/downloads/proposals/SyncETA_Proposal.pdf" download class="btn btn-outline" style="padding: 1rem 2rem; font-size: 1.05rem; border-radius: 30px;"><i class="fas fa-file-pdf"></i> 提案書 PDF</a>
-                </div>
-            </div>
+<body>
+    <main class="redirect-card">
+        <span class="redirect-brand">Empasy SyncSeries</span>
+        <h1>SyncETA 公式ページへ移動しています</h1>
+        <p>最新の製品概要および画面案内は専用公式サイト(https://eta.empasy.io/)でご確認いただけます。</p>
+        <div class="redirect-actions">
+            <a class="btn-primary" href="https://eta.empasy.io/">SyncETA 公式サイトを開く &#8599;</a>
+            <a class="link-home" href="/ja/pages/index.html">Empasy ホームへ戻る</a>
         </div>
-
-        <section class="section pt-0 fade-in-up delay-1">
-            <div class="vs-container mb-4">
-                <div class="vs-box vs-legacy">
-                    <h4 data-i18n="eta.vs.legacy.title">従来のスクリプト型QA</h4>
-                    <ul class="vs-list">
-                        <li>UIデザインやDOM構造変更時のセレクターエラーによるテスト停止</li>
-                        <li>単純なピクセル比較による誤検知(False Positive)の多発</li>
-                        <li>リリースごとのテストスクリプト修正に膨大な工数を消費</li>
-                    </ul>
-                </div>
-                <div class="vs-box vs-agent">
-                    <h4 data-i18n="eta.vs.agent.title">SyncEta QAエージェント</h4>
-                    <ul class="vs-list">
-                        <li>Vision-LLMによる視覚的要素認識と実行時自己修復</li>
-                        <li>ユーザーの実際の画面認知に基づく文脈的品質検証</li>
-                        <li>エラー発生時の原因分析およびパッチスクリプトの自動生成</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Self-Healing Code Diff Showcase -->
-            <div class="section-header text-center mt-5 mb-3">
-                <span class="badge">Technical Proof</span>
-                <h2 class="section-title">Self-Healing コード自動修復の仕組み</h2>
-                <p class="section-desc">ボタンクラス名が変更されても、Vision-LLMが文脈を分析してテストスクリプトをリアルタイムに自動補正します。</p>
-            </div>
-            <div class="code-diff-box">
-                <div style="color: #94a3b8; margin-bottom: 0.8rem; border-bottom: 1px solid #334155; padding-bottom: 0.4rem;">
-                    // Playwright Test Execution: tests/checkout.spec.ts
-                </div>
-                <span style="color: #64748b;">// [従来のコード: DOMクラス名変更により要素検索失敗]</span>
-                <span class="diff-remove">- await page.locator('button.btn-checkout-legacy').click();</span>
-                <span style="color: #64748b;">// [SyncEta Self-Healing: Vision-LLMが決済ボタンを視覚認識し自動代替]</span>
-                <span class="diff-add">+ await page.locator('button:has-text("購入する"), #pay-submit').click();</span>
-                <div style="color: #38bdf8; margin-top: 0.8rem;">
-                    [SyncEta Report] Selector healed automatically. Test run completed with 0 errors.
-                </div>
-            </div>
-
-            <div class="section-header text-center mt-5 mb-4">
-                <h2 class="section-title">主要機能およびアーキテクチャ</h2>
-            </div>
-            <div class="rich-features">
-                <div class="feature-item">
-                    <span class="badge" style="margin-bottom: 0.8rem;">01</span>
-                    <h3>Vision-LLM 自己修復 (Self-Healing)</h3>
-                    <p>単純なXPath/CSS依存から脱却し、画面内の位置関係とテキスト文脈を総合判断して壊れたセレクターを実行時にリアルタイム自己修復します。</p>
-                </div>
-                <div class="feature-item">
-                    <span class="badge" style="margin-bottom: 0.8rem;">02</span>
-                    <h3>Excelテストケースの直接自動実行</h3>
-                    <p>事前のレコーディングやコード記述なしで、QAチームが保有するExcelテスト仕様書をAIが直接解釈してPlaywright自動テストを実行します。</p>
-                </div>
-                <div class="feature-item">
-                    <span class="badge" style="margin-bottom: 0.8rem;">03</span>
-                    <h3>L1〜L5 階層別深層品質検証</h3>
-                    <p>L1(単純描画/クリック)からL3(動的変数キャプチャ)、L5(APIトランザクション整合性検証)まで多次元の品質を保証します。</p>
-                </div>
-                <div class="feature-item">
-                    <span class="badge" style="margin-bottom: 0.8rem;">04</span>
-                    <h3>年間LLMコスト最大99%削減 (TCO)</h3>
-                    <p>シナリオ生成時のみ1回LLMを呼び出し、反復回帰テストは録画されたエンジンレコードでゼロコスト実行して運用コストを削減します。</p>
-                </div>
-            </div>
-        </section>
-    
-        <section class="faq-section fade-in-up delay-2">
-            <h2>よくある質問 (FAQ)</h2>
-            <div class="faq-item">
-                <details>
-                    <summary>コーディング経験のないQA担当者やPMでも利用できますか？</summary>
-                    <div class="faq-answer">はい、スクリプトのプログラミング不要で、通常のブラウザ操作を記録するだけでテストシナリオを自動生成できます。また、既存のエクセル(Excel)テストケースをそのまま取り込んで自動テストとして即座に実行可能です。</div>
-                </details>
-            </div>
-            <div class="faq-item">
-                <details>
-                    <summary>UIやボタンの配置が変更された場合、テストスクリプトは壊れませんか？</summary>
-                    <div class="faq-answer">壊れません。画面全体の文脈と視覚要素を総合認識するため、クラス名やレイアウトが変更されても対象要素を自動特定し、中断することなくテストを継続します。リリースごとの修正工数を大幅に削減できます。</div>
-                </details>
-            </div>
-            <div class="faq-item">
-                <details>
-                    <summary>既存のテスト資産(Playwright、Selenium、Excel)はそのまま活用できますか？</summary>
-                    <div class="faq-answer">はい、既存のテスト資産を破棄する必要はありません。既存のPlaywrightやSeleniumパイプライン上に組み込んで自動修復機能を付加でき、エクセルの手動テストケースも自動実行シナリオとして即座に活用できます。</div>
-                </details>
-            </div>
-            <div class="faq-item">
-                <details>
-                    <summary>モバイルレスポンシブ対応や複数デバイスの検証にも対応していますか？</summary>
-                    <div class="faq-answer">はい、デスクトップブラウザだけでなく、スマートフォンやタブレットなど各解像度に応じたレスポンシブ検証を一括実行できます。画面崩れや端末固有の不具合を1回の実行で点検します。</div>
-                </details>
-            </div>
-            <div class="faq-item">
-                <details>
-                    <summary>社内セキュリティ網やローカル(localhost)開発環境でも動作しますか？</summary>
-                    <div class="faq-answer">はい、テストデータや画面情報が外部クラウドに送信されないよう、ローカルPCや社内閉域網(エアギャップ)環境での完全独立稼働をサポートしています。ローカル開発サーバーも安全にテスト可能です。</div>
-                </details>
-            </div>
-        </section>
     </main>
-
-    {{> footer_ja }}
-    <script type="module" src="/assets/js/i18n.js"></script>
-    <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>

@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ETA オートスケーリング導入記 (1) — ワーカーをいつ増やすべきか？ | Empasy 技術ブログ</title>
     <meta name="description" content="Playwright MCPブラウザワーカーにおいてCPUベースのHPAが適さない理由と、KEDAおよびRedis Queue待機数を基準としたイベント駆動型オートスケーリング設計を解説します。">
-    <meta name="keywords" content="SyncEta, SyncETA, Kubernetes オートスケーリング, KEDA, HPA, Redis Queue, Playwright MCP, QA自動化, Empasy">
+    <meta name="keywords" content="SyncETA, SyncETA, Kubernetes オートスケーリング, KEDA, HPA, Redis Queue, Playwright MCP, QA自動化, Empasy">
     <meta property="og:title" content="ETA オートスケーリング導入記 (1) — ワーカーをいつ増やすべきか？ | Empasy 技術ブログ">
     <meta property="og:description" content="Playwright MCPブラウザワーカーにおいてCPUベースのHPAが適さない理由と、KEDAおよびRedis Queue待機数を基準としたイベント駆動型オートスケーリング設計を解説します。">
     <meta property="og:type" content="article">
@@ -87,7 +87,7 @@
 
                         <h1 style="margin-top: 1rem; font-size: clamp(1.5rem, 4vw, 2.1rem); margin-bottom: 1.5rem;">ETA オートスケーリング導入記 (1) — ワーカーをいつ増やすべきか？</h1>
 
-                        <p style="margin-bottom: 1rem;">SyncEta（ETA）は、テストシナリオを指定した時刻に自動実行できるスケジュール機能を提供しています。</p>
+                        <p style="margin-bottom: 1rem;">SyncETA（ETA）は、テストシナリオを指定した時刻に自動実行できるスケジュール機能を提供しています。</p>
 
                         <p style="margin-bottom: 1rem;">通常運用では問題になりませんが、四半期ごとの大規模リグレッションテストのように特定の時間帯にジョブが一斉に集中するケースがあります。このときワーカー数が不足していると、実行待ちのシナリオが滞留し続けます。</p>
 

@@ -25,13 +25,13 @@ const translations = {
         "cms.vs.agent.3": "본문 수정 시 15개 이상 다국어 페이지에 자동 번역·반영",
         
         "eta.badge": "AI 테스트 자동화",
-        "eta.title": "SyncEta",
+        "eta.title": "SyncETA",
         "eta.typewriter": "화면 변경을 스스로 인식해 테스트를 계속 진행합니다...",
         "eta.vs.legacy.title": "기존 테스트 자동화",
         "eta.vs.legacy.1": "화면 디자인이나 버튼 위치가 바뀌면 테스트가 즉시 중단됨",
         "eta.vs.legacy.2": "작은 화면 차이에도 불필요한 오류 알림이 자주 발생함",
         "eta.vs.legacy.3": "테스트 코드를 고치는 데 개발자 시간이 계속 소모됨",
-        "eta.vs.agent.title": "SyncEta 도입 후",
+        "eta.vs.agent.title": "SyncETA 도입 후",
         "eta.vs.agent.1": "AI가 화면을 직접 보고 바뀐 버튼을 스스로 찾아 테스트 계속 진행",
         "eta.vs.agent.2": "실제 사용자 눈높이에서 화면이 정상인지 정확하게 판단",
         "eta.vs.agent.3": "오류 발견 시 원인을 분석하고 수정 방법까지 함께 제안",
@@ -121,7 +121,7 @@ const translations = {
         "ops.vs.agent.3": "하도급법 60일 지급 마감일(D-Day)·지연이자 자동 계산 및 보증증권 만기 사전 알림",
 
         "footer.title": "우리 회사에 맞는 AI 자동화, 지금 상담해 보세요",
-        "footer.copyright": "© 2026 Empasy IT Corp. All rights reserved."
+        "footer.copyright": "© 2026 Empasy Inc. All rights reserved."
     },
     en: {
         "nav.about": "Philosophy",
@@ -149,13 +149,13 @@ const translations = {
         "cms.vs.agent.3": "Automatic contextual translation into 15+ languages upon content update",
 
         "eta.badge": "Self-Healing QA Agent",
-        "eta.title": "SyncEta",
+        "eta.title": "SyncETA",
         "eta.typewriter": "Initializing self-healing visual regression tests...",
         "eta.vs.legacy.title": "Legacy Script-based QA",
         "eta.vs.legacy.1": "Tests fail due to broken locators when UI designs change",
         "eta.vs.legacy.2": "Frequent false positives caused by pixel-level comparisons",
         "eta.vs.legacy.3": "Massive ongoing developer resources needed for script maintenance",
-        "eta.vs.agent.title": "SyncEta Agent",
+        "eta.vs.agent.title": "SyncETA Agent",
         "eta.vs.agent.1": "Autonomous visual locator discovery and self-healing using Vision LLM",
         "eta.vs.agent.2": "Contextual UI breakage detection based on 'user perception'",
         "eta.vs.agent.3": "Proposes root-cause analysis and fix codes to the control tower upon error detection",
@@ -273,13 +273,13 @@ const translations = {
         "cms.vs.agent.3": "本文の修正時、15カ国語のリソースを自動的に文脈翻訳",
 
         "eta.badge": "自己修復型AIテスト自動化エージェント",
-        "eta.title": "SyncEta",
+        "eta.title": "SyncETA",
         "eta.typewriter": "画面構造の変更を自動認識し、自己修復ビジュアル回帰テストを実行しています...",
         "eta.vs.legacy.title": "従来のスクリプトベースQA",
         "eta.vs.legacy.1": "UIデザインの変更により識別子エラーが発生しテストが失敗",
         "eta.vs.legacy.2": "ピクセル単位の比較による頻繁な誤検知（False Positive）",
         "eta.vs.legacy.3": "スクリプトの保守に膨大な開発リソースを継続的に投入",
-        "eta.vs.agent.title": "SyncEta エージェント",
+        "eta.vs.agent.title": "SyncETA エージェント",
         "eta.vs.agent.1": "Vision LLMを活用した視覚的識別子の自動探索と自己修復",
         "eta.vs.agent.2": "「ユーザー認知」に基づく文脈的な画面崩壊の判定",
         "eta.vs.agent.3": "エラー検出時、原因分析と解決コードをコントロールタワーに逆提案",
@@ -411,10 +411,12 @@ function getTargetUrl(targetLang) {
 
 // Dynamic Language Switcher to preserve current page path
 function updateLangSwitcherLinks() {
-    const langLinks = document.querySelectorAll('.lang-dropdown-content a');
+    const langLinks = document.querySelectorAll('.lang-dropdown-content a, .lang-switch a');
     if (!langLinks || langLinks.length === 0) return;
 
     langLinks.forEach(link => {
+        if (link.dataset.langBound === 'true') return;
+        link.dataset.langBound = 'true';
         let targetLang = link.getAttribute('data-lang');
         if (!targetLang) {
             const href = link.getAttribute('href') || '';

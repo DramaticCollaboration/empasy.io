@@ -18,11 +18,11 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SyncEta Autoscaling in Practice (1) — When Should We Scale Out Workers? | Empasy Tech Blog</title>
-    <meta name="description" content="Why CPU-based HPA falls short for Playwright MCP browser workers, and how SyncEta uses KEDA and Redis Queue depth for event-driven worker autoscaling.">
-    <meta name="keywords" content="SyncEta, SyncETA, Kubernetes Autoscaling, KEDA, HPA, Redis Queue, Playwright MCP, QA Automation, Empasy">
-    <meta property="og:title" content="SyncEta Autoscaling in Practice (1) — When Should We Scale Out Workers? | Empasy Tech Blog">
-    <meta property="og:description" content="Why CPU-based HPA falls short for Playwright MCP browser workers, and how SyncEta uses KEDA and Redis Queue depth for event-driven worker autoscaling.">
+    <title>SyncETA Autoscaling in Practice (1) — When Should We Scale Out Workers? | Empasy Tech Blog</title>
+    <meta name="description" content="Why CPU-based HPA falls short for Playwright MCP browser workers, and how SyncETA uses KEDA and Redis Queue depth for event-driven worker autoscaling.">
+    <meta name="keywords" content="SyncETA, SyncETA, Kubernetes Autoscaling, KEDA, HPA, Redis Queue, Playwright MCP, QA Automation, Empasy">
+    <meta property="og:title" content="SyncETA Autoscaling in Practice (1) — When Should We Scale Out Workers? | Empasy Tech Blog">
+    <meta property="og:description" content="Why CPU-based HPA falls short for Playwright MCP browser workers, and how SyncETA uses KEDA and Redis Queue depth for event-driven worker autoscaling.">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html">
@@ -40,8 +40,8 @@
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "SyncEta Autoscaling in Practice (1) — When Should We Scale Out Workers?",
-      "description": "Why CPU-based HPA falls short for Playwright MCP browser workers, and how SyncEta uses KEDA and Redis Queue depth for event-driven worker autoscaling.",
+      "headline": "SyncETA Autoscaling in Practice (1) — When Should We Scale Out Workers?",
+      "description": "Why CPU-based HPA falls short for Playwright MCP browser workers, and how SyncETA uses KEDA and Redis Queue depth for event-driven worker autoscaling.",
       "datePublished": "2026-11-03",
       "author": {
         "@type": "Organization",
@@ -85,9 +85,9 @@
                             <span style="color: var(--primary-color); font-weight: 600;">QA Automation &amp; Kubernetes</span>
                         </div>
 
-                        <h1 style="margin-top: 1rem; font-size: clamp(1.5rem, 4vw, 2.1rem); margin-bottom: 1.5rem;">SyncEta Autoscaling in Practice (1) — When Should We Scale Out Workers?</h1>
+                        <h1 style="margin-top: 1rem; font-size: clamp(1.5rem, 4vw, 2.1rem); margin-bottom: 1.5rem;">SyncETA Autoscaling in Practice (1) — When Should We Scale Out Workers?</h1>
 
-                        <p style="margin-bottom: 1rem;">SyncEta (ETA) provides a scheduled execution feature that runs E2E test scenarios automatically at designated times.</p>
+                        <p style="margin-bottom: 1rem;">SyncETA (ETA) provides a scheduled execution feature that runs E2E test scenarios automatically at designated times.</p>
 
                         <p style="margin-bottom: 1rem;">Under normal day-to-day traffic, a fixed worker pool handles scheduled runs smoothly. However, during quarterly release audits or major regression windows, hundreds of test scenarios are triggered simultaneously. When worker capacity is insufficient, scenarios pile up in the waiting queue.</p>
 
@@ -110,7 +110,7 @@
 
                         <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">Scaling Directly on Redis Queue Depth</h2>
 
-                        <p style="margin-bottom: 1rem;">The scheduled execution pipeline in SyncEta follows a clean queue-driven flow:</p>
+                        <p style="margin-bottom: 1rem;">The scheduled execution pipeline in SyncETA follows a clean queue-driven flow:</p>
 
 <pre style="overflow-x: auto; padding: 1rem;"><code>[WAS]
   User registers Cron schedule

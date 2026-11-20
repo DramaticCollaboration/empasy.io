@@ -1,179 +1,103 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-6BNPM5TX7C');
-    </script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
-    <!-- End Google Tag Manager -->
-    <title>SyncLLM - エンタープライズAI Gateway & FinOps統制 | Empasy</title>
-    <meta name="description" content="SyncLLMはマルチLLMインテリジェントルーティング、リアルタイムFinOpsトークン費用保護、個人情報(PII)自動マスキングを提供するエンタープライズAIゲートウェイです。">
-    <meta name="keywords" content="SyncLLM, AI Gateway, FinOps, トークン費用最適化, PIIマスキング, エンタープライズLLM, Empasy">
-    <meta property="og:title" content="SyncLLM - エンタープライズAI Gateway & FinOps統制 | Empasy">
-    <meta property="og:description" content="SyncLLMはマルチLLMインテリジェントルーティング、リアルタイムFinOpsトークン費用保護、個人情報(PII)自動マスキングを提供するエンタープライズAIゲートウェイです。">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Empasy">
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .page-header { padding: 150px 0 80px; text-align: center; }
-        .page-title { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; color: var(--text-primary); }
-        .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto; }
-    </style>
-    <!-- SEO Tags -->
-    
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <title>SyncLLM 公式製品ページ | Empasy</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://llm.empasy.io/">
+    <meta http-equiv="refresh" content="0;url=https://llm.empasy.io/">
+    <script>window.location.replace('https://llm.empasy.io/');</script>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- SEO & AIO Tags -->
-    
-    
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.io/ja/solutions/sync-llm.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-llm.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-llm.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-llm.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-llm.html" />
-    <meta property="og:url" content="https://empasy.io/ja/solutions/sync-llm.html">
+    <style>
+        body {
+            margin: 0;
+            font-family: Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+            background: #ffffff;
+            color: #0f172a;
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+        .redirect-card {
+            max-width: 460px;
+            width: 100%;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 36px 32px;
+            text-align: center;
+            box-shadow: 0 12px 32px -20px rgba(15, 23, 42, 0.14);
+        }
+        .redirect-brand {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #0e7490;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0 0 10px;
+            line-height: 1.35;
+        }
+        p {
+            font-size: 0.94rem;
+            color: #475569;
+            margin: 0 0 24px;
+            line-height: 1.65;
+            word-break: keep-all;
+        }
+        .redirect-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 8px;
+            background: #0f172a;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+        }
+        .btn-primary:hover {
+            background: #1e293b;
+        }
+        .link-home {
+            font-size: 0.88rem;
+            color: #475569;
+            text-decoration: underline;
+            margin-top: 4px;
+        }
+        .link-home:hover {
+            color: #0f172a;
+        }
+    </style>
 </head>
-<body class="theme-llm">
-    {{> header_ja }}
-
-    <main class="container">
-        <div class="page-header fade-in-up" style="position: relative; overflow: hidden;">
-            <div class="container" style="position: relative; z-index: 10;">
-                <span class="badge" data-i18n="llm.badge">Enterprise AI Gateway & FinOps</span>
-                <h1 class="page-title">SyncLLM</h1>
-                <p class="page-subtitle">マルチLLMのインテリジェントルーティング、リアルタイムFinOps費用保護、エンタープライズPIIマスキングを担う中央AIゲートウェイです。</p>
-                <div class="mt-4 flex-center" style="gap: 1rem; flex-wrap: wrap;">
-                    <a href="https://sync.empasy.io/products/sync-llm#demo-console-section" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.05rem; border-radius: 30px;"><i class="fas fa-desktop"></i> SyncLLM デモ体験</a>
-                    <a href="https://doc.empasy.com/syncllm/" target="_blank" rel="noopener" class="btn btn-outline" style="padding: 1rem 2rem; font-size: 1.05rem; border-radius: 30px;"><i class="fas fa-book"></i> 技術ドキュメント</a>
-                    <a href="/downloads/proposals/SyncLLM_Proposal.pdf" download class="btn btn-outline" style="padding: 1rem 2rem; font-size: 1.05rem; border-radius: 30px;"><i class="fas fa-file-pdf"></i> 提案書 PDF</a>
-                </div>
-            </div>
+<body>
+    <main class="redirect-card">
+        <span class="redirect-brand">Empasy SyncSeries</span>
+        <h1>SyncLLM 公式ページへ移動しています</h1>
+        <p>最新の製品概要および画面案内は専用公式サイト(https://llm.empasy.io/)でご確認いただけます。</p>
+        <div class="redirect-actions">
+            <a class="btn-primary" href="https://llm.empasy.io/">SyncLLM 公式サイトを開く &#8599;</a>
+            <a class="link-home" href="/ja/pages/index.html">Empasy ホームへ戻る</a>
         </div>
-
-        <section class="section pt-0 fade-in-up delay-1">
-            <div class="vs-container mb-4">
-                <div class="vs-box vs-legacy">
-                    <h4>個別直接連携・単一API呼び出し</h4>
-                    <ul class="vs-list">
-                        <li>特定LLMベンダー障害時の全社サービス停止リスク</li>
-                        <li>類似重複クエリによるトークン費用流出と過剰請求</li>
-                        <li>社内機密および個人情報(PII)の外部漏洩リスク</li>
-                        <li>部署別トークン使用量の測定・予算統制の不能</li>
-                    </ul>
-                </div>
-                <div class="vs-box vs-agent">
-                    <h4>SyncLLM AI Gateway</h4>
-                    <ul class="vs-list">
-                        <li>OpenAI、Anthropic、Gemini、オンプレミスLLMの統合ルーティング＆自動Fallback</li>
-                        <li>Redisセマンティックキャッシュによる反復クエリ費用40〜60%削減</li>
-                        <li>機密データおよび個人情報のリアルタイム検知・自動マスキング</li>
-                        <li>日次予算Capおよび部署別APIキーに基づくリアルタイム課金精算</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="section-header text-center mt-5 mb-4">
-                <h2 class="section-title">主要機能 (Key Features)</h2>
-            </div>
-            <div class="rich-features">
-                <div class="feature-item">
-                    <span class="feature-icon"><i class="fas fa-random"></i></span>
-                    <h3>複数AIモデルの自動選択および障害時自動切替</h3>
-                    <p>OpenAI、Anthropic、Gemini、Qwen、DeepSeekおよび社内AIを統合管理し、費用と質問内容に応じて最適モデルへ自動接続・障害時即時迂回します。</p>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon"><i class="fas fa-coins"></i></span>
-                    <h3>部門別AI予算上限管理 &amp; 類似質問回答の再利用</h3>
-                    <p>類似質問の回答を再利用するキャッシュ機能でAI利用料金を40〜60%削減し、部門別の日次・月次予算上限で費用急増を防ぎます。</p>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon"><i class="fas fa-user-lock"></i></span>
-                    <h3>個人情報自動マスク・暗号化キー管理・利用監査ログ</h3>
-                    <p>外部送信前に個人情報を自動マスクし、AES-256暗号化キー保管と部門・ユーザー別の呼出履歴・キャッシュ利用・応答時間の完全記録を実現します。</p>
-                </div>
-            </div>
-
-            <div class="section-header text-center mt-5 mb-4" style="margin-top: 5rem;">
-                <h2 class="section-title">動作プロセス (How It Works)</h2>
-            </div>
-            <div class="process-steps">
-                <div class="step-item">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h4>プロンプト受付および個人情報(PII)自動マスキング</h4>
-                        <p>社内システムからのAI質問リクエストを受け取り、マイナンバー・電話番号・口座番号などの機密情報を外部送信前に自動マスキングします。</p>
-                    </div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h4>セマンティックキャッシュ照会および最適モデル接続</h4>
-                        <p>過去に処理した類似質問があれば保存済み回答を即座に返却(CACHE HIT)し、新規質問はコストと性能を考慮して最適LLMへルーティングします。</p>
-                    </div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h4>リアルタイム使用量集計および部門別予算統制</h4>
-                        <p>応答と同時に部門・ユーザー別のトークン消費量と費用をリアルタイム集計し、予算上限に応じたアラートおよびモデル自動切替を行います。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="faq-section fade-in-up delay-2">
-            <h2>よくあるご質問 (FAQ)</h2>
-            <div class="faq-item">
-                <details>
-                    <summary>外部インターネットが遮断された社内サーバーの独自AIモデルとも連携できますか？</summary>
-                    <div class="faq-answer">はい。オンプレミス環境に構築されたローカルLLM（vLLM、Ollamaなど）とも標準API方式でシームレスに連携し、外部通信なしで安全に利用できます。</div>
-                </details>
-            </div>
-            <div class="faq-item">
-                <details>
-                    <summary>AI利用料金が設定した予算を超過しそうな場合はどう制御されますか？</summary>
-                    <div class="faq-answer">部門別・プロジェクト別に日次および月次の予算上限を設定でき、上限に近づくと担当者へ通知を送るか、自動的に高コスパモデルや社内LLMへ切り替えて予算超過を防ぎます。</div>
-                </details>
-            </div>
-            <div class="faq-item">
-                <details>
-                    <summary>稼働中の既存社内プログラムを大幅に改修する必要がありますか？</summary>
-                    <div class="faq-answer">既存システムを新規開発し直す必要はなく、AI接続先URLと認証キーをSyncLLMゲートウェイに変更するだけですぐに適用できます。</div>
-                </details>
-            </div>
-        </section>
-
-        <section class="section cta-box" style="background: rgba(15, 23, 42, 0.5); border: 1px solid var(--border-color); border-radius: 16px; margin: 4rem 0; padding: 3.5rem 2rem;">
-            <div class="container text-center">
-                <h2 class="section-title" style="margin-bottom: 1rem;">企業のAIセキュリティとトークンコストを一箇所で安全に統制しましょう</h2>
-                <p style="color: var(--text-secondary); max-width: 680px; margin: 0 auto 2rem;">社内セキュリティ規定と予算規模に合わせた最適なAIゲートウェイ構築プランをご案内いたします。</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://sync.empasy.io/products/sync-llm#demo-console-section" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg"><i class="fas fa-play-circle" style="margin-right: 6px;"></i>ライブデモ体験</a>
-                    <a href="/ja/pages/contact.html" class="btn btn-outline btn-lg">導入のお問い合わせ</a>
-                </div>
-            </div>
-        </section>
     </main>
-
-    {{> footer_ja }}
-    <script type="module" src="/assets/js/i18n.js"></script>
-    <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>

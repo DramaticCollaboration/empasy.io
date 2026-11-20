@@ -20,20 +20,28 @@ function initMain() {
         }
     };
 
-    if (navContainer && navLinksEl && !document.querySelector('.mobile-menu-btn')) {
-        const mobileBtn = document.createElement('button');
-        mobileBtn.className = 'mobile-menu-btn';
-        mobileBtn.setAttribute('type', 'button');
-        mobileBtn.setAttribute('aria-label', 'Menu');
-        mobileBtn.setAttribute('aria-expanded', 'false');
-        mobileBtn.innerHTML = `
-            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-        `;
-        navContainer.appendChild(mobileBtn);
+    if (navContainer && navLinksEl && !navContainer.dataset.empNavBound) {
+        navContainer.dataset.empNavBound = 'true';
+        let mobileBtn = navContainer.querySelector('.mobile-menu-btn');
+        if (!mobileBtn) {
+            mobileBtn = document.createElement('button');
+            mobileBtn.className = 'mobile-menu-btn';
+            mobileBtn.setAttribute('type', 'button');
+            mobileBtn.setAttribute('aria-label', 'Menu');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            mobileBtn.innerHTML = `
+                <svg class="icon-hamburger" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg class="icon-close" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            `;
+            navContainer.appendChild(mobileBtn);
+        }
 
         mobileBtn.addEventListener('click', () => {
             const nextOpen = !navContainer.classList.contains('active');
@@ -48,10 +56,31 @@ function initMain() {
             });
         });
 
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navContainer.classList.contains('active')) {
+                setMobileMenuOpen(false);
+            }
+        });
+
         window.addEventListener('resize', () => {
             if (window.innerWidth > 1023 && navContainer.classList.contains('active')) {
                 setMobileMenuOpen(false);
             }
+        });
+
+        // Mobile Menu Dropdown Toggle
+        const dropdownBtns = navContainer.querySelectorAll('.dropdown > .dropbtn');
+        dropdownBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                if (window.innerWidth <= 1023) {
+                    e.preventDefault();
+                    const dropdown = btn.parentElement;
+                    navContainer.querySelectorAll('.dropdown').forEach(d => {
+                        if (d !== dropdown) d.classList.remove('open');
+                    });
+                    dropdown.classList.toggle('open');
+                }
+            });
         });
     }
 
@@ -63,24 +92,6 @@ function initMain() {
             announcementBar.style.display = 'none';
         });
     }
-
-    // 0.5 Mobile Menu Dropdown Toggle
-    const dropdownBtns = document.querySelectorAll('.nav-container .dropdown > .dropbtn');
-    dropdownBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            if (window.innerWidth <= 1023) {
-                e.preventDefault(); // Prevent jumping to link on mobile
-                const dropdown = btn.parentElement;
-                
-                // Close other dropdowns
-                document.querySelectorAll('.nav-container .dropdown').forEach(d => {
-                    if (d !== dropdown) d.classList.remove('open');
-                });
-                
-                dropdown.classList.toggle('open');
-            }
-        });
-    });
 
     // 1. Intersection Observer for Fade-In-Up Animations
     const animatedElements = document.querySelectorAll('.fade-in-up');
@@ -139,19 +150,19 @@ function initMain() {
         });
     });
 
-    // 3. Header Background Change on Scroll (rAF Throttled + Passive)
+    // 3. Header Background Change on Scroll (rAF Throttled + Passive, Light Editorial)
     const header = document.querySelector('.glass-header');
     if (header) {
         let ticking = false;
         const updateHeader = () => {
             if (window.scrollY > 50) {
-                header.style.background = 'rgba(11, 17, 32, 0.97)';
-                header.style.boxShadow = '0 10px 30px -10px rgba(0, 0, 0, 0.5)';
-                header.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 4px 20px -12px rgba(15, 23, 42, 0.14)';
+                header.style.borderColor = '#e2e8f0';
             } else {
-                header.style.background = 'rgba(11, 17, 32, 0.94)';
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
                 header.style.boxShadow = 'none';
-                header.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                header.style.borderColor = '#e2e8f0';
             }
             ticking = false;
         };
@@ -312,7 +323,7 @@ function initMain() {
                 `,
                 en: `
                     <div style="color: #38bdf8;">[SyncVerse Orchestrator]</div>
-                    <div>&nbsp;↳ A2A MessageHub initialized [Agents: SyncBoot, SyncEta, SyncLLM]</div>
+                    <div>&nbsp;↳ A2A MessageHub initialized [Agents: SyncBoot, SyncETA, SyncLLM]</div>
                     <div>&nbsp;↳ Dispatching distributed transaction... <span style="color: #22c55e;">[DISPATCHED]</span></div>
                     <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncVerse Guardrail]</div>
                     <div>&nbsp;↳ PII Masked &amp; Redis Semantic Cache HIT (Latency: 12ms) <span style="color: #22c55e;">[SAFE]</span></div>
@@ -320,7 +331,7 @@ function initMain() {
                 `,
                 ja: `
                     <div style="color: #38bdf8;">[SyncVerse 統合管制]</div>
-                    <div>&nbsp;↳ 注文・決済ワークフロー自動化を開始 [連携AI: SyncBoot, SyncEta, SyncLLM]</div>
+                    <div>&nbsp;↳ 注文・決済ワークフロー自動化を開始 [連携AI: SyncBoot, SyncETA, SyncLLM]</div>
                     <div>&nbsp;↳ 段階別タスクの自動配分および実行中... <span style="color: #22c55e;">[配信完了]</span></div>
                     <div style="margin-top: 0.8rem; color: #a78bfa;">[セキュリティおよびFinOps保護]</div>
                     <div>&nbsp;↳ 個人情報(PII)自動マスキングおよびセマンティックキャッシュ適用 (応答: 12ms) <span style="color: #22c55e;">[安全]</span></div>
@@ -429,24 +440,24 @@ function initMain() {
             },
             output: {
                 ko: `
-                    <div style="color: #38bdf8;">[SyncEta 자동 테스트]</div>
+                    <div style="color: #38bdf8;">[SyncETA 자동 테스트]</div>
                     <div>&nbsp;↳ 화면 내 결제 버튼 위치 인식 중... <span style="color: #38bdf8;">[확인 완료: #btn-pay-submit]</span></div>
                     <div>&nbsp;↳ 화면 구조 변경 감지: 바뀐 버튼 위치로 테스트 경로 자동 수정... <span style="color: #22c55e;">[성공]</span></div>
                     <div style="margin-top: 0.8rem; color: #a78bfa;">[테스트 결과]</div>
                     <div>&nbsp;↳ 결제 시나리오 및 정상 응답 확인 완료... <span style="color: #22c55e;">[통과 (0.84초)]</span></div>
                 `,
                 en: `
-                    <div style="color: #38bdf8;">[SyncEta Engine]</div>
+                    <div style="color: #38bdf8;">[SyncETA Engine]</div>
                     <div>&nbsp;↳ Vision-LLM identifying UI elements... <span style="color: #38bdf8;">[Identified: #btn-pay-submit]</span></div>
                     <div>&nbsp;↳ DOM mutation detected: Applying Self-Healing selector... <span style="color: #22c55e;">[Success]</span></div>
-                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncEta Inspector]</div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncETA Inspector]</div>
                     <div>&nbsp;↳ E2E checkout scenario &amp; transaction response verified... <span style="color: #22c55e;">[PASS (0.84s)]</span></div>
                 `,
                 ja: `
-                    <div style="color: #38bdf8;">[SyncEta Engine]</div>
+                    <div style="color: #38bdf8;">[SyncETA Engine]</div>
                     <div>&nbsp;↳ Vision-LLMが画面要素を識別中... <span style="color: #38bdf8;">[識別完了: #btn-pay-submit]</span></div>
                     <div>&nbsp;↳ DOM変更を検知: セレクター自己修復(Self-Healing)を適用... <span style="color: #22c55e;">[成功]</span></div>
-                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncEta Inspector]</div>
+                    <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncETA Inspector]</div>
                     <div>&nbsp;↳ E2E決済シナリオおよびトランザクション応答検証... <span style="color: #22c55e;">[PASS (0.84s)]</span></div>
                 `
             }

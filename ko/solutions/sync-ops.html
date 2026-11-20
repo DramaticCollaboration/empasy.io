@@ -1,295 +1,103 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-6BNPM5TX7C');
-    </script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
-    <!-- End Google Tag Manager -->
-    <title>SyncOps - IT 프로젝트·인력·손익 관리 플랫폼 | 엠파시(Empasy)</title>
-    <meta name="description" content="SyncOps는 계약 단가와 실제 투입 비용 자동 비교, 인력 투입 현황 관리, 4대 보증보험 만기 알림, 하도급 대금 지급기일 관리, 전자연구노트를 하나로 제공하는 IT 프로젝트·인력·손익 관리 플랫폼입니다.">
-    <meta name="keywords" content="SyncOps, IT 프로젝트 관리, 프로젝트 손익 관리, 인력 투입 관리, 4대 보증보험 관리, 하도급 지급기일 알림, 전자연구노트, 엠파시, Empasy">
-    <meta property="og:title" content="SyncOps - IT 프로젝트·인력·손익 관리 플랫폼 | 엠파시(Empasy)">
-    <meta property="og:description" content="계약 단가와 실제 투입 비용 자동 비교부터 인력 가동률, 보증보험, 하도급 지급기일, 전자연구노트까지 한곳에서 관리합니다.">
-    <meta property="og:type" content="website">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Empasy">
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .page-header { padding: 150px 0 80px; text-align: center; position: relative; z-index: 10; }
-        .page-title { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; color: var(--text-primary); }
-        .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 820px; margin: 0 auto; }
-        .hero-grid-bg {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background-image: linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
-            background-size: 40px 40px; z-index: 1; opacity: 0.8; pointer-events: none;
-        }
-        .hero-blur-circle {
-            position: absolute; width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, transparent 70%);
-            border-radius: 50%; top: -100px; right: -200px; z-index: 0; pointer-events: none;
-        }
-        .faq-item { border: none !important; }
-        .faq-item details {
-            background: var(--surface-color); border: 1px solid var(--border-color);
-            border-radius: 12px; margin-bottom: 1rem; overflow: hidden; transition: all 0.3s ease;
-        }
-        .faq-item details[open] {
-            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.5);
-        }
-        .faq-item summary { padding: 1.5rem 2rem !important; background: transparent !important; }
-        .faq-answer { padding: 0 2rem 1.5rem !important; }
-        .roi-calculator {
-            background: #f8fafc;
-            border-radius: 24px; padding: 3rem 4rem; color: #0f172a;
-            box-shadow: 0 30px 60px -12px rgba(0,0,0,0.4); margin: 5rem auto;
-            text-align: center; max-width: 900px; position: relative; overflow: hidden;
-            border: 1px solid #e2e8f0;
-        }
-        .roi-content { position: relative; z-index: 1; }
-        .roi-number { font-size: 4.5rem; font-weight: 800; color: #34d399; margin: 1rem 0; line-height: 1; font-family: var(--font-mono); }
-        .live-preview {
-            background: #f8fafc; border-radius: 12px; border: 1px solid #334155;
-            text-align: left; overflow: hidden; margin: 3rem auto 0;
-            max-width: 680px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
-        }
-        .live-preview-header { background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; border-bottom: 1px solid #334155; align-items: center; }
-        .live-preview-dot { width: 12px; height: 12px; border-radius: 50%; }
-        .live-preview-body { padding: 1.5rem; font-family: var(--font-mono); font-size: 0.92rem; color: #334155; line-height: 1.65; }
-    </style>
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "SyncOps",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "description": "계약 단가와 실제 투입 비용 자동 비교, 인력 투입 관리, 보증보험 및 하도급 지급기일 알림을 제공하는 IT 프로젝트·인력·손익 관리 플랫폼입니다.",
-      "url": "https://empasy.io/ko/solutions/sync-ops.html"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "계약 단가와 실제 인건비가 다른 프로젝트의 실시간 수익률을 어떻게 계산하나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "발주처와 계약한 청구 단가(매출 기준)와 실제 투입된 정규직 급여 및 프리랜서·외주 지급 비용(원가 기준)을 자동으로 비교하여 프로젝트별·부서별·월별 영업이익률을 실시간으로 계산합니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "하도급 대금 지급기일이나 보증보험 갱신 누락을 어떻게 예방하나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "세금계산서 발행일과 검수일을 기준으로 하도급 60일 지급기일을 자동 추적해 사전 알림을 보내며, 입찰·계약·선급금·하자 4대 보증보험 만기 일정도 놓치지 않게 알려줍니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "연구개발(R&D) 세액공제를 위한 전자연구노트 요건을 충족하나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "네, 연구소의 연구개발 기록에 대해 작성자·검토자 전자서명과 시점인증을 부여하여 위변조가 불가능한 전자연구노트로 안전하게 보관합니다."
-          }
-        }
-      ]
-    }
-    </script>
-    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <title>SyncOps 공식 제품 페이지 | 엠파시(Empasy)</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://ops.empasy.io/">
+    <meta http-equiv="refresh" content="0;url=https://ops.empasy.io/">
+    <script>window.location.replace('https://ops.empasy.io/');</script>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="canonical" href="https://empasy.io/ko/solutions/sync-ops.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-ops.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-ops.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-ops.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-ops.html" />
-    <meta property="og:url" content="https://empasy.io/ko/solutions/sync-ops.html">
+    <style>
+        body {
+            margin: 0;
+            font-family: Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+            background: #ffffff;
+            color: #0f172a;
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+        .redirect-card {
+            max-width: 460px;
+            width: 100%;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 36px 32px;
+            text-align: center;
+            box-shadow: 0 12px 32px -20px rgba(15, 23, 42, 0.14);
+        }
+        .redirect-brand {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #0e7490;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0 0 10px;
+            line-height: 1.35;
+        }
+        p {
+            font-size: 0.94rem;
+            color: #475569;
+            margin: 0 0 24px;
+            line-height: 1.65;
+            word-break: keep-all;
+        }
+        .redirect-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 8px;
+            background: #0f172a;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+        }
+        .btn-primary:hover {
+            background: #1e293b;
+        }
+        .link-home {
+            font-size: 0.88rem;
+            color: #475569;
+            text-decoration: underline;
+            margin-top: 4px;
+        }
+        .link-home:hover {
+            color: #0f172a;
+        }
+    </style>
 </head>
-<body class="theme-insight">
-    {{> header_ko }}
-
-    <main>
-        <div class="page-header fade-in-up" style="overflow: hidden;">
-            <div class="hero-grid-bg"></div>
-            <div class="hero-blur-circle"></div>
-            <div class="container" style="position: relative; z-index: 2;">
-                <span class="badge">IT 프로젝트·인력·손익 관리</span>
-                <h1 class="page-title">SyncOps</h1>
-                <p class="page-subtitle">계약 단가와 실제 투입 비용 자동 비교부터 월별 인력 투입 현황, 4대 보증보험 만기, 하도급 대금 지급기일, 전자연구노트까지 한곳에서 관리하는 IT 사업 운영 플랫폼입니다.</p>
-                <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <a href="https://sync.empasy.io/products/sync-ops#demo-console-section" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.9rem 2.2rem; font-size: 1.05rem; border-radius: 30px; font-weight: 700;"><i class="fas fa-play-circle" style="margin-right: 6px;"></i>실시간 데모 체험</a>
-                    <a href="/downloads/proposals/SyncOps_Proposal.pdf" download class="btn btn-outline" style="padding: 0.9rem 2.2rem; font-size: 1.05rem; border-radius: 30px;"><i class="fas fa-file-pdf" style="margin-right: 6px;"></i>도입 제안서 PDF</a>
-                    <a href="/ko/pages/contact.html" class="btn btn-outline" style="padding: 0.9rem 2.2rem; font-size: 1.05rem; border-radius: 30px;">도입 문의하기</a>
-                </div>
-                <div class="live-preview fade-in-up delay-1" style="display: none;">
-                    <div class="live-preview-header">
-                        <div class="live-preview-dot" style="background: #ef4444;"></div>
-                        <div class="live-preview-dot" style="background: #f59e0b;"></div>
-                        <div class="live-preview-dot" style="background: #10b981;"></div>
-                        <span style="margin-left: 0.5rem; font-size: 0.8rem; color: #94a3b8; font-family: var(--font-mono);">SyncOps 프로젝트 손익 및 일정 점검 예시</span>
-                    </div>
-                    <div class="live-preview-body">
-                        <div><span style="color: #34d399;">$</span> empasy ops audit-profit --year 2026 --check-subcontract-overdue</div>
-                        <div style="color: #94a3b8; margin-top: 0.5rem;">[SyncOps] 진행 중인 18개 IT 프로젝트의 계약 단가 대비 실제 투입 비용 계산 중...</div>
-                        <div style="color: #38bdf8;">[손익 요약] 2026년 누적 매출: 148억 원 | 실제 투입 원가(인건비+외주비): 109억 원 | 영업이익률: 26.3%</div>
-                        <div style="color: #f59e0b;">[지급기일 알림] 하도급 60일 지급기일 임박 1건 (D-5: PRJ-2026-014, 4,200만 원)</div>
-                        <div style="color: #a855f7;">[보증보험·연구노트] 4대 보증보험 정상 확인 | 연구노트 124건 전자서명 및 시점인증 완료</div>
-                        <div style="color: #4ade80; margin-top: 0.5rem;">[OK] 경영진용 프로젝트 손익 리포트가 통합 관리 화면으로 전달되었습니다.</div>
-                    </div>
-                </div>
-            </div>
+<body>
+    <main class="redirect-card">
+        <span class="redirect-brand">Empasy SyncSeries</span>
+        <h1>SyncOps 공식 페이지로 이동 중입니다</h1>
+        <p>최신 제품 소개와 화면 안내는 전용 공식 사이트(https://ops.empasy.io/)에서 확인하실 수 있습니다.</p>
+        <div class="redirect-actions">
+            <a class="btn-primary" href="https://ops.empasy.io/">SyncOps 공식 사이트 열기 &#8599;</a>
+            <a class="link-home" href="/">엠파시 홈으로 돌아가기</a>
         </div>
-
-        <section class="section" style="padding-top: 0;">
-            <div class="container">
-                <div class="solution-row fade-in-up" style="margin-bottom: 4rem;">
-                    <div class="solution-content">
-                        <h3>엑셀 수작업으로 흩어져 있던 프로젝트 손익과 계약·일정 관리를 하나로 통합합니다</h3>
-                        <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;">
-                            IT 서비스(SI/SM) 및 소프트웨어 기업의 수익성은 <strong>발주처와 계약한 금액과 실제로 투입된 인력 비용(정규직·프리랜서·외주)을 정확히 비교하는 것</strong>에서 시작됩니다. 하지만 많은 기업이 인력 배정, 기성 청구, 보증보험 만기, 하도급 대금 지급기일을 여러 엑셀 파일로 따로 관리하다가 프로젝트가 끝난 뒤에야 적자를 알게 되거나 지급기일을 놓치는 어려움을 겪습니다.<br><br>
-                            <strong>SyncOps</strong>는 국내 IT 프로젝트 실무에 꼭 필요한 손익 계산, 인력 투입률 관리, 4대 보증보험, 하도급 60일 지급기일 알림, 전자연구노트를 하나의 화면에서 손쉽게 관리할 수 있도록 돕습니다.
-                        </p>
-
-                        <div class="vs-container mt-4">
-                            <div class="vs-box legacy">
-                                <h5>기존 엑셀 수작업 기반 프로젝트 관리</h5>
-                                <ul>
-                                    <li>계약 단가와 실제 인건비를 따로 계산하기 어려워 프로젝트 도중 적자 여부를 제때 파악하지 못함</li>
-                                    <li>인력별 월간 투입 일정이 겹치거나 대기 중인 유휴 인력을 한눈에 파악하기 어려움</li>
-                                    <li>입찰·계약·선급금·하자 4대 보증보험 갱신을 놓쳐 대금 수금이 지연됨</li>
-                                    <li>하도급 대금 60일 지급기일을 넘겨 지연이자나 법적 불이익이 발생할 위험</li>
-                                </ul>
-                            </div>
-                            <div class="vs-box agent">
-                                <h5>SyncOps 도입 후</h5>
-                                <ul>
-                                    <li><strong>계약 단가와 실제 투입 비용 자동 비교:</strong> 계약 매출액과 실제 투입 인건비·외주비를 실시간으로 비교해 프로젝트별·부서별 이익률을 바로 확인</li>
-                                    <li><strong>기술자 등급 및 월별 인력 가동률 관리:</strong> 경력·자격 기반 기술자 등급 자동 산정 및 월별 인력 투입 현황·대기 인력 한눈에 파악</li>
-                                    <li><strong>4대 보증보험 및 대금 수금 일정 관리:</strong> 입찰·계약·선급금·하자보증 만기일 사전 알림 및 착수·중도·잔금 세금계산서 연동</li>
-                                    <li><strong>하도급 60일 지급기일 알림 &amp; 전자연구노트:</strong> 하도급 대금 지급기일 사전 알림 및 R&amp;D 세액공제용 전자연구노트 제공</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 6 Core Pillars -->
-                <div class="mt-4 pt-4 fade-in-up" style="border-top: 1px solid var(--border-color);">
-                    <h3 class="text-center" style="margin-bottom: 1rem; font-size: 2rem;">SyncOps 6가지 핵심 기능</h3>
-                    <p class="text-center" style="color: var(--text-secondary); max-width: 760px; margin: 0 auto 3rem;">IT 프로젝트의 수익성 관리와 계약·법규 준수를 빈틈없이 지원합니다.</p>
-                    <div class="vision-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                        <div class="vision-card">
-                            <div class="icon-box"><i class="fas fa-chart-pie"></i></div>
-                            <h4>1. 계약 단가와 실제 투입 비용 자동 비교</h4>
-                            <p class="text-secondary mt-2">발주처 계약 단가(청구 기준)와 내부 실제 원가(급여·4대보험·프리랜서·외주비)를 자동으로 대조합니다. 프로젝트별·고객사별·부서별 영업이익률 변화를 실시간 표와 차트로 한눈에 확인할 수 있습니다.</p>
-                        </div>
-                        <div class="vision-card">
-                            <div class="icon-box"><i class="fas fa-users-cog"></i></div>
-                            <h4>2. 기술자 등급 산정 &amp; 월별 인력 투입표</h4>
-                            <p class="text-secondary mt-2">학력·자격증·경력을 바탕으로 소프트웨어 기술자 등급을 자동 계산합니다. 12개월 단위 인력 투입표로 과부하 인력과 대기 인력을 쉽게 파악하고 프로젝트에 알맞은 인력을 추천받습니다.</p>
-                        </div>
-                        <div class="vision-card">
-                            <div class="icon-box"><i class="fas fa-file-shield"></i></div>
-                            <h4>3. 4대 보증보험 만기 및 수금 일정 관리</h4>
-                            <p class="text-secondary mt-2">입찰보증, 계약보증, 선급금보증, 하자보수보증 등 4대 보증보험의 발급 금액과 만기 갱신 일정을 프로젝트 대금 청구 일정과 연결해 수금 지연을 예방합니다.</p>
-                        </div>
-                        <div class="vision-card">
-                            <div class="icon-box"><i class="fas fa-scale-balanced"></i></div>
-                            <h4>4. 하도급 60일 지급기일 알림 &amp; 지연이자 계산</h4>
-                            <p class="text-secondary mt-2">검수일로부터 60일 이내에 지급해야 하는 하도급 대금 기일을 자동으로 추적합니다. 마감 14일·7일 전에 미리 알림을 보내고, 기일 초과 시 지연이자를 자동 계산해 법적 분쟁을 예방합니다.</p>
-                        </div>
-                        <div class="vision-card">
-                            <div class="icon-box"><i class="fas fa-stamp"></i></div>
-                            <h4>5. R&amp;D 세액공제용 전자연구노트</h4>
-                            <p class="text-secondary mt-2">기업부설연구소 및 연구전담부서의 연구 기록에 작성자·검토자 전자서명과 시점인증을 자동으로 남겨, 연구개발 세액공제 심사에 필요한 증빙 자료를 손쉽게 준비할 수 있습니다.</p>
-                        </div>
-                        <div class="vision-card">
-                            <div class="icon-box"><i class="fas fa-network-wired"></i></div>
-                            <h4>6. AI 간 데이터 자동 연동 및 경영진 리포트</h4>
-                            <p class="text-secondary mt-2">프로젝트 이익률이 목표치보다 낮아지거나 중요 지급기일이 다가오면 SyncVerse와 SyncInsight로 즉시 알림을 전달하고, 인력 재배치 방안을 경영진에게 보고합니다.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="roi-calculator cta-box fade-in-up">
-                    <div class="roi-content">
-                        <span class="badge" style="background: rgba(52, 211, 153, 0.2); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.4);">Expected Business Impact</span>
-                        <h3 style="font-size: 2.2rem; margin-top: 1rem; color: #0f172a;">프로젝트 원가 누수를 막고 인력 운영 효율을 높이세요</h3>
-                        <p style="color: #94a3b8; font-size: 1.1rem; max-width: 640px; margin: 0 auto;">계약 단가와 실제 투입 비용 자동 비교 및 일정 알림으로 프로젝트 이익률을 높이고 계약 관리 실수를 예방합니다.</p>
-                        <div class="roi-number" style="color: #0e7490;">실시간 손익 파악</div>
-                        <p style="color: #475569; font-weight: 600;">평균 프로젝트 영업이익률 개선 &amp; 지급기일·보증보험 누락 예방</p>
-                        <div style="margin-top: 2.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                            <a href="/ko/pages/contact.html" class="btn btn-primary" style="background: #10b981; color: #0f172a; font-weight: 700; border: none; padding: 1rem 2.5rem; font-size: 1.1rem;">도입 문의하기</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="faq-section container fade-in-up delay-2" style="margin-bottom: 4rem;">
-            <h2>자주 묻는 질문 (FAQ)</h2>
-            <div class="faq-item">
-                <details>
-                    <summary>계약 단가와 실제 인건비가 다른 프로젝트의 실시간 수익률을 어떻게 계산하나요?</summary>
-                    <div class="faq-answer">발주처와 계약한 청구 단가(매출 기준)와 실제 투입된 정규직 급여 및 프리랜서·외주 지급 비용(원가 기준)을 자동으로 비교하여 프로젝트별·부서별·월별 영업이익률을 실시간으로 계산합니다.</div>
-                </details>
-            </div>
-            <div class="faq-item">
-                <details>
-                    <summary>하도급 대금 지급기일이나 보증보험 갱신 누락을 어떻게 예방하나요?</summary>
-                    <div class="faq-answer">세금계산서 발행일과 검수일을 기준으로 하도급 60일 지급기일을 자동 추적해 사전 알림을 보내며, 입찰·계약·선급금·하자 4대 보증보험 만기 일정도 놓치지 않게 알려줍니다.</div>
-                </details>
-            </div>
-            <div class="faq-item">
-                <details>
-                    <summary>연구개발(R&amp;D) 세액공제를 위한 전자연구노트 요건을 충족하나요?</summary>
-                    <div class="faq-answer">네, 연구소의 연구개발 기록에 대해 작성자·검토자 전자서명과 시점인증을 부여하여 위변조가 불가능한 전자연구노트로 안전하게 보관합니다.</div>
-                </details>
-            </div>
-        </section>
-
-        <!-- Bottom CTA Box -->
-        <section class="section cta-box container" style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; margin: 4rem auto; padding: 3.5rem 2rem;">
-            <div class="container text-center">
-                <h2 class="section-title" style="margin-bottom: 1rem;">IT 프로젝트 수익률 관리와 법적 리스크 예방을 한곳에서 시작하세요</h2>
-                <p style="color: var(--text-secondary); max-width: 680px; margin: 0 auto 2rem;">사내 프로젝트 환경에 맞춘 손익·인력·보증 통합 관리 구축 방안을 안내해 드립니다.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://sync.empasy.io/products/sync-ops#demo-console-section" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg"><i class="fas fa-play-circle" style="margin-right: 6px;"></i>실시간 데모 체험</a>
-                    <a href="/ko/pages/contact.html" class="btn btn-outline btn-lg">도입 문의하기</a>
-                </div>
-            </div>
-        </section>
     </main>
-
-    {{> footer_ko }}
-
-    <script type="module" src="/assets/js/i18n.js"></script>
-    <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>

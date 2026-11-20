@@ -21,6 +21,10 @@
     <meta name="robots" content="noindex, follow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://empasy.io/ko/pages/privacy.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/privacy.html">
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/privacy.html">
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/privacy.html">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -28,32 +32,35 @@
     <style>
         .privacy-container {
             max-width: 900px;
-            margin: 140px auto 80px;
-            padding: 3rem;
-            background: #f8fafc;
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            color: var(--text-primary);
+            margin: 104px auto 72px;
+            padding: clamp(1.75rem, 4vw, 3rem);
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            color: #0f172a;
         }
         .privacy-title {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
+            font-size: clamp(1.75rem, 3.5vw, 2.2rem);
+            font-weight: 700;
+            margin-bottom: 0.6rem;
             color: #0f172a;
         }
         .privacy-subtitle {
-            color: var(--text-secondary);
+            color: #475569;
             font-size: 0.95rem;
-            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
             border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 1rem;
+            padding-bottom: 1.2rem;
         }
         .privacy-section {
             margin-bottom: 2rem;
         }
         .privacy-section h2 {
-            font-size: 1.3rem;
-            color: var(--primary-color);
-            margin-bottom: 0.8rem;
+            font-size: 1.18rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
             font-family: inherit;
         }
         .privacy-section p, .privacy-section li {
@@ -62,17 +69,20 @@
             line-height: 1.8;
             margin-bottom: 0.5rem;
         }
+        .privacy-section strong {
+            color: #0f172a;
+        }
         .privacy-section ul {
             list-style: disc;
-            padding-left: 1.5rem;
-            margin-bottom: 1rem;
+            padding-left: 1.4rem;
+            margin-bottom: 0.85rem;
         }
         .officer-box {
-            background: #ffffff;
+            background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-radius: 12px;
-            padding: 1.5rem;
-            margin-top: 1rem;
+            padding: 1.4rem;
+            margin-top: 0.85rem;
         }
     </style>
 </head>
@@ -80,7 +90,7 @@
     {{> header_ko }}
 
     <main class="container">
-        <div class="privacy-container fade-in-up">
+        <div class="privacy-container">
             <h1 class="privacy-title">개인정보 처리방침</h1>
             <p class="privacy-subtitle">주식회사 엠파시(이하 "회사")는 정보주체의 자유와 권리 보호를 위해 「개인정보 보호법」 및 관계 법령이 정한 바를 준수하며, 적법하게 개인정보를 처리하고 안전하게 관리하고 있습니다.</p>
 
@@ -88,17 +98,17 @@
                 <h2>1. 개인정보의 처리 목적</h2>
                 <p>회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
                 <ul>
-                    <li><strong>엔터프라이즈 솔루션 도입 상담 및 PoC 문의 처리</strong>: 솔루션(SyncSeries) 도입 검토, 견적 및 기술 질의에 대한 상담 안내, 연락처 확인 및 회신.</li>
-                    <li><strong>고객 서비스 및 기술 지원</strong>: 기술 문의 접수 및 시스템 운영 관련 피드백 제공.</li>
+                    <li><strong>기업용 솔루션 도입 상담 및 사전 검증 문의 처리</strong>: 솔루션(SyncSeries) 도입 검토, 견적 및 기술 질의에 대한 상담 안내, 연락처 확인 및 회신.</li>
+                    <li><strong>고객 서비스 및 기술 지원</strong>: 기술 문의 접수 및 시스템 운영 관련 안내 제공.</li>
                 </ul>
             </div>
 
             <div class="privacy-section">
                 <h2>2. 수집하는 개인정보 항목</h2>
-                <p>회사는 도입 및 기술 문의(Contact Us) 서비스 제공을 위해 아래와 같은 개인정보를 수집하고 있습니다.</p>
+                <p>회사는 도입 및 기술 문의 서비스 제공을 위해 아래와 같은 최소한의 개인정보를 수집하고 있습니다.</p>
                 <ul>
-                    <li><strong>수집 항목 (필수)</strong>: 이름(성명), 회사명, 이메일 주소, 연락처(전화번호), 문의 솔루션, 문의 내용</li>
-                    <li><strong>수집 방법</strong>: 웹사이트 문의하기 폼(Contact Form)을 통한 이용자 직접 입력</li>
+                    <li><strong>수집 항목 (필수)</strong>: 이름(성명), 회사명, 이메일 주소, 연락처(전화번호), 관심 솔루션, 문의 내용</li>
+                    <li><strong>수집 방법</strong>: 웹사이트 문의하기 양식을 통한 이용자 직접 입력</li>
                 </ul>
             </div>
 
@@ -130,7 +140,7 @@
                 <p>회사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</p>
                 <ul>
                     <li><strong>관리적 조치</strong>: 내부관리계획 수립 및 시행, 취급 직원 최소화 및 정기 교육</li>
-                    <li><strong>기술적 조치</strong>: 통신 구간 암호화(HTTPS/TLS), 접근 통제 시스템 운영, 보안 프로그램 설치</li>
+                    <li><strong>기술적 조치</strong>: 통신 구간 암호화 전송, 접근 통제 시스템 운영, 보안 프로그램 적용</li>
                 </ul>
             </div>
 
@@ -140,13 +150,13 @@
                 <div class="officer-box">
                     <p style="margin:0 0 0.4rem 0;"><strong>개인정보 보호책임자</strong>: 오병문</p>
                     <p style="margin:0 0 0.4rem 0;"><strong>소속/직책</strong>: 주식회사 엠파시 / 대표이사</p>
-                    <p style="margin:0 0 0.4rem 0;"><strong>이메일</strong>: <a href="mailto:poh@empasy.com" style="color:var(--primary-color);">poh@empasy.com</a></p>
+                    <p style="margin:0 0 0.4rem 0;"><strong>이메일</strong>: <a href="mailto:poh@empasy.com" style="color: #0e7490; text-decoration: underline;">poh@empasy.com</a></p>
                     <p style="margin:0;"><strong>대표전화</strong>: 0507-1360-8169</p>
                 </div>
             </div>
 
-            <div class="privacy-section" style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0;">
-                <p style="color:var(--text-secondary); font-size: 0.85rem;">본 개인정보 처리방침은 <strong>2026년 1월 1일</strong>부터 적용됩니다.</p>
+            <div class="privacy-section" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0; margin-bottom: 0;">
+                <p style="color: #475569; font-size: 0.88rem; margin: 0;">본 개인정보 처리방침은 <strong>2026년 1월 1일</strong>부터 적용됩니다.</p>
             </div>
         </div>
     </main>

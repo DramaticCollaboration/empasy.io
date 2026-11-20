@@ -4,70 +4,135 @@
 <header class="glass-header">
     <div class="container nav-container">
         <div class="logo">
-            <a href="/ja/pages/index.html">
-                <img src="/images/logo.svg" alt="EMPASY" class="logo-img" onerror="this.onerror=null; this.src='/assets/images/logo.svg';">
+            <a href="/ja/pages/index.html" aria-label="Empasy ホーム">
+                <img src="/images/logo.svg" alt="EMPASY" class="logo-img">
             </a>
         </div>
-        <nav class="nav-links">
-            <!-- 1. Company Group -->
+        <button type="button" class="mobile-menu-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="emp-nav-links">
+            <svg class="icon-hamburger" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg class="icon-close" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <nav id="emp-nav-links" class="nav-links" aria-label="主要メニュー">
             <div class="dropdown">
-                <a href="/ja/pages/index.html#philosophy" class="dropbtn" data-i18n="nav.company">About Us <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                <a href="/ja/pages/index.html#solutions" class="dropbtn">ソリューション
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+                <div class="dropdown-content" style="min-width: 270px;">
+                    <span class="dropdown-group-heading">主力ソリューション 4種</span>
+                    <a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · 協業・承認統合管理</a>
+                    <a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · 自動テスト・PCアプリ</a>
+                    <a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · 業務システム基盤</a>
+                    <a href="https://cms.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · Web・多言語サイト管理</a>
+                    <span class="dropdown-group-heading">目的別拡張モジュール</span>
+                    <a href="/ja/pages/index.html#modules">データ・セキュリティ・業務拡張 (7種)</a>
+                </div>
+            </div>
+
+            <a href="/ja/pages/clients.html">導入事例</a>
+
+            <div class="dropdown">
+                <a href="/ja/pages/vision.html" class="dropbtn">会社情報
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
                 <div class="dropdown-content">
-                    <a href="/ja/pages/index.html#philosophy" data-i18n="nav.about">企業理念</a>
-                    <a href="/ja/pages/vision.html" data-i18n="nav.vision">ビジョン 2026</a>
-                    <a href="/ja/pages/team.html" data-i18n="nav.team">チーム紹介</a>
+                    <a href="/ja/pages/vision.html">ビジョン・ベンチャー認証</a>
+                    <a href="/ja/pages/team.html">チーム紹介</a>
                     <a href="/ja/pages/careers.html">採用情報</a>
-                </div>
-            </div>
-            
-            <!-- 2. Sync Series Group -->
-            <div class="dropdown">
-                <a href="/ja/pages/index.html#solutions" class="dropbtn" data-i18n="nav.solutions">Sync Series <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
-                <div class="dropdown-content">
-                    <a href="/ja/solutions/sync-verse.html" style="font-weight: 700; color: #38bdf8;">SyncVerse (統制タワー)</a>
-                    <a href="/ja/solutions/sync-insight.html">SyncInsight (意思決定知能)</a>
-                    <a href="/ja/solutions/sync-llm.html">SyncLLM (FinOpsゲートウェイ)</a>
-                    <a href="/ja/solutions/sync-apim.html">SyncAPIM (APIセキュリティ統制)</a>
-                    <a href="/ja/solutions/sync-watch.html">SyncWatch (脅威インテリジェンス・ルールコンパイラ)</a>
-                    <a href="/ja/solutions/sync-boot.html">SyncBoot (バックオフィス・ローコード)</a>
-                    <a href="/ja/solutions/sync-cms.html">SyncCMS (自律型CMS)</a>
-                    <a href="/ja/solutions/sync-shop.html">SyncShop (自律型コマース)</a>
-                    <a href="/ja/solutions/sync-ops.html">SyncOps (SI PMO・損益統制)</a>
-                    <a href="/ja/solutions/sync-eta.html">SyncETA <span style="font-size: 0.75rem; padding: 2px 6px; border-radius: 4px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; margin-left: 4px;">デスクトップアプリ</span></a>
-                    <a href="/ja/solutions/sync-crawl.html">SyncCrawl (RAGパイプライン)</a>
+                    <a href="/ja/pages/faq.html">よくある質問</a>
+                    <a href="/ja/blog/blog.html">インサイト</a>
                 </div>
             </div>
 
-            <!-- 3. Insights Group -->
-            <div class="dropdown">
-                <a href="#" class="dropbtn">Insights <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
-                <div class="dropdown-content">
-                    <a href="/ja/blog/blog.html">Tech Blog</a>
-                    <a href="/ja/pages/faq.html">FAQ</a>
-                    <a href="/ja/blog/case-study-finance.html">導入事例詳細</a>
-                </div>
-            </div>
-
-            <a href="/ja/pages/clients.html" data-i18n="nav.clients">導入実績</a>
-            
-            <!-- Documentation link -->
-            <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">Docs <i class="fas fa-external-link-alt" style="font-size:0.7em; margin-left:2px; opacity:0.7;"></i></a>
-            <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8;">統合デモポータル <i class="fas fa-external-link-alt" style="font-size:0.7em; margin-left:2px; opacity:0.8;"></i></a>
+            <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer">技術文書 &#8599;</a>
+            <a href="https://sync.empasy.io/" target="_blank" rel="noopener noreferrer">統合デモ &#8599;</a>
         </nav>
         <div class="nav-actions">
-            <a href="/ja/download_eta.html" class="btn btn-outline btn-sm" style="font-weight: 600; border-color: rgba(56, 189, 248, 0.4); color: #38bdf8; white-space: nowrap;">SyncETA ダウンロード</a>
-            <div class="dropdown lang-dropdown" style="display: flex; align-items: center;">
-                <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:0.95rem; padding: 0.4rem 0.5rem; cursor: pointer; display:flex; align-items:center; gap:5px;">
-                    <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> JP</span>
-                    <i class="fas fa-chevron-down" style="font-size:0.7em; opacity:0.7;"></i>
-                </button>
-                <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
-                    <a href="/" data-lang="ko" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
-                    <a href="/en/pages/index.html" data-lang="en" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
-                    <a href="/ja/pages/index.html" data-lang="ja" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JP</a>
-                </div>
+            <div class="lang-switch" role="navigation" aria-label="言語切替">
+                <a href="/" data-lang="ko">KO</a>
+                <a href="/en/pages/index.html" data-lang="en">EN</a>
+                <a href="/ja/pages/index.html" data-lang="ja" class="active" aria-current="page">JA</a>
             </div>
-            <a href="/ja/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact" style="white-space: nowrap;">Contact</a>
+            <a href="/ja/download_eta.html" class="btn btn-outline btn-sm">SyncETA 入手</a>
+            <a href="/ja/pages/contact.html" class="btn btn-primary btn-sm">お問い合わせ</a>
         </div>
     </div>
 </header>
+<script>
+(function () {
+    var nav = document.querySelector('.glass-header .nav-container');
+    if (!nav || nav.dataset.empNavBound === 'true') return;
+    nav.dataset.empNavBound = 'true';
+    var btn = nav.querySelector('.mobile-menu-btn');
+    var links = nav.querySelector('.nav-links');
+    var actions = nav.querySelector('.nav-actions');
+    var setOpen = function (open) {
+        nav.classList.toggle('active', open);
+        if (links) links.classList.toggle('active', open);
+        if (actions) actions.classList.toggle('active', open);
+        document.documentElement.classList.toggle('mobile-menu-open', open);
+        document.body.classList.toggle('mobile-menu-open', open);
+        if (btn) {
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            btn.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+        }
+        if (!open) nav.scrollTop = 0;
+    };
+    if (btn) {
+        btn.addEventListener('click', function () {
+            setOpen(!nav.classList.contains('active'));
+        });
+    }
+    nav.querySelectorAll('.dropdown > .dropbtn').forEach(function (drop) {
+        drop.addEventListener('click', function (e) {
+            if (window.innerWidth <= 1023) {
+                e.preventDefault();
+                var parent = drop.parentElement;
+                nav.querySelectorAll('.dropdown').forEach(function (d) {
+                    if (d !== parent) d.classList.remove('open');
+                });
+                parent.classList.toggle('open');
+            }
+        });
+    });
+    nav.querySelectorAll('a:not(.dropbtn)').forEach(function (a) {
+        a.addEventListener('click', function () {
+            if (window.innerWidth <= 1023 && nav.classList.contains('active')) {
+                setOpen(false);
+            }
+        });
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('active')) setOpen(false);
+    });
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 1023 && nav.classList.contains('active')) setOpen(false);
+    });
+    var path = window.location.pathname || '/';
+    var m = path.match(/\/(ko|en|ja)\/(.*)/);
+    nav.querySelectorAll('.lang-switch a[data-lang]').forEach(function (a) {
+        if (a.dataset.langBound === 'true') return;
+        a.dataset.langBound = 'true';
+        var target = a.getAttribute('data-lang');
+        var url = target === 'ko' ? '/' : '/' + target + '/pages/index.html';
+        if (m) {
+            var sub = m[2] || 'pages/index.html';
+            if (target === 'ko' && (sub === 'pages/index.html' || sub === 'pages/' || sub === '')) {
+                url = '/';
+            } else {
+                url = '/' + target + '/' + sub;
+            }
+        }
+        a.setAttribute('href', url);
+        a.addEventListener('click', function () {
+            try { localStorage.setItem('preferred_lang', target); } catch (err) {}
+        });
+    });
+})();
+</script>

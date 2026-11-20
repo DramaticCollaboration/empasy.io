@@ -1,326 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-6BNPM5TX7C');
-    </script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
-    <!-- End Google Tag Manager -->
-    <title>SyncVerse - Central Multi-Agent Orchestrator & Control Tower | Empasy</title>
-    <meta name="description" content="SyncVerse is the central control tower orchestrating the entire SyncSeries agent federation (SyncEta, SyncBoot, SyncCMS, SyncCrawl, SyncLLM, SyncInsight). Experience autonomous operations powered by standard A2A/MCP protocols and enterprise guardrails.">
-    <meta name="keywords" content="SyncVerse, AI Orchestrator, Multi-Agent System, A2A Protocol, MCP, Model Context Protocol, Autonomous Operations, HITL, Kill-Switch, Empasy">
-    <meta property="og:title" content="SyncVerse - Multi-Agent Control Tower | Empasy">
-    <meta property="og:description" content="Enterprise multi-agent autonomous operations ecosystem unified under a single control tower.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
-    <meta property="og:url" content="https://empasy.io/en/solutions/sync-verse.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Empasy">
-    <meta name="robots" content="index, follow">
-    <meta name="geo.region" content="KR-11">
-    <meta name="geo.placename" content="Seoul">
-    <link rel="canonical" href="https://empasy.io/en/solutions/sync-verse.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-verse.html">
-    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-verse.html">
-    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-verse.html">
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-verse.html">
+    <title>SyncVerse Official Product Page | Empasy</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://verse.empasy.io/">
+    <meta http-equiv="refresh" content="0;url=https://verse.empasy.io/">
+    <script>window.location.replace('https://verse.empasy.io/');</script>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the core role of the SyncVerse Central Control Tower?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "SyncVerse serves as the single pane of glass and orchestration brain, harmonizing task dispatching, real-time telemetry, and inter-agent dependencies across all specialized SyncSeries agents (SyncEta, SyncBoot, SyncCMS, SyncCrawl, SyncInsight, SyncLLM)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do Agent-to-Agent (A2A) messaging and Model Context Protocol (MCP) integrate?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Built on the open standard Model Context Protocol (MCP) and distributed A2A messaging buses, agents discover tools, exchange structured payloads, and resolve cross-domain operations dynamically without monolithic code coupling."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does SyncVerse ensure safety via Emergency Kill-Switch and Human-in-the-Loop governance?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "SyncVerse enforces cryptographic administrator approval (HITL) before applying code modifications or schema migrations. In case of unexpected anomalies, a single click triggers an Emergency Kill-Switch that locks the platform into ReadOnly status."
-          }
-        }
-      ]
-    }
-    </script>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .page-header { padding: 150px 0 80px; text-align: center; position: relative; z-index: 10; }
-        .page-title { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; color: var(--text-primary); }
-        .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto; }
-        
-        .verse-hero-glow {
-            position: absolute;
-            width: 500px; height: 500px;
-            background: radial-gradient(circle, rgba(8, 145, 178, 0.18) 0%, transparent 70%);
-            border-radius: 50%;
-            top: -120px; left: 50%;
-            transform: translateX(-50%);
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .layer-architecture-box {
+        body {
+            margin: 0;
+            font-family: Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
             background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 2.5rem;
-            margin: 3rem auto;
-            max-width: 1000px;
-            backdrop-filter: blur(12px);
+            color: #0f172a;
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            box-sizing: border-box;
         }
-
-        .layer-card {
+        .redirect-card {
+            max-width: 460px;
+            width: 100%;
             background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.5rem;
-            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 36px 32px;
+            text-align: center;
+            box-shadow: 0 12px 32px -20px rgba(15, 23, 42, 0.14);
         }
-        .layer-card:hover {
-            border-color: var(--primary-color);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-hover);
+        .redirect-brand {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #0e7490;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0 0 10px;
+            line-height: 1.35;
+        }
+        p {
+            font-size: 0.94rem;
+            color: #475569;
+            margin: 0 0 24px;
+            line-height: 1.65;
+            word-break: keep-all;
+        }
+        .redirect-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 8px;
+            background: #0f172a;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+        }
+        .btn-primary:hover {
+            background: #1e293b;
+        }
+        .link-home {
+            font-size: 0.88rem;
+            color: #475569;
+            text-decoration: underline;
+            margin-top: 4px;
+        }
+        .link-home:hover {
+            color: #0f172a;
         }
     </style>
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "SyncVerse",
-      "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "Linux, Cloud-Native, Kubernetes",
-      "description": "Enterprise Multi-Agent Orchestrator and Central Control Tower Platform",
-      "url": "https://empasy.io/en/solutions/sync-verse.html",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Empasy",
-        "url": "https://empasy.io/"
-      }
-    }
-    </script>
-    
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- SEO & AIO Tags -->
-    
-    
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.io/en/solutions/sync-verse.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-verse.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-verse.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-verse.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-verse.html" />
-    <meta property="og:url" content="https://empasy.io/en/solutions/sync-verse.html">
 </head>
-<body class="theme-verse">
-    {{> header_en }}
-
-    <main class="container" style="position: relative; z-index: 10;">
-        <div class="verse-hero-glow"></div>
-        <div class="page-header fade-in-up" style="position: relative; overflow: hidden;">
-            <div class="container" style="position: relative; z-index: 10;">
-                <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(8, 145, 178, 0.3);">
-                    A2A Multi-Agent Orchestrator &amp; Central Tower
-                </span>
-                <h1 class="page-title">SyncVerse</h1>
-                <p class="page-subtitle">The enterprise AI operating system unifying domain agents through standard Agent-to-Agent protocols and safety guardrails.</p>
-                <div class="mt-4 flex-center" style="gap: 1rem; display: flex; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://sync.empasy.io/products/sync-verse#demo-console-section" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 30px;"><i class="fas fa-play-circle" style="margin-right:6px;"></i>SyncVerse Live Demo</a>
-                    <a href="https://doc.empasy.com/syncverse/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 30px; border-color: rgba(255,255,255,0.2);">SyncVerse Docs <i class="fas fa-external-link-alt" style="font-size:0.8em; margin-left:6px;"></i></a>
-                    <a href="/downloads/proposals/SyncVerse_Proposal.pdf" download class="btn btn-outline" style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 30px; border-color: rgba(255,255,255,0.25);"><i class="fas fa-file-pdf" style="margin-right:6px;"></i>Proposal PDF</a>
-                </div>
-            </div>
+<body>
+    <main class="redirect-card">
+        <span class="redirect-brand">Empasy SyncSeries</span>
+        <h1>Redirecting to SyncVerse</h1>
+        <p>Visit the dedicated official product page (https://verse.empasy.io/) for the latest overview and live screens.</p>
+        <div class="redirect-actions">
+            <a class="btn-primary" href="https://verse.empasy.io/">Open SyncVerse Official Page &#8599;</a>
+            <a class="link-home" href="/en/pages/index.html">Back to Empasy Home</a>
         </div>
-
-        <!-- VS Comparison Section -->
-        <section class="section pt-0 fade-in-up delay-1">
-            <div class="vs-container mb-4">
-                <div class="vs-box vs-legacy">
-                    <h4>Siloed System Operations</h4>
-                    <ul class="vs-list">
-                        <li>Fragmented toolchains delay incident response and cross-team communication</li>
-                        <li>High human overhead in manual review loops across QA, code, and deployments</li>
-                        <li>Security compliance and LLM token budget leaks across unmonitored shadow tools</li>
-                    </ul>
-                </div>
-                <div class="vs-box vs-agent">
-                    <h4>SyncVerse Autonomous Federation</h4>
-                    <ul class="vs-list">
-                        <li>Real-time event broker coordinating 11 specialized domain agents via standard MCP &amp; A2A protocols</li>
-                        <li>Spec-First pipeline ensuring zero code hallucination and automated E2E verification</li>
-                        <li>One-click Emergency Kill-Switch and automated Redis semantic caching FinOps</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 4-Tier Architecture -->
-            <div class="layer-architecture-box fade-in-up delay-1">
-                <div class="text-center mb-4">
-                    <span class="badge">4-Tier Enterprise Multi-Agent Architecture</span>
-                    <h2 class="section-title" style="font-size: 2rem;">11 Specialized AI Agents Collaborative Framework</h2>
-                    <p style="color: var(--text-secondary); max-width: 740px; margin: 0.5rem auto 0;">From Tier 1 central orchestration and Tier 2 intelligence/security/FinOps to Tier 3 domain agent swarms and Tier 4 autonomous verification across 11 specialized AI solutions.</p>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
-                    <!-- Tier 1 -->
-                    <div class="layer-card" style="border-top: 3px solid #f59e0b;">
-                        <span style="color: #f59e0b; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Tier 1 &bull; Control Tower</span>
-                        <h3 style="font-size: 1.2rem; color: #0f172a; margin: 0.6rem 0;">Central Orchestrator</h3>
-                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">Enterprise A2A event broker, workflow orchestration, Emergency Kill-Switch, and HITL governance.</p>
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); margin: 0;">SyncVerse</span>
-                        </div>
-                    </div>
-
-                    <!-- Tier 2 -->
-                    <div class="layer-card" style="border-top: 3px solid #a855f7;">
-                        <span style="color: #c084fc; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Tier 2 &bull; Intelligence, Security &amp; FinOps</span>
-                        <h3 style="font-size: 1.2rem; color: #0f172a; margin: 0.6rem 0;">Decision AI, Security &amp; LLM Gateway</h3>
-                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">Executive NL2SQL intelligence, multi-LLM FinOps routing, lexical API security, and global threat rule compilation.</p>
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                            <span class="badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); margin: 0;">SyncInsight</span>
-                            <span class="badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); margin: 0;">SyncLLM</span>
-                            <span class="badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); margin: 0;">SyncAPIM</span>
-                            <span class="badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); margin: 0;">SyncWatch</span>
-                        </div>
-                    </div>
-
-                    <!-- Tier 3 -->
-                    <div class="layer-card" style="border-top: 3px solid #0891b2;">
-                        <span style="color: #38bdf8; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Tier 3 &bull; Domain Agent Swarms</span>
-                        <h3 style="font-size: 1.2rem; color: #0f172a; margin: 0.6rem 0;">Enterprise Domain Swarms</h3>
-                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">MSA scaffolding, Nuxt 3 autonomous CMS, AI commerce margin guardrails, and SI PMO Dual-Rate P&amp;L compliance.</p>
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                            <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(8, 145, 178, 0.3); margin: 0;">SyncBoot</span>
-                            <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(8, 145, 178, 0.3); margin: 0;">SyncCMS</span>
-                            <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(8, 145, 178, 0.3); margin: 0;">SyncShop</span>
-                            <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8; border: 1px solid rgba(8, 145, 178, 0.3); margin: 0;">SyncOps</span>
-                        </div>
-                    </div>
-
-                    <!-- Tier 4 -->
-                    <div class="layer-card" style="border-top: 3px solid #10b981;">
-                        <span style="color: #10b981; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Tier 4 &bull; Execution &amp; QA</span>
-                        <h3 style="font-size: 1.2rem; color: #0f172a; margin: 0.6rem 0;">Execution &amp; Verification</h3>
-                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">Vision-LLM self-healing regression QA and anti-bot resilient RAG data extraction pipelines.</p>
-                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); margin: 0;">SyncEta</span>
-                            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); margin: 0;">SyncCrawl</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Key Features -->
-            <div class="section-header text-center mt-5 mb-4">
-                <span class="badge">Core Capabilities</span>
-                <h2 class="section-title">Key Capabilities</h2>
-                <p class="section-desc">Battle-tested orchestration in mission-critical environments</p>
-            </div>
-
-            <div class="rich-features">
-                <div class="feature-item">
-                    <span class="badge" style="margin-bottom: 0.8rem;">01</span>
-                    <h3>Real-Time Inter-Agent Workflow Automation</h3>
-                    <p>Connects all specialized AI solutions automatically so completed data collection immediately triggers analysis, code build, and regression testing.</p>
-                </div>
-                <div class="feature-item">
-                    <span class="badge" style="margin-bottom: 0.8rem;">02</span>
-                    <h3>Specification-Driven Safe Execution</h3>
-                    <p>Generates design specifications and screen/database blueprints for review first, preventing arbitrary or unverified code changes.</p>
-                </div>
-                <div class="feature-item">
-                    <span class="badge" style="margin-bottom: 0.8rem;">03</span>
-                    <h3>One-Click Emergency Read-Only Lockdown</h3>
-                    <p>Instantly revokes all AI write permissions and switches the platform into Read-Only protection mode if anomalies or security alerts occur.</p>
-                </div>
-                <div class="feature-item">
-                    <span class="badge" style="margin-bottom: 0.8rem;">04</span>
-                    <h3>Role-Based Multi-Step Approval &amp; Instant Rollback</h3>
-                    <p>Enforces role-separated administrator sign-off before critical database or deployment changes, with one-click snapshot restoration.</p>
-                </div>
-                <div class="feature-item">
-                    <span class="badge" style="margin-bottom: 0.8rem;">05</span>
-                    <h3>AI Budget Limits &amp; Personal Data Redaction</h3>
-                    <p>Enforces daily AI spending caps with automatic fallback routing and real-time masking of confidential personal numbers and credentials.</p>
-                </div>
-                <div class="feature-item">
-                    <span class="badge" style="margin-bottom: 0.8rem;">06</span>
-                    <h3>End-to-End Activity &amp; Compliance Audit Log</h3>
-                    <p>Records every task instruction, AI execution step, and approval decision in chronological order for instant compliance verification.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="faq-section fade-in-up delay-2">
-            <h2>Frequently Asked Questions (FAQ)</h2>
-            <div class="faq-item">
-                <details>
-                    <summary>What is the core role of the SyncVerse Central Control Tower?</summary>
-                    <div class="faq-answer">SyncVerse serves as the single pane of glass and orchestration brain, harmonizing task dispatching, real-time telemetry, and inter-agent dependencies across all specialized SyncSeries agents (SyncEta, SyncBoot, SyncCMS, SyncCrawl, SyncInsight, SyncLLM).</div>
-                </details>
-            </div>
-            <div class="faq-item">
-                <details>
-                    <summary>How do Agent-to-Agent (A2A) messaging and Model Context Protocol (MCP) integrate?</summary>
-                    <div class="faq-answer">Built on the open standard Model Context Protocol (MCP) and distributed A2A messaging buses, agents discover tools, exchange structured payloads, and resolve cross-domain operations dynamically without monolithic code coupling.</div>
-                </details>
-            </div>
-            <div class="faq-item">
-                <details>
-                    <summary>How does SyncVerse ensure safety via Emergency Kill-Switch and Human-in-the-Loop governance?</summary>
-                    <div class="faq-answer">SyncVerse enforces cryptographic administrator approval (HITL) before applying code modifications or schema migrations. In case of unexpected anomalies, a single click triggers an Emergency Kill-Switch that locks the platform into ReadOnly status.</div>
-                </details>
-            </div>
-        </section>
-
-        <!-- Enterprise Security Section -->
-        <section class="section" style="background: rgba(15, 23, 42, 0.5); border-top: 1px solid var(--border-color); border-radius: 16px; margin: 4rem 0;">
-            <div class="container text-center">
-                <span class="badge">Security &amp; Air-Gapped</span>
-                <h2 class="section-title" style="margin-top: 1rem;">Air-Gapped &amp; Dedicated VPC Deployments</h2>
-                <p style="color: var(--text-secondary); max-width: 700px; margin: 1rem auto 2.5rem;">Proprietary codebase and telemetry never leave your private network. Deploy 100% on-premises or in dedicated AWS/Azure/GCP VPCs.</p>
-                <a href="../pages/contact.html" class="btn btn-primary btn-lg">Schedule an Enterprise Consultation &rarr;</a>
-            </div>
-        </section>
     </main>
-
-    {{> footer_en }}
-    <script type="module" src="/assets/js/i18n.js"></script>
-    <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>

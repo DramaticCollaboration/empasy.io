@@ -1,6 +1,6 @@
 # Empasy SyncSeries
 
-> Empasy IT Corp. (주식회사 엠파시) develops modular enterprise software built on a shared standard foundation (`SyncBoot`, Java 25, Spring Boot 4.0, PostgreSQL 18.6) with Human-in-the-Loop (HITL) approval controls and on-premise deployment support.
+> Empasy Inc. (주식회사 엠파시) develops modular enterprise software built on a shared standard foundation (`SyncBoot`, Java 25, Spring Boot 4.0, PostgreSQL 18.6) with Human-in-the-Loop (HITL) approval controls and on-premise deployment support.
 
 ## Overview
 Empasy SyncSeries consists of 4 flagship solutions (`SyncVerse`, `SyncETA`, `SyncBoot`, `SyncCMS`) and 7 modular extensions organized across Data & AI, Security & Governance, and Operations & Commerce. Each module shares common authentication, permission, audit logging, and standard MCP/A2A integration protocols so organizations can start with a single product and expand step by step.
