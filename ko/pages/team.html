@@ -21,9 +21,13 @@
     <title>팀 소개 | 엠파시(Empasy)</title>
     <meta name="description" content="대규모 기업 시스템 구축과 운영 경험을 바탕으로 실무에 바로 쓰는 소프트웨어를 만드는 엠파시(Empasy) 엔지니어링 팀을 소개합니다.">
     <link rel="canonical" href="https://empasy.io/ko/pages/team.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/team.html">
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/team.html">
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/team.html">
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/team.html">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-  <link rel="stylesheet" crossorigin href="/assets/style-CVfy_1a6.css">
+  <link rel="stylesheet" crossorigin href="/assets/style-RYM4cXSS.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -32,13 +36,26 @@
     <header class="glass-header">
         <div class="container nav-container">
             <div class="logo">
-                <a href="/">
+                <a href="/" aria-label="엠파시 홈">
                     <img src="/images/logo.svg" alt="EMPASY" class="logo-img">
                 </a>
             </div>
-            <nav class="nav-links" aria-label="주요 메뉴">
+            <button type="button" class="mobile-menu-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="emp-nav-links">
+                <svg class="icon-hamburger" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg class="icon-close" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <nav id="emp-nav-links" class="nav-links" aria-label="주요 메뉴">
                 <div class="dropdown">
-                    <a href="/#solutions" class="dropbtn">솔루션 <i class="fas fa-chevron-down" style="font-size:0.72em; margin-left:3px; opacity:0.65;"></i></a>
+                    <a href="/#solutions" class="dropbtn">솔루션
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
                     <div class="dropdown-content" style="min-width: 260px;">
                         <span class="dropdown-group-heading">주력 솔루션 4종</span>
                         <a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · 협업·승인 통합 관리</a>
@@ -53,12 +70,15 @@
                 <a href="/ko/pages/clients.html">고객 사례</a>
     
                 <div class="dropdown">
-                    <a href="/ko/pages/vision.html" class="dropbtn">회사 소개 <i class="fas fa-chevron-down" style="font-size:0.72em; margin-left:3px; opacity:0.65;"></i></a>
+                    <a href="/ko/pages/vision.html" class="dropbtn">회사 소개
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
                     <div class="dropdown-content">
                         <a href="/ko/pages/vision.html">비전 및 벤처 인증</a>
                         <a href="/ko/pages/team.html">팀 소개</a>
                         <a href="/ko/pages/careers.html">채용 안내</a>
                         <a href="/ko/pages/faq.html">자주 묻는 질문</a>
+                        <a href="/ko/blog/blog.html">엠파시 인사이트</a>
                     </div>
                 </div>
     
@@ -66,11 +86,88 @@
                 <a href="https://sync.empasy.io/" target="_blank" rel="noopener noreferrer">통합 데모 &#8599;</a>
             </nav>
             <div class="nav-actions">
+                <div class="lang-switch" role="navigation" aria-label="언어 선택">
+                    <a href="/" data-lang="ko" class="active" aria-current="page">KO</a>
+                    <a href="/en/pages/index.html" data-lang="en">EN</a>
+                    <a href="/ja/pages/index.html" data-lang="ja">JA</a>
+                </div>
                 <a href="/ko/download_eta.html" class="btn btn-outline btn-sm">SyncETA 다운로드</a>
                 <a href="/ko/pages/contact.html" class="btn btn-primary btn-sm">도입 문의</a>
             </div>
         </div>
     </header>
+    <script>
+    (function () {
+        var nav = document.querySelector('.glass-header .nav-container');
+        if (!nav || nav.dataset.empNavBound === 'true') return;
+        nav.dataset.empNavBound = 'true';
+        var btn = nav.querySelector('.mobile-menu-btn');
+        var links = nav.querySelector('.nav-links');
+        var actions = nav.querySelector('.nav-actions');
+        var setOpen = function (open) {
+            nav.classList.toggle('active', open);
+            if (links) links.classList.toggle('active', open);
+            if (actions) actions.classList.toggle('active', open);
+            document.documentElement.classList.toggle('mobile-menu-open', open);
+            document.body.classList.toggle('mobile-menu-open', open);
+            if (btn) {
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                btn.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+            }
+            if (!open) nav.scrollTop = 0;
+        };
+        if (btn) {
+            btn.addEventListener('click', function () {
+                setOpen(!nav.classList.contains('active'));
+            });
+        }
+        nav.querySelectorAll('.dropdown > .dropbtn').forEach(function (drop) {
+            drop.addEventListener('click', function (e) {
+                if (window.innerWidth <= 1023) {
+                    e.preventDefault();
+                    var parent = drop.parentElement;
+                    nav.querySelectorAll('.dropdown').forEach(function (d) {
+                        if (d !== parent) d.classList.remove('open');
+                    });
+                    parent.classList.toggle('open');
+                }
+            });
+        });
+        nav.querySelectorAll('a:not(.dropbtn)').forEach(function (a) {
+            a.addEventListener('click', function () {
+                if (window.innerWidth <= 1023 && nav.classList.contains('active')) {
+                    setOpen(false);
+                }
+            });
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && nav.classList.contains('active')) setOpen(false);
+        });
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 1023 && nav.classList.contains('active')) setOpen(false);
+        });
+        var path = window.location.pathname || '/';
+        var m = path.match(/\/(ko|en|ja)\/(.*)/);
+        nav.querySelectorAll('.lang-switch a[data-lang]').forEach(function (a) {
+            if (a.dataset.langBound === 'true') return;
+            a.dataset.langBound = 'true';
+            var target = a.getAttribute('data-lang');
+            var url = target === 'ko' ? '/' : '/' + target + '/pages/index.html';
+            if (m) {
+                var sub = m[2] || 'pages/index.html';
+                if (target === 'ko' && (sub === 'pages/index.html' || sub === 'pages/' || sub === '')) {
+                    url = '/';
+                } else {
+                    url = '/' + target + '/' + sub;
+                }
+            }
+            a.setAttribute('href', url);
+            a.addEventListener('click', function () {
+                try { localStorage.setItem('preferred_lang', target); } catch (err) {}
+            });
+        });
+    })();
+    </script>
     <main>
         <section class="ed-hero" style="padding-bottom: 48px;">
             <div class="container">
@@ -194,18 +291,18 @@
                 </div>
             </div>
             <div class="footer-bottom" style="padding-top: 24px; text-align: left;">
-                <address style="font-style: normal; color: #64748b; font-size: 12.5px; line-height: 1.8;">
-                    <strong style="color: #334155;">주식회사 엠파시</strong>
+                <address style="font-style: normal; color: #475569; font-size: 12.5px; line-height: 1.8;">
+                    <strong style="color: #0f172a;">주식회사 엠파시</strong>
                     &nbsp;|&nbsp; 대표이사 오병문
                     &nbsp;|&nbsp; 사업자등록번호 547-81-03408
                     &nbsp;|&nbsp; 혁신성장유형 벤처기업 확인 (제 20261111030084 호)<br>
                     서울 금천구 가산디지털1로 205-27 2층 208호
                     &nbsp;|&nbsp; 도입 문의 <a href="mailto:poh@empasy.com" style="color: #0e7490; text-decoration: underline;">poh@empasy.com</a>
-                    &nbsp;|&nbsp; 대표번호 <a href="tel:0507-1360-8169" style="color: #334155;">0507-1360-8169</a>
+                    &nbsp;|&nbsp; 대표번호 <a href="tel:0507-1360-8169" style="color: #0f172a;">0507-1360-8169</a>
                     &nbsp;|&nbsp; <a href="/ko/pages/terms.html">이용약관</a>
                     &nbsp;|&nbsp; <a href="/ko/pages/privacy.html">개인정보 처리방침</a>
                 </address>
-                <p style="color: #94a3b8; font-size: 12px; margin-top: 8px;">&copy; 2026 Empasy Inc. All rights reserved.</p>
+                <p style="color: #64748b; font-size: 12px; margin-top: 8px;">&copy; 2026 Empasy Inc. All rights reserved.</p>
             </div>
         </div>
         <style>
