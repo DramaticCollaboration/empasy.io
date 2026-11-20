@@ -1448,8 +1448,11 @@ body.has-announcement-bar .top-announcement-bar {
   }
   .nav-container.active,
   .container.nav-container.active {
-    padding-bottom: 24px !important;
-    box-shadow: 0 20px 40px -20px rgba(15, 23, 42, 0.22);
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-bottom: 32px !important;
+    box-shadow: none;
+    background: #ffffff !important;
   }
 
   /* Toggled Menu Areas */
@@ -3809,6 +3812,16 @@ body {
     background: rgba(255, 255, 255, 0.98) !important;
   }
 
+  .nav-container.active,
+  .container.nav-container.active {
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    height: 100dvh !important;
+    padding-bottom: 32px !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+  }
+
   .lang-switch {
     width: 100%;
     height: 40px;
@@ -3883,4 +3896,283 @@ body {
 
 .ed-doc-callout a:not(.btn):hover {
   text-decoration: underline;
+}
+
+/* SyncETA Download Card Icon Alignment Fix (All Locales) */
+.dl-os-card > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.dl-os-icon {
+  display: block !important;
+  margin: 0 auto 14px !important;
+}
+
+/* Footer Legal Non-Breaking Segments */
+.emp-legal-list {
+  font-style: normal;
+  color: #475569;
+  font-size: 12.5px;
+  line-height: 1.8;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+}
+.emp-legal-seg {
+  white-space: nowrap;
+}
+.emp-legal-seg.is-wrap {
+  white-space: normal;
+}
+
+/* Screenshot Preview Zoom Lightbox */
+.ed-frame-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.ed-zoom-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.ed-zoom-btn:hover {
+  border-color: #0e7490;
+  color: #0e7490;
+}
+.ed-frame img,
+.ed-flagship-thumb img {
+  cursor: zoom-in;
+}
+.emp-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(15, 23, 42, 0.92);
+  display: none;
+  flex-direction: column;
+  padding: 14px;
+}
+.emp-lightbox.is-open {
+  display: flex;
+}
+.emp-lightbox-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+}
+.emp-lightbox-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f8fafc;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.emp-lightbox-close {
+  min-height: 40px;
+  min-width: 60px;
+  padding: 0 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.emp-lightbox-stage {
+  flex: 1;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10px;
+  background: #0f172a;
+}
+.emp-lightbox-stage img {
+  width: auto !important;
+  max-width: none !important;
+  min-width: 820px;
+  height: auto !important;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+.emp-lightbox-hint {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #cbd5e1;
+}
+
+/* Mobile-First Typography, Touch Targets & Compact Scroll Rhythm */
+h1, h2, .ed-hero-title, .ed-title {
+  text-wrap: balance;
+}
+
+@media (max-width: 768px) {
+  .ed-hero {
+    padding: 84px 0 44px;
+  }
+  .ed-hero-copy {
+    margin-bottom: 28px;
+  }
+  .ed-hero-title br,
+  .ed-hero-desc br {
+    display: none;
+  }
+  .ed-hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .ed-hero-actions .btn {
+    width: 100%;
+    max-width: 320px;
+    min-height: 46px;
+  }
+  .ed-hero-sublinks {
+    gap: 4px 16px;
+  }
+  .ed-hero-sublinks a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+  }
+
+  .ed-tabs,
+  .faq-category-tabs,
+  .blog-filter-tabs {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 2px 0 6px;
+    gap: 8px;
+  }
+  .ed-tabs::-webkit-scrollbar,
+  .faq-category-tabs::-webkit-scrollbar,
+  .blog-filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .ed-tab,
+  .faq-category-btn,
+  .blog-filter-btn {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .ed-frame-bar {
+    padding: 10px 14px;
+    flex-wrap: nowrap;
+  }
+  .ed-frame-bar strong {
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .ed-zoom-btn {
+    min-height: 36px;
+  }
+
+  .ed-section {
+    padding: 48px 0 !important;
+  }
+  .ed-head {
+    margin-bottom: 24px;
+  }
+  .ed-facts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px;
+  }
+  .ed-fact-card {
+    padding: 16px 14px;
+  }
+  .ed-fact-val {
+    font-size: 18px;
+  }
+  .ed-fact-label {
+    font-size: 12.5px;
+  }
+
+  .ed-flagship-actions .btn,
+  .ed-ext-card .btn,
+  .dl-os-card .btn {
+    min-height: 44px !important;
+  }
+  .ed-flagship-actions .btn {
+    flex: 1;
+  }
+
+  /* Subpage hero compact spacing & touch targets */
+  .faq-hero,
+  .blog-hero,
+  .contact-hero,
+  .dl-hero {
+    padding-top: 84px !important;
+    padding-bottom: 24px !important;
+  }
+  .faq-answer {
+    color: #334155 !important;
+  }
+  .contact-form input.form-control,
+  .contact-form select.form-control,
+  .contact-form .custom-select-trigger {
+    min-height: 46px !important;
+    font-size: 15px !important;
+  }
+  .enterprise-option-item,
+  .privacy-consent-row {
+    min-height: 44px;
+    align-items: flex-start !important;
+    padding: 6px 0;
+  }
+  .enterprise-option-item input[type="checkbox"],
+  .privacy-consent-row input[type="checkbox"] {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    margin-top: 2px;
+  }
+  .contact-channel-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+  }
+
+  .footer ul a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    padding: 4px 0;
+  }
+  .emp-footer-grid {
+    gap: 24px !important;
+    padding-bottom: 24px !important;
+  }
 }
