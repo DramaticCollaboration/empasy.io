@@ -60,7 +60,7 @@
       }
     }
     </script>
-  <link rel="stylesheet" crossorigin href="/assets/style-RYM4cXSS.css">
+  <link rel="stylesheet" crossorigin href="/assets/style-BWlNIJrj.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -208,14 +208,14 @@
             <div class="container">
                 <div class="ed-hero-copy">
                     <p class="ed-eyebrow">주식회사 엠파시 · 기업용 업무 소프트웨어</p>
-                    <h1 class="ed-hero-title">반복되는 개발·테스트·운영 업무를<br>차분하게 정리하는 기업 소프트웨어</h1>
+                    <h1 class="ed-hero-title">반복되는 개발·테스트·운영 업무를 <br>차분하게 정리하는 기업 소프트웨어</h1>
                     <p class="ed-hero-desc">
-                        하나의 검증된 공통 기반 위에 필요한 기능만 골라 도입할 수 있습니다.<br>
+                        하나의 검증된 공통 기반 위에 필요한 기능만 골라 도입할 수 있습니다. <br>
                         중요한 변경은 담당자 확인을 거쳐 안전하게 반영합니다.
                     </p>
                     <div class="ed-hero-actions">
                         <a href="https://sync.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-                            실제 화면 체험하기
+                            실제 화면 체험
                         </a>
                         <a href="/ko/pages/contact.html" class="btn btn-outline btn-lg">
                             도입 상담 문의
@@ -239,7 +239,10 @@
                     <div class="ed-frame">
                         <div class="ed-frame-bar">
                             <strong id="preview-title">SyncVerse — 업무 현황 및 단계별 승인 대시보드</strong>
-                            <a id="preview-link" href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer">제품 소개 보기 &#8599;</a>
+                            <div class="ed-frame-actions">
+                                <button type="button" id="preview-zoom-btn" class="ed-zoom-btn">확대 보기</button>
+                                <a id="preview-link" href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer">자세히 &#8599;</a>
+                            </div>
                         </div>
                         <img id="preview-img" src="/images/screenshots/sync-verse/screen_01.png" alt="SyncVerse 실제 관리 화면" style="width: 100%; height: auto;">
                     </div>
@@ -550,16 +553,16 @@
                 </div>
             </div>
             <div class="footer-bottom" style="padding-top: 24px; text-align: left;">
-                <address style="font-style: normal; color: #475569; font-size: 12.5px; line-height: 1.8;">
-                    <strong style="color: #0f172a;">주식회사 엠파시</strong>
-                    &nbsp;|&nbsp; 대표이사 오병문
-                    &nbsp;|&nbsp; 사업자등록번호 547-81-03408
-                    &nbsp;|&nbsp; 혁신성장유형 벤처기업 확인 (제 20261111030084 호)<br>
-                    서울 금천구 가산디지털1로 205-27 2층 208호
-                    &nbsp;|&nbsp; 도입 문의 <a href="mailto:poh@empasy.com" style="color: #0e7490; text-decoration: underline;">poh@empasy.com</a>
-                    &nbsp;|&nbsp; 대표번호 <a href="tel:0507-1360-8169" style="color: #0f172a;">0507-1360-8169</a>
-                    &nbsp;|&nbsp; <a href="/ko/pages/terms.html">이용약관</a>
-                    &nbsp;|&nbsp; <a href="/ko/pages/privacy.html">개인정보 처리방침</a>
+                <address class="emp-legal-list">
+                    <span class="emp-legal-seg"><strong style="color: #0f172a;">주식회사 엠파시</strong></span>
+                    <span class="emp-legal-seg">대표이사 오병문</span>
+                    <span class="emp-legal-seg">사업자등록번호 547-81-03408</span>
+                    <span class="emp-legal-seg is-wrap">혁신성장유형 벤처기업 확인 (제 20261111030084 호)</span>
+                    <span class="emp-legal-seg is-wrap">서울 금천구 가산디지털1로 205-27 2층 208호</span>
+                    <span class="emp-legal-seg">도입 문의 <a href="mailto:poh@empasy.com" style="color: #0e7490; text-decoration: underline;">poh@empasy.com</a></span>
+                    <span class="emp-legal-seg">대표번호 <a href="tel:0507-1360-8169" style="color: #0f172a;">0507-1360-8169</a></span>
+                    <span class="emp-legal-seg"><a href="/ko/pages/terms.html">이용약관</a></span>
+                    <span class="emp-legal-seg"><a href="/ko/pages/privacy.html">개인정보 처리방침</a></span>
                 </address>
                 <p style="color: #64748b; font-size: 12px; margin-top: 8px;">&copy; 2026 Empasy Inc. All rights reserved.</p>
             </div>
@@ -569,6 +572,17 @@
           @media (max-width: 560px) { .emp-footer-grid { grid-template-columns: 1fr !important; } }
         </style>
     </footer>
+
+    <div id="emp-lightbox" class="emp-lightbox" role="dialog" aria-modal="true" aria-label="화면 확대 보기">
+        <div class="emp-lightbox-bar">
+            <span id="emp-lightbox-title" class="emp-lightbox-title"></span>
+            <button type="button" id="emp-lightbox-close" class="emp-lightbox-close" aria-label="확대 닫기">닫기</button>
+        </div>
+        <div class="emp-lightbox-stage">
+            <img id="emp-lightbox-img" src="" alt="">
+        </div>
+        <p class="emp-lightbox-hint">좌우로 밀거나 손가락으로 확대해 세부 화면을 확인할 수 있습니다.</p>
+    </div>
 
     <script>
       (function () {
@@ -623,6 +637,52 @@
               pane.classList.toggle('active', pane.getAttribute('data-ext-pane') === key);
             });
           });
+        });
+
+        var lightbox = document.getElementById('emp-lightbox');
+        var lightboxImg = document.getElementById('emp-lightbox-img');
+        var lightboxTitle = document.getElementById('emp-lightbox-title');
+        var lightboxClose = document.getElementById('emp-lightbox-close');
+        var openLightbox = function (src, title) {
+          if (!lightbox || !lightboxImg) return;
+          lightboxImg.setAttribute('src', src);
+          lightboxImg.setAttribute('alt', title || '실제 관리 화면');
+          if (lightboxTitle) lightboxTitle.textContent = title || '실제 관리 화면';
+          lightbox.classList.add('is-open');
+          document.body.style.overflow = 'hidden';
+        };
+        var closeLightbox = function () {
+          if (!lightbox) return;
+          lightbox.classList.remove('is-open');
+          document.body.style.overflow = '';
+        };
+        var previewImg = document.getElementById('preview-img');
+        var previewZoomBtn = document.getElementById('preview-zoom-btn');
+        if (previewImg) {
+          previewImg.addEventListener('click', function () {
+            var t = document.getElementById('preview-title');
+            openLightbox(previewImg.getAttribute('src'), t ? t.textContent : previewImg.getAttribute('alt'));
+          });
+        }
+        if (previewZoomBtn && previewImg) {
+          previewZoomBtn.addEventListener('click', function () {
+            var t = document.getElementById('preview-title');
+            openLightbox(previewImg.getAttribute('src'), t ? t.textContent : previewImg.getAttribute('alt'));
+          });
+        }
+        document.querySelectorAll('.ed-flagship-thumb img').forEach(function (img) {
+          img.addEventListener('click', function () {
+            openLightbox(img.getAttribute('src'), img.getAttribute('alt'));
+          });
+        });
+        if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+        if (lightbox) {
+          lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox) closeLightbox();
+          });
+        }
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && lightbox && lightbox.classList.contains('is-open')) closeLightbox();
         });
       })();
     </script>
