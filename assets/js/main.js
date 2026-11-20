@@ -479,14 +479,14 @@ function initMain() {
                 en: `
                     <div style="color: #38bdf8;">[SyncBoot Engine]</div>
                     <div>&nbsp;↳ Analyzing domain schema &amp; DDD entity relationships... <span style="color: #22c55e;">[Done]</span></div>
-                    <div>&nbsp;↳ Generating Spring Boot 3.5.16 / Java 25 microservices scaffolding...</div>
+                    <div>&nbsp;↳ Generating Spring Boot 4.0 / Java 25 server API and RBAC scaffolding...</div>
                     <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncBoot Verifier]</div>
-                    <div>&nbsp;↳ Saga compensation transaction &amp; zero-mock tests generated... <span style="color: #22c55e;">[BUILD SUCCESS (1.2s)]</span></div>
+                    <div>&nbsp;↳ Saga compensation transaction &amp; unit tests generated... <span style="color: #22c55e;">[BUILD SUCCESS]</span></div>
                 `,
                 ja: `
                     <div style="color: #38bdf8;">[SyncBoot バックエンド生成]</div>
-                    <div>&nbsp;↳ 決済サービスのDBスキーマおよびDDDエンティティ関連を分析中... <span style="color: #22c55e;">[完了]</span></div>
-                    <div>&nbsp;↳ Spring Boot 3.5.16 / Java 25 サーバーAPIおよびRBACコード自動生成中...</div>
+                    <div>&nbsp;↳ 決済サービスのDBスキーマおよびエンティティ関連を分析中... <span style="color: #22c55e;">[完了]</span></div>
+                    <div>&nbsp;↳ Spring Boot 4.0 / Java 25 サーバーAPIおよびRBACコード自動生成中...</div>
                     <div style="margin-top: 0.8rem; color: #a78bfa;">[SyncBoot 品質検証]</div>
                     <div>&nbsp;↳ Saga補償トランザクションおよび単体テスト検証完了... <span style="color: #22c55e;">[ビルド成功 (1.2秒)]</span></div>
                 `

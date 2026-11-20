@@ -5,69 +5,41 @@
     <div class="container nav-container">
         <div class="logo">
             <a href="/">
-                <img src="/images/logo-dark.svg" alt="EMPASY" class="logo-img" onerror="this.onerror=null; this.src='/assets/images/logo-dark.svg';">
+                <img src="/images/logo.svg" alt="EMPASY" class="logo-img">
             </a>
         </div>
-        <nav class="nav-links">
-            <!-- 1. Company Group -->
+        <nav class="nav-links" aria-label="주요 메뉴">
             <div class="dropdown">
-                <a href="/#philosophy" class="dropbtn" data-i18n="nav.company">회사 소개 <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
+                <a href="/#solutions" class="dropbtn">솔루션 <i class="fas fa-chevron-down" style="font-size:0.72em; margin-left:3px; opacity:0.65;"></i></a>
+                <div class="dropdown-content" style="min-width: 260px;">
+                    <span class="dropdown-group-heading">주력 솔루션 4종</span>
+                    <a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · 협업·승인 통합 관리</a>
+                    <a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · 자동 테스트 · PC 앱</a>
+                    <a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · 업무 시스템 기반</a>
+                    <a href="https://cms.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · 웹사이트·다국어 관리</a>
+                    <span class="dropdown-group-heading">목적별 확장 모듈</span>
+                    <a href="/#modules">데이터·AI · 보안 · 업무 확장 (7종)</a>
+                </div>
+            </div>
+
+            <a href="/ko/pages/clients.html">고객 사례</a>
+
+            <div class="dropdown">
+                <a href="/ko/pages/vision.html" class="dropbtn">회사 소개 <i class="fas fa-chevron-down" style="font-size:0.72em; margin-left:3px; opacity:0.65;"></i></a>
                 <div class="dropdown-content">
-                    <a href="/#philosophy" data-i18n="nav.about">핵심 가치</a>
-                    <a href="/ko/pages/vision.html" data-i18n="nav.vision">비전</a>
-                    <a href="/ko/pages/team.html" data-i18n="nav.team">팀 소개</a>
+                    <a href="/ko/pages/vision.html">비전 및 벤처 인증</a>
+                    <a href="/ko/pages/team.html">팀 소개</a>
                     <a href="/ko/pages/careers.html">채용 안내</a>
-                </div>
-            </div>
-            
-            <!-- 2. Sync Series Group -->
-            <div class="dropdown">
-                <a href="/#solutions" class="dropbtn" data-i18n="nav.solutions">솔루션 <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
-                <div class="dropdown-content">
-                    <a href="/ko/solutions/sync-verse.html" style="font-weight: 700; color: #38bdf8;">SyncVerse (AI 통합 관제)</a>
-                    <a href="/ko/solutions/sync-insight.html">SyncInsight (데이터 분석·의사결정)</a>
-                    <a href="/ko/solutions/sync-llm.html">SyncLLM (AI 비용·보안 관리)</a>
-                    <a href="/ko/solutions/sync-apim.html">SyncAPIM (API 보안·트래픽 관제)</a>
-                    <a href="/ko/solutions/sync-watch.html">SyncWatch (보안 위협 관측·룰 컴파일)</a>
-                    <a href="/ko/solutions/sync-boot.html">SyncBoot (엔터프라이즈 백오피스 코어)</a>
-                    <a href="/ko/solutions/sync-cms.html">SyncCMS (웹사이트 자동 제작)</a>
-                    <a href="/ko/solutions/sync-shop.html">SyncShop (AI 쇼핑몰 운영)</a>
-                    <a href="/ko/solutions/sync-ops.html">SyncOps (프로젝트·손익 관리)</a>
-                    <a href="/ko/solutions/sync-eta.html">SyncETA (AI 테스트 자동화) <span style="font-size: 0.75rem; padding: 2px 6px; border-radius: 4px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; margin-left: 4px;">데스크톱 앱</span></a>
-                    <a href="/ko/solutions/sync-crawl.html">SyncCrawl (웹 데이터 수집)</a>
-                </div>
-            </div>
-
-            <!-- 3. Insights Group -->
-            <div class="dropdown">
-                <a href="#" class="dropbtn">인사이트 <i class="fas fa-chevron-down" style="font-size:0.75em; margin-left:3px; opacity:0.8;"></i></a>
-                <div class="dropdown-content">
-                    <a href="/ko/blog/blog.html">기술 블로그</a>
                     <a href="/ko/pages/faq.html">자주 묻는 질문</a>
-                    <a href="/ko/blog/case-study-finance.html">도입 사례 상세</a>
                 </div>
             </div>
 
-            <a href="/ko/pages/clients.html" data-i18n="nav.clients">고객 사례</a>
-            
-            <!-- Documentation & Demo Portal links -->
-            <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">문서 <i class="fas fa-external-link-alt" style="font-size:0.7em; margin-left:2px; opacity:0.7;"></i></a>
-            <a href="https://sync.empasy.io" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8;">통합 데모 포털 <i class="fas fa-external-link-alt" style="font-size:0.7em; margin-left:2px; opacity:0.8;"></i></a>
+            <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer">기술 문서 &#8599;</a>
+            <a href="https://sync.empasy.io/" target="_blank" rel="noopener noreferrer">통합 데모 &#8599;</a>
         </nav>
         <div class="nav-actions">
-            <a href="/ko/download_eta.html" class="btn btn-outline btn-sm" style="font-weight: 600; border-color: rgba(56, 189, 248, 0.4); color: #38bdf8; white-space: nowrap;">SyncETA 다운로드</a>
-            <div class="dropdown lang-dropdown" style="display: flex; align-items: center;">
-                <button class="dropbtn" style="background:transparent; color: var(--text-primary); border: none; font-weight:600; font-size:0.95rem; padding: 0.4rem 0.5rem; cursor: pointer; display:flex; align-items:center; gap:5px;">
-                    <span class="lang-label"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px;"> KO</span>
-                    <i class="fas fa-chevron-down" style="font-size:0.7em; opacity:0.7;"></i>
-                </button>
-                <div class="dropdown-content lang-dropdown-content" style="min-width: 80px; text-align:center; padding: 0.5rem 0;">
-                    <a href="/" data-lang="ko" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/kr.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> KO</a>
-                    <a href="/en/pages/index.html" data-lang="en" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/us.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> EN</a>
-                    <a href="/ja/pages/index.html" data-lang="ja" style="padding: 0.5rem 1rem; display: block; text-decoration: none; color: inherit;"><img loading="lazy" src="https://flagcdn.com/w20/jp.png" width="16" style="vertical-align:middle; display:inline-block; border-radius:2px; margin-right:4px;"> JP</a>
-                </div>
-            </div>
-            <a href="/ko/pages/contact.html" class="btn btn-primary btn-sm" data-i18n="nav.contact" style="white-space: nowrap;">문의하기</a>
+            <a href="/ko/download_eta.html" class="btn btn-outline btn-sm">SyncETA 다운로드</a>
+            <a href="/ko/pages/contact.html" class="btn btn-primary btn-sm">도입 문의</a>
         </div>
     </div>
 </header>

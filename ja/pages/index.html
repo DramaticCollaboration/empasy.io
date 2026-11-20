@@ -52,7 +52,7 @@
       ]
     }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="geo.region" content="KR-11" />
@@ -158,14 +158,14 @@
 
             <!-- Interactive AI Terminal -->
             <div class="interactive-terminal mt-4 fade-in-up delay-2"
-                style="max-width: 900px; margin: 4rem auto 0; text-align: left; background: #0b1120; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); overflow: hidden; border: 1px solid #334155;">
+                style="max-width: 900px; margin: 4rem auto 0; text-align: left; background: #f8fafc; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); overflow: hidden; border: 1px solid #334155;">
                 <div
                     style="background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; align-items: center; border-bottom: 1px solid #334155; justify-content: space-between;">
                     <div style="display: flex; gap: 0.5rem; align-items: center;">
                         <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
                         <div style="width: 12px; height: 12px; border-radius: 50%; background: #f59e0b;"></div>
                         <div style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></div>
-                        <div class="terminal-title-text" style="margin-left: 0.8rem; color: #e2e8f0; font-size: 0.9rem; font-weight: 600;">
+                        <div class="terminal-title-text" style="margin-left: 0.8rem; color: #334155; font-size: 0.9rem; font-weight: 600;">
                             SyncSeries 実稼働画面プレビュー (タブを選択して11ソリューションの画面を確認)</div>
                     </div>
                     <button class="terminal-copy-btn" data-cmd='empasy verse dispatch --workflow "order-flow" --mode "autonomous"' title="コマンドをコピー" style="display: none;">
@@ -192,10 +192,10 @@
                     <span class="terminal-role-text">11種の専門AIの作業順序を調整し、段階別承認とセキュリティ・予算を一元管理します。</span>
                 </div>
                 <div
-                    style="display: none; padding: 1.5rem; font-family: var(--font-mono); font-size: 0.95rem; line-height: 1.6; color: #e2e8f0; min-height: 200px;">
+                    style="display: none; padding: 1.5rem; font-family: var(--font-mono); font-size: 0.95rem; line-height: 1.6; color: #334155; min-height: 200px;">
                     <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
                         <span style="color: #22c55e;">User&gt;</span>
-                        <span class="terminal-cmd-text" style="color: #f8fafc; font-weight: 600;">empasy verse dispatch --workflow "order-flow" --mode "autonomous"</span>
+                        <span class="terminal-cmd-text" style="color: #0f172a; font-weight: 600;">empasy verse dispatch --workflow "order-flow" --mode "autonomous"</span>
                     </div>
                     <div class="terminal-output-container">
                         <div style="color: #38bdf8;">[SyncVerse Orchestrator]</div>
@@ -262,7 +262,7 @@
                             <div class="ba-icon gain"><i class="fas fa-check-circle"></i></div>
                             <div class="ba-item-content">
                                 <h4>Vision-LLM 自己治癒QA (SyncETA)</h4>
-                                <p>DOM構造が変わっても視覚的文脈から対象要素を自律特定し、98.4%の自己修復率でテスト保守工数を80%削減します。</p>
+                                <p>DOM構造が変わっても視覚的文脈から対象要素を自律特定し、高い精度の自己修復率でテスト保守工数を80%削減します。</p>
                             </div>
                         </div>
                         <div class="ba-item">
@@ -298,7 +298,7 @@
                     <div class="stat-label" style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">QAメンテナンス削減</div>
                 </div>
                 <div class="fade-in-up delay-2">
-                    <div class="stat-num" style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">98.4%</div>
+                    <div class="stat-num" style="font-size: 3rem; font-weight: 800; color: var(--primary-color);">高い精度</div>
                     <div class="stat-label" style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">自己修復成功率</div>
                 </div>
                 <div class="fade-in-up delay-2">
@@ -332,7 +332,7 @@
     </section>
 
     <!-- Marquee Banner -->
-    <div class="marquee-container" style="background: rgba(15, 23, 42, 0.8); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); padding: 1.2rem 0; overflow: hidden; white-space: nowrap; display: flex; align-items: center;">
+    <div class="marquee-container" style="background: #ffffff; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); padding: 1.2rem 0; overflow: hidden; white-space: nowrap; display: flex; align-items: center;">
         <div class="marquee-content" style="display: inline-block; animation: scrollMarquee 30s linear infinite; font-size: 1.2rem; color: #FFFFFF; font-weight: 600; letter-spacing: 1px;">
             <span style="margin: 0 4rem;">Continuous Verification</span>
             <span style="margin: 0 4rem;">99.9% 高信頼オペレーション</span>
@@ -400,22 +400,22 @@
             </div>
 
             <!-- Spec-First Triple Tracks Diagram Box -->
-            <div class="fade-in-up mb-5" style="background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem; max-width: 1000px; margin: 2rem auto 4rem;">
-                <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 1.5rem; text-align: center;">3大実行トラック (Triple Execution Tracks)</h3>
+            <div class="fade-in-up mb-5" style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem; max-width: 1000px; margin: 2rem auto 4rem;">
+                <h3 style="font-size: 1.4rem; color: #0f172a; margin-bottom: 1.5rem; text-align: center;">3大実行トラック (Triple Execution Tracks)</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-                    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem;">
+                    <div style="background: #ffffff; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem;">
                         <span style="color: #38bdf8; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Track 1 &bull; No-Code Data</span>
-                        <h4 style="font-size: 1.1rem; color: #fff; margin: 0.5rem 0;">コンテンツ＆データ自律反映</h4>
+                        <h4 style="font-size: 1.1rem; color: #0f172a; margin: 0.5rem 0;">コンテンツ＆データ自律反映</h4>
                         <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin: 0;">コード変更が不要なブログ・商品カタログ・設定変更は、専門エージェント(SyncCMS, SyncShop)が直接自律処理します。</p>
                     </div>
-                    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem;">
+                    <div style="background: #ffffff; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem;">
                         <span style="color: #34d399; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Track 2 &bull; Direct Patch</span>
-                        <h4 style="font-size: 1.1rem; color: #fff; margin: 0.5rem 0;">AST構文解析＆自己修復PR</h4>
+                        <h4 style="font-size: 1.1rem; color: #0f172a; margin: 0.5rem 0;">AST構文解析＆自己修復PR</h4>
                         <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin: 0;">単一コンポーネントや軽微なUI不具合は、AST構文解析を通じて自動パッチを生成し、E2Eテスト検証後にGitHub PRを作成します。</p>
                     </div>
-                    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 1.5rem; border-top: 3px solid #38bdf8;">
+                    <div style="background: #ffffff; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 1.5rem; border-top: 3px solid #38bdf8;">
                         <span style="color: #f59e0b; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Track 3 &bull; Spec-First HITL</span>
-                        <h4 style="font-size: 1.1rem; color: #fff; margin: 0.5rem 0;">企画・設計仕様書の先行承認</h4>
+                        <h4 style="font-size: 1.1rem; color: #0f172a; margin: 0.5rem 0;">企画・設計仕様書の先行承認</h4>
                         <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin: 0;">大規模な機能追加時にはコードを直接書かず、<strong style="color: #f1f5f9;">企画書(PRD) &rarr; API/DB仕様 &rarr; 画面仕様</strong>を先行承認した上で一括実装します。</p>
                     </div>
                 </div>
@@ -506,7 +506,7 @@
             <div class="interactive-diagram fade-in-up delay-1" style="position: relative; width: 100%; max-width: 820px; height: 480px; margin: 0 auto; border-radius: var(--border-radius); border: 1px solid var(--glass-border); overflow: hidden; display: flex; align-items: center; justify-content: center;">
                 
                 <!-- Center Node -->
-                <div class="node-base node-center" style="top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--primary-color); border: none; padding: 1.5rem; border-radius: 50%; box-shadow: 0 0 40px rgba(8,145,178,0.6); color: #fff; font-weight: 800; font-size: 1.15rem;">
+                <div class="node-base node-center" style="top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--primary-color); border: none; padding: 1.5rem; border-radius: 50%; box-shadow: 0 0 40px rgba(8,145,178,0.6); color: #0f172a; font-weight: 800; font-size: 1.15rem;">
                     SyncVerse<br>Core
                 </div>
                 
@@ -554,7 +554,7 @@
                                 グローバル標準 <strong>MCP(Model Context Protocol)</strong> をベースに、意思決定(Insight)、LLMゲートウェイ(LLM)、APIセキュリティ(APIM)、脅威観測(Watch)、バックオフィス基盤(Boot)、配信(CMS)、コマース(Shop)、SI事業損益管制(Ops)、QA検証(Eta)、データ収集(Crawl)の全11種エージェントをリアルタイムに指揮する <strong>Tier 1 自律統合管制塔</strong>です。
                             </p>
                             <ul class="feature-list" style="margin-top: 1rem;">
-                                <li><strong>Zero-Touch Swarm Orchestration</strong>: ドメインエージェント間の文脈連続性と状態の自律分散同期</li>
+                                <li><strong>自動化 Swarm Orchestration</strong>: ドメインエージェント間の文脈連続性と状態の自律分散同期</li>
                                 <li><strong>Self-Healing Supervisor</strong>: パイプライン障害時の自動ロールバックおよび代替フロー自律注入</li>
                                 <li><strong>Unified Observability &amp; HITL</strong>: 全社エージェント稼働追跡と管理者承認(Safe-Lock)ガードレール</li>
                             </ul>
@@ -566,7 +566,7 @@
                                     <span class="tech-tag"><i class="fas fa-plug" style="color: #38bdf8; margin-right: 4px;"></i>MCP Protocol</span>
                                     <span class="tech-tag"><i class="fas fa-comments" style="color: #818cf8; margin-right: 4px;"></i>A2A Message Hub</span>
                                     <span class="tech-tag"><i class="fas fa-heartbeat" style="color: #34d399; margin-right: 4px;"></i>Supervisor Mesh</span>
-                                    <span class="tech-tag"><i class="fas fa-shield-alt" style="color: #fbbf24; margin-right: 4px;"></i>Zero-Touch Ops</span>
+                                    <span class="tech-tag"><i class="fas fa-shield-alt" style="color: #fbbf24; margin-right: 4px;"></i>自動化 Ops</span>
                                 </div>
                                 <p style="font-size: 0.92rem; color: #94a3b8; line-height: 1.6; margin: 0;">
                                     分断された開発・業務ツールを一つに統合し、企画から運用までのボトルネックを解消します。
@@ -714,14 +714,14 @@
                             </div>
                         </div>
                         <ul class="feature-list mt-3">
-                            <li data-i18n="boot.vs.agent.1">自然言語コマンドでSpring Boot 3.5 / Java 25スキーマ生成とデータ操作。</li>
+                            <li data-i18n="boot.vs.agent.1">自然言語コマンドでSpring Boot 4.0 / Java 25スキーマ生成とデータ操作。</li>
                             <li data-i18n="boot.vs.agent.2">Sagaパターンベースのツールによる自律的な補償トランザクションの実行。</li>
                             <li data-i18n="boot.vs.agent.3">エラー発生時にASTログを自動解析し、自己修復パッチを提案。</li>
                         </ul>
                     </div>
                     <div>
                         <div class="tech-tag-group">
-                            <span class="tech-tag">Spring Boot 3.5</span>
+                            <span class="tech-tag">Spring Boot 4.0</span>
                             <span class="tech-tag">Saga Pattern</span>
                             <span class="tech-tag">Auto-CRUD</span>
                         </div>
@@ -886,7 +886,7 @@
     </section>
 
     <!-- Quantitative Client Success Metrics Section -->
-    <section id="case-studies" class="section" style="background: rgba(15, 23, 42, 0.4); border-top: 1px solid var(--border-color);">
+    <section id="case-studies" class="section" style="background: #f8fafc; border-top: 1px solid var(--border-color);">
         <div class="container">
             <div class="section-header fade-in-up text-center mb-4">
                 <span class="badge">Proven ROI &amp; Impact</span>
@@ -899,11 +899,11 @@
                 <div class="case-metric-card fade-in-up delay-1">
                     <span class="badge" style="background: rgba(34, 197, 94, 0.15); color: #22c55e; border: 1px solid rgba(34, 197, 94, 0.3); align-self: flex-start;">SyncETA &bull; Visang AIDT</span>
                     <div class="case-metric-val">+80%</div>
-                    <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 0.8rem;">テスト作成生産性の向上</h3>
+                    <h3 style="font-size: 1.25rem; color: #0f172a; margin-bottom: 0.8rem;">テスト作成生産性の向上</h3>
                     <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7; flex-grow: 1;">
                         自然言語によるテスト作成で作成時間を4時間から0.8時間に短縮。回帰テストを100%自動化し、大規模リファクタリング時にも<strong style="color: #f1f5f9;">回帰障害0件（Regression Zero）</strong>および障害率0.1%以下を達成しました。
                     </p>
-                    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; margin-top: 1rem; color: #94a3b8; font-size: 0.85rem;">
+                    <div style="border-top: 1px solid #e2e8f0; padding-top: 1rem; margin-top: 1rem; color: #94a3b8; font-size: 0.85rem;">
                         <i class="fas fa-check-circle" style="color: #22c55e;"></i> OS同時実行成功率95% &bull; UI崩れ検出精度90%
                     </div>
                 </div>
@@ -912,11 +912,11 @@
                 <div class="case-metric-card fade-in-up delay-2">
                     <span class="badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); align-self: flex-start;">SyncBoot &bull; Homeplus &amp; SK Magic</span>
                     <div class="case-metric-val">2x Faster</div>
-                    <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 0.8rem;">新機能リリース速度2倍向上</h3>
+                    <h3 style="font-size: 1.25rem; color: #0f172a; margin-bottom: 0.8rem;">新機能リリース速度2倍向上</h3>
                     <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7; flex-grow: 1;">
                         月単位のリリースから週/日単位への継続的デリバリーに転換し、380個のテーブル中230個（60%）の事前分析・クレンジングを完了し、<strong style="color: #f1f5f9;">開発工数・コストを20%削減</strong>しました。
                     </p>
-                    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; margin-top: 1rem; color: #94a3b8; font-size: 0.85rem;">
+                    <div style="border-top: 1px solid #e2e8f0; padding-top: 1rem; margin-top: 1rem; color: #94a3b8; font-size: 0.85rem;">
                         <i class="fas fa-check-circle" style="color: #38bdf8;"></i> 業務重複30%削減 &bull; MSA無停止移行
                     </div>
                 </div>
@@ -925,11 +925,11 @@
                 <div class="case-metric-card fade-in-up delay-3">
                     <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); align-self: flex-start;">SyncCMS &bull; LX Hausys &amp; Chunjae</span>
                     <div class="case-metric-val">100% Uptime</div>
-                    <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 0.8rem;">数百万PVの大規模トラフィック無停止</h3>
+                    <h3 style="font-size: 1.25rem; color: #0f172a; margin-bottom: 0.8rem;">数百万PVの大規模トラフィック無停止</h3>
                     <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7; flex-grow: 1;">
                         単一プラットフォームで海外現地法人サイトを統合管理し、テンプレート型I18nエンジンにより<strong style="color: #f1f5f9;">新規国サイトの公開期間を大幅に短縮</strong>。日次数百万PVのトラフィックでも無停止安定稼働を実現しました。
                     </p>
-                    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; margin-top: 1rem; color: #94a3b8; font-size: 0.85rem;">
+                    <div style="border-top: 1px solid #e2e8f0; padding-top: 1rem; margin-top: 1rem; color: #94a3b8; font-size: 0.85rem;">
                         <i class="fas fa-check-circle" style="color: #f59e0b;"></i> ベンダーロックイン排除 &bull; グローバル多言語自動同期
                     </div>
                 </div>
@@ -949,7 +949,7 @@
                             <span style="font-size: 0.78rem; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: rgba(251, 191, 36, 0.2); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4);">CERTIFICATE OF VENTURE ENTERPRISE</span>
                             <span style="color: #94a3b8; font-size: 0.85rem;">発給番号 第20261111030084号 &middot; 有効期間 2026.11.11 ~ 2029.11.10</span>
                         </div>
-                        <h3 style="font-size: 1.2rem; color: #f8fafc; margin: 0 0 0.25rem 0; font-weight: 700;">革新成長類型ベンチャー企業 公式認証企業</h3>
+                        <h3 style="font-size: 1.2rem; color: #0f172a; margin: 0 0 0.25rem 0; font-weight: 700;">革新成長類型ベンチャー企業 公式認証企業</h3>
                         <p style="color: var(--text-secondary); font-size: 0.92rem; margin: 0; line-height: 1.6;">
                             株式会社エムパシーは「ベンチャー企業育成に関する特別法」第25条に基づき、AI技術の革新性と事業成長性が公式に認定された革新成長型ベンチャー企業です。
                         </p>
@@ -1001,7 +1001,7 @@
     <!-- Careers / Talent Recruitment Banner -->
     <section class="section" style="background: rgba(15, 23, 42, 0.3); padding: 3.5rem 0;">
         <div class="container">
-            <div class="glass-card fade-in-up" style="padding: clamp(1.8rem, 4vw, 2.5rem); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; background: rgba(15, 23, 42, 0.6);">
+            <div class="glass-card fade-in-up" style="padding: clamp(1.8rem, 4vw, 2.5rem); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; background: #f8fafc;">
                 <div style="max-width: 680px;">
                     <span class="badge" style="background: rgba(16, 185, 129, 0.12); color: #10B981; border: 1px solid rgba(16, 185, 129, 0.25); margin-bottom: 0.8rem; font-weight: 600;">通年採用・人材プール登録</span>
                     <h3 style="font-size: 1.6rem; margin-bottom: 0.8rem; color: #FFFFFF;">Empasyと共に歩むフリーランスWeb / AIエンジニアを募集しています</h3>

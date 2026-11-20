@@ -9,7 +9,7 @@ const translations = {
         "nav.contact": "문의하기",
         "hero.badge": "Empasy AI",
         "hero.title": "개발부터 테스트·운영까지,<br>스스로 일하는 <span style='color: var(--primary-color);'>AI 업무 자동화</span>",
-        "hero.subtitle": "<strong style='color: var(--text-primary);'>살아 있는 소프트웨어는 엠파시가 만듭니다.</strong><br>반복되는 코딩, 화면이 바뀔 때마다 깨지는 테스트, 번거로운 데이터 수집과 운영까지.<br>11가지 전문 AI가 하나의 팀처럼 움직여 기업의 IT 업무를 자동화합니다.",
+        "hero.subtitle": "하나의 검증된 공통 기반 위에 필요한 기능만 골라 도입할 수 있습니다.<br>중요한 변경은 담당자 확인을 거쳐 안전하게 반영합니다.",
         "hero.btn": "솔루션 살펴보기",
         
         "cms.badge": "웹사이트 자동 제작",
@@ -194,9 +194,9 @@ const translations = {
         "llm.vs.agent.title": "SyncLLM Gateway",
         "llm.vs.agent.1": "Reduces AI spend by up to 60% via repeated-answer caching and department budget limits",
         "llm.vs.agent.2": "Automatic personal data masking before external calls and encrypted API key vault storage",
-        "llm.vs.agent.3": "Zero-downtime automatic failover across OpenAI, Claude, Gemini, and private models",
+        "llm.vs.agent.3": "Graceful automatic failover across OpenAI, Claude, Gemini, and private models",
 
-        "apim.badge": "Zero-Trust API & AI Security Gateway",
+        "apim.badge": "Strict Access Control API & AI Security Gateway",
         "apim.title": "SyncAPIM",
         "apim.typewriter": "Blocks cyberattacks and discovers hidden APIs with context-aware inspection and virtual patching",
         "apim.vs.legacy.title": "Legacy Firewalls & API Gateways",
@@ -205,7 +205,7 @@ const translations = {
         "apim.vs.legacy.3": "Blind to undocumented hidden APIs leaking sensitive customer information",
         "apim.vs.agent.title": "SyncAPIM Gateway",
         "apim.vs.agent.1": "0.03ms ultra-fast attack detection via context-aware grammar fingerprinting",
-        "apim.vs.agent.2": "Zero-downtime virtual patching against new threats without restarting servers",
+        "apim.vs.agent.2": "Graceful virtual patching against new threats without restarting servers",
         "apim.vs.agent.3": "Automatic hidden API discovery from live traffic and real-time 8-type personal data masking",
 
         "watch.badge": "Global Vulnerability Monitoring & Auto-Defense",

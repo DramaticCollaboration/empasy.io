@@ -26,7 +26,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Empasy">
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -34,7 +34,7 @@
         .page-title { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 1rem; color: var(--text-primary); }
         .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto; }
         .code-diff-box {
-            background: #0f172a;
+            background: #f8fafc;
             border: 1px solid #334155;
             border-radius: 12px;
             padding: 1.5rem;
@@ -70,11 +70,11 @@
           "url": "https://empasy.io/ko/solutions/sync-eta.html",
           "downloadUrl": "https://empasy.io/ko/download_eta.html",
           "featureList": [
-            "Vision-LLM 및 DOM 문맥 기반 깨진 셀렉터 자가 치유(Self-Healing, 98.4% 복구율)",
+            "Vision-LLM 및 DOM 문맥 기반 깨진 셀렉터 자가 치유(Self-Healing, 높은 수준의 복구율)",
             "브라우저 동작 노코드 녹화 및 자연어·엑셀(Excel) 테스트케이스 즉시 실행",
             "Playwright MCP 기반 크로스 브라우저(Chromium, Firefox, WebKit) 무인 병렬 실행",
             "배포 전후 화면 깨짐(Visual Regression) 자동 비교 및 실패 원인 스냅샷·영상 진단",
-            "반복 회귀 테스트 시 추가 LLM 호출 비용 제로(Zero Token Cost) 재생 아키텍처",
+            "반복 회귀 테스트 시 추가 LLM 호출 비용 제로(토큰 비용 없는 반복 실행) 재생 아키텍처",
             "사내 폐쇄망(On-Premise) 및 로컬호스트(localhost) 보안 환경 완벽 지원"
           ],
           "offers": {
@@ -257,7 +257,7 @@
                 </p>
             </div>
             <div style="overflow-x: auto; margin: 2rem auto 1rem; max-width: 960px;">
-                <table style="width: 100%; border-collapse: collapse; background: rgba(15, 23, 42, 0.7); border: 1px solid #334155; border-radius: 12px; overflow: hidden; text-align: left; font-size: 0.95rem;">
+                <table style="width: 100%; border-collapse: collapse; background: #ffffff; border: 1px solid #334155; border-radius: 12px; overflow: hidden; text-align: left; font-size: 0.95rem;">
                     <thead>
                         <tr style="background: rgba(56, 189, 248, 0.12); border-bottom: 1px solid #334155; color: var(--text-primary);">
                             <th style="padding: 1rem 1.2rem; font-weight: 700;">구분</th>
@@ -277,7 +277,7 @@
                             <td style="padding: 0.9rem 1.2rem; font-weight: 600; color: var(--text-primary);">UI 개편 시 자가 치유<br>(Self-Healing)</td>
                             <td style="padding: 0.9rem 1.2rem;">불가 (클래스·DOM 변경 시 즉시 테스트 중단)</td>
                             <td style="padding: 0.9rem 1.2rem;">수동 재프롬프트 및 개발자 코드 재수정 필요</td>
-                            <td style="padding: 0.9rem 1.2rem; color: #4ade80;"><strong>Vision-LLM 및 DOM 문맥 추론으로 깨진 셀렉터 실시간 자가 복구 (98.4%)</strong></td>
+                            <td style="padding: 0.9rem 1.2rem; color: #4ade80;"><strong>Vision-LLM 및 DOM 문맥 추론으로 깨진 셀렉터 실시간 자가 복구 (높은 수준의)</strong></td>
                         </tr>
                         <tr style="border-bottom: 1px solid #1e293b;">
                             <td style="padding: 0.9rem 1.2rem; font-weight: 600; color: var(--text-primary);">시각적 화면 검증<br>(Visual Regression)</td>

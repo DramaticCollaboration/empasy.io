@@ -25,7 +25,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Empasy">
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -43,22 +43,22 @@
             border-radius: 50%; top: -100px; right: -200px; z-index: 0; pointer-events: none;
         }
         .roi-calculator {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            border-radius: 24px; padding: 3rem 4rem; color: white;
+            background: #f8fafc;
+            border-radius: 24px; padding: 3rem 4rem; color: #0f172a;
             box-shadow: 0 30px 60px -12px rgba(0,0,0,0.4); margin: 5rem auto;
             text-align: center; max-width: 900px; position: relative; overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid #e2e8f0;
         }
         .roi-content { position: relative; z-index: 1; }
         .roi-number { font-size: 4.5rem; font-weight: 800; color: #34d399; margin: 1rem 0; line-height: 1; font-family: var(--font-mono); }
         .live-preview {
-            background: #0f172a; border-radius: 12px; border: 1px solid #334155;
+            background: #f8fafc; border-radius: 12px; border: 1px solid #334155;
             text-align: left; overflow: hidden; margin: 3rem auto 0;
             max-width: 680px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
         }
         .live-preview-header { background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; border-bottom: 1px solid #334155; align-items: center; }
         .live-preview-dot { width: 12px; height: 12px; border-radius: 50%; }
-        .live-preview-body { padding: 1.5rem; font-family: var(--font-mono); font-size: 0.92rem; color: #e2e8f0; line-height: 1.65; }
+        .live-preview-body { padding: 1.5rem; font-family: var(--font-mono); font-size: 0.92rem; color: #334155; line-height: 1.65; }
     </style>
     <script type="application/ld+json">
     {
@@ -195,14 +195,14 @@
             <div class="container">
                 <div class="roi-calculator fade-in-up">
                     <div class="roi-content">
-                        <span class="badge" style="background: rgba(52, 211, 153, 0.2); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.4);">Expected Business Impact</span>
-                        <h3 style="font-size: 2.2rem; margin-top: 1rem; color: white;">プロジェクト原価漏洩の遮断とM/M稼働率の最大化</h3>
-                        <p style="color: #94a3b8; font-size: 1.1rem; max-width: 640px; margin: 0 auto;">リアルタイムのデュアル単価損益統制と法定期日自動化により、プロジェクト営業利益率を平均8.4%p改善します。</p>
-                        <div class="roi-number">+8.4%p</div>
-                        <p style="color: #cbd5e1; font-weight: 600;">平均プロジェクト営業利益率(OPM)向上 &amp; コンプライアンス違反ゼロ</p>
+                        <span class="badge" style="background: rgba(14, 116, 144, 0.1); color: #0e7490; border: 1px solid rgba(14, 116, 144, 0.25);">Expected Business Impact</span>
+                        <h3 style="font-size: 2.2rem; margin-top: 1rem; color: #0f172a;">プロジェクト損益と法定スケジュールをリアルタイムに把握</h3>
+                        <p style="color: #475569; font-size: 1.1rem; max-width: 640px; margin: 0 auto;">契約単価と実原価のデュアル損益管理および法定期日アラートを単一画面で統合管理します。</p>
+                        <div class="roi-number" style="color: #0e7490;">Real-Time Visibility</div>
+                        <p style="color: #475569; font-weight: 600;">プロジェクト損益の可視化 &amp; 法定期日の事前アラート管理</p>
                         <div style="margin-top: 2.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                            <a href="/ja/pages/contact.html" class="btn btn-primary" style="background: #10b981; color: #0f172a; font-weight: 700; border: none; padding: 1rem 2.5rem; font-size: 1.1rem;">SyncOps 導入のお問い合わせ</a>
-                            <a href="https://doc.empasy.com/syncops/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff; padding: 1rem 2rem; font-size: 1.1rem;">技術ドキュメントを見る</a>
+                            <a href="/ja/pages/contact.html" class="btn btn-primary" style="background: #0e7490; color: #ffffff; font-weight: 700; border: none; padding: 1rem 2.5rem; font-size: 1.1rem;">SyncOps 導入のお問い合わせ</a>
+                            <a href="https://doc.empasy.com/syncops/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border: 1px solid #cbd5e1; color: #0f172a; padding: 1rem 2rem; font-size: 1.1rem;">技術ドキュメントを見る</a>
                         </div>
                     </div>
                 </div>

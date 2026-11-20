@@ -42,7 +42,7 @@
       }
     }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <meta name="geo.region" content="KR-11" />
     <meta name="geo.placename" content="Seoul" />
@@ -77,12 +77,12 @@
                 
             <!-- Blog Category Filter Tabs -->
             <div class="blog-filter-tabs" style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem;">
-                <button class="blog-filter-btn active" data-filter="all" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--primary-color); background: var(--primary-color); color: #fff; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">전체</button>
-                <button class="blog-filter-btn" data-filter="qa" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: rgba(15, 23, 42, 0.6); color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">QA 자동화</button>
-                <button class="blog-filter-btn" data-filter="orchestration" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: rgba(15, 23, 42, 0.6); color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">AI 오케스트레이션</button>
-                <button class="blog-filter-btn" data-filter="cloud" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: rgba(15, 23, 42, 0.6); color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">클라우드 네이티브</button>
-                <button class="blog-filter-btn" data-filter="decision" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: rgba(15, 23, 42, 0.6); color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">의사결정 지능</button>
-                <button class="blog-filter-btn" data-filter="vision" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: rgba(15, 23, 42, 0.6); color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">비전 &amp; 전략</button>
+                <button class="blog-filter-btn active" data-filter="all" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--primary-color); background: var(--primary-color); color: #0f172a; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">전체</button>
+                <button class="blog-filter-btn" data-filter="qa" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: #f8fafc; color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">QA 자동화</button>
+                <button class="blog-filter-btn" data-filter="orchestration" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: #f8fafc; color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">AI 오케스트레이션</button>
+                <button class="blog-filter-btn" data-filter="cloud" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: #f8fafc; color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">클라우드 네이티브</button>
+                <button class="blog-filter-btn" data-filter="decision" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: #f8fafc; color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">의사결정 지능</button>
+                <button class="blog-filter-btn" data-filter="vision" style="padding: 0.5rem 1.2rem; border-radius: 20px; border: 1px solid var(--border-color); background: #f8fafc; color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">비전 &amp; 전략</button>
             </div>
                 <div class="blog-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
                     <!-- Blog Card: ETA Autoscaling -->

@@ -1,80 +1,59 @@
 # Empasy SyncSeries
 
-> Empasy is an enterprise AI integration platform providing an autonomous multi-agent ecosystem for digital transformation (DX) and AI Ops.
+> Empasy IT Corp. (주식회사 엠파시) develops modular enterprise software built on a shared standard foundation (`SyncBoot`, Java 25, Spring Boot 4.0, PostgreSQL 18.6) with Human-in-the-Loop (HITL) approval controls and on-premise deployment support.
 
 ## Overview
-Empasy SyncSeries unifies 11 specialized AI agent solutions under a 4-Tier architecture orchestrated by SyncVerse. The ecosystem operates on open protocols including Anthropic Model Context Protocol (MCP) and Agent-to-Agent (A2A) distributed messaging (`AgentScope Java`). It enforces Spec-First Governance, Human-in-the-Loop (HITL) safety controls, and an Emergency Kill-Switch for complete enterprise reliability.
+Empasy SyncSeries consists of 4 flagship solutions (`SyncVerse`, `SyncETA`, `SyncBoot`, `SyncCMS`) and 7 modular extensions organized across Data & AI, Security & Governance, and Operations & Commerce. Each module shares common authentication, permission, audit logging, and standard MCP/A2A integration protocols so organizations can start with a single product and expand step by step.
 
-## 4-Tier Core Products & Solutions
+## Flagship Solutions (4)
 
-### Tier 1: Control Tower & Orchestration
-#### SyncVerse (Central Control Tower & Orchestrator)
-- URL: https://empasy.io/ko/solutions/sync-verse.html
+### SyncVerse (Central Collaboration & Approval Oversight)
+- Product Page: https://verse.empasy.io/
+- Corporate Page: https://empasy.io/ko/solutions/sync-verse.html
 - Docs: https://doc.empasy.com/syncverse/
-- Role: Real-time multi-agent orchestration across 11 specialized AI agents, unified telemetry, dependency resolution, Emergency Kill-Switch, and enterprise governance.
-- Protocols: Model Context Protocol (MCP), Agent-to-Agent (A2A) messaging.
+- Role: Multi-agent workflow coordination, Human-in-the-Loop (HITL) approval gates, audit trace visibility, and operational stop controls.
 
-### Tier 2: Intelligence, Security & Cost Control
-#### SyncInsight (On-Premise Decision Intelligence)
-- URL: https://empasy.io/ko/solutions/sync-insight.html
-- Docs: https://doc.empasy.com/syncinsight/
-- Role: Deep research and Read-Only safe NL2SQL across PostgreSQL 18.6 multi-datasources, fusing internal operational metrics with external market intelligence to deliver simulated, actionable decision plans with Human-in-the-Loop approval.
-
-#### SyncLLM (FinOps Gateway & Token Governance)
-- URL: https://empasy.io/ko/solutions/sync-llm.html
-- Docs: https://doc.empasy.com/syncllm/
-- Role: Multi-model intelligent routing (OpenAI, Anthropic, Gemini, Qwen, DeepSeek, local vLLM), PostgreSQL 18.6 pgvector semantic caching, real-time PII masking, AES-256 key vault, and departmental token budget controls cutting enterprise costs by up to 60%.
-
-#### SyncAPIM (Zero-Trust API & WAF Security Gateway)
-- URL: https://empasy.io/ko/solutions/sync-apim.html
-- Docs: https://doc.empasy.com/syncapim/
-- Role: High-throughput API Monitoring & WAF Security Agent featuring deterministic lexical token fingerprint analysis (`SqlXssLexicalTokenizer`), `SyncWatch` real-time attack pattern detection & pinpoint virtual patching (`ApimDefensePack` / `SandboxedDefenseEvaluator`), kernel eBPF blocking, Shadow API discovery, OpenAPI 3.0 contract drift auditing, and 8-pattern PII masking.
-
-#### SyncWatch (AI Security Threat Intelligence & Rule Compiler Agent)
-- URL: https://empasy.io/ko/solutions/sync-watch.html
-- Docs: https://doc.empasy.com/syncwatch/
-- Role: Enterprise security threat intelligence and rule compiler agent that ingests global threat feeds (NVD CVE, CISA KEV, OSV.dev, GitHub GHSA, Nuclei, OWASP CRS, KISA) under a 5-stage SSRF guard to compile and broadcast `VerseAuditPack` (Shift-Left code audit for `SyncVerse`) and `ApimDefensePack` (Shift-Right runtime defense for `SyncAPIM`).
-
-### Tier 3: Enterprise Domain Agent Swarms
-#### SyncBoot (Enterprise Back-Office Core & Low-Code Platform)
-- URL: https://empasy.io/ko/solutions/sync-boot.html
-- Docs: https://doc.empasy.com/syncboot/
-- Role: Enterprise standard back-office core platform with dynamic Org/Role/Menu/Button RBAC, multi-stage Korean electronic approval workflows, executive performance reports, 71 standard administrative screens, low-code Spring Boot CRUD/API generation, Saga distributed compensation transactions, and real-time audit logs.
-
-#### SyncCMS (Autonomous Content & UI Agent Swarm)
-- URL: https://empasy.io/ko/solutions/sync-cms.html
-- Docs: https://doc.empasy.com/synccms/
-- Role: Nuxt 3 SSR hybrid architecture with Copywriter-SEO-Publisher 3-Agent Swarm, pre-publication AI content safety auditing, natural-language-driven component layout, and real-time multilingual content synchronization (15+ languages).
-
-#### SyncShop (Autonomous E-Commerce & Merchandising Agent)
-- URL: https://empasy.io/ko/solutions/sync-shop.html
-- Docs: https://doc.empasy.com/syncshop/
-- Role: Distributed microservices (MSA) e-commerce engine with AI merchandising, margin-protected dynamic pricing, PostgreSQL 18.6 pgvector semantic product discovery, flash-sale promotions, and A2A supply chain orchestration.
-
-#### SyncOps (Enterprise SI PMO & Dual-Rate Profit/Compliance Platform)
-- URL: https://empasy.io/ko/solutions/sync-ops.html
-- Docs: https://doc.empasy.com/syncops/
-- Role: Enterprise PSA & SI PMO platform featuring dual-rate (Contract Rate vs. Actual Cost) real-time project P&L pivot analytics, KOSA software engineer grade evaluation & M/M resource allocation matrix, 4-stage surety bond lifecycle tracking (Bid, Performance, Advance Payment, Warranty), Subcontract Act 60-day payment compliance & overdue interest alerts, and SHA-256 timestamped R&D electronic lab notebooks for tax credit audits.
-
-### Tier 4: Execution & Verification Agents
-#### SyncEta / SyncETA (AI 테스트 자동화 · Vision-LLM Self-Healing QA & Test Automation Platform)
-- URL: https://empasy.io/ko/solutions/sync-eta.html
+### SyncETA (No-Code Automated E2E Testing & Desktop App)
+- Product Page: https://eta.empasy.io/
+- Corporate Page: https://empasy.io/ko/solutions/sync-eta.html
 - Desktop Download: https://empasy.io/ko/download_eta.html
 - Live Demo Portal: https://sync.empasy.io/products/sync-eta
 - Architecture Guide: https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html
 - Docs: https://doc.empasy.com/synceta/
-- Role (KO): AI를 활용한 테스트 자동화(AI 테스트 자동화) 대표 플랫폼. 브라우저 동작 녹화 및 자연어·엑셀(Excel) 시나리오 자동 생성, Playwright MCP 병렬 실행, 실패 원인 분석, UI 변경 시 Vision-LLM 및 DOM 문맥 기반 셀렉터 자가 치유(Self-Healing, 98.4% 복구율), 배포 전후 화면 깨짐(Visual Regression) 자동 비교를 수행하며 반복 회귀 테스트 시 LLM 토큰 비용 0원을 실현합니다.
-- Role (EN): Autonomous E2E web/app UI test automation and visual regression testing platform using Vision-LLM and Playwright MCP without brittle CSS/XPath selectors. Features 98.4% dynamic DOM self-healing, failure root-cause analysis, and Excel-based No-Code test scenarios with zero recurring LLM token cost.
+- Role (KO): 코딩 없이 마우스 클릭이나 자연어·엑셀 기반으로 E2E 테스트 시나리오를 구성하고, UI 변경 시 문맥 기반 셀렉터 자동 보정(Self-Healing)과 배포 전후 화면 비교 리포트를 제공하는 자동 테스트 플랫폼입니다.
+- Role (EN): Desktop and web E2E UI test automation platform combining Playwright execution, context-aware selector recovery when UI elements change, and visual comparison reports.
 
-#### SyncCrawl (Intelligent Visual Extraction Agent)
-- URL: https://empasy.io/ko/solutions/sync-crawl.html
-- Docs: https://doc.empasy.com/synccrawl/
-- Role: Resilient data crawling utilizing visual layout understanding to survive markup changes while enforcing robots.txt and per-domain rate-limit policies; direct vector sink output (PostgreSQL 18.6 pgvector, OpenSearch, Milvus) for RAG.
+### SyncBoot (Enterprise Back-Office Core Platform)
+- Product Page: https://boot.empasy.io/
+- Corporate Page: https://empasy.io/ko/solutions/sync-boot.html
+- Docs: https://doc.empasy.com/syncboot/
+- Role: Standard enterprise back-office core built on Spring Boot 4.0 and Java 25 with SSO, Org/Role/Menu/Button RBAC, electronic approval workflows, audit logs, and standard administrative screens.
 
-## Security & Deployment
-- Deployments: 100% On-Premise, Air-Gapped isolated networks, dedicated AWS/Azure/GCP VPCs.
+### SyncCMS (Website & Multilingual Content Management)
+- Product Page: https://cms.empasy.io/
+- Corporate Page: https://empasy.io/ko/solutions/sync-cms.html
+- Docs: https://doc.empasy.com/synccms/
+- Role: Nuxt 3 SSR hybrid CMS supporting draft review workflows, pre-publication content inspection, and multilingual site publishing.
+
+## Modular Extensions (7)
+
+### Data & AI (3)
+- **SyncInsight** (https://insight.empasy.io/ | https://doc.empasy.com/syncinsight/): Read-only natural-language data query (NL2SQL) and analytical reporting within enterprise access permissions.
+- **SyncLLM** (https://llm.empasy.io/ | https://doc.empasy.com/syncllm/): Multi-LLM gateway supporting departmental token budget controls, `pgvector` semantic caching, PII masking, and local model routing (vLLM, Ollama).
+- **SyncCrawl** (https://crawl.empasy.io/ | https://doc.empasy.com/synccrawl/): Scheduled web data extraction with layout-change resilience, `robots.txt` compliance, and structured vector/database outputs.
+
+### Security & Governance (2)
+- **SyncAPIM** (https://apim.empasy.io/ | https://doc.empasy.com/syncapim/): API inventory tracking, contract drift inspection, security policy monitoring, and response PII protection.
+- **SyncWatch** (https://watch.empasy.io/ | https://doc.empasy.com/syncwatch/): Security vulnerability feed aggregation (NVD CVE, CISA KEV, OSV, KISA) and rule distribution for SyncVerse and SyncAPIM.
+
+### Operations & Commerce (2)
+- **SyncShop** (https://shop.empasy.io/ | https://doc.empasy.com/syncshop/): 8-service distributed microservices (MSA) e-commerce platform with margin-aware pricing controls, order/settlement operations, and semantic product search.
+- **SyncOps** (https://ops.empasy.io/ | https://doc.empasy.com/syncops/): Enterprise SI PMO platform supporting contract vs. actual cost P&L tracking, KOSA engineer grade management, surety bond tracking, and electronic R&D lab notebooks.
+
+## Deployment & Security
+- Deployments: On-premise servers, isolated internal networks (air-gapped), and dedicated VPC environments (AWS, Azure, GCP).
 - Local LLMs: Compatible with local runtimes including vLLM, Ollama, TGI, and OpenAI-compatible endpoints.
-- Compliance: Real-time PII redaction, immutable audit logging with distributed Trace IDs, Zero Data Leakage architecture.
+- Governance: Role-based access control, PII masking, and full execution audit logs.
 
 ## Official Resources
 - Website: https://empasy.io
