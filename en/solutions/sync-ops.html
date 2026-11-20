@@ -25,7 +25,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Empasy">
-    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .page-header { padding: 150px 0 80px; text-align: center; position: relative; z-index: 10; }
@@ -42,22 +42,22 @@
             border-radius: 50%; top: -100px; right: -200px; z-index: 0; pointer-events: none;
         }
         .roi-calculator {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            border-radius: 24px; padding: 3rem 4rem; color: white;
+            background: #f8fafc;
+            border-radius: 24px; padding: 3rem 4rem; color: #0f172a;
             box-shadow: 0 30px 60px -12px rgba(0,0,0,0.4); margin: 5rem auto;
             text-align: center; max-width: 900px; position: relative; overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid #e2e8f0;
         }
         .roi-content { position: relative; z-index: 1; }
         .roi-number { font-size: 4.5rem; font-weight: 800; color: #34d399; margin: 1rem 0; line-height: 1; font-family: var(--font-mono); }
         .live-preview {
-            background: #0f172a; border-radius: 12px; border: 1px solid #334155;
+            background: #f8fafc; border-radius: 12px; border: 1px solid #334155;
             text-align: left; overflow: hidden; margin: 3rem auto 0;
             max-width: 680px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
         }
         .live-preview-header { background: #1e293b; padding: 0.8rem 1rem; display: flex; gap: 0.5rem; border-bottom: 1px solid #334155; align-items: center; }
         .live-preview-dot { width: 12px; height: 12px; border-radius: 50%; }
-        .live-preview-body { padding: 1.5rem; font-family: var(--font-mono); font-size: 0.92rem; color: #e2e8f0; line-height: 1.65; }
+        .live-preview-body { padding: 1.5rem; font-family: var(--font-mono); font-size: 0.92rem; color: #334155; line-height: 1.65; }
     </style>
     <script type="application/ld+json">
     {
@@ -82,8 +82,8 @@
     <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-ops.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-ops.html" />
     <meta property="og:url" content="https://empasy.io/en/solutions/sync-ops.html">
-  <script type="module" crossorigin src="/assets/main-DtQ6yG3c.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-XryW3ehZ.css">
+  <script type="module" crossorigin src="/assets/i18n-NVDc_Uc8.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-CVfy_1a6.css">
 </head>
 <body class="theme-insight">
     <!-- Google Tag Manager (noscript) -->
@@ -93,7 +93,7 @@
         <div class="container nav-container">
             <div class="logo">
                 <a href="/en/pages/index.html">
-                    <img src="/images/logo-dark.svg" alt="EMPASY" class="logo-img" onerror="this.onerror=null; this.src='/assets/images/logo-dark.svg';">
+                    <img src="/images/logo.svg" alt="EMPASY" class="logo-img" onerror="this.onerror=null; this.src='/assets/images/logo.svg';">
                 </a>
             </div>
             <nav class="nav-links">
@@ -268,14 +268,14 @@
             <div class="container">
                 <div class="roi-calculator fade-in-up">
                     <div class="roi-content">
-                        <span class="badge" style="background: rgba(52, 211, 153, 0.2); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.4);">Expected Business Impact</span>
-                        <h3 style="font-size: 2.2rem; margin-top: 1rem; color: white;">Zero Margin Leakage &amp; 100% Statutory Compliance</h3>
-                        <p style="color: #94a3b8; font-size: 1.1rem; max-width: 640px; margin: 0 auto;">Real-time Dual-Rate P&amp;L governance and automated statutory tracking improve average project operating margin by 8.4%p.</p>
-                        <div class="roi-number">+8.4%p</div>
-                        <p style="color: #cbd5e1; font-weight: 600;">Average Project Operating Margin Improvement &amp; Zero Compliance Penalties</p>
+                        <span class="badge" style="background: rgba(14, 116, 144, 0.1); color: #0e7490; border: 1px solid rgba(14, 116, 144, 0.25);">Expected Business Impact</span>
+                        <h3 style="font-size: 2.2rem; margin-top: 1rem; color: #0f172a;">Proactive Margin Tracking &amp; Schedule Alerts</h3>
+                        <p style="color: #475569; font-size: 1.1rem; max-width: 640px; margin: 0 auto;">Track contract vs. actual project costs, staffing utilization, and statutory deadlines in real time from a single console.</p>
+                        <div class="roi-number" style="color: #0e7490;">Real-Time Visibility</div>
+                        <p style="color: #475569; font-weight: 600;">Clear Project Margin Visibility &amp; Proactive Statutory Deadline Alerts</p>
                         <div style="margin-top: 2.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                            <a href="/en/pages/contact.html" class="btn btn-primary" style="background: #10b981; color: #0f172a; font-weight: 700; border: none; padding: 1rem 2.5rem; font-size: 1.1rem;">Request SyncOps Demo</a>
-                            <a href="https://doc.empasy.com/syncops/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff; padding: 1rem 2rem; font-size: 1.1rem;">Read Architecture Docs</a>
+                            <a href="/en/pages/contact.html" class="btn btn-primary" style="background: #0e7490; color: #ffffff; font-weight: 700; border: none; padding: 1rem 2.5rem; font-size: 1.1rem;">Request SyncOps Demo</a>
+                            <a href="https://doc.empasy.com/syncops/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border: 1px solid #cbd5e1; color: #0f172a; padding: 1rem 2rem; font-size: 1.1rem;">Read Architecture Docs</a>
                         </div>
                     </div>
                 </div>
