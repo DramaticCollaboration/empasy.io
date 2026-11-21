@@ -93,7 +93,7 @@
     <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/case-study-finance.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/case-study-finance.html" />
     <meta property="og:url" content="https://empasy.io/en/blog/case-study-finance.html">
-  <script type="module" crossorigin src="/assets/i18n-BPBw1Wb_.js"></script>
+  <script type="module" crossorigin src="/assets/i18n-BgJBPRUf.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/style-BWlNIJrj.css">
 </head>
 <body>
@@ -127,10 +127,10 @@
                     </a>
                     <div class="dropdown-content" style="min-width: 270px;">
                         <span class="dropdown-group-heading">4 Flagship Solutions</span>
-                        <a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · Operations &amp; Approvals</a>
-                        <a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · Automated Testing App</a>
-                        <a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · Business System Core</a>
-                        <a href="https://cms.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · Web &amp; Multilingual CMS</a>
+                        <a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · Operations &amp; Approvals</a>
+                        <a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · Automated Testing App</a>
+                        <a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · Business System Core</a>
+                        <a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · Web &amp; Multilingual CMS</a>
                         <span class="dropdown-group-heading">Modular Extensions</span>
                         <a href="/en/pages/index.html#modules">Data, Security &amp; Operations (7 Modules)</a>
                     </div>
@@ -151,8 +151,8 @@
                     </div>
                 </div>
     
-                <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer">Docs &#8599;</a>
-                <a href="https://sync.empasy.io/" target="_blank" rel="noopener noreferrer">Live Demo &#8599;</a>
+                <a href="https://doc.empasy.com/en/" target="_blank" rel="noopener noreferrer">Docs &#8599;</a>
+                <a href="https://sync.empasy.io/en/" target="_blank" rel="noopener noreferrer">Live Demo &#8599;</a>
             </nav>
             <div class="nav-actions">
                 <div class="lang-switch" role="navigation" aria-label="Language switcher">
@@ -215,6 +215,19 @@
         window.addEventListener('resize', function () {
             if (window.innerWidth > 1023 && nav.classList.contains('active')) setOpen(false);
         });
+        var syncEmpasyLocaleCookies = function (lang) {
+            var siteLocale = lang === 'en' ? 'en-US' : (lang === 'ja' ? 'ja-JP' : 'ko-KR');
+            var adminLocale = lang === 'ko' ? 'ko-KR' : 'en-US';
+            var host = window.location.hostname || '';
+            var domainPart = (host === 'empasy.io' || host.endsWith('.empasy.io')) ? '; domain=.empasy.io' : '';
+            var securePart = window.location.protocol === 'https:' ? '; Secure' : '';
+            var attrs = '; path=/; max-age=31536000; SameSite=Lax' + domainPart + securePart;
+            try {
+                document.cookie = 'empasy_site_locale=' + encodeURIComponent(siteLocale) + attrs;
+                document.cookie = 'empasy_locale=' + encodeURIComponent(adminLocale) + attrs;
+            } catch (err) {}
+        };
+        syncEmpasyLocaleCookies('en');
         var path = window.location.pathname || '/';
         var m = path.match(/\/(ko|en|ja)\/(.*)/);
         nav.querySelectorAll('.lang-switch a[data-lang]').forEach(function (a) {
@@ -233,6 +246,7 @@
             a.setAttribute('href', url);
             a.addEventListener('click', function () {
                 try { localStorage.setItem('preferred_lang', target); } catch (err) {}
+                syncEmpasyLocaleCookies(target);
             });
         });
     })();
@@ -365,10 +379,10 @@
                 <div>
                     <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Flagship Solutions</h4>
                     <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
-                        <li><a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer">SyncVerse</a></li>
-                        <li><a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer">SyncETA</a></li>
-                        <li><a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer">SyncBoot</a></li>
-                        <li><a href="https://cms.empasy.io/" target="_blank" rel="noopener noreferrer">SyncCMS</a></li>
+                        <li><a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncVerse</a></li>
+                        <li><a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncETA</a></li>
+                        <li><a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncBoot</a></li>
+                        <li><a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncCMS</a></li>
                     </ul>
                 </div>
                 <div>
@@ -383,9 +397,9 @@
                 <div>
                     <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Demo · Docs · Contact</h4>
                     <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
-                        <li><a href="https://sync.empasy.io/" target="_blank" rel="noopener noreferrer">Live Demo Portal &#8599;</a></li>
+                        <li><a href="https://sync.empasy.io/en/" target="_blank" rel="noopener noreferrer">Live Demo Portal &#8599;</a></li>
                         <li><a href="/en/download_eta.html">Download SyncETA</a></li>
-                        <li><a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer">Technical Docs &#8599;</a></li>
+                        <li><a href="https://doc.empasy.com/en/" target="_blank" rel="noopener noreferrer">Technical Docs &#8599;</a></li>
                         <li><a href="/en/pages/contact.html">Contact Sales</a></li>
                     </ul>
                 </div>

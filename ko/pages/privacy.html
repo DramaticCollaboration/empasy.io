@@ -84,7 +84,7 @@
             margin-top: 0.85rem;
         }
     </style>
-  <script type="module" crossorigin src="/assets/i18n-BPBw1Wb_.js"></script>
+  <script type="module" crossorigin src="/assets/i18n-BgJBPRUf.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/style-BWlNIJrj.css">
 </head>
 <body>
@@ -204,6 +204,19 @@
         window.addEventListener('resize', function () {
             if (window.innerWidth > 1023 && nav.classList.contains('active')) setOpen(false);
         });
+        var syncEmpasyLocaleCookies = function (lang) {
+            var siteLocale = lang === 'en' ? 'en-US' : (lang === 'ja' ? 'ja-JP' : 'ko-KR');
+            var adminLocale = lang === 'ko' ? 'ko-KR' : 'en-US';
+            var host = window.location.hostname || '';
+            var domainPart = (host === 'empasy.io' || host.endsWith('.empasy.io')) ? '; domain=.empasy.io' : '';
+            var securePart = window.location.protocol === 'https:' ? '; Secure' : '';
+            var attrs = '; path=/; max-age=31536000; SameSite=Lax' + domainPart + securePart;
+            try {
+                document.cookie = 'empasy_site_locale=' + encodeURIComponent(siteLocale) + attrs;
+                document.cookie = 'empasy_locale=' + encodeURIComponent(adminLocale) + attrs;
+            } catch (err) {}
+        };
+        syncEmpasyLocaleCookies('ko');
         var path = window.location.pathname || '/';
         var m = path.match(/\/(ko|en|ja)\/(.*)/);
         nav.querySelectorAll('.lang-switch a[data-lang]').forEach(function (a) {
@@ -222,6 +235,7 @@
             a.setAttribute('href', url);
             a.addEventListener('click', function () {
                 try { localStorage.setItem('preferred_lang', target); } catch (err) {}
+                syncEmpasyLocaleCookies(target);
             });
         });
     })();

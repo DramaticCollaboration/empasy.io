@@ -118,7 +118,7 @@
       ]
     }
     </script>
-  <script type="module" crossorigin src="/assets/i18n-BPBw1Wb_.js"></script>
+  <script type="module" crossorigin src="/assets/i18n-BgJBPRUf.js"></script>
   <script type="module" crossorigin src="/assets/downloadLink-BXlpoNnG.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/style-BWlNIJrj.css">
 </head>
@@ -152,10 +152,10 @@
                     </a>
                     <div class="dropdown-content" style="min-width: 270px;">
                         <span class="dropdown-group-heading">主力ソリューション 4種</span>
-                        <a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · 協業・承認統合管理</a>
-                        <a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · 自動テスト・PCアプリ</a>
-                        <a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · 業務システム基盤</a>
-                        <a href="https://cms.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · Web・多言語サイト管理</a>
+                        <a href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · 協業・承認統合管理</a>
+                        <a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · 自動テスト・PCアプリ</a>
+                        <a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · 業務システム基盤</a>
+                        <a href="https://cms.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · Web・多言語サイト管理</a>
                         <span class="dropdown-group-heading">目的別拡張モジュール</span>
                         <a href="/ja/pages/index.html#modules">データ・セキュリティ・業務拡張 (7種)</a>
                     </div>
@@ -176,8 +176,8 @@
                     </div>
                 </div>
     
-                <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer">技術文書 &#8599;</a>
-                <a href="https://sync.empasy.io/" target="_blank" rel="noopener noreferrer">統合デモ &#8599;</a>
+                <a href="https://doc.empasy.com/ja/" target="_blank" rel="noopener noreferrer">技術文書 &#8599;</a>
+                <a href="https://sync.empasy.io/ja/" target="_blank" rel="noopener noreferrer">統合デモ &#8599;</a>
             </nav>
             <div class="nav-actions">
                 <div class="lang-switch" role="navigation" aria-label="言語切替">
@@ -240,6 +240,19 @@
         window.addEventListener('resize', function () {
             if (window.innerWidth > 1023 && nav.classList.contains('active')) setOpen(false);
         });
+        var syncEmpasyLocaleCookies = function (lang) {
+            var siteLocale = lang === 'en' ? 'en-US' : (lang === 'ja' ? 'ja-JP' : 'ko-KR');
+            var adminLocale = lang === 'ko' ? 'ko-KR' : 'en-US';
+            var host = window.location.hostname || '';
+            var domainPart = (host === 'empasy.io' || host.endsWith('.empasy.io')) ? '; domain=.empasy.io' : '';
+            var securePart = window.location.protocol === 'https:' ? '; Secure' : '';
+            var attrs = '; path=/; max-age=31536000; SameSite=Lax' + domainPart + securePart;
+            try {
+                document.cookie = 'empasy_site_locale=' + encodeURIComponent(siteLocale) + attrs;
+                document.cookie = 'empasy_locale=' + encodeURIComponent(adminLocale) + attrs;
+            } catch (err) {}
+        };
+        syncEmpasyLocaleCookies('ja');
         var path = window.location.pathname || '/';
         var m = path.match(/\/(ko|en|ja)\/(.*)/);
         nav.querySelectorAll('.lang-switch a[data-lang]').forEach(function (a) {
@@ -258,6 +271,7 @@
             a.setAttribute('href', url);
             a.addEventListener('click', function () {
                 try { localStorage.setItem('preferred_lang', target); } catch (err) {}
+                syncEmpasyLocaleCookies(target);
             });
         });
     })();
@@ -427,7 +441,7 @@
                 <h2 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 0.35rem;">技術構造・自動化連携の詳細はこちら</h2>
                 <p style="color: #475569; font-size: 0.92rem; margin: 0;">詳細なアーキテクチャ、コマンド連携、自動配布パイプライン手順は開発者向け技術ドキュメント（doc.empasy.com）でご案内しています。</p>
             </div>
-            <a href="https://doc.empasy.com/synceta/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="white-space: nowrap;">
+            <a href="https://doc.empasy.com/ja/synceta/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="white-space: nowrap;">
                 SyncETA 技術ドキュメント &#8599;
             </a>
         </section>
@@ -448,7 +462,7 @@
                 <a href="/downloads/proposals/SyncETA_Proposal.pdf" download class="btn btn-outline" style="font-weight: 600;">
                     <i class="fas fa-file-lines" style="margin-right: 6px; color: #475569;"></i> SyncETA 提案書 (8p PDF)
                 </a>
-                <a href="https://doc.empasy.com/proposals/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-weight: 600;">
+                <a href="https://doc.empasy.com/ja/proposals/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-weight: 600;">
                     <i class="fas fa-folder-open" style="margin-right: 6px; color: #0e7490;"></i> 全提案書アーカイブ (doc.empasy.com)
                 </a>
             </div>
@@ -469,10 +483,10 @@
                 <div>
                     <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">主力ソリューション</h4>
                     <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
-                        <li><a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer">SyncVerse</a></li>
-                        <li><a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer">SyncETA</a></li>
-                        <li><a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer">SyncBoot</a></li>
-                        <li><a href="https://cms.empasy.io/" target="_blank" rel="noopener noreferrer">SyncCMS</a></li>
+                        <li><a href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer">SyncVerse</a></li>
+                        <li><a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer">SyncETA</a></li>
+                        <li><a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer">SyncBoot</a></li>
+                        <li><a href="https://cms.empasy.io/ja/" target="_blank" rel="noopener noreferrer">SyncCMS</a></li>
                     </ul>
                 </div>
                 <div>
@@ -487,9 +501,9 @@
                 <div>
                     <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">デモ・文書・相談</h4>
                     <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
-                        <li><a href="https://sync.empasy.io/" target="_blank" rel="noopener noreferrer">統合デモポータル &#8599;</a></li>
+                        <li><a href="https://sync.empasy.io/ja/" target="_blank" rel="noopener noreferrer">統合デモポータル &#8599;</a></li>
                         <li><a href="/ja/download_eta.html">SyncETA ダウンロード</a></li>
-                        <li><a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer">技術ドキュメント &#8599;</a></li>
+                        <li><a href="https://doc.empasy.com/ja/" target="_blank" rel="noopener noreferrer">技術ドキュメント &#8599;</a></li>
                         <li><a href="/ja/pages/contact.html">導入のお問い合わせ</a></li>
                     </ul>
                 </div>
