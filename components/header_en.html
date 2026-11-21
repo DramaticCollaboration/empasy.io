@@ -26,10 +26,10 @@
                 </a>
                 <div class="dropdown-content" style="min-width: 270px;">
                     <span class="dropdown-group-heading">4 Flagship Solutions</span>
-                    <a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · Operations &amp; Approvals</a>
-                    <a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · Automated Testing App</a>
-                    <a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · Business System Core</a>
-                    <a href="https://cms.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · Web &amp; Multilingual CMS</a>
+                    <a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · Operations &amp; Approvals</a>
+                    <a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · Automated Testing App</a>
+                    <a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · Business System Core</a>
+                    <a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · Web &amp; Multilingual CMS</a>
                     <span class="dropdown-group-heading">Modular Extensions</span>
                     <a href="/en/pages/index.html#modules">Data, Security &amp; Operations (7 Modules)</a>
                 </div>
@@ -51,7 +51,7 @@
             </div>
 
             <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer">Docs &#8599;</a>
-            <a href="https://sync.empasy.io/" target="_blank" rel="noopener noreferrer">Live Demo &#8599;</a>
+            <a href="https://sync.empasy.io/en/" target="_blank" rel="noopener noreferrer">Live Demo &#8599;</a>
         </nav>
         <div class="nav-actions">
             <div class="lang-switch" role="navigation" aria-label="Language switcher">
@@ -114,6 +114,19 @@
     window.addEventListener('resize', function () {
         if (window.innerWidth > 1023 && nav.classList.contains('active')) setOpen(false);
     });
+    var syncEmpasyLocaleCookies = function (lang) {
+        var siteLocale = lang === 'en' ? 'en-US' : (lang === 'ja' ? 'ja-JP' : 'ko-KR');
+        var adminLocale = lang === 'ko' ? 'ko-KR' : 'en-US';
+        var host = window.location.hostname || '';
+        var domainPart = (host === 'empasy.io' || host.endsWith('.empasy.io')) ? '; domain=.empasy.io' : '';
+        var securePart = window.location.protocol === 'https:' ? '; Secure' : '';
+        var attrs = '; path=/; max-age=31536000; SameSite=Lax' + domainPart + securePart;
+        try {
+            document.cookie = 'empasy_site_locale=' + encodeURIComponent(siteLocale) + attrs;
+            document.cookie = 'empasy_locale=' + encodeURIComponent(adminLocale) + attrs;
+        } catch (err) {}
+    };
+    syncEmpasyLocaleCookies('en');
     var path = window.location.pathname || '/';
     var m = path.match(/\/(ko|en|ja)\/(.*)/);
     nav.querySelectorAll('.lang-switch a[data-lang]').forEach(function (a) {
@@ -132,6 +145,7 @@
         a.setAttribute('href', url);
         a.addEventListener('click', function () {
             try { localStorage.setItem('preferred_lang', target); } catch (err) {}
+            syncEmpasyLocaleCookies(target);
         });
     });
 })();

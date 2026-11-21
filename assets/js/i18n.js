@@ -409,8 +409,24 @@ function getTargetUrl(targetLang) {
     return `/${targetLang}/pages/index.html${search}${hash}`;
 }
 
+function syncEmpasyLocaleCookies(lang) {
+    const siteLocale = lang === 'en' ? 'en-US' : (lang === 'ja' ? 'ja-JP' : 'ko-KR');
+    const adminLocale = lang === 'ko' ? 'ko-KR' : 'en-US';
+    const host = window.location.hostname || '';
+    const domainPart = (host === 'empasy.io' || host.endsWith('.empasy.io')) ? '; domain=.empasy.io' : '';
+    const securePart = window.location.protocol === 'https:' ? '; Secure' : '';
+    const attrs = '; path=/; max-age=31536000; SameSite=Lax' + domainPart + securePart;
+    try {
+        document.cookie = 'empasy_site_locale=' + encodeURIComponent(siteLocale) + attrs;
+        document.cookie = 'empasy_locale=' + encodeURIComponent(adminLocale) + attrs;
+    } catch (err) {
+        // Ignore cookie write errors
+    }
+}
+
 // Dynamic Language Switcher to preserve current page path
 function updateLangSwitcherLinks() {
+    syncEmpasyLocaleCookies(currentLang);
     const langLinks = document.querySelectorAll('.lang-dropdown-content a, .lang-switch a');
     if (!langLinks || langLinks.length === 0) return;
 
@@ -438,6 +454,7 @@ function updateLangSwitcherLinks() {
             } catch (err) {
                 // Ignore storage errors
             }
+            syncEmpasyLocaleCookies(targetLang);
             window.location.href = targetUrl;
             e.preventDefault();
         });
