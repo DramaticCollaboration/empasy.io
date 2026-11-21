@@ -27,7 +27,7 @@
             var rawPath = window.location.pathname;
             var path = rawPath.toLowerCase();
             if (path.indexOf('/docs/') === 0 || path === '/docs') {
-                var docSubPath = rawPath.replace(/^\/docs(\/(ko|en|ja))?/i, '') || '/';
+                var docSubPath = rawPath.replace(/^\/docs(\/ko)?/i, '') || '/';
                 window.location.replace('https://doc.empasy.com' + docSubPath);
             } else if (path.includes('synceta')) {
                 window.location.replace('https://eta.empasy.io/');
