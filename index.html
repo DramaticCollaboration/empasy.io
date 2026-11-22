@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -698,6 +719,52 @@
         document.addEventListener('keydown', function (e) {
           if (e.key === 'Escape' && lightbox && lightbox.classList.contains('is-open')) closeLightbox();
         });
+      })();
+    </script>
+    <div id="emp-cookie-banner" role="dialog" aria-live="polite" aria-label="쿠키 사용 동의" style="display:none;position:fixed;left:16px;right:16px;bottom:16px;max-width:680px;margin:0 auto;z-index:9999;background:#0f172a;color:#f8fafc;border:1px solid #334155;border-radius:12px;padding:14px 18px;box-shadow:0 16px 40px rgba(15,23,42,0.28);font-size:13px;line-height:1.5;">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;">
+            <p style="margin:0;flex:1 1 320px;color:#e2e8f0;">
+                엠파시는 서비스 품질 개선을 위해 선택적 분석 쿠키를 사용합니다. 동의 전까지 분석 쿠키는 비활성화 상태로 유지됩니다.
+                <a href="/ko/pages/privacy.html" style="color:#38bdf8;text-decoration:underline;margin-left:4px;">개인정보 처리방침</a>
+            </p>
+            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+                <button type="button" id="emp-cookie-essential" style="padding:7px 12px;border-radius:8px;border:1px solid #475569;background:transparent;color:#e2e8f0;font-size:12px;font-weight:600;cursor:pointer;">필수 쿠키만 허용</button>
+                <button type="button" id="emp-cookie-accept" style="padding:7px 14px;border-radius:8px;border:1px solid #0284c7;background:#0284c7;color:#ffffff;font-size:12px;font-weight:700;cursor:pointer;">모두 동의</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      (function () {
+        var CONSENT_KEY = 'empasy_cookie_consent';
+        var banner = document.getElementById('emp-cookie-banner');
+        var btnAccept = document.getElementById('emp-cookie-accept');
+        var btnEssential = document.getElementById('emp-cookie-essential');
+        if (!banner) return;
+        var saved = null;
+        try {
+          saved = localStorage.getItem(CONSENT_KEY);
+        } catch (e) {}
+        if (!saved) {
+          banner.style.display = 'block';
+        }
+        function applyConsent(status) {
+          try {
+            localStorage.setItem(CONSENT_KEY, status);
+          } catch (e) {}
+          if (typeof window.gtag === 'function') {
+            var granted = status === 'granted' ? 'granted' : 'denied';
+            window.gtag('consent', 'update', {
+              analytics_storage: granted,
+              ad_storage: granted,
+              ad_user_data: granted,
+              ad_personalization: granted
+            });
+          }
+          banner.style.display = 'none';
+        }
+        if (btnAccept) btnAccept.addEventListener('click', function () { applyConsent('granted'); });
+        if (btnEssential) btnEssential.addEventListener('click', function () { applyConsent('denied'); });
       })();
     </script>
 </body>
