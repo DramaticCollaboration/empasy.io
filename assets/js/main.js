@@ -204,17 +204,35 @@ function initMain() {
 
     // 5. Masonry Shuffle Simulation (SyncCMS)
     const masonryGrid = document.querySelector('.theme-cms .masonry-grid');
-    if (masonryGrid) {
-        setInterval(() => {
+    if (masonryGrid && !masonryGrid.dataset.shuffleInitialized) {
+        masonryGrid.dataset.shuffleInitialized = 'true';
+        let shuffleTimeoutId = null;
+        const shuffleIntervalId = window.setInterval(() => {
+            if (!document.body.contains(masonryGrid)) {
+                window.clearInterval(shuffleIntervalId);
+                if (shuffleTimeoutId !== null) window.clearTimeout(shuffleTimeoutId);
+                return;
+            }
             const items = Array.from(masonryGrid.children);
             items.forEach(item => item.classList.add('shuffle-anim'));
-            setTimeout(() => {
-                if(items.length > 0) {
+            shuffleTimeoutId = window.setTimeout(() => {
+                if (items.length > 0 && document.body.contains(masonryGrid)) {
                     masonryGrid.appendChild(items[0]);
                 }
                 items.forEach(item => item.classList.remove('shuffle-anim'));
+                shuffleTimeoutId = null;
             }, 500);
         }, 5000);
+
+        const cleanupMasonryTimer = () => {
+            window.clearInterval(shuffleIntervalId);
+            if (shuffleTimeoutId !== null) {
+                window.clearTimeout(shuffleTimeoutId);
+                shuffleTimeoutId = null;
+            }
+        };
+        window.addEventListener('pagehide', cleanupMasonryTimer, { once: true });
+        window.addEventListener('beforeunload', cleanupMasonryTimer, { once: true });
     }
 
     // 6. Network Nodes Generation (SyncBoot)
