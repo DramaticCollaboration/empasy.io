@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -17,7 +38,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empasy | Practical Enterprise Software SyncSeries</title>
-    <meta name="description" content="Official website of Empasy Inc. Practical enterprise software built on a shared foundation: 4 flagship solutions (SyncVerse, SyncETA, SyncBoot, SyncCMS) and 7 modular extensions.">
+    <meta name="description" content="Official website of Empasy Inc. Automate repetitive business work while keeping people in charge of critical approvals. Start with one priority workflow in two weeks.">
     <meta name="author" content="Empasy Inc.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://empasy.io/en/pages/index.html">
@@ -27,14 +48,14 @@
     <link rel="alternate" hreflang="x-default" href="https://empasy.io/">
     <meta property="og:site_name" content="Empasy">
     <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="Empasy | Practical Enterprise Software SyncSeries">
-    <meta property="og:description" content="Practical enterprise software on one proven foundation to streamline development, automated testing, websites, and daily operations.">
+    <meta property="og:title" content="Empasy | Automate Repetitive Work with Human Approval">
+    <meta property="og:description" content="From websites and internal systems to business data lookup and automated screen checks, validate one priority workflow in two weeks.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://empasy.io/en/pages/index.html">
     <meta property="og:image" content="https://empasy.io/images/screenshots/sync-verse/screen_01.png">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -42,7 +63,7 @@
       "name": "Empasy Inc.",
       "url": "https://empasy.io/",
       "logo": "https://empasy.io/empasy-logo.png",
-      "description": "Enterprise software company building practical tools for collaboration, automated testing, business back-office cores, and web operations on a shared foundation.",
+      "description": "Enterprise software company automating repetitive daily work with human approval controls across websites, internal operations, data lookup, and quality checks.",
       "founder": { "@type": "Person", "name": "Byungmoon Oh" },
       "taxID": "547-81-03408",
       "award": "Innovative Growth Venture Enterprise Certification (No. 20261111030084)",
@@ -67,48 +88,55 @@
     {{> header_en }}
 
     <main>
-        <!-- 1. Compact Editorial Hero + 4 Flagship Live Screen Preview -->
+        <!-- 1. Executive Hero + Task-Based Screen Preview -->
         <section class="ed-hero">
             <div class="container">
                 <div class="ed-hero-copy">
                     <p class="ed-eyebrow">Empasy Inc. · Practical Enterprise Software</p>
-                    <h1 class="ed-hero-title">Enterprise software that brings calm order to daily development, testing, and operations</h1>
+                    <h1 class="ed-hero-title">Automate repetitive business work, <br>keep humans in charge of key decisions</h1>
                     <p class="ed-hero-desc">
-                        Start with only the modules your team needs on one proven shared foundation.
-                        Every critical change requires clear human review and approval before going live.
+                        From corporate websites and internal business systems to data lookup and quality checks, <br>
+                        pick one urgent workflow and validate measurable results in two weeks.
                     </p>
                     <div class="ed-hero-actions">
-                        <a href="https://sync.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-                            Explore Live Screens
+                        <a href="#finder" class="btn btn-primary btn-lg">
+                            30-Second Solution Finder
                         </a>
                         <a href="/en/pages/contact.html" class="btn btn-outline btn-lg">
-                            Contact Enterprise Sales
+                            Contact Sales
                         </a>
                     </div>
                     <div class="ed-hero-sublinks">
-                        <a href="/en/download_eta.html">Download SyncETA Desktop App</a>
-                        <a href="https://doc.empasy.com/en/" target="_blank" rel="noopener noreferrer">Technical Documentation (doc.empasy.com) &#8599;</a>
-                        <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" download>Summary Brochure PDF</a>
+                        <a href="https://sync.empasy.io/en/" target="_blank" rel="noopener noreferrer">Explore Live Screens (sync.empasy.io) &#8599;</a>
+                        <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" download>Executive Summary PDF</a>
+                        <a href="#it-resources">IT &amp; Developer Resources &#8595;</a>
                     </div>
                 </div>
 
-                <!-- 4 Flagship Solutions Screen Preview -->
+                <!-- 4 Task-Based Screen Previews -->
                 <div class="ed-preview-wrap">
-                    <div class="ed-tabs" role="tablist" aria-label="Flagship solution screen preview">
-                        <button type="button" class="ed-tab active" data-preview="verse">SyncVerse · Operations &amp; Approvals</button>
-                        <button type="button" class="ed-tab" data-preview="eta">SyncETA · Automated Testing</button>
-                        <button type="button" class="ed-tab" data-preview="boot">SyncBoot · Business System Core</button>
-                        <button type="button" class="ed-tab" data-preview="cms">SyncCMS · Web &amp; Multilingual</button>
+                    <div class="ed-tabs" role="tablist" aria-label="Core business workflow previews">
+                        <button type="button" class="ed-tab active" role="tab" aria-selected="true" data-preview="verse">Approvals &amp; Tracking</button>
+                        <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="eta">Click Screen Checks</button>
+                        <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="boot">Internal Reports</button>
+                        <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="cms">Multilingual Web</button>
                     </div>
                     <div class="ed-frame">
                         <div class="ed-frame-bar">
-                            <strong id="preview-title">SyncVerse — Unified Work Status &amp; Step-by-Step Approval Dashboard</strong>
-                            <a id="preview-link" href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer">View Product &#8599;</a>
+                            <strong id="preview-title">Collaboration &amp; Staged Approval Dashboard (SyncVerse)</strong>
+                            <div class="ed-frame-actions">
+                                <button type="button" id="preview-zoom-btn" class="ed-zoom-btn">Zoom</button>
+                                <a id="preview-link" href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer">Details &#8599;</a>
+                            </div>
                         </div>
-                        <img id="preview-img" src="/images/screenshots/sync-verse/screen_01.png" alt="SyncVerse live workspace dashboard" style="width: 100%; height: auto;">
+                        <div id="preview-callout" class="ed-frame-callout" aria-label="Key highlights">
+                            <span class="ed-callout-pill"><span class="ed-callout-dot" aria-hidden="true"></span><span>Human approval before going live</span></span>
+                            <span class="ed-callout-pill"><span class="ed-callout-dot" aria-hidden="true"></span><span>Clear before-and-after review</span></span>
+                        </div>
+                        <img id="preview-img" src="/images/screenshots/sync-verse/screen_01.png" alt="Collaboration and staged approval dashboard" style="width: 100%; height: auto;">
                     </div>
                     <p id="preview-caption" class="ed-frame-caption">
-                        Track requirements, task reviews, quality checks, and staged approval records in a single clear workspace.
+                        Track requirements, review summaries, quality checks, and staged approval records in a single clear screen.
                     </p>
                 </div>
             </div>
@@ -127,26 +155,313 @@
                         <div class="ed-fact-label">Certified Innovative Growth Venture Enterprise (No. 20261111030084)</div>
                     </div>
                     <div class="ed-fact-card">
-                        <div class="ed-fact-val">Public Live Demo</div>
-                        <div class="ed-fact-label">Try live product consoles and download the SyncETA desktop app directly before buying</div>
+                        <div class="ed-fact-val">Open Live Demo</div>
+                        <div class="ed-fact-label">Test real browser screens and download SyncETA directly without registration</div>
                     </div>
                     <div class="ed-fact-card">
-                        <div class="ed-fact-val">Open Docs &amp; IP</div>
-                        <div class="ed-fact-label">Full technical manuals on doc.empasy.com and transparent corporate credentials</div>
+                        <div class="ed-fact-val">Private Network Ready</div>
+                        <div class="ed-fact-label">Deploys cleanly inside isolated corporate servers under your existing security rules</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 3. Design Principles -->
-        <section id="philosophy" class="ed-section">
+        <!-- 3. Enterprise & Industry References (Front-Placed, No Specific Project Titles) -->
+        <section id="case-studies" class="ed-section">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 28px;">
+                    <div class="ed-head" style="margin-bottom: 0;">
+                        <p class="ed-kicker">Enterprise Track Record</p>
+                        <h2 class="ed-title">Proven across major enterprise, security, public, and education environments</h2>
+                        <p class="ed-desc">Our software is shaped by hands-on delivery in high-traffic, strict-security organizations.</p>
+                    </div>
+                    <a href="/en/pages/clients.html" style="font-size: 14px; font-weight: 600; color: #0e7490;">View Industry Track Record &#8594;</a>
+                </div>
+
+                <div class="ed-ref-wall-wrap">
+                    <div class="ed-ref-wall-head">
+                        <span class="ed-ref-wall-label">Key Enterprises &amp; Institutions Supported</span>
+                        <span class="ed-ref-wall-note">To honor confidentiality agreements, specific project names are omitted and grouped by organization and capability.</span>
+                    </div>
+                    <div class="ed-ref-wall" aria-label="Key enterprise and institutional references">
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">Samsung.com</span><span class="ed-ref-chip-sub">Global Test Automation</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">LG CNS</span><span class="ed-ref-chip-sub">Enterprise IT Systems</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">LG Electronics</span><span class="ed-ref-chip-sub">Manufacturing &amp; Ops</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">LG Chem</span><span class="ed-ref-chip-sub">Enterprise Systems</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">Hyundai Motor</span><span class="ed-ref-chip-sub">Mobility &amp; Enterprise</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">AUTOCRYPT</span><span class="ed-ref-chip-sub">Mobility Security</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">Penta Security</span><span class="ed-ref-chip-sub">API &amp; Security Ops</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">Penta System</span><span class="ed-ref-chip-sub">Public Education Collab</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">Gyeonggi Office of Education</span><span class="ed-ref-chip-sub">Public Education Platform</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">Visang Education</span><span class="ed-ref-chip-sub">Test Automation</span></div>
+                    </div>
+                </div>
+
+                <div class="ed-ref-grid">
+                    <article class="ed-ref-card">
+                        <div>
+                            <span class="ed-ref-sector">Global &amp; EdTech Quality Automation</span>
+                            <h3>Samsung.com Global Test Automation &amp; Visang Education Test Automation</h3>
+                            <div class="ed-ref-clients">
+                                <span class="ed-ref-client-badge">Samsung.com</span>
+                                <span class="ed-ref-client-badge">Visang Education</span>
+                            </div>
+                            <p>Automated pre-release screen verification for global multilingual sites and high-concurrency digital learning platforms supporting 2,000 simultaneous users.</p>
+                        </div>
+                        <div class="ed-ref-outcome">Full check cycle: ~4 hours &#8594; ~45 minutes · Global multilingual verification</div>
+                    </article>
+
+                    <article class="ed-ref-card">
+                        <div>
+                            <span class="ed-ref-sector">Enterprise Manufacturing &amp; Corporate IT</span>
+                            <h3>Large-Scale Business Systems &amp; Legacy Modernization</h3>
+                            <div class="ed-ref-clients">
+                                <span class="ed-ref-client-badge">LG CNS</span>
+                                <span class="ed-ref-client-badge">LG Electronics</span>
+                                <span class="ed-ref-client-badge">LG Chem</span>
+                                <span class="ed-ref-client-badge">Hyundai Motor</span>
+                            </div>
+                            <p>Delivered enterprise operational system architecture, legacy structure modernization, and standard permission-and-approval upgrades for large corporate teams.</p>
+                        </div>
+                        <div class="ed-ref-outcome">Update cadence: Monthly &#8594; Weekly updates · Proven at enterprise scale</div>
+                    </article>
+
+                    <article class="ed-ref-card">
+                        <div>
+                            <span class="ed-ref-sector">Mobility &amp; Information Security</span>
+                            <h3>High-Volume Security &amp; Fleet Telemetry Monitoring</h3>
+                            <div class="ed-ref-clients">
+                                <span class="ed-ref-client-badge">AUTOCRYPT</span>
+                                <span class="ed-ref-client-badge">Penta Security</span>
+                            </div>
+                            <p>Engineered real-time anomaly detection for large-scale vehicle telemetry streams and high-speed centralized security monitoring for enterprise system integrations.</p>
+                        </div>
+                        <div class="ed-ref-outcome">High-volume real-time ingestion · Immediate security anomaly detection</div>
+                    </article>
+
+                    <article class="ed-ref-card">
+                        <div>
+                            <span class="ed-ref-sector">Public &amp; Education Data Platforms</span>
+                            <h3>Public Education Knowledge &amp; Data Platform Delivery</h3>
+                            <div class="ed-ref-clients">
+                                <span class="ed-ref-client-badge">Penta System</span>
+                                <span class="ed-ref-client-badge">Gyeonggi Office of Education</span>
+                            </div>
+                            <p>Collaborated with Penta System for the Gyeonggi Provincial Office of Education to build large-scale public education data search and administrative support workflows.</p>
+                        </div>
+                        <div class="ed-ref-outcome">Strict public-sector compliance · Streamlined search and administrative workflows</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Browse by Team & Business Goal -->
+        <section id="roles" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
-                    <p class="ed-kicker">Design Principles</p>
-                    <h2 class="ed-title">One shared foundation — adopt only what you need</h2>
+                    <p class="ed-kicker">Browse by Role &amp; Goal</p>
+                    <h2 class="ed-title">Start from the business problem your team feels today</h2>
                     <p class="ed-desc">
-                        Instead of building disconnected point tools, Empasy organizes proven enterprise capabilities into modular components
-                        on top of one standard foundation (SyncBoot). Adopt one area first and expand smoothly as operations grow.
+                        You do not need to memorize every product name. Start with the single workflow taking the most manual effort and connect additional capabilities only when needed.
+                    </p>
+                </div>
+
+                <div class="ed-role-grid">
+                    <article class="ed-role-card">
+                        <div>
+                            <span class="ed-role-audience">Executives &amp; Planning</span>
+                            <h3>We want instant answers from business data and clear control over AI spending</h3>
+                            <p>Query company figures in everyday language, enforce department AI budgets and privacy masking, and track major change approvals in one place.</p>
+                            <div class="ed-role-tags">
+                                <span class="ed-role-tag">Plain-Language Data Lookup</span>
+                                <span class="ed-role-tag">AI Budget &amp; Privacy</span>
+                                <span class="ed-role-tag">Approval Oversight</span>
+                            </div>
+                        </div>
+                        <div class="ed-role-foot">
+                            <a href="#modules" class="ed-role-link" data-jump-ext="data-ai">Explore capabilities &#8594;</a>
+                            <a href="/en/pages/contact.html?topics=data-ai" class="ed-role-link">Request consultation &#8599;</a>
+                        </div>
+                    </article>
+
+                    <article class="ed-role-card">
+                        <div>
+                            <span class="ed-role-audience">Operations · Quality · IT</span>
+                            <h3>We want to cut repetitive release checks and speed up internal system builds</h3>
+                            <p>Record automated screen checks by clicking without coding, and launch internal apps faster with built-in sign-in, permissions, and approvals.</p>
+                            <div class="ed-role-tags">
+                                <span class="ed-role-tag">Click-Based Screen Checks</span>
+                                <span class="ed-role-tag">Internal System Core</span>
+                                <span class="ed-role-tag">Activity Audit Trail</span>
+                            </div>
+                        </div>
+                        <div class="ed-role-foot">
+                            <a href="#solutions" class="ed-role-link">Explore core areas &#8594;</a>
+                            <a href="/en/pages/contact.html?topics=qa,system" class="ed-role-link">Request consultation &#8599;</a>
+                        </div>
+                    </article>
+
+                    <article class="ed-role-card">
+                        <div>
+                            <span class="ed-role-audience">Marketing &amp; Commerce</span>
+                            <h3>We want unified multilingual websites and safeguards against pricing mistakes</h3>
+                            <p>Review and publish across regional brand websites from one console, protect minimum product margins during sales, and roll back prices instantly.</p>
+                            <div class="ed-role-tags">
+                                <span class="ed-role-tag">Multilingual Web Hub</span>
+                                <span class="ed-role-tag">Margin Guardrails</span>
+                                <span class="ed-role-tag">Instant Price Restore</span>
+                            </div>
+                        </div>
+                        <div class="ed-role-foot">
+                            <a href="#modules" class="ed-role-link" data-jump-ext="operations">Explore capabilities &#8594;</a>
+                            <a href="/en/pages/contact.html?topics=web,commerce" class="ed-role-link">Request consultation &#8599;</a>
+                        </div>
+                    </article>
+
+                    <article class="ed-role-card">
+                        <div>
+                            <span class="ed-role-audience">Project Ops &amp; Security</span>
+                            <h3>We need clear visibility into project margins, payment deadlines, and security risks</h3>
+                            <p>Compare contract value against real staffing cost, monitor guarantee and subcontracting deadlines, and uncover hidden external exposure early.</p>
+                            <div class="ed-role-tags">
+                                <span class="ed-role-tag">Project P&amp;L &amp; Deadlines</span>
+                                <span class="ed-role-tag">Integration Security</span>
+                                <span class="ed-role-tag">Vulnerability Tracking</span>
+                            </div>
+                        </div>
+                        <div class="ed-role-foot">
+                            <a href="#modules" class="ed-role-link" data-jump-ext="security">Explore capabilities &#8594;</a>
+                            <a href="/en/pages/contact.html?topics=ops-security" class="ed-role-link">Request consultation &#8599;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 30-Second Interactive Solution Finder -->
+        <section id="finder" class="ed-section">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">30-Second Solution Finder</p>
+                    <h2 class="ed-title">Find the right starting pair in 3 quick questions</h2>
+                    <p class="ed-desc">
+                        Instead of sorting through 11 modules yourself, pick your priority, users, and environment to see the fastest 1-to-2 module starting recommendation.
+                    </p>
+                </div>
+
+                <div id="ed-finder-app" class="ed-finder-shell">
+                    <div class="ed-finder-top">
+                        <div class="ed-finder-steps-bar" role="navigation" aria-label="Finder steps">
+                            <button type="button" class="ed-finder-step-pill is-active" data-finder-step-btn="1">1. Priority Goal</button>
+                            <button type="button" class="ed-finder-step-pill" data-finder-step-btn="2" disabled>2. Primary Users</button>
+                            <button type="button" class="ed-finder-step-pill" data-finder-step-btn="3" disabled>3. Environment</button>
+                        </div>
+                        <button type="button" class="ed-finder-reset-link" data-finder-reset>Start Over</button>
+                    </div>
+
+                    <div class="ed-finder-pane is-active" data-finder-pane="1">
+                        <h3 class="ed-finder-question">Step 1. Which workflow needs improvement most urgently?</h3>
+                        <div class="ed-finder-opts">
+                            <button type="button" class="ed-finder-opt" data-finder-field="goal" data-finder-choice="qa">
+                                <span class="ed-finder-opt-title">Automate repetitive pre-release checks</span>
+                                <span class="ed-finder-opt-desc">Verify checkout, login, and core screens automatically before updates</span>
+                            </button>
+                            <button type="button" class="ed-finder-opt" data-finder-field="goal" data-finder-choice="system">
+                                <span class="ed-finder-opt-title">Modernize internal apps &amp; multilingual websites</span>
+                                <span class="ed-finder-opt-desc">Standardize sign-in, approvals, and multi-site web publishing</span>
+                            </button>
+                            <button type="button" class="ed-finder-opt" data-finder-field="goal" data-finder-choice="data">
+                                <span class="ed-finder-opt-title">Plain-language data lookup &amp; AI budget control</span>
+                                <span class="ed-finder-opt-desc">Ask business questions safely and manage department AI spend</span>
+                            </button>
+                            <button type="button" class="ed-finder-opt" data-finder-field="goal" data-finder-choice="ops">
+                                <span class="ed-finder-opt-title">Project margins, commerce pricing &amp; oversight</span>
+                                <span class="ed-finder-opt-desc">Track project profitability, margin limits, and staged approvals</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ed-finder-pane" data-finder-pane="2">
+                        <h3 class="ed-finder-question">Step 2. Who will use the system most often?</h3>
+                        <div class="ed-finder-opts">
+                            <button type="button" class="ed-finder-opt" data-finder-field="audience" data-finder-choice="biz">
+                                <span class="ed-finder-opt-title">Executives &amp; business teams</span>
+                                <span class="ed-finder-opt-desc">We need clear browser screens and everyday language with zero coding</span>
+                            </button>
+                            <button type="button" class="ed-finder-opt" data-finder-field="audience" data-finder-choice="it">
+                                <span class="ed-finder-opt-title">IT, QA &amp; operations staff</span>
+                                <span class="ed-finder-opt-desc">We want reliable integration and automation alongside existing systems</span>
+                            </button>
+                            <button type="button" class="ed-finder-opt" data-finder-field="audience" data-finder-choice="both">
+                                <span class="ed-finder-opt-title">Business &amp; IT teams collaborating together</span>
+                                <span class="ed-finder-opt-desc">We want shared visibility from request through review and final sign-off</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ed-finder-pane" data-finder-pane="3">
+                        <h3 class="ed-finder-question">Step 3. How would you prefer to start?</h3>
+                        <div class="ed-finder-opts">
+                            <button type="button" class="ed-finder-opt" data-finder-field="deploy" data-finder-choice="pilot">
+                                <span class="ed-finder-opt-title">1-2 week pilot on one target workflow</span>
+                                <span class="ed-finder-opt-desc">Measure real time savings before committing to a wider rollout</span>
+                            </button>
+                            <button type="button" class="ed-finder-opt" data-finder-field="deploy" data-finder-choice="onprem">
+                                <span class="ed-finder-opt-title">Private server or air-gapped internal network</span>
+                                <span class="ed-finder-opt-desc">All operational data must remain strictly inside corporate infrastructure</span>
+                            </button>
+                            <button type="button" class="ed-finder-opt" data-finder-field="deploy" data-finder-choice="gradual">
+                                <span class="ed-finder-opt-title">Gradual connection with existing tools</span>
+                                <span class="ed-finder-opt-desc">Keep current systems running while adding modules step by step</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ed-finder-pane" data-finder-pane="4">
+                        <div class="ed-finder-result">
+                            <span class="ed-finder-result-kicker">Recommended Starting Combination</span>
+                            <h3 class="ed-finder-result-title" data-result-title></h3>
+                            <p class="ed-finder-result-desc" data-result-desc></p>
+
+                            <div class="ed-finder-rec-grid">
+                                <div class="ed-finder-rec-card is-primary">
+                                    <span class="ed-finder-rec-label">Primary Starting Area</span>
+                                    <div class="ed-finder-rec-name">
+                                        <span data-primary-name></span>
+                                        <span class="ed-prod-code" data-primary-code></span>
+                                    </div>
+                                    <p class="ed-finder-rec-text" data-primary-desc></p>
+                                </div>
+                                <div class="ed-finder-rec-card">
+                                    <span class="ed-finder-rec-label">Recommended Companion</span>
+                                    <div class="ed-finder-rec-name">
+                                        <span data-secondary-name></span>
+                                        <span class="ed-prod-code" data-secondary-code></span>
+                                    </div>
+                                    <p class="ed-finder-rec-text" data-secondary-desc></p>
+                                </div>
+                            </div>
+
+                            <div class="ed-finder-meta-note" data-result-note></div>
+
+                            <div class="ed-finder-result-actions">
+                                <a href="/en/pages/contact.html" class="btn btn-primary btn-sm" data-result-contact>Consult With This Recommendation</a>
+                                <a href="https://sync.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" data-result-demo>Preview Live Screens &#8599;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Safety Principles -->
+        <section id="philosophy" class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">Operating Safeguards</p>
+                    <h2 class="ed-title">One shared foundation — adopt safely, expand smoothly</h2>
+                    <p class="ed-desc">
+                        Instead of disconnected point tools, Empasy builds every module on one shared operational foundation. Start with a single area and expand later under the same sign-in and approval rules.
                     </p>
                 </div>
 
@@ -154,42 +469,45 @@
                     <div class="ed-pillar-card">
                         <span class="ed-pillar-no">01</span>
                         <h3>Human review before critical changes</h3>
-                        <p>System updates and structural data changes require responsible reviewers to inspect before-and-after comparisons and explicitly approve.</p>
+                        <p>Important updates and structural edits require responsible reviewers to compare before-and-after changes and explicitly approve.</p>
                     </div>
                     <div class="ed-pillar-card">
                         <span class="ed-pillar-no">02</span>
-                        <h3>Fast rollback when something goes wrong</h3>
-                        <p>Snapshots before price updates, configuration edits, and web publishing let teams restore the previous safe state in seconds.</p>
+                        <h3>Fast rollback when mistakes happen</h3>
+                        <p>Automatic snapshots before price edits, settings changes, and site updates let teams restore the previous safe state in seconds.</p>
                     </div>
                     <div class="ed-pillar-card">
                         <span class="ed-pillar-no">03</span>
-                        <h3>Built for private networks and strict security</h3>
-                        <p>Runs cleanly inside isolated corporate servers and integrates step-by-step with existing enterprise sign-in and data policies.</p>
+                        <h3>Built for private networks and security rules</h3>
+                        <p>Runs reliably inside isolated internal servers and aligns step by step with your existing corporate accounts and policies.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 4. 4 Flagship Solutions -->
-        <section id="solutions" class="ed-section ed-section-tinted">
+        <!-- 7. 4 Core Business Areas (Capability First, Product Code Badge Second) -->
+        <section id="solutions" class="ed-section">
             <div class="container">
                 <div class="ed-head">
-                    <p class="ed-kicker">4 Flagship Solutions</p>
-                    <h2 class="ed-title">Core products teams adopt first</h2>
+                    <p class="ed-kicker">4 Core Business Areas</p>
+                    <h2 class="ed-title">Capabilities organizations adopt first</h2>
                     <p class="ed-desc">
-                        Four high-demand solutions covering internal business system cores, multilingual web management, automated testing, and team approvals.
+                        Four high-impact capabilities covering team approvals, automated screen checks, internal management systems, and multilingual web publishing.
                     </p>
                 </div>
 
                 <div class="ed-flagship-grid">
                     <article class="ed-flagship-card">
                         <div class="ed-flagship-thumb">
-                            <img src="/images/screenshots/sync-verse/screen_01.png" alt="SyncVerse workspace dashboard" loading="lazy">
+                            <img src="/images/screenshots/sync-verse/screen_01.png" alt="Collaboration and staged approval hub" loading="lazy">
                         </div>
                         <div class="ed-flagship-body">
-                            <span class="ed-flagship-role">Flagship · Collaboration &amp; Approval Hub</span>
-                            <h3>SyncVerse</h3>
-                            <p>Brings requirements, work tracking, quality check summaries, and staged approval histories into one transparent control screen.</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">Core · Team Oversight</span>
+                                <span class="ed-prod-code">SyncVerse</span>
+                            </div>
+                            <h3>Collaboration &amp; Staged Approval Hub</h3>
+                            <p>Brings requests, progress tracking, quality summaries, and step-by-step approval histories into one transparent control screen.</p>
                         </div>
                         <div class="ed-flagship-actions">
                             <a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Learn More &#8599;</a>
@@ -199,12 +517,15 @@
 
                     <article class="ed-flagship-card">
                         <div class="ed-flagship-thumb">
-                            <img src="/images/screenshots/sync-eta/screen_01.png" alt="SyncETA test dashboard" loading="lazy">
+                            <img src="/images/screenshots/sync-eta/screen_01.png" alt="Click-based automated screen checks" loading="lazy">
                         </div>
                         <div class="ed-flagship-body">
-                            <span class="ed-flagship-role">Flagship · Automated Testing &amp; Desktop App</span>
-                            <h3>SyncETA</h3>
-                            <p>Record test journeys simply by clicking, keep checks running even when screens or buttons move, and catch defects before release.</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">Core · Quality Automation</span>
+                                <span class="ed-prod-code">SyncETA</span>
+                            </div>
+                            <h3>Click-Based Automated Screen Checks</h3>
+                            <p>Record routine checks simply by clicking, keep checks running even when layouts or button positions change, and catch defects before release.</p>
                         </div>
                         <div class="ed-flagship-actions">
                             <a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Learn More &#8599;</a>
@@ -214,12 +535,15 @@
 
                     <article class="ed-flagship-card">
                         <div class="ed-flagship-thumb">
-                            <img src="/images/screenshots/sync-boot/screen_01.png" alt="SyncBoot business report screen" loading="lazy">
+                            <img src="/images/screenshots/sync-boot/screen_01.png" alt="Standard internal management system core" loading="lazy">
                         </div>
                         <div class="ed-flagship-body">
-                            <span class="ed-flagship-role">Flagship · Business System Core</span>
-                            <h3>SyncBoot</h3>
-                            <p>Provides standard sign-in, org-linked menu and button access controls, multi-step electronic approvals, and audit trails out of the box.</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">Core · Business Operations</span>
+                                <span class="ed-prod-code">SyncBoot</span>
+                            </div>
+                            <h3>Standard Internal Management System Core</h3>
+                            <p>Provides standard sign-in, org-linked menu and button permissions, multi-step electronic approvals, and audit trails out of the box.</p>
                         </div>
                         <div class="ed-flagship-actions">
                             <a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Learn More &#8599;</a>
@@ -229,12 +553,15 @@
 
                     <article class="ed-flagship-card">
                         <div class="ed-flagship-thumb">
-                            <img src="/images/screenshots/sync-cms/screen_01.png" alt="SyncCMS content management screen" loading="lazy">
+                            <img src="/images/screenshots/sync-cms/screen_01.png" alt="Unified multilingual website management" loading="lazy">
                         </div>
                         <div class="ed-flagship-body">
-                            <span class="ed-flagship-role">Flagship · Websites &amp; Multilingual Publishing</span>
-                            <h3>SyncCMS</h3>
-                            <p>Draft, review, approve, and publish across multiple brand and regional sites from one workspace with built-in quality and accessibility checks.</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">Core · Brand &amp; Global Web</span>
+                                <span class="ed-prod-code">SyncCMS</span>
+                            </div>
+                            <h3>Unified Multilingual Website Management</h3>
+                            <p>Draft, review, approve, and publish across multiple brand and regional sites from one console with built-in search and compliance checks.</p>
                         </div>
                         <div class="ed-flagship-actions">
                             <a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Learn More &#8599;</a>
@@ -245,45 +572,54 @@
             </div>
         </section>
 
-        <!-- 5. 7 Modular Extensions -->
-        <section id="modules" class="ed-section">
+        <!-- 8. 7 Modular Extensions -->
+        <section id="modules" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">Modular Extensions</p>
                     <h2 class="ed-title">Connect additional capabilities as your business grows</h2>
                     <p class="ed-desc">
-                        Because every module shares the same account and permission foundation, teams can add data analytics, security governance, commerce, or project profit tracking without starting over.
+                        Every extension shares the same sign-in and permission foundation, so teams can add data lookup, AI cost control, security governance, commerce, or project tracking without starting over.
                     </p>
                 </div>
 
                 <div class="ed-tabs" style="justify-content: flex-start; margin-bottom: 24px;" role="tablist" aria-label="Extension module categories">
-                    <button type="button" class="ed-tab active" data-ext="data-ai">Data &amp; AI (3)</button>
-                    <button type="button" class="ed-tab" data-ext="security">Security &amp; Governance (2)</button>
-                    <button type="button" class="ed-tab" data-ext="operations">Business Operations (2)</button>
+                    <button type="button" class="ed-tab active" role="tab" aria-selected="true" data-ext="data-ai">Data &amp; AI (3)</button>
+                    <button type="button" class="ed-tab" role="tab" aria-selected="false" data-ext="security">Security &amp; Governance (2)</button>
+                    <button type="button" class="ed-tab" role="tab" aria-selected="false" data-ext="operations">Commerce &amp; Project Ops (2)</button>
                 </div>
 
                 <div class="ed-ext-grid ed-ext-pane active" data-ext-pane="data-ai">
                     <div class="ed-ext-card">
                         <div>
-                            <span class="ed-flagship-role">Conversational Data Lookup</span>
-                            <h3>SyncInsight</h3>
-                            <p>Ask business questions in everyday language to view tables and charts safely under strict read-only data protection.</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">Executive Analytics</span>
+                                <span class="ed-prod-code">SyncInsight</span>
+                            </div>
+                            <h3>Plain-Language Business Data Lookup</h3>
+                            <p>Ask business questions in everyday language to view tables and charts safely without spreadsheet wrangling, under strict read-only protection.</p>
                         </div>
                         <a href="https://insight.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">Learn More &#8599;</a>
                     </div>
                     <div class="ed-ext-card">
                         <div>
-                            <span class="ed-flagship-role">AI Cost &amp; Privacy Control</span>
-                            <h3>SyncLLM</h3>
-                            <p>Connect multiple AI services in one place to enforce department budgets, reuse repeated answers, and mask sensitive personal details.</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">AI Budget &amp; Privacy</span>
+                                <span class="ed-prod-code">SyncLLM</span>
+                            </div>
+                            <h3>Corporate AI Cost &amp; Privacy Control</h3>
+                            <p>Connect multiple AI services in one place to enforce department budgets, reuse repeated answers, and automatically mask sensitive personal data.</p>
                         </div>
                         <a href="https://llm.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">Learn More &#8599;</a>
                     </div>
                     <div class="ed-ext-card">
                         <div>
-                            <span class="ed-flagship-role">Public Web Data Collection</span>
-                            <h3>SyncCrawl</h3>
-                            <p>Collect public market and web information reliably even when site layouts change, removing clutter into clean structured records.</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">Market Research</span>
+                                <span class="ed-prod-code">SyncCrawl</span>
+                            </div>
+                            <h3>Automated Public Web Data Collection</h3>
+                            <p>Collect public market and regulatory information reliably even when site layouts change, removing clutter into clean searchable records.</p>
                         </div>
                         <a href="https://crawl.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">Learn More &#8599;</a>
                     </div>
@@ -292,17 +628,23 @@
                 <div class="ed-ext-grid ed-ext-pane" data-ext-pane="security">
                     <div class="ed-ext-card">
                         <div>
-                            <span class="ed-flagship-role">System Integration Visibility &amp; Defense</span>
-                            <h3>SyncAPIM</h3>
-                            <p>Discover undocumented integration endpoints from live traffic, detect abnormal requests, and protect sensitive personal data in responses.</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">Integration Defense</span>
+                                <span class="ed-prod-code">SyncAPIM</span>
+                            </div>
+                            <h3>System Integration Visibility &amp; Defense</h3>
+                            <p>Uncover undocumented external connections from live traffic, block abnormal requests, and prevent accidental personal data exposure.</p>
                         </div>
                         <a href="https://apim.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">Learn More &#8599;</a>
                     </div>
                     <div class="ed-ext-card">
                         <div>
-                            <span class="ed-flagship-role">Vulnerability &amp; Policy Governance</span>
-                            <h3>SyncWatch</h3>
-                            <p>Collect global security advisories in one place, match impact against internal systems, and coordinate consistent defense updates.</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">Vulnerability Alerts</span>
+                                <span class="ed-prod-code">SyncWatch</span>
+                            </div>
+                            <h3>Security Advisory &amp; Policy Tracking</h3>
+                            <p>Aggregate global security advisories in one place, match impact against internal systems, and coordinate consistent defense rules.</p>
                         </div>
                         <a href="https://watch.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">Learn More &#8599;</a>
                     </div>
@@ -311,17 +653,23 @@
                 <div class="ed-ext-grid ed-ext-pane" data-ext-pane="operations">
                     <div class="ed-ext-card">
                         <div>
-                            <span class="ed-flagship-role">Commerce Operations &amp; Margin Safety</span>
-                            <h3>SyncShop</h3>
-                            <p>Enforce minimum margin guardrails during bulk price updates and keep prior price snapshots ready for instant restoration.</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">Commerce Safeguards</span>
+                                <span class="ed-prod-code">SyncShop</span>
+                            </div>
+                            <h3>E-Commerce Margin &amp; Price Protection</h3>
+                            <p>Enforce minimum margin checks during bulk promotions and keep prior price snapshots ready for instant restoration if an error occurs.</p>
                         </div>
                         <a href="https://shop.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">Learn More &#8599;</a>
                     </div>
                     <div class="ed-ext-card">
                         <div>
-                            <span class="ed-flagship-role">Project Profitability &amp; Compliance</span>
-                            <h3>SyncOps</h3>
-                            <p>Track contract revenue against actual staffing cost, engineer schedules, surety bond expiries, payment deadlines, and R&amp;D logs in one view.</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">Project P&amp;L</span>
+                                <span class="ed-prod-code">SyncOps</span>
+                            </div>
+                            <h3>Project Profitability &amp; Deadline Tracking</h3>
+                            <p>Compare contract value against real staffing cost, track guarantee expiries, subcontract payment deadlines, and R&amp;D logs in one view.</p>
                         </div>
                         <a href="https://ops.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">Learn More &#8599;</a>
                     </div>
@@ -329,59 +677,66 @@
             </div>
         </section>
 
-        <!-- 6. Field Case Studies -->
-        <section id="case-studies" class="ed-section ed-section-tinted">
+        <!-- 9. Small-Start 3-Step Adoption + Executive CTA + Separate IT Resource Bar -->
+        <section id="adoption" class="ed-section">
             <div class="container">
-                <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 36px;">
-                    <div class="ed-head" style="margin-bottom: 0;">
-                        <p class="ed-kicker">Field Case Studies</p>
-                        <h2 class="ed-title">Measured improvements from real deployments</h2>
-                        <p class="ed-desc">Proven across education, retail, home appliances, security, and mobility enterprise projects.</p>
-                    </div>
-                    <a href="/en/pages/clients.html" style="font-size: 14px; font-weight: 600; color: #0e7490;">View All Cases &#8594;</a>
+                <div class="ed-head">
+                    <p class="ed-kicker">Adoption Process</p>
+                    <h2 class="ed-title">Start small with one workflow — no big-bang replacement</h2>
+                    <p class="ed-desc">
+                        Validate tangible time savings on a single high-impact workflow first, then expand gradually on the same foundation.
+                    </p>
                 </div>
 
-                <div class="ed-cases-grid">
-                    <article class="ed-case-card">
-                        <div>
-                            <span class="ed-case-tag">SyncETA · Digital Education Platform</span>
-                            <h3>Automated Pre-Release Testing</h3>
-                            <p>Automated recurring checks across attendance and checkout flows for a live education service supporting 2,000 concurrent users.</p>
+                <div class="ed-adopt-grid" style="margin-bottom: 36px;">
+                    <div class="ed-adopt-card">
+                        <div class="ed-adopt-top">
+                            <span class="ed-pillar-no" style="margin-bottom: 0;">STEP 01</span>
+                            <span class="ed-adopt-duration">1-2 Days</span>
                         </div>
-                        <div class="ed-case-note">Full check cycle: ~4 hours &#8594; ~45 minutes</div>
-                    </article>
-
-                    <article class="ed-case-card">
-                        <div>
-                            <span class="ed-case-tag">SyncBoot · Retail &amp; Appliances</span>
-                            <h3>Legacy Back-Office Modernization</h3>
-                            <p>Consolidated unused legacy structures onto standard permissions and approval workflows to shorten release cycles safely.</p>
-                        </div>
-                        <div class="ed-case-note">Release cadence: Monthly &#8594; Weekly releases</div>
-                    </article>
-
-                    <article class="ed-case-card">
-                        <div>
-                            <span class="ed-case-tag">SyncCMS · Building Materials &amp; Portals</span>
-                            <h3>Unified Multilingual Portal Operations</h3>
-                            <p>Brought fragmented regional brand websites and large content catalogs under one management console to simplify global launches.</p>
-                        </div>
-                        <div class="ed-case-note">Single console for multilingual global websites</div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. Contact CTA -->
-        <section class="ed-section">
-            <div class="container">
-                <div class="ed-doc-callout">
-                    <div>
-                        <p><strong>Ready to evaluate SyncSeries in your environment?</strong><br>Try our public demo portal immediately or speak directly with an Empasy engineer.</p>
+                        <h3>Workflow Review &amp; Starting Pick</h3>
+                        <p>Identify your highest-friction manual task and define the leanest starting scope that fits your security rules.</p>
                     </div>
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <a href="https://sync.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Open Live Demo &#8599;</a>
-                        <a href="/en/pages/contact.html" class="btn btn-primary btn-sm">Contact Sales</a>
+                    <div class="ed-adopt-card">
+                        <div class="ed-adopt-top">
+                            <span class="ed-pillar-no" style="margin-bottom: 0;">STEP 02</span>
+                            <span class="ed-adopt-duration">1-2 Weeks</span>
+                        </div>
+                        <h3>Tailored Pilot Evaluation</h3>
+                        <p>Measure real time savings and ease of use inside your test environment or private corporate server before scaling.</p>
+                    </div>
+                    <div class="ed-adopt-card">
+                        <div class="ed-adopt-top">
+                            <span class="ed-pillar-no" style="margin-bottom: 0;">STEP 03</span>
+                            <span class="ed-adopt-duration">Staged Rollout</span>
+                        </div>
+                        <h3>Safe Rollout &amp; Team Onboarding</h3>
+                        <p>Transition without disrupting live operations and connect extra modules later under the same permissions.</p>
+                    </div>
+                </div>
+
+                <div class="ed-cta-banner">
+                    <div class="ed-cta-banner-copy">
+                        <div class="ed-cta-banner-kicker">Tailored Guidance</div>
+                        <h2>Unsure which workflow to automate first?</h2>
+                        <p>Share your current bottleneck and an Empasy specialist will reply within 1 business day with the clearest 1-module pilot plan.</p>
+                    </div>
+                    <div class="ed-cta-banner-actions">
+                        <a href="/en/pages/contact.html" class="ed-btn-light">Contact Sales</a>
+                        <a href="https://sync.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="ed-btn-ghost-dark">Explore Live Screens &#8599;</a>
+                        <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" download class="ed-btn-ghost-dark">Executive Brochure PDF</a>
+                    </div>
+                </div>
+
+                <div id="it-resources" class="ed-dev-strip">
+                    <div class="ed-dev-strip-text">
+                        <strong>Resources for IT &amp; Engineering Teams</strong>
+                        Architecture guides, integration specs, private-network deployment manuals, and desktop installers are openly available.
+                    </div>
+                    <div class="ed-dev-strip-links">
+                        <a href="https://doc.empasy.com/en/" target="_blank" rel="noopener noreferrer">Technical Docs (doc.empasy.com) &#8599;</a>
+                        <a href="/en/download_eta.html">Download SyncETA App</a>
+                        <a href="https://sync.empasy.io/en/" target="_blank" rel="noopener noreferrer">Integrated Demo Portal &#8599;</a>
                     </div>
                 </div>
             </div>
@@ -390,61 +745,127 @@
 
     {{> footer_en }}
 
-    <script>
-      (function () {
-        var previews = {
-          verse: {
-            title: 'SyncVerse — Unified Work Status & Step-by-Step Approval Dashboard',
-            link: 'https://verse.empasy.io/en/',
-            img: '/images/screenshots/sync-verse/screen_01.png',
-            caption: 'Track requirements, task reviews, quality checks, and staged approval records in a single clear workspace.'
+    <div id="emp-lightbox" class="emp-lightbox" role="dialog" aria-modal="true" aria-label="Zoomed screen preview">
+        <div class="emp-lightbox-bar">
+            <span id="emp-lightbox-title" class="emp-lightbox-title"></span>
+            <button type="button" id="emp-lightbox-close" class="emp-lightbox-close" aria-label="Close zoom">Close</button>
+        </div>
+        <div class="emp-lightbox-stage">
+            <img id="emp-lightbox-img" src="" alt="">
+        </div>
+        <p class="emp-lightbox-hint">Scroll horizontally or pinch to inspect details.</p>
+    </div>
+
+    <div id="emp-cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" style="display:none;position:fixed;left:16px;right:16px;bottom:16px;max-width:680px;margin:0 auto;z-index:9999;background:#0f172a;color:#f8fafc;border:1px solid #334155;border-radius:12px;padding:14px 18px;box-shadow:0 16px 40px rgba(15,23,42,0.28);font-size:13px;line-height:1.5;">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;">
+            <p style="margin:0;flex:1 1 320px;color:#e2e8f0;">
+                Empasy uses optional analytics cookies to improve site quality. Analytics cookies remain disabled until you consent.
+                <a href="/en/pages/privacy.html" style="color:#38bdf8;text-decoration:underline;margin-left:4px;">Privacy Policy</a>
+            </p>
+            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+                <button type="button" id="emp-cookie-essential" style="padding:7px 12px;border-radius:8px;border:1px solid #475569;background:transparent;color:#e2e8f0;font-size:12px;font-weight:600;cursor:pointer;">Essential Only</button>
+                <button type="button" id="emp-cookie-accept" style="padding:7px 14px;border-radius:8px;border:1px solid #0284c7;background:#0284c7;color:#ffffff;font-size:12px;font-weight:700;cursor:pointer;">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="application/json" id="ed-landing-data">
+    {
+      "previews": {
+        "verse": {
+          "title": "Collaboration & Staged Approval Dashboard (SyncVerse)",
+          "link": "https://verse.empasy.io/en/",
+          "img": "/images/screenshots/sync-verse/screen_01.png",
+          "caption": "Track requirements, review summaries, quality checks, and staged approval records in a single clear screen.",
+          "callouts": ["Human approval before going live", "Clear before-and-after review"]
+        },
+        "eta": {
+          "title": "Click-Based Automated Screen Checks (SyncETA)",
+          "link": "https://eta.empasy.io/en/",
+          "img": "/images/screenshots/sync-eta/screen_01.png",
+          "caption": "Record routine checks with clicks, keep running smoothly when layouts change, and inspect screen differences before release.",
+          "callouts": ["Zero-code click recording", "Adapts automatically to UI changes"]
+        },
+        "boot": {
+          "title": "Internal Reports & Access Governance (SyncBoot)",
+          "link": "https://boot.empasy.io/en/",
+          "img": "/images/screenshots/sync-boot/screen_01.png",
+          "caption": "Ready-to-use org-linked permissions, multi-step electronic approvals, and audit trails for internal business apps.",
+          "callouts": ["Org & role-based screen controls", "Built-in multi-step approvals"]
+        },
+        "cms": {
+          "title": "Multilingual Website Publishing Console (SyncCMS)",
+          "link": "https://cms.empasy.io/en/",
+          "img": "/images/screenshots/sync-cms/screen_01.png",
+          "caption": "Manage drafts, compliance review, multilingual pages, and search quality checks across brand websites from one place.",
+          "callouts": ["Multiple brand & regional sites in one place", "Pre-publish compliance & search checks"]
+        }
+      },
+      "finder": {
+        "contactUrl": "/en/pages/contact.html",
+        "results": {
+          "qa": {
+            "title": "Start with automated pre-release screen verification",
+            "summary": "Eliminate repetitive manual checking first, and connect approval visibility whenever your team is ready.",
+            "primaryTitle": "Click-Based Automated Screen Checks",
+            "primaryCode": "SyncETA",
+            "primaryDesc": "Record core journeys by clicking with no coding and catch regressions before customers ever see them.",
+            "secondaryTitle": "Collaboration & Staged Approval Hub",
+            "secondaryCode": "SyncVerse",
+            "secondaryDesc": "Review verification results and before-and-after changes together before giving final approval.",
+            "topicKey": "qa",
+            "demoUrl": "https://eta.empasy.io/en/"
           },
-          eta: {
-            title: 'SyncETA — Test Pass Overview & Screen Comparison Dashboard',
-            link: 'https://eta.empasy.io/en/',
-            img: '/images/screenshots/sync-eta/screen_01.png',
-            caption: 'Record test journeys with clicks, adapt smoothly to layout updates, and inspect pre-release screen differences.'
+          "system": {
+            "title": "Start with a standard internal core and unified web hub",
+            "summary": "Avoid rebuilding login, permissions, and regional websites from scratch and let business teams manage updates directly.",
+            "primaryTitle": "Standard Internal Management Core",
+            "primaryCode": "SyncBoot",
+            "primaryDesc": "Launch internal management systems faster with built-in sign-in, role permissions, electronic approvals, and audit logs.",
+            "secondaryTitle": "Unified Multilingual Website Management",
+            "secondaryCode": "SyncCMS",
+            "secondaryDesc": "Let marketing and operations teams draft, review, and publish multi-country websites from one console.",
+            "topicKey": "system,web",
+            "demoUrl": "https://boot.empasy.io/en/"
           },
-          boot: {
-            title: 'SyncBoot — Standard Enterprise Reports & Access Governance',
-            link: 'https://boot.empasy.io/en/',
-            img: '/images/screenshots/sync-boot/screen_01.png',
-            caption: 'Ready-to-use org-linked permissions, multi-step approvals, and audit trails for internal business applications.'
+          "data": {
+            "title": "Start with plain-language data lookup and AI budget governance",
+            "summary": "Give leaders fast read-only answers while keeping company data private and AI usage costs predictable.",
+            "primaryTitle": "Plain-Language Business Data Lookup",
+            "primaryCode": "SyncInsight",
+            "primaryDesc": "Ask operational questions in everyday language to generate tables and charts under read-only data protection.",
+            "secondaryTitle": "Corporate AI Cost & Privacy Control",
+            "secondaryCode": "SyncLLM",
+            "secondaryDesc": "Enforce departmental AI budgets, reuse repeated responses, and automatically mask sensitive personal data.",
+            "topicKey": "data-ai",
+            "demoUrl": "https://insight.empasy.io/en/"
           },
-          cms: {
-            title: 'SyncCMS — Multi-Site Content Drafting & Publishing Console',
-            link: 'https://cms.empasy.io/en/',
-            img: '/images/screenshots/sync-cms/screen_01.png',
-            caption: 'Manage drafts, compliance review, multilingual translation, and publishing across brand sites from one place.'
+          "ops": {
+            "title": "Start with project margin tracking and pricing safeguards",
+            "summary": "Protect financial accuracy across contracted projects, bulk commerce updates, and critical approvals.",
+            "primaryTitle": "Project Profitability & Deadline Tracking",
+            "primaryCode": "SyncOps",
+            "primaryDesc": "Track contract revenue against actual staffing costs, guarantee expiries, and statutory payment dates in one place.",
+            "secondaryTitle": "Margin Protection / Approval Oversight",
+            "secondaryCode": "SyncShop · SyncVerse",
+            "secondaryDesc": "Guard minimum commerce margins with instant price rollback and clear multi-step sign-off workflows.",
+            "topicKey": "commerce,ops-security",
+            "demoUrl": "https://ops.empasy.io/en/"
           }
-        };
-
-        document.querySelectorAll('[data-preview]').forEach(function (btn) {
-          btn.addEventListener('click', function () {
-            var key = btn.getAttribute('data-preview');
-            var item = previews[key];
-            if (!item) return;
-            document.querySelectorAll('[data-preview]').forEach(function (b) { b.classList.remove('active'); });
-            btn.classList.add('active');
-            document.getElementById('preview-title').textContent = item.title;
-            document.getElementById('preview-link').setAttribute('href', item.link);
-            document.getElementById('preview-img').setAttribute('src', item.img);
-            document.getElementById('preview-img').setAttribute('alt', item.title);
-            document.getElementById('preview-caption').textContent = item.caption;
-          });
-        });
-
-        document.querySelectorAll('[data-ext]').forEach(function (btn) {
-          btn.addEventListener('click', function () {
-            var key = btn.getAttribute('data-ext');
-            document.querySelectorAll('[data-ext]').forEach(function (b) { b.classList.remove('active'); });
-            btn.classList.add('active');
-            document.querySelectorAll('[data-ext-pane]').forEach(function (pane) {
-              pane.classList.toggle('active', pane.getAttribute('data-ext-pane') === key);
-            });
-          });
-        });
-      })();
+        },
+        "audienceNotes": {
+          "biz": "Designed for non-technical business teams to operate directly through clear browser screens.",
+          "it": "Connects cleanly with existing enterprise sign-in and systems, backed by full technical documentation.",
+          "both": "Links business requests, IT reviews, and management sign-offs in one transparent audit trail."
+        },
+        "deployNotes": {
+          "pilot": "Start with a focused 1-2 week pilot on one workflow to confirm measurable savings first.",
+          "onprem": "Supports standalone deployment inside isolated corporate or air-gapped internal servers.",
+          "gradual": "Integrates alongside existing systems without disrupting daily operations."
+        }
+      }
+    }
     </script>
+    <script type="module" src="/assets/js/home-interactive.js"></script>
 </body>
 </html>

@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -16,183 +37,249 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
     <!-- End Google Tag Manager -->
-    <title>AIテスト自動化導入ガイド：シナリオ自動生成から自己修復(Self-Healing) E2E回帰テストまで — SyncETA | Empasy</title>
-    <meta name="description" content="SyncETAはシナリオ生成、Playwright並列実行、失敗原因分析、セレクター自己修復(Self-Healing)を自動化するAIテスト自動化プラットフォームです。">
-    <meta name="keywords" content="AIテスト自動化, テスト自動化, 自己修復QA, Self-Healing, SyncETA, SyncETA, インテリジェントE2E回帰テスト, CI/CDパイプライン統合, AIエージェントQA, Playwright代替, Selenium代替, Empasy">
-    <meta property="og:title" content="AIテスト自動化導入ガイド：シナリオ自動生成から自己修復(Self-Healing) E2E回帰テストまで — SyncETA | Empasy">
-    <meta property="og:description" content="SyncETAはシナリオ生成、Playwright並列実行、失敗原因分析、セレクター自己修復(Self-Healing)を自動化するAIテスト自動化プラットフォームです。">
-    <meta property="og:type" content="website">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Empasy">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Empasy 技術ブログ",
-      "url": "https://empasy.io/ja/blog/synceta-intelligent-regression-testing-pipeline.html",
-      "description": "エンタープライズAIエージェントおよびAIOpsに関する最新技術インサイト",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Empasy",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.io/empasy-logo.png"
-        }
-      }
-    }
-    </script>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-    <!-- SEO & AIO Tags -->
-    
-    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <title>コード不要の画面自動点検ガイド：クリック記録から画面変更への自動追従まで | Empasy</title>
+    <meta name="description" content="クリック記録・Excelシナリオ変換・Playwright並列再生・UI変更時のロケータ自己修復を備えたSyncETA 5層アーキテクチャ解説ガイド。">
+    <meta name="keywords" content="AIテスト自動化, 画面自動点検, 自己修復テスト, Self-Healing QA, SyncETA, Playwright, Excelテストケース, ノーコードE2Eテスト">
+    <meta name="author" content="株式会社Empasy (Empasy Inc.)">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <meta property="og:title" content="コード不要の画面自動点検ガイド：クリック記録から画面変更への自動追従まで | Empasy">
+    <meta property="og:description" content="クリック記録・Excelシナリオ変換・Playwright並列再生・UI変更時のロケータ自己修復を備えたSyncETA 5層アーキテクチャ解説ガイド。">
+    <meta property="og:type" content="article">
     <meta property="og:locale" content="ja_JP">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "[Tech Blog] 機械語（JSON）からビジネス言語（Excel）へ：SyncETAのインテリジェント回帰テストパイプライン",
-  "description": "LLMとPlaywright MCPを統合し、手動作業のないNo-CodeベースのインテリジェントQA自動化および視覚的自己修復(Self-Healing)エンジンを実現したSyncETAアーキテクチャ。",
-  "author": {
-    "@type": "Organization",
-    "name": "Empasy Engineering Team",
-    "url": "https://empasy.io"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Empasy",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://empasy.io/empasy-logo.png"
-    }
-  },
-  "url": "https://empasy.io/ja/blog/synceta-intelligent-regression-testing-pipeline.html"
-}
-    </script>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- SEO & AIO Tags -->
-    
-    
-    <!-- SEO & AIO Tags -->
+    <meta property="og:url" content="https://empasy.io/ja/blog/synceta-intelligent-regression-testing-pipeline.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-03-15">
+    <meta property="article:modified_time" content="2026-11-23">
     <link rel="canonical" href="https://empasy.io/ja/blog/synceta-intelligent-regression-testing-pipeline.html">
     <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html" />
     <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/synceta-intelligent-regression-testing-pipeline.html" />
     <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/synceta-intelligent-regression-testing-pipeline.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html" />
-    <meta property="og:url" content="https://empasy.io/ja/blog/synceta-intelligent-regression-testing-pipeline.html">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "コード不要の画面自動点検ガイド：クリック記録から画面変更への自動追従まで",
+      "description": "クリック記録・Excelシナリオ変換・Playwright並列再生・UI変更時のロケータ自己修復を備えたSyncETA 5層アーキテクチャ解説ガイド。",
+      "datePublished": "2026-03-15",
+      "dateModified": "2026-11-23",
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Organization",
+        "name": "Empasy Engineering Team",
+        "url": "https://empasy.io"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "株式会社Empasy (Empasy Inc.)",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/empasy-logo.png"
+        }
+      },
+      "image": "https://empasy.io/empasy-logo.png",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://empasy.io/ja/blog/synceta-intelligent-regression-testing-pipeline.html"
+      },
+      "url": "https://empasy.io/ja/blog/synceta-intelligent-regression-testing-pipeline.html"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "AIテスト自動化にはどのようなアプローチがありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "開発者向けの単体・結合テストコード生成支援と、SyncETAのようにブラウザ操作記録やExcelチェック表からE2E画面点検を自動実行し、UI変更時の要素自己修復まで行うアプローチの2つに大別されます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SyncETAは毎回の回帰テストでLLM API費用が発生しますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。シナリオ初回生成とUI変更によるロケータ自己修復時のみAIを呼び出し、日常の反復回帰テストは決定論的なPlaywright再生エンジンで実行するため、反復実行コストを抑えられます。"
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
 </head>
 <body>
-
-    <!-- Header Navigation -->
     {{> header_ja }}
 
-    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
-        <!-- Compact Breadcrumb / Back Link -->
-        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
-            <a href="../../ja/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
-                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
-                <span>Tech Blog一覧へ</span>
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/ja/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Empasy インサイト一覧へ</span>
             </a>
-            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
-        </div>
-        
-        <section style="padding: 0;">
-            <div class="container" style="padding: 0;">
-                ﻿<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-    <div style="line-height: 1.8; color: var(--text-primary);">
-                    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.2rem; color: var(--text-secondary); font-size: 0.9rem; flex-wrap: wrap;">
-                        <span>2026-03-15</span>
-                        <span>&bull;</span>
-                        <span>所要時間 約6分</span>
-                        <span>&bull;</span>
-                        <span style="color: var(--primary-color); font-weight: 600;">AI Ops & QA Automation</span>
-                    </div>
-
-                    <h1 style="font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.35; margin-bottom: 1.8rem; color: var(--text-primary);">機械語（JSON）からビジネス言語（Excel）へ：SyncETAのインテリジェント回帰テストパイプライン</h1>
-
-        <p>ソフトウェアのデプロイ周期が「週単位」から「日単位」へと短縮されるアジャイル(Agile)およびクラウドネイティブ環境において、品質保証(QA)は依然として最も多くの手作業とリソースのボトルネックが発生する領域です。UIの小さな変更(DOM構造、ID/Class属性など)でも既存のE2Eテストスクリプトが簡単に壊れてしまう「メンテナンスの地獄(Maintenance Hell)」は、自動化の最大の障害でした。</p>
-        <p>Empasyの<strong>SyncETA</strong>はこれらの限界を克服するため、<strong>「Boon to business by agility」</strong>というビジョンの下、AI自動生成から無人自律運用段階までを網羅する<strong>End-to-Endの循環型品質エコシステム(Self-Evolving AI First QA Platform)</strong>を構築しました。本記事では、SyncETAのコアアーキテクチャと最新のエンジニアリング高度化の成果について深く掘り下げます。</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. インテリジェントな5大レイヤーアーキテクチャのデータフロー</h2>
-        <p>SyncETAは、非構造化されたユーザー行動ログを精密に収集し、自ら進化する5つのコア階層構造で構成されています。</p>
-        <div class="modern-stack">
-          <div class="stack-layer">
-            <div class="stack-label">LAYER 01</div>
-            <div style="flex-grow: 1;">
-                <div class="stack-content">データ収集</div>
-                <div class="stack-desc">ブラウザイベントおよびDOM Contextの精密キャプチャ (Seleniumベース) &rarr; Machine Log / JSON format</div>
-            </div>
-          </div>
-          <div class="stack-layer">
-            <div class="stack-label">LAYER 02</div>
-            <div style="flex-grow: 1;">
-                <div class="stack-content">AI プロセッシング</div>
-                <div class="stack-desc">LLM Semantic Parserを通じた自然言語(Excel)テストケース生成 &rarr; 国際標準Excelテンプレート</div>
-            </div>
-          </div>
-          <div class="stack-layer">
-            <div class="stack-label">LAYER 03</div>
-            <div style="flex-grow: 1;">
-                <div class="stack-content">検証と循環</div>
-                <div class="stack-desc">QAエンジニアのフィードバックループ (LoRAファインチューニング / システム自己進化) &rarr; 確定した自然言語コマンド</div>
-            </div>
-          </div>
-          <div class="stack-layer">
-            <div class="stack-label">LAYER 04</div>
-            <div style="flex-grow: 1;">
-                <div class="stack-content">インテリジェント実行</div>
-                <div class="stack-desc">Playwright MCPベースのバックグラウンドヘッドレス超高速並列分散実行 &rarr; 失敗スナップショット & .webmビデオマッピング</div>
-            </div>
-          </div>
-          <div class="stack-layer">
-            <div class="stack-label">LAYER 05</div>
-            <div style="flex-grow: 1;">
-                <div class="stack-content">監視と分析</div>
-                <div class="stack-desc">リアルタイムダッシュボードモニタリングおよびWeb Result Viewerストリーミング</div>
-            </div>
-          </div>
+            <span class="badge" style="margin-bottom: 0;">AIテスト自動化・SyncETA</span>
         </div>
 
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">コアとなる差別化要因：年間LLM費用の99%を削減するアーキテクチャ</h3>
-        <p>既存のAIツールとは異なり、SyncETAは<strong>「シナリオ生成時にのみLLMを1回活用」</strong>し、その後の実際のテスト実行段階ではLLM APIの呼び出しなしに<strong>決定論的なレコード再生エンジン</strong>を通じて実行されます。これにより、エンタープライズ環境で数千回繰り返される回帰テストのコストを最大99%革新的に削減します。</p>
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. 主要なエンジニアリング高度化の成果</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;">① Headless Automation Pipeline & 外部システム連動 (RESTful API)</h3>
-        <p>外部システムやCI/CDパイプラインから自然言語コマンドテキストを送信するだけで、即座にバックグラウンドでテストを完走する完璧な無人自動化ループを提供します。</p>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Inbound インターフェース (POST <code>/api/v1/execute/natural-language</code>):</strong> 外部からプロジェクトIDと自然言語シナリオを受信すると、内蔵された<strong>LLMエンジン</strong>が文脈を分析し、<code>Login</code> → <code>Navigate</code> → <code>Verify Element</code> 構造のPlaywright-MCPコマンドにリアルタイムで変換します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>動画エビデンスの自動マッピング:</strong> ブラウザを画面に表示しない<strong>Headlessモード</strong>で高速並列起動しながら、実行の全過程を<code>.webm</code>形式の映像でリアルタイム録画し、テスト終了後に<strong>AWS S3バケット</strong>に自動アップロードし、固有のPublic URLとPass/Fail状態ログを外部のCallback URLに即座に返します(Outbound API)。</li>
-        </ul>
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-03-15 (更新 2026-11-23)</span>
+                <span>&bull;</span>
+                <span>読了目安 約6分</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">画面自動点検・自己修復QA</span>
+            </div>
 
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. エンタープライズ導入の成果と期待効果</h2>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>QA設計と作成工数を80%削減:</strong> 国際標準フォーマットの自然言語Excel形式でコミュニケーションできるため、コーディング知識のない現場担当者や企画者(PL)でも即座に品質資産を設計し検証できる<strong>「QAの民主化」</strong>環境を提供します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>セキュリティファーストのローカルLLMエコシステム:</strong> 企業の機密データやテスト環境情報の流出リスクを防ぐため、Dockerベースの完全な社内閉鎖網<strong>オンプレミス(On-premise)</strong>および隔離クラウドハイブリッドインフラアーキテクチャによるローカルLLMモデルの構築を完全にサポートします。</li>
-        </ul>
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-        <p>SyncETAは、Webエコシステムの精密検証性能を基盤として、単一の自然言語シナリオでAndroidとiOSを同時制御できる<strong>Universal Locator構造ベースの「モバイル領域への拡張(DeviceHub連動)」</strong>技術開発マイルストーンを実現しています。QAのパラダイムを変えるSyncETAの高度化された新技術は、Empasy公式技術ブログを通じて継続的に共有される予定です。</p>
+            <h1 class="ed-blog-title">コード不要の画面自動点検ガイド：クリック記録から画面変更への自動追従まで</h1>
+
+            <div class="ed-exec-summary" aria-label="経営層・現場担当者のための3行要約">
+                <div class="ed-exec-summary-kicker">経営層・現場担当者のための3行要約</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">従来の課題</span><span>画面デザインやボタン位置が少し変わるだけで従来の自動テストが止まり、修正工数が膨らむ課題がありました。</span></li>
+                    <li><span class="ed-exec-summary-tag">解決アプローチ</span><span>クリック記録やExcel点検表から自動テストを作成し、通常実行はPlaywright再生で高速処理、UI変更時のみAIが要素を自動補完します。</span></li>
+                    <li><span class="ed-exec-summary-tag">導入効果</span><span>定期点検の工数を大幅に抑えつつ、本番リリース前に主要画面の不具合を確実に検知できます。</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">自社の業務フローにそのまま適用できるか確認してみませんか？</span>
+                    <a href="/ja/pages/contact.html?topics=qa" class="btn btn-primary btn-sm" style="min-height: 36px;">導入相談を申し込む</a>
+                </div>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>IT担当者・開発者向けの詳細技術解説</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="この記事の目次">
+  <div class="ed-article-toc-title">この記事の目次</div>
+  <ol>
+    <li><a href="#sec-1">1. SyncETA 5層アーキテクチャのデータフロー</a></li>
+    <li><a href="#sec-2">2. 実務を支える3つの主要機能</a></li>
+    <li><a href="#sec-3">3. 導入効果と閉域セキュリティ対応</a></li>
+  </ol>
+</nav>
+<div class="ed-article-callout">
+  <div class="ed-article-callout-title">要点まとめ：AIテスト自動化とは？</div>
+  <p>AIテスト自動化は、<strong>シナリオ作成、反復実行、失敗要因の要約、UI変更時のロケータ自己修復（Self-Healing）</strong>までを一貫支援し、QAと開発の保守負担を軽減する手法です。</p>
+  <ul>
+    <li><strong>単体・結合テストコード支援：</strong>開発者がコーディング支援ツールでユニットテストのカバレッジを高めます。</li>
+    <li><strong>ノーコードE2E画面点検（SyncETA）：</strong>クリック記録やExcel点検表からユーザー導線を自動実行し、画面改修で途切れたロケータをDOM文脈解析で自動補正します。</li>
+  </ul>
+</div>
+
+<p>リリース周期が短縮されるほど、手作業の回帰テストと破損スクリプトの修正が開発現場のボトルネックになります。Empasyの<a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer">SyncETA</a>は、ノーコード記録、高速並列再生、自己修復、品質ゲート判定を統合したE2E検証基盤です。</p>
+
+<h2 id="sec-1">1. SyncETA 5層アーキテクチャのデータフロー</h2>
+<p>ブラウザ操作の収集から品質ゲート判定までを5つのレイヤーに分離して設計しています。</p>
+
+<div class="modern-stack">
+  <div class="stack-layer">
+    <div class="stack-label">LAYER 01</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">Playwright DOM収集</div>
+      <div class="stack-desc">ブラウザ操作イベントとアクセシビリティツリー文脈を正確に記録し構造化JSONを生成</div>
     </div>
-</article>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">LAYER 02</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">AIシナリオ合成</div>
+      <div class="stack-desc">マルチLLMパーサーが操作ログや要件から担当者編集可能な標準Excelテストケースを生成</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">LAYER 03</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">レビュー・フィードバック循環</div>
+      <div class="stack-desc">QA担当者の確認・修正履歴と失敗分析を蓄積し、シナリオ品質と修復精度を継続改善</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">LAYER 04</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">並列実行＆自己修復</div>
+      <div class="stack-desc">Playwright MCPベースのヘッドレス並列実行、UI変化時の要素補完、.webm証跡録画を実施</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">LAYER 05</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">監視・品質ゲート判定</div>
+      <div class="stack-desc">リアルタイム管理画面、原因要約、負荷・カオス基準に基づくリリース品質ゲートを提供</div>
+    </div>
+  </div>
+</div>
+
+<h3>反復実行のAIコストを抑えるハイブリッド構成</h3>
+<p>毎回のテストステップでLLMを呼び出す構成は遅延と費用増を招きます。SyncETAは<strong>初回シナリオ作成とUI変更時の自己修復にのみAIを利用</strong>し、通常の回帰テストは<strong>決定論的Playwright再生エンジン</strong>で実行します。</p>
+
+<h2 id="sec-2">2. 実務を支える3つの主要機能</h2>
+
+<h3>① ヘッドレス自動化APIと動画証跡の自動紐付け</h3>
+<ul>
+  <li><strong>CI/CD連携API（<code>POST /api/v1/execute/natural-language</code>）：</strong>外部パイプラインから自然言語シナリオを送信するだけでバックグラウンド検証を実行します。</li>
+  <li><strong>証跡の自動保存：</strong>実行過程を<code>.webm</code>動画と失敗スクリーンショットで記録し、オブジェクトストレージへ保存したうえで結果をCallback通知します。</li>
+</ul>
+
+<h3>② 動的コンテンツ向け <code>test_*</code> カスタムMCPツール</h3>
+<ul>
+  <li><strong>画面横断の動的変数検証（<code>test_capture_variable</code> / <code>test_fill_from_variable</code>）：</strong>実行ごとに変化する商品名や注文番号を取得し、次画面の期待値と正確に突き合わせます。</li>
+  <li><strong>柔軟なページ同一性判定（<code>test_assert_page_identity</code>）：</strong>タイトル・見出し・メタ情報を総合評価し、些細な表記差による誤検知を防ぎます。</li>
+  <li><strong>構造ベースのロケータ置換：</strong>変動しやすい文言一致ではなく、構造化CSS・アクセシビリティ基準で要素を特定します。</li>
+</ul>
+
+<h3>③ ストーリーキャンバス連結と遷移ポリシー</h3>
+<ul>
+  <li><strong>一連のユーザー導線設計：</strong>ログイン・検索・カート・決済などの個別シナリオをフロー図上で連結管理できます。</li>
+  <li><strong>遷移エッジ・前提条件制御：</strong><code>forceNavigate</code>、セッション維持、ネットワーク待機、前提シナリオ（<code>requiresStory</code>）をポリシー設定できます。</li>
+  <li><strong>ライブプレビュー監視：</strong>バックグラウンド実行中のブラウザ画面を管理パネル上でリアルタイム確認できます。</li>
+</ul>
+
+<h2 id="sec-3">3. 導入効果と閉域セキュリティ対応</h2>
+<ul>
+  <li><strong>現場主導の品質資産化：</strong>標準Excel形式とクリック記録により、開発知識のない担当者でも点検資産を保守できます。</li>
+  <li><strong>オンプレミス・ローカルLLM対応：</strong>社内閉域網や専用VPCでの構築およびローカルLLM連携に対応し、業務画面やテストデータの外部流出を防ぎます。</li>
+</ul>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>SyncETA の画面自動点検を実際にお試しください</strong>
+                <span>Windows / macOS デスクトップアプリの無料ダウンロードとWeb管理画面のデモをご用意しています。</span>
             </div>
-        </section>
+            <div class="ed-article-footer-cta-actions">
+                <a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SyncETA 公式サイト &#8599;</a>
+                <a href="/ja/download_eta.html" class="btn btn-outline btn-sm">デスクトップ版ダウンロード</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="あわせて読みたいインサイト">
+        <h2 class="ed-related-heading">あわせて読みたいインサイト</h2>
+        <div class="ed-related-grid">
+        <a href="/ja/blog/eta-autoscaling-worker-scaling.html" class="ed-related-card">
+            <span class="ed-related-cat">画面自動点検</span>
+            <span class="ed-related-title">点検作業が集中しても待たせない自動拡張の仕組み — SyncETA 運用記 (1)</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        <a href="/ja/blog/case-study-finance.html" class="ed-related-card">
+            <span class="ed-related-cat">企業導入事例</span>
+            <span class="ed-related-title">教育・セキュリティ・流通・公共現場におけるシステム刷新と業務自動化事例</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        </div>
+    </section>
     </main>
 
-    <!-- Footer -->
     {{> footer_ja }}
 
-    <!-- Scripts -->
     <script type="module" src="/assets/js/i18n.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
 </body>

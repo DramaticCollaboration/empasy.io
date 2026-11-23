@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
+        gtag('js', new Date());
+        gtag('config', 'G-6BNPM5TX7C');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>グローバル脆弱性情報の収集からコード監査・API防御ルール配信まで：SyncWatch 設計 | Empasy</title>
+    <meta name="description" content="グローバル脆弱性フィード自動収集、5段階SSRFガード、WatchRuleCompilerServiceによるVerseAuditPack・ApimDefensePack生成と検証・配信追跡を備えたSyncWatch設計。">
+    <meta name="keywords" content="SyncWatch, 脅威インテリジェンス, CVE監視, CISA KEV, 仮想パッチルール生成, Shift-Left Shift-Right セキュリティ, SyncAPIM, SyncVerse, Empasy">
+    <meta name="author" content="株式会社Empasy (Empasy Inc.)">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="グローバル脆弱性情報の収集からコード監査・API防御ルール配信まで：SyncWatch 設計 | Empasy">
+    <meta property="og:description" content="グローバル脆弱性フィード自動収集、5段階SSRFガード、WatchRuleCompilerServiceによるVerseAuditPack・ApimDefensePack生成と検証・配信追跡を備えたSyncWatch設計。">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:url" content="https://empasy.io/ja/blog/syncwatch-security-advisory-rule-compiler.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-11-20">
+    <meta property="article:modified_time" content="2026-11-23">
+    <link rel="canonical" href="https://empasy.io/ja/blog/syncwatch-security-advisory-rule-compiler.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "グローバル脆弱性情報の収集からコード監査・API防御ルール配信まで：SyncWatch 設計",
+  "description": "グローバル脆弱性フィード自動収集、5段階SSRFガード、WatchRuleCompilerServiceによるVerseAuditPack・ApimDefensePack生成と検証・配信追跡を備えたSyncWatch設計。",
+  "datePublished": "2026-11-20",
+  "dateModified": "2026-11-23",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "Empasy Engineering Team",
+    "url": "https://empasy.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社Empasy (Empasy Inc.)",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://empasy.io/empasy-logo.png"
+    }
+  },
+  "image": "https://empasy.io/empasy-logo.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://empasy.io/ja/blog/syncwatch-security-advisory-rule-compiler.html"
+  },
+  "url": "https://empasy.io/ja/blog/syncwatch-security-advisory-rule-compiler.html"
+}
+    </script>
+</head>
+<body>
+    {{> header_ja }}
+
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/ja/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Empasy インサイト一覧へ</span>
+            </a>
+            <span class="badge" style="margin-bottom: 0;">脅威インテリジェンス・SyncWatch</span>
+        </div>
+
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-11-20 (更新 2026-11-23)</span>
+                <span>&bull;</span>
+                <span>読了目安 約6分</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">脆弱性監視・ルール配信</span>
+            </div>
+
+            <h1 class="ed-blog-title">グローバル脆弱性情報の収集からコード監査・API防御ルール配信まで：SyncWatch 設計</h1>
+
+            <div class="ed-exec-summary" aria-label="経営層・現場担当者のための3行要約">
+                <div class="ed-exec-summary-kicker">経営層・現場担当者のための3行要約</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">従来の課題</span><span>国内外の脆弱性情報を手作業で監視・突合する運用では対応空白が生じやすく、急造した遮断ルールによる正常通信の誤遮断リスクも伴います。</span></li>
+                    <li><span class="ed-exec-summary-tag">解決アプローチ</span><span>SyncWatchは主要セキュリティフィードを自動正規化し、サンドボックス検証を通過したコード監査パック（SyncVerse）とAPI防御パック（SyncAPIM）を同時配信します。</span></li>
+                    <li><span class="ed-exec-summary-tag">導入効果</span><span>開発段階の事前点検（Shift-Left）と本番APIの仮想パッチ（Shift-Right）を切れ目なく連動できます。</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">自社の業務フローにそのまま適用できるか確認してみませんか？</span>
+                    <a href="/ja/pages/contact.html?topics=ops-security" class="btn btn-primary btn-sm" style="min-height: 36px;">導入相談を申し込む</a>
+                </div>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>IT担当者・開発者向けの詳細技術解説</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="この記事の目次">
+  <div class="ed-article-toc-title">この記事の目次</div>
+  <ol>
+    <li><a href="#sec-1">1. SyncWatch 4段階 脅威収集・防御配信パイプライン</a></li>
+    <li><a href="#sec-2">2. 複数脅威フィードの統合正規化と5段階SSRFガード</a></li>
+    <li><a href="#sec-3">3. Shift-Left と Shift-Right を結ぶ二重ルール生成</a></li>
+    <li><a href="#sec-4">4. サンドボックス検証と配信ガバナンス</a></li>
+  </ol>
+</nav>
+<p>新たな脆弱性（CVE）の公開から攻撃実行までの期間は年々短縮しています。しかし多くの現場では、NVD・CISA・KISAなどの公開情報を担当者が手動確認し、開発部門の修正とセキュリティ部門のWAF設定が別々に進むことで<strong>数日〜数週間の防御空白</strong>が生まれています。</p>
+<p>Empasyの<a href="https://watch.empasy.io/" target="_blank" rel="noopener noreferrer">SyncWatch</a>は、グローバル脅威フィードの収集から影響判定、<strong>コード監査パック（Shift-Left）とAPI防御パック（Shift-Right）の同時コンパイル・検証・配信</strong>までを一貫管理します。</p>
+
+<h2 id="sec-1">1. SyncWatch 4段階 脅威収集・防御配信パイプライン</h2>
+
+<div class="modern-pipeline">
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 01</div>
+    <div class="pipeline-title">多チャンネル自動収集</div>
+    <div class="pipeline-desc">NVD・CISA KEV・OSV・GHSA・Nuclei・OWASP CRS・KISAを収集</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 02</div>
+    <div class="pipeline-title">正規化・影響範囲特定</div>
+    <div class="pipeline-desc">watch_security_advisoryへ正規化し社内資産・依存関係を突合</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 03</div>
+    <div class="pipeline-title">ルール生成・事前検証</div>
+    <div class="pipeline-desc">VerseAuditPack・ApimDefensePackを生成しサンドボックス検証</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 04</div>
+    <div class="pipeline-title">双方向配信・履歴追跡</div>
+    <div class="pipeline-desc">SyncVerseとSyncAPIMへ同時配信し結果を監査ログで追跡</div>
+  </div>
+</div>
+
+<h2 id="sec-2">2. 複数脅威フィードの統合正規化と5段階SSRFガード</h2>
+<ul>
+  <li><strong>統合アドバイザリ管理（<code>watch_security_advisory</code>）：</strong>国内外の複数フィードと社内診断文書を共通スキーマで正規化し、重複を排除します。</li>
+  <li><strong>5段階SSRFガード＆リアルタイムログ：</strong>外部取得時の安全性を担保しつつ、収集・解析の進行状況をリアルタイムに確認できます。</li>
+</ul>
+
+<h2 id="sec-3">3. Shift-Left と Shift-Right を結ぶ二重ルール生成</h2>
+<ul>
+  <li><strong><code>VerseAuditPack</code>（Shift-Left コード監査）：</strong><strong>SyncVerse</strong>へ配信され、PRレビューやハーネス検証で脆弱パッケージや危険パターンを早期検知します。</li>
+  <li><strong><code>ApimDefensePack</code>（Shift-Right 仮想パッチ）：</strong><strong>SyncAPIM</strong>へ配信され、恒久修正が完了するまでの間、本番ゲートウェイ上で攻撃トラフィックを無停止防御します。</li>
+</ul>
+
+<h2 id="sec-4">4. サンドボックス検証と配信ガバナンス</h2>
+<p>生成したルールは攻撃ペイロードの検知精度と正常リクエストの非遮断をサンドボックス環境で確認してから配信対象とし、配信・ロールバック履歴（<code>watch_dispatch_history</code>）を完全に追跡できます。</p>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>SyncWatch の脅威監視・防御ルール自動配信をご確認ください</strong>
+                <span>多チャンネル収集ログ・サンドボックス検証・配信追跡の詳細は製品サイトでご覧いただけます。</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="https://watch.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SyncWatch を見る &#8599;</a>
+                <a href="/ja/pages/contact.html?topics=ops-security" class="btn btn-outline btn-sm">導入相談</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="あわせて読みたいインサイト">
+        <h2 class="ed-related-heading">あわせて読みたいインサイト</h2>
+        <div class="ed-related-grid">
+        <a href="/ja/blog/syncapim-ai-api-gateway-ebpf-defense.html" class="ed-related-card">
+            <span class="ed-related-cat">APIセキュリティ・管制</span>
+            <span class="ed-related-title">シャドーAPI検知から無停止仮想パッチ・eBPF防御まで：SyncAPIM セキュリティガイド</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        <a href="/ja/blog/syncverse-mcp-ai-orchestration-architecture.html" class="ed-related-card">
+            <span class="ed-related-cat">協業・段階別承認</span>
+            <span class="ed-related-title">分散した業務ツールをひとつに繋ぐ協業・承認管理：SyncVerse 運用ガイド</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        </div>
+    </section>
+    </main>
+
+    {{> footer_ja }}
+
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
+        gtag('js', new Date());
+        gtag('config', 'G-6BNPM5TX7C');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>再起動なしでAIプロンプトと運用設定を更新する：sys_config・sys_prompt_template クラスタ同期 | Empasy</title>
+    <meta name="description" content="sync-coreのsys_config(SystemConfigHolder)、版管理sys_prompt_template/history(SystemPromptHolder)、AES-256暗号化、ClusterEventBroadcaster無停止クラスタ同期設計。">
+    <meta name="keywords" content="sync-core, sys_config, sys_prompt_template, sys_prompt_history, SystemConfigHolder, SystemPromptHolder, ClusterEventBroadcaster, AES-256, 無停止設定同期">
+    <meta name="author" content="株式会社Empasy (Empasy Inc.)">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="再起動なしでAIプロンプトと運用設定を更新する：sys_config・sys_prompt_template クラスタ同期 | Empasy">
+    <meta property="og:description" content="sync-coreのsys_config(SystemConfigHolder)、版管理sys_prompt_template/history(SystemPromptHolder)、AES-256暗号化、ClusterEventBroadcaster無停止クラスタ同期設計。">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:url" content="https://empasy.io/ja/blog/sync-core-dynamic-config-prompt-cluster-sync.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-11-23">
+    <meta property="article:modified_time" content="2026-11-23">
+    <link rel="canonical" href="https://empasy.io/ja/blog/sync-core-dynamic-config-prompt-cluster-sync.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/sync-core-dynamic-config-prompt-cluster-sync.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/sync-core-dynamic-config-prompt-cluster-sync.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/sync-core-dynamic-config-prompt-cluster-sync.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/sync-core-dynamic-config-prompt-cluster-sync.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "再起動なしでAIプロンプトと運用設定を更新する：sys_config・sys_prompt_template クラスタ同期",
+  "description": "sync-coreのsys_config(SystemConfigHolder)、版管理sys_prompt_template/history(SystemPromptHolder)、AES-256暗号化、ClusterEventBroadcaster無停止クラスタ同期設計。",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "Empasy Engineering Team",
+    "url": "https://empasy.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社Empasy (Empasy Inc.)",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://empasy.io/empasy-logo.png"
+    }
+  },
+  "image": "https://empasy.io/empasy-logo.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://empasy.io/ja/blog/sync-core-dynamic-config-prompt-cluster-sync.html"
+  },
+  "url": "https://empasy.io/ja/blog/sync-core-dynamic-config-prompt-cluster-sync.html"
+}
+    </script>
+</head>
+<body>
+    {{> header_ja }}
+
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/ja/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Empasy インサイト一覧へ</span>
+            </a>
+            <span class="badge" style="margin-bottom: 0;">共通コア・sync-core</span>
+        </div>
+
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-11-23</span>
+                <span>&bull;</span>
+                <span>読了目安 約6分</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">共通コア・動的設定・クラスタ同期</span>
+            </div>
+
+            <h1 class="ed-blog-title">再起動なしでAIプロンプトと運用設定を更新する：sys_config・sys_prompt_template クラスタ同期</h1>
+
+            <div class="ed-exec-summary" aria-label="経営層・現場担当者のための3行要約">
+                <div class="ed-exec-summary-kicker">経営層・現場担当者のための3行要約</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">従来の課題</span><span>タイムアウト・既定AIモデル・システムプロンプトをコードや静的YAMLへ埋め込むと、些細な調整でも再ビルドと再起動が必要になります。</span></li>
+                    <li><span class="ed-exec-summary-tag">解決アプローチ</span><span>sync-coreはsys_configと版管理付きsys_prompt_templateをPostgreSQLで管理し、更新と同時にClusterEventBroadcasterで全JVMキャッシュを無停止同期します。</span></li>
+                    <li><span class="ed-exec-summary-tag">導入効果</span><span>サービスを止めずにポリシー・プロンプトを調整でき、問題時はワンクリックで旧版へ復元、機密キーはAES-256暗号化とマスクで保護します。</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">自社の業務フローにそのまま適用できるか確認してみませんか？</span>
+                    <a href="/ja/pages/contact.html?topics=system" class="btn btn-primary btn-sm" style="min-height: 36px;">導入相談を申し込む</a>
+                </div>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>IT担当者・開発者向けの詳細技術解説</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="この記事の目次">
+  <div class="ed-article-toc-title">この記事の目次</div>
+  <ol>
+    <li><a href="#sec-1">1. 無停止クラスタ同期パイプライン</a></li>
+    <li><a href="#sec-2">2. 動的設定（sys_config）と機密情報の保護</a></li>
+    <li><a href="#sec-3">3. 版管理プロンプト（sys_prompt_template）とワンクリック復元</a></li>
+    <li><a href="#sec-4">4. ClusterEventBroadcaster：Redis Pub/Sub と共有メモリ自動切替</a></li>
+  </ol>
+</nav>
+<p>AIエージェントを含む業務システムでは、タイムアウト値、既定モデル名、下限しきい値、システムプロンプトがコード本体より遥かに高頻度で変更されます。静的YAMLやソースコードに固定すると小さな改善のたびに再デプロイが発生し、複数ノード間で設定不整合も起こりやすくなります。</p>
+<p>Empasyの共通基盤<code>sync-core</code>は、<strong>DB駆動の動的設定（<code>sys_config</code>）</strong>、<strong>版管理プロンプト（<code>sys_prompt_template</code>・<code>sys_prompt_history</code>）</strong>、および<strong><code>ClusterEventBroadcaster</code></strong>で無停止運用を実現しています。</p>
+
+<h2 id="sec-1">1. 無停止クラスタ同期パイプライン</h2>
+
+<div class="modern-pipeline">
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 01</div>
+    <div class="pipeline-title">管理画面で編集・診断</div>
+    <div class="pipeline-desc">設定・プロンプト更新および外部接続ソケット事前診断</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 02</div>
+    <div class="pipeline-title">DB永続化・暗号化</div>
+    <div class="pipeline-desc">PostgreSQL保存、機密キーAES-256暗号化と版履歴記録</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 03</div>
+    <div class="pipeline-title">クラスタ通知発行</div>
+    <div class="pipeline-desc">ClusterEventBroadcasterがRedis Pub/Sub・共有メモリへ配信</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 04</div>
+    <div class="pipeline-title">全ノード即時反映</div>
+    <div class="pipeline-desc">全JVMのSystemConfigHolder・SystemPromptHolderを即時更新</div>
+  </div>
+</div>
+
+<h2 id="sec-2">2. 動的設定（<code>sys_config</code>）と機密情報の保護</h2>
+<ul>
+  <li><strong>高速インメモリ参照（<code>SystemConfigHolder</code>）：</strong>毎回DB照会せずメモリキャッシュから即座に設定値を取得します。</li>
+  <li><strong>AES-256暗号化＆画面マスク（<code>AesEncryptUtil</code>）：</strong><code>is_secret=true</code>のAPIキーやパスワードは暗号化保存され、画面応答時はマスク表示されます。</li>
+</ul>
+
+<h2 id="sec-3">3. 版管理プロンプト（<code>sys_prompt_template</code>）とワンクリック復元</h2>
+<ul>
+  <li><strong>一元プロンプト管理：</strong><code>app_code</code>・<code>prompt_code</code>・<code>system_prompt</code>・<code>variables_schema</code>・<code>model_override</code>・<code>temperature</code>を体系管理します。</li>
+  <li><strong>即時ロールバック（<code>sys_prompt_history</code>）：</strong>変更理由と版番号を自動保存するため、応答品質に問題があればワンクリックで旧版へ戻せます。</li>
+</ul>
+
+<h2 id="sec-4">4. ClusterEventBroadcaster：Redis Pub/Sub と共有メモリ自動切替</h2>
+<p>チャネル<code>syncseries:cluster:events</code>を通じて<code>CONFIG_REFRESH</code>・<code>PROMPT_REFRESH</code>・<code>POLICY_CACHE_SYNC</code>・<code>WEBSOCKET_BROADCAST</code>を全インスタンスへ伝播します。</p>
+<ul>
+  <li><strong>自己エコー抑止：</strong><code>originInstanceId</code>を比較し発行元ノードの重複処理を自動スキップします。</li>
+  <li><strong>2種のBackingStore：</strong>クラスタ環境では<code>RedisClusterStateBackingStore</code>、単体環境では<code>SharedMemoryClusterStateBackingStore</code>へ自動フォールバックし、<code>DistributedLockExecutor</code>による分散ロックも併用します。</li>
+</ul>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>SyncBoot・sync-core の無停止設定・プロンプト管理をご確認ください</strong>
+                <span>全製品群で共有される動的設定ガバナンスの詳細はSyncBoot公式サイトでご覧いただけます。</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SyncBoot を見る &#8599;</a>
+                <a href="/ja/pages/contact.html?topics=system" class="btn btn-outline btn-sm">導入相談</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="あわせて読みたいインサイト">
+        <h2 class="ed-related-heading">あわせて読みたいインサイト</h2>
+        <div class="ed-related-grid">
+        <a href="/ja/blog/syncboot-cloud-native-msa-architecture.html" class="ed-related-card">
+            <span class="ed-related-cat">社内システム基盤</span>
+            <span class="ed-related-title">老朽化した社内システムを段階的に刷新する SyncBoot 標準基盤設計</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        <a href="/ja/blog/syncsdk-spec-studio-multi-engine-codev.html" class="ed-related-card">
+            <span class="ed-related-cat">協業開発・SyncSDK</span>
+            <span class="ed-related-title">5-Step Spec Studioと15種コーディング基盤切替：SyncSDKによる開発チーム協業（Co-Dev）設計</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        </div>
+    </section>
+    </main>
+
+    {{> footer_ja }}
+
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

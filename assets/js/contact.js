@@ -19,25 +19,78 @@ document.addEventListener('DOMContentLoaded', () => {
                 ? 'Inquiry Submitted Successfully'
                 : (isJa ? 'お問い合わせを受け付けました' : '문의가 정상적으로 접수되었습니다'),
             successDesc: (email) => isEn
-                ? `A confirmation has been recorded for <strong>${email}</strong>.<br>Our enterprise solutions architect will review your technical requirements and respond within <strong>24 hours</strong>.`
+                ? `A confirmation has been recorded for <strong>${email}</strong>.<br>Our specialist team will review your needs and respond within <strong>1 business day (24h)</strong>.`
                 : (isJa
-                    ? `ご入力いただいたメールアドレス(<strong>${email}</strong>)宛てに受付情報が記録されました。<br>専任ソリューションアーキテクトが内容を確認の上、<strong>24時間以内</strong>に迅速にご連絡いたします。`
-                    : `입력하신 이메일(<strong>${email}</strong>)로 접수 확인 정보가 전달되었습니다.<br>전담 솔루션 아키텍트가 고객사 환경을 사전 검토한 후 <strong>24시간 이내</strong>에 신속히 회신드리겠습니다.`),
+                    ? `ご入力いただいたメールアドレス(<strong>${email}</strong>)宛てに受付情報が記録されました。<br>専任担当者が内容を確認の上、<strong>営業日24時間以内</strong>にご連絡いたします。`
+                    : `입력하신 이메일(<strong>${email}</strong>)로 접수 확인 정보가 전달되었습니다.<br>전담 실무 담당자가 업무 환경을 검토한 뒤 <strong>영업일 24시간 이내</strong>에 회신드리겠습니다.`),
             summaryHeader: isEn ? 'Inquiry Receipt' : (isJa ? '受付控え' : '접수 확인증'),
-            badgeStatus: isEn ? 'Received (SLA 24h)' : (isJa ? '受付完了 (SLA 24h)' : '접수 완료 (SLA 24h)'),
+            badgeStatus: isEn ? 'Received (24h)' : (isJa ? '受付完了 (24h)' : '접수 완료 (24h)'),
             labels: {
                 time: isEn ? 'Submission Time' : (isJa ? '受付日時' : '접수 일시'),
                 applicant: isEn ? 'Applicant' : (isJa ? 'お名前' : '문의자'),
                 company: isEn ? 'Company' : (isJa ? '会社名' : '회사명'),
                 email: isEn ? 'Email' : (isJa ? 'メールアドレス' : '이메일'),
                 phone: isEn ? 'Phone' : (isJa ? '電話番号' : '연락처'),
-                interest: isEn ? 'Solution' : (isJa ? '関心ソリューション' : '관심 솔루션'),
+                interest: isEn ? 'Focus Area' : (isJa ? '相談内容・領域' : '관심 업무 영역'),
                 options: isEn ? 'Options' : (isJa ? '選択オプション' : '요청 옵션')
             },
+            defaultTopic: isEn
+                ? 'General Consultation (Recommend Best Starting Area)'
+                : (isJa ? '全体相談（最適な構成を提案希望）' : '전체 상담 (맞춤 모듈 추천 희망)'),
+            prefillPrefix: isEn
+                ? 'Recommended combination selected from the 30-second finder:'
+                : (isJa ? '30秒診断で選択されたおすすめ構成:' : '30초 맞춤 찾기에서 선택된 추천 조합:'),
             homeUrl: isEn ? '/en/pages/index.html' : (isJa ? '/ja/pages/index.html' : '/'),
             btnHome: isEn ? 'Back to Home' : (isJa ? 'ホームへ戻る' : '메인으로 이동'),
             btnNewInquiry: isEn ? 'Submit Another Inquiry' : (isJa ? '新しいお問い合わせを作成' : '추가 문의 접수하기')
         };
+
+        // Sync pain-point topic checkboxes & URL prefill (?topics=...&rec=...&onprem=1)
+        const topicCheckboxes = Array.from(contactForm.querySelectorAll('input[name="inquiryTopic"]'));
+        function syncTopicStyles() {
+            topicCheckboxes.forEach((cb) => {
+                const parentLabel = cb.closest('.ed-topic-item');
+                if (parentLabel) {
+                    parentLabel.classList.toggle('is-checked', cb.checked);
+                }
+            });
+        }
+        topicCheckboxes.forEach((cb) => {
+            cb.addEventListener('change', syncTopicStyles);
+        });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const paramTopics = urlParams.get('topics');
+        const paramRec = urlParams.get('rec');
+        const paramOnPrem = urlParams.get('onprem');
+        if (paramTopics && topicCheckboxes.length > 0) {
+            const keys = paramTopics.split(',').map((s) => s.trim()).filter(Boolean);
+            topicCheckboxes.forEach((cb) => {
+                if (keys.indexOf(cb.dataset.topicKey || '') !== -1) {
+                    cb.checked = true;
+                }
+            });
+        }
+        if (paramOnPrem === '1') {
+            const onPremEl = document.getElementById('onPremisesPoc');
+            if (onPremEl) onPremEl.checked = true;
+        }
+        if (paramRec) {
+            const prefillBanner = document.getElementById('edPrefillBanner');
+            if (prefillBanner) {
+                prefillBanner.textContent = i18n.prefillPrefix + ' ' + paramRec;
+                prefillBanner.classList.add('is-visible');
+            }
+            const specificInput = document.getElementById('specificProduct');
+            if (specificInput && !specificInput.value) {
+                specificInput.value = paramRec;
+            }
+        }
+        syncTopicStyles();
+
+        contactForm.addEventListener('reset', () => {
+            setTimeout(syncTopicStyles, 0);
+        });
 
         // Enhance native <select id="interest"> with Custom Dark Glassmorphic Dropdown
         const interestSelect = document.getElementById('interest');
@@ -276,7 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </svg>
                 </div>
                 <h3 class="contact-success-title">${i18n.successTitle}</h3>
-                <p class="contact-success-desc">${i18n.successDesc(data.email)}</p>
+                <p class="contact-success-desc">${i18n.successDesc(escapeHtml(data.email))}</p>
 
                 <div class="contact-summary-box">
                     <div class="contact-summary-header">
@@ -375,7 +428,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const company = document.getElementById('company') ? document.getElementById('company').value.trim() : '';
             const email = document.getElementById('email') ? document.getElementById('email').value.trim() : '';
             const phone = document.getElementById('phone') ? document.getElementById('phone').value.trim() : '';
-            const inquiry = document.getElementById('interest') ? document.getElementById('interest').value : '';
+            const selectedTopics = topicCheckboxes.filter((cb) => cb.checked).map((cb) => cb.value);
+            const specificProduct = document.getElementById('specificProduct') ? document.getElementById('specificProduct').value.trim() : '';
+            const legacyInterest = document.getElementById('interest') ? document.getElementById('interest').value : '';
+            let inquiry = selectedTopics.length > 0 ? selectedTopics.join(', ') : (legacyInterest || i18n.defaultTopic);
+            if (specificProduct) {
+                inquiry += ' [' + specificProduct + ']';
+            }
             const message = document.getElementById('message') ? document.getElementById('message').value.trim() : '';
             const ndaChecked = document.getElementById('ndaRequired')?.checked;
             const onPremChecked = document.getElementById('onPremisesPoc')?.checked;

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
+        gtag('js', new Date());
+        gtag('config', 'G-6BNPM5TX7C');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Step Spec Studio와 15대 코딩 엔진 핫스왑: SyncSDK 기반 개발팀 협업(Co-Dev) 아키텍처 | 엠파시(Empasy)</title>
+    <meta name="description" content="ICodingAgentClient 표준 SPI, CodingAgentType 15대 코딩 엔진 런타임 핫스왑, 5-Step Spec Studio, Living Spec 역동기화, SI 4대 납품 산출물 자동 생성을 결합한 SyncSDK·SyncVerse Co-Dev 아키텍처.">
+    <meta name="keywords" content="SyncSDK, 5-Step Spec Studio, ICodingAgentClient, CodingAgentRoutingProxy, 15대 코딩 에이전트, Living Spec 역동기화, SI 산출물 자동 생성, Co-Dev, SyncVerse, 엠파시">
+    <meta name="author" content="주식회사 엠파시 (Empasy)">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="5-Step Spec Studio와 15대 코딩 엔진 핫스왑: SyncSDK 기반 개발팀 협업(Co-Dev) 아키텍처 | 엠파시(Empasy)">
+    <meta property="og:description" content="ICodingAgentClient 표준 SPI, CodingAgentType 15대 코딩 엔진 런타임 핫스왑, 5-Step Spec Studio, Living Spec 역동기화, SI 4대 납품 산출물 자동 생성을 결합한 SyncSDK·SyncVerse Co-Dev 아키텍처.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:url" content="https://empasy.io/ko/blog/syncsdk-spec-studio-multi-engine-codev.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-11-22">
+    <meta property="article:modified_time" content="2026-11-23">
+    <link rel="canonical" href="https://empasy.io/ko/blog/syncsdk-spec-studio-multi-engine-codev.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "5-Step Spec Studio와 15대 코딩 엔진 핫스왑: SyncSDK 기반 개발팀 협업(Co-Dev) 아키텍처",
+  "description": "ICodingAgentClient 표준 SPI, CodingAgentType 15대 코딩 엔진 런타임 핫스왑, 5-Step Spec Studio, Living Spec 역동기화, SI 4대 납품 산출물 자동 생성을 결합한 SyncSDK·SyncVerse Co-Dev 아키텍처.",
+  "datePublished": "2026-11-22",
+  "dateModified": "2026-11-23",
+  "inLanguage": "ko",
+  "author": {
+    "@type": "Organization",
+    "name": "Empasy Engineering Team",
+    "url": "https://empasy.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "주식회사 엠파시 (Empasy)",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://empasy.io/empasy-logo.png"
+    }
+  },
+  "image": "https://empasy.io/empasy-logo.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://empasy.io/ko/blog/syncsdk-spec-studio-multi-engine-codev.html"
+  },
+  "url": "https://empasy.io/ko/blog/syncsdk-spec-studio-multi-engine-codev.html"
+}
+    </script>
+</head>
+<body>
+    {{> header_ko }}
+
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/ko/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>엠파시 인사이트 목록으로</span>
+            </a>
+            <span class="badge" style="margin-bottom: 0;">Multi-Engine SPI · SyncSDK</span>
+        </div>
+
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-11-22 (업데이트 2026-11-23)</span>
+                <span>&bull;</span>
+                <span>읽는 시간 약 7분</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">협업 개발 · Spec Studio · SyncSDK</span>
+            </div>
+
+            <h1 class="ed-blog-title">5-Step Spec Studio와 15대 코딩 엔진 핫스왑: SyncSDK 기반 개발팀 협업(Co-Dev) 아키텍처</h1>
+
+            <div class="ed-exec-summary" aria-label="경영진 · 현업 담당자를 위한 3줄 요약">
+                <div class="ed-exec-summary-kicker">경영진 · 현업 담당자를 위한 3줄 요약</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">기존 문제</span><span>특정 AI 코딩 도구 하나에만 의존하면 요금 정책 변경·모델 성능 변화·사내 보안 기준에 유연하게 대응하기 어렵고, 코드 수정 후 설계 문서가 즉시 낡아버립니다.</span></li>
+                    <li><span class="ed-exec-summary-tag">해결 방식</span><span>SyncSDK(ICodingAgentClient)로 15대 코딩 엔진을 런타임 핫스왑하고, SyncVerse 5-Step Spec Studio에서 스펙 확정 -&gt; PR 생성 -&gt; 개발자 검증 -&gt; Living Spec 역동기화 및 SI 4대 산출물까지 일관 관리합니다.</span></li>
+                    <li><span class="ed-exec-summary-tag">기대 효과</span><span>벤더 종속 없이 사내 개발팀의 코드 품질 기준과 SI 납품 문서 정합성을 함께 유지할 수 있습니다.</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">우리 회사 업무에 바로 적용할 수 있을지 궁금하신가요?</span>
+                    <a href="/ko/pages/contact.html?topics=system" class="btn btn-primary btn-sm" style="min-height: 36px;">맞춤 도입 상담</a>
+                </div>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>IT 담당자 · 개발자를 위한 상세 기술 내용 보기</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="이 글의 목차">
+  <div class="ed-article-toc-title">이 글의 목차</div>
+  <ol>
+    <li><a href="#sec-1">1. ICodingAgentClient SPI와 15대 코딩 엔진 런타임 핫스왑</a></li>
+    <li><a href="#sec-2">2. 5-Step Spec Studio와 사내 개발자 Co-Dev 파이프라인</a></li>
+    <li><a href="#sec-3">3. Living Spec 역동기화와 SI 4대 납품 산출물 자동 생성</a></li>
+    <li><a href="#sec-4">4. 벤더 독립성과 개발 거버넌스의 균형</a></li>
+  </ol>
+</nav>
+<p>기업 개발 조직이 AI 코딩 에이전트를 실무에 도입할 때 가장 먼저 부딪히는 현실적인 문제는 두 가지입니다. 첫째, 특정 벤더의 CLI나 IDE 도구 하나에 파이프라인을 고정하면 모델 단가·성능·보안 요구사항이 바뀔 때마다 전체 워크플로우를 다시 뜯어고쳐야 합니다. 둘째, AI가 빠르게 코드를 작성하더라도 <strong>요구사항 명세, API 계약, 테이블 정의서, 테스트 시나리오가 코드와 어긋나는 문서 드리프트</strong>가 누적됩니다.</p>
+<p>엠파시는 이 두 문제를 구조적으로 풀기 위해 <strong><code>SyncSDK</code> 다중 엔진 표준 SPI(15대 코딩 엔진 핫스왑)</strong>와 <strong><code>SyncVerse</code> 5-Step Spec Studio + 개발자 Co-Dev 역동기화 체계</strong>를 설계했습니다.</p>
+
+<h2 id="sec-1">1. ICodingAgentClient SPI와 15대 코딩 엔진 런타임 핫스왑</h2>
+<p><code>sync-sdk-common</code>은 개별 코딩 도구의 실행 방식을 <code>ICodingAgentClient</code> 인터페이스 하나로 추상화하고, <code>CodingAgentType</code> 레지스트리를 통해 15대 엔터프라이즈·오픈소스 코딩 엔진을 4가지 실행 유형으로 통합 지원합니다.</p>
+<ul>
+  <li><strong>SDK Native (1종):</strong> <code>ANTIGRAVITY</code> (Google Antigravity SDK v2.0 멀티 에이전트 하네스)</li>
+  <li><strong>CLI Subprocess (11종):</strong> <code>CLAUDE_CODE</code>, <code>GITHUB_COPILOT</code>, <code>CODEX_CLI</code>, <code>GEMINI_CLI</code>, <code>CURSOR_CLI</code>, <code>CONTINUE</code>, <code>AIDER</code>, <code>GOOSE</code>, <code>MINI_SWE</code>, <code>CLINE</code>, <code>KIRO</code></li>
+  <li><strong>Docker Container 격리 실행 (2종):</strong> <code>OPENHANDS</code>, <code>OPENSWE</code></li>
+  <li><strong>REST API 연동 (1종):</strong> <code>EIGENT</code></li>
+</ul>
+<p><code>CodingAgentRoutingProxy</code>는 관리자 화면에서 활성 엔진, CLI 경로, 엔드포인트, 타임아웃을 바꾸는 즉시 서비스 재시작 없이 다음 작업부터 새 엔진으로 라우팅합니다. 각 엔진의 기본 추론 모델 또한 <code>SystemConfigHolder</code>(<code>sync.sdk.agent.default-model.&lt;code_lower&gt;</code>)를 통해 DB에서 동적으로 조회합니다.</p>
+
+<h2 id="sec-2">2. 5-Step Spec Studio와 사내 개발자 Co-Dev 파이프라인</h2>
+<p>단순 프롬프트 한 줄로 곧장 프로덕션 소스를 수정하는 대신, <code>SpecStudioController</code>는 요구사항 정제부터 사내 개발자 로컬 검증·승인까지 5단계 게이트를 순서대로 밟습니다.</p>
+
+<div class="modern-stack">
+  <div class="stack-layer">
+    <div class="stack-label">STEP 01</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">요구사항 AC 정제 &amp; 코드 그래프 영향도 분석</div>
+      <div class="stack-desc">자연어 요구를 수용 기준(AC-01~)으로 구조화하고 4단계 코드 그래프로 변경 대상 파일 범위 식별</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">STEP 02</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">상세 기능 · 화면 명세 &amp; Decision Queue</div>
+      <div class="stack-desc">기능·와이어프레임 명세 도출, L1/L2/L3 영향도별 미결사항 결정 대기열에서 담당자 의사결정 확정</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">STEP 03</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">기술 스펙 &amp; API 커버리지 게이트</div>
+      <div class="stack-desc">DDL 스키마, REST API 계약, 집중 수정 파일(focusFiles) 바인딩 및 누락 API 사전 보완</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">STEP 04</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">SyncSDK 슬라이스 코딩 &amp; 4-Cycle 검증</div>
+      <div class="stack-desc">활성 코딩 엔진(15종 중 선택)이 feat/* 브랜치 생성, 빌드·테스트 자가 점검 후 PR 상신</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">STEP 05</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">개발자 Co-Dev · Living Spec 역동기화 &amp; SI 산출물</div>
+      <div class="stack-desc">사내 개발자 로컬 검증·보완 후 reverse-sync로 명세 자동 갱신 및 SI 4대 납품 산출물 원클릭 출력</div>
+    </div>
+  </div>
+</div>
+
+<h2 id="sec-3">3. Living Spec 역동기화와 SI 4대 납품 산출물 자동 생성</h2>
+<p>실제 엔터프라이즈·SI 프로젝트에서는 AI가 PR을 올린 뒤 사내 개발자가 엣지 케이스나 도메인 예외 로직을 로컬 IDE에서 직접 보완하는 경우가 많습니다. 이때 설계 문서를 수동으로 고치지 않으면 문서와 코드가 다시 분리됩니다.</p>
+<ul>
+  <li><strong>Living Spec 역동기화(<code>LivingSpecReverseSyncService</code>):</strong> 사내 개발자가 작업 브랜치에 수동 커밋을 푸시하면 <code>reverse-sync</code>가 실제 Git Diff를 분석해 기능 명세·API 계약·화면 명세에 변경점을 역으로 반영합니다.</li>
+  <li><strong>SI 납품용 4대 산출물 패키지(<code>SpecDeliverableAndGovernanceSupport</code>):</strong> 확정된 스펙과 검증 결과를 바탕으로 <strong>프로그램 사양서(HTML), 화면 설계서(HTML), 테이블 명세서(CSV/XLSX), 단위 테스트 시나리오(CSV/XLSX)</strong>를 일괄 생성해 공공·금융 SI 검수 문서 작성 부담을 크게 줄입니다.</li>
+</ul>
+
+<h2 id="sec-4">4. 벤더 독립성과 개발 거버넌스의 균형</h2>
+<p><code>SyncSDK</code>와 <code>5-Step Spec Studio</code> 조합의 핵심은 AI에게 전권을 넘기는 것이 아니라, <strong>교체 가능한 코딩 엔진, 명확한 사전 스펙 게이트, 사내 개발자 Co-Dev 리뷰, 최신 상태가 유지되는 산출물</strong>을 한 체계로 묶는 데 있습니다. 덕분에 팀은 최신 모델 발전 혜택을 즉시 수용하면서도 사내 아키텍처 표준과 감사 추적성을 흔들림 없이 지킬 수 있습니다.</p>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>SyncVerse 5-Step Spec Studio와 Co-Dev 흐름을 확인해 보세요</strong>
+                <span>요구사항 정제부터 코딩 엔진 핫스왑, Monaco Diff 리뷰, SI 산출물 패키지 생성 화면을 공식 사이트에서 살펴볼 수 있습니다.</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SyncVerse 살펴보기 &#8599;</a>
+                <a href="/ko/pages/contact.html?topics=system" class="btn btn-outline btn-sm">도입 상담 문의</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="함께 읽으면 좋은 인사이트">
+        <h2 class="ed-related-heading">함께 읽으면 좋은 인사이트</h2>
+        <div class="ed-related-grid">
+        <a href="/ko/blog/syncverse-mcp-ai-orchestration-architecture.html" class="ed-related-card">
+            <span class="ed-related-cat">협업 · 단계별 승인</span>
+            <span class="ed-related-title">흩어진 업무 도구를 하나로 연결하는 협업·승인 관리: SyncVerse 운영 가이드</span>
+            <span class="ed-related-more">자세히 읽기 &rarr;</span>
+        </a>
+        <a href="/ko/blog/sync-core-dynamic-config-prompt-cluster-sync.html" class="ed-related-card">
+            <span class="ed-related-cat">공통 코어 · 운영 설계</span>
+            <span class="ed-related-title">운영 재시작 없이 AI 프롬프트와 정책을 바꾸는 법: sys_config · sys_prompt_template 클러스터 동기화</span>
+            <span class="ed-related-more">자세히 읽기 &rarr;</span>
+        </a>
+        </div>
+    </section>
+    </main>
+
+    {{> footer_ko }}
+
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -16,158 +37,46 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
     <!-- End Google Tag Manager -->
-    <title>엠파시 인사이트 | 엠파시(Empasy)</title>
-    <meta name="description" content="엠파시(Empasy) 현장 적용 노트. 자동 화면 테스트(SyncETA), 업무 시스템 현대화(SyncBoot), 다국어 웹사이트 운영(SyncCMS), 데이터·보안 관리 실무 가이드를 공유합니다.">
-    <meta name="keywords" content="엠파시 인사이트, 현장 적용 노트, SyncETA, SyncVerse, SyncBoot, SyncCMS, SyncInsight, 기업 소프트웨어 도입 가이드">
-    <meta property="og:title" content="엠파시 인사이트 | 엠파시(Empasy)">
-    <meta property="og:description" content="실제 기업 현장에서 개발·테스트·웹사이트·운영 문제를 해결한 실무 경험과 적용 가이드를 공유합니다.">
-    <meta property="og:type" content="website">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="주식회사 엠파시 (Empasy Inc.)">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "엠파시 인사이트",
-      "url": "https://empasy.io/ko/blog/blog.html",
-      "description": "기업 소프트웨어 구축, 자동 화면 테스트, 데이터 조회 및 보안 운영 현장 적용 노트",
-      "publisher": {
-        "@type": "Organization",
-        "name": "주식회사 엠파시 (Empasy Inc.)",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.io/empasy-logo.png"
-        }
-      }
-    }
-    </script>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <title>엠파시 인사이트 | 엠파시(Empasy)</title>
+    <meta name="description" content="엠파시(Empasy) 현장 적용 노트. 자동 화면 테스트(SyncETA), 업무 시스템 현대화(SyncBoot), 다국어 웹사이트 운영(SyncCMS), 데이터·AI 비용(SyncInsight·SyncLLM), 프로젝트 운영(SyncOps), API·보안 관제(SyncAPIM·SyncWatch) 실무 가이드를 공유합니다.">
+    <meta name="keywords" content="엠파시 인사이트, 현장 적용 노트, SyncVerse, SyncETA, SyncBoot, SyncCMS, SyncInsight, SyncLLM, SyncCrawl, SyncShop, SyncOps, SyncAPIM, SyncWatch">
+    <meta name="author" content="주식회사 엠파시 (Empasy)">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="엠파시 인사이트 | 엠파시(Empasy)">
+    <meta property="og:description" content="실제 기업 현장에서 개발·테스트·웹사이트·데이터·사업운영·보안 문제를 해결한 실무 경험과 적용 가이드를 공유합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:url" content="https://empasy.io/ko/blog/blog.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
     <link rel="canonical" href="https://empasy.io/ko/blog/blog.html">
     <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/blog.html" />
     <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/blog.html" />
     <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/blog.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/blog.html" />
-    <meta property="og:url" content="https://empasy.io/ko/blog/blog.html">
-    <style>
-        .blog-hero {
-            padding: 108px 0 32px;
-            text-align: center;
-        }
-        .blog-hero h1 {
-            font-size: clamp(2rem, 4.5vw, 2.8rem);
-            font-weight: 700;
-            color: #0f172a;
-            margin: 10px 0 12px;
-            letter-spacing: -0.025em;
-        }
-        .blog-hero p {
-            font-size: 1.05rem;
-            color: #475569;
-            max-width: 680px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
-        .blog-filter-tabs {
-            display: flex;
-            gap: 8px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 8px auto 32px;
-        }
-        .blog-filter-btn {
-            padding: 8px 16px;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
-            background: #f8fafc;
-            color: #475569;
-            font-size: 0.9rem;
-            font-weight: 600;
-            font-family: var(--font-sans);
-            cursor: pointer;
-            transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-        }
-        .blog-filter-btn:hover {
-            border-color: #cbd5e1;
-            color: #0f172a;
-            background: #f1f5f9;
-        }
-        .blog-filter-btn.active {
-            background: #0f172a;
-            border-color: #0f172a;
-            color: #ffffff;
-        }
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-            gap: 22px;
-        }
-        .blog-card-item {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        .blog-card {
-            background: #ffffff;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            padding: 26px;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-            box-shadow: 0 2px 10px -6px rgba(15, 23, 42, 0.08);
-        }
-        .blog-card:hover {
-            border-color: #0f172a;
-            box-shadow: 0 14px 28px -18px rgba(15, 23, 42, 0.16);
-            transform: translateY(-2px);
-        }
-        .blog-card-cat {
-            color: #0e7490;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            letter-spacing: 0.01em;
-        }
-        .blog-card h2 {
-            font-size: 1.18rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 10px;
-            line-height: 1.45;
-        }
-        .blog-card p {
-            color: #475569;
-            font-size: 0.93rem;
-            line-height: 1.66;
-            flex-grow: 1;
-            margin: 0;
-        }
-        .blog-card-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 18px;
-            padding-top: 14px;
-            border-top: 1px solid #e2e8f0;
-            color: #64748b;
-            font-size: 0.84rem;
-        }
-        .blog-card-more {
-            color: #0e7490;
-            font-weight: 600;
-        }
-    </style>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "엠파시 인사이트",
+  "url": "https://empasy.io/ko/blog/blog.html",
+  "description": "실제 기업 현장에서 개발·테스트·웹사이트·데이터·사업운영·보안 문제를 해결한 실무 경험과 적용 가이드를 공유합니다.",
+  "inLanguage": "ko",
+  "publisher": {
+    "@type": "Organization",
+    "name": "주식회사 엠파시 (Empasy)",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://empasy.io/empasy-logo.png"
+    }
+  }
+}
+    </script>
 </head>
 <body>
     {{> header_ko }}
@@ -176,7 +85,7 @@
         <div class="blog-hero">
             <p class="ed-eyebrow">현장 적용 노트</p>
             <h1>엠파시 인사이트</h1>
-            <p>기업 시스템 구축과 자동 화면 점검, 다국어 웹사이트 및 보안 운영 현장에서 검증한 실무 경험과 도입 가이드를 공유합니다.</p>
+            <p>실제 기업 현장에서 검증한 실무 경험과 도입 가이드를 공유합니다. 모든 글 상단에 경영진·현업용 3줄 요약을 두고, 바로 아래에서 IT·개발자용 상세 아키텍처와 적용 가이드를 확인할 수 있습니다.</p>
         </div>
 
         <div class="blog-filter-tabs" role="tablist" aria-label="인사이트 주제 필터">
@@ -184,182 +93,223 @@
             <button type="button" class="blog-filter-btn" data-filter="qa" role="tab" aria-selected="false">자동 테스트</button>
             <button type="button" class="blog-filter-btn" data-filter="orchestration" role="tab" aria-selected="false">협업 · 운영 관리</button>
             <button type="button" class="blog-filter-btn" data-filter="cloud" role="tab" aria-selected="false">업무 시스템 · 웹</button>
-            <button type="button" class="blog-filter-btn" data-filter="decision" role="tab" aria-selected="false">데이터 · 비용 관리</button>
+            <button type="button" class="blog-filter-btn" data-filter="decision" role="tab" aria-selected="false">데이터 · AI 비용</button>
+            <button type="button" class="blog-filter-btn" data-filter="security" role="tab" aria-selected="false">보안 · 관제</button>
             <button type="button" class="blog-filter-btn" data-filter="vision" role="tab" aria-selected="false">현장 사례 · 방향</button>
         </div>
 
         <div class="blog-grid">
-            <!-- Blog Card: ETA Autoscaling -->
-            <a href="../../ko/blog/eta-autoscaling-worker-scaling.html" class="blog-card-item" data-category="qa">
+            <a href="/ko/blog/sync-core-dynamic-config-prompt-cluster-sync.html" class="blog-card-item" data-category="cloud">
+                <article class="blog-card">
+                    <div class="blog-card-cat">공통 코어 · 운영 설계</div>
+                    <h2>운영 재시작 없이 AI 프롬프트와 정책을 바꾸는 법: sys_config · sys_prompt_template 클러스터 동기화</h2>
+                    <p>정책 임계치와 AI 프롬프트를 코드·YAML 하드코딩에서 분리해 PostgreSQL(sys_config, sys_prompt_template)로 관리하고, ClusterEventBroadcaster로 멀티 인스턴스 캐시를 무중단 동기화하는 설계를 공개합니다.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-23 &bull; 6분 읽기</span>
+                        <span class="blog-card-more">자세히 읽기 &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/ko/blog/syncsdk-spec-studio-multi-engine-codev.html" class="blog-card-item" data-category="orchestration">
+                <article class="blog-card">
+                    <div class="blog-card-cat">협업 개발 · SyncSDK</div>
+                    <h2>5-Step Spec Studio와 15대 코딩 엔진 핫스왑: SyncSDK 기반 개발팀 협업(Co-Dev) 아키텍처</h2>
+                    <p>단일 AI 코딩 벤더 종속을 피하면서 15대 코딩 엔진을 런타임에 핫스왑하고, 5-Step Spec Studio·Living Spec 역동기화·SI 4대 산출물 자동 생성까지 연결하는 협업 개발 구조를 설명합니다.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-22 &bull; 7분 읽기</span>
+                        <span class="blog-card-more">자세히 읽기 &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/ko/blog/eta-autoscaling-keda-graceful-scalein.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">자동 테스트</div>
+                    <h2>SyncETA 자동 확장 적용기 (2) — KEDA ScaledObject와 실행 중 테스트를 보호하는 안전한 축소 구현</h2>
+                    <p>BullMQ Redis 큐(scheduler_jobs)의 대기·실행 키를 KEDA ScaledObject에 연결하고, terminationGracePeriodSeconds와 SIGTERM 드레이닝으로 실행 중 브라우저 테스트를 보호하는 실전 설계를 공개합니다.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-21 &bull; 6분 읽기</span>
+                        <span class="blog-card-more">자세히 읽기 &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/ko/blog/syncwatch-security-advisory-rule-compiler.html" class="blog-card-item" data-category="security">
+                <article class="blog-card">
+                    <div class="blog-card-cat">보안 위협 · 규칙 배포</div>
+                    <h2>글로벌 보안 권고 수집부터 코드 감사·API 방어 규칙 배포까지: SyncWatch 운영 아키텍처</h2>
+                    <p>NVD, CISA KEV, OSV, KISA 등 글로벌 보안 피드를 수집·정규화해 SyncVerse 코드 감사 팩과 SyncAPIM 런타임 방어 팩으로 검증·동시 배포하는 SyncWatch 아키텍처를 살펴봅니다.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-20 &bull; 6분 읽기</span>
+                        <span class="blog-card-more">자세히 읽기 &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/ko/blog/syncapim-ai-api-gateway-ebpf-defense.html" class="blog-card-item" data-category="security">
+                <article class="blog-card">
+                    <div class="blog-card-cat">API 보안 · 관제</div>
+                    <h2>숨은 API 탐지부터 무중단 가상 패치와 커널 방어까지: SyncAPIM 보안 게이트웨이 가이드</h2>
+                    <p>구문 토큰 지문 분석으로 변형 공격을 빠르게 탐지하고, 숨은(Shadow) API 역공학·정상 트래픽 백테스팅 기반 가상 패치·eBPF 커널 차단과 응답 PII 마스킹을 통합한 SyncAPIM 구조를 설명합니다.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-16 &bull; 6분 읽기</span>
+                        <span class="blog-card-more">자세히 읽기 &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/ko/blog/syncops-si-profitability-subcontract-governance.html" class="blog-card-item" data-category="orchestration">
+                <article class="blog-card">
+                    <div class="blog-card-cat">사업운영 · 손익 관리</div>
+                    <h2>프로젝트 실시간 손익 추적과 하도급 법정기한 자동 감시: SyncOps 사업운영 가이드</h2>
+                    <p>계약 청구단가와 실제 투입 원가의 차이를 실시간 피벗으로 추적하고, 하도급 대금 15일·60일 지급기한과 4대 보증증권 만기를 자동 감시하는 SyncOps 운영 구조를 소개합니다.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-12 &bull; 6분 읽기</span>
+                        <span class="blog-card-more">자세히 읽기 &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/ko/blog/eta-autoscaling-worker-scaling.html" class="blog-card-item" data-category="qa">
                 <article class="blog-card">
                     <div class="blog-card-cat">자동 테스트</div>
                     <h2>SyncETA 자동 확장 적용기 (1) — 점검 작업이 몰릴 때 처리 용량을 어떻게 늘릴까?</h2>
-                    <p>정기 점검 일정에 테스트 시나리오가 한꺼번에 몰릴 때 대기 시간이 길어지는 문제를 어떻게 감지하고 안정적으로 분산 처리했는지 정리했습니다.</p>
+                    <p>정기 점검 일정에 테스트 시나리오가 한꺼번에 몰릴 때 대기 시간이 길어지는 문제를 Redis Queue 대기열 길이와 KEDA 기준으로 풀어낸 설계 기록입니다.</p>
                     <div class="blog-card-meta">
                         <span>2026-11-03 &bull; 4분 읽기</span>
                         <span class="blog-card-more">자세히 읽기 &rarr;</span>
                     </div>
                 </article>
             </a>
-
-            <!-- Blog Card: SyncETA Test Automation -->
-            <a href="../../ko/blog/synceta-intelligent-regression-testing-pipeline.html" class="blog-card-item" data-category="qa">
-                <article class="blog-card">
-                    <div class="blog-card-cat">자동 테스트 도입 가이드</div>
-                    <h2>자동 화면 테스트 도입 가이드: 클릭 녹화부터 화면 변경 자동 대응까지 — SyncETA 활용법</h2>
-                    <p>코딩 없는 시나리오 기록, 기존 엑셀 점검표 변환, 오류 원인 요약, 디자인 변경 시 자동 복구까지 실무 테스트 운영 방식을 알기 쉽게 비교합니다.</p>
-                    <div class="blog-card-meta">
-                        <span>2026-10-31 &bull; 6분 읽기</span>
-                        <span class="blog-card-more">자세히 읽기 &rarr;</span>
-                    </div>
-                </article>
-            </a>
-
-            <!-- Blog Card: Case Study Finance -->
-            <a href="../../ko/blog/case-study-finance.html" class="blog-card-item" data-category="vision">
-                <article class="blog-card">
-                    <div class="blog-card-cat">기업 구축 사례</div>
-                    <h2>금융·공공·제조 현장의 디지털 전환 및 대규모 시스템 구축 사례</h2>
-                    <p>금융, 공공, 제조, 교육 현장에서 검증된 업무 시스템 현대화 경험과 대규모 거래 처리·자동 점검 적용 결과를 소개합니다.</p>
-                    <div class="blog-card-meta">
-                        <span>2026-03-20 &bull; 6분 읽기</span>
-                        <span class="blog-card-more">자세히 읽기 &rarr;</span>
-                    </div>
-                </article>
-            </a>
-
-            <!-- Blog Card: SyncCrawl -->
-            <a href="../../ko/blog/synccrawl-distributed-web-data-pipeline.html" class="blog-card-item" data-category="qa">
+            <a href="/ko/blog/synccrawl-distributed-web-data-pipeline.html" class="blog-card-item" data-category="decision">
                 <article class="blog-card">
                     <div class="blog-card-cat">데이터 수집 · 정리</div>
                     <h2>사내 지식 검색을 위한 공개 웹 데이터 수집과 정제: SyncCrawl 활용 노트</h2>
-                    <p>최신 시장 동향과 공개 문서를 주기적으로 수집하고 광고와 불필요한 요소를 걸러 사내 검색에 바로 쓰기 좋게 정리하는 운영 방식을 설명합니다.</p>
+                    <p>최신 시장 동향과 공개 문서를 주기적으로 수집하고, 화면 구조 변화 보정과 광고·메뉴 제거를 거쳐 사내 검색에 바로 쓰기 좋게 정리하는 운영 방식을 설명합니다.</p>
                     <div class="blog-card-meta">
                         <span>2026-09-12 &bull; 6분 읽기</span>
                         <span class="blog-card-more">자세히 읽기 &rarr;</span>
                     </div>
                 </article>
             </a>
-
-            <!-- Blog Card: SyncLLM -->
-            <a href="../../ko/blog/syncllm-cost-optimization-semantic-cache-gateway.html" class="blog-card-item" data-category="decision">
+            <a href="/ko/blog/syncllm-cost-optimization-semantic-cache-gateway.html" class="blog-card-item" data-category="decision">
                 <article class="blog-card">
                     <div class="blog-card-cat">AI 비용 · 보안 관리</div>
                     <h2>사내 AI 이용 비용 절감과 응답 속도 개선: SyncLLM 통합 관리 전략</h2>
-                    <p>부서별로 흩어진 AI 사용 요금을 한곳에서 통제하고, 반복 질문 답변 재사용과 개인정보 가림 처리로 안전하게 예산을 절감하는 방법을 정리합니다.</p>
+                    <p>부서별로 흩어진 AI 사용 요금을 한곳에서 통제하고, 의미 기반 캐시 재사용·티어 모델 라우팅·개인정보 자동 가림으로 안전하게 예산을 절감하는 방법을 정리합니다.</p>
                     <div class="blog-card-meta">
                         <span>2026-08-25 &bull; 7분 읽기</span>
                         <span class="blog-card-more">자세히 읽기 &rarr;</span>
                     </div>
                 </article>
             </a>
-
-            <!-- Blog Card: SyncShop -->
-            <a href="../../ko/blog/syncshop-batch-pricing-margin-protection-architecture.html" class="blog-card-item" data-category="orchestration">
+            <a href="/ko/blog/syncshop-batch-pricing-margin-protection-architecture.html" class="blog-card-item" data-category="orchestration">
                 <article class="blog-card">
                     <div class="blog-card-cat">커머스 · 가격 관리</div>
                     <h2>최소 마진율 보호와 안전한 대량 가격 변경: SyncShop 가격 관리 및 복구 전략</h2>
-                    <p>수많은 상품 가격과 할인 행사를 일괄 변경할 때 발생할 수 있는 마진 손실과 입력 실수를 막는 안전장치와 즉시 복원 방식을 살펴봅니다.</p>
+                    <p>수많은 상품 가격과 할인 행사를 일괄 변경할 때 발생할 수 있는 역마진 손실과 입력 실수를 막는 사전 검증 안전장치와 스냅샷 즉시 복원 방식을 살펴봅니다.</p>
                     <div class="blog-card-meta">
                         <span>2026-08-10 &bull; 6분 읽기</span>
                         <span class="blog-card-more">자세히 읽기 &rarr;</span>
                     </div>
                 </article>
             </a>
-
-            <!-- Blog Card: Vision 2026 -->
-            <a href="../../ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" class="blog-card-item" data-category="vision">
+            <a href="/ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" class="blog-card-item" data-category="vision">
                 <article class="blog-card">
                     <div class="blog-card-cat">비전 · 운영 방향</div>
                     <h2>사람의 판단에 집중하는 기업 소프트웨어: 엠파시 2026 제품 발전 방향</h2>
-                    <p>개발, 품질 점검, 운영 승인의 반복 업무를 안전하게 줄이고 담당자가 핵심 의사결정에 집중하도록 돕는 엠파시의 제품 방향을 소개합니다.</p>
+                    <p>개발, 품질 점검, 운영 승인의 반복 업무를 안전하게 줄이고 담당자가 핵심 의사결정에 집중하도록 돕는 엠파시의 2026 제품 방향을 소개합니다.</p>
                     <div class="blog-card-meta">
                         <span>2026-07-18 &bull; 5분 읽기</span>
                         <span class="blog-card-more">자세히 읽기 &rarr;</span>
                     </div>
                 </article>
             </a>
-
-            <!-- Blog Card: SyncInsight -->
-            <a href="../../ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" class="blog-card-item" data-category="decision">
+            <a href="/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" class="blog-card-item" data-category="decision">
                 <article class="blog-card">
                     <div class="blog-card-cat">보안 · 데이터 조회</div>
                     <h2>사내 보안 환경을 지키는 경영 데이터 조회: SyncInsight 안전 분석 가이드</h2>
-                    <p>외부 유출이 엄격히 제한된 사내 서버 환경에서 읽기 전용 방식으로 데이터를 교차 분석해 실무 인사이트를 도출하는 활용 사례입니다.</p>
+                    <p>외부 유출이 엄격히 제한된 사내 서버 환경에서 읽기 전용 NL2SQL 방화벽과 하이브리드 RAG로 데이터를 교차 분석해 실무 인사이트를 도출하는 구조를 설명합니다.</p>
                     <div class="blog-card-meta">
                         <span>2026-06-25 &bull; 7분 읽기</span>
                         <span class="blog-card-more">자세히 읽기 &rarr;</span>
                     </div>
                 </article>
             </a>
-
-            <!-- Blog Card: SyncVerse -->
-            <a href="../../ko/blog/syncverse-mcp-ai-orchestration-architecture.html" class="blog-card-item" data-category="orchestration">
+            <a href="/ko/blog/syncverse-mcp-ai-orchestration-architecture.html" class="blog-card-item" data-category="orchestration">
                 <article class="blog-card">
                     <div class="blog-card-cat">협업 · 단계별 승인</div>
                     <h2>흩어진 업무 도구를 하나로 연결하는 협업·승인 관리: SyncVerse 운영 가이드</h2>
-                    <p>요구사항 정리부터 작업 검토, 품질 점검, 담당자 단계별 승인까지 하나의 화면에서 투명하게 추적하는 실무 운영 방식을 살펴봅니다.</p>
+                    <p>요구사항 정리(5-Step Spec Studio)부터 15대 코딩 엔진 라우팅, 품질 검증, 다자간 단계별 승인(HITL)까지 하나의 관제 화면에서 추적하는 실무 방식을 설명합니다.</p>
                     <div class="blog-card-meta">
                         <span>2026-05-30 &bull; 6분 읽기</span>
                         <span class="blog-card-more">자세히 읽기 &rarr;</span>
                     </div>
                 </article>
             </a>
-
-            <!-- Blog Card: SyncBoot -->
-            <a href="../../ko/blog/syncboot-cloud-native-msa-architecture.html" class="blog-card-item" data-category="cloud">
+            <a href="/ko/blog/syncboot-cloud-native-msa-architecture.html" class="blog-card-item" data-category="cloud">
                 <article class="blog-card">
                     <div class="blog-card-cat">업무 시스템 기반</div>
                     <h2>노후 사내 시스템을 단계적으로 현대화하는 SyncBoot 표준 기반 설계</h2>
-                    <p>검증된 오픈소스 표준을 바탕으로 조직도 권한, 전자결재, 감사 이력을 빠르게 구축하고 유지보수 부담을 줄이는 방법을 정리했습니다.</p>
+                    <p>Java 25 · Spring Boot 4.0 표준 코어 위에서 조직도 권한, 한국형 전자결재, DB 동적 설정·프롬프트 허브, 감사 이력을 빠르게 구축하는 방법을 정리했습니다.</p>
                     <div class="blog-card-meta">
                         <span>2026-05-12 &bull; 6분 읽기</span>
                         <span class="blog-card-more">자세히 읽기 &rarr;</span>
                     </div>
                 </article>
             </a>
-
-            <!-- Blog Card: SyncCMS -->
-            <a href="../../ko/blog/synccms-development-oriented-architecture.html" class="blog-card-item" data-category="cloud">
+            <a href="/ko/blog/synccms-development-oriented-architecture.html" class="blog-card-item" data-category="cloud">
                 <article class="blog-card">
                     <div class="blog-card-cat">웹사이트 · 다국어 관리</div>
                     <h2>특정 솔루션 종속 없이 유연하게 확장하는 SyncCMS 웹사이트 운영 전략</h2>
-                    <p>여러 브랜드 사이트와 다국어 페이지를 한곳에서 작성·검수·승인하며 검색 품질과 웹 접근성까지 함께 관리하는 실무 노하우를 공유합니다.</p>
+                    <p>Spring Boot + Nuxt 3 SSR 하이브리드 헤드리스 구조와 3-Agent 검수 흐름으로 여러 브랜드·다국어 사이트를 벤더 종속 없이 운영하는 전략을 공유합니다.</p>
                     <div class="blog-card-meta">
                         <span>2026-04-20 &bull; 5분 읽기</span>
                         <span class="blog-card-more">자세히 읽기 &rarr;</span>
                     </div>
                 </article>
             </a>
-
-            <!-- Blog Card: Core Solution -->
-            <a href="../../ko/blog/empasy-core-solution-architecture-syncverse.html" class="blog-card-item" data-category="orchestration">
+            <a href="/ko/blog/case-study-finance.html" class="blog-card-item" data-category="vision">
+                <article class="blog-card">
+                    <div class="blog-card-cat">기업 구축 사례</div>
+                    <h2>교육·보안·유통·공공 현장의 시스템 현대화 및 업무 자동화 구축 사례</h2>
+                    <p>보안 협약 기준을 준수해 정리한 교육, IT 보안·금융 연동, 유통·가전, 공공 행정 현장의 시스템 현대화와 자동 점검 적용 결과를 소개합니다.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-03-20 &bull; 6분 읽기</span>
+                        <span class="blog-card-more">자세히 읽기 &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/ko/blog/synceta-intelligent-regression-testing-pipeline.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">자동 테스트 도입 가이드</div>
+                    <h2>자동 화면 테스트 도입 가이드: 클릭 녹화부터 화면 변경 자동 대응까지 — SyncETA 활용법</h2>
+                    <p>코딩 없는 클릭 녹화, 기존 엑셀 점검표 변환, 실패 원인 요약, 디자인 변경 시 셀렉터 자가 치유까지 실무 테스트 운영 방식을 알기 쉽게 정리합니다.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-03-15 &bull; 6분 읽기</span>
+                        <span class="blog-card-more">자세히 읽기 &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/ko/blog/empasy-core-solution-architecture-syncverse.html" class="blog-card-item" data-category="orchestration">
                 <article class="blog-card">
                     <div class="blog-card-cat">제품군 구성</div>
                     <h2>하나의 공통 기반 위에 구성된 SyncSeries 핵심 제품군 한눈에 보기</h2>
-                    <p>SyncVerse, SyncETA, SyncBoot, SyncCMS와 목적별 확장 모듈이 실제 기업 현장의 어떤 운영 병목을 해결하는지 정리합니다.</p>
+                    <p>SyncVerse, SyncETA, SyncBoot, SyncCMS와 7대 목적별 확장 모듈이 실제 기업 현장의 어떤 운영 병목을 해결하는지 하나의 공통 아키텍처 관점에서 정리합니다.</p>
                     <div class="blog-card-meta">
                         <span>2026-02-28 &bull; 8분 읽기</span>
                         <span class="blog-card-more">자세히 읽기 &rarr;</span>
                     </div>
                 </article>
             </a>
-
-            <!-- Blog Card: Data Pipeline -->
-            <a href="../../ko/blog/enterprise-data-pipeline-automation.html" class="blog-card-item" data-category="qa">
+            <a href="/ko/blog/enterprise-data-pipeline-automation.html" class="blog-card-item" data-category="decision">
                 <article class="blog-card">
                     <div class="blog-card-cat">데이터 정리 · 보안</div>
                     <h2>보안이 중요한 기업 환경에서의 비정형 업무 데이터 정리 자동화 사례</h2>
-                    <p>사내 문서와 외부 공개 정보를 구조화하고 개인정보 보호 기준을 지키면서 업무 검색과 보고에 활용하는 실전 절차를 소개합니다.</p>
+                    <p>사내 문서와 외부 공개 정보를 구조화하고 개인정보 보호 기준을 지키면서 업무 검색과 보고에 활용하는 실전 데이터 정제 파이프라인을 소개합니다.</p>
                     <div class="blog-card-meta">
-                        <span>2026-01-10 &bull; 5분 읽기</span>
+                        <span>2026-01-10 &bull; 6분 읽기</span>
                         <span class="blog-card-more">자세히 읽기 &rarr;</span>
                     </div>
                 </article>
             </a>
         </div>
 
-        <!-- Developer Technical Docs Callout -->
         <div class="ed-doc-callout" style="margin-top: 48px;">
             <div>
                 <p><strong>상세한 시스템 아키텍처와 개발자 매뉴얼을 찾고 계신가요?</strong><br>기술 설계 문서, 연동 규격, 배포 가이드 등 엔지니어용 심화 문서는 공식 기술 문서 포털에서 확인하실 수 있습니다.</p>
@@ -376,7 +326,6 @@
     document.addEventListener('DOMContentLoaded', () => {
         const filterBtns = document.querySelectorAll('.blog-filter-btn');
         const blogItems = document.querySelectorAll('.blog-card-item');
-
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => {
@@ -385,14 +334,9 @@
                 });
                 btn.classList.add('active');
                 btn.setAttribute('aria-selected', 'true');
-
                 const filter = btn.getAttribute('data-filter');
                 blogItems.forEach(item => {
-                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
+                    item.style.display = (filter === 'all' || item.getAttribute('data-category') === filter) ? 'block' : 'none';
                 });
             });
         });

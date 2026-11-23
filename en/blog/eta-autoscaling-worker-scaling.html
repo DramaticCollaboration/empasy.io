@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -18,154 +39,183 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SyncETA Autoscaling in Practice (1) — When Should We Scale Out Workers? | Empasy Tech Blog</title>
-    <meta name="description" content="Why CPU-based HPA falls short for Playwright MCP browser workers, and how SyncETA uses KEDA and Redis Queue depth for event-driven worker autoscaling.">
-    <meta name="keywords" content="SyncETA, SyncETA, Kubernetes Autoscaling, KEDA, HPA, Redis Queue, Playwright MCP, QA Automation, Empasy">
-    <meta property="og:title" content="SyncETA Autoscaling in Practice (1) — When Should We Scale Out Workers? | Empasy Tech Blog">
-    <meta property="og:description" content="Why CPU-based HPA falls short for Playwright MCP browser workers, and how SyncETA uses KEDA and Redis Queue depth for event-driven worker autoscaling.">
+    <title>Handling Peak Verification Traffic Smoothly — SyncETA Capacity Scaling (Part 1) | Empasy</title>
+    <meta name="description" content="Engineering architecture note on scaling SyncETA Playwright worker pods using Redis Queue depth and KEDA while protecting active test runs during scale-in.">
+    <meta name="keywords" content="SyncETA, KEDA, Kubernetes Autoscaling, Redis Queue, Playwright Worker, HPA Limitations, QA Infrastructure">
+    <meta name="author" content="Empasy Inc.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="Handling Peak Verification Traffic Smoothly — SyncETA Capacity Scaling (Part 1) | Empasy">
+    <meta property="og:description" content="Engineering architecture note on scaling SyncETA Playwright worker pods using Redis Queue depth and KEDA while protecting active test runs during scale-in.">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html">
     <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-11-03">
+    <meta property="article:modified_time" content="2026-11-23">
     <link rel="canonical" href="https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html">
     <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html" />
     <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html" />
     <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "SyncETA Autoscaling in Practice (1) — When Should We Scale Out Workers?",
-      "description": "Why CPU-based HPA falls short for Playwright MCP browser workers, and how SyncETA uses KEDA and Redis Queue depth for event-driven worker autoscaling.",
-      "datePublished": "2026-11-03",
-      "author": {
-        "@type": "Organization",
-        "name": "Empasy Engineering Team",
-        "url": "https://empasy.io"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Empasy",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.io/empasy-logo.png"
-        }
-      },
-      "url": "https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html"
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Handling Peak Verification Traffic Smoothly — SyncETA Capacity Scaling (Part 1)",
+  "description": "Engineering architecture note on scaling SyncETA Playwright worker pods using Redis Queue depth and KEDA while protecting active test runs during scale-in.",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-23",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Organization",
+    "name": "Empasy Engineering Team",
+    "url": "https://empasy.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Empasy Inc.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://empasy.io/empasy-logo.png"
     }
+  },
+  "image": "https://empasy.io/empasy-logo.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html"
+  },
+  "url": "https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html"
+}
     </script>
 </head>
 <body>
     {{> header_en }}
 
-    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
-        <!-- Compact Breadcrumb / Back Link -->
-        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
-            <a href="../../en/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
-                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
-                <span>Back to Tech Blog</span>
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/en/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Back to Empasy Insights</span>
             </a>
-            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
+            <span class="badge" style="margin-bottom: 0;">Engineering Note · SyncETA</span>
         </div>
-        
-        <section style="padding: 0;">
-            <div class="container" style="padding: 0;">
-                <article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-                    <div style="line-height: 1.8; color: var(--text-primary);">
-                        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.2rem; color: var(--text-secondary); font-size: 0.9rem; flex-wrap: wrap;">
-                            <span>2026-11-03</span>
-                            <span>&bull;</span>
-                            <span>4 min read</span>
-                            <span>&bull;</span>
-                            <span style="color: var(--primary-color); font-weight: 600;">QA Automation &amp; Kubernetes</span>
-                        </div>
 
-                        <h1 style="margin-top: 1rem; font-size: clamp(1.5rem, 4vw, 2.1rem); margin-bottom: 1.5rem;">SyncETA Autoscaling in Practice (1) — When Should We Scale Out Workers?</h1>
-
-                        <p style="margin-bottom: 1rem;">SyncETA (ETA) provides a scheduled execution feature that runs E2E test scenarios automatically at designated times.</p>
-
-                        <p style="margin-bottom: 1rem;">Under normal day-to-day traffic, a fixed worker pool handles scheduled runs smoothly. However, during quarterly release audits or major regression windows, hundreds of test scenarios are triggered simultaneously. When worker capacity is insufficient, scenarios pile up in the waiting queue.</p>
-
-                        <p style="margin-bottom: 1rem;">Should an operator manually scale up the Kubernetes Pod count every time a burst arrives and scale it back down afterward?</p>
-
-                        <p style="margin-bottom: 1rem;">Operating an autonomous test automation platform while relying on manual worker scaling is simply unacceptable.</p>
-
-                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">Why Not Just Use Standard Kubernetes HPA?</h2>
-
-                        <p style="margin-bottom: 1rem;">Kubernetes includes HPA (Horizontal Pod Autoscaler), which adjusts Pod replicas automatically based on resource metrics such as CPU or memory utilization.</p>
-
-                        <p style="margin-bottom: 1rem;">At first glance, applying standard HPA to ETA worker Pods seemed straightforward. Looking closely at how an ETA worker actually executes a scenario, however, revealed a fundamental mismatch.</p>
-
-                        <p style="margin-bottom: 1rem;"><strong>Each ETA worker Pod executes exactly one test scenario at a time.</strong> Inside that single Pod, a headless Chromium browser, the worker process, and the Playwright MCP server run together. Executing even a single scenario consumes substantial CPU and memory.</p>
-
-                        <p style="margin-bottom: 1rem;">In other words, whenever a worker Pod is actively running a scenario, it utilizes nearly 100% of its allocated CPU and memory.<br>
-                        If we scale Pods based on resource utilization, HPA could trigger a scale-out even when only a single scenario is running and zero jobs are waiting in the queue.</p>
-
-                        <p style="margin-bottom: 1rem;">Ultimately, <strong>what matters far more than CPU or memory utilization is how many scenarios are waiting in the queue to be executed.</strong></p>
-
-                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">Scaling Directly on Redis Queue Depth</h2>
-
-                        <p style="margin-bottom: 1rem;">The scheduled execution pipeline in SyncETA follows a clean queue-driven flow:</p>
-
-<pre style="overflow-x: auto; padding: 1rem;"><code>[WAS]
-  User registers Cron schedule
-            ↓
-  Enqueues Job into Redis Queue at trigger time
-            ↓
-[Redis Queue]
-  Pending Jobs waiting for execution
-            ↓
-[Worker Pod]
-  Dequeues Job and runs Playwright MCP scenario</code></pre>
-
-                        <p style="margin-bottom: 1rem;">Since pending jobs already accumulate in Redis, <strong>why not use the Redis queue length directly as our autoscaling signal?</strong></p>
-
-                        <p style="margin-bottom: 1rem;">For example, if all active workers are busy and 10 jobs are waiting in Redis, the cluster can spin up additional worker Pods proportional to the backlog—bounded by a configured maximum Pod limit to protect cluster capacity.</p>
-
-                        <p style="margin-bottom: 1rem;">The key engineering question was how to feed Redis Queue depth into Kubernetes autoscaling instead of standard CPU/memory metrics.</p>
-
-                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">Enter KEDA (Kubernetes Event-driven Autoscaling)</h2>
-
-                        <p style="margin-bottom: 1rem;">This is exactly the problem KEDA (Kubernetes Event-driven Autoscaling) was designed to solve.</p>
-
-                        <p style="margin-bottom: 1rem;">KEDA extends Kubernetes autoscaling beyond resource metrics, allowing workloads to scale based on external event sources and queue metrics from Redis, Kafka, RabbitMQ, and more.</p>
-
-                        <p style="margin-bottom: 1rem;">We decided to drive ETA worker Pod scaling using the <strong>pending job count in the Redis Queue</strong> via a KEDA <code>ScaledObject</code>.</p>
-
-                        <p style="margin-bottom: 1rem;">Of course, adopting KEDA with Redis requires more than a single YAML flag. Depending on whether the queue is implemented with Redis Lists, Streams, or sorted structures, the exact KEDA scaler type and queue-length inspection query must match the underlying queue semantics.</p>
-
-                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">Why Scaling In Is Harder Than Scaling Out</h2>
-
-                        <p style="margin-bottom: 1rem;">Scaling out is straightforward: when pending jobs increase, add worker Pods.</p>
-
-                        <p style="margin-bottom: 1rem;">What happens, however, when the Redis queue length drops back to 0? Can we immediately terminate extra worker Pods?</p>
-
-                        <p style="margin-bottom: 1rem;">Not immediately. <strong>Even when the Redis queue is empty, workers that already dequeued a job may still be in the middle of running a multi-minute browser scenario.</strong> If Kubernetes terminates that Pod prematurely, the Chromium browser and Playwright MCP server shut down mid-flight, aborting a valid test run.</p>
-
-                        <p style="margin-bottom: 1rem;">Therefore, queue-length autoscaling must be paired with graceful termination hooks (<code>terminationGracePeriodSeconds</code> / preStop lifecycle coordination) and safe scale-in stabilization policies that protect in-flight test executions.</p>
-
-                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">What We Are Validating Next</h2>
-
-                        <p style="margin-bottom: 1rem;">Our engineering objective is clear:</p>
-
-                        <p style="margin-bottom: 1rem;"><strong>Automatically scale out worker Pods when pending scenarios accumulate in Redis, and safely scale in Pods only after in-flight browser scenarios finish cleanly.</strong></p>
-
-                        <p style="margin-bottom: 1rem;">In Part 2, we will walk through our exact Redis Queue structure, KEDA <code>ScaledObject</code> configuration, maximum replica guardrails, and graceful scale-in lifecycle policies in production.</p>
-                    </div>
-                </article>
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-11-03 (Updated 2026-11-23)</span>
+                <span>&bull;</span>
+                <span>4 min read</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">Automated Checks · Scaling</span>
             </div>
-        </section>
+
+            <h1 class="ed-blog-title">Handling Peak Verification Traffic Smoothly — SyncETA Capacity Scaling (Part 1)</h1>
+
+            <div class="ed-exec-summary" aria-label="3-Line Executive &amp; Business Summary">
+                <div class="ed-exec-summary-kicker">3-Line Executive &amp; Business Summary</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">Challenge</span><span>When dozens of scheduled pre-release checks arrive simultaneously, fixed worker pools build up long queues and delay release sign-offs.</span></li>
+                    <li><span class="ed-exec-summary-tag">Approach</span><span>Instead of scaling on CPU usage, SyncETA monitors pending jobs in Redis Queue with KEDA to scale workers on demand while draining active runs safely.</span></li>
+                    <li><span class="ed-exec-summary-tag">Impact</span><span>Teams keep release-day verification times steady without paying for idle peak capacity during quiet hours.</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">Want to verify how this fits your team workflows?</span>
+                    <a href="/en/pages/contact.html?topics=qa" class="btn btn-primary btn-sm" style="min-height: 36px;">Request Consultation</a>
+                </div>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>Technical Deep Dive for IT &amp; Engineering Teams</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="In This Article">
+  <div class="ed-article-toc-title">In This Article</div>
+  <ol>
+    <li><a href="#sec-1">1. Why Standard CPU/Memory HPA Was Not Enough</a></li>
+    <li><a href="#sec-2">2. Scheduled Execution Flow &amp; Redis Queue Depth</a></li>
+    <li><a href="#sec-3">3. Adopting KEDA (Kubernetes Event-Driven Autoscaling)</a></li>
+    <li><a href="#sec-4">4. The Harder Problem: Safe Scale-In Without Aborting Active Tests</a></li>
+    <li><a href="#sec-5">5. Continue to Part 2</a></li>
+  </ol>
+</nav>
+<p>SyncETA supports scheduled execution of automated screen checks. Under normal daily traffic, a fixed number of worker pods handles everything smoothly. During quarterly audits or major release windows, however, dozens of scenarios trigger at once—and if worker capacity stays fixed, pending jobs pile up quickly.</p>
+<p>Manually scaling Kubernetes pods up before a release window and scaling them back down afterward defeats the purpose of an automated QA platform. We needed demand-driven worker scaling tailored to browser automation workloads.</p>
+
+<h2 id="sec-1">1. Why Standard CPU/Memory HPA Was Not Enough</h2>
+<p>Kubernetes provides <strong>HPA (Horizontal Pod Autoscaler)</strong> out of the box based on CPU or memory utilization. However, <strong>each SyncETA worker pod runs one isolated scenario at a time</strong>, bundling a headless browser, worker process, and Playwright MCP server inside the container.</p>
+<p>Even a single running scenario legitimately consumes a high share of the pod's allocated CPU and memory. Scaling purely on resource utilization would trigger unnecessary scale-outs even when only one job is running and no queue backlog exists. The true demand signal is <strong>how many scenarios are waiting in the queue</strong>.</p>
+
+<h2 id="sec-2">2. Scheduled Execution Flow &amp; Redis Queue Depth</h2>
+<p>SyncETA dispatches scheduled checks through a straightforward queue pipeline:</p>
+
+<pre><code>[WAS / Scheduler]
+  User registers Cron schedule
+            │
+            ▼
+  Enqueues Job into Redis Queue at trigger time
+            │
+            ▼
+[Redis Queue]
+  Pending Jobs waiting for execution (Queue Length = Backlog)
+            │
+            ▼
+[SyncETA Worker Pod]
+  Pulls Job and runs browser + Playwright MCP scenario</code></pre>
+
+<p>Because waiting jobs already accumulate in Redis Queue, scaling workers according to queue length matches real demand directly—bounded by a configured maximum pod ceiling to protect cluster resources.</p>
+
+<h2 id="sec-3">3. Adopting KEDA (Kubernetes Event-Driven Autoscaling)</h2>
+<p>To scale Kubernetes workloads from queue metrics, we evaluated <strong>KEDA (Kubernetes Event-Driven Autoscaling)</strong>. KEDA extends Kubernetes to autoscale deployments based on external event sources such as Redis, Kafka, and RabbitMQ.</p>
+<p>Because KEDA's Redis scaler behavior depends on the exact underlying data structure (List, Stream, or queue library keys), our first implementation step is mapping the exact Redis key layout and consumption semantics used by SyncETA.</p>
+
+<h2 id="sec-4">4. The Harder Problem: Safe Scale-In Without Aborting Active Tests</h2>
+<p>Scaling out when queue length rises is straightforward. Scaling back in safely is far trickier: <strong>even when Redis Queue length hits zero, running worker pods may still be mid-scenario.</strong> Terminating a busy pod immediately kills its browser and Playwright MCP session, causing false test failures.</p>
+<p>Safe scale-in therefore requires pairing KEDA <code>cooldownPeriod</code> settings with graceful pod draining, <code>preStop</code> hooks, and adequate <code>terminationGracePeriodSeconds</code> so active runs complete cleanly before termination.</p>
+
+<h2 id="sec-5">5. Continue to Part 2</h2>
+<p>Read <a href="/en/blog/eta-autoscaling-keda-graceful-scalein.html">Part 2: KEDA ScaledObject &amp; Graceful Scale-In for Active Tests</a> for the full BullMQ queue wiring, <code>ScaledObject</code> manifest, max-replica guardrails, and graceful termination checklist.</p>
+
+<div class="ed-article-note">
+  <div class="ed-article-note-title">Engineering Note</div>
+  <p style="margin: 0; font-size: 0.92rem; color: #475569;">Building out SyncETA's Kubernetes runtime and GitHub Actions CI/CD pipelines reinforced an everyday truth of platform engineering: thoughtful operational automation behind the scenes is what turns a good developer tool into a dependable enterprise service.</p>
+</div>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>Try SyncETA Automated Screen Verification</strong>
+                <span>Download the Windows / macOS desktop app or inspect the web monitoring console.</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit SyncETA &#8599;</a>
+                <a href="/en/download_eta.html" class="btn btn-outline btn-sm">Desktop App Download</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="Related Insights">
+        <h2 class="ed-related-heading">Related Insights</h2>
+        <div class="ed-related-grid">
+        <a href="/en/blog/eta-autoscaling-keda-graceful-scalein.html" class="ed-related-card">
+            <span class="ed-related-cat">Automated Checks</span>
+            <span class="ed-related-title">SyncETA Capacity Scaling (Part 2) — KEDA ScaledObject &amp; Graceful Scale-In for Active Tests</span>
+            <span class="ed-related-more">Read More &rarr;</span>
+        </a>
+        <a href="/en/blog/synceta-intelligent-regression-testing-pipeline.html" class="ed-related-card">
+            <span class="ed-related-cat">Verification Guide</span>
+            <span class="ed-related-title">Automated Screen Checks Without Coding: From Click Recording to Self-Recovery</span>
+            <span class="ed-related-more">Read More &rarr;</span>
+        </a>
+        </div>
+    </section>
     </main>
 
-    <!-- Footer -->
     {{> footer_en }}
 
-    <!-- Scripts -->
     <script type="module" src="/assets/js/i18n.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
 </body>

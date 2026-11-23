@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -18,154 +39,183 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETA オートスケーリング導入記 (1) — ワーカーをいつ増やすべきか？ | Empasy 技術ブログ</title>
-    <meta name="description" content="Playwright MCPブラウザワーカーにおいてCPUベースのHPAが適さない理由と、KEDAおよびRedis Queue待機数を基準としたイベント駆動型オートスケーリング設計を解説します。">
-    <meta name="keywords" content="SyncETA, SyncETA, Kubernetes オートスケーリング, KEDA, HPA, Redis Queue, Playwright MCP, QA自動化, Empasy">
-    <meta property="og:title" content="ETA オートスケーリング導入記 (1) — ワーカーをいつ増やすべきか？ | Empasy 技術ブログ">
-    <meta property="og:description" content="Playwright MCPブラウザワーカーにおいてCPUベースのHPAが適さない理由と、KEDAおよびRedis Queue待機数を基準としたイベント駆動型オートスケーリング設計を解説します。">
+    <title>点検作業が集中しても待たせない自動拡張の仕組み — SyncETA 運用記 (1) | Empasy</title>
+    <meta name="description" content="SyncETAの定期点検集中時におけるHPAの課題を整理し、Redis Queue待機数とKEDAでPlaywrightワーカーPodを安全に自動拡張する設計解説。">
+    <meta name="keywords" content="SyncETA, KEDA, Kubernetes オートスケーリング, Redis Queue, Playwright ワーカー, HPA, テスト自動化インフラ">
+    <meta name="author" content="株式会社Empasy (Empasy Inc.)">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="点検作業が集中しても待たせない自動拡張の仕組み — SyncETA 運用記 (1) | Empasy">
+    <meta property="og:description" content="SyncETAの定期点検集中時におけるHPAの課題を整理し、Redis Queue待機数とKEDAでPlaywrightワーカーPodを安全に自動拡張する設計解説。">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:url" content="https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html">
     <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-11-03">
+    <meta property="article:modified_time" content="2026-11-23">
     <link rel="canonical" href="https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html">
     <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html" />
     <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html" />
     <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "ETA オートスケーリング導入記 (1) — ワーカーをいつ増やすべきか？",
-      "description": "Playwright MCPブラウザワーカーにおいてCPUベースのHPAが適さない理由と、KEDAおよびRedis Queue待機数を基準としたイベント駆動型オートスケーリング設計を解説します。",
-      "datePublished": "2026-11-03",
-      "author": {
-        "@type": "Organization",
-        "name": "Empasy Engineering Team",
-        "url": "https://empasy.io"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Empasy",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.io/empasy-logo.png"
-        }
-      },
-      "url": "https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html"
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "点検作業が集中しても待たせない自動拡張の仕組み — SyncETA 運用記 (1)",
+  "description": "SyncETAの定期点検集中時におけるHPAの課題を整理し、Redis Queue待機数とKEDAでPlaywrightワーカーPodを安全に自動拡張する設計解説。",
+  "datePublished": "2026-11-03",
+  "dateModified": "2026-11-23",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "Empasy Engineering Team",
+    "url": "https://empasy.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社Empasy (Empasy Inc.)",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://empasy.io/empasy-logo.png"
     }
+  },
+  "image": "https://empasy.io/empasy-logo.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html"
+  },
+  "url": "https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html"
+}
     </script>
 </head>
 <body>
     {{> header_ja }}
 
-    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
-        <!-- Compact Breadcrumb / Back Link -->
-        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
-            <a href="../../ja/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
-                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
-                <span>Tech Blog 一覧へ</span>
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/ja/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Empasy インサイト一覧へ</span>
             </a>
-            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
+            <span class="badge" style="margin-bottom: 0;">Engineering Note · SyncETA</span>
         </div>
-        
-        <section style="padding: 0;">
-            <div class="container" style="padding: 0;">
-                <article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-                    <div style="line-height: 1.8; color: var(--text-primary);">
-                        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.2rem; color: var(--text-secondary); font-size: 0.9rem; flex-wrap: wrap;">
-                            <span>2026-11-03</span>
-                            <span>&bull;</span>
-                            <span>所要時間 約4分</span>
-                            <span>&bull;</span>
-                            <span style="color: var(--primary-color); font-weight: 600;">QA自動化 &amp; Kubernetes</span>
-                        </div>
 
-                        <h1 style="margin-top: 1rem; font-size: clamp(1.5rem, 4vw, 2.1rem); margin-bottom: 1.5rem;">ETA オートスケーリング導入記 (1) — ワーカーをいつ増やすべきか？</h1>
-
-                        <p style="margin-bottom: 1rem;">SyncETA（ETA）は、テストシナリオを指定した時刻に自動実行できるスケジュール機能を提供しています。</p>
-
-                        <p style="margin-bottom: 1rem;">通常運用では問題になりませんが、四半期ごとの大規模リグレッションテストのように特定の時間帯にジョブが一斉に集中するケースがあります。このときワーカー数が不足していると、実行待ちのシナリオが滞留し続けます。</p>
-
-                        <p style="margin-bottom: 1rem;">かといって、イベントが集中するたびに運用者が手動でPod数を増やし、終了後にまた手動で減らすのが最善でしょうか？</p>
-
-                        <p style="margin-bottom: 1rem;">テスト自動化ソリューションを運用しながら、肝心のワーカー増設を手動で行うというのは到底受け入れられません。</p>
-
-                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">通常のHPAを使えばよいのではないか？</h2>
-
-                        <p style="margin-bottom: 1rem;">KubernetesにはHPA（Horizontal Pod Autoscaler）があり、CPUやメモリ使用率などを基準にPod数を自動調整できます。</p>
-
-                        <p style="margin-bottom: 1rem;">当初はETAのワーカーにもHPAを適用すればよいと考えていましたが、ワーカーの実行構造を改めて整理すると大きな問題がありました。</p>
-
-                        <p style="margin-bottom: 1rem;"><strong>ETAのワーカーPod 1つは、一度に1つのシナリオのみを実行します。</strong>そしてPod内部ではヘッドレスブラウザ、ワーカープロセス、Playwright MCPサーバーが同時に動作するため、1つのシナリオを実行するだけでも多くのリソースを消費します。</p>
-
-                        <p style="margin-bottom: 1rem;">つまり、ワーカーがシナリオを実行中であれば、Podに割り当てられたCPUとメモリをほぼすべて使い切ります。<br>
-                        そのため、リソース使用率を基準にPod数を増やす設定にすると、シナリオがわずか1つ実行されているだけでもオートスケーリングが発動してしまう恐れがあります。</p>
-
-                        <p style="margin-bottom: 1rem;">結論として、<strong>リソース使用率よりも重要なのは「実行を待っているシナリオがどれだけ存在するか（待機キューの長さ）」</strong>でした。</p>
-
-                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">待機キュー（Redis Queue）を基準にスケールする</h2>
-
-                        <p style="margin-bottom: 1rem;">現在、ETAのスケジュール実行フローは以下のようなシンプルな構成になっています。</p>
-
-<pre style="overflow-x: auto; padding: 1rem;"><code>[WAS]
-  ユーザーがCronスケジュールを登録
-            ↓
-  実行時刻にRedis QueueへJobを登録
-            ↓
-[Redis Queue]
-  実行待機中のJob
-            ↓
-[Worker Pod]
-  Jobを取得してシナリオを実行</code></pre>
-
-                        <p style="margin-bottom: 1rem;">すでにRedis上に実行待ちのジョブが蓄積されているため、<strong>この待機キューの長さを基準にワーカーを増減させればよいのではないか</strong>と考えました。</p>
-
-                        <p style="margin-bottom: 1rem;">たとえば全ワーカーが稼働中で待機Jobが10件あるなら、その分だけワーカーPodを追加起動して並列処理させます。もちろんクラスタ資源は有限であるため、最大Pod数の上限（maxReplicaCount）は設けます。</p>
-
-                        <p style="margin-bottom: 1rem;">課題は、一般的なCPU・メモリ指標ではなくRedis Queueの待機数をどのようにKubernetesのスケーリング指標として連携するかでした。</p>
-
-                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">KEDA（Kubernetes Event-driven Autoscaling）の採用</h2>
-
-                        <p style="margin-bottom: 1rem;">調査を進めると、まさにこの用途に向けたKEDA（Kubernetes Event-driven Autoscaling）という仕組みがありました。</p>
-
-                        <p style="margin-bottom: 1rem;">KEDAはCPU使用率のようなリソース指標だけでなく、Redis、Kafka、RabbitMQなど外部システムのイベントやキュー長を基準にKubernetesワークロードを拡張できます。</p>
-
-                        <p style="margin-bottom: 1rem;">ETAでは、Redis Queueに積まれた<strong>待機Job数</strong>を基準にワーカーPod数を制御する方針を採用しました。</p>
-
-                        <p style="margin-bottom: 1rem;">ただし、実際のQueue実装方式（List、Streamなど）によってKEDAで使用するScalerや待機数の計測方法が異なるため、内部データ構造に合わせた設定検証が必要です。</p>
-
-                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">増やすことよりも「減らす（スケールイン）」方が難しい</h2>
-
-                        <p style="margin-bottom: 1rem;">Podを増やす条件は明確です。待機Jobが増えればワーカーを追加すればよいからです。</p>
-
-                        <p style="margin-bottom: 1rem;">しかし、キューからジョブが取り出されて待機数が0になった瞬間に、すべてのワーカーPodを即座に縮小してもよいでしょうか？</p>
-
-                        <p style="margin-bottom: 1rem;">そうではありません。<strong>Redis Queueが空であっても、すでにJobを取得したワーカーPod内ではシナリオがまだ実行中である可能性があります。</strong>この状態でPodが強制終了されると、ブラウザとMCPサーバーも同時に停止し、実行中のテストが中断されてしまいます。</p>
-
-                        <p style="margin-bottom: 1rem;">したがって、単にQueue長を見るだけでなく、実行中のJobを保護するためのグレースフルシャットダウン処理とスケールインポリシーを併せて設計する必要があります。</p>
-
-                        <h2 style="margin-top: 2rem; font-size: 1.5rem; margin-bottom: 1rem;">今後の検証ステップ</h2>
-
-                        <p style="margin-bottom: 1rem;">目標は明確です。</p>
-
-                        <p style="margin-bottom: 1rem;"><strong>待機中のシナリオが増えればワーカーPodが自動的にスケールアウトし、ジョブが減れば実行中のシナリオを安全に完了させた後にPodがスケールインする仕組みを構築すること。</strong></p>
-
-                        <p style="margin-bottom: 1rem;">次回（第2回）では、実際のRedis Queue構造の確認とKEDA <code>ScaledObject</code>設定、最大Pod数制限、そして実行中ジョブを保護する終了ポリシーの実装について詳しく紹介します。</p>
-                    </div>
-                </article>
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-11-03 (更新 2026-11-23)</span>
+                <span>&bull;</span>
+                <span>読了目安 約4分</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">画面自動点検・インフラ拡張</span>
             </div>
-        </section>
+
+            <h1 class="ed-blog-title">点検作業が集中しても待たせない自動拡張の仕組み — SyncETA 運用記 (1)</h1>
+
+            <div class="ed-exec-summary" aria-label="経営層・現場担当者のための3行要約">
+                <div class="ed-exec-summary-kicker">経営層・現場担当者のための3行要約</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">従来の課題</span><span>定期リリース直前に数十件の画面点検が一斉に集中すると、固定ワーカー構成では待ち時間が長くなり公開判断が遅れます。</span></li>
+                    <li><span class="ed-exec-summary-tag">解決アプローチ</span><span>CPU使用率ではなくRedis Queueの待機件数を基準にKEDAでワーカーを自動増設し、実行中テストを保護しながら安全に縮小します。</span></li>
+                    <li><span class="ed-exec-summary-tag">導入効果</span><span>繁忙時間帯の安定した点検完了と、平常時のサーバーコスト最適化を両立します。</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">自社の業務フローにそのまま適用できるか確認してみませんか？</span>
+                    <a href="/ja/pages/contact.html?topics=qa" class="btn btn-primary btn-sm" style="min-height: 36px;">導入相談を申し込む</a>
+                </div>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>IT担当者・開発者向けの詳細技術解説</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="この記事の目次">
+  <div class="ed-article-toc-title">この記事の目次</div>
+  <ol>
+    <li><a href="#sec-1">1. 標準HPA（CPU・メモリ基準）が合わなかった理由</a></li>
+    <li><a href="#sec-2">2. スケジュール実行フローとRedis Queue待機数</a></li>
+    <li><a href="#sec-3">3. KEDA（Kubernetes Event-driven Autoscaling）の採用検討</a></li>
+    <li><a href="#sec-4">4. 増やすより難しい課題：実行中テストを守る安全な縮小</a></li>
+    <li><a href="#sec-5">5. 第2回へ続く：KEDA導入と安全な縮小実装</a></li>
+  </ol>
+</nav>
+<p>SyncETAには、指定した時刻に画面点検シナリオを自動実行するスケジュール機能があります。通常運用では固定数のワーカーで十分処理できますが、四半期点検や大型リリース直前のように数十件のシナリオが一斉に起動されると、ワーカー不足により待機列が急増します。</p>
+<p>テストを自動化しているにもかかわらず、負荷が集中するたびに運用担当者が手動でKubernetesのPod数を増減させるのでは本末転倒です。そこで、ブラウザ自動テストの特性に合ったオートスケーリング設計を検討しました。</p>
+
+<h2 id="sec-1">1. 標準HPA（CPU・メモリ基準）が合わなかった理由</h2>
+<p>Kubernetes標準の<strong>HPA（Horizontal Pod Autoscaler）</strong>はCPUやメモリ使用率をもとにPod数を調整します。しかし、<strong>SyncETAのワーカーPodは1台につき1シナリオを隔離実行する構成</strong>であり、内部でヘッドレスブラウザ・ワーカープロセス・Playwright MCPサーバーが同時稼働します。</p>
+<p>そのため、シナリオを1件実行しているだけでも割当CPU・メモリ使用率が高くなりやすく、待機ジョブがゼロでも不要なスケールアウトが起きる恐れがあります。本当に監視すべき指標はリソース使用率ではなく、<strong>実行待ちキューに溜まっているシナリオ件数</strong>でした。</p>
+
+<h2 id="sec-2">2. スケジュール実行フローとRedis Queue待機数</h2>
+<p>SyncETAのスケジュール実行は次のパイプラインで進みます。</p>
+
+<pre><code>[WAS / Scheduler]
+  担当者がCronスケジュールを登録
+            │
+            ▼
+  実行時刻にRedis QueueへJobを登録
+            │
+            ▼
+[Redis Queue]
+  実行待ちJobが蓄積（Queue Length = 待機件数）
+            │
+            ▼
+[SyncETA Worker Pod]
+  Jobを取得しブラウザ + Playwright MCPでシナリオ実行</code></pre>
+
+<p>すでに実行待ちジョブがRedis Queueに蓄積されているため、<strong>待機キュー長をスケーリング指標にすれば</strong>需要に応じて過不足なくワーカーを増設できます（クラスタ保護のため最大Pod上限は必須設定とします）。</p>
+
+<h2 id="sec-3">3. KEDA（Kubernetes Event-driven Autoscaling）の採用検討</h2>
+<p>外部キューの待機数に応じてワークロードを拡張するオープンソース基盤として<strong>KEDA</strong>を選定しました。KEDAはRedis・Kafka・RabbitMQなどの外部指標を監視し、Deploymentのレプリカ数を柔軟に制御できます。</p>
+<p>ただしRedisの実装形式（List・Stream・キューライブラリのキー構造）によって利用すべきScalerと計測方法が異なるため、まずはSyncETAの実際のキュー構造を確認したうえで設定を設計します。</p>
+
+<h2 id="sec-4">4. 増やすより難しい課題：実行中テストを守る安全な縮小</h2>
+<p>待機件数が増えた際にPodを増やすのは明快ですが、難しいのは縮小（スケールイン）です。<strong>Redis Queueの待機数が0になっても、すでにJobを取得したワーカー内ではテストシナリオが実行中である場合があります。</strong></p>
+<p>このタイミングでPodが強制終了されるとブラウザとMCPサーバーも停止し、正常なテストが中断してしまいます。そのためKEDAの<code>cooldownPeriod</code>に加え、<code>preStop</code>フックや<code>terminationGracePeriodSeconds</code>、実行中ジョブ完了待機（Draining）の仕組みをセットで設計する必要があります。</p>
+
+<h2 id="sec-5">5. 第2回へ続く：KEDA導入と安全な縮小実装</h2>
+<p>目指す姿は明確です。<strong>待機シナリオが増えれば自動でワーカーが増え、処理が落ち着けば実行中テストを安全に完了させてから縮小する基盤</strong>です。具体的なBullMQキュー（<code>scheduler_jobs</code>）連携とKEDA <code>ScaledObject</code>・安全終了設計は<a href="/ja/blog/eta-autoscaling-keda-graceful-scalein.html">第2回：KEDA ScaledObjectと実行中テストを守る安全な縮小設計</a>で詳しく解説しています。</p>
+
+<div class="ed-article-note">
+  <div class="ed-article-note-title">エンジニアリングノート</div>
+  <p style="margin: 0; font-size: 0.92rem; color: #475569;">SyncETAの実行基盤をKubernetesへ移行し、GitHub ActionsによるCI/CDを一つずつ組み立てた経験を通じて、裏側の運用自動化こそがプロダクトの信頼性を支える要であると改めて実感しています。</p>
+</div>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>SyncETA 画面自動点検を体験してみませんか</strong>
+                <span>Windows / macOS デスクトップアプリのダウンロードとWeb管理画面の案内をご覧いただけます。</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SyncETA 公式サイト &#8599;</a>
+                <a href="/ja/download_eta.html" class="btn btn-outline btn-sm">デスクトップ版ダウンロード</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="あわせて読みたいインサイト">
+        <h2 class="ed-related-heading">あわせて読みたいインサイト</h2>
+        <div class="ed-related-grid">
+        <a href="/ja/blog/eta-autoscaling-keda-graceful-scalein.html" class="ed-related-card">
+            <span class="ed-related-cat">画面自動点検</span>
+            <span class="ed-related-title">SyncETA 自動拡張運用記 (2) — KEDA ScaledObjectと実行中テストを守る安全な縮小設計</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        <a href="/ja/blog/synceta-intelligent-regression-testing-pipeline.html" class="ed-related-card">
+            <span class="ed-related-cat">自動点検ガイド</span>
+            <span class="ed-related-title">コード不要の画面自動点検ガイド：クリック記録から画面変更への自動追従まで</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        </div>
+    </section>
     </main>
 
-    <!-- Footer -->
     {{> footer_ja }}
 
-    <!-- Scripts -->
     <script type="module" src="/assets/js/i18n.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
 </body>

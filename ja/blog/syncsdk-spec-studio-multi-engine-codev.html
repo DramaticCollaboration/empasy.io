@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
+        gtag('js', new Date());
+        gtag('config', 'G-6BNPM5TX7C');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Step Spec Studioと15種コーディング基盤切替：SyncSDKによる開発チーム協業（Co-Dev）設計 | Empasy</title>
+    <meta name="description" content="ICodingAgentClient標準SPI、CodingAgentType 15種エンジン切替、5-Step Spec Studio、Living Spec逆同期、SI 4大納品物出力を備えたSyncSDK・SyncVerse協業設計。">
+    <meta name="keywords" content="SyncSDK, 5-Step Spec Studio, ICodingAgentClient, CodingAgentRoutingProxy, 15種コーディング基盤, Living Spec逆同期, Co-Dev, SyncVerse, Empasy">
+    <meta name="author" content="株式会社Empasy (Empasy Inc.)">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="5-Step Spec Studioと15種コーディング基盤切替：SyncSDKによる開発チーム協業（Co-Dev）設計 | Empasy">
+    <meta property="og:description" content="ICodingAgentClient標準SPI、CodingAgentType 15種エンジン切替、5-Step Spec Studio、Living Spec逆同期、SI 4大納品物出力を備えたSyncSDK・SyncVerse協業設計。">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:url" content="https://empasy.io/ja/blog/syncsdk-spec-studio-multi-engine-codev.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-11-22">
+    <meta property="article:modified_time" content="2026-11-23">
+    <link rel="canonical" href="https://empasy.io/ja/blog/syncsdk-spec-studio-multi-engine-codev.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "5-Step Spec Studioと15種コーディング基盤切替：SyncSDKによる開発チーム協業（Co-Dev）設計",
+  "description": "ICodingAgentClient標準SPI、CodingAgentType 15種エンジン切替、5-Step Spec Studio、Living Spec逆同期、SI 4大納品物出力を備えたSyncSDK・SyncVerse協業設計。",
+  "datePublished": "2026-11-22",
+  "dateModified": "2026-11-23",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "Empasy Engineering Team",
+    "url": "https://empasy.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社Empasy (Empasy Inc.)",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://empasy.io/empasy-logo.png"
+    }
+  },
+  "image": "https://empasy.io/empasy-logo.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://empasy.io/ja/blog/syncsdk-spec-studio-multi-engine-codev.html"
+  },
+  "url": "https://empasy.io/ja/blog/syncsdk-spec-studio-multi-engine-codev.html"
+}
+    </script>
+</head>
+<body>
+    {{> header_ja }}
+
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/ja/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Empasy インサイト一覧へ</span>
+            </a>
+            <span class="badge" style="margin-bottom: 0;">マルチエンジンSPI・SyncSDK</span>
+        </div>
+
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-11-22 (更新 2026-11-23)</span>
+                <span>&bull;</span>
+                <span>読了目安 約7分</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">協業開発・Spec Studio・SyncSDK</span>
+            </div>
+
+            <h1 class="ed-blog-title">5-Step Spec Studioと15種コーディング基盤切替：SyncSDKによる開発チーム協業（Co-Dev）設計</h1>
+
+            <div class="ed-exec-summary" aria-label="経営層・現場担当者のための3行要約">
+                <div class="ed-exec-summary-kicker">経営層・現場担当者のための3行要約</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">従来の課題</span><span>特定のAIコーディング製品1社へ固定すると価格改定や社内セキュリティ要件変化への対応が難しく、改修のたびに設計書とコードが乖離します。</span></li>
+                    <li><span class="ed-exec-summary-tag">解決アプローチ</span><span>SyncSDK（ICodingAgentClient）で15種のコーディング基盤を無停止切替し、SyncVerse 5-Step Spec Studioで仕様確定→PR作成→開発者検証→仕様逆同期・納品物出力を一貫管理します。</span></li>
+                    <li><span class="ed-exec-summary-tag">導入効果</span><span>特定ベンダーに縛られず社内アーキテクチャ基準と最新設計ドキュメントの整合性を保てます。</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">自社の業務フローにそのまま適用できるか確認してみませんか？</span>
+                    <a href="/ja/pages/contact.html?topics=system" class="btn btn-primary btn-sm" style="min-height: 36px;">導入相談を申し込む</a>
+                </div>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>IT担当者・開発者向けの詳細技術解説</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="この記事の目次">
+  <div class="ed-article-toc-title">この記事の目次</div>
+  <ol>
+    <li><a href="#sec-1">1. ICodingAgentClient SPI と15種エンジンの無停止ホットスワップ</a></li>
+    <li><a href="#sec-2">2. 5-Step Spec Studio と社内開発者 Co-Dev パイプライン</a></li>
+    <li><a href="#sec-3">3. Living Spec 逆同期とSI 4大納品ドキュメント自動生成</a></li>
+    <li><a href="#sec-4">4. ベンダー独立性とガバナンスの両立</a></li>
+  </ol>
+</nav>
+<p>開発組織がAIコーディング支援を本格導入すると、単一ベンダーへのロックインと、高速なコード変更による<strong>設計書・仕様書の陳腐化（ドキュメントドリフト）</strong>が大きな課題になります。</p>
+<p>Empasyは<strong><code>SyncSDK</code>の15種マルチエンジン標準SPI</strong>と<strong><code>SyncVerse</code>の5-Step Spec Studio・仕様逆同期（Living Spec）</strong>によってこれらを解決しています。</p>
+
+<h2 id="sec-1">1. ICodingAgentClient SPI と15種エンジンの無停止ホットスワップ</h2>
+<p><code>sync-sdk-common</code>は15種のコーディング基盤を<code>ICodingAgentClient</code>と<code>CodingAgentType</code>で4つの実行方式に統一しています。</p>
+<ul>
+  <li><strong>SDK Native（1種）：</strong><code>ANTIGRAVITY</code></li>
+  <li><strong>CLI Subprocess（11種）：</strong><code>CLAUDE_CODE</code>、<code>GITHUB_COPILOT</code>、<code>CODEX_CLI</code>、<code>GEMINI_CLI</code>、<code>CURSOR_CLI</code>、<code>CONTINUE</code>、<code>AIDER</code>、<code>GOOSE</code>、<code>MINI_SWE</code>、<code>CLINE</code>、<code>KIRO</code></li>
+  <li><strong>Docker隔離実行（2種）：</strong><code>OPENHANDS</code>、<code>OPENSWE</code></li>
+  <li><strong>REST API（1種）：</strong><code>EIGENT</code></li>
+</ul>
+<p><code>CodingAgentRoutingProxy</code>により再起動なしで稼働エンジンを切り替えられ、エンジン別の既定モデルも<code>SystemConfigHolder</code>（<code>sync.sdk.agent.default-model.&lt;code_lower&gt;</code>）からDB動的に解決されます。</p>
+
+<h2 id="sec-2">2. 5-Step Spec Studio と社内開発者 Co-Dev パイプライン</h2>
+
+<div class="modern-stack">
+  <div class="stack-layer">
+    <div class="stack-label">STEP 01</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">受入基準（AC）整理＆コードグラフ影響分析</div>
+      <div class="stack-desc">業務要望を受入基準へ構造化し、4段階依存グラフで変更対象ファイルを特定</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">STEP 02</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">機能・画面仕様＆Decision Queue</div>
+      <div class="stack-desc">詳細仕様・画面案を作成し、影響度別の未決事項キューで担当者が方針確定</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">STEP 03</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">技術仕様＆APIカバレッジゲート</div>
+      <div class="stack-desc">DDL・REST API契約・対象focusFilesを実装前に検証し漏れを防止</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">STEP 04</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">SyncSDK実装＆4-Cycle品質検証</div>
+      <div class="stack-desc">稼働エンジン（15種から選択）がfeat/* PRを作成しビルド・テストを自動検証</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">STEP 05</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">開発者Co-Dev・仕様逆同期＆SI納品物</div>
+      <div class="stack-desc">ローカル検証・修正後にreverse-syncで仕様自動更新し4種納品ドキュメントを出力</div>
+    </div>
+  </div>
+</div>
+
+<h2 id="sec-3">3. Living Spec 逆同期とSI 4大納品ドキュメント自動生成</h2>
+<ul>
+  <li><strong>仕様逆同期（<code>LivingSpecReverseSyncService</code>）：</strong>社内開発者がローカルIDEでエッジケースを補完・プッシュした際、実際のGit Diffから機能・API仕様を自動更新します。</li>
+  <li><strong>SI 4大納品物一括出力（<code>SpecDeliverableAndGovernanceSupport</code>）：</strong>確定仕様から<strong>プログラム仕様書（HTML）・画面設計書（HTML）・テーブル定義書（CSV/XLSX）・単体テストシナリオ（CSV/XLSX）</strong>を一括生成できます。</li>
+</ul>
+
+<h2 id="sec-4">4. ベンダー独立性とガバナンスの両立</h2>
+<p>差し替え可能なコーディング基盤、実装前の仕様ゲート、社内開発者によるレビュー、最新状態が保たれる納品物を一体運用することで、安心して開発生産性を高められます。</p>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>SyncVerse の 5-Step Spec Studio と Co-Dev をご確認ください</strong>
+                <span>エンジン切替・Monaco差分レビュー・納品物出力の詳細はSyncVerse公式サイトでご覧いただけます。</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SyncVerse を見る &#8599;</a>
+                <a href="/ja/pages/contact.html?topics=system" class="btn btn-outline btn-sm">導入相談</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="あわせて読みたいインサイト">
+        <h2 class="ed-related-heading">あわせて読みたいインサイト</h2>
+        <div class="ed-related-grid">
+        <a href="/ja/blog/syncverse-mcp-ai-orchestration-architecture.html" class="ed-related-card">
+            <span class="ed-related-cat">協業・段階別承認</span>
+            <span class="ed-related-title">分散した業務ツールをひとつに繋ぐ協業・承認管理：SyncVerse 運用ガイド</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        <a href="/ja/blog/sync-core-dynamic-config-prompt-cluster-sync.html" class="ed-related-card">
+            <span class="ed-related-cat">共通コア・運用設計</span>
+            <span class="ed-related-title">再起動なしでAIプロンプトと運用設定を更新する：sys_config・sys_prompt_template クラスタ同期</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        </div>
+    </section>
+    </main>
+
+    {{> footer_ja }}
+
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

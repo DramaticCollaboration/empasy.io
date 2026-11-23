@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -16,51 +37,39 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
     <!-- End Google Tag Manager -->
-    <title>Empasy | Syncverse mcp ai orchestration architecture</title>
-    <meta name="description" content="SyncVerseは異機種サービスを統合するLLMベースのAIオーケストレーションプラットフォームです。インテリジェントワークフローを完成させます。">
-    <meta name="keywords" content="エンタープライズAIエコシステム, 企業用AI統合プラットフォーム, DX AIアーキテクチャ, Empasy, AIオーケストレーションプラットフォーム, 異機種サービスAI統合, インテリジェントワークフロー自動化, LLM企業向けハブ, Agentic AIインフラ">
-    <meta property="og:title" content="Empasy | Syncverse mcp ai orchestration architecture">
-    <meta property="og:description" content="SyncVerseは異機種サービスを統合するLLMベースのAIオーケストレーションプラットフォームです。インテリジェントワークフローを完成させます。">
-    <meta property="og:type" content="website">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Empasy">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Empasy 技術ブログ",
-      "url": "https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html",
-      "description": "エンタープライズAIエージェントおよびAIOpsに関する最新技術インサイト",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Empasy",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.io/empasy-logo.png"
-        }
-      }
-    }
-    </script>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-    <!-- SEO & AIO Tags -->
-    
-    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <title>分散した業務ツールをひとつに繋ぐ協業・承認管理：SyncVerse 運用ガイド | Empasy</title>
+    <meta name="description" content="MCPベースのA2A統括、5-Step Spec Studio、SyncSDK 15種エンジン切替、3段階ハーネス、多段階承認(Multi-Party HITL)を備えたSyncVerse設計。">
+    <meta name="keywords" content="SyncVerse, MCPオーケストレーション, A2A連携, 5-Step Spec Studio, SyncSDK, 多段階承認 HITL, エンタープライズAI統制, Empasy">
+    <meta name="author" content="株式会社Empasy (Empasy Inc.)">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <meta property="og:title" content="分散した業務ツールをひとつに繋ぐ協業・承認管理：SyncVerse 運用ガイド | Empasy">
+    <meta property="og:description" content="MCPベースのA2A統括、5-Step Spec Studio、SyncSDK 15種エンジン切替、3段階ハーネス、多段階承認(Multi-Party HITL)を備えたSyncVerse設計。">
+    <meta property="og:type" content="article">
     <meta property="og:locale" content="ja_JP">
+    <meta property="og:url" content="https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-05-30">
+    <meta property="article:modified_time" content="2026-11-23">
+    <link rel="canonical" href="https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncverse-mcp-ai-orchestration-architecture.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncverse-mcp-ai-orchestration-architecture.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncverse-mcp-ai-orchestration-architecture.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "[Tech Blog] エージェント間のコンテキストを繋ぐ：MCPベースの次世代AI開発エコシステム、SyncVerseオーケストレーションアーキテクチャ",
-  "description": "グローバル標準MCP(Model Context Protocol)をベースにコーディング、QA、デプロイエージェントを連携するZero-Touch自律運用エコシステム。",
+  "headline": "分散した業務ツールをひとつに繋ぐ協業・承認管理：SyncVerse 運用ガイド",
+  "description": "MCPベースのA2A統括、5-Step Spec Studio、SyncSDK 15種エンジン切替、3段階ハーネス、多段階承認(Multi-Party HITL)を備えたSyncVerse設計。",
+  "datePublished": "2026-05-30",
+  "dateModified": "2026-11-23",
+  "inLanguage": "ja",
   "author": {
     "@type": "Organization",
     "name": "Empasy Engineering Team",
@@ -68,115 +77,138 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Empasy",
+    "name": "株式会社Empasy (Empasy Inc.)",
     "logo": {
       "@type": "ImageObject",
       "url": "https://empasy.io/empasy-logo.png"
     }
   },
+  "image": "https://empasy.io/empasy-logo.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html"
+  },
   "url": "https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html"
 }
     </script>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- SEO & AIO Tags -->
-    
-    
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncverse-mcp-ai-orchestration-architecture.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncverse-mcp-ai-orchestration-architecture.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncverse-mcp-ai-orchestration-architecture.html" />
-    <meta property="og:url" content="https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html">
 </head>
 <body>
-
-    <!-- Header Navigation -->
     {{> header_ja }}
 
-    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
-        <!-- Compact Breadcrumb / Back Link -->
-        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
-            <a href="../../ja/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
-                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
-                <span>Tech Blog一覧へ</span>
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/ja/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Empasy インサイト一覧へ</span>
             </a>
-            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
+            <span class="badge" style="margin-bottom: 0;">オーケストレーション・SyncVerse</span>
         </div>
-        
-        <section style="padding: 0;">
-            <div class="container" style="padding: 0;">
-                ﻿<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-    <div style="line-height: 1.8; color: var(--text-primary);">
-                    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.2rem; color: var(--text-secondary); font-size: 0.9rem; flex-wrap: wrap;">
-                        <span>2026-05-30</span>
-                        <span>&bull;</span>
-                        <span>所要時間 約6分</span>
-                        <span>&bull;</span>
-                        <span style="color: var(--primary-color); font-weight: 600;">AI Orchestration & MCP</span>
-                    </div>
 
-                    <h1 style="font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.35; margin-bottom: 1.8rem; color: var(--text-primary);">エージェント間のコンテキストを繋ぐ：MCPベースの次世代AIエコシステム、SyncVerseオーケストレーションアーキテクチャ</h1>
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-05-30 (更新 2026-11-23)</span>
+                <span>&bull;</span>
+                <span>読了目安 約6分</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">協業・段階別承認・MCP</span>
+            </div>
 
-        <p>最近、開発、テスト、データ収集などを支援する様々なAIツール(Agent)が、各産業分野で個別に導入されています。しかし、これらのAIツールが有機的に意思疎通できず、各段階の文脈(Context)が断絶していれば、真の意味での無人自律運用パイプラインを構築することはできません。人間の開発者が途中でコードをコピーしてテストツールに貼り付け、デプロイコマンドを出すという断絶が依然として存在するためです。</p>
-        <p>Empasyの<strong>SyncVerse</strong>は、このようなサイロ化(Silo)現象を打破し、自社のコアソリューション(SyncBoot, SyncCMS, SyncETAなど)を独立して思考し判断する「インテリジェントエージェント」へと進化させ、一つに総括調整する<strong>中央AIオーケストレーションプラットフォーム</strong>です。本記事では、エージェント間の協業を実現するSyncVerseのコアプロトコルと、完全無人開発ライフサイクル(Zero-Touch AI DLC)アーキテクチャを紹介します。</p>
+            <h1 class="ed-blog-title">分散した業務ツールをひとつに繋ぐ協業・承認管理：SyncVerse 運用ガイド</h1>
 
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. グローバル標準MCPに基づくAgent-to-Agent(A2A)通信アーキテクチャ</h2>
-        <p>SyncVerseの最大の技術的強み(Moat)は、エージェント間でリアルタイムの文脈と知識を有機的に共有するために、オープンなグローバル標準プロトコルである<strong>MCP(Model Context Protocol)</strong>を全面的に採用した点です。</p>
-        
-        <div class="modern-flow">
-            <div class="flow-node primary">SyncVerse 中央オーケストレーター</div>
-            <div class="flow-branches">
-                <div class="flow-branch">
-                    <div class="flow-node">SyncBoot Agent<br><span style='font-size:0.85rem; font-weight:400; color:var(--text-secondary);'>自律ソース/DB実装</span></div>
-                </div>
-                <div class="flow-branch">
-                    <div class="flow-node">SyncCMS Agent<br><span style='font-size:0.85rem; font-weight:400; color:var(--text-secondary);'>UI/コンテンツビルダー</span></div>
-                </div>
-                <div class="flow-branch">
-                    <div class="flow-node">SyncETA Agent<br><span style='font-size:0.85rem; font-weight:400; color:var(--text-secondary);'>No-Code QA検証</span></div>
+            <div class="ed-exec-summary" aria-label="経営層・現場担当者のための3行要約">
+                <div class="ed-exec-summary-kicker">経営層・現場担当者のための3行要約</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">従来の課題</span><span>依頼はチャット、点検結果はExcel、承認履歴はメールに分散していると、進捗把握や監査対応に大きな負担がかかります。</span></li>
+                    <li><span class="ed-exec-summary-tag">解決アプローチ</span><span>SyncVerseは要件整理から差分レビュー、品質検証結果、多段階の担当者承認履歴をひとつの管制画面に時系列で束ねて管理します。</span></li>
+                    <li><span class="ed-exec-summary-tag">導入効果</span><span>部門間の伝達漏れを防ぎ、誰が何を確認・承認して反映したかを明確に追跡できます。</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">自社の業務フローにそのまま適用できるか確認してみませんか？</span>
+                    <a href="/ja/pages/contact.html?topics=system" class="btn btn-primary btn-sm" style="min-height: 36px;">導入相談を申し込む</a>
                 </div>
             </div>
-            <div style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">▲ (MCPプロトコルに基づくリアルタイムの文脈共有) ▲</div>
-        </div>
 
-        <p>従来の単純なAPI連携方式では、決められた規格のデータしかやり取りできず、突発的な例外状況や複雑な文脈を伝えるのに限界がありました。SyncVerseは、MCP標準規格に基づいて仮想化されたエージェントが単一の頭脳のようにつながっています。開発エージェントがコードを修正すると、テストエージェントは別途の指示なしに修正されたコードの文脈を把握し、自ら検証シナリオを準備できる超連結エコシステムを実現します。</p>
+            <details class="ed-tech-details" open>
+                <summary>IT担当者・開発者向けの詳細技術解説</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="この記事の目次">
+  <div class="ed-article-toc-title">この記事の目次</div>
+  <ol>
+    <li><a href="#sec-1">1. MCPベースのA2A統括トポロジー</a></li>
+    <li><a href="#sec-2">2. 5-Step Spec Studio と社内開発者 Co-Dev フロー</a></li>
+    <li><a href="#sec-3">3. エンタープライズ導入を支える3つのガバナンス統制</a></li>
+  </ol>
+</nav>
+<p>開発・テスト・Web更新・セキュリティ監視を支援するAIツールが増えても、依頼内容・変更差分・検証結果・承認記録がバラバラに管理されていては企業現場の変更統制が機能しません。</p>
+<p>Empasyの中央オーケストレーション基盤<a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer">SyncVerse</a>は、MCP標準によるA2A連携、<strong>5-Step Spec Studio</strong>、<strong>15種コーディング基盤（<code>SyncSDK</code>）</strong>、および<strong>多段階承認（Multi-Party HITL）</strong>を単一のコックピットに統合しています。</p>
 
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+<h2 id="sec-1">1. MCPベースのA2A統括トポロジー</h2>
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. Zero-Touch AI DLC (Development Life Cycle) パイプライン</h2>
-        <p>SyncVerseは、人間の介入を最小限に抑え、現場担当者の自然言語による要件指示だけでシステム全体が自ら動作する自律運用ループを実装します。</p>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Step 1: 自然言語要件の解釈と計画策定</strong><br>現場の担当者がビジネス言語で修正要望（例：「ショッピングカート画面におすすめ商品のレイアウトを追加し、クリック時に決済ページへ連動させて」）を入力すると、SyncVerseオーケストレーターがこれを分析し、各サブエージェントに精密なタスクを割り当てます。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Step 2: 自律的なコードおよびコンポーネントの生成</strong><br><strong>SyncBoot Agent</strong>と<strong>SyncCMS Agent</strong>が起動し、指示内容に合わせたDBスキーマアーキテクチャを設計し、バックエンドのソースコードおよびフロントエンドのUIコンポーネントを自律的に修正・生成します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Step 3: AI Pull Requestの自律的申請</strong><br>ソースコードの変更が完了すると、SyncVerseはソース間の衝突の可能性を検討した後、変更点とコアロジックの説明を明確に作成し、GitリモートリポジトリにPull Request (PR)を自動的に申請します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Step 4: 無人検証と自律的なエラー復旧(Self-Healing)</strong><br>CI/CDパイプラインと結合され、<strong>SyncETA Agent</strong>が無人回帰テストを即座に作動させます。テスト中にレイアウトの欠陥やロジックの失敗箇所が検出されると、エラーログとランタイムスナップショットを再び開発エージェントにフィードバックし、数分以内に「自律的な修復および復旧サイクル」を経た後、商用サーバーへ無停止で自動デプロイします。</li>
-        </ul>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. エンタープライズ導入の成果と未来価値</h2>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>ビジネスの俊敏性の極大化:</strong> アイデアの企画から設計、開発、QA、デプロイに至るリードタイムを画期的に短縮し、市場の変化にリアルタイムで対応できる極度の俊敏性をもたらします。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>人的エラー(Human Error)の根本的遮断:</strong> 反復的なデプロイ作業や複雑な分散環境でのテスト過程で発生しうるヒューマンエラーを完全に統制し、システムの安定性を飛躍的に向上させます。</li>
-        </ul>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <p>SyncVerseは、単なる開発自動化ツールを超えて、企業のIT資産全体が自ら学習し進化する「自律運用フレームワーク」のビジョンを提示します。Empasyは、全製品ラインナップのエージェント化を通じて、人がより創造的で戦略的なビジネス設計に集中できるエンジニアリング環境を先導しています。</p>
+<div class="modern-flow">
+  <div class="flow-node primary">SyncVerse 中央オーケストレーター＆承認コックピット</div>
+  <div class="flow-branches">
+    <div class="flow-branch">
+      <div class="flow-node">SyncSDK（15種コーディング基盤）<span class="flow-node-sub">ブランチ・PR作成と4-Cycle品質検証</span></div>
     </div>
-</article>
+    <div class="flow-branch">
+      <div class="flow-node">ドメインエージェント群<span class="flow-node-sub">Boot・CMS・Shop・Ops・APIM</span></div>
+    </div>
+    <div class="flow-branch">
+      <div class="flow-node">品質・セキュリティ・BI<span class="flow-node-sub">SyncETA・SyncWatch・SyncInsight</span></div>
+    </div>
+  </div>
+  <div class="flow-caption">MCP標準プロトコル・A2A認証・多段階承認（HITL）による透明な文脈連携</div>
+</div>
+
+<h2 id="sec-2">2. 5-Step Spec Studio と社内開発者 Co-Dev フロー</h2>
+<ol>
+  <li><strong>Step 1 — 受入基準（AC）構造化＆影響調査：</strong>業務要望を受入基準へ整理し、コード依存グラフで変更影響範囲を特定します。</li>
+  <li><strong>Step 2 — 機能・画面仕様の確定：</strong>詳細仕様と画面構成案を作成し、未決事項キュー（Decision Queue）で担当者が方針を確定します。</li>
+  <li><strong>Step 3 — 技術仕様＆APIカバレッジ検証：</strong>DDL・REST API仕様・対象ファイル群（<code>focusFiles</code>）を実装前に確認します。</li>
+  <li><strong>Step 4 — SyncSDK実装＆4-Cycle品質検証：</strong>15種の対応エンジンから稼働中エンジンへルーティングし、<code>feat/*</code>ブランチとPull Requestを生成します。</li>
+  <li><strong>Step 5 — 開発者Co-Dev・仕様逆同期＆納品物出力：</strong>社内開発者がローカル検証・修正した内容をLiving Specへ逆同期し、仕様書・テーブル定義書・テスト項目表を出力できます。</li>
+</ol>
+
+<h2 id="sec-3">3. エンタープライズ導入を支える3つのガバナンス統制</h2>
+<ul>
+  <li><strong>多段階順次承認（Multi-Party HITL）：</strong>高リスク変更は<code>開発 → QA → セキュリティ → 管理者</code>の承認ルートと部門別アクセス権限を通過します。</li>
+  <li><strong>3段階ハーネスエンジニアリング：</strong>文脈注入・アーキテクチャ制約・ドリフト抑制ルールをDB管理し、実装品質を一定水準に保ちます。</li>
+  <li><strong>協業＆KMS連携：</strong>Redis分散ロックによる仕様同時編集、Jira双方向連携、Slack/Teams通知、KMS鍵ローテーションを標準搭載しています。</li>
+</ul>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>SyncVerse の協業・承認管制画面をご確認ください</strong>
+                <span>5-Step Spec Studio・多段階承認フロー・Monaco差分レビューの詳細は製品サイトでご覧いただけます。</span>
             </div>
-        </section>
+            <div class="ed-article-footer-cta-actions">
+                <a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SyncVerse を見る &#8599;</a>
+                <a href="/ja/pages/contact.html?topics=system" class="btn btn-outline btn-sm">導入相談</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="あわせて読みたいインサイト">
+        <h2 class="ed-related-heading">あわせて読みたいインサイト</h2>
+        <div class="ed-related-grid">
+        <a href="/ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" class="ed-related-card">
+            <span class="ed-related-cat">ビジョン・方向性</span>
+            <span class="ed-related-title">人の判断に集中できる企業ソフトウェア：Empasy 2026 製品開発の方向性</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        <a href="/ja/blog/empasy-core-solution-architecture-syncverse.html" class="ed-related-card">
+            <span class="ed-related-cat">製品群まとめ</span>
+            <span class="ed-related-title">ひとつの共通基盤で構成された SyncSeries 中核製品群の全体像</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        </div>
+    </section>
     </main>
 
-    <!-- Footer -->
     {{> footer_ja }}
 
-    <!-- Scripts -->
     <script type="module" src="/assets/js/i18n.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
 </body>

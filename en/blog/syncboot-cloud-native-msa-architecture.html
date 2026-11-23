@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -16,51 +37,39 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
     <!-- End Google Tag Manager -->
-    <title>Empasy | Syncboot cloud native msa architecture</title>
-    <meta name="description" content="SyncBoot is an MSA platform optimized for cloud-native environments. It supports seamless transition of Enterprise Java applications based on Spring Boot.">
-    <meta name="keywords" content="Enterprise AI Ecosystem, Enterprise AI Integration Platform, DX AI Architecture, Empasy, Microservices Architecture Platform, Spring Boot MSA Framework, Cloud-Native Development Solution, Enterprise Java MSA Transition">
-    <meta property="og:title" content="Empasy | Syncboot cloud native msa architecture">
-    <meta property="og:description" content="SyncBoot is an MSA platform optimized for cloud-native environments. It supports seamless transition of Enterprise Java applications based on Spring Boot.">
-    <meta property="og:type" content="website">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Empasy">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Empasy Tech Blog",
-      "url": "https://empasy.io/en/blog/syncboot-cloud-native-msa-architecture.html",
-      "description": "Latest technical insights on Enterprise AI Agents and AI Ops",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Empasy",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.io/empasy-logo.png"
-        }
-      }
-    }
-    </script>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-    <!-- SEO & AIO Tags -->
-    
-    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <title>Modernizing Aging Internal Systems Step by Step: SyncBoot Standard Foundation | Empasy</title>
+    <meta name="description" content="Architecture guide to SyncBoot: modular Java 25 / Spring Boot 4.0 enterprise core with org RBAC, electronic approvals, dynamic sys_config cluster sync, and Saga reliability.">
+    <meta name="keywords" content="SyncBoot, Internal System Modernization, Spring Boot 4.0, Java 25, Organization RBAC, Electronic Approvals, Dynamic Config, Empasy">
+    <meta name="author" content="Empasy Inc.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <meta property="og:title" content="Modernizing Aging Internal Systems Step by Step: SyncBoot Standard Foundation | Empasy">
+    <meta property="og:description" content="Architecture guide to SyncBoot: modular Java 25 / Spring Boot 4.0 enterprise core with org RBAC, electronic approvals, dynamic sys_config cluster sync, and Saga reliability.">
+    <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://empasy.io/en/blog/syncboot-cloud-native-msa-architecture.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-05-12">
+    <meta property="article:modified_time" content="2026-11-23">
+    <link rel="canonical" href="https://empasy.io/en/blog/syncboot-cloud-native-msa-architecture.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncboot-cloud-native-msa-architecture.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncboot-cloud-native-msa-architecture.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncboot-cloud-native-msa-architecture.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncboot-cloud-native-msa-architecture.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "[Tech Blog] Heart of Cloud-Native: Analyzing the SyncBoot Distributed Architecture Accelerating Enterprise MSA Transition",
-  "description": "SyncBoot architecture rapidly integrates 100% open-source solutions like Seata, Sentinel, and SkyWalking to establish complex microservices infrastructure at once.",
+  "headline": "Modernizing Aging Internal Systems Step by Step: SyncBoot Standard Foundation",
+  "description": "Architecture guide to SyncBoot: modular Java 25 / Spring Boot 4.0 enterprise core with org RBAC, electronic approvals, dynamic sys_config cluster sync, and Saga reliability.",
+  "datePublished": "2026-05-12",
+  "dateModified": "2026-11-23",
+  "inLanguage": "en",
   "author": {
     "@type": "Organization",
     "name": "Empasy Engineering Team",
@@ -68,132 +77,149 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Empasy",
+    "name": "Empasy Inc.",
     "logo": {
       "@type": "ImageObject",
       "url": "https://empasy.io/empasy-logo.png"
     }
   },
+  "image": "https://empasy.io/empasy-logo.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://empasy.io/en/blog/syncboot-cloud-native-msa-architecture.html"
+  },
   "url": "https://empasy.io/en/blog/syncboot-cloud-native-msa-architecture.html"
 }
     </script>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- SEO & AIO Tags -->
-    
-    
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.io/en/blog/syncboot-cloud-native-msa-architecture.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncboot-cloud-native-msa-architecture.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncboot-cloud-native-msa-architecture.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncboot-cloud-native-msa-architecture.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncboot-cloud-native-msa-architecture.html" />
-    <meta property="og:url" content="https://empasy.io/en/blog/syncboot-cloud-native-msa-architecture.html">
 </head>
 <body>
-
-    <!-- Header Navigation -->
     {{> header_en }}
 
-    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
-        <!-- Compact Breadcrumb / Back Link -->
-        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
-            <a href="../../en/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
-                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
-                <span>Back to Tech Blog</span>
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/en/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Back to Empasy Insights</span>
             </a>
-            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
-        </div>
-        
-        <section style="padding: 0;">
-            <div class="container" style="padding: 0;">
-                ﻿<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-    <div style="line-height: 1.8; color: var(--text-primary);">
-                    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.2rem; color: var(--text-secondary); font-size: 0.9rem; flex-wrap: wrap;">
-                        <span>2026-05-12</span>
-                        <span>&bull;</span>
-                        <span>6 min read</span>
-                        <span>&bull;</span>
-                        <span style="color: var(--primary-color); font-weight: 600;">Cloud Native & Microservices</span>
-                    </div>
-
-                    <h1 style="font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.35; margin-bottom: 1.8rem; color: var(--text-primary);">Heart of Cloud-Native: Analyzing the SyncBoot Distributed Architecture Accelerating Enterprise MSA Transition</h1>
-
-        <p>Transitioning from a massive, rigid Monolithic system to a flexible, scalable Microservices Architecture (MSA) is an essential task to secure business agility today. However, when building actual large-scale distributed systems, development teams face complex infrastructure barriers such as distributed transaction data integrity, inter-service routing and traffic control, and establishing integrated Observability.</p>
-        <p>Empasy's <strong>SyncBoot</strong> is an <strong>'Ultra-fast MSA Acceleration Platform'</strong> based on the Java and Spring Boot standard ecosystem, completely packaging these infrastructure setup phases so enterprises can focus solely on core business logic development. This article delves into the core components and distributed processing architecture of SyncBoot.</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. 100% Open Source-Based Standard Full-Stack Architecture</h2>
-        <p>SyncBoot aims for flexibility without unconditionally depending on specific commercial vendor solutions, utilizing a full stack proven in the global open-source ecosystem.</p>
-        
-        <div class="modern-stack">
-          <div class="stack-layer">
-            <div class="stack-label" style="color:var(--primary-color);">API Gateway</div>
-            <div style="flex-grow: 1;">
-                <div class="stack-content">Spring Cloud Gateway</div>
-                <div class="stack-desc">Non-blocking routing, JWT-based global authentication, Rate Limiting</div>
-            </div>
-          </div>
-          <div class="stack-layer">
-            <div class="stack-label" style="color:var(--primary-color);">Service Mesh</div>
-            <div style="flex-grow: 1;">
-                <div class="stack-content">Istio & Envoy</div>
-                <div class="stack-desc">mTLS traffic encryption, Canary deployment, Circuit Breaker</div>
-            </div>
-          </div>
-          <div class="stack-layer">
-            <div class="stack-label" style="color:var(--primary-color);">Event Driven</div>
-            <div style="flex-grow: 1;">
-                <div class="stack-content">Apache Kafka</div>
-                <div class="stack-desc">Asynchronous event pub/sub, Event Sourcing, CQRS pattern application</div>
-            </div>
-          </div>
-          <div class="stack-layer">
-            <div class="stack-label" style="color:var(--primary-color);">Data Store</div>
-            <div style="flex-grow: 1;">
-                <div class="stack-content">PostgreSQL / Redis</div>
-                <div class="stack-desc">Polyglot Persistence, Distributed caching, Global session sharing</div>
-            </div>
-          </div>
+            <span class="badge" style="margin-bottom: 0;">Enterprise Core · SyncBoot</span>
         </div>
 
-        <p>By standardizing these complex open sources into Empasy's unique Zero-Configuration templates, even beginner developers can automatically generate and deploy an enterprise-grade MSA skeleton with a few clicks.</p>
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-05-12 (Updated 2026-11-23)</span>
+                <span>&bull;</span>
+                <span>6 min read</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">Internal System Core</span>
+            </div>
 
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+            <h1 class="ed-blog-title">Modernizing Aging Internal Systems Step by Step: SyncBoot Standard Foundation</h1>
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. Distributed Transaction and CQRS Data Consistency</h2>
-        <p>In MSA, data is isolated by each service, making it impossible to guarantee atomicity (ACID) with traditional RDBMS JOINs or DB-level transactions.</p>
-        <p>SyncBoot natively implements the <strong>Saga Pattern</strong> and <strong>CQRS (Command and Query Responsibility Segregation)</strong> architectures to ensure perfect data consistency across services.</p>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Saga Pattern (Choreography):</strong> If an error occurs in the middle of a distributed transaction (e.g., inventory deduction fails after payment), it publishes a compensating event via Kafka to autonomously roll back previous steps, perfectly recovering data integrity.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>CQRS & Event Sourcing:</strong> By separating the Command DB (Write) and Query DB (Read), it prevents Read bottlenecks in large-scale traffic environments. Also, by saving state changes as an event stream, the system state can be accurately reproduced at any time.</li>
-        </ul>
+            <div class="ed-exec-summary" aria-label="3-Line Executive &amp; Business Summary">
+                <div class="ed-exec-summary-kicker">3-Line Executive &amp; Business Summary</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">Challenge</span><span>Rebuilding authentication, organization permissions, electronic approvals, and audit trails from scratch on every internal project slows delivery and inflates maintenance.</span></li>
+                    <li><span class="ed-exec-summary-tag">Approach</span><span>SyncBoot provides a modular Java 25 / Spring Boot 4.0 core with org RBAC, multi-step approvals, runtime config/prompt cluster sync, and end-to-end observability.</span></li>
+                    <li><span class="ed-exec-summary-tag">Impact</span><span>Teams shorten initial rollout and move feature delivery from monthly to weekly cycles without risky big-bang rewrites.</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">Want to verify how this fits your team workflows?</span>
+                    <a href="/en/pages/contact.html?topics=system" class="btn btn-primary btn-sm" style="min-height: 36px;">Request Consultation</a>
+                </div>
+            </div>
 
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+            <details class="ed-tech-details" open>
+                <summary>Technical Deep Dive for IT &amp; Engineering Teams</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="In This Article">
+  <div class="ed-article-toc-title">In This Article</div>
+  <ol>
+    <li><a href="#sec-1">1. Modular Core &amp; Cloud-Native Scaling Architecture</a></li>
+    <li><a href="#sec-2">2. Three Core Engineering Accelerators</a></li>
+    <li><a href="#sec-3">3. Practical Step-by-Step Modernization</a></li>
+  </ol>
+</nav>
+<p>Aging internal systems accumulate tightly coupled tables and ad-hoc permission checks over years of patches, stretching even minor screen updates into multi-week efforts. Jumping prematurely into overly complex distributed infrastructure, however, can add just as much operational overhead.</p>
+<p>Empasy's <a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer">SyncBoot</a> delivers a clean modular foundation built on <strong>Java 25, Spring Boot 4.0, PostgreSQL 18.6, and Vue 3</strong>—giving teams production-grade enterprise building blocks from day one with a clear path to cloud-native scaling.</p>
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. Integrated Observability and Telemetry</h2>
-        <p>In an environment where dozens of microservices are intricately intertwined, finding the cause of a failure without integrated observability is like finding a needle in a haystack.</p>
-        <p>SyncBoot embeds a complete <strong>Observability Pipeline</strong> by default.</p>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Distributed Tracing (OpenTelemetry + Jaeger):</strong> Traces the full journey of a user's request spanning across services with a single Trace ID, easily identifying bottleneck segments.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Log Aggregation (ELK Stack):</strong> Centralizes logs from all pods using Elasticsearch, Logstash, and Kibana for real-time full-text search.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Metrics & Alerting (Prometheus + Grafana):</strong> Monitors CPU, Memory, and JVM Heap metrics in real-time and links Slack/Email alarms via Alertmanager when anomalies occur.</li>
-        </ul>
+<h2 id="sec-1">1. Modular Core &amp; Cloud-Native Scaling Architecture</h2>
 
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <p>SyncBoot is Empasy's technical essence that solves all the difficult engineering problems that enterprises experience in the early stages of cloud-native transformation. Focus solely on business innovation; SyncBoot will handle the robust infrastructure.</p>
+<div class="modern-flow">
+  <div class="flow-node" style="max-width: 320px;">Client Requests (Admin UI · Integrations · MCP)</div>
+  <div class="flow-connector-down" aria-hidden="true">&#9660;</div>
+  <div class="flow-node primary">API Gateway &amp; Security Layer (JWT/OAuth2 · Org RBAC · Rate Limiting)</div>
+  <div class="flow-branches">
+    <div class="flow-branch">
+      <div class="flow-node">Org, RBAC &amp; Approvals<span class="flow-node-sub">Menu/button permissions &amp; multi-step workflows</span></div>
     </div>
-</article>
+    <div class="flow-branch">
+      <div class="flow-node">Domain &amp; Data Portals<span class="flow-node-sub">Standard CRUD · boards · management reports</span></div>
+    </div>
+    <div class="flow-branch">
+      <div class="flow-node">Runtime Config &amp; Prompts<span class="flow-node-sub">sys_config · sys_prompt_template hub</span></div>
+    </div>
+  </div>
+  <div class="flow-layer-group">
+    <div class="flow-layer-item"><strong>ClusterEventBroadcaster</strong> — Zero-downtime multi-instance cache sync via Redis Pub/Sub &amp; shared memory</div>
+    <div class="flow-layer-item"><strong>SagaCoordinator &amp; Snapshots</strong> — Compensation workflows and safe rollback for multi-step operations</div>
+    <div class="flow-layer-item"><strong>Distributed Tracing &amp; Slow SQL</strong> — End-to-end Trace IDs, Slow SQL alerts, Prometheus/Grafana &amp; OpenSearch</div>
+    <div class="flow-layer-item"><strong>Kubernetes &amp; CI/CD Ready</strong> — Standardized Docker Compose (local/dev) and K8s production manifests</div>
+  </div>
+</div>
+
+<h2 id="sec-2">2. Three Core Engineering Accelerators</h2>
+
+<h3>1) Organization-Linked RBAC &amp; Multi-Step Approvals</h3>
+<p>Database-managed menu and button permissions (<code>sys_permission</code>, <code>sys_role_permission</code>) align cleanly with corporate org charts, paired with multi-stage electronic approval flows and full audit trails.</p>
+
+<h3>2) Runtime Configuration (<code>sys_config</code>) &amp; Prompt Hub</h3>
+<ul>
+  <li><strong>Zero-Restart Policy Updates:</strong> Manage timeouts, thresholds, integrations, and AI prompt templates in PostgreSQL with AES-256 encryption for secrets and pre-save remote socket diagnostics.</li>
+  <li><strong>Cluster-Wide Hot Sync:</strong> Updates broadcast immediately across JVM instances through <code>ClusterEventBroadcaster</code>, with one-click version rollback for prompt history.</li>
+</ul>
+
+<h3>3) Transaction Resilience &amp; Observability</h3>
+<ul>
+  <li><strong>Saga Compensation (<code>SagaCoordinator</code>):</strong> Reverts partial steps cleanly when external integrations fail.</li>
+  <li><strong>Trace ID &amp; Slow SQL Diagnostics:</strong> Pinpoints whether latency stems from network calls or database locks within seconds.</li>
+</ul>
+
+<h2 id="sec-3">3. Practical Step-by-Step Modernization</h2>
+<p>Rather than replacing an entire legacy estate at once, organizations can migrate high-churn approval, reporting, or administration modules onto SyncBoot first and expand incrementally on the same governance core.</p>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>Explore the SyncBoot Standard Enterprise Core</strong>
+                <span>Inspect org-linked permissions, electronic approvals, and runtime config consoles on the SyncBoot site.</span>
             </div>
-        </section>
+            <div class="ed-article-footer-cta-actions">
+                <a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit SyncBoot &#8599;</a>
+                <a href="/en/pages/contact.html?topics=system" class="btn btn-outline btn-sm">Contact Us</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="Related Insights">
+        <h2 class="ed-related-heading">Related Insights</h2>
+        <div class="ed-related-grid">
+        <a href="/en/blog/empasy-core-solution-architecture-syncverse.html" class="ed-related-card">
+            <span class="ed-related-cat">Product Overview</span>
+            <span class="ed-related-title">SyncSeries Core Capabilities at a Glance: Solving Real Operational Bottlenecks</span>
+            <span class="ed-related-more">Read More &rarr;</span>
+        </a>
+        <a href="/en/blog/case-study-finance.html" class="ed-related-card">
+            <span class="ed-related-cat">Enterprise Case Studies</span>
+            <span class="ed-related-title">Enterprise Modernization &amp; Automation Case Studies Across Education, Security, Retail &amp; Public Sectors</span>
+            <span class="ed-related-more">Read More &rarr;</span>
+        </a>
+        </div>
+    </section>
     </main>
 
-    <!-- Footer -->
     {{> footer_en }}
 
-    <!-- Scripts -->
     <script type="module" src="/assets/js/i18n.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
 </body>
