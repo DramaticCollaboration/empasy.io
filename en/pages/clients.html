@@ -1,76 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
-    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
-    <!-- End Google Tag Manager -->
-    <title>Empasy | Enterprise AI Integration Platform</title>
-    <meta name="description" content="B2B Enterprise AI Integration Architecture solving DX and AI Infrastructure simultaneously.">
-    <meta name="keywords" content="Enterprise AI Ecosystem, Enterprise AI Integration Platform, DX AI Architecture, Empasy, MSA CMS AI Integration, Business Data Intelligence, SyncVerse, SyncBoot, SyncCMS, SyncInsight, SyncETA, B2B AI Solution">
-    <meta property="og:title" content="Empasy | Enterprise AI Integration Platform">
-    <meta property="og:description" content="B2B Enterprise AI Integration Architecture solving DX and AI Infrastructure simultaneously.">
-    <meta property="og:type" content="website">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .page-header { padding: 150px 0 80px; text-align: center; position: relative; z-index: 10; }
-        .page-title { font-size: 3rem; margin-bottom: 1rem; color: var(--text-primary); }
-        .page-subtitle { font-size: 1.2rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto; }
-        .case-metric { display: flex; gap: 1rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; }
-        .metric-badge { background: rgba(8, 145, 178, 0.15); color: var(--primary-color); padding: 4px 10px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; }
-    </style>
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Corporation",
-      "name": "Empasy",
-      "alternateName": ["Empasy IT", "Empasy AI", "Empasy Software"],
-      "url": "https://empasy.io/en/",
-      "description": "Empasy is a B2B Enterprise AI Software Development IT Company.",
-      "sameAs": [
-        "https://github.com/DramaticCollaboration/",
-        "https://doc.empasy.com/"
-      ]
-    }
-    </script>
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.io/en/pages/clients.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/clients.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/clients.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/clients.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/clients.html" />
-    <!-- Open Graph -->
+    <title>Clients &amp; Industry Track Record | Empasy</title>
+    <meta name="description" content="Enterprise, security, public education, and test automation track record across Samsung.com, LG CNS, LG Electronics, LG Chem, Hyundai Motor, AUTOCRYPT, Penta Security, Penta System, Gyeonggi Office of Education, and Visang Education.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="Clients &amp; Industry Track Record | Empasy">
+    <meta property="og:description" content="Verified enterprise delivery across global test automation, corporate IT modernization, mobility &amp; API security, and public education platforms.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://empasy.io/en/pages/clients.html">
     <meta property="og:image" content="https://empasy.io/empasy-logo.png">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://empasy.io/en/pages/clients.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/clients.html">
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/clients.html">
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/clients.html">
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/clients.html">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <script type="module" crossorigin src="/assets/i18n-3nk6-OFj.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/style-BWlNIJrj.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+  <link rel="stylesheet" crossorigin href="/assets/style-BgRDHG71.css">
 </head>
 <body>
-    <article class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
-        <h1>Empasy Clients & Success Stories</h1>
-        <p>Empasy's SyncSeries AI agents are trusted by leading global enterprises to revolutionize their IT operations.</p>
-    </article>
-
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -94,20 +78,26 @@
             </button>
             <nav id="emp-nav-links" class="nav-links" aria-label="Main navigation">
                 <div class="dropdown">
-                    <a href="/en/pages/index.html#solutions" class="dropbtn">Solutions
+                    <a href="/en/pages/index.html#roles" class="dropbtn">Solutions
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </a>
-                    <div class="dropdown-content" style="min-width: 270px;">
-                        <span class="dropdown-group-heading">4 Flagship Solutions</span>
-                        <a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · Operations &amp; Approvals</a>
-                        <a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · Automated Testing App</a>
-                        <a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · Business System Core</a>
-                        <a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · Web &amp; Multilingual CMS</a>
-                        <span class="dropdown-group-heading">Modular Extensions</span>
-                        <a href="/en/pages/index.html#modules">Data, Security &amp; Operations (7 Modules)</a>
+                    <div class="dropdown-content" style="min-width: 280px;">
+                        <span class="dropdown-group-heading">Quick Start</span>
+                        <a href="/en/pages/index.html#finder"><strong>30-Second Solution Finder</strong> · 3 questions</a>
+                        <a href="/en/pages/index.html#roles"><strong>Browse by Business Goal</strong> · By team</a>
+                        <span class="dropdown-group-heading">4 Core Business Areas</span>
+                        <a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Operations &amp; Approvals</strong> · SyncVerse</a>
+                        <a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Automated Screen Checks</strong> · SyncETA</a>
+                        <a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Internal System Core</strong> · SyncBoot</a>
+                        <a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Web &amp; Multilingual Hub</strong> · SyncCMS</a>
+                        <span class="dropdown-group-heading">Extensions &amp; IT Resources</span>
+                        <a href="/en/pages/index.html#modules">Data, AI Cost, Security &amp; Operations (7)</a>
+                        <a href="/en/download_eta.html">Download SyncETA Desktop App</a>
+                        <a href="https://doc.empasy.com/en/" target="_blank" rel="noopener noreferrer">IT &amp; Developer Docs &#8599;</a>
                     </div>
                 </div>
     
+                <a href="/en/pages/index.html#finder">Solution Finder</a>
                 <a href="/en/pages/clients.html">Clients</a>
     
                 <div class="dropdown">
@@ -123,7 +113,6 @@
                     </div>
                 </div>
     
-                <a href="https://doc.empasy.com/en/" target="_blank" rel="noopener noreferrer">Docs &#8599;</a>
                 <a href="https://sync.empasy.io/en/" target="_blank" rel="noopener noreferrer">Live Demo &#8599;</a>
             </nav>
             <div class="nav-actions">
@@ -132,8 +121,7 @@
                     <a href="/en/pages/index.html" data-lang="en" class="active" aria-current="page">EN</a>
                     <a href="/ja/pages/index.html" data-lang="ja">JA</a>
                 </div>
-                <a href="/en/download_eta.html" class="btn btn-outline btn-sm">Download SyncETA</a>
-                <a href="/en/pages/contact.html" class="btn btn-primary btn-sm">Contact</a>
+                <a href="/en/pages/contact.html" class="btn btn-primary btn-sm">Contact Sales</a>
             </div>
         </div>
     </header>
@@ -223,219 +211,175 @@
         });
     })();
     </script>
-
-    <main class="container" style="position: relative; z-index: 10;">
-        <div class="page-header fade-in-up">
-            <span class="badge">Track Record</span>
-            <h1 class="page-title">Clients & Track Record</h1>
-            <p class="page-subtitle">Proving trust through technology, from global automotive security to enterprise AI.</p>
-            <div style="margin-top: 1.4rem; display: flex; justify-content: center;">
-                <a href="/en/pages/vision.html#venture-cert" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: 999px; background: rgba(251, 191, 36, 0.12); border: 1px solid rgba(251, 191, 36, 0.35); color: #fbbf24; font-size: 0.9rem; font-weight: 600; text-decoration: none;">
-                    <i class="fas fa-award"></i>
-                    <span>Certified Venture Enterprise &middot; Innovative Growth Type (No. 20261111030084)</span>
-                </a>
-            </div>
-        </div>
-
-        <section class="section pt-0 fade-in-up delay-1">
-            <div class="section-header text-center mb-4">
-                <h2 class="section-title">Key Partners</h2>
-            </div>
-            
-            <div class="clients-grid">
-                <div class="client-logo">
-                    <i class="fas fa-shield-halved" style="font-size: 1.4rem; color: #38bdf8; margin-bottom: 0.6rem; opacity: 0.85;"></i>
-                    <span style="font-size:1.15rem; font-weight:800; color:#0f172a; letter-spacing:0.5px;">AUTOCRYPT</span>
-                    <span style="font-size:0.75rem; color:#94a3b8; font-weight:600; text-transform:uppercase; margin-top: 4px;">Mobility Security</span>
-                </div>
-                <div class="client-logo">
-                    <i class="fas fa-car" style="font-size: 1.4rem; color: #38bdf8; margin-bottom: 0.6rem; opacity: 0.85;"></i>
-                    <span style="font-size:1.15rem; font-weight:800; color:#0f172a; letter-spacing:0.5px;">HYUNDAI MOTOR</span>
-                    <span style="font-size:0.75rem; color:#94a3b8; font-weight:600; text-transform:uppercase; margin-top: 4px;">Connected Car</span>
-                </div>
-                <div class="client-logo">
-                    <i class="fas fa-lock" style="font-size: 1.4rem; color: #38bdf8; margin-bottom: 0.6rem; opacity: 0.85;"></i>
-                    <span style="font-size:1.15rem; font-weight:800; color:#0f172a; letter-spacing:0.5px;">PENTA SECURITY</span>
-                    <span style="font-size:0.75rem; color:#94a3b8; font-weight:600; text-transform:uppercase; margin-top: 4px;">API Security</span>
-                </div>
-                <div class="client-logo">
-                    <i class="fas fa-cloud" style="font-size: 1.4rem; color: #38bdf8; margin-bottom: 0.6rem; opacity: 0.85;"></i>
-                    <span style="font-size:1.15rem; font-weight:800; color:#0f172a; letter-spacing:0.5px;">HYOSUNG ITX</span>
-                    <span style="font-size:0.75rem; color:#94a3b8; font-weight:600; text-transform:uppercase; margin-top: 4px;">Enterprise Cloud</span>
-                </div>
-                <div class="client-logo">
-                    <i class="fas fa-globe" style="font-size: 1.4rem; color: #38bdf8; margin-bottom: 0.6rem; opacity: 0.85;"></i>
-                    <span style="font-size:1.15rem; font-weight:800; color:#0f172a; letter-spacing:0.5px;">LX HAUSYS</span>
-                    <span style="font-size:0.75rem; color:#94a3b8; font-weight:600; text-transform:uppercase; margin-top: 4px;">Global Commerce</span>
-                </div>
-                <div class="client-logo">
-                    <i class="fas fa-store" style="font-size: 1.4rem; color: #38bdf8; margin-bottom: 0.6rem; opacity: 0.85;"></i>
-                    <span style="font-size:1.15rem; font-weight:800; color:#0f172a; letter-spacing:0.5px;">HOMEPLUS</span>
-                    <span style="font-size:0.75rem; color:#94a3b8; font-weight:600; text-transform:uppercase; margin-top: 4px;">Retail MSA</span>
-                </div>
-                <div class="client-logo">
-                    <i class="fas fa-microchip" style="font-size: 1.4rem; color: #38bdf8; margin-bottom: 0.6rem; opacity: 0.85;"></i>
-                    <span style="font-size:1.15rem; font-weight:800; color:#0f172a; letter-spacing:0.5px;">SK MAGIC</span>
-                    <span style="font-size:0.75rem; color:#94a3b8; font-weight:600; text-transform:uppercase; margin-top: 4px;">IoT &amp; Cloud</span>
-                </div>
-                <div class="client-logo">
-                    <i class="fas fa-graduation-cap" style="font-size: 1.4rem; color: #38bdf8; margin-bottom: 0.6rem; opacity: 0.85;"></i>
-                    <span style="font-size:1.15rem; font-weight:800; color:#0f172a; letter-spacing:0.5px;">VISANG EDUCATION</span>
-                    <span style="font-size:0.75rem; color:#94a3b8; font-weight:600; text-transform:uppercase; margin-top: 4px;">AI EdTech</span>
-                </div>
-                <div class="client-logo">
-                    <i class="fas fa-bolt" style="font-size: 1.4rem; color: #38bdf8; margin-bottom: 0.6rem; opacity: 0.85;"></i>
-                    <span style="font-size:1.15rem; font-weight:800; color:#0f172a; letter-spacing:0.5px;">KEPCO</span>
-                    <span style="font-size:0.75rem; color:#94a3b8; font-weight:600; text-transform:uppercase; margin-top: 4px;">Public Energy DX</span>
+    <main>
+        <section class="ed-hero" style="padding-bottom: 48px;">
+            <div class="container">
+                <div class="ed-hero-copy" style="margin-bottom: 0;">
+                    <p class="ed-eyebrow">Industry Track Record</p>
+                    <h1 class="ed-hero-title">Proven Across Enterprise, Security, Public &amp; Education</h1>
+                    <p class="ed-hero-desc">
+                        To honor confidentiality agreements (NDAs), specific project names and internal details are omitted; references are presented by organization and verified capability area.
+                    </p>
                 </div>
             </div>
-
-            <div class="section-header text-center mt-5 mb-5">
-                <h2 class="section-title" style="font-size: 2.2rem; color: var(--text-primary); font-weight: 700;">Key Success Stories &amp; Client Portfolio</h2>
-                <p style="margin-top: 0.8rem; color: var(--text-secondary); font-size: 1.05rem;">Discover innovation cases across diverse industries powered by Empasy's proven technology.</p>
-            </div>
-            
-            <div class="case-list">
-                <!-- Visual Diagram Grid for cases -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
-                    
-                    <div style="background: var(--bg-surface); border-radius: 12px; border: 1px solid var(--border-color); border-top: 4px solid var(--primary-color); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                        <div>
-                            <div style="font-size: 0.85rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.5rem; text-transform: uppercase;">EdTech | Visang Education</div>
-                            <h3 style="font-size: 1.3rem; color: var(--text-primary); margin-bottom: 1rem;">AIDT Platform QA Automation</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">Automated regression test pipelines for 2,000 concurrent users and 100 virtual classrooms using SyncETA, cutting manual QA overhead by 80%.</p>
-                        </div>
-                        <div class="case-metric">
-                            <span class="metric-badge">80% Manual QA Cut</span>
-                            <span class="metric-badge">Regression 4h &rarr; 45m</span>
-                        </div>
-                    </div>
-
-                    <div style="background: var(--bg-surface); border-radius: 12px; border: 1px solid var(--border-color); border-top: 4px solid var(--primary-color); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                        <div>
-                            <div style="font-size: 0.85rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.5rem; text-transform: uppercase;">Mobility Security | Autocrypt</div>
-                            <h3 style="font-size: 1.3rem; color: var(--text-primary); margin-bottom: 1rem;">vSoC Fleet Security Control Pipeline</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">Built high-throughput telematics log ingestion and intrusion detection infrastructure compliant with global automotive cybersecurity standards.</p>
-                        </div>
-                        <div class="case-metric">
-                            <span class="metric-badge">10,000+ Pkts/Sec</span>
-                            <span class="metric-badge">Real-time Anomaly Detection</span>
-                        </div>
-                    </div>
-
-                    <div style="background: var(--bg-surface); border-radius: 12px; border: 1px solid var(--border-color); border-top: 4px solid var(--primary-color); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                        <div>
-                            <div style="font-size: 0.85rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.5rem; text-transform: uppercase;">Retail &amp; Commerce | Homeplus</div>
-                            <h3 style="font-size: 1.3rem; color: var(--text-primary); margin-bottom: 1rem;">Next-Gen MIS Architecture</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">Executed microservices architecture (MSA) transition powered by SyncBoot, ensuring transactional consistency across distributed databases.</p>
-                        </div>
-                        <div class="case-metric">
-                            <span class="metric-badge">Saga Pattern Control</span>
-                            <span class="metric-badge">Cloud-Native MSA</span>
-                        </div>
-                    </div>
-                    
-                    <div style="background: var(--bg-surface); border-radius: 12px; border: 1px solid var(--border-color); border-top: 4px solid var(--primary-color); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                        <div>
-                            <div style="font-size: 0.85rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.5rem; text-transform: uppercase;">IT Security | Penta Security</div>
-                            <h3 style="font-size: 1.3rem; color: var(--text-primary); margin-bottom: 1rem;">WAPPLES API Security Engine</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">Coupled SyncBoot with OpenSearch for zero-latency indexing and unified multi-cloud security telemetry monitoring.</p>
-                        </div>
-                        <div class="case-metric">
-                            <span class="metric-badge">OpenSearch Ingestion</span>
-                            <span class="metric-badge">Fast Log Search Indexing</span>
-                        </div>
-                    </div>
-
-                    <div style="background: var(--bg-surface); border-radius: 12px; border: 1px solid var(--border-color); border-top: 4px solid var(--primary-color); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                        <div>
-                            <div style="font-size: 0.85rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.5rem; text-transform: uppercase;">Data Infrastructure | Hyosung ITX</div>
-                            <h3 style="font-size: 1.3rem; color: var(--text-primary); margin-bottom: 1rem;">Distributed Web Scraping Pipeline</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">Deployed multi-platform worker nodes on Azure Kubernetes Service (AKS) for high-resilience web data extraction and RAG knowledge indexing.</p>
-                        </div>
-                        <div class="case-metric">
-                            <span class="metric-badge">AKS Distributed Workers</span>
-                            <span class="metric-badge">Playwright Multimodal Engine</span>
-                        </div>
-                    </div>
-
-                    <div style="background: var(--bg-surface); border-radius: 12px; border: 1px solid var(--border-color); border-top: 4px solid var(--secondary-color); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                        <div>
-                            <div style="font-size: 0.85rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 0.5rem; text-transform: uppercase;">Global Expansion | Global Market</div>
-                            <h3 style="font-size: 1.3rem; color: var(--text-primary); margin-bottom: 1rem;">Japan Market Exploration &amp; PoC</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">Exploring entry into the Japanese enterprise market based on multilingual CMS and self-healing QA engines, currently advancing local business partnerships and PoC validation.</p>
-                        </div>
-                        <div class="case-metric">
-                            <span class="metric-badge">Local PoC Underway</span>
-                            <span class="metric-badge">Multilingual Engine</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        
         </section>
 
-        <!-- Engineering Testimonials Section -->
-        <section class="section pt-0 fade-in-up">
-            <div class="section-header text-center mt-4 mb-5">
-                <span class="badge" style="background: rgba(8, 145, 178, 0.15); color: #38bdf8;">Engineering Testimonials</span>
-                <h2 class="section-title" style="font-size: 2.2rem; color: var(--text-primary); font-weight: 700; margin-top: 0.5rem;">Customer Engineering Feedback</h2>
-                <p style="margin-top: 0.8rem; color: var(--text-secondary); font-size: 1.05rem;">Real-world feedback from software architects and engineering leaders running SyncSeries in mission-critical environments.</p>
+        <section class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-ref-wall-wrap">
+                    <div class="ed-ref-wall-head">
+                        <span class="ed-ref-wall-label">Key Enterprises &amp; Institutions Supported</span>
+                        <span class="ed-ref-wall-note">Specific project names are withheld under NDA; grouped by organization and focus area.</span>
+                    </div>
+                    <div class="ed-ref-wall" aria-label="Key enterprise and institutional references">
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">Samsung.com</span><span class="ed-ref-chip-sub">Global Test Automation</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">LG CNS</span><span class="ed-ref-chip-sub">Enterprise IT Systems</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">LG Electronics</span><span class="ed-ref-chip-sub">Manufacturing &amp; Ops</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">LG Chem</span><span class="ed-ref-chip-sub">Enterprise Systems</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">Hyundai Motor</span><span class="ed-ref-chip-sub">Mobility &amp; Enterprise</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">AUTOCRYPT</span><span class="ed-ref-chip-sub">Mobility Security</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">Penta Security</span><span class="ed-ref-chip-sub">API &amp; Security Ops</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">Penta System</span><span class="ed-ref-chip-sub">Public Education Collab</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">Gyeonggi Office of Education</span><span class="ed-ref-chip-sub">Public Education Platform</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">Visang Education</span><span class="ed-ref-chip-sub">Test Automation</span></div>
+                    </div>
+                </div>
+
+                <div class="ed-tabs" style="justify-content: flex-start; margin-bottom: 24px;" role="tablist" aria-label="Industry filter">
+                    <button type="button" class="ed-tab active" role="tab" aria-selected="true" data-client-filter="all">All (6)</button>
+                    <button type="button" class="ed-tab" role="tab" aria-selected="false" data-client-filter="qa">Test Automation (2)</button>
+                    <button type="button" class="ed-tab" role="tab" aria-selected="false" data-client-filter="enterprise">Enterprise &amp; Mfg (1)</button>
+                    <button type="button" class="ed-tab" role="tab" aria-selected="false" data-client-filter="security">Security &amp; Mobility (2)</button>
+                    <button type="button" class="ed-tab" role="tab" aria-selected="false" data-client-filter="public">Public &amp; Education (1)</button>
+                </div>
+
+                <div class="ed-ref-grid">
+                    <article class="ed-ref-card" data-client-sector="qa">
+                        <div>
+                            <span class="ed-ref-sector">Global Quality Automation · SyncETA</span>
+                            <h3>Samsung.com Global Test Automation</h3>
+                            <div class="ed-ref-clients">
+                                <span class="ed-ref-client-badge">Samsung.com</span>
+                            </div>
+                            <div class="ed-kpi-row">
+                                <span class="ed-kpi-pill is-accent">Global Multilingual Checks</span>
+                                <span class="ed-kpi-pill">Pre-Release Verification</span>
+                            </div>
+                            <p>Automated recurring pre-release verification across global multi-region websites to catch functional and UI defects consistently before major updates.</p>
+                        </div>
+                        <div class="ed-ref-outcome">Reliable multi-region verification across global web operations</div>
+                    </article>
+
+                    <article class="ed-ref-card" data-client-sector="qa">
+                        <div>
+                            <span class="ed-ref-sector">EdTech Quality Automation · SyncETA</span>
+                            <h3>Visang Education Test Automation</h3>
+                            <div class="ed-ref-clients">
+                                <span class="ed-ref-client-badge">Visang Education</span>
+                            </div>
+                            <div class="ed-kpi-row">
+                                <span class="ed-kpi-pill is-accent">Checks 4 hrs &#8594; 45 min</span>
+                                <span class="ed-kpi-pill">2,000 Concurrent Users</span>
+                            </div>
+                            <p>Automated recurring pre-release checks across attendance, live classroom, and checkout journeys for a digital learning platform serving 2,000 concurrent users.</p>
+                        </div>
+                        <div class="ed-ref-outcome">Cut repetitive QA effort sharply while blocking regressions before launch</div>
+                    </article>
+
+                    <article class="ed-ref-card" data-client-sector="enterprise">
+                        <div>
+                            <span class="ed-ref-sector">Enterprise Manufacturing &amp; Corporate IT · SyncBoot · SyncCMS</span>
+                            <h3>Enterprise Business Systems &amp; Legacy Modernization</h3>
+                            <div class="ed-ref-clients">
+                                <span class="ed-ref-client-badge">LG CNS</span>
+                                <span class="ed-ref-client-badge">LG Electronics</span>
+                                <span class="ed-ref-client-badge">LG Chem</span>
+                                <span class="ed-ref-client-badge">Hyundai Motor</span>
+                            </div>
+                            <div class="ed-kpi-row">
+                                <span class="ed-kpi-pill is-accent">Updates Monthly &#8594; Weekly</span>
+                                <span class="ed-kpi-pill">Standard Permissions &amp; Approvals</span>
+                            </div>
+                            <p>Delivered enterprise operational system architecture, legacy structure streamlining, standard org permissions, electronic approvals, and unified web operations.</p>
+                        </div>
+                        <div class="ed-ref-outcome">Reduced maintenance complexity and accelerated weekly feature delivery</div>
+                    </article>
+
+                    <article class="ed-ref-card" data-client-sector="security">
+                        <div>
+                            <span class="ed-ref-sector">Mobility Security · Real-Time Monitoring</span>
+                            <h3>Vehicle Fleet Telemetry Ingestion &amp; Anomaly Detection</h3>
+                            <div class="ed-ref-clients">
+                                <span class="ed-ref-client-badge">AUTOCRYPT</span>
+                            </div>
+                            <div class="ed-kpi-row">
+                                <span class="ed-kpi-pill is-accent">Real-Time Anomaly Alerts</span>
+                                <span class="ed-kpi-pill">High-Volume Pipeline</span>
+                            </div>
+                            <p>Built a resilient monitoring environment to ingest high-volume vehicle telemetry streams and detect security anomalies in real time across fleet operations.</p>
+                        </div>
+                        <div class="ed-ref-outcome">High-throughput telemetry collection paired with immediate anomaly alerts</div>
+                    </article>
+
+                    <article class="ed-ref-card" data-client-sector="security">
+                        <div>
+                            <span class="ed-ref-sector">Information Security · SyncAPIM · SyncBoot</span>
+                            <h3>Unified System Integration Security Monitoring</h3>
+                            <div class="ed-ref-clients">
+                                <span class="ed-ref-client-badge">Penta Security</span>
+                            </div>
+                            <div class="ed-kpi-row">
+                                <span class="ed-kpi-pill is-accent">Centralized Security Oversight</span>
+                                <span class="ed-kpi-pill">High-Speed Log Search</span>
+                            </div>
+                            <p>Built a high-availability security monitoring console enabling rapid search across massive integration access logs and centralized abnormal request inspection.</p>
+                        </div>
+                        <div class="ed-ref-outcome">High-speed access log visibility and unified anomaly inspection</div>
+                    </article>
+
+                    <article class="ed-ref-card" data-client-sector="public">
+                        <div>
+                            <span class="ed-ref-sector">Public &amp; Education Data Platform</span>
+                            <h3>Public Education Knowledge &amp; Data Platform Collaboration</h3>
+                            <div class="ed-ref-clients">
+                                <span class="ed-ref-client-badge">Penta System</span>
+                                <span class="ed-ref-client-badge">Gyeonggi Office of Education</span>
+                            </div>
+                            <div class="ed-kpi-row">
+                                <span class="ed-kpi-pill is-accent">Public Sector Compliance</span>
+                                <span class="ed-kpi-pill">Unified Knowledge Search</span>
+                            </div>
+                            <p>Collaborated with Penta System for the Gyeonggi Provincial Office of Education to build large-scale public education data search and administrative support tools.</p>
+                        </div>
+                        <div class="ed-ref-outcome">Reduced repetitive administrative lookup under strict public-sector standards</div>
+                    </article>
+                </div>
             </div>
+        </section>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
-                <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+        <section class="ed-section">
+            <div class="container" style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="ed-pillar-card" style="display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;">
                     <div>
-                        <div style="color: #38bdf8; font-size: 1.2rem; margin-bottom: 1rem;"><i class="fas fa-quote-left"></i></div>
-                        <p style="color: #475569; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem; font-style: italic;">
-                            "In our large-scale live classroom platform, traditional scripted tests broke with every UI tweak. SyncETA's self-healing selectors reduced our sprint regression test maintenance overhead by over 80%."
-                        </p>
+                        <span class="ed-pillar-no">Official Certification</span>
+                        <h2 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 6px;">Innovative Growth Venture Enterprise Certification</h2>
+                        <p style="margin: 0;">Certificate No. 20261111030084 (Valid 2026-11-11 ~ 2029-11-10)</p>
                     </div>
-                    <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 1rem; display: flex; align-items: center; gap: 12px;">
-                        <div style="width: 40px; height: 40px; border-radius: 50%; background: #1e293b; display: flex; align-items: center; justify-content: center; color: #38bdf8; font-weight: 700;">V</div>
-                        <div>
-                            <div style="font-weight: 700; color: #0f172a; font-size: 0.95rem;">Visang Education QA Lead</div>
-                            <div style="color: #94a3b8; font-size: 0.82rem;">E2E EdTech Platform Quality Assurance</div>
-                        </div>
-                    </div>
+                    <a href="/en/pages/vision.html" class="btn btn-outline btn-sm">View Vision &amp; Certification</a>
                 </div>
 
-                <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                <div class="ed-doc-callout">
                     <div>
-                        <div style="color: #38bdf8; font-size: 1.2rem; margin-bottom: 1rem;"><i class="fas fa-quote-left"></i></div>
-                        <p style="color: #475569; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem; font-style: italic;">
-                            "Handling 10,000+ vehicle telematics packets per second without latency while maintaining strict compliance with global automotive cybersecurity standards proved the solid foundation of Empasy's data pipeline."
-                        </p>
+                        <p><strong>Evaluating Empasy for your industry environment?</strong><br>Explore live product screens immediately or speak with our team about similar enterprise deployments.</p>
                     </div>
-                    <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 1rem; display: flex; align-items: center; gap: 12px;">
-                        <div style="width: 40px; height: 40px; border-radius: 50%; background: #1e293b; display: flex; align-items: center; justify-content: center; color: #38bdf8; font-weight: 700;">A</div>
-                        <div>
-                            <div style="font-weight: 700; color: #0f172a; font-size: 0.95rem;">AUTOCRYPT vSoC Infrastructure Lead</div>
-                            <div style="color: #94a3b8; font-size: 0.82rem;">Mobility Anomaly Detection &amp; Security</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                    <div>
-                        <div style="color: #38bdf8; font-size: 1.2rem; margin-bottom: 1rem;"><i class="fas fa-quote-left"></i></div>
-                        <p style="color: #475569; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem; font-style: italic;">
-                            "Transitioning high-volume retail operations to MSA posed serious challenges for distributed transaction consistency. SyncBoot's Saga orchestration pattern solved it completely with zero financial data discrepancies."
-                        </p>
-                    </div>
-                    <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 1rem; display: flex; align-items: center; gap: 12px;">
-                        <div style="width: 40px; height: 40px; border-radius: 50%; background: #1e293b; display: flex; align-items: center; justify-content: center; color: #38bdf8; font-weight: 700;">H</div>
-                        <div>
-                            <div style="font-weight: 700; color: #0f172a; font-size: 0.95rem;">Homeplus Commerce Engineering Lead</div>
-                            <div style="color: #94a3b8; font-size: 0.82rem;">Next-Gen Retail MSA Distributed Transactions</div>
-                        </div>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <a href="https://sync.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="color: #ffffff !important; text-decoration: none;">Explore Live Screens &#8599;</a>
+                        <a href="/en/pages/contact.html" class="btn btn-outline btn-sm" style="color: #0f172a !important; text-decoration: none;">Request Industry Consultation</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
     <footer class="footer">
         <div class="container">
             <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 36px; padding-bottom: 36px; border-bottom: 1px solid #e2e8f0;" class="emp-footer-grid">
@@ -444,16 +388,16 @@
                         <img src="/images/logo.svg" alt="EMPASY" style="height: 22px; width: auto; margin-bottom: 14px;">
                     </a>
                     <p style="font-size: 14px; line-height: 1.7; color: #475569; max-width: 320px;">
-                        Practical enterprise software built on a shared foundation to simplify development, testing, and daily operations.
+                        Practical enterprise software that automates repetitive business tasks while keeping humans in charge of key approvals.
                     </p>
                 </div>
                 <div>
-                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Flagship Solutions</h4>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Core Business Areas</h4>
                     <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
-                        <li><a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncVerse</a></li>
-                        <li><a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncETA</a></li>
-                        <li><a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncBoot</a></li>
-                        <li><a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncCMS</a></li>
+                        <li><a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer">Approvals &amp; Oversight (SyncVerse)</a></li>
+                        <li><a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer">Automated Screen Checks (SyncETA)</a></li>
+                        <li><a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer">Internal System Core (SyncBoot)</a></li>
+                        <li><a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer">Web &amp; Multilingual (SyncCMS)</a></li>
                     </ul>
                 </div>
                 <div>
@@ -495,5 +439,24 @@
           @media (max-width: 560px) { .emp-footer-grid { grid-template-columns: 1fr !important; } }
         </style>
     </footer>
+    <script>
+      (function () {
+        var tabs = document.querySelectorAll('[data-client-filter]');
+        var cards = document.querySelectorAll('[data-client-sector]');
+        tabs.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var key = btn.getAttribute('data-client-filter');
+            tabs.forEach(function (b) {
+              var active = b === btn;
+              b.classList.toggle('active', active);
+              b.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+            cards.forEach(function (card) {
+              card.style.display = (key === 'all' || card.getAttribute('data-client-sector') === key) ? '' : 'none';
+            });
+          });
+        });
+      })();
+    </script>
 </body>
 </html>

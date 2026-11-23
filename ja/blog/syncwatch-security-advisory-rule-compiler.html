@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
+        gtag('js', new Date());
+        gtag('config', 'G-6BNPM5TX7C');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>グローバル脆弱性情報の収集からコード監査・API防御ルール配信まで：SyncWatch 設計 | Empasy</title>
+    <meta name="description" content="グローバル脆弱性フィード自動収集、5段階SSRFガード、WatchRuleCompilerServiceによるVerseAuditPack・ApimDefensePack生成と検証・配信追跡を備えたSyncWatch設計。">
+    <meta name="keywords" content="SyncWatch, 脅威インテリジェンス, CVE監視, CISA KEV, 仮想パッチルール生成, Shift-Left Shift-Right セキュリティ, SyncAPIM, SyncVerse, Empasy">
+    <meta name="author" content="株式会社Empasy (Empasy Inc.)">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="グローバル脆弱性情報の収集からコード監査・API防御ルール配信まで：SyncWatch 設計 | Empasy">
+    <meta property="og:description" content="グローバル脆弱性フィード自動収集、5段階SSRFガード、WatchRuleCompilerServiceによるVerseAuditPack・ApimDefensePack生成と検証・配信追跡を備えたSyncWatch設計。">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:url" content="https://empasy.io/ja/blog/syncwatch-security-advisory-rule-compiler.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-11-20">
+    <meta property="article:modified_time" content="2026-11-23">
+    <link rel="canonical" href="https://empasy.io/ja/blog/syncwatch-security-advisory-rule-compiler.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "グローバル脆弱性情報の収集からコード監査・API防御ルール配信まで：SyncWatch 設計",
+  "description": "グローバル脆弱性フィード自動収集、5段階SSRFガード、WatchRuleCompilerServiceによるVerseAuditPack・ApimDefensePack生成と検証・配信追跡を備えたSyncWatch設計。",
+  "datePublished": "2026-11-20",
+  "dateModified": "2026-11-23",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "Empasy Engineering Team",
+    "url": "https://empasy.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社Empasy (Empasy Inc.)",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://empasy.io/empasy-logo.png"
+    }
+  },
+  "image": "https://empasy.io/empasy-logo.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://empasy.io/ja/blog/syncwatch-security-advisory-rule-compiler.html"
+  },
+  "url": "https://empasy.io/ja/blog/syncwatch-security-advisory-rule-compiler.html"
+}
+    </script>
+  <script type="module" crossorigin src="/assets/modulepreload-polyfill-Dezn_h7o.js"></script>
+  <script type="module" crossorigin src="/assets/i18n-CC8j1T6V.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-BgRDHG71.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="glass-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/ja/pages/index.html" aria-label="Empasy ホーム">
+                    <img src="/images/logo.svg" alt="EMPASY" class="logo-img">
+                </a>
+            </div>
+            <button type="button" class="mobile-menu-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="emp-nav-links">
+                <svg class="icon-hamburger" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg class="icon-close" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <nav id="emp-nav-links" class="nav-links" aria-label="主要メニュー">
+                <div class="dropdown">
+                    <a href="/ja/pages/index.html#roles" class="dropbtn">ソリューション
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="dropdown-content" style="min-width: 280px;">
+                        <span class="dropdown-group-heading">クイック案内</span>
+                        <a href="/ja/pages/index.html#finder"><strong>30秒 最適構成診断</strong> · 3問で提案</a>
+                        <a href="/ja/pages/index.html#roles"><strong>業務課題から探す</strong> · 部門・役割別</a>
+                        <span class="dropdown-group-heading">中核4領域</span>
+                        <a href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>協業・承認統合管理</strong> · SyncVerse</a>
+                        <a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>画面自動点検</strong> · SyncETA</a>
+                        <a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>社内管理システム基盤</strong> · SyncBoot</a>
+                        <a href="https://cms.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>Web・多言語サイト管理</strong> · SyncCMS</a>
+                        <span class="dropdown-group-heading">拡張領域・IT資料</span>
+                        <a href="/ja/pages/index.html#modules">データ照会・AI費用・セキュリティ・事業運営 (7種)</a>
+                        <a href="/ja/download_eta.html">SyncETA PCアプリ入手</a>
+                        <a href="https://doc.empasy.com/ja/" target="_blank" rel="noopener noreferrer">IT・開発者向け技術文書 &#8599;</a>
+                    </div>
+                </div>
+    
+                <a href="/ja/pages/index.html#finder">30秒診断</a>
+                <a href="/ja/pages/clients.html">導入事例</a>
+    
+                <div class="dropdown">
+                    <a href="/ja/pages/vision.html" class="dropbtn">会社情報
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="/ja/pages/vision.html">ビジョン・ベンチャー認証</a>
+                        <a href="/ja/pages/team.html">チーム紹介</a>
+                        <a href="/ja/pages/careers.html">採用情報</a>
+                        <a href="/ja/pages/faq.html">よくある質問</a>
+                        <a href="/ja/blog/blog.html">インサイト</a>
+                    </div>
+                </div>
+    
+                <a href="https://sync.empasy.io/ja/" target="_blank" rel="noopener noreferrer">画面体験 &#8599;</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="lang-switch" role="navigation" aria-label="言語切替">
+                    <a href="/" data-lang="ko">KO</a>
+                    <a href="/en/pages/index.html" data-lang="en">EN</a>
+                    <a href="/ja/pages/index.html" data-lang="ja" class="active" aria-current="page">JA</a>
+                </div>
+                <a href="/ja/pages/contact.html" class="btn btn-primary btn-sm">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+    <script>
+    (function () {
+        var nav = document.querySelector('.glass-header .nav-container');
+        if (!nav || nav.dataset.empNavBound === 'true') return;
+        nav.dataset.empNavBound = 'true';
+        var btn = nav.querySelector('.mobile-menu-btn');
+        var links = nav.querySelector('.nav-links');
+        var actions = nav.querySelector('.nav-actions');
+        var setOpen = function (open) {
+            nav.classList.toggle('active', open);
+            if (links) links.classList.toggle('active', open);
+            if (actions) actions.classList.toggle('active', open);
+            document.documentElement.classList.toggle('mobile-menu-open', open);
+            document.body.classList.toggle('mobile-menu-open', open);
+            if (btn) {
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                btn.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+            }
+            if (!open) nav.scrollTop = 0;
+        };
+        if (btn) {
+            btn.addEventListener('click', function () {
+                setOpen(!nav.classList.contains('active'));
+            });
+        }
+        nav.querySelectorAll('.dropdown > .dropbtn').forEach(function (drop) {
+            drop.addEventListener('click', function (e) {
+                if (window.innerWidth <= 1023) {
+                    e.preventDefault();
+                    var parent = drop.parentElement;
+                    nav.querySelectorAll('.dropdown').forEach(function (d) {
+                        if (d !== parent) d.classList.remove('open');
+                    });
+                    parent.classList.toggle('open');
+                }
+            });
+        });
+        nav.querySelectorAll('a:not(.dropbtn)').forEach(function (a) {
+            a.addEventListener('click', function () {
+                if (window.innerWidth <= 1023 && nav.classList.contains('active')) {
+                    setOpen(false);
+                }
+            });
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && nav.classList.contains('active')) setOpen(false);
+        });
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 1023 && nav.classList.contains('active')) setOpen(false);
+        });
+        var syncEmpasyLocaleCookies = function (lang) {
+            var siteLocale = lang === 'en' ? 'en-US' : (lang === 'ja' ? 'ja-JP' : 'ko-KR');
+            var adminLocale = lang === 'ko' ? 'ko-KR' : 'en-US';
+            var host = window.location.hostname || '';
+            var domainPart = (host === 'empasy.io' || host.endsWith('.empasy.io')) ? '; domain=.empasy.io' : '';
+            var securePart = window.location.protocol === 'https:' ? '; Secure' : '';
+            var attrs = '; path=/; max-age=31536000; SameSite=Lax' + domainPart + securePart;
+            try {
+                document.cookie = 'empasy_site_locale=' + encodeURIComponent(siteLocale) + attrs;
+                document.cookie = 'empasy_locale=' + encodeURIComponent(adminLocale) + attrs;
+            } catch (err) {}
+        };
+        syncEmpasyLocaleCookies('ja');
+        var path = window.location.pathname || '/';
+        var m = path.match(/\/(ko|en|ja)\/(.*)/);
+        nav.querySelectorAll('.lang-switch a[data-lang]').forEach(function (a) {
+            if (a.dataset.langBound === 'true') return;
+            a.dataset.langBound = 'true';
+            var target = a.getAttribute('data-lang');
+            var url = target === 'ko' ? '/' : '/' + target + '/pages/index.html';
+            if (m) {
+                var sub = m[2] || 'pages/index.html';
+                if (target === 'ko' && (sub === 'pages/index.html' || sub === 'pages/' || sub === '')) {
+                    url = '/';
+                } else {
+                    url = '/' + target + '/' + sub;
+                }
+            }
+            a.setAttribute('href', url);
+            a.addEventListener('click', function () {
+                try { localStorage.setItem('preferred_lang', target); } catch (err) {}
+                syncEmpasyLocaleCookies(target);
+            });
+        });
+    })();
+    </script>
+
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/ja/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Empasy インサイト一覧へ</span>
+            </a>
+            <span class="badge" style="margin-bottom: 0;">脅威インテリジェンス・SyncWatch</span>
+        </div>
+
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-11-20 (更新 2026-11-23)</span>
+                <span>&bull;</span>
+                <span>読了目安 約6分</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">脆弱性監視・ルール配信</span>
+            </div>
+
+            <h1 class="ed-blog-title">グローバル脆弱性情報の収集からコード監査・API防御ルール配信まで：SyncWatch 設計</h1>
+
+            <div class="ed-exec-summary" aria-label="経営層・現場担当者のための3行要約">
+                <div class="ed-exec-summary-kicker">経営層・現場担当者のための3行要約</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">従来の課題</span><span>国内外の脆弱性情報を手作業で監視・突合する運用では対応空白が生じやすく、急造した遮断ルールによる正常通信の誤遮断リスクも伴います。</span></li>
+                    <li><span class="ed-exec-summary-tag">解決アプローチ</span><span>SyncWatchは主要セキュリティフィードを自動正規化し、サンドボックス検証を通過したコード監査パック（SyncVerse）とAPI防御パック（SyncAPIM）を同時配信します。</span></li>
+                    <li><span class="ed-exec-summary-tag">導入効果</span><span>開発段階の事前点検（Shift-Left）と本番APIの仮想パッチ（Shift-Right）を切れ目なく連動できます。</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">自社の業務フローにそのまま適用できるか確認してみませんか？</span>
+                    <a href="/ja/pages/contact.html?topics=ops-security" class="btn btn-primary btn-sm" style="min-height: 36px;">導入相談を申し込む</a>
+                </div>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>IT担当者・開発者向けの詳細技術解説</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="この記事の目次">
+  <div class="ed-article-toc-title">この記事の目次</div>
+  <ol>
+    <li><a href="#sec-1">1. SyncWatch 4段階 脅威収集・防御配信パイプライン</a></li>
+    <li><a href="#sec-2">2. 複数脅威フィードの統合正規化と5段階SSRFガード</a></li>
+    <li><a href="#sec-3">3. Shift-Left と Shift-Right を結ぶ二重ルール生成</a></li>
+    <li><a href="#sec-4">4. サンドボックス検証と配信ガバナンス</a></li>
+  </ol>
+</nav>
+<p>新たな脆弱性（CVE）の公開から攻撃実行までの期間は年々短縮しています。しかし多くの現場では、NVD・CISA・KISAなどの公開情報を担当者が手動確認し、開発部門の修正とセキュリティ部門のWAF設定が別々に進むことで<strong>数日〜数週間の防御空白</strong>が生まれています。</p>
+<p>Empasyの<a href="https://watch.empasy.io/" target="_blank" rel="noopener noreferrer">SyncWatch</a>は、グローバル脅威フィードの収集から影響判定、<strong>コード監査パック（Shift-Left）とAPI防御パック（Shift-Right）の同時コンパイル・検証・配信</strong>までを一貫管理します。</p>
+
+<h2 id="sec-1">1. SyncWatch 4段階 脅威収集・防御配信パイプライン</h2>
+
+<div class="modern-pipeline">
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 01</div>
+    <div class="pipeline-title">多チャンネル自動収集</div>
+    <div class="pipeline-desc">NVD・CISA KEV・OSV・GHSA・Nuclei・OWASP CRS・KISAを収集</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 02</div>
+    <div class="pipeline-title">正規化・影響範囲特定</div>
+    <div class="pipeline-desc">watch_security_advisoryへ正規化し社内資産・依存関係を突合</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 03</div>
+    <div class="pipeline-title">ルール生成・事前検証</div>
+    <div class="pipeline-desc">VerseAuditPack・ApimDefensePackを生成しサンドボックス検証</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 04</div>
+    <div class="pipeline-title">双方向配信・履歴追跡</div>
+    <div class="pipeline-desc">SyncVerseとSyncAPIMへ同時配信し結果を監査ログで追跡</div>
+  </div>
+</div>
+
+<h2 id="sec-2">2. 複数脅威フィードの統合正規化と5段階SSRFガード</h2>
+<ul>
+  <li><strong>統合アドバイザリ管理（<code>watch_security_advisory</code>）：</strong>国内外の複数フィードと社内診断文書を共通スキーマで正規化し、重複を排除します。</li>
+  <li><strong>5段階SSRFガード＆リアルタイムログ：</strong>外部取得時の安全性を担保しつつ、収集・解析の進行状況をリアルタイムに確認できます。</li>
+</ul>
+
+<h2 id="sec-3">3. Shift-Left と Shift-Right を結ぶ二重ルール生成</h2>
+<ul>
+  <li><strong><code>VerseAuditPack</code>（Shift-Left コード監査）：</strong><strong>SyncVerse</strong>へ配信され、PRレビューやハーネス検証で脆弱パッケージや危険パターンを早期検知します。</li>
+  <li><strong><code>ApimDefensePack</code>（Shift-Right 仮想パッチ）：</strong><strong>SyncAPIM</strong>へ配信され、恒久修正が完了するまでの間、本番ゲートウェイ上で攻撃トラフィックを無停止防御します。</li>
+</ul>
+
+<h2 id="sec-4">4. サンドボックス検証と配信ガバナンス</h2>
+<p>生成したルールは攻撃ペイロードの検知精度と正常リクエストの非遮断をサンドボックス環境で確認してから配信対象とし、配信・ロールバック履歴（<code>watch_dispatch_history</code>）を完全に追跡できます。</p>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>SyncWatch の脅威監視・防御ルール自動配信をご確認ください</strong>
+                <span>多チャンネル収集ログ・サンドボックス検証・配信追跡の詳細は製品サイトでご覧いただけます。</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="https://watch.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SyncWatch を見る &#8599;</a>
+                <a href="/ja/pages/contact.html?topics=ops-security" class="btn btn-outline btn-sm">導入相談</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="あわせて読みたいインサイト">
+        <h2 class="ed-related-heading">あわせて読みたいインサイト</h2>
+        <div class="ed-related-grid">
+        <a href="/ja/blog/syncapim-ai-api-gateway-ebpf-defense.html" class="ed-related-card">
+            <span class="ed-related-cat">APIセキュリティ・管制</span>
+            <span class="ed-related-title">シャドーAPI検知から無停止仮想パッチ・eBPF防御まで：SyncAPIM セキュリティガイド</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        <a href="/ja/blog/syncverse-mcp-ai-orchestration-architecture.html" class="ed-related-card">
+            <span class="ed-related-cat">協業・段階別承認</span>
+            <span class="ed-related-title">分散した業務ツールをひとつに繋ぐ協業・承認管理：SyncVerse 運用ガイド</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 36px; padding-bottom: 36px; border-bottom: 1px solid #e2e8f0;" class="emp-footer-grid">
+                <div>
+                    <a href="/ja/pages/index.html" aria-label="Empasy 公式ホームページ">
+                        <img src="/images/logo.svg" alt="EMPASY" style="height: 22px; width: auto; margin-bottom: 14px;">
+                    </a>
+                    <p style="font-size: 14px; line-height: 1.7; color: #475569; max-width: 320px;">
+                        繰り返される企業業務を自動化し、重要な判断は担当者の承認を経て安全に反映する実務向けソフトウェアを提供しています。
+                    </p>
+                </div>
+                <div>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">中核業務領域</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
+                        <li><a href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer">協業・承認管理 (SyncVerse)</a></li>
+                        <li><a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer">画面自動点検 (SyncETA)</a></li>
+                        <li><a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer">社内管理システム (SyncBoot)</a></li>
+                        <li><a href="https://cms.empasy.io/ja/" target="_blank" rel="noopener noreferrer">Web・多言語管理 (SyncCMS)</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">会社情報・実績</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
+                        <li><a href="/ja/pages/clients.html">導入事例</a></li>
+                        <li><a href="/ja/pages/team.html">チーム紹介</a></li>
+                        <li><a href="/ja/pages/vision.html">ビジョン・ベンチャー認証</a></li>
+                        <li><a href="/ja/pages/careers.html">採用情報</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">デモ・文書・相談</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
+                        <li><a href="https://sync.empasy.io/ja/" target="_blank" rel="noopener noreferrer">統合デモポータル &#8599;</a></li>
+                        <li><a href="/ja/download_eta.html">SyncETA ダウンロード</a></li>
+                        <li><a href="https://doc.empasy.com/ja/" target="_blank" rel="noopener noreferrer">技術ドキュメント &#8599;</a></li>
+                        <li><a href="/ja/pages/contact.html">導入のお問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom" style="padding-top: 24px; text-align: left;">
+                <address class="emp-legal-list">
+                    <span class="emp-legal-seg"><strong style="color: #0f172a;">株式会社エムパシー (Empasy Inc.)</strong></span>
+                    <span class="emp-legal-seg">代表取締役 オ・ビョンムン</span>
+                    <span class="emp-legal-seg">事業者登録番号 547-81-03408</span>
+                    <span class="emp-legal-seg is-wrap">革新成長型ベンチャー企業認証 (第20261111030084号)</span>
+                    <span class="emp-legal-seg is-wrap">大韓民国ソウル特別市衿川区加山デジタル1路205-27 2階208号</span>
+                    <span class="emp-legal-seg">お問い合わせ <a href="mailto:poh@empasy.com" style="color: #0e7490; text-decoration: underline;">poh@empasy.com</a></span>
+                    <span class="emp-legal-seg">代表電話 <a href="tel:+82-507-1360-8169" style="color: #0f172a;">+82-507-1360-8169</a></span>
+                    <span class="emp-legal-seg"><a href="/ja/pages/terms.html">利用規約</a></span>
+                    <span class="emp-legal-seg"><a href="/ja/pages/privacy.html">プライバシーポリシー</a></span>
+                </address>
+                <p style="color: #64748b; font-size: 12px; margin-top: 8px;">&copy; 2026 Empasy Inc. All rights reserved.</p>
+            </div>
+        </div>
+        <style>
+          @media (max-width: 900px) { .emp-footer-grid { grid-template-columns: 1fr 1fr !important; } }
+          @media (max-width: 560px) { .emp-footer-grid { grid-template-columns: 1fr !important; } }
+        </style>
+    </footer>
+
+</body>
+</html>

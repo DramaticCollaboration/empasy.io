@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -16,89 +37,64 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
     <!-- End Google Tag Manager -->
-    <title>Empasy | Case study finance</title>
-    <meta name="description" content="B2B Enterprise AI Integration Architecture solving DX and AI Infrastructure simultaneously.">
-    <meta name="keywords" content="Enterprise AI Ecosystem, Enterprise AI Integration Platform, DX AI Architecture, Empasy, MSA CMS AI Integration, Business Data Intelligence, SyncVerse, SyncBoot, SyncCMS, SyncInsight, SyncETA, B2B AI Solution">
-    <meta property="og:title" content="Empasy | Case study finance">
-    <meta property="og:description" content="B2B Enterprise AI Integration Architecture solving DX and AI Infrastructure simultaneously.">
-    <meta property="og:type" content="website">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Empasy">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Major Project Implementation and Success Cases",
-      "author": {
-        "@type": "Organization",
-        "name": "Empasy"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Empasy",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.io/empasy-logo.png"
-        }
-      }
-    }
-    </script>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <!-- SEO & AIO Tags -->
-    
-    <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom Style for Diagrams -->
-    <style>
-        .diagram-grid {
-            display: grid;
-            grid-template-columns: 1fr auto 1.2fr auto 1fr;
-            gap: 1rem;
-            align-items: stretch;
-        }
-        .diagram-box {
-            background: var(--bg-primary);
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
-            height: 100%;
-        }
-        .diagram-arrow {
-            color: var(--border-color);
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        @media (max-width: 900px) {
-            .diagram-grid {
-                grid-template-columns: 1fr;
-            }
-            .diagram-arrow {
-                transform: rotate(90deg);
-                padding: 10px 0;
-            }
-        }
-    </style>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- SEO & AIO Tags -->
-    
-    
-    <!-- SEO & AIO Tags -->
+    <title>Enterprise Modernization &amp; Automation Case Studies Across Education, Security, Retail &amp; Public Sectors | Empasy</title>
+    <meta name="description" content="Verified enterprise project case studies using SyncETA, SyncBoot, SyncCMS, SyncAPIM, and SyncInsight across education, IT security, retail, and public sectors.">
+    <meta name="keywords" content="Empasy Case Studies, Enterprise Modernization, SyncETA Case Study, SyncBoot Case Study, SyncCMS Portal, SyncAPIM Security, SyncInsight RAG">
+    <meta name="author" content="Empasy Inc.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="Enterprise Modernization &amp; Automation Case Studies Across Education, Security, Retail &amp; Public Sectors | Empasy">
+    <meta property="og:description" content="Verified enterprise project case studies using SyncETA, SyncBoot, SyncCMS, SyncAPIM, and SyncInsight across education, IT security, retail, and public sectors.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://empasy.io/en/blog/case-study-finance.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-03-20">
+    <meta property="article:modified_time" content="2026-11-23">
     <link rel="canonical" href="https://empasy.io/en/blog/case-study-finance.html">
     <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/case-study-finance.html" />
     <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/case-study-finance.html" />
     <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/case-study-finance.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/case-study-finance.html" />
-    <meta property="og:url" content="https://empasy.io/en/blog/case-study-finance.html">
-  <script type="module" crossorigin src="/assets/i18n-3nk6-OFj.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/style-BWlNIJrj.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Enterprise Modernization & Automation Case Studies Across Education, Security, Retail & Public Sectors",
+  "description": "Verified enterprise project case studies using SyncETA, SyncBoot, SyncCMS, SyncAPIM, and SyncInsight across education, IT security, retail, and public sectors.",
+  "datePublished": "2026-03-20",
+  "dateModified": "2026-11-23",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Organization",
+    "name": "Empasy Engineering Team",
+    "url": "https://empasy.io"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Empasy Inc.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://empasy.io/empasy-logo.png"
+    }
+  },
+  "image": "https://empasy.io/empasy-logo.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://empasy.io/en/blog/case-study-finance.html"
+  },
+  "url": "https://empasy.io/en/blog/case-study-finance.html"
+}
+    </script>
+  <script type="module" crossorigin src="/assets/modulepreload-polyfill-Dezn_h7o.js"></script>
+  <script type="module" crossorigin src="/assets/i18n-CC8j1T6V.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-BgRDHG71.css">
 </head>
 <body>
-
-    <!-- Header Navigation -->
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -122,20 +118,26 @@
             </button>
             <nav id="emp-nav-links" class="nav-links" aria-label="Main navigation">
                 <div class="dropdown">
-                    <a href="/en/pages/index.html#solutions" class="dropbtn">Solutions
+                    <a href="/en/pages/index.html#roles" class="dropbtn">Solutions
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </a>
-                    <div class="dropdown-content" style="min-width: 270px;">
-                        <span class="dropdown-group-heading">4 Flagship Solutions</span>
-                        <a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · Operations &amp; Approvals</a>
-                        <a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · Automated Testing App</a>
-                        <a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · Business System Core</a>
-                        <a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · Web &amp; Multilingual CMS</a>
-                        <span class="dropdown-group-heading">Modular Extensions</span>
-                        <a href="/en/pages/index.html#modules">Data, Security &amp; Operations (7 Modules)</a>
+                    <div class="dropdown-content" style="min-width: 280px;">
+                        <span class="dropdown-group-heading">Quick Start</span>
+                        <a href="/en/pages/index.html#finder"><strong>30-Second Solution Finder</strong> · 3 questions</a>
+                        <a href="/en/pages/index.html#roles"><strong>Browse by Business Goal</strong> · By team</a>
+                        <span class="dropdown-group-heading">4 Core Business Areas</span>
+                        <a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Operations &amp; Approvals</strong> · SyncVerse</a>
+                        <a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Automated Screen Checks</strong> · SyncETA</a>
+                        <a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Internal System Core</strong> · SyncBoot</a>
+                        <a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Web &amp; Multilingual Hub</strong> · SyncCMS</a>
+                        <span class="dropdown-group-heading">Extensions &amp; IT Resources</span>
+                        <a href="/en/pages/index.html#modules">Data, AI Cost, Security &amp; Operations (7)</a>
+                        <a href="/en/download_eta.html">Download SyncETA Desktop App</a>
+                        <a href="https://doc.empasy.com/en/" target="_blank" rel="noopener noreferrer">IT &amp; Developer Docs &#8599;</a>
                     </div>
                 </div>
     
+                <a href="/en/pages/index.html#finder">Solution Finder</a>
                 <a href="/en/pages/clients.html">Clients</a>
     
                 <div class="dropdown">
@@ -151,7 +153,6 @@
                     </div>
                 </div>
     
-                <a href="https://doc.empasy.com/en/" target="_blank" rel="noopener noreferrer">Docs &#8599;</a>
                 <a href="https://sync.empasy.io/en/" target="_blank" rel="noopener noreferrer">Live Demo &#8599;</a>
             </nav>
             <div class="nav-actions">
@@ -160,8 +161,7 @@
                     <a href="/en/pages/index.html" data-lang="en" class="active" aria-current="page">EN</a>
                     <a href="/ja/pages/index.html" data-lang="ja">JA</a>
                 </div>
-                <a href="/en/download_eta.html" class="btn btn-outline btn-sm">Download SyncETA</a>
-                <a href="/en/pages/contact.html" class="btn btn-primary btn-sm">Contact</a>
+                <a href="/en/pages/contact.html" class="btn btn-primary btn-sm">Contact Sales</a>
             </div>
         </div>
     </header>
@@ -252,119 +252,166 @@
     })();
     </script>
 
-    <main class="container" style="padding-top: 105px; min-height: 80vh;">
-        <div class="page-header text-center fade-in-up mb-4">
-            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Case Studies / Portfolio</span>
-            <h1 class="page-title" style="font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 1rem; color: var(--text-primary);">Major Project Implementation and Success Cases</h1>
-            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">We maximize the business value of global enterprises through innovative technological prowess.</p>
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/en/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Back to Empasy Insights</span>
+            </a>
+            <span class="badge" style="margin-bottom: 0;">Case Studies</span>
         </div>
-        
-        <section class="section" style="padding-top: 2rem; padding-bottom: 5rem;">
-            <div class="container" style="max-width: 1100px;">
-                <div style="display: flex; flex-direction: column; gap: 4rem;">
 
-                    <!-- 2. Gyeonggido Office of Education -->
-                    <article class="fade-in-up delay-1" style="background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
-                        <div style="margin-bottom: 2.5rem; display: inline-block;">
-                            <h2 style="font-size: clamp(1.5rem, 5vw, 2rem); color: var(--text-primary); margin: 0;">Public Innovation Generative AI RAG Case (Gyeonggi Provincial Office of Education)</h2>
-                            <div style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 0.5rem; font-weight: 600;">Project: AI & Data-Centric Intelligent Digital Platform Construction</div>
-                        </div>
-                        
-                        <div class="diagram-grid">
-                            <!-- Challenge -->
-                            <div class="diagram-box" style="border-top: 4px solid #ef4444;">
-                                <h4 style="color: #ef4444; margin-bottom: 1rem; font-size: 1.1rem;">01. Background</h4>
-                                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin:0;">Information accessibility degraded due to fragmented administrative data (approx. 40,000 cases) and massive guidelines across 2,800 schools, and the burden of simple repetitive civil complaint tasks on school staff was a serious issue.</p>
-                            </div>
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-03-20 (Updated 2026-11-23)</span>
+                <span>&bull;</span>
+                <span>6 min read</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">Enterprise Case Studies</span>
+            </div>
 
-                            <div class="diagram-arrow">▶</div>
+            <h1 class="ed-blog-title">Enterprise Modernization &amp; Automation Case Studies Across Education, Security, Retail &amp; Public Sectors</h1>
 
-                            <!-- Solution -->
-                            <div class="diagram-box" style="background: rgba(8,145,178,0.03); border-top: 4px solid var(--primary-color);">
-                                <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.1rem;">02. Empasy Solution (Large-scale RAG)</h4>
-                                <p style="font-size: 0.95rem; color: var(--text-primary); line-height: 1.6; margin:0;">Construction of a <strong>large-scale RAG pipeline</strong> that fundamentally blocks generative AI hallucination through intelligent knowledge vectorization of 40,000 school data points, and fine-tuning of an LLM specialized for educational administration.</p>
-                            </div>
-
-                            <div class="diagram-arrow">▶</div>
-
-                            <!-- Results -->
-                            <div class="diagram-box" style="border-top: 4px solid #10b981;">
-                                <h4 style="color: #10b981; margin-bottom: 1rem; font-size: 1.1rem;">03. Business Results</h4>
-                                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin:0;">Innovation enabling school staff to focus on their original educational duties through official document drafting support and automated civil complaint processing. Maximized public administrative satisfaction through 24-hour real-time conversational chatbot communication.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- 3. Penta Security -->
-                    <article class="fade-in-up delay-2" style="background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
-                        <div style="margin-bottom: 2.5rem; display: inline-block;">
-                            <h2 style="font-size: clamp(1.5rem, 5vw, 2rem); color: var(--text-primary); margin: 0;">High-Volume Traffic Security Infrastructure Case (Penta Security)</h2>
-                            <div style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 0.5rem; font-weight: 600;">Project: Enterprise High-Performance API Security and Integrated Management Platform (WAPPLES) Construction</div>
-                        </div>
-                        
-                        <div class="diagram-grid">
-                            <!-- Challenge -->
-                            <div class="diagram-box" style="border-top: 4px solid #ef4444;">
-                                <h4 style="color: #ef4444; margin-bottom: 1rem; font-size: 1.1rem;">01. Background</h4>
-                                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin:0;">A standard for integrated security management was needed to respond to rapidly increasing next-generation API threats such as MyData activation, and to flexibly control high-volume API traffic in a multi-cloud environment.</p>
-                            </div>
-
-                            <div class="diagram-arrow">▶</div>
-
-                            <!-- Solution -->
-                            <div class="diagram-box" style="background: rgba(8,145,178,0.03); border-top: 4px solid var(--primary-color);">
-                                <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.1rem;">02. Empasy Solution (SyncBoot)</h4>
-                                <p style="font-size: 0.95rem; color: var(--text-primary); line-height: 1.6; margin:0;">Integrated high-capacity in-memory Redis and OpenSearch based on the <strong>SyncBoot</strong> framework. Designed an Active-Active high-availability distributed architecture capable of zero-latency processing of explosive logs exceeding 10,000 TPS.</p>
-                            </div>
-
-                            <div class="diagram-arrow">▶</div>
-
-                            <!-- Results -->
-                            <div class="diagram-box" style="border-top: 4px solid #10b981;">
-                                <h4 style="color: #10b981; margin-bottom: 1rem; font-size: 1.1rem;">03. Business Results</h4>
-                                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin:0;">Completed a highly reliable platform that 100% satisfies the strict security regulations of the financial sector and public institutions. Secured centralized management visibility, resulting in resource savings and laying the foundation for global SaaS business expansion.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- 4. Visang Education -->
-                    <article class="fade-in-up delay-3" style="background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
-                        <div style="margin-bottom: 2.5rem; display: inline-block;">
-                            <h2 style="font-size: clamp(1.5rem, 5vw, 2rem); color: var(--text-primary); margin: 0;">Real-time EdTech Interaction Verification Case (Visang Education)</h2>
-                            <div style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 0.5rem; font-weight: 600;">Project: SyncETA-based AIDT (AI Digital Textbook) Service Quality Improvement Automation</div>
-                        </div>
-                        
-                        <div class="diagram-grid">
-                            <!-- Challenge -->
-                            <div class="diagram-box" style="border-top: 4px solid #ef4444;">
-                                <h4 style="color: #ef4444; margin-bottom: 1rem; font-size: 1.1rem;">01. Background</h4>
-                                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin:0;">Real-time multiple interaction verification within virtual classrooms reached its limit with manual work, and automation was urgently needed to guarantee system high-reliabilitys in line with rapid deployment cycles.</p>
-                            </div>
-
-                            <div class="diagram-arrow">▶</div>
-
-                            <!-- Solution -->
-                            <div class="diagram-box" style="background: rgba(8,145,178,0.03); border-top: 4px solid var(--primary-color);">
-                                <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.1rem;">02. Empasy Solution (SyncETA)</h4>
-                                <p style="font-size: 0.95rem; color: var(--text-primary); line-height: 1.6; margin:0;">Highly Reliablely reproduced peak time (2,000 users) load by concurrently launching hundreds of headless browsers through <strong>SyncETA</strong>. Built an advanced TestOps pipeline through precise tracking of WebSocket latency and automatic Jira integration.</p>
-                            </div>
-
-                            <div class="diagram-arrow">▶</div>
-
-                            <!-- Results -->
-                            <div class="diagram-box" style="border-top: 4px solid #10b981;">
-                                <h4 style="color: #10b981; margin-bottom: 1rem; font-size: 1.1rem;">03. Business Results</h4>
-                                <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin:0;">Controlled data loss risks by passing consistency verification through simulation and achieving Regression Zero. <strong>Reduced QA labor costs by more than 80%</strong> compared to existing manual work.</p>
-                            </div>
-                        </div>
-                    </article>
-
+            <div class="ed-exec-summary" aria-label="3-Line Executive &amp; Business Summary">
+                <div class="ed-exec-summary-kicker">3-Line Executive &amp; Business Summary</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">Challenge</span><span>High-traffic release checks, aging back-office schemas, surging API security logs, and scattered policy documents create recurring bottlenecks across industries.</span></li>
+                    <li><span class="ed-exec-summary-tag">Approach</span><span>Teams adopted click-based verification (SyncETA), standard RBAC/approval cores (SyncBoot), unified multilingual portals (SyncCMS), API defense (SyncAPIM), and private RAG (SyncInsight).</span></li>
+                    <li><span class="ed-exec-summary-tag">Impact</span><span>Measured outcomes included cutting verification time from 4 hours to 45 minutes, accelerating releases from monthly to weekly, and strengthening audit visibility.</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">Want to verify how this fits your team workflows?</span>
+                    <a href="/en/pages/contact.html?topics=system" class="btn btn-primary btn-sm" style="min-height: 36px;">Request Consultation</a>
                 </div>
             </div>
-        </section>
+
+            <details class="ed-tech-details" open>
+                <summary>Detailed Project Case Studies by Sector (4 Cases · Anonymized per NDA)</summary>
+                <div class="ed-tech-details-body">
+
+<p>In accordance with client confidentiality agreements (NDAs), organization names below are presented by industry sector, consistent with our <a href="/en/pages/clients.html">Clients &amp; Track Record page</a>. Each case highlights the operational bottleneck, the technical approach, and observed field outcomes.</p>
+
+<div class="ed-case-stack">
+  <section class="ed-case-block">
+    <div class="ed-case-block-head">
+      <span class="ed-case-block-kicker">Education Platform · SyncETA</span>
+      <h2 id="sec-1">01. Large-Scale Automated Regression Verification for Digital Learning</h2>
+      <p class="ed-case-block-sub">2,000 concurrent users &amp; 100 virtual classrooms validated prior to release</p>
+    </div>
+    <div class="ed-case-triad">
+      <div class="ed-case-triad-box is-challenge">
+        <div class="ed-case-triad-label">01. Challenge</div>
+        <p>Manually verifying attendance, live classroom interactions, and checkout flows took over 4 hours per release cycle, and traditional test scripts frequently broke after UI updates.</p>
+      </div>
+      <div class="ed-case-triad-box is-solution">
+        <div class="ed-case-triad-label">02. Solution (SyncETA)</div>
+        <p>Deployed parallel Playwright headless workers to replay peak interactive journeys, paired with self-healing selectors and automated issue-tracker reporting.</p>
+      </div>
+      <div class="ed-case-triad-box is-result">
+        <div class="ed-case-triad-label">03. Outcome</div>
+        <p>Reduced pre-release verification from <strong>4 hours to 45 minutes</strong> and caught visual and functional regressions reliably before production rollout.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ed-case-block">
+    <div class="ed-case-block-head">
+      <span class="ed-case-block-kicker">IT Security &amp; Finance Integration · SyncBoot · SyncAPIM</span>
+      <h2 id="sec-2">02. High-Volume API Security &amp; Unified Monitoring Platform</h2>
+      <p class="ed-case-block-sub">Low-latency log search and anomaly governance under strict regulatory compliance</p>
+    </div>
+    <div class="ed-case-triad">
+      <div class="ed-case-triad-box is-challenge">
+        <div class="ed-case-triad-label">01. Challenge</div>
+        <p>Expanding external API integrations created surging traffic logs and required a high-availability platform to inspect anomalous access patterns rapidly across environments.</p>
+      </div>
+      <div class="ed-case-triad-box is-solution">
+        <div class="ed-case-triad-label">02. Solution (SyncBoot · SyncAPIM)</div>
+        <p>Built an active-active monitoring architecture combining the SyncBoot core with Redis and OpenSearch for rapid log indexing and centralized API policy governance.</p>
+      </div>
+      <div class="ed-case-triad-box is-result">
+        <div class="ed-case-triad-label">03. Outcome</div>
+        <p>Delivered fast query visibility across massive access logs and established a compliance-ready foundation suitable for financial and public security audits.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ed-case-block">
+    <div class="ed-case-block-head">
+      <span class="ed-case-block-kicker">Retail, Appliances &amp; Materials · SyncBoot · SyncCMS</span>
+      <h2 id="sec-3">03. Legacy Back-Office Modernization &amp; Global Multilingual Portal Consolidation</h2>
+      <p class="ed-case-block-sub">Streamlining 380+ legacy tables and unifying regional websites under one console</p>
+    </div>
+    <div class="ed-case-triad">
+      <div class="ed-case-triad-box is-challenge">
+        <div class="ed-case-triad-label">01. Challenge</div>
+        <p>Years of accumulated schema complexity and fragmented regional brand sites caused month-long delays whenever teams needed new operational screens or localized campaigns.</p>
+      </div>
+      <div class="ed-case-triad-box is-solution">
+        <div class="ed-case-triad-label">02. Solution (SyncBoot · SyncCMS)</div>
+        <p>Consolidated active data structures onto SyncBoot's standard RBAC and approval foundation while unifying multi-country web authoring and review flows in SyncCMS.</p>
+      </div>
+      <div class="ed-case-triad-box is-result">
+        <div class="ed-case-triad-label">03. Outcome</div>
+        <p>Accelerated feature delivery from <strong>monthly to weekly cycles</strong> and empowered regional teams to publish multilingual pages safely under centralized governance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ed-case-block">
+    <div class="ed-case-block-head">
+      <span class="ed-case-block-kicker">Public &amp; Education Administration · SyncInsight · SyncCrawl</span>
+      <h2 id="sec-4">04. Private RAG Knowledge Hub for 40,000+ Administrative Guidelines</h2>
+      <p class="ed-case-block-sub">Structured indexing and citation-backed retrieval inside private networks</p>
+    </div>
+    <div class="ed-case-triad">
+      <div class="ed-case-triad-box is-challenge">
+        <div class="ed-case-triad-label">01. Challenge</div>
+        <p>Over 40,000 administrative documents spread across thousands of affiliated institutions slowed policy lookup and created heavy repetitive inquiry workloads for staff.</p>
+      </div>
+      <div class="ed-case-triad-box is-solution">
+        <div class="ed-case-triad-label">02. Solution (SyncInsight · SyncCrawl)</div>
+        <p>Structured and indexed policy repositories inside a controlled private environment using hybrid RAG with mandatory source citations and drafting assistance.</p>
+      </div>
+      <div class="ed-case-triad-box is-result">
+        <div class="ed-case-triad-label">03. Outcome</div>
+        <p>Cut repetitive lookup and drafting time significantly while providing verifiable, citation-backed responses aligned with administrative security policies.</p>
+      </div>
+    </div>
+  </section>
+</div>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>See More Proven Enterprise Results</strong>
+                <span>Review our full client track record and official Venture Enterprise certification on the Clients page.</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="/en/pages/clients.html" class="btn btn-primary btn-sm">View All Client Cases</a>
+                <a href="/en/pages/contact.html?topics=system" class="btn btn-outline btn-sm">Contact Us</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="Related Insights">
+        <h2 class="ed-related-heading">Related Insights</h2>
+        <div class="ed-related-grid">
+        <a href="/en/blog/synceta-intelligent-regression-testing-pipeline.html" class="ed-related-card">
+            <span class="ed-related-cat">Verification Guide</span>
+            <span class="ed-related-title">Automated Screen Checks Without Coding: From Click Recording to Self-Recovery</span>
+            <span class="ed-related-more">Read More &rarr;</span>
+        </a>
+        <a href="/en/blog/syncboot-cloud-native-msa-architecture.html" class="ed-related-card">
+            <span class="ed-related-cat">Internal System Core</span>
+            <span class="ed-related-title">Modernizing Aging Internal Systems Step by Step: SyncBoot Standard Foundation</span>
+            <span class="ed-related-more">Read More &rarr;</span>
+        </a>
+        </div>
+    </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 36px; padding-bottom: 36px; border-bottom: 1px solid #e2e8f0;" class="emp-footer-grid">
@@ -373,16 +420,16 @@
                         <img src="/images/logo.svg" alt="EMPASY" style="height: 22px; width: auto; margin-bottom: 14px;">
                     </a>
                     <p style="font-size: 14px; line-height: 1.7; color: #475569; max-width: 320px;">
-                        Practical enterprise software built on a shared foundation to simplify development, testing, and daily operations.
+                        Practical enterprise software that automates repetitive business tasks while keeping humans in charge of key approvals.
                     </p>
                 </div>
                 <div>
-                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Flagship Solutions</h4>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Core Business Areas</h4>
                     <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
-                        <li><a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncVerse</a></li>
-                        <li><a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncETA</a></li>
-                        <li><a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncBoot</a></li>
-                        <li><a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncCMS</a></li>
+                        <li><a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer">Approvals &amp; Oversight (SyncVerse)</a></li>
+                        <li><a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer">Automated Screen Checks (SyncETA)</a></li>
+                        <li><a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer">Internal System Core (SyncBoot)</a></li>
+                        <li><a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer">Web &amp; Multilingual (SyncCMS)</a></li>
                     </ul>
                 </div>
                 <div>
@@ -425,6 +472,5 @@
         </style>
     </footer>
 
-    <!-- Scripts -->
 </body>
 </html>

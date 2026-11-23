@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -16,8 +37,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empasy 公式ホームページ | 実務向け企業ソフトウェア SyncSeries</title>
-    <meta name="description" content="株式会社エムパシー(Empasy Inc.)公式ホームページ。検証済みの共通基盤上に構成された主力ソリューション4種(SyncVerse, SyncETA, SyncBoot, SyncCMS)と目的別拡張モジュール7種をご紹介します。">
+    <title>Empasy 公式ホームページ | 実務向け企業業務ソフトウェア SyncSeries</title>
+    <meta name="description" content="株式会社エムパシー(Empasy Inc.)公式ホームページ。繰り返される企業業務を自動化し、重要な判断は人の承認を経て安全に反映するモジュール型ソフトウェアをご紹介します。">
     <meta name="author" content="Empasy Inc.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://empasy.io/ja/pages/index.html">
@@ -27,8 +48,8 @@
     <link rel="alternate" hreflang="x-default" href="https://empasy.io/">
     <meta property="og:site_name" content="Empasy">
     <meta property="og:locale" content="ja_JP">
-    <meta property="og:title" content="Empasy | 実務向け企業ソフトウェア SyncSeries">
-    <meta property="og:description" content="検証済みの共通基盤の上で、企業の開発・テスト・Web・運用業務を支える実務向けソフトウェアを提供しています。">
+    <meta property="og:title" content="Empasy | 反復業務の自動化と安全な承認管理">
+    <meta property="og:description" content="Webサイト、社内管理システム、経営データ照会、画面自動点検まで、最も急ぐ1業務から2週間で効果検証できます。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://empasy.io/ja/pages/index.html">
     <meta property="og:image" content="https://empasy.io/images/screenshots/sync-verse/screen_01.png">
@@ -41,7 +62,7 @@
       "name": "株式会社エムパシー (Empasy Inc.)",
       "url": "https://empasy.io/",
       "logo": "https://empasy.io/empasy-logo.png",
-      "description": "検証済みの共通基盤の上で、企業の開発・テスト・Web・運用業務を支える実務向けソフトウェアを提供する企業です。",
+      "description": "繰り返される企業業務を自動化し、重要な変更は人の確認と承認を経て安全に反映する実務向け企業ソフトウェアを提供しています。",
       "founder": { "@type": "Person", "name": "オ・ビョンムン" },
       "taxID": "547-81-03408",
       "award": "革新成長型ベンチャー企業認証 (第20261111030084号)",
@@ -61,7 +82,9 @@
       }
     }
     </script>
-  <link rel="stylesheet" crossorigin href="/assets/style-BWlNIJrj.css">
+  <script type="module" crossorigin src="/assets/modulepreload-polyfill-Dezn_h7o.js"></script>
+  <script type="module" crossorigin src="/assets/home-interactive-8_7xJqTR.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-BgRDHG71.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -87,20 +110,26 @@
             </button>
             <nav id="emp-nav-links" class="nav-links" aria-label="主要メニュー">
                 <div class="dropdown">
-                    <a href="/ja/pages/index.html#solutions" class="dropbtn">ソリューション
+                    <a href="/ja/pages/index.html#roles" class="dropbtn">ソリューション
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </a>
-                    <div class="dropdown-content" style="min-width: 270px;">
-                        <span class="dropdown-group-heading">主力ソリューション 4種</span>
-                        <a href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · 協業・承認統合管理</a>
-                        <a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · 自動テスト・PCアプリ</a>
-                        <a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · 業務システム基盤</a>
-                        <a href="https://cms.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · Web・多言語サイト管理</a>
-                        <span class="dropdown-group-heading">目的別拡張モジュール</span>
-                        <a href="/ja/pages/index.html#modules">データ・セキュリティ・業務拡張 (7種)</a>
+                    <div class="dropdown-content" style="min-width: 280px;">
+                        <span class="dropdown-group-heading">クイック案内</span>
+                        <a href="/ja/pages/index.html#finder"><strong>30秒 最適構成診断</strong> · 3問で提案</a>
+                        <a href="/ja/pages/index.html#roles"><strong>業務課題から探す</strong> · 部門・役割別</a>
+                        <span class="dropdown-group-heading">中核4領域</span>
+                        <a href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>協業・承認統合管理</strong> · SyncVerse</a>
+                        <a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>画面自動点検</strong> · SyncETA</a>
+                        <a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>社内管理システム基盤</strong> · SyncBoot</a>
+                        <a href="https://cms.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>Web・多言語サイト管理</strong> · SyncCMS</a>
+                        <span class="dropdown-group-heading">拡張領域・IT資料</span>
+                        <a href="/ja/pages/index.html#modules">データ照会・AI費用・セキュリティ・事業運営 (7種)</a>
+                        <a href="/ja/download_eta.html">SyncETA PCアプリ入手</a>
+                        <a href="https://doc.empasy.com/ja/" target="_blank" rel="noopener noreferrer">IT・開発者向け技術文書 &#8599;</a>
                     </div>
                 </div>
     
+                <a href="/ja/pages/index.html#finder">30秒診断</a>
                 <a href="/ja/pages/clients.html">導入事例</a>
     
                 <div class="dropdown">
@@ -116,8 +145,7 @@
                     </div>
                 </div>
     
-                <a href="https://doc.empasy.com/ja/" target="_blank" rel="noopener noreferrer">技術文書 &#8599;</a>
-                <a href="https://sync.empasy.io/ja/" target="_blank" rel="noopener noreferrer">統合デモ &#8599;</a>
+                <a href="https://sync.empasy.io/ja/" target="_blank" rel="noopener noreferrer">画面体験 &#8599;</a>
             </nav>
             <div class="nav-actions">
                 <div class="lang-switch" role="navigation" aria-label="言語切替">
@@ -125,7 +153,6 @@
                     <a href="/en/pages/index.html" data-lang="en">EN</a>
                     <a href="/ja/pages/index.html" data-lang="ja" class="active" aria-current="page">JA</a>
                 </div>
-                <a href="/ja/download_eta.html" class="btn btn-outline btn-sm">SyncETA 入手</a>
                 <a href="/ja/pages/contact.html" class="btn btn-primary btn-sm">お問い合わせ</a>
             </div>
         </div>
@@ -218,48 +245,55 @@
     </script>
 
     <main>
-        <!-- 1. Compact Editorial Hero + 主力4種 実画面プレビュー -->
+        <!-- 1. Executive Hero + 業務シーン別プレビュー -->
         <section class="ed-hero">
             <div class="container">
                 <div class="ed-hero-copy">
-                    <p class="ed-eyebrow">株式会社エムパシー · 実務向け企業ソフトウェア</p>
-                    <h1 class="ed-hero-title">繰り返される開発・テスト・運用業務を<br>着実に整える企業向けソフトウェア</h1>
+                    <p class="ed-eyebrow">株式会社エムパシー · 実務向け企業業務ソフトウェア</p>
+                    <h1 class="ed-hero-title">繰り返される企業業務は自動化し、<br>重要な判断は人が承認します</h1>
                     <p class="ed-hero-desc">
-                        検証済みの共通基盤の上から、必要な機能だけを選んで導入できます。<br>
-                        重要な変更は担当者の確認と承認を経て安全に反映されます。
+                        Webサイト、社内管理システム、経営データ照会、品質点検まで。<br>
+                        今もっとも負担の大きい1業務だけを選び、2週間で効果を検証できます。
                     </p>
                     <div class="ed-hero-actions">
-                        <a href="https://sync.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-                            実際の画面を体験する
+                        <a href="#finder" class="btn btn-primary btn-lg">
+                            30秒で最適構成を診断
                         </a>
                         <a href="/ja/pages/contact.html" class="btn btn-outline btn-lg">
                             導入のご相談
                         </a>
                     </div>
                     <div class="ed-hero-sublinks">
-                        <a href="/ja/download_eta.html">SyncETA デスクトップアプリ入手</a>
-                        <a href="https://doc.empasy.com/ja/" target="_blank" rel="noopener noreferrer">公式技術ドキュメント (doc.empasy.com) &#8599;</a>
+                        <a href="https://sync.empasy.io/ja/" target="_blank" rel="noopener noreferrer">実画面を体験 (sync.empasy.io) &#8599;</a>
                         <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" download>概要パンフレット PDF</a>
+                        <a href="#it-resources">IT・開発担当者向け資料 &#8595;</a>
                     </div>
                 </div>
 
-                <!-- 主力4種 実画面プレビュー -->
+                <!-- 業務シーン別プレビュー -->
                 <div class="ed-preview-wrap">
-                    <div class="ed-tabs" role="tablist" aria-label="主力ソリューション画面プレビュー">
-                        <button type="button" class="ed-tab active" data-preview="verse">SyncVerse · 協業・承認</button>
-                        <button type="button" class="ed-tab" data-preview="eta">SyncETA · 自動テスト</button>
-                        <button type="button" class="ed-tab" data-preview="boot">SyncBoot · 業務システム基盤</button>
-                        <button type="button" class="ed-tab" data-preview="cms">SyncCMS · Webサイト管理</button>
+                    <div class="ed-tabs" role="tablist" aria-label="主要業務画面プレビュー">
+                        <button type="button" class="ed-tab active" role="tab" aria-selected="true" data-preview="verse">決裁・承認管理</button>
+                        <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="eta">クリック自動点検</button>
+                        <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="boot">社内経営レポート</button>
+                        <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="cms">多言語サイト編集</button>
                     </div>
                     <div class="ed-frame">
                         <div class="ed-frame-bar">
-                            <strong id="preview-title">SyncVerse — 業務状況および段階別承認ダッシュボード</strong>
-                            <a id="preview-link" href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer">製品紹介を見る &#8599;</a>
+                            <strong id="preview-title">協業・段階別承認ダッシュボード (SyncVerse)</strong>
+                            <div class="ed-frame-actions">
+                                <button type="button" id="preview-zoom-btn" class="ed-zoom-btn">拡大表示</button>
+                                <a id="preview-link" href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer">詳しく &#8599;</a>
+                            </div>
                         </div>
-                        <img id="preview-img" src="/images/screenshots/sync-verse/screen_01.png" alt="SyncVerse 実際の管理画面" style="width: 100%; height: auto;">
+                        <div id="preview-callout" class="ed-frame-callout" aria-label="画面の注目ポイント">
+                            <span class="ed-callout-pill"><span class="ed-callout-dot" aria-hidden="true"></span><span>担当者の最終承認後に本番反映</span></span>
+                            <span class="ed-callout-pill"><span class="ed-callout-dot" aria-hidden="true"></span><span>変更前後の差分を一目で確認</span></span>
+                        </div>
+                        <img id="preview-img" src="/images/screenshots/sync-verse/screen_01.png" alt="協業・段階別承認ダッシュボード 実画面" style="width: 100%; height: auto;">
                     </div>
                     <p id="preview-caption" class="ed-frame-caption">
-                        要件整理から作業レビュー、品質点検、担当者の段階別承認履歴までをひとつの画面で確認できます。
+                        要件整理から作業レビュー、品質点検、担当者の段階別承認履歴までをひとつの画面で透明に確認できます。
                     </p>
                 </div>
             </div>
@@ -271,34 +305,321 @@
                 <div class="ed-facts-grid">
                     <div class="ed-fact-card">
                         <div class="ed-fact-val">実務経験 20年+</div>
-                        <div class="ed-fact-label">大規模な金融・流通・教育・セキュリティシステムを設計してきたシニア技術者中心のチーム</div>
+                        <div class="ed-fact-label">大規模な金融・流通・教育・セキュリティシステムを設計してきたシニア技術者チーム</div>
                     </div>
                     <div class="ed-fact-card">
                         <div class="ed-fact-val">ベンチャー企業認証</div>
                         <div class="ed-fact-label">革新成長型ベンチャー企業 公式認証取得 (第20261111030084号)</div>
                     </div>
                     <div class="ed-fact-card">
-                        <div class="ed-fact-val">ライブデモ公開</div>
-                        <div class="ed-fact-label">実際の操作画面とSyncETAインストーラーを一般公開し、導入前に直接確認可能</div>
+                        <div class="ed-fact-val">実画面を公開</div>
+                        <div class="ed-fact-label">会員登録なしでWebデモ画面とSyncETAアプリを直接確認可能</div>
                     </div>
                     <div class="ed-fact-card">
-                        <div class="ed-fact-val">文書・実績の透明公開</div>
-                        <div class="ed-fact-label">開発・運用マニュアル(doc.empasy.com)と認証情報を外部に分かりやすく公開</div>
+                        <div class="ed-fact-val">社内閉域網対応</div>
+                        <div class="ed-fact-label">外部接続を遮断した社内サーバー環境と既存権限ルールに合わせて導入</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 3. 設計原則 -->
-        <section id="philosophy" class="ed-section">
+        <!-- 3. 業界別 主な導入・支援実績（前面配置・個別案件名非公開） -->
+        <section id="case-studies" class="ed-section">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 28px;">
+                    <div class="ed-head" style="margin-bottom: 0;">
+                        <p class="ed-kicker">主な導入・支援実績</p>
+                        <h2 class="ed-title">大手企業・セキュリティ・公共・教育現場で実証された実績</h2>
+                        <p class="ed-desc">厳格なセキュリティ要件と大規模アクセス環境で培った実務経験をもとに、信頼性の高い企業ソフトウェアを提供します。</p>
+                    </div>
+                    <a href="/ja/pages/clients.html" style="font-size: 14px; font-weight: 600; color: #0e7490;">業界別の詳細実績を見る &#8594;</a>
+                </div>
+
+                <div class="ed-ref-wall-wrap">
+                    <div class="ed-ref-wall-head">
+                        <span class="ed-ref-wall-label">主な支援・協業企業および機関</span>
+                        <span class="ed-ref-wall-note">秘密保持契約に基づき、個別の案件名は非公開とし対象企業・機関および担当領域のみ表記しています。</span>
+                    </div>
+                    <div class="ed-ref-wall" aria-label="主な支援・協業企業および機関一覧">
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">Samsung.com</span><span class="ed-ref-chip-sub">グローバルテスト自動化</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">LG CNS</span><span class="ed-ref-chip-sub">エンタープライズIT</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">LGエレクトロニクス</span><span class="ed-ref-chip-sub">大手製造・運用</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">LG化学</span><span class="ed-ref-chip-sub">大手製造・業務基盤</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">現代自動車</span><span class="ed-ref-chip-sub">モビリティ・全社基盤</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">AUTOCRYPT</span><span class="ed-ref-chip-sub">モビリティセキュリティ</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">Penta Security</span><span class="ed-ref-chip-sub">情報セキュリティ管制</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">Penta System</span><span class="ed-ref-chip-sub">公共・教育協業</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">京畿道教育庁</span><span class="ed-ref-chip-sub">公共教育プラットフォーム</span></div>
+                        <div class="ed-ref-chip"><span class="ed-ref-chip-name">Visang Education</span><span class="ed-ref-chip-sub">テスト自動化</span></div>
+                    </div>
+                </div>
+
+                <div class="ed-ref-grid">
+                    <article class="ed-ref-card">
+                        <div>
+                            <span class="ed-ref-sector">グローバル・エドテック 品質自動化</span>
+                            <h3>Samsung.com グローバルテスト自動化・Visang Education テスト自動化</h3>
+                            <div class="ed-ref-clients">
+                                <span class="ed-ref-client-badge">Samsung.com</span>
+                                <span class="ed-ref-client-badge">Visang Education</span>
+                            </div>
+                            <p>グローバル多言語Webサイトと同時接続2,000名規模のデジタル教育サービスにおいて、更新前の反復画面検証を自動化し品質と検証速度を高めました。</p>
+                        </div>
+                        <div class="ed-ref-outcome">定期全体点検時間: 約4時間 &#8594; 約45分 · グローバル多言語自動検証</div>
+                    </article>
+
+                    <article class="ed-ref-card">
+                        <div>
+                            <span class="ed-ref-sector">大手製造・エンタープライズIT</span>
+                            <h3>大規模業務システム設計および老朽構造の段階刷新</h3>
+                            <div class="ed-ref-clients">
+                                <span class="ed-ref-client-badge">LG CNS</span>
+                                <span class="ed-ref-client-badge">LGエレクトロニクス</span>
+                                <span class="ed-ref-client-badge">LG化学</span>
+                                <span class="ed-ref-client-badge">現代自動車</span>
+                            </div>
+                            <p>大手製造・モビリティ・IT現場において、標準権限と電子決裁を備えた業務システム設計、老朽基盤の整理および安定運用の高度化を支援しました。</p>
+                        </div>
+                        <div class="ed-ref-outcome">機能反映周期: 月1回 &#8594; 毎週反映 · 大規模エンタープライズで実証</div>
+                    </article>
+
+                    <article class="ed-ref-card">
+                        <div>
+                            <span class="ed-ref-sector">モビリティ・情報セキュリティ管制</span>
+                            <h3>大容量セキュリティ・車両運行データのリアルタイム統合監視</h3>
+                            <div class="ed-ref-clients">
+                                <span class="ed-ref-client-badge">AUTOCRYPT</span>
+                                <span class="ed-ref-client-badge">Penta Security</span>
+                            </div>
+                            <p>大規模な車両運行データのリアルタイム異常検知体制と、大容量システム連携ログの高速検索・統合セキュリティ監視環境を構築しました。</p>
+                        </div>
+                        <div class="ed-ref-outcome">大容量リアルタイム収集 · セキュリティ異常兆候の即時検知</div>
+                    </article>
+
+                    <article class="ed-ref-card">
+                        <div>
+                            <span class="ed-ref-sector">公共・教育データプラットフォーム</span>
+                            <h3>大規模な公共教育データ基盤の協業構築</h3>
+                            <div class="ed-ref-clients">
+                                <span class="ed-ref-client-badge">Penta System</span>
+                                <span class="ed-ref-client-badge">京畿道教育庁</span>
+                            </div>
+                            <p>Penta Systemとの協業により、京畿道教育庁向けの大規模教育行政データ検索および現場業務支援プラットフォーム構築に参画しました。</p>
+                        </div>
+                        <div class="ed-ref-outcome">公共セキュリティ基準準拠 · 大規模教育行政データの検索・業務効率化</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 部門・業務課題から探す -->
+        <section id="roles" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
-                    <p class="ed-kicker">設計原則</p>
-                    <h2 class="ed-title">ひとつの共通基盤から必要な機能だけを選択できます</h2>
+                    <p class="ed-kicker">部門・役割別ガイド</p>
+                    <h2 class="ed-title">今すぐ解決したい業務課題から選べます</h2>
                     <p class="ed-desc">
-                        Empasyは独立した製品を無関係に並べるのではなく、標準業務基盤(SyncBoot)の上に
-                        現場プロジェクトで繰り返し求められてきた機能をモジュール単位で整理しました。
-                        まずは1つの領域から無理なく導入し、運用しながら安全に拡張できます。
+                        すべての製品名を覚える必要はありません。最も手間やリスクが大きい1領域から始め、運用に合わせて必要な機能だけを追加できます。
+                    </p>
+                </div>
+
+                <div class="ed-role-grid">
+                    <article class="ed-role-card">
+                        <div>
+                            <span class="ed-role-audience">経営層・企画</span>
+                            <h3>社内データとAI利用コストを一目で把握し、安全に統制したい</h3>
+                            <p>日常の日本語で社内実績をすぐ照会し、部門別のAI予算・個人情報保護・重要変更の承認履歴を一元管理します。</p>
+                            <div class="ed-role-tags">
+                                <span class="ed-role-tag">対話型データ照会</span>
+                                <span class="ed-role-tag">AI予算・個人情報管理</span>
+                                <span class="ed-role-tag">段階別承認管理</span>
+                            </div>
+                        </div>
+                        <div class="ed-role-foot">
+                            <a href="#modules" class="ed-role-link" data-jump-ext="data-ai">関連機能を見る &#8594;</a>
+                            <a href="/ja/pages/contact.html?topics=data-ai" class="ed-role-link">個別相談 &#8599;</a>
+                        </div>
+                    </article>
+
+                    <article class="ed-role-card">
+                        <div>
+                            <span class="ed-role-audience">サービス運用・品質・IT</span>
+                            <h3>更新前の反復確認と社内管理システムの構築期間を減らしたい</h3>
+                            <p>コードなしでクリック操作の自動点検を構築し、ログイン・組織権限・電子決裁を備えた標準基盤で開発期間を短縮します。</p>
+                            <div class="ed-role-tags">
+                                <span class="ed-role-tag">クリック自動点検</span>
+                                <span class="ed-role-tag">社内管理システム基盤</span>
+                                <span class="ed-role-tag">操作履歴監査</span>
+                            </div>
+                        </div>
+                        <div class="ed-role-foot">
+                            <a href="#solutions" class="ed-role-link">中核機能を見る &#8594;</a>
+                            <a href="/ja/pages/contact.html?topics=qa,system" class="ed-role-link">個別相談 &#8599;</a>
+                        </div>
+                    </article>
+
+                    <article class="ed-role-card">
+                        <div>
+                            <span class="ed-role-audience">マーケティング・EC</span>
+                            <h3>多言語WebサイトとEC価格・利益率ミスを一箇所で防ぎたい</h3>
+                            <p>複数ブランド・多言語サイトを単一画面で検閲・公開し、一括セール時の最低利益率チェックと即時価格復元で損失を防ぎます。</p>
+                            <div class="ed-role-tags">
+                                <span class="ed-role-tag">多言語サイト統合</span>
+                                <span class="ed-role-tag">最低利益率保護</span>
+                                <span class="ed-role-tag">即時価格復元</span>
+                            </div>
+                        </div>
+                        <div class="ed-role-foot">
+                            <a href="#modules" class="ed-role-link" data-jump-ext="operations">関連機能を見る &#8594;</a>
+                            <a href="/ja/pages/contact.html?topics=web,commerce" class="ed-role-link">個別相談 &#8599;</a>
+                        </div>
+                    </article>
+
+                    <article class="ed-role-card">
+                        <div>
+                            <span class="ed-role-audience">事業管理(PMO)・セキュリティ</span>
+                            <h3>案件損益・支払期日・外部セキュリティ脅威を見落とさず管理したい</h3>
+                            <p>受注額と実投入原価・各種保証期限・下請支払期日を可視化し、未登録の外部連携や新たな脆弱性リスクを早期に把握します。</p>
+                            <div class="ed-role-tags">
+                                <span class="ed-role-tag">案件実原価・期日管理</span>
+                                <span class="ed-role-tag">連携セキュリティ監視</span>
+                                <span class="ed-role-tag">脆弱性ルール管理</span>
+                            </div>
+                        </div>
+                        <div class="ed-role-foot">
+                            <a href="#modules" class="ed-role-link" data-jump-ext="security">関連機能を見る &#8594;</a>
+                            <a href="/ja/pages/contact.html?topics=ops-security" class="ed-role-link">個別相談 &#8599;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 30秒 最適構成診断 -->
+        <section id="finder" class="ed-section">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">30秒 最適構成診断</p>
+                    <h2 class="ed-title">3つの質問で最適なスタート構成を提案します</h2>
+                    <p class="ed-desc">
+                        全11モジュールから迷う必要はありません。優先課題・利用者・導入環境を選ぶだけで、最も効果の出やすい1〜2構成をご案内します。
+                    </p>
+                </div>
+
+                <div id="ed-finder-app" class="ed-finder-shell">
+                    <div class="ed-finder-top">
+                        <div class="ed-finder-steps-bar" role="navigation" aria-label="診断ステップ">
+                            <button type="button" class="ed-finder-step-pill is-active" data-finder-step-btn="1">1. 優先課題</button>
+                            <button type="button" class="ed-finder-step-pill" data-finder-step-btn="2" disabled>2. 利用部門</button>
+                            <button type="button" class="ed-finder-step-pill" data-finder-step-btn="3" disabled>3. 導入方針</button>
+                        </div>
+                        <button type="button" class="ed-finder-reset-link" data-finder-reset>最初からやり直す</button>
+                    </div>
+
+                    <div class="ed-finder-pane is-active" data-finder-pane="1">
+                        <h3 class="ed-finder-question">Step 1. 今もっとも優先して改善したい業務はどれですか？</h3>
+                        <div class="ed-finder-opts">
+                            <button type="button" class="ed-finder-opt" data-finder-field="goal" data-finder-choice="qa">
+                                <span class="ed-finder-opt-title">更新前の画面確認・反復点検を自動化したい</span>
+                                <span class="ed-finder-opt-desc">決済・ログイン・主要メニューの動作をリリース前に自動確認</span>
+                            </button>
+                            <button type="button" class="ed-finder-opt" data-finder-field="goal" data-finder-choice="system">
+                                <span class="ed-finder-opt-title">社内管理システム・多言語サイトを整備したい</span>
+                                <span class="ed-finder-opt-desc">権限・電子決裁・複数ブランドサイトを標準画面で一元運営</span>
+                            </button>
+                            <button type="button" class="ed-finder-opt" data-finder-field="goal" data-finder-choice="data">
+                                <span class="ed-finder-opt-title">日常語データ照会と社内AI費用・保護を統制したい</span>
+                                <span class="ed-finder-opt-desc">実績の即時確認、部門別AI予算管理、個人情報の自動保護</span>
+                            </button>
+                            <button type="button" class="ed-finder-opt" data-finder-field="goal" data-finder-choice="ops">
+                                <span class="ed-finder-opt-title">案件損益・EC利益率・全社承認を安全に管理したい</span>
+                                <span class="ed-finder-opt-desc">実投入原価、支払期日、一括価格ミス防止と段階別承認</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ed-finder-pane" data-finder-pane="2">
+                        <h3 class="ed-finder-question">Step 2. 主に利用されるのはどの担当者ですか？</h3>
+                        <div class="ed-finder-opts">
+                            <button type="button" class="ed-finder-opt" data-finder-field="audience" data-finder-choice="biz">
+                                <span class="ed-finder-opt-title">経営層・事業部門の現場担当者中心</span>
+                                <span class="ed-finder-opt-desc">専門知識やコードなしで直感的にすぐ使いたい</span>
+                            </button>
+                            <button type="button" class="ed-finder-opt" data-finder-field="audience" data-finder-choice="it">
+                                <span class="ed-finder-opt-title">IT・運用・品質管理の担当者中心</span>
+                                <span class="ed-finder-opt-desc">既存システムと連携して定型作業や点検を自動化したい</span>
+                            </button>
+                            <button type="button" class="ed-finder-opt" data-finder-field="audience" data-finder-choice="both">
+                                <span class="ed-finder-opt-title">現場部門とIT部門の共同運用</span>
+                                <span class="ed-finder-opt-desc">依頼からレビュー・最終承認までの履歴を透明に共有したい</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ed-finder-pane" data-finder-pane="3">
+                        <h3 class="ed-finder-question">Step 3. ご希望の導入スタイルはどれですか？</h3>
+                        <div class="ed-finder-opts">
+                            <button type="button" class="ed-finder-opt" data-finder-field="deploy" data-finder-choice="pilot">
+                                <span class="ed-finder-opt-title">1業務だけ1〜2週間の事前検証から開始</span>
+                                <span class="ed-finder-opt-desc">実際の工数削減効果を確認してから本格導入を判断したい</span>
+                            </button>
+                            <button type="button" class="ed-finder-opt" data-finder-field="deploy" data-finder-choice="onprem">
+                                <span class="ed-finder-opt-title">社内サーバー・外部遮断(閉域網)環境へ設置</span>
+                                <span class="ed-finder-opt-desc">社内データを外部に出さない独立構成が必須</span>
+                            </button>
+                            <button type="button" class="ed-finder-opt" data-finder-field="deploy" data-finder-choice="gradual">
+                                <span class="ed-finder-opt-title">既存システムを活かしながら段階的に連携</span>
+                                <span class="ed-finder-opt-desc">現行業務を止めずに必要な機能から順に接続したい</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ed-finder-pane" data-finder-pane="4">
+                        <div class="ed-finder-result">
+                            <span class="ed-finder-result-kicker">おすすめのスタート構成</span>
+                            <h3 class="ed-finder-result-title" data-result-title></h3>
+                            <p class="ed-finder-result-desc" data-result-desc></p>
+
+                            <div class="ed-finder-rec-grid">
+                                <div class="ed-finder-rec-card is-primary">
+                                    <span class="ed-finder-rec-label">最優先スタート領域</span>
+                                    <div class="ed-finder-rec-name">
+                                        <span data-primary-name></span>
+                                        <span class="ed-prod-code" data-primary-code></span>
+                                    </div>
+                                    <p class="ed-finder-rec-text" data-primary-desc></p>
+                                </div>
+                                <div class="ed-finder-rec-card">
+                                    <span class="ed-finder-rec-label">合わせて連携すると効果的</span>
+                                    <div class="ed-finder-rec-name">
+                                        <span data-secondary-name></span>
+                                        <span class="ed-prod-code" data-secondary-code></span>
+                                    </div>
+                                    <p class="ed-finder-rec-text" data-secondary-desc></p>
+                                </div>
+                            </div>
+
+                            <div class="ed-finder-meta-note" data-result-note></div>
+
+                            <div class="ed-finder-result-actions">
+                                <a href="/ja/pages/contact.html" class="btn btn-primary btn-sm" data-result-contact>この構成で導入相談する</a>
+                                <a href="https://sync.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" data-result-demo>実際の画面を見る &#8599;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. 安全運用の原則 -->
+        <section id="philosophy" class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">安全運用の原則</p>
+                    <h2 class="ed-title">ひとつの共通基盤の上で安全に拡張できます</h2>
+                    <p class="ed-desc">
+                        独立した製品を無関係に並べるのではなく、共通の業務基盤上に現場検証済みの機能をモジュール化しました。
+                        まずは1領域から小さく導入し、同じアカウントと権限体系のまま拡張できます。
                     </p>
                 </div>
 
@@ -322,25 +643,28 @@
             </div>
         </section>
 
-        <!-- 4. 主力ソリューション 4種 -->
-        <section id="solutions" class="ed-section ed-section-tinted">
+        <!-- 7. 中核業務領域 4種 -->
+        <section id="solutions" class="ed-section">
             <div class="container">
                 <div class="ed-head">
-                    <p class="ed-kicker">主力ソリューション 4種</p>
-                    <h2 class="ed-title">現場で最初に導入される中核製品</h2>
+                    <p class="ed-kicker">中核業務領域 4種</p>
+                    <h2 class="ed-title">現場で最初に導入される代表機能</h2>
                     <p class="ed-desc">
-                        社内業務システムの基盤から多言語Web管理、自動テスト、チーム承認フローまで、実務ニーズの高い4つの主力製品です。
+                        チーム承認管理、クリック自動点検、社内管理システムの共通基盤、多言語Webサイト運営の4つの中核領域です。
                     </p>
                 </div>
 
                 <div class="ed-flagship-grid">
                     <article class="ed-flagship-card">
                         <div class="ed-flagship-thumb">
-                            <img src="/images/screenshots/sync-verse/screen_01.png" alt="SyncVerse 統合管理画面" loading="lazy">
+                            <img src="/images/screenshots/sync-verse/screen_01.png" alt="協業・段階別承認統合管理画面" loading="lazy">
                         </div>
                         <div class="ed-flagship-body">
-                            <span class="ed-flagship-role">主力 · 協業・承認統合管理</span>
-                            <h3>SyncVerse</h3>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">中核 · 全社協業・承認</span>
+                                <span class="ed-prod-code">SyncVerse</span>
+                            </div>
+                            <h3>協業・段階別承認統合管理</h3>
                             <p>要件整理、作業進捗、品質点検の履歴、担当者の段階別承認を一画面に集約し、チームの運用状況を透明に管理します。</p>
                         </div>
                         <div class="ed-flagship-actions">
@@ -351,27 +675,33 @@
 
                     <article class="ed-flagship-card">
                         <div class="ed-flagship-thumb">
-                            <img src="/images/screenshots/sync-eta/screen_01.png" alt="SyncETA テストダッシュボード画面" loading="lazy">
+                            <img src="/images/screenshots/sync-eta/screen_01.png" alt="クリック式自動画面点検ダッシュボード" loading="lazy">
                         </div>
                         <div class="ed-flagship-body">
-                            <span class="ed-flagship-role">主力 · 自動テスト &amp; デスクトップアプリ</span>
-                            <h3>SyncETA</h3>
-                            <p>コードを書かずにクリック操作でテスト手順を記録し、画面デザインやボタン位置が変わっても自動対応してリリース前不具合を防ぎます。</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">中核 · 品質点検自動化</span>
+                                <span class="ed-prod-code">SyncETA</span>
+                            </div>
+                            <h3>クリック式 自動画面点検</h3>
+                            <p>コードを書かずにクリック操作で点検手順を記録し、画面デザインやボタン位置が変わっても自動対応して更新前不具合を防ぎます。</p>
                         </div>
                         <div class="ed-flagship-actions">
                             <a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">詳しく見る &#8599;</a>
-                            <a href="/ja/download_eta.html" class="btn btn-outline btn-sm">アプリ入手</a>
+                            <a href="/ja/download_eta.html" class="btn btn-outline btn-sm">PCアプリ入手</a>
                         </div>
                     </article>
 
                     <article class="ed-flagship-card">
                         <div class="ed-flagship-thumb">
-                            <img src="/images/screenshots/sync-boot/screen_01.png" alt="SyncBoot 業務レポート画面" loading="lazy">
+                            <img src="/images/screenshots/sync-boot/screen_01.png" alt="社内管理システム標準基盤レポート画面" loading="lazy">
                         </div>
                         <div class="ed-flagship-body">
-                            <span class="ed-flagship-role">主力 · 企業業務システム基盤</span>
-                            <h3>SyncBoot</h3>
-                            <p>ログイン、組織図連動のメニュー・ボタン権限、多段階電子決裁、操作履歴照会を標準構成で提供し、社内システム構築の負担を抑えます。</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">中核 · 社内業務システム</span>
+                                <span class="ed-prod-code">SyncBoot</span>
+                            </div>
+                            <h3>社内管理システム標準基盤</h3>
+                            <p>ログイン、組織図連動のメニュー・ボタン権限、多段階電子決裁、操作履歴照会を標準構成で提供し、構築期間とコストを抑えます。</p>
                         </div>
                         <div class="ed-flagship-actions">
                             <a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">詳しく見る &#8599;</a>
@@ -381,11 +711,14 @@
 
                     <article class="ed-flagship-card">
                         <div class="ed-flagship-thumb">
-                            <img src="/images/screenshots/sync-cms/screen_01.png" alt="SyncCMS コンテンツ管理画面" loading="lazy">
+                            <img src="/images/screenshots/sync-cms/screen_01.png" alt="多言語Webサイト統合管理画面" loading="lazy">
                         </div>
                         <div class="ed-flagship-body">
-                            <span class="ed-flagship-role">主力 · Webサイト・多言語管理</span>
-                            <h3>SyncCMS</h3>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">中核 · ブランド・多言語Web</span>
+                                <span class="ed-prod-code">SyncCMS</span>
+                            </div>
+                            <h3>多言語Webサイト統合管理</h3>
                             <p>複数ブランドサイトや多言語ページを一箇所で作成・検閲・承認し、公開前の検索品質やアクセシビリティ項目も手軽に点検できます。</p>
                         </div>
                         <div class="ed-flagship-actions">
@@ -397,45 +730,54 @@
             </div>
         </section>
 
-        <!-- 5. 目的別拡張モジュール 7種 -->
-        <section id="modules" class="ed-section">
+        <!-- 8. 目的別拡張モジュール 7種 -->
+        <section id="modules" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
-                    <p class="ed-kicker">目的別拡張モジュール</p>
-                    <h2 class="ed-title">運用に合わせて必要な業務領域を追加連携</h2>
+                    <p class="ed-kicker">目的別拡張領域</p>
+                    <h2 class="ed-title">運用に合わせて必要な業務機能を追加連携</h2>
                     <p class="ed-desc">
-                        主力ソリューションと同じ基盤・権限構造を共有しているため、データ照会、セキュリティ管理、EC・案件管理が必要になったタイミングで段階的に追加できます。
+                        中核機能と同じログイン・権限構造を共有しているため、データ照会、AIコスト管理、セキュリティ監視、EC・案件管理を必要な時にだけ追加できます。
                     </p>
                 </div>
 
                 <div class="ed-tabs" style="justify-content: flex-start; margin-bottom: 24px;" role="tablist" aria-label="拡張モジュール分野選択">
-                    <button type="button" class="ed-tab active" data-ext="data-ai">データ・AI (3)</button>
-                    <button type="button" class="ed-tab" data-ext="security">セキュリティ管理 (2)</button>
-                    <button type="button" class="ed-tab" data-ext="operations">業務・サービス運営 (2)</button>
+                    <button type="button" class="ed-tab active" role="tab" aria-selected="true" data-ext="data-ai">データ・AI (3)</button>
+                    <button type="button" class="ed-tab" role="tab" aria-selected="false" data-ext="security">セキュリティ管理 (2)</button>
+                    <button type="button" class="ed-tab" role="tab" aria-selected="false" data-ext="operations">EC・事業運営 (2)</button>
                 </div>
 
                 <div class="ed-ext-grid ed-ext-pane active" data-ext-pane="data-ai">
                     <div class="ed-ext-card">
                         <div>
-                            <span class="ed-flagship-role">対話型データ照会</span>
-                            <h3>SyncInsight</h3>
-                            <p>専門的な知識がなくても日常の言葉で社内データを質問し、表やグラフで確認できます。読み取り専用方式で原本データを安全に保護します。</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">経営・現場分析</span>
+                                <span class="ed-prod-code">SyncInsight</span>
+                            </div>
+                            <h3>日常語による社内データ照会</h3>
+                            <p>複雑な検索式やExcel集計なしで日常の言葉から社内データを質問し、表やグラフで確認できます。読み取り専用で原本を安全に保護します。</p>
                         </div>
                         <a href="https://insight.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">詳しく見る &#8599;</a>
                     </div>
                     <div class="ed-ext-card">
                         <div>
-                            <span class="ed-flagship-role">社内AI費用・個人情報管理</span>
-                            <h3>SyncLLM</h3>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">AI予算・個人情報</span>
+                                <span class="ed-prod-code">SyncLLM</span>
+                            </div>
+                            <h3>社内AIコスト・個人情報統制</h3>
                             <p>複数のAIモデルを一元接続して部門別予算を管理し、重複質問の回答再利用や機密情報の自動マスキング機能を提供します。</p>
                         </div>
                         <a href="https://llm.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">詳しく見る &#8599;</a>
                     </div>
                     <div class="ed-ext-card">
                         <div>
-                            <span class="ed-flagship-role">公開Webデータ自動収集</span>
-                            <h3>SyncCrawl</h3>
-                            <p>Webサイトの構造が変わっても必要な公開データを安定して収集し、広告や不要要素を除いて整理・保存します。</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">市場調査・情報整理</span>
+                                <span class="ed-prod-code">SyncCrawl</span>
+                            </div>
+                            <h3>公開Webデータ自動収集</h3>
+                            <p>Webサイトの構造が変わっても必要な公開データを安定して収集し、広告や不要要素を除いて検索しやすい形に整理します。</p>
                         </div>
                         <a href="https://crawl.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">詳しく見る &#8599;</a>
                     </div>
@@ -444,17 +786,23 @@
                 <div class="ed-ext-grid ed-ext-pane" data-ext-pane="security">
                     <div class="ed-ext-card">
                         <div>
-                            <span class="ed-flagship-role">システム連携把握・セキュリティ管理</span>
-                            <h3>SyncAPIM</h3>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">連携セキュリティ</span>
+                                <span class="ed-prod-code">SyncAPIM</span>
+                            </div>
+                            <h3>システム連携把握・セキュリティ監視</h3>
                             <p>実際の通信履歴から仕様書にない未登録の連携経路を検出し、不審な攻撃リクエストや個人情報露出の兆候を監視します。</p>
                         </div>
                         <a href="https://apim.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">詳しく見る &#8599;</a>
                     </div>
                     <div class="ed-ext-card">
                         <div>
-                            <span class="ed-flagship-role">脆弱性・点検ルール管理</span>
-                            <h3>SyncWatch</h3>
-                            <p>国内外の主要セキュリティ勧告を一箇所に集約し、開発点検ルールと防御ルールへ整理して対応履歴を管理します。</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">脆弱性対応・履歴</span>
+                                <span class="ed-prod-code">SyncWatch</span>
+                            </div>
+                            <h3>セキュリティ脆弱性・点検ルール管理</h3>
+                            <p>国内外の主要セキュリティ勧告を一箇所に集約し、自社システムへの影響確認から防御ルール反映・対応履歴まで一元管理します。</p>
                         </div>
                         <a href="https://watch.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">詳しく見る &#8599;</a>
                     </div>
@@ -463,16 +811,22 @@
                 <div class="ed-ext-grid ed-ext-pane" data-ext-pane="operations">
                     <div class="ed-ext-card">
                         <div>
-                            <span class="ed-flagship-role">EC運営・価格管理</span>
-                            <h3>SyncShop</h3>
-                            <p>商品ごとの最低利益率基準を確認して割引ミスを防ぎ、変更前の価格を記録して必要な時に即座に元の価格へ戻せます。</p>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">EC利益率保護</span>
+                                <span class="ed-prod-code">SyncShop</span>
+                            </div>
+                            <h3>EC運営・安全な価格管理</h3>
+                            <p>商品ごとの最低利益率基準を自動確認して割引ミスを防ぎ、変更前の価格を保存して必要な時に即座に元の価格へ戻せます。</p>
                         </div>
                         <a href="https://shop.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">詳しく見る &#8599;</a>
                     </div>
                     <div class="ed-ext-card">
                         <div>
-                            <span class="ed-flagship-role">プロジェクト損益・要員管理</span>
-                            <h3>SyncOps</h3>
+                            <div class="ed-card-meta-row">
+                                <span class="ed-flagship-role">受注案件・原価</span>
+                                <span class="ed-prod-code">SyncOps</span>
+                            </div>
+                            <h3>受注案件の損益・期日管理</h3>
                             <p>受注金額に対する実投入原価、要員配置スケジュール、保証期限、下請支払期日、研究記録を一画面で管理します。</p>
                         </div>
                         <a href="https://ops.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">詳しく見る &#8599;</a>
@@ -481,59 +835,66 @@
             </div>
         </section>
 
-        <!-- 6. 主な導入事例 -->
-        <section id="case-studies" class="ed-section ed-section-tinted">
+        <!-- 9. 3段階導入ステップ + 経営層CTA + IT資料分離バー -->
+        <section id="adoption" class="ed-section">
             <div class="container">
-                <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 36px;">
-                    <div class="ed-head" style="margin-bottom: 0;">
-                        <p class="ed-kicker">現場導入事例</p>
-                        <h2 class="ed-title">実際のプロジェクトで確認された業務改善</h2>
-                        <p class="ed-desc">教育、流通・家電、セキュリティ・モビリティ分野の企業システム構築および運用現場で検証された事例です。</p>
-                    </div>
-                    <a href="/ja/pages/clients.html" style="font-size: 14px; font-weight: 600; color: #0e7490;">すべての事例を見る &#8594;</a>
+                <div class="ed-head">
+                    <p class="ed-kicker">導入ステップ</p>
+                    <h2 class="ed-title">全面刷新せず、必要な1業務から小さく始められます</h2>
+                    <p class="ed-desc">
+                        まずは効果の出やすい1領域で1〜2週間の事前検証を行い、手応えを確認してから段階的に広げられます。
+                    </p>
                 </div>
 
-                <div class="ed-cases-grid">
-                    <article class="ed-case-card">
-                        <div>
-                            <span class="ed-case-tag">SyncETA · デジタル教育プラットフォーム</span>
-                            <h3>定期機能点検の自動化構築</h3>
-                            <p>同時接続2,000名規模のオンライン教育サービスへ自動テストを導入し、出欠・決済など主要フローの反復確認負担を軽減しました。</p>
+                <div class="ed-adopt-grid" style="margin-bottom: 36px;">
+                    <div class="ed-adopt-card">
+                        <div class="ed-adopt-top">
+                            <span class="ed-pillar-no" style="margin-bottom: 0;">STEP 01</span>
+                            <span class="ed-adopt-duration">1〜2日</span>
                         </div>
-                        <div class="ed-case-note">定期全体点検時間: 約4時間 &#8594; 約45分へ短縮</div>
-                    </article>
-
-                    <article class="ed-case-card">
-                        <div>
-                            <span class="ed-case-tag">SyncBoot · 流通・家電企業</span>
-                            <h3>老朽化した経営管理基盤の刷新</h3>
-                            <p>既存システムの未使用構造を整理し、標準権限・電子決裁基盤へ再構築することで新機能のリリース周期を大幅に短縮しました。</p>
-                        </div>
-                        <div class="ed-case-note">リリース周期改善: 月単位 &#8594; 週単位へ移行</div>
-                    </article>
-
-                    <article class="ed-case-card">
-                        <div>
-                            <span class="ed-case-tag">SyncCMS · 建材・教育ポータル</span>
-                            <h3>グローバル多言語ポータルの統合運用</h3>
-                            <p>国別に分散していたブランドサイトと大規模コンテンツ運用を単一管理環境へ統合し、新規地域ページの立ち上げを効率化しました。</p>
-                        </div>
-                        <div class="ed-case-note">多言語サイトを単一管理画面で統合運用</div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. お問い合わせ CTA -->
-        <section class="ed-section">
-            <div class="container">
-                <div class="ed-doc-callout">
-                    <div>
-                        <p><strong>貴社の業務環境に合わせた導入方法をご案内します</strong><br>公開デモポータルで実際の画面をご確認いただくか、専任エンジニアへ直接ご相談ください。</p>
+                        <h3>業務課題の整理・開始領域の選定</h3>
+                        <p>最も負担やリスクの大きい業務を整理し、貴社のセキュリティ規定に合う最小構成をご提案します。</p>
                     </div>
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <a href="https://sync.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">統合デモを開く &#8599;</a>
-                        <a href="/ja/pages/contact.html" class="btn btn-primary btn-sm">導入のお問い合わせ</a>
+                    <div class="ed-adopt-card">
+                        <div class="ed-adopt-top">
+                            <span class="ed-pillar-no" style="margin-bottom: 0;">STEP 02</span>
+                            <span class="ed-adopt-duration">1〜2週間</span>
+                        </div>
+                        <h3>実業務に合わせた事前効果検証</h3>
+                        <p>検証環境または社内サーバーで、実際の工数削減効果と操作性を数値でご確認いただけます。</p>
+                    </div>
+                    <div class="ed-adopt-card">
+                        <div class="ed-adopt-top">
+                            <span class="ed-pillar-no" style="margin-bottom: 0;">STEP 03</span>
+                            <span class="ed-adopt-duration">段階的拡張</span>
+                        </div>
+                        <h3>安全導入・担当者トレーニング</h3>
+                        <p>現行業務を止めずに定着させ、必要に応じてデータ照会やセキュリティ機能を同じ基盤で追加します。</p>
+                    </div>
+                </div>
+
+                <div class="ed-cta-banner">
+                    <div class="ed-cta-banner-copy">
+                        <div class="ed-cta-banner-kicker">導入相談</div>
+                        <h2>どこから始めるべきか迷われていませんか？</h2>
+                        <p>現在の業務状況をお知らせいただければ、営業日24時間以内に専任担当者が最も効果の高い1領域と検証手順をご案内します。</p>
+                    </div>
+                    <div class="ed-cta-banner-actions">
+                        <a href="/ja/pages/contact.html" class="ed-btn-light">導入のお問い合わせ</a>
+                        <a href="https://sync.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="ed-btn-ghost-dark">実際の画面を体験 &#8599;</a>
+                        <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" download class="ed-btn-ghost-dark">概要パンフレット PDF</a>
+                    </div>
+                </div>
+
+                <div id="it-resources" class="ed-dev-strip">
+                    <div class="ed-dev-strip-text">
+                        <strong>IT・開発担当者様向けの技術資料</strong>
+                        システム構成図、連携仕様、社内サーバー設置手順、PCアプリインストーラーを別枠で公開しています。
+                    </div>
+                    <div class="ed-dev-strip-links">
+                        <a href="https://doc.empasy.com/ja/" target="_blank" rel="noopener noreferrer">公式技術ドキュメント (doc.empasy.com) &#8599;</a>
+                        <a href="/ja/download_eta.html">SyncETA PCアプリ入手</a>
+                        <a href="https://sync.empasy.io/ja/" target="_blank" rel="noopener noreferrer">統合デモポータル &#8599;</a>
                     </div>
                 </div>
             </div>
@@ -548,16 +909,16 @@
                         <img src="/images/logo.svg" alt="EMPASY" style="height: 22px; width: auto; margin-bottom: 14px;">
                     </a>
                     <p style="font-size: 14px; line-height: 1.7; color: #475569; max-width: 320px;">
-                        検証済みの共通基盤の上で、企業の開発・テスト・運用業務を支える実務向けソフトウェアを提供しています。
+                        繰り返される企業業務を自動化し、重要な判断は担当者の承認を経て安全に反映する実務向けソフトウェアを提供しています。
                     </p>
                 </div>
                 <div>
-                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">主力ソリューション</h4>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">中核業務領域</h4>
                     <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
-                        <li><a href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer">SyncVerse</a></li>
-                        <li><a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer">SyncETA</a></li>
-                        <li><a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer">SyncBoot</a></li>
-                        <li><a href="https://cms.empasy.io/ja/" target="_blank" rel="noopener noreferrer">SyncCMS</a></li>
+                        <li><a href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer">協業・承認管理 (SyncVerse)</a></li>
+                        <li><a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer">画面自動点検 (SyncETA)</a></li>
+                        <li><a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer">社内管理システム (SyncBoot)</a></li>
+                        <li><a href="https://cms.empasy.io/ja/" target="_blank" rel="noopener noreferrer">Web・多言語管理 (SyncCMS)</a></li>
                     </ul>
                 </div>
                 <div>
@@ -600,61 +961,126 @@
         </style>
     </footer>
 
-    <script>
-      (function () {
-        var previews = {
-          verse: {
-            title: 'SyncVerse — 業務状況および段階別承認ダッシュボード',
-            link: 'https://verse.empasy.io/ja/',
-            img: '/images/screenshots/sync-verse/screen_01.png',
-            caption: '要件整理から作業レビュー、品質点検、担当者の段階別承認履歴までをひとつの画面で確認できます。'
+    <div id="emp-lightbox" class="emp-lightbox" role="dialog" aria-modal="true" aria-label="画面拡大表示">
+        <div class="emp-lightbox-bar">
+            <span id="emp-lightbox-title" class="emp-lightbox-title"></span>
+            <button type="button" id="emp-lightbox-close" class="emp-lightbox-close" aria-label="拡大を閉じる">閉じる</button>
+        </div>
+        <div class="emp-lightbox-stage">
+            <img id="emp-lightbox-img" src="" alt="">
+        </div>
+        <p class="emp-lightbox-hint">左右スクロールやピンチ操作で細部を確認できます。</p>
+    </div>
+
+    <div id="emp-cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie利用同意" style="display:none;position:fixed;left:16px;right:16px;bottom:16px;max-width:680px;margin:0 auto;z-index:9999;background:#0f172a;color:#f8fafc;border:1px solid #334155;border-radius:12px;padding:14px 18px;box-shadow:0 16px 40px rgba(15,23,42,0.28);font-size:13px;line-height:1.5;">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;">
+            <p style="margin:0;flex:1 1 320px;color:#e2e8f0;">
+                Empasyはサイト品質向上のため任意的分析Cookieを使用します。同意いただくまで分析Cookieは無効のまま維持されます。
+                <a href="/ja/pages/privacy.html" style="color:#38bdf8;text-decoration:underline;margin-left:4px;">プライバシーポリシー</a>
+            </p>
+            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+                <button type="button" id="emp-cookie-essential" style="padding:7px 12px;border-radius:8px;border:1px solid #475569;background:transparent;color:#e2e8f0;font-size:12px;font-weight:600;cursor:pointer;">必須のみ許可</button>
+                <button type="button" id="emp-cookie-accept" style="padding:7px 14px;border-radius:8px;border:1px solid #0284c7;background:#0284c7;color:#ffffff;font-size:12px;font-weight:700;cursor:pointer;">すべて同意</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="application/json" id="ed-landing-data">
+    {
+      "previews": {
+        "verse": {
+          "title": "協業・段階別承認ダッシュボード (SyncVerse)",
+          "link": "https://verse.empasy.io/ja/",
+          "img": "/images/screenshots/sync-verse/screen_01.png",
+          "caption": "要件整理から作業レビュー、品質点検、担当者の段階別承認履歴までをひとつの画面で透明に確認できます。",
+          "callouts": ["担当者の最終承認後に本番反映", "変更前後の差分を一目で確認"]
+        },
+        "eta": {
+          "title": "クリック式 自動画面点検ダッシュボード (SyncETA)",
+          "link": "https://eta.empasy.io/ja/",
+          "img": "/images/screenshots/sync-eta/screen_01.png",
+          "caption": "コードなしでクリック手順を記録し、画面変更にも自動対応しながら更新前の不具合を確認します。",
+          "callouts": ["コード不要のクリック記録", "ボタン位置が変わっても自動追従"]
+        },
+        "boot": {
+          "title": "社内経営レポート・権限管理 (SyncBoot)",
+          "link": "https://boot.empasy.io/ja/",
+          "img": "/images/screenshots/sync-boot/screen_01.png",
+          "caption": "組織連動の権限管理、電子決裁、監査履歴など社内管理システムの共通基盤を提供します。",
+          "callouts": ["組織・役職別の画面・ボタン権限", "多段階電子決裁を標準搭載"]
+        },
+        "cms": {
+          "title": "多言語Webサイト作成・公開管理 (SyncCMS)",
+          "link": "https://cms.empasy.io/ja/",
+          "img": "/images/screenshots/sync-cms/screen_01.png",
+          "caption": "複数ブランドと多言語サイトの原稿作成、検閲、検索品質チェックを一元管理できます。",
+          "callouts": ["複数ブランド・多言語を一元管理", "公開前の表現・検索品質チェック"]
+        }
+      },
+      "finder": {
+        "contactUrl": "/ja/pages/contact.html",
+        "results": {
+          "qa": {
+            "title": "まずは更新前の自動画面点検から始めるのがおすすめです",
+            "summary": "定期点検の手作業を最短で削減し、必要に応じて承認履歴の可視化まで連携できます。",
+            "primaryTitle": "クリック式 自動画面点検",
+            "primaryCode": "SyncETA",
+            "primaryDesc": "コードなしでクリック手順を記録し、画面変更にも自動対応して更新前の不具合を検出します。",
+            "secondaryTitle": "協業・段階別承認統合管理",
+            "secondaryCode": "SyncVerse",
+            "secondaryDesc": "点検結果と変更前後の差分を担当者が確認・承認してから安全に反映できます。",
+            "topicKey": "qa",
+            "demoUrl": "https://eta.empasy.io/ja/"
           },
-          eta: {
-            title: 'SyncETA — テスト通過状況および画面比較ダッシュボード',
-            link: 'https://eta.empasy.io/ja/',
-            img: '/images/screenshots/sync-eta/screen_01.png',
-            caption: 'コードなしで手順を記録し、画面変更にも自動対応しながらリリース前の不具合を確認します。'
+          "system": {
+            "title": "標準の社内管理基盤と多言語サイト統合をおすすめします",
+            "summary": "権限・電子決裁・Webサイトを毎回作り直さず、現場部門が直接運用できる環境を整えます。",
+            "primaryTitle": "社内管理システム標準基盤",
+            "primaryCode": "SyncBoot",
+            "primaryDesc": "ログイン・組織権限・電子決裁・操作履歴を標準提供し、構築期間と保守コストを削減します。",
+            "secondaryTitle": "多言語Webサイト統合管理",
+            "secondaryCode": "SyncCMS",
+            "secondaryDesc": "複数ブランドや多言語ページを現場担当者が直接作成・検閲・公開できます。",
+            "topicKey": "system,web",
+            "demoUrl": "https://boot.empasy.io/ja/"
           },
-          boot: {
-            title: 'SyncBoot — 企業業務システム標準レポート・権限管理',
-            link: 'https://boot.empasy.io/ja/',
-            img: '/images/screenshots/sync-boot/screen_01.png',
-            caption: '組織連動の権限管理、電子決裁、監査履歴など社内管理システムの共通基盤を提供します。'
+          "data": {
+            "title": "日常語データ照会と社内AI予算・保護の組み合わせが最適です",
+            "summary": "原本データと機密情報を守りながら、経営層や現場がすぐに実績確認とAIコスト統制を行えます。",
+            "primaryTitle": "日常語による社内データ照会",
+            "primaryCode": "SyncInsight",
+            "primaryDesc": "日常の言葉で質問するだけで売上・業務データを表とグラフで安全に読み取り専用照会します。",
+            "secondaryTitle": "社内AIコスト・個人情報統制",
+            "secondaryCode": "SyncLLM",
+            "secondaryDesc": "部門別AI予算管理、重複質問の再利用、個人情報の自動マスキングで費用とリスクを抑えます。",
+            "topicKey": "data-ai",
+            "demoUrl": "https://insight.empasy.io/ja/"
           },
-          cms: {
-            title: 'SyncCMS — マルチサイトコンテンツ作成・公開管理',
-            link: 'https://cms.empasy.io/ja/',
-            img: '/images/screenshots/sync-cms/screen_01.png',
-            caption: '複数ブランドと多言語サイトの原稿作成、検閲、検索品質チェックを一元管理できます。'
+          "ops": {
+            "title": "案件損益・価格保護と全社承認管理の構成がおすすめです",
+            "summary": "実投入原価や支払期日、ECセール時の価格ミスといった財務リスクを安全装置で未然に防ぎます。",
+            "primaryTitle": "受注案件の損益・期日管理",
+            "primaryCode": "SyncOps",
+            "primaryDesc": "受注額と実原価、要員計画、保証期限、下請支払期日を一画面で把握できます。",
+            "secondaryTitle": "EC価格保護 / 段階別承認管理",
+            "secondaryCode": "SyncShop · SyncVerse",
+            "secondaryDesc": "最低利益率チェックと即時価格復元、重要変更の段階別承認フローを合わせて支援します。",
+            "topicKey": "commerce,ops-security",
+            "demoUrl": "https://ops.empasy.io/ja/"
           }
-        };
-
-        document.querySelectorAll('[data-preview]').forEach(function (btn) {
-          btn.addEventListener('click', function () {
-            var key = btn.getAttribute('data-preview');
-            var item = previews[key];
-            if (!item) return;
-            document.querySelectorAll('[data-preview]').forEach(function (b) { b.classList.remove('active'); });
-            btn.classList.add('active');
-            document.getElementById('preview-title').textContent = item.title;
-            document.getElementById('preview-link').setAttribute('href', item.link);
-            document.getElementById('preview-img').setAttribute('src', item.img);
-            document.getElementById('preview-img').setAttribute('alt', item.title);
-            document.getElementById('preview-caption').textContent = item.caption;
-          });
-        });
-
-        document.querySelectorAll('[data-ext]').forEach(function (btn) {
-          btn.addEventListener('click', function () {
-            var key = btn.getAttribute('data-ext');
-            document.querySelectorAll('[data-ext]').forEach(function (b) { b.classList.remove('active'); });
-            btn.classList.add('active');
-            document.querySelectorAll('[data-ext-pane]').forEach(function (pane) {
-              pane.classList.toggle('active', pane.getAttribute('data-ext-pane') === key);
-            });
-          });
-        });
-      })();
+        },
+        "audienceNotes": {
+          "biz": "非IT部門の担当者様でもコードなしでブラウザ画面からすぐ活用できる構成です。",
+          "it": "既存の社内認証やシステムと標準方式で連携でき、詳細な技術文書もご提供します。",
+          "both": "現場からの依頼、ITレビュー、管理者の最終承認まで履歴を一貫管理できます。"
+        },
+        "deployNotes": {
+          "pilot": "代表業務1つを対象に1〜2週間の事前効果検証から無理なく開始できます。",
+          "onprem": "外部インターネットと分離された社内専用サーバー(閉域網)環境にも対応します。",
+          "gradual": "現行システムを止めずに必要な領域から段階的に連携拡張できます。"
+        }
+      }
+    }
     </script>
 </body>
 </html>

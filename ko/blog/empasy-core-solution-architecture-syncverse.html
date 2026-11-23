@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -16,50 +37,38 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
     <!-- End Google Tag Manager -->
-    <title>AI 자율 운영 생태계(SyncVerse)를 지탱하는 핵심 솔루션 아키텍처 분석 | 엠파시(Empasy)</title>
-    <meta name="description" content="SyncVerse는 이기종 서비스를 하나로 연결하는 LLM 기반 AI 오케스트레이션 플랫폼입니다. 기업의 지능형 워크플로우를 완성하는 Agentic AI 인프라를 제공합니다.">
-    <meta name="keywords" content="엔터프라이즈 AI 에코시스템, 기업용 AI 통합 플랫폼, 디지털 전환 AI 아키텍처, 엠파시, Empasy, AI 오케스트레이션 플랫폼, 이기종 서비스 AI 통합 솔루션, 엔터프라이즈 지능형 워크플로우 자동화, LLM 기반 기업용 서비스 연동 허브, Agentic AI 인프라 통합">
-    <meta property="og:title" content="AI 자율 운영 생태계(SyncVerse)를 지탱하는 핵심 솔루션 아키텍처 분석 | 엠파시(Empasy)">
-    <meta property="og:description" content="SyncVerse는 이기종 서비스를 하나로 연결하는 LLM 기반 AI 오케스트레이션 플랫폼입니다. 기업의 지능형 워크플로우를 완성하는 Agentic AI 인프라를 제공합니다.">
-    <meta property="og:type" content="website">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Empasy">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "엠파시(Empasy) 기술 블로그",
-      "url": "https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html",
-      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
-      "publisher": {
-        "@type": "Organization",
-        "name": "엠파시(Empasy)",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.io/empasy-logo.png"
-        }
-      }
-    }
-    </script>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-    <!-- SEO & AIO Tags -->
-    
-    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <title>하나의 공통 기반 위에 구성된 SyncSeries 핵심 제품군 한눈에 보기 | 엠파시(Empasy)</title>
+    <meta name="description" content="Java 25, Spring Boot 4.0, PostgreSQL 18.6(pgvector), MCP 공통 기반 위에 구성된 SyncSeries 4대 핵심 영역과 7대 확장 모듈의 기술 아키텍처 총정리.">
+    <meta name="keywords" content="SyncSeries, SyncVerse, SyncETA, SyncBoot, SyncCMS, SyncInsight, SyncLLM, SyncCrawl, SyncShop, SyncOps, SyncAPIM, SyncWatch, 기업용 AI 통합 아키텍처">
+    <meta name="author" content="주식회사 엠파시 (Empasy)">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <meta property="og:title" content="하나의 공통 기반 위에 구성된 SyncSeries 핵심 제품군 한눈에 보기 | 엠파시(Empasy)">
+    <meta property="og:description" content="Java 25, Spring Boot 4.0, PostgreSQL 18.6(pgvector), MCP 공통 기반 위에 구성된 SyncSeries 4대 핵심 영역과 7대 확장 모듈의 기술 아키텍처 총정리.">
+    <meta property="og:type" content="article">
     <meta property="og:locale" content="ko_KR">
+    <meta property="og:url" content="https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-02-28">
+    <meta property="article:modified_time" content="2026-11-23">
+    <link rel="canonical" href="https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/empasy-core-solution-architecture-syncverse.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/empasy-core-solution-architecture-syncverse.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "AI 자율 운영 생태계(SyncVerse)를 지탱하는 핵심 솔루션 아키텍처 분석",
-  "description": "SyncETA, SyncCMS, SyncBoot, SyncVerse, SyncInsight 등 엠파시의 5대 핵심 솔루션의 기술적 페인포인트와 엔지니어링 해법을 깊이 있게 분석합니다.",
+  "headline": "하나의 공통 기반 위에 구성된 SyncSeries 핵심 제품군 한눈에 보기",
+  "description": "Java 25, Spring Boot 4.0, PostgreSQL 18.6(pgvector), MCP 공통 기반 위에 구성된 SyncSeries 4대 핵심 영역과 7대 확장 모듈의 기술 아키텍처 총정리.",
+  "datePublished": "2026-02-28",
+  "dateModified": "2026-11-23",
+  "inLanguage": "ko",
   "author": {
     "@type": "Organization",
     "name": "Empasy Engineering Team",
@@ -67,33 +76,25 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Empasy",
+    "name": "주식회사 엠파시 (Empasy)",
     "logo": {
       "@type": "ImageObject",
       "url": "https://empasy.io/empasy-logo.png"
     }
   },
+  "image": "https://empasy.io/empasy-logo.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html"
+  },
   "url": "https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html"
 }
     </script>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- SEO & AIO Tags -->
-    
-    
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/empasy-core-solution-architecture-syncverse.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/empasy-core-solution-architecture-syncverse.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html" />
-    <meta property="og:url" content="https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html">
-  <script type="module" crossorigin src="/assets/i18n-3nk6-OFj.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/style-BWlNIJrj.css">
+  <script type="module" crossorigin src="/assets/modulepreload-polyfill-Dezn_h7o.js"></script>
+  <script type="module" crossorigin src="/assets/i18n-CC8j1T6V.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-BgRDHG71.css">
 </head>
 <body>
-
-    <!-- Header Navigation -->
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -117,20 +118,26 @@
             </button>
             <nav id="emp-nav-links" class="nav-links" aria-label="주요 메뉴">
                 <div class="dropdown">
-                    <a href="/#solutions" class="dropbtn">솔루션
+                    <a href="/#roles" class="dropbtn">솔루션
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </a>
-                    <div class="dropdown-content" style="min-width: 260px;">
-                        <span class="dropdown-group-heading">주력 솔루션 4종</span>
-                        <a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · 협업·승인 통합 관리</a>
-                        <a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · 자동 테스트 · PC 앱</a>
-                        <a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · 업무 시스템 기반</a>
-                        <a href="https://cms.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · 웹사이트·다국어 관리</a>
-                        <span class="dropdown-group-heading">목적별 확장 모듈</span>
-                        <a href="/#modules">데이터·AI · 보안 · 업무 확장 (7종)</a>
+                    <div class="dropdown-content" style="min-width: 280px;">
+                        <span class="dropdown-group-heading">빠른 안내</span>
+                        <a href="/#finder"><strong>30초 맞춤 솔루션 찾기</strong> · 3문항 추천</a>
+                        <a href="/#roles"><strong>업무 고민별 안내</strong> · 부서·역할별 보기</a>
+                        <span class="dropdown-group-heading">핵심 업무 영역 4종</span>
+                        <a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>협업·승인 통합 관리</strong> · SyncVerse</a>
+                        <a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>자동 화면 점검</strong> · SyncETA</a>
+                        <a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>사내 관리 시스템 기반</strong> · SyncBoot</a>
+                        <a href="https://cms.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>웹사이트·다국어 관리</strong> · SyncCMS</a>
+                        <span class="dropdown-group-heading">확장 영역 및 IT 자료</span>
+                        <a href="/#modules">데이터 조회·AI 비용·보안·사업운영 (7종)</a>
+                        <a href="/ko/download_eta.html">SyncETA PC 앱 다운로드</a>
+                        <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer">IT·개발자 기술 문서 &#8599;</a>
                     </div>
                 </div>
     
+                <a href="/#finder">맞춤 찾기</a>
                 <a href="/ko/pages/clients.html">고객 사례</a>
     
                 <div class="dropdown">
@@ -146,8 +153,7 @@
                     </div>
                 </div>
     
-                <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer">기술 문서 &#8599;</a>
-                <a href="https://sync.empasy.io/" target="_blank" rel="noopener noreferrer">통합 데모 &#8599;</a>
+                <a href="https://sync.empasy.io/" target="_blank" rel="noopener noreferrer">화면 체험 &#8599;</a>
             </nav>
             <div class="nav-actions">
                 <div class="lang-switch" role="navigation" aria-label="언어 선택">
@@ -155,7 +161,6 @@
                     <a href="/en/pages/index.html" data-lang="en">EN</a>
                     <a href="/ja/pages/index.html" data-lang="ja">JA</a>
                 </div>
-                <a href="/ko/download_eta.html" class="btn btn-outline btn-sm">SyncETA 다운로드</a>
                 <a href="/ko/pages/contact.html" class="btn btn-primary btn-sm">도입 문의</a>
             </div>
         </div>
@@ -247,107 +252,147 @@
     })();
     </script>
 
-    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
-        <!-- Compact Breadcrumb / Back Link -->
-        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
-            <a href="../../ko/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
-                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
-                <span>Tech Blog 목록으로</span>
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/ko/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>엠파시 인사이트 목록으로</span>
             </a>
-            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
+            <span class="badge" style="margin-bottom: 0;">Architecture Overview</span>
         </div>
-        
-        <section style="padding: 0;">
-            <div class="container" style="padding: 0;">
-                <article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-    <div style="line-height: 1.8; color: var(--text-primary);">
-                    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.2rem; color: var(--text-secondary); font-size: 0.9rem; flex-wrap: wrap;">
-                        <span>2026-02-28</span>
-                        <span>&bull;</span>
-                        <span>읽는 시간 약 8분</span>
-                        <span>&bull;</span>
-                        <span style="color: var(--primary-color); font-weight: 600;">Tech Trends & Architecture</span>
-                    </div>
 
-                    <h1 style="font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.35; margin-bottom: 1.8rem; color: var(--text-primary);">AI 자율 운영 생태계(SyncVerse)를 지탱하는 핵심 솔루션 아키텍처 분석</h1>
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">01. SyncETA: No-Code 기반 지능형 QA 자동화 및 시각적 자가 치유(Self-Healing) 엔진</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> 핵심 당면 과제: '유지보수 지옥(Maintenance Hell)'과 회귀 테스트 병목</h3>
-        <p>현대 웹 애플리케이션의 프론트엔드는 UI 컴포넌트의 잦은 리뉴얼과 동적 DOM 구조 변화가 일상적입니다. 기존의 Selenium이나 일반적인 E2E 테스트 도구들은 UI의 작은 식별자(ID, Class)나 1px의 레이아웃 변경에도 기존 테스트 스크립트가 쉽게 깨지는 고질적인 유지보수 문제를 안고 있었으며, 이는 애자일 배포 주기를 가로막는 치명적인 병목이었습니다.</p>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> SyncETA의 엔지니어링 해법: Playwright MCP와 LLM의 폐쇄 루프(Closed-loop)</h3>
-        <p>SyncETA는 코딩 지식이 없는 비전문가도 일상적인 웹 브라우징만으로 신뢰도 높은 테스트 시나리오를 자산화할 수 있는 <strong>No-Code/Codeless 플랫폼</strong>을 지향합니다.</p>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Smart Recording & 자연어 변환:</strong> 사용자가 웹 브라우저에서 수행하는 클릭, 입력 등의 상호작용 정보를 단순 스크린샷이 아닌 정밀한 DOM 정보와 JSON 로그 형태로 캡처합니다. 수집된 저수준 로그 데이터는 <strong>Mistral LLM</strong> 엔진에 의해 정밀 분석되어, 사람이 쉽게 읽고 편집할 수 있는 표준 양식(Step-Input-Expected Result) 구조의 <strong>자연어 기반 Excel 테스트케이스로 자동 변환</strong>됩니다.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Playwright MCP 기반 무기록 고속 병렬 실행:</strong> AI가 생성하거나 QA 엔지니어가 직접 작성한 Excel 시나리오를 <strong>Playwright MCP(Model Context Protocol)</strong> 엔진이 직접 해석하여 실행합니다. 이 엔진은 리소스를 많이 소요하는 이미지 스크린샷 비교 방식 대신, 웹 표준의 <strong>접근성 트리(Accessibility Tree) 구조 데이터</strong>를 직접 추적하기 때문에 픽셀 및 속성 변화에 매우 강하며, 수백 대의 Headless 브라우저 인스턴스를 동시 기동하여 전체 테스트 수행 시간을 획기적으로 단축합니다.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Dual-AI Core 기반 자가 치유(Self-Healing):</strong> 테스트 도중 UI 변경으로 인해 기존 식별자를 찾지 못할 경우, <strong>Dynamic DOM Analysis</strong> 기술이 작동합니다. 이전 성공 시점의 DOM 트리 스냅샷과 현재 화면을 실시간으로 비교 분석하여 최적의 대체 요소를 스스로 추론 및 실시간 보정(Auto-Correction)함으로써 테스트가 중단 없이 완주되도록 보장합니다.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>QA Feedback Loop (Fine-tuning):</strong> 일회성 자동화에 그치지 않고, QA 엔지니어가 테스트케이스를 검토하고 수정한 이력을 학습 데이터로 내재화하여 LLM을 지속적으로 파인튜닝(LoRA) 및 RAG 고도화를 수행하는 <strong>지속 개선형 품질 생태계</strong>를 구축했습니다.</li>
-        </ul>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">02. SyncCMS: Java 안정성 기반의 글로벌 다중 웹사이트 콘텐츠 관리 시스템</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> 운영 병목 요인: IT 부서 종속성과 다국어/다중 사이트 파편화</h3>
-        <p>글로벌 엔터프라이즈 환경에서는 국가별, 브랜드별로 수십 개의 마케팅 사이트가 파편화되어 운영되는 경우가 많습니다. 간단한 텍스트 문구나 배너 레이아웃을 수정할 때조차 IT 개발 팀의 소스 코드 수정 및 배포 파이프라인 정지 단계를 기다려야 하므로, 마케팅의 골든타임을 상실하는 고비용 구조를 유발합니다.</p>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> SyncCMS의 엔지니어링 해법: 레고 블록식 컴포넌트 조립과 웹 개방성</h3>
-        <p>SyncCMS는 개발자 의존 구조를 탈피하여, 현업 마케터와 기획자가 실제 화면 상에서 직관적으로 웹 생태계를 정밀하게 제어할 수 있는 고성능 아키텍처를 제공합니다.</p>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Component-Based Assembly (페이지 조각 기술):</strong> 백오피스 및 UI 컴포넌트를 레고 블록처럼 모듈화된 <strong>페이지 조각(Page Fragments)</strong> 형태로 관리합니다. 현업 담당자는 시각적인 드래그 앤 드롭 UI 조립 방식을 통해 IT 부서의 개입 없이 즉시 레이아웃을 구성하고 실시간으로 웹페이지를 퍼블리싱할 수 있습니다.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Single Deployment 기반 글로벌 다국어 제어:</strong> 한 번의 시스템 배포(Single Deployment)만으로도 글로벌 다국어 이상의 다국어 텍스트와 멀티 도메인의 독립된 글로벌 웹사이트들을 단일 통합 백오피스에서 중앙 제어할 수 있습니다.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>개방형 아키텍처 및 고신뢰성 렌더링:</strong> 특정 CMS 솔루션 벤더에 종속되는 폐쇄형 구조에서 벗어나, <strong>Java, Spring Boot, Hibernate 및 Maven/Gradle 기반의 개방형 프로젝트 형태</strong>를 취합니다. 따라서 Spring 프레임워크 기반으로 구현 가능한 모든 엔터프라이즈 수준의 비즈니스 로직과 동적 확장을 수용하며, Freemarker 기반의 유연한 템플릿 엔진을 내장하여 수십만 건의 대규모 고부하 트래픽 환경에서도 데이터 손실 없이 뛰어난 검색엔진 최적화(SEO) 친화적 웹 렌더링 성능을 보장합니다.</li>
-        </ul>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">03. SyncBoot: 엔터프라이즈 클라우드 네이티브 전환을 위한 오픈소스 기반 MSA 개발 플랫폼</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> 아키텍처 제약 사항: 경직된 Monolithic 구조와 대규모 MSA 구축 비용</h3>
-        <p>비즈니스가 거대해질 수록 기존의 단일 거대 레거시 시스템(Monolithic)은 코드 간 강한 결합도로 인해 작은 수정에도 전체 시스템 장애를 유발합니다. 그러나 이를 마이크로서비스 아키텍처(MSA)로 전환하려면 복잡한 분산 데이터 처리, 쿠버네티스 인프라 세팅, 수많은 클라우드 전문 인력과 수개월의 초기 인프라 구축 리소스가 투입되는 진입 장벽이 존재합니다.</p>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> SyncBoot의 엔지니어링 해법: 즉시 사용 가능한 표준화 풀스택 아키텍처</h3>
-        <p>SyncBoot는 Java 및 Spring Boot 표준 아키텍처를 기반으로 엔터프라이즈가 직면하는 MSA 전환 인프라 세팅 단계를 패키징하여, 핵심 비즈니스 로직에만 몰두할 수 있는 <strong>초고속 MSA 가속 인프라 벨트</strong>를 즉시 가동합니다.</p>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Integrated 오픈소스 테크 스택 패키징:</strong> 특정 상용 솔루션 벤더에 무조건 종속되지 않는 100% 오픈소스 풀스택을 지향합니다. 대규모 트래픽의 단일 진입점 관리를 위한 <strong>Spring Cloud Gateway</strong>, 분산 컨테이너의 실시간 감지 및 무중단 연결을 조율하는 <strong>Service Discovery (Nacos)</strong>, 분산 환경에서 발생하는 트래픽 초과를 차단하는 <strong>Circuit Breaker (Sentinel)</strong> 인프라가 톱니바퀴처럼 기본 결합되어 있습니다.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>분산 데이터 정합성 보장:</strong> MSA 아키텍처의 가장 큰 난제인 데이터 파편화를 극복하기 위해, <strong>Seata 분산 트랜잭션 엔진</strong>을 프레임워크 내에 원천 내장하였습니다. 이로 인해 여러 마이크로서비스로 분할된 데이터베이스 환경에서도 강력한 엔터프라이즈급 분산 데이터 무결성을 유지합니다.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>E2E DevOps 및 통합 풀스택 관측성(Observability):</strong> 빌드, 검증, 배포 단계를 템플릿화한 <strong>Jenkins, GitLab 연동 CI/CD 툴체인</strong>과 <strong>K8s 오케스트레이션 가이드라인</strong>을 세트로 제공합니다. 아울러 배포 운영 중 발생하는 악성 쿼리를 탐지하는 Slow SQL Tracking 기능 및 <strong>SkyWalking, ELK, Prometheus/Grafana</strong>를 통합 수용하여 시스템 전반의 병목 현상을 선제적으로 관제하고 장애 전이를 차단하는 유연성을 기본적으로 내재화했습니다.</li>
-        </ul>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">04. SyncVerse: 에이전트 간 맥락을 연결하는 MCP 기반 차세대 AI DLC 오케스트레이션 플랫폼</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> 협업 장애 요인: AI 도구들의 단절과 파편화(Silo 현상)</h3>
-        <p>최근 수많은 AI 보조 도구들이 개발, 테스트, 콘텐츠 생성 등 개별 영역에 도입되고 있으나, 이 도구들이 서로 유기적으로 소통하지 못하고 각 단계의 맥락(Context)이 단절되어 있다면 진정한 무인 자율 운영 파이프라인을 구축할 수 없습니다. 개발자가 직접 코드를 복사하고, 테스트 도구를 수동으로 켜야 하는 단절이 여전히 존재하기 때문입니다.</p>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> SyncVerse의 엔지니어링 해법: Agent-to-Agent(A2A) 통신 프로토콜 기반 완전 무인 파인프라인</h3>
-        <p>SyncVerse는 엠파시의 검증된 4대 솔루션(SyncBoot, SyncCMS, SyncETA, SyncCrawl)을 독립적으로 사고하고 판단하는 <strong>'독립형 AI 에이전트(Agent)'</strong>로 진화시키고, 이들을 하나로 총괄 조율하는 <strong>중앙 관제탑 플랫폼</strong>입니다.</p>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>글로벌 표준 MCP(Model Context Protocol) 채택:</strong> 개별 에이전트 간 실시간 맥락과 데이터를 유기적으로 원활하게 연동하기 위해 <strong>A2A 핵심 프로토콜인 MCP 표준 규격</strong>을 전면 수용합니다. 이를 통해 개발 에이전트와 테스트 에이전트가 단일 두뇌처럼 유기적으로 지식을 교환하는 초연결 생태계를 실현합니다.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Zero-Touch AI DLC(Development Life Cycle) 파이프라인:</strong> 인간 개발자의 단순 기계적 타이핑 입력을 배제하고, 현업 담당자의 자연어 요구사항 지시만으로 시스템 전체가 스스로 동작하는 자율 운영 루프를 구현합니다.
-                <ol style="padding-left: 1.5rem; margin-top: 0.5rem;">
-                    <li><strong>자연어 요구사항 수렴:</strong> 현업 담당자가 자연어로 수정 요청 사항을 입력합니다.</li>
-                    <li><strong>자율 코드 및 컴포넌트 생성:</strong> <strong>SyncBoot/SyncCMS Agent</strong>가 자연어를 해석하여 필요한 DB 스키마 아키텍처 및 웹 소스 코드를 자율 수정합니다.</li>
-                    <li><strong>AI Pull Request 자율 상신:</strong> 수정이 완료되면 <strong>SyncVerse</strong>가 변경점을 분석하여 Git 원격 저장소에 상세 설명이 포함된 Pull Request를 자동으로 작성 및 상신합니다.</li>
-                    <li><strong>무인 검증 및 자율 에러 복구:</strong> CICD 파이프라인과 결합되어 <strong>SyncETA Agent</strong>가 무인 회귀 테스트를 즉시 작동시키고, 테스트 중 발생한 레이아웃 결함이나 로직 실패 지점을 감지하면 수 분 내로 AI 자율 치유 및 복구 사이클을 거쳐 상용 서버에 무중단 자동 배포합니다.</li>
-                </ol>
-            </li>
-        </ul>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">05. SyncInsight: 온프레미스(On-premise) 보안을 관통하는 최상위 의사결정 지능 플랫폼</h2>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> 보안 및 데이터 거버넌스 과제: 사내 핵심 데이터 유출 리스크와 파편화된 사일로 데이터 분석 한계</h3>
-        <p>기업 내부의 EPR, 사내 Wiki, 마켓 동향 데이터 등 고부가가치 정보들을 분석하기 위해 퍼블릭 클라우드 기반의 대형 LLM 서비스를 무분별하게 활용할 경우, 민감한 기업 기밀 및 개인정보가 외부로 유출되는 심각한 보안 규제 리스크에 직면합니다. 또한, 내부 데이터가 부서별 시스템에 철저히 격리(Silo)되어 있어 통합적인 인사이트 도출이 불가능했습니다.</p>
-        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; color: #06b6d4;"> SyncInsight의 엔지니어링 해법: 100% 사내망 내재화 구조 및 Multi-Agent 교차 분석</h3>
-        <p>SyncInsight는 단순한 IT 인프라 자동화 단계를 뛰어넘어 기업 내부 자산의 고신뢰성 지식화와 최고경영진(C-Level)의 전략적 비즈니스 액션을 주도하는 <strong>최상위 AI 두뇌 플랫폼</strong>입니다.</p>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>보안 규제 최적화 하이브리드 온프레미스 인프라:</strong> 사내 핵심 데이터 저장소부터 거대 언어 모델(LLM) 서빙 서버 환경 전 구성을 <strong>완전한 사내 사설 내부망(Intranet)</strong> 혹은 전용 격리 하이브리드 존 내에만 구축합니다. 이로 인해 외부 클라우드로의 전송 통로를 원천적으로 완전 차단하여, 금융, 공공, 첨단 제조 분야 등 가장 엄격한 수준의 개인정보보호법 및 국가 보안 규제 요건을 100% 충족하는 강력한 데이터 주권(Data Sovereignty)을 제공합니다.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Context-Aware Advanced RAG 기술 아키텍처:</strong> 단순 키워드 매칭 형태의 임베딩 검색 엔진의 한계를 극복했습니다. <strong>AgentScope Java 2.0.2 및 sync-module-rag 기술 스택 기반의 엔터프라이즈 아키텍처</strong>를 정밀하게 적용하여 문서 전체의 깊은 문맥적 의미 파악하는 <strong>Context-Aware RAG 파이프라인</strong>을 구동합니다. 이를 통해 사내 위키, 그룹웨어, ERP, 그리고 <strong>SyncCrawl Agent</strong>가 수집한 외부 실시간 시장 원시 트렌드 정보까지 이기종 간 파편화된 대규모 비정형 데이터를 실시간 교차 임베딩하여 환각(Hallucination) 현상이 완전히 통제된 초고품질의 지식 데이터 허브를 영구 구축합니다.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Multi-Agent Orchestration Loop:</strong> 스스로 역할을 분담하고 협업하는 <strong>Collector(수집 에이전트), Analyst(통계 분석 에이전트), Reporter(보고서 생성 에이전트)</strong>가 독립된 하나의 가상 전담 팀 단위로 구성되어 복잡한 연쇄 과업을 수행합니다. 파이썬 스크립트 실행 엔진 기반의 정밀 대용량 통계 분석부터 임원 보고용 SWOT 전략 분석 리포트 문서 자동 작성을 수 분 내로 전담 처리합니다.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>비즈니스 액션 제안 및 SyncVerse 피드백 연동:</strong> 단순히 보고서를 보여주는 단계에서 머무르지 않고, 사내외 교차 분석 도중 위기 징후나 신규 시장 기회가 도출될 경우 경영진에게 "특정 프로모션 페이지 신설 및 타겟 이메일 크롤링 파이프라인 가동"과 같은 구체적인 전략 액션을 제안합니다. 경영진이 이를 승인(Human-in-the-loop 1-Click 승인)하는 즉시, 최상위 두뇌인 SyncInsight는 하위 실행 주체인 <strong>SyncVerse의 자율 개발·배포 벨트로 명령 프로토콜을 다이렉트 전송</strong>하여 시스템 화면에 즉각 실시간 반영시키는 완전 자동화 의사결정 시너지를 달성합니다.</li>
-        </ul>
-    </div>
-</article>
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-02-28 (업데이트 2026-11-23)</span>
+                <span>&bull;</span>
+                <span>읽는 시간 약 8분</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">제품군 구성 · 아키텍처</span>
             </div>
-        </section>
+
+            <h1 class="ed-blog-title">하나의 공통 기반 위에 구성된 SyncSeries 핵심 제품군 한눈에 보기</h1>
+
+            <div class="ed-exec-summary" aria-label="경영진 · 현업 담당자를 위한 3줄 요약">
+                <div class="ed-exec-summary-kicker">경영진 · 현업 담당자를 위한 3줄 요약</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">기존 문제</span><span>부서마다 서로 다른 소프트웨어를 따로 도입하면 계정·권한·데이터가 단절되어 운영과 통합 비용이 빠르게 증가합니다.</span></li>
+                    <li><span class="ed-exec-summary-tag">해결 방식</span><span>협업·승인(SyncVerse), 자동 화면 점검(SyncETA), 사내 관리 시스템(SyncBoot), 다국어 웹사이트(SyncCMS)와 7대 확장 모듈을 하나의 공통 코어 위에 정리했습니다.</span></li>
+                    <li><span class="ed-exec-summary-tag">기대 효과</span><span>지금 필요한 1개 영역부터 가볍게 도입하고, 추후 다른 업무를 연결할 때도 동일한 권한·감사 체계로 확장할 수 있습니다.</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">우리 회사 업무에 바로 적용할 수 있을지 궁금하신가요?</span>
+                    <a href="/ko/pages/contact.html?topics=system" class="btn btn-primary btn-sm" style="min-height: 36px;">맞춤 도입 상담</a>
+                </div>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>IT 담당자 · 개발자를 위한 상세 기술 내용 보기</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="이 글의 목차">
+  <div class="ed-article-toc-title">이 글의 목차</div>
+  <ol>
+    <li><a href="#sec-1">1. SyncETA: 클릭 녹화와 자가 치유 기반 자동 화면 점검</a></li>
+    <li><a href="#sec-2">2. SyncCMS: 개발자 종속을 줄이는 다국어 웹사이트 통합 플랫폼</a></li>
+    <li><a href="#sec-3">3. SyncBoot: 표준 권한·결재·동적 설정을 갖춘 사내 업무 시스템 코어</a></li>
+    <li><a href="#sec-4">4. SyncVerse: 요구사항부터 승인·배포까지 잇는 중앙 오케스트레이션</a></li>
+    <li><a href="#sec-5">5. SyncInsight: 사내 보안 경계 안에서 작동하는 경영 데이터 조회</a></li>
+    <li><a href="#sec-6">6. 목적별 확장 모듈 한눈에 보기 (SyncInsight 외 6종)</a></li>
+  </ol>
+</nav>
+<p>SyncSeries는 엠파시의 기업 업무 소프트웨어를 하나의 공통 기술 스택(<strong>Java 25, Spring Boot 4.0, PostgreSQL 18.6 <code>pgvector</code>, Vue 3 / Nuxt 3, Playwright, MCP/A2A</strong>) 위에 정렬한 모듈형 플랫폼입니다. 이 글에서는 4대 핵심 업무 영역과 의사결정·운영·보안을 보완하는 7대 확장 모듈이 각각 어떤 현장 병목을 해결하는지 아키텍처 관점에서 정리합니다.</p>
+
+<h2 id="sec-1">1. SyncETA: 클릭 녹화와 자가 치유 기반 자동 화면 점검</h2>
+<h3>현장 병목: UI 변경마다 깨지는 회귀 테스트 스크립트</h3>
+<p>프론트엔드 개편이 잦은 웹·모바일 서비스에서는 버튼 ID나 레이아웃이 조금만 바뀌어도 기존 E2E 스크립트가 실패해 QA 유지보수 비용이 급증합니다.</p>
+<h3>엔지니어링 해법</h3>
+<ul>
+  <li><strong>클릭 녹화 및 엑셀 시나리오 변환:</strong> 브라우저 상호작용과 DOM 접근성 트리 구조를 캡처해, 코딩 경험이 없는 실무자도 편집 가능한 표준 엑셀(Step-Input-Expected Result) 테스트케이스로 정리합니다.</li>
+  <li><strong>Playwright 기반 고속 병렬 실행:</strong> 일상적인 반복 회귀 실행은 결정론적 Playwright 재생 엔진으로 수행해 반복 실행 시 불필요한 LLM API 비용을 발생시키지 않습니다.</li>
+  <li><strong>셀렉터 자가 치유(Self-Healing) 및 품질 게이트:</strong> UI 구조가 변경돼 기존 식별자를 찾지 못할 때만 DOM 문맥을 분석해 대체 로케이터를 보정하며, 카오스·부하 시뮬레이션과 함께 배포 품질 게이트 판정을 지원합니다.</li>
+</ul>
+
+<h2 id="sec-2">2. SyncCMS: 개발자 종속을 줄이는 다국어 웹사이트 통합 플랫폼</h2>
+<h3>현장 병목: 다중 브랜드·다국어 사이트 운영과 배포 대기</h3>
+<p>글로벌 법인이나 브랜드별 사이트가 분산되어 있으면 단순 문구 수정이나 캠페인 페이지 개설에도 개발 배포 일정을 기다려야 합니다.</p>
+<h3>엔지니어링 해법</h3>
+<ul>
+  <li><strong>Spring Boot + Nuxt 3 SSR 하이브리드 헤드리스:</strong> 개방형 Spring Boot 백엔드와 Nuxt 3(Vue 3 SSR) 프론트엔드를 결합해, 높은 검색엔진 최적화(SEO) 성능과 RESTful API 기반 확장성을 동시에 확보합니다.</li>
+  <li><strong>3-Agent 콘텐츠 검수 워크플로우:</strong> 초안 작성(Copywriter), 검색·접근성·표시광고 점검(SEO/Reviewer), 승인 후 발행(Publisher) 흐름을 지원하며, 모든 라이브 반영은 담당자 검토를 거쳐 실행됩니다.</li>
+  <li><strong>단일 콘솔 멀티사이트·다국어 제어:</strong> 여러 브랜드와 다수의 다국어 웹사이트를 하나의 백오피스에서 사이트별 권한·콘텐츠 모델·버전 이력과 함께 관리합니다.</li>
+</ul>
+
+<h2 id="sec-3">3. SyncBoot: 표준 권한·결재·동적 설정을 갖춘 사내 업무 시스템 코어</h2>
+<h3>현장 병목: 매 프로젝트마다 반복되는 공통 기반 개발</h3>
+<p>새 사내 시스템을 구축할 때마다 로그인, 조직도·직책별 권한, 한국형 전자결재, 감사 이력, 설정 관리 기능을 매번 새로 개발하면 초기 구축 기간과 유지보수 부채가 커집니다.</p>
+<h3>엔지니어링 해법</h3>
+<ul>
+  <li><strong>엔터프라이즈 공통 기능 내장:</strong> 조직도 연계 RBAC(메뉴·버튼 단위 권한), 다단계 전자결재, 멀티 게시판, 데이터 포털, 감사 로그를 표준 모듈로 제공합니다.</li>
+  <li><strong>DB 기반 동적 설정·프롬프트 허브:</strong> 운영 정책(<code>sys_config</code>)과 AI 프롬프트(<code>sys_prompt_template</code>)를 코드 재배포 없이 관리하고, <code>ClusterEventBroadcaster</code>로 멀티 인스턴스 캐시를 즉시 동기화합니다.</li>
+  <li><strong>안정적 트랜잭션 및 관측성:</strong> <code>SagaCoordinator</code> 기반 보상 처리와 <code>Trace ID</code>·Slow SQL 추적을 기본 지원해 장애 원인을 빠르게 파악합니다.</li>
+</ul>
+
+<h2 id="sec-4">4. SyncVerse: 요구사항부터 승인·배포까지 잇는 중앙 오케스트레이션</h2>
+<h3>현장 병목: 메신저·문서·코드·테스트·승인의 단절</h3>
+<p>개별 AI 도구를 도입하더라도 요구사항 정의, 코드 변경, 테스트 결과, 관리자 승인 이력이 제각각 흩어져 있으면 감사 대응과 변경 통제가 어렵습니다.</p>
+<h3>엔지니어링 해법</h3>
+<ul>
+  <li><strong>MCP 기반 A2A 통합 관제:</strong> 표준 MCP 프로토콜과 인바운드 보안 인증을 통해 각 도메인 에이전트에게 작업을 위임하고 실행 결과를 통합 브리핑합니다.</li>
+  <li><strong>5-Step Spec Studio 및 15대 코딩 엔진 라우팅:</strong> 요구사항 수용 기준(AC) 정제부터 화면·API 설계, <code>SyncSDK</code>(15대 엔터프라이즈 코딩 엔진 핫스왑) 기반 브랜치·PR 생성, 4-Cycle 품질 검증까지 구조화합니다.</li>
+  <li><strong>다자간 승인 결재선(Multi-Party HITL) 및 3단계 하네스:</strong> 코드 변이나 스키마 변경 같은 고위험 작업은 개발·QA·보안·관리자 단계별 승인을 거쳐야 반영됩니다.</li>
+</ul>
+
+<h2 id="sec-5">5. SyncInsight: 사내 보안 경계 안에서 작동하는 경영 데이터 조회</h2>
+<h3>현장 병목: 외부 클라우드 유출 우려와 사일로화된 사내 데이터</h3>
+<p>ERP, 사내 위키, 외부 시장 데이터가 부서별로 고립되어 있고 보안 규정상 퍼블릭 LLM에 원본 데이터를 올릴 수 없어 경영진과 현업의 즉시 조회가 어렵습니다.</p>
+<h3>엔지니어링 해법</h3>
+<ul>
+  <li><strong>온프레미스·폐쇄망 우선 아키텍처:</strong> 저장소와 로컬 LLM 런타임(vLLM, Ollama 등)을 사내 서버나 전용 VPC 내부에 배치해 민감 데이터의 외부 반출을 통제합니다.</li>
+  <li><strong>읽기 전용 NL2SQL 방화벽 &amp; 3중 하이브리드 RAG:</strong> Apache Calcite·JSqlParser 기반 SELECT-Only 방화벽으로 안전하게 정형 DB를 조회하고, <code>sync-module-rag</code>(<code>pgvector</code> + BM25 + 지식 그래프)로 문서 근거를 교차 검증합니다.</li>
+  <li><strong>멀티 에이전트 분석 및 실행 연계:</strong> 수집·분석·보고 에이전트가 표·차트와 원인 요약을 제시하고, 담당자가 승인한 실행 과제를 SyncVerse로 전달합니다.</li>
+</ul>
+
+<h2 id="sec-6">6. 목적별 확장 모듈 한눈에 보기 (SyncInsight 외 6종)</h2>
+<p>4대 핵심 영역과 앞서 살펴본 SyncInsight에 더해, 동일한 공통 모듈(<code>sync-core</code>, <code>sync-module-ai</code>, <code>sync-module-rag</code>, <code>sync-module-nl2sql</code>, <code>sync-module-audit</code>, <code>sync-module-deploy</code>) 위에서 필요에 따라 아래 6종 확장 모듈을 조합할 수 있습니다.</p>
+<ul>
+  <li><strong>SyncLLM:</strong> 부서별 AI 예산 한도, 의미 기반 캐시, 8대 개인정보 마스킹, 다중 모델 우회 라우팅을 제공하는 AI 게이트웨이.</li>
+  <li><strong>SyncCrawl:</strong> <code>robots.txt</code> 준수, Playwright 셀렉터 자가 치유, 노이즈 제거를 거쳐 사내 검색용 문서를 정제하는 웹 데이터 수집 파이프라인.</li>
+  <li><strong>SyncShop:</strong> 9대 독립 마이크로서비스(MSA) 구조 위에 최소 마진율 보호와 스냅샷 원클릭 롤백을 제공하는 이커머스 운영 엔진.</li>
+  <li><strong>SyncOps:</strong> KOSA 기술등급 듀얼 단가 손익 피벗과 하도급법(15일/60일) 지급기한·보증증권 만기를 자동 감시하는 사업운영 플랫폼.</li>
+  <li><strong>SyncAPIM:</strong> 구문 토큰 지문 분석, 섀도우 API 탐지, 정상 트래픽 백테스팅 기반 무중단 가상 패치와 eBPF 커널 방어를 수행하는 API 보안 게이트웨이.</li>
+  <li><strong>SyncWatch:</strong> 글로벌 주요 보안 피드(NVD, CISA KEV, KISA 등)를 수집·검증해 SyncVerse 코드 감사 팩과 SyncAPIM 방어 팩으로 동시 배포하는 보안 인텔리전스 허브.</li>
+</ul>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>SyncSeries 전체 제품군 브로셔와 라이브 데모를 확인해 보세요</strong>
+                <span>11개 모듈이 공통 로그인·권한·감사 기반 위에서 어떻게 연결되는지 실제 화면으로 살펴볼 수 있습니다.</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="https://sync.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">통합 데모 포털 열기 &#8599;</a>
+                <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" class="btn btn-outline btn-sm">경영진 요약 브로셔 PDF</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="함께 읽으면 좋은 인사이트">
+        <h2 class="ed-related-heading">함께 읽으면 좋은 인사이트</h2>
+        <div class="ed-related-grid">
+        <a href="/ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" class="ed-related-card">
+            <span class="ed-related-cat">비전 · 운영 방향</span>
+            <span class="ed-related-title">사람의 판단에 집중하는 기업 소프트웨어: 엠파시 2026 제품 발전 방향</span>
+            <span class="ed-related-more">자세히 읽기 &rarr;</span>
+        </a>
+        <a href="/ko/blog/syncverse-mcp-ai-orchestration-architecture.html" class="ed-related-card">
+            <span class="ed-related-cat">협업 · 단계별 승인</span>
+            <span class="ed-related-title">흩어진 업무 도구를 하나로 연결하는 협업·승인 관리: SyncVerse 운영 가이드</span>
+            <span class="ed-related-more">자세히 읽기 &rarr;</span>
+        </a>
+        </div>
+    </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 36px; padding-bottom: 36px; border-bottom: 1px solid #e2e8f0;" class="emp-footer-grid">
@@ -356,16 +401,16 @@
                         <img src="/images/logo.svg" alt="EMPASY" style="height: 22px; width: auto; margin-bottom: 14px;">
                     </a>
                     <p style="font-size: 14px; line-height: 1.7; color: #475569; max-width: 320px;">
-                        검증된 공통 기반 위에서 기업의 개발·테스트·운영 업무를 돕는 실무형 소프트웨어를 만듭니다.
+                        반복되는 기업 업무는 자동화하고, 중요한 결정은 담당자 확인을 거쳐 안전하게 반영하는 실무형 기업 소프트웨어를 만듭니다.
                     </p>
                 </div>
                 <div>
-                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">주력 솔루션</h4>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">핵심 업무 영역</h4>
                     <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
-                        <li><a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer">SyncVerse</a></li>
-                        <li><a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer">SyncETA</a></li>
-                        <li><a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer">SyncBoot</a></li>
-                        <li><a href="https://cms.empasy.io/" target="_blank" rel="noopener noreferrer">SyncCMS</a></li>
+                        <li><a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer">협업·승인 통합 (SyncVerse)</a></li>
+                        <li><a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer">자동 화면 점검 (SyncETA)</a></li>
+                        <li><a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer">사내 관리 시스템 (SyncBoot)</a></li>
+                        <li><a href="https://cms.empasy.io/" target="_blank" rel="noopener noreferrer">웹사이트·다국어 (SyncCMS)</a></li>
                     </ul>
                 </div>
                 <div>
@@ -408,7 +453,5 @@
         </style>
     </footer>
 
-    <!-- Scripts -->
 </body>
 </html>
-

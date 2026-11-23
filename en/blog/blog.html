@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -16,60 +37,50 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
     <!-- End Google Tag Manager -->
-    <title>Empasy | Blog</title>
-    <meta name="description" content="B2B Enterprise AI Integration Architecture solving DX and AI Infrastructure simultaneously.">
-    <meta name="keywords" content="Enterprise AI Ecosystem, Enterprise AI Integration Platform, DX AI Architecture, Empasy, MSA CMS AI Integration, Business Data Intelligence, SyncVerse, SyncBoot, SyncCMS, SyncInsight, SyncETA, B2B AI Solution">
-    <meta property="og:title" content="Empasy | Blog">
-    <meta property="og:description" content="B2B Enterprise AI Integration Architecture solving DX and AI Infrastructure simultaneously.">
-    <meta property="og:type" content="website">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Empasy">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Empasy Tech Blog",
-      "url": "https://empasy.io/en/blog/blog.html",
-      "description": "Latest technical insights on Enterprise AI Agents and AI Ops",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Empasy",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.io/empasy-logo.png"
-        }
-      }
-    }
-    </script>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-    <!-- SEO & AIO Tags -->
-    
-    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <title>Empasy Insights | Field Notes &amp; Adoption Guides</title>
+    <meta name="description" content="Practical field notes from Empasy covering automated screen verification (SyncETA), internal system modernization (SyncBoot), multilingual web operations (SyncCMS), data &amp; AI governance (SyncInsight, SyncLLM), project ops (SyncOps), and API/security defense (SyncAPIM, SyncWatch).">
+    <meta name="keywords" content="Empasy Insights, Field Guide, SyncVerse, SyncETA, SyncBoot, SyncCMS, SyncInsight, SyncLLM, SyncCrawl, SyncShop, SyncOps, SyncAPIM, SyncWatch">
+    <meta name="author" content="Empasy Inc.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- SEO & AIO Tags -->
-    
-    
-    <!-- SEO & AIO Tags -->
+    <meta property="og:title" content="Empasy Insights | Field Notes &amp; Adoption Guides">
+    <meta property="og:description" content="Practical field notes and adoption guides solving everyday engineering, testing, web, data, PMO, and security operations challenges.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://empasy.io/en/blog/blog.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
     <link rel="canonical" href="https://empasy.io/en/blog/blog.html">
     <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/blog.html" />
     <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/blog.html" />
     <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/blog.html" />
     <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/blog.html" />
-    <meta property="og:url" content="https://empasy.io/en/blog/blog.html">
-  <script type="module" crossorigin src="/assets/i18n-3nk6-OFj.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/style-BWlNIJrj.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Empasy Insights",
+  "url": "https://empasy.io/en/blog/blog.html",
+  "description": "Practical field notes and adoption guides solving everyday engineering, testing, web, data, PMO, and security operations challenges.",
+  "inLanguage": "en",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Empasy Inc.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://empasy.io/empasy-logo.png"
+    }
+  }
+}
+    </script>
+  <script type="module" crossorigin src="/assets/modulepreload-polyfill-Dezn_h7o.js"></script>
+  <script type="module" crossorigin src="/assets/i18n-CC8j1T6V.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-BgRDHG71.css">
 </head>
 <body>
-
-    <!-- Header Navigation -->
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -93,20 +104,26 @@
             </button>
             <nav id="emp-nav-links" class="nav-links" aria-label="Main navigation">
                 <div class="dropdown">
-                    <a href="/en/pages/index.html#solutions" class="dropbtn">Solutions
+                    <a href="/en/pages/index.html#roles" class="dropbtn">Solutions
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </a>
-                    <div class="dropdown-content" style="min-width: 270px;">
-                        <span class="dropdown-group-heading">4 Flagship Solutions</span>
-                        <a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · Operations &amp; Approvals</a>
-                        <a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · Automated Testing App</a>
-                        <a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · Business System Core</a>
-                        <a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · Web &amp; Multilingual CMS</a>
-                        <span class="dropdown-group-heading">Modular Extensions</span>
-                        <a href="/en/pages/index.html#modules">Data, Security &amp; Operations (7 Modules)</a>
+                    <div class="dropdown-content" style="min-width: 280px;">
+                        <span class="dropdown-group-heading">Quick Start</span>
+                        <a href="/en/pages/index.html#finder"><strong>30-Second Solution Finder</strong> · 3 questions</a>
+                        <a href="/en/pages/index.html#roles"><strong>Browse by Business Goal</strong> · By team</a>
+                        <span class="dropdown-group-heading">4 Core Business Areas</span>
+                        <a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Operations &amp; Approvals</strong> · SyncVerse</a>
+                        <a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Automated Screen Checks</strong> · SyncETA</a>
+                        <a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Internal System Core</strong> · SyncBoot</a>
+                        <a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Web &amp; Multilingual Hub</strong> · SyncCMS</a>
+                        <span class="dropdown-group-heading">Extensions &amp; IT Resources</span>
+                        <a href="/en/pages/index.html#modules">Data, AI Cost, Security &amp; Operations (7)</a>
+                        <a href="/en/download_eta.html">Download SyncETA Desktop App</a>
+                        <a href="https://doc.empasy.com/en/" target="_blank" rel="noopener noreferrer">IT &amp; Developer Docs &#8599;</a>
                     </div>
                 </div>
     
+                <a href="/en/pages/index.html#finder">Solution Finder</a>
                 <a href="/en/pages/clients.html">Clients</a>
     
                 <div class="dropdown">
@@ -122,7 +139,6 @@
                     </div>
                 </div>
     
-                <a href="https://doc.empasy.com/en/" target="_blank" rel="noopener noreferrer">Docs &#8599;</a>
                 <a href="https://sync.empasy.io/en/" target="_blank" rel="noopener noreferrer">Live Demo &#8599;</a>
             </nav>
             <div class="nav-actions">
@@ -131,8 +147,7 @@
                     <a href="/en/pages/index.html" data-lang="en" class="active" aria-current="page">EN</a>
                     <a href="/ja/pages/index.html" data-lang="ja">JA</a>
                 </div>
-                <a href="/en/download_eta.html" class="btn btn-outline btn-sm">Download SyncETA</a>
-                <a href="/en/pages/contact.html" class="btn btn-primary btn-sm">Contact</a>
+                <a href="/en/pages/contact.html" class="btn btn-primary btn-sm">Contact Sales</a>
             </div>
         </div>
     </header>
@@ -223,216 +238,243 @@
     })();
     </script>
 
-    <main class="container" style="padding-top: 105px; min-height: 80vh;">
-        <div class="page-header text-center fade-in-up mb-4">
-            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color);">Insights</span>
-            <h1 class="page-title" style="font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 1rem; color: var(--text-primary);">Tech Blog</h1>
-            <p class="page-subtitle" style="margin-top: 1.5rem; font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">Check out practical guides and the latest technology trends for enterprise AI adoption.</p>
+    <main class="container" style="padding-bottom: 72px; min-height: 80vh;">
+        <div class="blog-hero">
+            <p class="ed-eyebrow">Field Notes &amp; Guides</p>
+            <h1>Empasy Insights</h1>
+            <p>Practical guides grounded in real enterprise deployments. Every article starts with a 3-line executive summary followed immediately by detailed architecture and implementation guidance for IT teams.</p>
         </div>
-        
-        <section class="section" style="padding-top: 2rem;">
-                        <div class="container">
-                <div class="blog-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
-                    <!-- Blog Card: ETA Autoscaling -->
-                    <a href="../../en/blog/eta-autoscaling-worker-scaling.html" style="text-decoration: none; color: inherit; display: block;">
-                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid rgba(56, 189, 248, 0.45); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                                <div style="color: #38bdf8; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase;">QA Automation</div>
-                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">SyncETA Autoscaling in Practice (1) — When Should We Scale Out Workers?</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Why CPU-based HPA falls short for Playwright MCP browser workers, and how SyncETA uses KEDA and Redis Queue depth for event-driven worker autoscaling.</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-11-03</span>
-                                    <span style="color: var(--primary-color); font-weight: 600;">Read More &rarr;</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
 
-                    <!-- Blog Card 12 (Case Study) -->
-                    <a href="../../en/blog/case-study-finance.html" style="text-decoration: none; color: inherit; display: block;">
-                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Enterprise Case Study</div>
-                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">Major Enterprise Project Implementations &amp; Financial/Public DX Case Studies</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Explore proven enterprise architectures, high-volume transaction engineering, and AI automation case studies across finance, public sector, and manufacturing.</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-03-20</span>
-                                    <span style="color: var(--primary-color); font-weight: 600;">Read More &rarr;</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+        <div class="blog-filter-tabs" role="tablist" aria-label="Insights topic filter">
+            <button type="button" class="blog-filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button type="button" class="blog-filter-btn" data-filter="qa" role="tab" aria-selected="false">Screen Checks</button>
+            <button type="button" class="blog-filter-btn" data-filter="orchestration" role="tab" aria-selected="false">Approvals &amp; Ops</button>
+            <button type="button" class="blog-filter-btn" data-filter="cloud" role="tab" aria-selected="false">Systems &amp; Web</button>
+            <button type="button" class="blog-filter-btn" data-filter="decision" role="tab" aria-selected="false">Data &amp; AI Cost</button>
+            <button type="button" class="blog-filter-btn" data-filter="security" role="tab" aria-selected="false">Security &amp; Defense</button>
+            <button type="button" class="blog-filter-btn" data-filter="vision" role="tab" aria-selected="false">Case Studies &amp; Vision</button>
+        </div>
 
-                    <!-- Blog Card 11 -->
-                    <a href="../../en/blog/synccrawl-distributed-web-data-pipeline.html" style="text-decoration: none; color: inherit; display: block;">
-                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Data Pipeline &amp; Search</div>
-                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">Web Data Collection and Preprocessing for Enterprise RAG: SyncCrawl Pipeline Architecture</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Understand how SyncCrawl gathers external technical documents and market data periodically, purifying HTML down to clean Markdown for enterprise search.</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-09-12</span>
-                                    <span style="color: var(--primary-color); font-weight: 600;">Read More &rarr;</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+        <div class="blog-grid">
+            <a href="/en/blog/sync-core-dynamic-config-prompt-cluster-sync.html" class="blog-card-item" data-category="cloud">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Core Infrastructure</div>
+                    <h2>Updating AI Prompts &amp; Policies Without Restarts: sys_config &amp; sys_prompt_template Cluster Sync</h2>
+                    <p>Move runtime policies and AI prompts out of hardcoded YAML into PostgreSQL (sys_config, sys_prompt_template) and sync caches across all JVMs via ClusterEventBroadcaster.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-23 &bull; 6 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/syncsdk-spec-studio-multi-engine-codev.html" class="blog-card-item" data-category="orchestration">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Co-Dev &amp; SyncSDK</div>
+                    <h2>5-Step Spec Studio &amp; 15-Engine Hot-Swap: Team Co-Dev Architecture With SyncSDK</h2>
+                    <p>Avoid AI coding vendor lock-in by hot-swapping 15 coding engines via SyncSDK while uniting 5-Step Spec Studio, Living Spec reverse-sync, and SI deliverables.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-22 &bull; 7 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/eta-autoscaling-keda-graceful-scalein.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Automated Checks</div>
+                    <h2>SyncETA Capacity Scaling (Part 2) — KEDA ScaledObject &amp; Graceful Scale-In for Active Tests</h2>
+                    <p>Connecting BullMQ Redis keys (bull:scheduler_jobs:wait and active) to KEDA ScaledObject with 180s termination grace periods and SIGTERM draining to protect in-flight tests.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-21 &bull; 6 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/syncwatch-security-advisory-rule-compiler.html" class="blog-card-item" data-category="security">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Threat Intel &amp; Rules</div>
+                    <h2>Turning Global Security Advisories Into Verified Defense Rules: SyncWatch Architecture</h2>
+                    <p>Aggregate NVD, CISA KEV, OSV, GHSA, and KISA feeds to compile sandbox-verified audit packs for SyncVerse and virtual-patch rules for SyncAPIM.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-20 &bull; 6 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/syncapim-ai-api-gateway-ebpf-defense.html" class="blog-card-item" data-category="security">
+                <article class="blog-card">
+                    <div class="blog-card-cat">API Security &amp; Defense</div>
+                    <h2>From Shadow API Discovery to Zero-Downtime Virtual Patching: SyncAPIM Gateway Guide</h2>
+                    <p>Combine lexical threat analysis, shadow API discovery, replay-verified virtual patching, eBPF kernel defense, and response PII masking in SyncAPIM.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-16 &bull; 6 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/syncops-si-profitability-subcontract-governance.html" class="blog-card-item" data-category="orchestration">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Project Ops &amp; Margin</div>
+                    <h2>Real-Time Project Margin Tracking &amp; Subcontract Compliance: SyncOps Field Guide</h2>
+                    <p>Compare contracted billing rates against actual staffing costs in real time while monitoring statutory subcontract deadlines and surety bond expiries with SyncOps.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-12 &bull; 6 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/eta-autoscaling-worker-scaling.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Automated Checks</div>
+                    <h2>Handling Peak Verification Traffic Smoothly — SyncETA Capacity Scaling (Part 1)</h2>
+                    <p>Why CPU-based HPA fell short for SyncETA browser workers and how we designed queue-driven autoscaling with Redis Queue and KEDA.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-03 &bull; 4 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/synccrawl-distributed-web-data-pipeline.html" class="blog-card-item" data-category="decision">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Web Data Collection</div>
+                    <h2>Collecting Clean Public Web Data for Internal Search: SyncCrawl Field Guide</h2>
+                    <p>How SyncCrawl gathers public market updates and documentation compliantly while stripping clutter and healing broken selectors for internal RAG search.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-09-12 &bull; 6 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/syncllm-cost-optimization-semantic-cache-gateway.html" class="blog-card-item" data-category="decision">
+                <article class="blog-card">
+                    <div class="blog-card-cat">AI Cost &amp; Privacy</div>
+                    <h2>Cutting Corporate AI Bills While Protecting Privacy: SyncLLM Governance Guide</h2>
+                    <p>Control departmental AI spending in one gateway with semantic caching, tiered model routing, automatic PII masking, and multi-provider failover.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-08-25 &bull; 7 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/syncshop-batch-pricing-margin-protection-architecture.html" class="blog-card-item" data-category="orchestration">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Commerce &amp; Pricing</div>
+                    <h2>Protecting Minimum Margins During Bulk Promotions: SyncShop Pricing Safeguards</h2>
+                    <p>Prevent costly discount mistakes across tens of thousands of SKUs with pre-change margin checks, snapshot rollback, and chunked MSA updates.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-08-10 &bull; 6 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" class="blog-card-item" data-category="vision">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Vision &amp; Direction</div>
+                    <h2>Software That Keeps People Focused on Decisions: Empasy 2026 Roadmap</h2>
+                    <p>How Empasy reduces repetitive operational work safely across development, QA, data, and security while keeping responsible managers in control of approvals.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-07-18 &bull; 5 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html" class="blog-card-item" data-category="decision">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Data &amp; Security</div>
+                    <h2>Answering Business Questions Inside Private Corporate Networks: SyncInsight</h2>
+                    <p>Run read-only NL2SQL queries and hybrid RAG analysis inside private corporate servers without exposing confidential company records.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-06-25 &bull; 7 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/syncverse-mcp-ai-orchestration-architecture.html" class="blog-card-item" data-category="orchestration">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Approvals &amp; Collaboration</div>
+                    <h2>Connecting Scattered Work Tools Into One Approval Flow: SyncVerse Guide</h2>
+                    <p>Unify requirement specs (5-Step Spec Studio), 15 coding engines via SyncSDK, automated verification, and multi-party human approvals in one console.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-05-30 &bull; 6 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/syncboot-cloud-native-msa-architecture.html" class="blog-card-item" data-category="cloud">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Internal System Core</div>
+                    <h2>Modernizing Aging Internal Systems Step by Step: SyncBoot Standard Foundation</h2>
+                    <p>Standardize organization-linked RBAC, multi-step electronic approvals, runtime config/prompt hubs, and observability on Java 25 and Spring Boot 4.0.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-05-12 &bull; 6 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/synccms-development-oriented-architecture.html" class="blog-card-item" data-category="cloud">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Web &amp; Multilingual</div>
+                    <h2>Operating Global Brand Websites Without Vendor Lock-In: SyncCMS Guide</h2>
+                    <p>Run multi-country and multi-brand sites from one console using Spring Boot, Nuxt 3 SSR hybrid headless rendering, and 3-agent pre-publish quality checks.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-04-20 &bull; 5 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/case-study-finance.html" class="blog-card-item" data-category="vision">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Enterprise Case Studies</div>
+                    <h2>Enterprise Modernization &amp; Automation Case Studies Across Education, Security, Retail &amp; Public Sectors</h2>
+                    <p>NDA-compliant field results from education platforms, security/finance integration infrastructure, retail/manufacturing portals, and public knowledge systems.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-03-20 &bull; 6 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/synceta-intelligent-regression-testing-pipeline.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Verification Guide</div>
+                    <h2>Automated Screen Checks Without Coding: From Click Recording to Self-Recovery</h2>
+                    <p>How SyncETA combines click recording, Excel checklists, deterministic Playwright replay, and self-healing locators to eliminate brittle QA scripts.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-03-15 &bull; 6 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/empasy-core-solution-architecture-syncverse.html" class="blog-card-item" data-category="orchestration">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Product Overview</div>
+                    <h2>SyncSeries Core Capabilities at a Glance: Solving Real Operational Bottlenecks</h2>
+                    <p>Understand how SyncVerse, SyncETA, SyncBoot, SyncCMS, and 7 modular extensions operate on one shared architecture to solve real enterprise bottlenecks.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-02-28 &bull; 8 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/enterprise-data-pipeline-automation.html" class="blog-card-item" data-category="decision">
+                <article class="blog-card">
+                    <div class="blog-card-cat">Data Organization</div>
+                    <h2>Automating Unstructured Document Processing Under Strict Corporate Security</h2>
+                    <p>A practical 5-layer pipeline for cleaning scattered internal documents and public web sources with automatic PII masking before enterprise search.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-01-10 &bull; 6 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+        </div>
 
-                    <!-- Blog Card 10 -->
-                    <a href="../../en/blog/syncllm-cost-optimization-semantic-cache-gateway.html" style="text-decoration: none; color: inherit; display: block;">
-                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">AI Infrastructure &amp; Cost</div>
-                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">Enterprise AI API Cost Reduction and Latency Optimization: SyncLLM Gateway Architecture</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Examine the technical mechanisms behind SyncLLM, including semantic response caching, intelligent model routing, and departmental budget controls.</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-08-25</span>
-                                    <span style="color: var(--primary-color); font-weight: 600;">Read More &rarr;</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Blog Card 9 -->
-                    <a href="../../en/blog/syncshop-batch-pricing-margin-protection-architecture.html" style="text-decoration: none; color: inherit; display: block;">
-                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">E-Commerce &amp; Operations</div>
-                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">Minimum Margin Protection and Safe Batch Price Updates: SyncShop Pricing and Rollback Architecture</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Examine how SyncShop safeguards operating profit and provides fast recovery mechanisms during large-scale catalog price changes.</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-08-10</span>
-                                    <span style="color: var(--primary-color); font-weight: 600;">Read More &rarr;</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Blog Card 8 -->
-                    <a href="../../en/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" style="text-decoration: none; color: inherit; display: block;">
-                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Vision & Strategy</div>
-                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">Boon to Business by Agility: Empasy's 2026 Vision and the Future of the Autonomous Operations Ecosystem</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Empasy's 2026 vision statement to automate the entire enterprise coding, quality verification, and decision-making processes through contextual connection (MCP).</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-07-18</span>
-                                    <span style="color: var(--primary-color); font-weight: 600;">Read More &rarr;</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Blog Card 7 -->
-                    <a href="../../en/blog/syncinsight-on-premise-decision-intelligence-architecture.html" style="text-decoration: none; color: inherit; display: block;">
-                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Security & Decision Intelligence</div>
-                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">Top-Level Decision Intelligence Penetrating On-Premise Security: SyncInsight's Multi-Agent Cross-Analysis Architecture</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">SyncInsight derives management insights while protecting data sovereignty by running Context-Aware RAG and multi-agents in a closed in-house network.</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-07-18</span>
-                                    <span style="color: var(--primary-color); font-weight: 600;">Read More &rarr;</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Blog Card 6 -->
-                    <a href="../../en/blog/syncverse-mcp-ai-orchestration-architecture.html" style="text-decoration: none; color: inherit; display: block;">
-                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">AI Orchestration & MCP</div>
-                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">Connecting Context Across Agents: SyncVerse Orchestration Architecture, the MCP-based Next-Gen AI Development Ecosystem</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">A Zero-Touch autonomous operations ecosystem connecting coding, QA, and deployment agents based on the global standard MCP (Model Context Protocol).</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-07-18</span>
-                                    <span style="color: var(--primary-color); font-weight: 600;">Read More &rarr;</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Blog Card 5 -->
-                    <a href="../../en/blog/syncboot-cloud-native-msa-architecture.html" style="text-decoration: none; color: inherit; display: block;">
-                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Cloud Native & Microservices</div>
-                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">The Heart of Cloud Native: SyncBoot Distributed Architecture Accelerating Enterprise MSA Transition</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">SyncBoot architecture that integrates 100% open source like Seata, Sentinel, and SkyWalking to instantly build complex microservices infrastructure.</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-07-18</span>
-                                    <span style="color: var(--primary-color); font-weight: 600;">Read More &rarr;</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Blog Card 4 -->
-                    <a href="../../en/blog/synccms-development-oriented-architecture.html" style="text-decoration: none; color: inherit; display: block;">
-                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Frontend & CMS Ecosystem</div>
-                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">Overcoming Vendor Lock-in: SyncCMS's 'Development-Oriented' Architecture for Flexible Business Expansion</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">An in-depth analysis of SyncCMS, supporting enterprise limitless expansion through a Spring Boot-based open architecture, Nuxt 3 SSR, and a 3-Agent Swarm.</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-07-18</span>
-                                    <span style="color: var(--primary-color); font-weight: 600;">Read More &rarr;</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Blog Card 3 -->
-                    <a href="../../en/blog/synceta-intelligent-regression-testing-pipeline.html" style="text-decoration: none; color: inherit; display: block;">
-                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">AI Ops & QA Automation</div>
-                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">From Machine Code (JSON) to Business Language (Excel): SyncETA's Intelligent Regression Testing Pipeline Architecture</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">A review of the SyncETA architecture that combines LLM and Playwright MCP to realize a No-Code based intelligent QA automation and visual self-healing engine.</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-07-18</span>
-                                    <span style="color: var(--primary-color); font-weight: 600;">Read More &rarr;</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Blog Card 2 -->
-                    <a href="../../en/blog/empasy-core-solution-architecture-syncverse.html" style="text-decoration: none; color: inherit; display: block;">
-                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">Tech Trends & Architecture</div>
-                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">Core Solution Architecture of the AI Autonomous Operations Ecosystem (SyncVerse)</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">An in-depth analysis of technical pain points and engineering solutions across Empasy's 5 core solutions: SyncETA, SyncCMS, SyncBoot, SyncVerse, and SyncInsight.</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-07-18</span>
-                                    <span style="color: var(--primary-color); font-weight: 600;">Read More &rarr;</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Blog Card 1 -->
-                    <a href="../../en/blog/enterprise-data-pipeline-automation.html" style="text-decoration: none; color: inherit; display: block;">
-                        <div class="blog-card" style="background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.05)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                            <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
-                                <div style="color: var(--primary-color); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase;">AI Ops & Architecture</div>
-                                <h3 style="font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.4;">Enterprise Data Pipeline Automation Cases using LLM</h3>
-                                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; flex-grow: 1;">Learn how to structure unstructured data and utilize LLMs in security-critical enterprise environments using SyncSeries.</p>
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem;">
-                                    <span>2026-07-15</span>
-                                    <span style="color: var(--primary-color); font-weight: 600;">Read More &rarr;</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+        <div class="ed-doc-callout" style="margin-top: 48px;">
+            <div>
+                <p><strong>Looking for engineering architecture and API manuals?</strong><br>Deep technical specifications, integration specs, and deployment guides are available on our official documentation portal.</p>
             </div>
-        </section>
+            <a href="https://doc.empasy.com/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="color: #0f172a !important; text-decoration: none;">Technical Docs (doc.empasy.com) &#8599;</a>
+        </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 36px; padding-bottom: 36px; border-bottom: 1px solid #e2e8f0;" class="emp-footer-grid">
@@ -441,16 +483,16 @@
                         <img src="/images/logo.svg" alt="EMPASY" style="height: 22px; width: auto; margin-bottom: 14px;">
                     </a>
                     <p style="font-size: 14px; line-height: 1.7; color: #475569; max-width: 320px;">
-                        Practical enterprise software built on a shared foundation to simplify development, testing, and daily operations.
+                        Practical enterprise software that automates repetitive business tasks while keeping humans in charge of key approvals.
                     </p>
                 </div>
                 <div>
-                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Flagship Solutions</h4>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Core Business Areas</h4>
                     <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
-                        <li><a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncVerse</a></li>
-                        <li><a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncETA</a></li>
-                        <li><a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncBoot</a></li>
-                        <li><a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncCMS</a></li>
+                        <li><a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer">Approvals &amp; Oversight (SyncVerse)</a></li>
+                        <li><a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer">Automated Screen Checks (SyncETA)</a></li>
+                        <li><a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer">Internal System Core (SyncBoot)</a></li>
+                        <li><a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer">Web &amp; Multilingual (SyncCMS)</a></li>
                     </ul>
                 </div>
                 <div>
@@ -493,6 +535,25 @@
         </style>
     </footer>
 
-    <!-- Scripts -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterBtns = document.querySelectorAll('.blog-filter-btn');
+        const blogItems = document.querySelectorAll('.blog-card-item');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                });
+                btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
+                const filter = btn.getAttribute('data-filter');
+                blogItems.forEach(item => {
+                    item.style.display = (filter === 'all' || item.getAttribute('data-category') === filter) ? 'block' : 'none';
+                });
+            });
+        });
+    });
+    </script>
 </body>
 </html>

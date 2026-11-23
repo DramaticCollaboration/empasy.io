@@ -1,67 +1,68 @@
-# Empasy SyncSeries
+# Empasy Inc. (주식회사 엠파시) — Practical Enterprise Software SyncSeries
 
-> Empasy Inc. (주식회사 엠파시) develops modular enterprise software built on a shared standard foundation (`SyncBoot`, Java 25, Spring Boot 4.0, PostgreSQL 18.6) with Human-in-the-Loop (HITL) approval controls and on-premise deployment support.
+> Empasy builds modular enterprise software that automates repetitive business work while keeping people in charge of critical approvals. Organizations start with one urgent workflow via a 1-2 week pilot—no big-bang system replacement required.
 
-## Overview
-Empasy SyncSeries consists of 4 flagship solutions (`SyncVerse`, `SyncETA`, `SyncBoot`, `SyncCMS`) and 7 modular extensions organized across Data & AI, Security & Governance, and Operations & Commerce. Each module shares common authentication, permission, audit logging, and standard MCP/A2A integration protocols so organizations can start with a single product and expand step by step.
+## Enterprise & Institutional Track Record (By Industry, Project Names Withheld Under NDA)
+- **Global & EdTech Test Automation**: Samsung.com (Global Test Automation), Visang Education (Test Automation).
+- **Enterprise Manufacturing & Corporate IT**: LG CNS, LG Electronics, LG Chem, Hyundai Motor.
+- **Mobility & Information Security**: AUTOCRYPT (Mobility Security & Telemetry Monitoring), Penta Security (System Integration Security Monitoring).
+- **Public & Education Data Platforms**: Penta System & Gyeonggi Provincial Office of Education (Public Education Data Platform Collaboration).
 
-## Flagship Solutions (4)
+## Who Uses Empasy & What Problems We Solve
+Rather than asking non-IT executives and business teams to navigate a catalog of technical tools, Empasy organizes capabilities around 4 practical business goals:
 
-### SyncVerse (Central Collaboration & Approval Oversight)
-- Product Page: https://verse.empasy.io/
-- Corporate Page: https://empasy.io/ko/solutions/sync-verse.html
-- Docs: https://doc.empasy.com/syncverse/
-- Role: Multi-agent workflow coordination, Human-in-the-Loop (HITL) approval gates, audit trace visibility, and operational stop controls.
+1. **Executives & Planning (Data Visibility, AI Cost & Approval Control)**
+   - Ask business questions in everyday language to view tables and charts under read-only safety (`SyncInsight`).
+   - Connect corporate AI tools in one place to enforce departmental budgets, reuse repeated answers, and automatically mask sensitive personal information (`SyncLLM`).
+   - Track requests, reviews, quality summaries, and staged human sign-offs in one transparent screen (`SyncVerse`).
 
-### SyncETA (No-Code Automated E2E Testing & Desktop App)
-- Product Page: https://eta.empasy.io/
-- Corporate Page: https://empasy.io/ko/solutions/sync-eta.html
-- Desktop Download: https://empasy.io/ko/download_eta.html
-- Live Demo Portal: https://sync.empasy.io/products/sync-eta
-- Architecture Guide: https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html
-- Docs: https://doc.empasy.com/synceta/
-- Role (KO): 코딩 없이 마우스 클릭이나 자연어·엑셀 기반으로 E2E 테스트 시나리오를 구성하고, UI 변경 시 문맥 기반 셀렉터 자동 보정(Self-Healing)과 배포 전후 화면 비교 리포트를 제공하는 자동 테스트 플랫폼입니다.
-- Role (EN): Desktop and web E2E UI test automation platform combining Playwright execution, context-aware selector recovery when UI elements change, and visual comparison reports.
+2. **Operations, Quality & IT (Automated Screen Checks & Standard Internal Apps)**
+   - Record routine pre-release website/app checks by clicking—with zero coding—and automatically adapt when screens or button positions change (`SyncETA`).
+   - Launch or modernize internal management systems faster using ready-made sign-in, organization-linked menu/button permissions, electronic approvals, and audit trails (`SyncBoot`).
 
-### SyncBoot (Enterprise Back-Office Core Platform)
-- Product Page: https://boot.empasy.io/
-- Corporate Page: https://empasy.io/ko/solutions/sync-boot.html
-- Docs: https://doc.empasy.com/syncboot/
-- Role: Standard enterprise back-office core built on Spring Boot 4.0 and Java 25 with SSO, Org/Role/Menu/Button RBAC, electronic approval workflows, audit logs, and standard administrative screens.
+3. **Marketing & Commerce (Multilingual Websites & Pricing Safeguards)**
+   - Draft, review, inspect for search/accessibility/ad-compliance, and publish across multiple brand and regional websites from a single console (`SyncCMS`).
+   - Protect minimum product margins during bulk promotions and keep instant price rollback snapshots (`SyncShop`).
 
-### SyncCMS (Website & Multilingual Content Management)
-- Product Page: https://cms.empasy.io/
-- Corporate Page: https://empasy.io/ko/solutions/sync-cms.html
-- Docs: https://doc.empasy.com/synccms/
-- Role: Nuxt 3 SSR hybrid CMS supporting draft review workflows, pre-publication content inspection, and multilingual site publishing.
+4. **Project Operations (PMO) & Security Governance**
+   - Compare contracted project value against real staffing costs while tracking surety bond expiries, statutory payment deadlines, and R&D records (`SyncOps`).
+   - Discover undocumented system connections, block abnormal requests, mask response PII (`SyncAPIM`), aggregate global security advisories (`SyncWatch`), and collect clean public web data reliably (`SyncCrawl`).
 
-## Modular Extensions (7)
+## How Organizations Adopt Empasy (Start Small)
+- **Step 1 (1-2 Days)**: Workflow review and selection of 1 priority starting area aligned with company security rules.
+- **Step 2 (1-2 Weeks)**: Tailored pilot evaluation in a staging or isolated corporate server environment to verify real time savings.
+- **Step 3 (Staged Expansion)**: Safe rollout, team onboarding, and optional connection of additional modules sharing the same sign-in and permission foundation.
+- **Safety Guarantees**: Human review before critical changes, automatic pre-change snapshots for instant rollback, and full support for private/air-gapped internal networks.
 
-### Data & AI (3)
-- **SyncInsight** (https://insight.empasy.io/ | https://doc.empasy.com/syncinsight/): Read-only natural-language data query (NL2SQL) and analytical reporting within enterprise access permissions.
-- **SyncLLM** (https://llm.empasy.io/ | https://doc.empasy.com/syncllm/): Multi-LLM gateway supporting departmental token budget controls, `pgvector` semantic caching, PII masking, and local model routing (vLLM, Ollama).
-- **SyncCrawl** (https://crawl.empasy.io/ | https://doc.empasy.com/synccrawl/): Scheduled web data extraction with layout-change resilience, `robots.txt` compliance, and structured vector/database outputs.
+## Product Directory (4 Core Areas + 7 Modular Extensions)
 
-### Security & Governance (2)
-- **SyncAPIM** (https://apim.empasy.io/ | https://doc.empasy.com/syncapim/): API inventory tracking, contract drift inspection, security policy monitoring, and response PII protection.
-- **SyncWatch** (https://watch.empasy.io/ | https://doc.empasy.com/syncwatch/): Security vulnerability feed aggregation (NVD CVE, CISA KEV, OSV, KISA) and rule distribution for SyncVerse and SyncAPIM.
+### 4 Core Areas
+- **Collaboration & Staged Approval Hub (`SyncVerse`)**: https://verse.empasy.io/ | Docs: https://doc.empasy.com/syncverse/
+- **Click-Based Automated Screen Checks (`SyncETA`)**: https://eta.empasy.io/ | Desktop App: https://empasy.io/ko/download_eta.html | Docs: https://doc.empasy.com/synceta/
+- **Standard Internal Management System Core (`SyncBoot`)**: https://boot.empasy.io/ | Docs: https://doc.empasy.com/syncboot/
+- **Unified Multilingual Website Management (`SyncCMS`)**: https://cms.empasy.io/ | Docs: https://doc.empasy.com/synccms/
 
-### Operations & Commerce (2)
-- **SyncShop** (https://shop.empasy.io/ | https://doc.empasy.com/syncshop/): 8-service distributed microservices (MSA) e-commerce platform with margin-aware pricing controls, order/settlement operations, and semantic product search.
-- **SyncOps** (https://ops.empasy.io/ | https://doc.empasy.com/syncops/): Enterprise SI PMO platform supporting contract vs. actual cost P&L tracking, KOSA engineer grade management, surety bond tracking, and electronic R&D lab notebooks.
+### 7 Modular Extensions
+- **Plain-Language Data Lookup (`SyncInsight`)**: https://insight.empasy.io/ | Docs: https://doc.empasy.com/syncinsight/
+- **Corporate AI Cost & Privacy Control (`SyncLLM`)**: https://llm.empasy.io/ | Docs: https://doc.empasy.com/syncllm/
+- **Automated Public Web Data Collection (`SyncCrawl`)**: https://crawl.empasy.io/ | Docs: https://doc.empasy.com/synccrawl/
+- **System Integration Visibility & Defense (`SyncAPIM`)**: https://apim.empasy.io/ | Docs: https://doc.empasy.com/syncapim/
+- **Security Advisory & Policy Tracking (`SyncWatch`)**: https://watch.empasy.io/ | Docs: https://doc.empasy.com/syncwatch/
+- **Commerce Margin & Price Protection (`SyncShop`)**: https://shop.empasy.io/ | Docs: https://doc.empasy.com/syncshop/
+- **Project Profitability & Deadline Tracking (`SyncOps`)**: https://ops.empasy.io/ | Docs: https://doc.empasy.com/syncops/
 
-## Deployment & Security
-- Deployments: On-premise servers, isolated internal networks (air-gapped), and dedicated VPC environments (AWS, Azure, GCP).
-- Local LLMs: Compatible with local runtimes including vLLM, Ollama, TGI, and OpenAI-compatible endpoints.
-- Governance: Role-based access control, PII masking, and full execution audit logs.
+## Technical Architecture Summary (For IT & Engineering Teams)
+- **Shared Core Stack**: Java 25, Spring Boot 4.0, PostgreSQL 18.6 (`pgvector`), Vue 3, Nuxt 3 SSR, Playwright execution engine.
+- **Deployment Options**: On-premise servers, air-gapped internal networks, and dedicated VPCs (AWS, Azure, GCP).
+- **Local & Multi-Model AI Compatibility**: Compatible with local runtimes (vLLM, Ollama, TGI) and OpenAI-compatible endpoints with standard MCP/A2A integration protocols.
+- **Governance Controls**: Human-in-the-Loop (HITL) approval gates, Org/Role/Menu/Button RBAC, PII masking, emergency stop controls, and full audit trails.
 
-## Official Resources
-- Website: https://empasy.io
-- Integrated Live Demo Portal: https://sync.empasy.io
-- Documentation Hub: https://doc.empasy.com
-- Master Brochure PDF: https://empasy.io/downloads/proposals/SyncSeries_Brochure_v1.0.pdf
-- Business Proposal PDF: https://empasy.io/downloads/proposals/SyncSeries_Master_Proposal.pdf
-- GitHub: https://github.com/DramaticCollaboration/
-- Contact: poh@empasy.com
-- Venture Enterprise Certification: Certified Venture Enterprise - Innovative Growth Type (혁신성장유형 벤처기업 확인, Cert. No. 20261111030084, Valid 2026-11-11 ~ 2029-11-10, Business Reg. 547-81-03408)
+## Official Resources & Corporate Credentials
+- Website (30-Second Solution Finder & Role Guides): https://empasy.io
+- Public Live Demo Portal (No Registration Required): https://sync.empasy.io
+- Engineering Documentation Hub: https://doc.empasy.com
+- Executive Summary Brochure PDF: https://empasy.io/downloads/proposals/SyncSeries_Brochure_v1.0.pdf
+- Master Business Proposal PDF: https://empasy.io/downloads/proposals/SyncSeries_Master_Proposal.pdf
+- Contact: poh@empasy.com | +82-507-1360-8169
+- Venture Enterprise Certification: Innovative Growth Type (혁신성장유형 벤처기업 확인, Cert. No. 20261111030084, Valid 2026-11-11 ~ 2029-11-10, Business Reg. 547-81-03408)
 - Headquarters: 2F #208, 205-27 Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea

@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -16,50 +37,38 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
     <!-- End Google Tag Manager -->
-    <title>Empasy | Syncinsight on premise decision intelligence architecture</title>
-    <meta name="description" content="SyncInsightは分散したデータを統合分析するAIベースのBIプラットフォームです。経営意思決定のためのデータ可視性を確保します。">
-    <meta name="keywords" content="エンタープライズAIエコシステム, 企業用AI統合プラットフォーム, DX AIアーキテクチャ, Empasy, マルチサービスデータ分析, エンタープライズデータ可視性, AIビジネスインテリジェンスBI, データインサイト">
-    <meta property="og:title" content="Empasy | Syncinsight on premise decision intelligence architecture">
-    <meta property="og:description" content="SyncInsightは分散したデータを統合分析するAIベースのBIプラットフォームです。経営意思決定のためのデータ可視性を確保します。">
-    <meta property="og:type" content="website">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Empasy">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Empasy 技術ブログ",
-      "url": "https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html",
-      "description": "エンタープライズAIエージェントおよびAIOpsに関する最新技術インサイト",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Empasy",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.io/empasy-logo.png"
-        }
-      }
-    }
-    </script>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-    <!-- SEO & AIO Tags -->
-    
-    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <title>社内閉域環境を守りながら経営データを照会する：SyncInsight 活用ガイド | Empasy</title>
+    <meta name="description" content="オンプレミス閉域配置、Apache Calcite・JSqlParserによるSELECT専用NL2SQL制御、3重ハイブリッドRAG、マルチエージェント分析を備えたSyncInsight設計。">
+    <meta name="keywords" content="SyncInsight, オンプレミスBI, 読み取り専用NL2SQL, ハイブリッドRAG, 閉域AIデータ分析, マルチエージェント分析, Empasy">
+    <meta name="author" content="株式会社Empasy (Empasy Inc.)">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <meta property="og:title" content="社内閉域環境を守りながら経営データを照会する：SyncInsight 活用ガイド | Empasy">
+    <meta property="og:description" content="オンプレミス閉域配置、Apache Calcite・JSqlParserによるSELECT専用NL2SQL制御、3重ハイブリッドRAG、マルチエージェント分析を備えたSyncInsight設計。">
+    <meta property="og:type" content="article">
     <meta property="og:locale" content="ja_JP">
+    <meta property="og:url" content="https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-06-25">
+    <meta property="article:modified_time" content="2026-11-23">
+    <link rel="canonical" href="https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "[Tech Blog] オンプレミスセキュリティを貫く最高峰の意思決定知能：SyncInsightのマルチエージェント交差分析アーキテクチャ",
-  "description": "社内閉域網環境でContext-Aware RAGとマルチエージェントを稼働させ、データ主権を守りながら経営インサイトを導出するSyncInsight。",
+  "headline": "社内閉域環境を守りながら経営データを照会する：SyncInsight 活用ガイド",
+  "description": "オンプレミス閉域配置、Apache Calcite・JSqlParserによるSELECT専用NL2SQL制御、3重ハイブリッドRAG、マルチエージェント分析を備えたSyncInsight設計。",
+  "datePublished": "2026-06-25",
+  "dateModified": "2026-11-23",
+  "inLanguage": "ja",
   "author": {
     "@type": "Organization",
     "name": "Empasy Engineering Team",
@@ -67,33 +76,25 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Empasy",
+    "name": "株式会社Empasy (Empasy Inc.)",
     "logo": {
       "@type": "ImageObject",
       "url": "https://empasy.io/empasy-logo.png"
     }
   },
+  "image": "https://empasy.io/empasy-logo.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html"
+  },
   "url": "https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html"
 }
     </script>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- SEO & AIO Tags -->
-    
-    
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
-    <meta property="og:url" content="https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html">
-  <script type="module" crossorigin src="/assets/i18n-3nk6-OFj.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/style-BWlNIJrj.css">
+  <script type="module" crossorigin src="/assets/modulepreload-polyfill-Dezn_h7o.js"></script>
+  <script type="module" crossorigin src="/assets/i18n-CC8j1T6V.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-BgRDHG71.css">
 </head>
 <body>
-
-    <!-- Header Navigation -->
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -117,20 +118,26 @@
             </button>
             <nav id="emp-nav-links" class="nav-links" aria-label="主要メニュー">
                 <div class="dropdown">
-                    <a href="/ja/pages/index.html#solutions" class="dropbtn">ソリューション
+                    <a href="/ja/pages/index.html#roles" class="dropbtn">ソリューション
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </a>
-                    <div class="dropdown-content" style="min-width: 270px;">
-                        <span class="dropdown-group-heading">主力ソリューション 4種</span>
-                        <a href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · 協業・承認統合管理</a>
-                        <a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · 自動テスト・PCアプリ</a>
-                        <a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · 業務システム基盤</a>
-                        <a href="https://cms.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · Web・多言語サイト管理</a>
-                        <span class="dropdown-group-heading">目的別拡張モジュール</span>
-                        <a href="/ja/pages/index.html#modules">データ・セキュリティ・業務拡張 (7種)</a>
+                    <div class="dropdown-content" style="min-width: 280px;">
+                        <span class="dropdown-group-heading">クイック案内</span>
+                        <a href="/ja/pages/index.html#finder"><strong>30秒 最適構成診断</strong> · 3問で提案</a>
+                        <a href="/ja/pages/index.html#roles"><strong>業務課題から探す</strong> · 部門・役割別</a>
+                        <span class="dropdown-group-heading">中核4領域</span>
+                        <a href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>協業・承認統合管理</strong> · SyncVerse</a>
+                        <a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>画面自動点検</strong> · SyncETA</a>
+                        <a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>社内管理システム基盤</strong> · SyncBoot</a>
+                        <a href="https://cms.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>Web・多言語サイト管理</strong> · SyncCMS</a>
+                        <span class="dropdown-group-heading">拡張領域・IT資料</span>
+                        <a href="/ja/pages/index.html#modules">データ照会・AI費用・セキュリティ・事業運営 (7種)</a>
+                        <a href="/ja/download_eta.html">SyncETA PCアプリ入手</a>
+                        <a href="https://doc.empasy.com/ja/" target="_blank" rel="noopener noreferrer">IT・開発者向け技術文書 &#8599;</a>
                     </div>
                 </div>
     
+                <a href="/ja/pages/index.html#finder">30秒診断</a>
                 <a href="/ja/pages/clients.html">導入事例</a>
     
                 <div class="dropdown">
@@ -146,8 +153,7 @@
                     </div>
                 </div>
     
-                <a href="https://doc.empasy.com/ja/" target="_blank" rel="noopener noreferrer">技術文書 &#8599;</a>
-                <a href="https://sync.empasy.io/ja/" target="_blank" rel="noopener noreferrer">統合デモ &#8599;</a>
+                <a href="https://sync.empasy.io/ja/" target="_blank" rel="noopener noreferrer">画面体験 &#8599;</a>
             </nav>
             <div class="nav-actions">
                 <div class="lang-switch" role="navigation" aria-label="言語切替">
@@ -155,7 +161,6 @@
                     <a href="/en/pages/index.html" data-lang="en">EN</a>
                     <a href="/ja/pages/index.html" data-lang="ja" class="active" aria-current="page">JA</a>
                 </div>
-                <a href="/ja/download_eta.html" class="btn btn-outline btn-sm">SyncETA 入手</a>
                 <a href="/ja/pages/contact.html" class="btn btn-primary btn-sm">お問い合わせ</a>
             </div>
         </div>
@@ -247,85 +252,119 @@
     })();
     </script>
 
-    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
-        <!-- Compact Breadcrumb / Back Link -->
-        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
-            <a href="../../ja/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
-                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
-                <span>Tech Blog一覧へ</span>
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/ja/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Empasy インサイト一覧へ</span>
             </a>
-            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
+            <span class="badge" style="margin-bottom: 0;">意思決定支援・SyncInsight</span>
         </div>
-        
-        <section style="padding: 0;">
-            <div class="container" style="padding: 0;">
-                ﻿<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-    <div style="line-height: 1.8; color: var(--text-primary);">
-                    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.2rem; color: var(--text-secondary); font-size: 0.9rem; flex-wrap: wrap;">
-                        <span>2026-06-25</span>
-                        <span>&bull;</span>
-                        <span>所要時間 約7分</span>
-                        <span>&bull;</span>
-                        <span style="color: var(--primary-color); font-weight: 600;">Security & Decision Intelligence</span>
-                    </div>
 
-                    <h1 style="font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.35; margin-bottom: 1.8rem; color: var(--text-primary);">オンプレミスセキュリティを貫く最高峰の意思決定知能：SyncInsightのマルチエージェント交差分析アーキテクチャ</h1>
-
-        <p>企業内部のERP、グループウェア、社内Wiki、そして市場動向データなどの高付加価値情報は、企業のコア資産です。しかし、これらのデータを分析して戦略を導き出すために、パブリッククラウドベースの大型LLMサービスを無差別に利用すると、機密の企業秘密や個人情報が外部に流出するという深刻なセキュリティ規制リスクに直面します。また、膨大なデータが部門別のシステムに徹底的に隔離(Silo)されているため、統合的な洞察を導き出すのが難しいという限界がありました。</p>
-        <p>Empasyの<strong>SyncInsight</strong>は、単なるITインフラの自動化段階を超えて、企業内部資産の完璧な知識化と最高経営陣(C-Level)の戦略的ビジネスアクションを主導する<strong>最上位のAI意思決定インテリジェンスプラットフォーム</strong>です。本記事では、社内セキュリティを完全に守りながら、断片化されたデータから強力なビジネスインサイトを導き出すSyncInsightのコア技術アーキテクチャを共有します。</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. 100%社内網内在化ベースのハイブリッドオンプレミスアーキテクチャ</h2>
-        <p>SyncInsightは、データ流出リスクを根本から遮断するため、データリポジトリから大規模言語モデル(LLM)のサービングサーバー環境の全構成を、<strong>完全な社内プライベートネットワーク(Intranet)</strong>または専用の隔離ハイブリッドゾーン内にのみ構築します。</p>
-        <p>外部クラウドへの転送経路を物理的・論理的に完全に遮断することで、金融、公共、先端製造分野などの最も厳格な水準の個人情報保護法および国家セキュリティ規制要件を100%満たす強力なデータ主権(Data Sovereignty)を保証します。</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. Context-Aware Advanced RAG 技術レイヤー</h2>
-        <p>単純なキーワードマッチング形式の埋め込み検索エンジンでは、複雑な企業文書の文脈を把握するのに限界があります。SyncInsightは、<strong>AgentScope Java 2.0.2およびsync-module-ragテクノロジースタックに基づくエンタープライズアーキテクチャ</strong>を精密に適用し、文書全体の深い文脈的意味を把握する<strong>Context-Aware RAGパイプライン</strong>を稼働させます。</p>
-        <p>社内Wiki、グループウェア、ERPデータはもちろん、<strong>SyncCrawl Agent</strong>が収集した外部のリアルタイム市場トレンド情報まで、異機種間で断片化された大規模な非構造化データをリアルタイムで交差埋め込み(Cross-Embedding)します。これにより、生成型AIの致命的な限界であるハルシネーション(Hallucination)現象が完全に制御された超高品質の知識データハブを恒久的に構築します。</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. Multi-Agent Orchestration Loopを通じた戦略的自律分析</h2>
-        <p>SyncInsightの内部では、自ら役割を分担し協業するインテリジェントな仮想専任チームが稼働します。</p>
-        <div class="modern-pipeline">
-          <div class="pipeline-step">
-            <div class="pipeline-title">収集エージェント (Collector)</div>
-            <div class="pipeline-desc">異機種データの収集</div>
-          </div><div class="pipeline-arrow">&rarr;</div>
-          <div class="pipeline-step">
-            <div class="pipeline-title">統計分析エージェント (Analyst)</div>
-            <div class="pipeline-desc">Pythonベースのビッグデータ分析</div>
-          </div><div class="pipeline-arrow">&rarr;</div>
-          <div class="pipeline-step">
-            <div class="pipeline-title">レポート生成エージェント (Reporter)</div>
-            <div class="pipeline-desc">SWOTおよび戦略レポートの生成</div>
-          </div>
-        </div>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Collector Agent:</strong> 内部システムの構造化データと外部市場指標をリアルタイムでクロールおよび収集します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Analyst Agent:</strong> 収集した生データ(Raw Data)に基づいてサンドボックス環境でPythonスクリプトを自律実行し、大容量の統計分析と傾向予測を実行します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Reporter Agent:</strong> 分析結果を精製し、最高意思決定権者がすぐに把握できる形式の視覚化チャートとSWOT戦略分析レポート文書を数分以内に自動作成します。</li>
-        </ul>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">4. ビジネスアクションの提案とSyncVerseフィードバック連動 (Human-in-the-loop)</h2>
-        <p>SyncInsightは、単に静的なレポートを表示する段階にとどまらず、システムレイヤー間の有機的なフィードバックループを完成させます。</p>
-        <p>社内外のデータの交差分析中に危機の兆候や新規市場の機会が導き出された場合、経営陣に「特定のマーケティングプロモーションページの新設およびターゲット電子メールクロールパイプラインの稼働」といった具体的な戦略アクションを先に提案します。経営陣がシステム内でこれを承認(Human-in-the-loop 1-Click承認)すると即座に、最上位の頭脳であるSyncInsightは、下位の実行主体である<strong>SyncVerseの自律開発・デプロイベルトにコマンドプロトコルを直接送信</strong>し、システム画面に即座にリアルタイム反映させる完全な自動化意思決定シナジーを達成します。</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <p>SyncInsightは、企業のセキュリティガイドラインを完全に遵守しながら、断片化されたビジネスデータをリアルタイムの経営資産に変換するAIソリューションの頂点です。データの収集と分析、そして実際のシステム適用まで空白なく繋がるEmpasy独自の自律運用インテリジェンスを通じて、企業のデジタルトランスフォーメーション(DX)をさらに高い段階へと導きます。</p>
-    </div>
-</article>
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-06-25 (更新 2026-11-23)</span>
+                <span>&bull;</span>
+                <span>読了目安 約7分</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">セキュリティ・データ照会</span>
             </div>
-        </section>
+
+            <h1 class="ed-blog-title">社内閉域環境を守りながら経営データを照会する：SyncInsight 活用ガイド</h1>
+
+            <div class="ed-exec-summary" aria-label="経営層・現場担当者のための3行要約">
+                <div class="ed-exec-summary-kicker">経営層・現場担当者のための3行要約</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">従来の課題</span><span>外部クラウド送信が禁止された閉域環境では、経営層や現場が数値を即座に確認できず、毎回IT部門へデータ抽出を依頼する必要があります。</span></li>
+                    <li><span class="ed-exec-summary-tag">解決アプローチ</span><span>SyncInsightは社内サーバー内で日常の日本語質問を受け付け、SELECT専用NL2SQL制御とハイブリッドRAGで安全に表・グラフ・要因要約を返します。</span></li>
+                    <li><span class="ed-exec-summary-tag">導入効果</span><span>機密データ流出の不安なく意思決定を高速化し、承認された施策のみをSyncVerseの実行フローへ連携できます。</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">自社の業務フローにそのまま適用できるか確認してみませんか？</span>
+                    <a href="/ja/pages/contact.html?topics=data-ai" class="btn btn-primary btn-sm" style="min-height: 36px;">導入相談を申し込む</a>
+                </div>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>IT担当者・開発者向けの詳細技術解説</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="この記事の目次">
+  <div class="ed-article-toc-title">この記事の目次</div>
+  <ol>
+    <li><a href="#sec-1">1. オンプレミス・閉域網優先のセキュリティ構成</a></li>
+    <li><a href="#sec-2">2. 読み取り専用NL2SQLファイアウォールと3重ハイブリッドRAG</a></li>
+    <li><a href="#sec-3">3. マルチエージェント横断分析パイプライン</a></li>
+    <li><a href="#sec-4">4. 担当者承認を経たSyncVerse実行連携（HITL）</a></li>
+  </ol>
+</nav>
+<p>ERP、社内Wiki、精算DB、外部市場指標などの重要データは部門ごとに分断されがちです。しかしセキュリティ規定上、生データを外部クラウドAIへ渡せないため、現場は毎回IT部門にSQL抽出を依頼する状態が続いています。</p>
+<p>Empasyの<a href="https://insight.empasy.io/" target="_blank" rel="noopener noreferrer">SyncInsight</a>は、社内サーバーや専用VPC内で構造化DBと非定型文書を安全に横断分析し、出典付きの表・グラフ・要約を提供します。</p>
+
+<h2 id="sec-1">1. オンプレミス・閉域網優先のセキュリティ構成</h2>
+<p>PostgreSQL 18.6 <code>pgvector</code>とローカルLLMランタイム（vLLM、Ollama等）を社内閉域網内に配置できるため、外部ネットワークへ原本データを持ち出さずに運用できます。</p>
+
+<h2 id="sec-2">2. 読み取り専用NL2SQLファイアウォールと3重ハイブリッドRAG</h2>
+<ul>
+  <li><strong>Apache Calcite + JSqlParserによるSELECT専用制御（<code>sync-module-nl2sql</code>）：</strong>生成されたSQLの構文木を検証し、<code>INSERT</code>・<code>UPDATE</code>・<code>DELETE</code>・<code>DROP</code>などの更新系命令をすべて遮断し、認可されたテーブルの参照のみ許可します。</li>
+  <li><strong>3重ハイブリッドRAG（<code>sync-module-rag</code>）：</strong>社内文書とSyncCrawlで整形した外部市場情報を<code>pgvector</code>＋BM25＋ナレッジグラフで横断検索し、根拠出典とともに提示します。</li>
+</ul>
+
+<h2 id="sec-3">3. マルチエージェント横断分析パイプライン</h2>
+
+<div class="modern-pipeline">
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 01</div>
+    <div class="pipeline-title">収集エージェント (Collector)</div>
+    <div class="pipeline-desc">認可範囲内のNL2SQL参照と社内外RAG根拠データを収集</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 02</div>
+    <div class="pipeline-title">分析エージェント (Analyst)</div>
+    <div class="pipeline-desc">指標変動の要因分解・異常値検証・時系列比較を実施</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 03</div>
+    <div class="pipeline-title">レポートエージェント (Reporter)</div>
+    <div class="pipeline-desc">出典付きの表・グラフおよび経営向け要点レポートを生成</div>
+  </div>
+</div>
+
+<h2 id="sec-4">4. 担当者承認を経たSyncVerse実行連携（HITL）</h2>
+<p>SyncInsightは<strong>SyncVerse管理コンソール（<code>/analytics/*</code>）</strong>と統合されており、分析から導き出された改善提案を責任者が確認・承認した場合にのみ、下位モジュールへの実行タスクとして安全に引き継がれます。</p>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>閉域環境で使える安全なデータ照会をご確認ください</strong>
+                <span>NL2SQL安全制御とマルチエージェント分析の詳細はSyncInsight公式サイトでご覧いただけます。</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="https://insight.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SyncInsight を見る &#8599;</a>
+                <a href="/ja/pages/contact.html?topics=data-ai" class="btn btn-outline btn-sm">導入相談</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="あわせて読みたいインサイト">
+        <h2 class="ed-related-heading">あわせて読みたいインサイト</h2>
+        <div class="ed-related-grid">
+        <a href="/ja/blog/enterprise-data-pipeline-automation.html" class="ed-related-card">
+            <span class="ed-related-cat">データ整理・保護</span>
+            <span class="ed-related-title">セキュリティ基準を守りながら非定型業務データを自動整理した導入事例</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        <a href="/ja/blog/syncllm-cost-optimization-semantic-cache-gateway.html" class="ed-related-card">
+            <span class="ed-related-cat">AI費用・保護</span>
+            <span class="ed-related-title">社内AI利用コストの削減と個人情報保護：SyncLLM 統合管理ガイド</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        </div>
+    </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 36px; padding-bottom: 36px; border-bottom: 1px solid #e2e8f0;" class="emp-footer-grid">
@@ -334,16 +373,16 @@
                         <img src="/images/logo.svg" alt="EMPASY" style="height: 22px; width: auto; margin-bottom: 14px;">
                     </a>
                     <p style="font-size: 14px; line-height: 1.7; color: #475569; max-width: 320px;">
-                        検証済みの共通基盤の上で、企業の開発・テスト・運用業務を支える実務向けソフトウェアを提供しています。
+                        繰り返される企業業務を自動化し、重要な判断は担当者の承認を経て安全に反映する実務向けソフトウェアを提供しています。
                     </p>
                 </div>
                 <div>
-                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">主力ソリューション</h4>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">中核業務領域</h4>
                     <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
-                        <li><a href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer">SyncVerse</a></li>
-                        <li><a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer">SyncETA</a></li>
-                        <li><a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer">SyncBoot</a></li>
-                        <li><a href="https://cms.empasy.io/ja/" target="_blank" rel="noopener noreferrer">SyncCMS</a></li>
+                        <li><a href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer">協業・承認管理 (SyncVerse)</a></li>
+                        <li><a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer">画面自動点検 (SyncETA)</a></li>
+                        <li><a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer">社内管理システム (SyncBoot)</a></li>
+                        <li><a href="https://cms.empasy.io/ja/" target="_blank" rel="noopener noreferrer">Web・多言語管理 (SyncCMS)</a></li>
                     </ul>
                 </div>
                 <div>
@@ -386,6 +425,5 @@
         </style>
     </footer>
 
-    <!-- Scripts -->
 </body>
 </html>

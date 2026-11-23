@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -16,50 +37,38 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
     <!-- End Google Tag Manager -->
-    <title>온프레미스 보안을 관통하는 최상위 의사결정 지능: SyncInsight의 멀티 에이전트 교차 분석 아키텍처 | 엠파시(Empasy)</title>
-    <meta name="description" content="SyncInsight는 흩어진 서비스 데이터를 하나로 모아 분석하는 AI 기반 비즈니스 인텔리전스(BI) 플랫폼입니다. 엔터프라이즈 경영 의사결정을 위한 가시성을 확보하세요.">
-    <meta name="keywords" content="엔터프라이즈 AI 에코시스템, 기업용 AI 통합 플랫폼, 디지털 전환 AI 아키텍처, 엠파시, Empasy, 멀티 서비스 데이터 통합 분석 툴, 엔터프라이즈 데이터 가시성 솔루션, AI 기반 비즈니스 인텔리전스 BI 플랫폼, 경영 의사결정 데이터 인사이트 플랫폼">
-    <meta property="og:title" content="온프레미스 보안을 관통하는 최상위 의사결정 지능: SyncInsight의 멀티 에이전트 교차 분석 아키텍처 | 엠파시(Empasy)">
-    <meta property="og:description" content="SyncInsight는 흩어진 서비스 데이터를 하나로 모아 분석하는 AI 기반 비즈니스 인텔리전스(BI) 플랫폼입니다. 엔터프라이즈 경영 의사결정을 위한 가시성을 확보하세요.">
-    <meta property="og:type" content="website">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Empasy">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "엠파시(Empasy) 기술 블로그",
-      "url": "https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html",
-      "description": "엔터프라이즈 AI 에이전트 및 AI Ops 관련 최신 기술 인사이트",
-      "publisher": {
-        "@type": "Organization",
-        "name": "엠파시(Empasy)",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.io/empasy-logo.png"
-        }
-      }
-    }
-    </script>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-    <!-- SEO & AIO Tags -->
-    
-    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <title>사내 보안 환경을 지키는 경영 데이터 조회: SyncInsight 안전 분석 가이드 | 엠파시(Empasy)</title>
+    <meta name="description" content="온프레미스·폐쇄망 우선 배치, Apache Calcite·JSqlParser 기반 SELECT-Only NL2SQL 방화벽, 3중 하이브리드 RAG, 멀티 에이전트 교차 분석을 제공하는 SyncInsight 아키텍처.">
+    <meta name="keywords" content="SyncInsight, 온프레미스 AI BI, NL2SQL 방화벽, SELECT-Only SQL, 사내 보안 데이터 분석, 하이브리드 RAG, 멀티 에이전트 분석, 엠파시">
+    <meta name="author" content="주식회사 엠파시 (Empasy)">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <meta property="og:title" content="사내 보안 환경을 지키는 경영 데이터 조회: SyncInsight 안전 분석 가이드 | 엠파시(Empasy)">
+    <meta property="og:description" content="온프레미스·폐쇄망 우선 배치, Apache Calcite·JSqlParser 기반 SELECT-Only NL2SQL 방화벽, 3중 하이브리드 RAG, 멀티 에이전트 교차 분석을 제공하는 SyncInsight 아키텍처.">
+    <meta property="og:type" content="article">
     <meta property="og:locale" content="ko_KR">
+    <meta property="og:url" content="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-06-25">
+    <meta property="article:modified_time" content="2026-11-23">
+    <link rel="canonical" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "온프레미스 보안을 관통하는 최상위 의사결정 지능: SyncInsight의 멀티 에이전트 교차 분석 아키텍처",
-  "description": "사내 폐쇄망 환경에서 Context-Aware RAG와 멀티 에이전트를 가동하여 데이터 주권을 지키며 경영 인사이트를 도출하는 SyncInsight.",
+  "headline": "사내 보안 환경을 지키는 경영 데이터 조회: SyncInsight 안전 분석 가이드",
+  "description": "온프레미스·폐쇄망 우선 배치, Apache Calcite·JSqlParser 기반 SELECT-Only NL2SQL 방화벽, 3중 하이브리드 RAG, 멀티 에이전트 교차 분석을 제공하는 SyncInsight 아키텍처.",
+  "datePublished": "2026-06-25",
+  "dateModified": "2026-11-23",
+  "inLanguage": "ko",
   "author": {
     "@type": "Organization",
     "name": "Empasy Engineering Team",
@@ -67,33 +76,25 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Empasy",
+    "name": "주식회사 엠파시 (Empasy)",
     "logo": {
       "@type": "ImageObject",
       "url": "https://empasy.io/empasy-logo.png"
     }
   },
+  "image": "https://empasy.io/empasy-logo.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html"
+  },
   "url": "https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html"
 }
     </script>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- SEO & AIO Tags -->
-    
-    
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
-    <meta property="og:url" content="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html">
-  <script type="module" crossorigin src="/assets/i18n-3nk6-OFj.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/style-BWlNIJrj.css">
+  <script type="module" crossorigin src="/assets/modulepreload-polyfill-Dezn_h7o.js"></script>
+  <script type="module" crossorigin src="/assets/i18n-CC8j1T6V.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-BgRDHG71.css">
 </head>
 <body>
-
-    <!-- Header Navigation -->
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -117,20 +118,26 @@
             </button>
             <nav id="emp-nav-links" class="nav-links" aria-label="주요 메뉴">
                 <div class="dropdown">
-                    <a href="/#solutions" class="dropbtn">솔루션
+                    <a href="/#roles" class="dropbtn">솔루션
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </a>
-                    <div class="dropdown-content" style="min-width: 260px;">
-                        <span class="dropdown-group-heading">주력 솔루션 4종</span>
-                        <a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · 협업·승인 통합 관리</a>
-                        <a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · 자동 테스트 · PC 앱</a>
-                        <a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · 업무 시스템 기반</a>
-                        <a href="https://cms.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · 웹사이트·다국어 관리</a>
-                        <span class="dropdown-group-heading">목적별 확장 모듈</span>
-                        <a href="/#modules">데이터·AI · 보안 · 업무 확장 (7종)</a>
+                    <div class="dropdown-content" style="min-width: 280px;">
+                        <span class="dropdown-group-heading">빠른 안내</span>
+                        <a href="/#finder"><strong>30초 맞춤 솔루션 찾기</strong> · 3문항 추천</a>
+                        <a href="/#roles"><strong>업무 고민별 안내</strong> · 부서·역할별 보기</a>
+                        <span class="dropdown-group-heading">핵심 업무 영역 4종</span>
+                        <a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>협업·승인 통합 관리</strong> · SyncVerse</a>
+                        <a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>자동 화면 점검</strong> · SyncETA</a>
+                        <a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>사내 관리 시스템 기반</strong> · SyncBoot</a>
+                        <a href="https://cms.empasy.io/" target="_blank" rel="noopener noreferrer"><strong>웹사이트·다국어 관리</strong> · SyncCMS</a>
+                        <span class="dropdown-group-heading">확장 영역 및 IT 자료</span>
+                        <a href="/#modules">데이터 조회·AI 비용·보안·사업운영 (7종)</a>
+                        <a href="/ko/download_eta.html">SyncETA PC 앱 다운로드</a>
+                        <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer">IT·개발자 기술 문서 &#8599;</a>
                     </div>
                 </div>
     
+                <a href="/#finder">맞춤 찾기</a>
                 <a href="/ko/pages/clients.html">고객 사례</a>
     
                 <div class="dropdown">
@@ -146,8 +153,7 @@
                     </div>
                 </div>
     
-                <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer">기술 문서 &#8599;</a>
-                <a href="https://sync.empasy.io/" target="_blank" rel="noopener noreferrer">통합 데모 &#8599;</a>
+                <a href="https://sync.empasy.io/" target="_blank" rel="noopener noreferrer">화면 체험 &#8599;</a>
             </nav>
             <div class="nav-actions">
                 <div class="lang-switch" role="navigation" aria-label="언어 선택">
@@ -155,7 +161,6 @@
                     <a href="/en/pages/index.html" data-lang="en">EN</a>
                     <a href="/ja/pages/index.html" data-lang="ja">JA</a>
                 </div>
-                <a href="/ko/download_eta.html" class="btn btn-outline btn-sm">SyncETA 다운로드</a>
                 <a href="/ko/pages/contact.html" class="btn btn-primary btn-sm">도입 문의</a>
             </div>
         </div>
@@ -247,84 +252,127 @@
     })();
     </script>
 
-    <main class="container" style="padding-top: 100px; padding-bottom: 4rem; min-height: 80vh;">
-        <!-- Compact Breadcrumb / Back Link -->
-        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
-            <a href="../../ko/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
-                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
-                <span>Tech Blog 목록으로</span>
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/ko/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>엠파시 인사이트 목록으로</span>
             </a>
-            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
+            <span class="badge" style="margin-bottom: 0;">Decision Intelligence · SyncInsight</span>
         </div>
-        
-        <section style="padding: 0;">
-            <div class="container" style="padding: 0;">
-                <article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-    <div style="line-height: 1.8; color: var(--text-primary);">
-                    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.2rem; color: var(--text-secondary); font-size: 0.9rem; flex-wrap: wrap;">
-                        <span>2026-06-25</span>
-                        <span>&bull;</span>
-                        <span>읽는 시간 약 7분</span>
-                        <span>&bull;</span>
-                        <span style="color: var(--primary-color); font-weight: 600;">Security & Decision Intelligence</span>
-                    </div>
 
-                    <h1 style="font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.35; margin-bottom: 1.8rem; color: var(--text-primary);">온프레미스 보안을 관통하는 최상위 의사결정 지능: SyncInsight의 멀티 에이전트 교차 분석 아키텍처</h1>
-
-        <p>기업 내부의 ERP, 그룹웨어, 사내 Wiki, 그리고 마켓 동향 데이터 등 고부가가치 정보들은 기업의 핵심 자산입니다. 하지만 이러한 데이터들을 분석하고 전략 도출하기 위해 퍼블릭 클라우드 기반의 대형 LLM 서비스를 무분별하게 활용할 경우, 민감한 기업 기밀 및 개인정보가 외부로 유출되는 심각한 보안 규제 리스크에 직면하게 됩니다. 또한, 수많은 데이터가 부서별 시스템에 철저히 격리(Silo)되어 있어 통합적인 인사이트를 도출하기 어렵다는 한계가 존재했습니다.</p>
-        <p>엠파시의 <strong>SyncInsight</strong>는 단순한 IT 인프라 자동화 단계를 뛰어넘어, 기업 내부 자산의 고신뢰성 지식화와 최고경영진(C-Level)의 전략적 비즈니스 액션을 주도하는 <strong>최상위 AI 의사결정 지능 플랫폼</strong>입니다. 본 글에서는 사내 보안을 철저히 보호하면서도 파편화된 데이터로부터 강력한 비즈니스 인사이트를 도출하는 SyncInsight의 핵심 기술 아키텍처를 공유합니다.</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. 100% 사내망 내재화 기반의 하이브리드 온프레미스 아키텍처</h2>
-        <p>SyncInsight는 데이터 유출 리스크를 원천 차단하기 위해 데이터 저장소부터 거대 언어 모델(LLM) 서빙 서버 환경 전 구성을 <strong>완전한 사내 사설 내부망(Intranet)</strong> 혹은 전용 격리 하이브리드 존 내에만 구축합니다.</p>
-        <p>외부 클라우드로의 전송 통로를 물리적·논리적으로 완전 차단함으로써, 금융, 공공, 첨단 제조 분야 등 가장 엄격한 수준의 개인정보보호법 및 국가 보안 규제 요건을 엄격히 충족하는 강력한 데이터 주권(Data Sovereignty)을 보장합니다.</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. Context-Aware Advanced RAG 기술 레이어</h2>
-        <p>단순 키워드 매칭 형태의 임베딩 검색 엔진은 복잡한 기업 문서의 맥락을 파악하는 데 한계가 있습니다. SyncInsight는 <strong>AgentScope Java 2.0.2 및 sync-module-rag 기술 스택 기반의 엔터프라이즈 아키텍처</strong>를 정밀하게 적용하여 문서 전체의 깊은 문맥적 의미를 파악하는 <strong>Context-Aware RAG 파이프라인</strong>을 구동합니다.</p>
-        <p>사내 위키, 그룹웨어, ERP 데이터는 물론, <strong>SyncCrawl Agent</strong>가 수집한 외부 실시간 시장 트렌드 정보까지 이기종 간 파편화된 대규모 비정형 데이터를 실시간 교차 임베딩합니다. 이를 통해 생성형 AI의 치명적인 한계인 환각(Hallucination) 현상이 완전히 통제된 초고품질의 지식 데이터 허브를 영구적으로 구축합니다.</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. Multi-Agent Orchestration Loop를 통한 전략적 자율 분석</h2>
-        <p>SyncInsight 내부에서는 스스로 역할을 분담하고 협업하는 지능형 가상 전담 팀이 구동됩니다.</p>
-        <div class="modern-pipeline">
-  <div class="pipeline-step">
-    <div class="pipeline-title">수집 에이전트 (Collector)</div>
-    <div class="pipeline-desc">사내외 이기종 데이터 수집</div>
-  </div><div class="pipeline-arrow">&rarr;</div>
-  <div class="pipeline-step">
-    <div class="pipeline-title">통계 분석 에이전트 (Analyst)</div>
-    <div class="pipeline-desc">파이썬 기반 대용량 데이터 분석</div>
-  </div><div class="pipeline-arrow">&rarr;</div>
-  <div class="pipeline-step">
-    <div class="pipeline-title">보고서 생성 에이전트 (Reporter)</div>
-    <div class="pipeline-desc">SWOT 및 전략 리포트 시각화</div>
-  </div></div>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Collector Agent:</strong> 내부 시스템의 정형 데이터와 외부 시장 지표를 실시간으로 크롤링 및 수집합니다.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Analyst Agent:</strong> 수집된 원시 데이터(Raw Data)를 기반으로 샌드박스 환경에서 파이썬 스크립트를 자율 실행하여 대용량 통계 분석 및 추세 예측을 수행합니다.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Reporter Agent:</strong> 분석 결과를 정제하여 최고 의사결정권자가 즉시 파악할 수 있는 형태의 시각화 차트와 SWOT 전략 분석 리포트 문서를 수 분 내로 자동 작성합니다.</li>
-        </ul>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">4. 비즈니스 액션 제안 및 SyncVerse 피드백 연동 (Human-in-the-loop)</h2>
-        <p>SyncInsight는 단순히 정적인 보고서를 보여주는 단계에서 머무르지 않고, 시스템 레이어 간의 유기적인 피드백 루프를 완성합니다.</p>
-        <p>사내외 데이터 교차 분석 도중 위기 징후나 신규 시장 기회가 도출될 경우, 경영진에게 "특정 마케팅 프로모션 페이지 신설 및 타겟 이메일 크롤링 파이프라인 가동"과 같은 구체적인 전략 액션을 먼저 제안합니다. 경영진이 시스템 내에서 이를 승인(Human-in-the-loop 1-Click 승인)하는 즉시, 최상위 두뇌인 SyncInsight는 하위 실행 주체인 <strong>SyncVerse의 자율 개발·배포 벨트로 명령 프로토콜을 다이렉트 전송</strong>하여 시스템 화면에 즉각 실시간 반영시키는 완전 자동화 의사결정 시너지를 달성합니다.</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <p>SyncInsight는 기업의 보안 가이드라인을 철저하게 준수하면서 파편화된 비즈니스 데이터를 실시간 경영 자산으로 전환하는 AI 솔루션의 정점입니다. 데이터의 수집과 분석, 그리고 실제 시스템 적용까지 공백 없이 연결되는 엠파시만의 자율 운영 인텔리전스를 통해 기업의 디지털 전환(DX)을 한 차원 더 높은 단계로 이끌어 나가겠습니다.</p>
-    </div>
-</article>
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-06-25 (업데이트 2026-11-23)</span>
+                <span>&bull;</span>
+                <span>읽는 시간 약 7분</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">보안 · 경영 데이터 조회</span>
             </div>
-        </section>
+
+            <h1 class="ed-blog-title">사내 보안 환경을 지키는 경영 데이터 조회: SyncInsight 안전 분석 가이드</h1>
+
+            <div class="ed-exec-summary" aria-label="경영진 · 현업 담당자를 위한 3줄 요약">
+                <div class="ed-exec-summary-kicker">경영진 · 현업 담당자를 위한 3줄 요약</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">기존 문제</span><span>외부 클라우드 전송이 금지된 보안 환경에서는 경영진과 현업이 데이터를 바로 조회하기 어려워 매번 IT 부서에 추출을 요청해야 합니다.</span></li>
+                    <li><span class="ed-exec-summary-tag">해결 방식</span><span>외부와 차단된 사내 서버 안에서 일상 한국어로 질문하면 읽기 전용 NL2SQL 방화벽과 하이브리드 RAG로 안전하게 표·차트와 원인 요약을 제공합니다.</span></li>
+                    <li><span class="ed-exec-summary-tag">기대 효과</span><span>원본 데이터 유출 우려 없이 의사결정 속도를 높이고, 승인된 개선 과제만 SyncVerse 실행 흐름으로 안전하게 연계합니다.</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">우리 회사 업무에 바로 적용할 수 있을지 궁금하신가요?</span>
+                    <a href="/ko/pages/contact.html?topics=data-ai" class="btn btn-primary btn-sm" style="min-height: 36px;">맞춤 도입 상담</a>
+                </div>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>IT 담당자 · 개발자를 위한 상세 기술 내용 보기</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="이 글의 목차">
+  <div class="ed-article-toc-title">이 글의 목차</div>
+  <ol>
+    <li><a href="#sec-1">1. 사내망 내재화 우선(On-Premise First) 보안 아키텍처</a></li>
+    <li><a href="#sec-2">2. 읽기 전용 NL2SQL 방화벽 &amp; 3중 하이브리드 RAG</a></li>
+    <li><a href="#sec-3">3. 멀티 에이전트 교차 분석(Deep Research) 파이프라인</a></li>
+    <li><a href="#sec-4">4. 검토 · 승인 후 SyncVerse 실행 연계 (Human-in-the-Loop)</a></li>
+  </ol>
+</nav>
+<p>ERP, 그룹웨어, 사내 위키, 정산 DB, 외부 시장 지표 등 기업의 핵심 데이터는 부서별 시스템에 흩어져 있습니다. 경영진과 현업이 빠르게 현황을 파악하고 싶어도, 보안 규정상 민감한 데이터를 퍼블릭 클라우드 LLM에 직접 올릴 수 없어 매번 IT 부서에 SQL 추출과 엑셀 가공을 요청해야 하는 병목이 반복됩니다.</p>
+<p>엠파시의 의사결정 인텔리전스 엔진인 <a href="https://insight.empasy.io/" target="_blank" rel="noopener noreferrer">SyncInsight</a>는 사내 서버·전용 VPC 경계 내부에서 정형 DB와 비정형 문서를 안전하게 교차 분석하고, 표·차트·근거 인용이 포함된 리포트를 제공합니다.</p>
+
+<h2 id="sec-1">1. 사내망 내재화 우선(On-Premise First) 보안 아키텍처</h2>
+<p>SyncInsight는 데이터 저장소, 벡터 색인(PostgreSQL 18.6 <code>pgvector</code>), 로컬 LLM 서빙 환경(vLLM, Ollama 등)을 기업 내부 사설망이나 전용 격리 VPC 안에 배치할 수 있도록 설계되었습니다. 외부 클라우드로의 원본 전송 없이 금융·공공·제조 환경의 엄격한 내부 통제 기준에 맞춰 운영할 수 있습니다.</p>
+
+<h2 id="sec-2">2. 읽기 전용 NL2SQL 방화벽 &amp; 3중 하이브리드 RAG</h2>
+<p>자연어 질의를 실제 사내 데이터베이스에 연결할 때 가장 우려되는 지점은 잘못된 변경 쿼리 실행과 근거 없는 추측(환각)입니다. SyncInsight는 두 계층의 안전장치를 결합합니다.</p>
+<ul>
+  <li><strong>Apache Calcite + JSqlParser 기반 SELECT-Only 방화벽(<code>sync-module-nl2sql</code>):</strong> 생성된 SQL의 구문 트리를 파싱해 <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>DROP</code> 등 모든 쓰기·스키마 변경 구문을 실행 전 단계에서 차단하고, 허용된 테이블·컬럼 범위 내 읽기 전용 조회만 통과시킵니다.</li>
+  <li><strong>3중 하이브리드 RAG(<code>sync-module-rag</code>):</strong> 사내 위키·정책 문서와 <strong>SyncCrawl</strong>이 정제한 외부 시장 자료를 <code>pgvector</code>(의미 검색) + BM25(정확 키워드) + Knowledge Graph(관계 탐색)로 통합 색인해 근거 출처와 함께 응답합니다.</li>
+</ul>
+
+<h2 id="sec-3">3. 멀티 에이전트 교차 분석(Deep Research) 파이프라인</h2>
+<p>단순 단답형 조회를 넘어 원인 분석과 대안 비교가 필요한 경영 질문에는 역할이 분리된 3단계 분석 파이프라인이 협업합니다.</p>
+
+<div class="modern-pipeline">
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 01</div>
+    <div class="pipeline-title">수집 에이전트 (Collector)</div>
+    <div class="pipeline-desc">NL2SQL 안전 조회와 사내·외부 RAG 근거 데이터 수집</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 02</div>
+    <div class="pipeline-title">교차 분석 에이전트 (Analyst)</div>
+    <div class="pipeline-desc">지표 변동 원인 분해, 구간별 추세 및 이상치 비교 분석</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 03</div>
+    <div class="pipeline-title">리포트 에이전트 (Reporter)</div>
+    <div class="pipeline-desc">근거 출처가 포함된 표·차트 및 경영 요약 리포트 생성</div>
+  </div>
+</div>
+
+<ul>
+  <li><strong>Collector Agent:</strong> 인가된 RBAC 범위 내의 내부 지표와 정제된 외부 시장 데이터를 취합합니다.</li>
+  <li><strong>Analyst Agent:</strong> 기간별 변동 요인과 이상 패턴을 교차 검증하고, 상반된 가설을 다각도로 점검합니다.</li>
+  <li><strong>Reporter Agent:</strong> 의사결정권자가 즉시 검토할 수 있도록 시각화 차트, 근거 테이블, 리스크 요약으로 정리합니다.</li>
+</ul>
+
+<h2 id="sec-4">4. 검토 · 승인 후 SyncVerse 실행 연계 (Human-in-the-Loop)</h2>
+<p>분석 결과가 실제 운영 개선으로 이어지려면 안전한 승인 절차가 필수입니다. SyncInsight는 UI를 <strong>SyncVerse 통합 관제 콘솔(<code>/analytics/*</code>)</strong>과 자연스럽게 연동해, 경영진과 담당자가 제안된 개선 액션(예: 프로모션 기획전 준비, 운영 임계치 조정, 리스크 점검 티켓 생성)을 검토하고 명시적으로 승인한 경우에만 하위 실행 에이전트로 작업을 전달합니다.</p>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>사내 폐쇄망에서도 안전한 일상 언어 데이터 조회를 확인해 보세요</strong>
+                <span>NL2SQL 탐색기와 멀티 에이전트 분석 리포트 화면을 SyncInsight 공식 페이지에서 살펴볼 수 있습니다.</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="https://insight.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">SyncInsight 살펴보기 &#8599;</a>
+                <a href="/ko/pages/contact.html?topics=data-ai" class="btn btn-outline btn-sm">도입 상담 문의</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="함께 읽으면 좋은 인사이트">
+        <h2 class="ed-related-heading">함께 읽으면 좋은 인사이트</h2>
+        <div class="ed-related-grid">
+        <a href="/ko/blog/enterprise-data-pipeline-automation.html" class="ed-related-card">
+            <span class="ed-related-cat">데이터 정리 · 보안</span>
+            <span class="ed-related-title">보안이 중요한 기업 환경에서의 비정형 업무 데이터 정리 자동화 사례</span>
+            <span class="ed-related-more">자세히 읽기 &rarr;</span>
+        </a>
+        <a href="/ko/blog/syncllm-cost-optimization-semantic-cache-gateway.html" class="ed-related-card">
+            <span class="ed-related-cat">AI 비용 · 보안 관리</span>
+            <span class="ed-related-title">사내 AI 이용 비용 절감과 응답 속도 개선: SyncLLM 통합 관리 전략</span>
+            <span class="ed-related-more">자세히 읽기 &rarr;</span>
+        </a>
+        </div>
+    </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 36px; padding-bottom: 36px; border-bottom: 1px solid #e2e8f0;" class="emp-footer-grid">
@@ -333,16 +381,16 @@
                         <img src="/images/logo.svg" alt="EMPASY" style="height: 22px; width: auto; margin-bottom: 14px;">
                     </a>
                     <p style="font-size: 14px; line-height: 1.7; color: #475569; max-width: 320px;">
-                        검증된 공통 기반 위에서 기업의 개발·테스트·운영 업무를 돕는 실무형 소프트웨어를 만듭니다.
+                        반복되는 기업 업무는 자동화하고, 중요한 결정은 담당자 확인을 거쳐 안전하게 반영하는 실무형 기업 소프트웨어를 만듭니다.
                     </p>
                 </div>
                 <div>
-                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">주력 솔루션</h4>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">핵심 업무 영역</h4>
                     <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
-                        <li><a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer">SyncVerse</a></li>
-                        <li><a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer">SyncETA</a></li>
-                        <li><a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer">SyncBoot</a></li>
-                        <li><a href="https://cms.empasy.io/" target="_blank" rel="noopener noreferrer">SyncCMS</a></li>
+                        <li><a href="https://verse.empasy.io/" target="_blank" rel="noopener noreferrer">협업·승인 통합 (SyncVerse)</a></li>
+                        <li><a href="https://eta.empasy.io/" target="_blank" rel="noopener noreferrer">자동 화면 점검 (SyncETA)</a></li>
+                        <li><a href="https://boot.empasy.io/" target="_blank" rel="noopener noreferrer">사내 관리 시스템 (SyncBoot)</a></li>
+                        <li><a href="https://cms.empasy.io/" target="_blank" rel="noopener noreferrer">웹사이트·다국어 (SyncCMS)</a></li>
                     </ul>
                 </div>
                 <div>
@@ -385,7 +433,5 @@
         </style>
     </footer>
 
-    <!-- Scripts -->
 </body>
 </html>
-

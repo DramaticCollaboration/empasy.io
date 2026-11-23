@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -16,50 +37,38 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
     <!-- End Google Tag Manager -->
-    <title>Empasy | Syncinsight on premise decision intelligence architecture</title>
-    <meta name="description" content="SyncInsight is an AI-based BI platform that consolidates scattered data. Gain data visibility for enterprise decision-making.">
-    <meta name="keywords" content="Enterprise AI Ecosystem, Enterprise AI Integration Platform, DX AI Architecture, Empasy, Multi-service Data Analytics, Enterprise Data Observability, AI Business Intelligence Platform, Data Insight">
-    <meta property="og:title" content="Empasy | Syncinsight on premise decision intelligence architecture">
-    <meta property="og:description" content="SyncInsight is an AI-based BI platform that consolidates scattered data. Gain data visibility for enterprise decision-making.">
-    <meta property="og:type" content="website">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Empasy">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Empasy Tech Blog",
-      "url": "https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html",
-      "description": "Latest technical insights on Enterprise AI Agents and AI Ops",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Empasy",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.io/empasy-logo.png"
-        }
-      }
-    }
-    </script>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-    <!-- SEO & AIO Tags -->
-    
-    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <title>Answering Business Questions Inside Private Corporate Networks: SyncInsight | Empasy</title>
+    <meta name="description" content="Technical guide to SyncInsight: on-premise decision intelligence with Apache Calcite/JSqlParser SELECT-only NL2SQL firewall, hybrid RAG, and multi-agent analysis.">
+    <meta name="keywords" content="SyncInsight, On-Premise BI, Read-Only NL2SQL Firewall, Hybrid RAG, Private Corporate AI, Multi-Agent Analytics, Empasy">
+    <meta name="author" content="Empasy Inc.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <meta property="og:title" content="Answering Business Questions Inside Private Corporate Networks: SyncInsight | Empasy">
+    <meta property="og:description" content="Technical guide to SyncInsight: on-premise decision intelligence with Apache Calcite/JSqlParser SELECT-only NL2SQL firewall, hybrid RAG, and multi-agent analysis.">
+    <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-06-25">
+    <meta property="article:modified_time" content="2026-11-23">
+    <link rel="canonical" href="https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "[Tech Blog] Decision Intelligence Piercing On-Premises Security: SyncInsight's Multi-Agent Cross-Analysis Architecture",
-  "description": "Deploying Context-Aware RAG and multi-agent systems within air-gapped enterprise environments to derive executive insights while safeguarding data sovereignty.",
+  "headline": "Answering Business Questions Inside Private Corporate Networks: SyncInsight",
+  "description": "Technical guide to SyncInsight: on-premise decision intelligence with Apache Calcite/JSqlParser SELECT-only NL2SQL firewall, hybrid RAG, and multi-agent analysis.",
+  "datePublished": "2026-06-25",
+  "dateModified": "2026-11-23",
+  "inLanguage": "en",
   "author": {
     "@type": "Organization",
     "name": "Empasy Engineering Team",
@@ -67,33 +76,25 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Empasy",
+    "name": "Empasy Inc.",
     "logo": {
       "@type": "ImageObject",
       "url": "https://empasy.io/empasy-logo.png"
     }
   },
+  "image": "https://empasy.io/empasy-logo.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html"
+  },
   "url": "https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html"
 }
     </script>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- SEO & AIO Tags -->
-    
-    
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
-    <meta property="og:url" content="https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html">
-  <script type="module" crossorigin src="/assets/i18n-3nk6-OFj.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/style-BWlNIJrj.css">
+  <script type="module" crossorigin src="/assets/modulepreload-polyfill-Dezn_h7o.js"></script>
+  <script type="module" crossorigin src="/assets/i18n-CC8j1T6V.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-BgRDHG71.css">
 </head>
 <body>
-
-    <!-- Header Navigation -->
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -117,20 +118,26 @@
             </button>
             <nav id="emp-nav-links" class="nav-links" aria-label="Main navigation">
                 <div class="dropdown">
-                    <a href="/en/pages/index.html#solutions" class="dropbtn">Solutions
+                    <a href="/en/pages/index.html#roles" class="dropbtn">Solutions
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </a>
-                    <div class="dropdown-content" style="min-width: 270px;">
-                        <span class="dropdown-group-heading">4 Flagship Solutions</span>
-                        <a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · Operations &amp; Approvals</a>
-                        <a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · Automated Testing App</a>
-                        <a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · Business System Core</a>
-                        <a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · Web &amp; Multilingual CMS</a>
-                        <span class="dropdown-group-heading">Modular Extensions</span>
-                        <a href="/en/pages/index.html#modules">Data, Security &amp; Operations (7 Modules)</a>
+                    <div class="dropdown-content" style="min-width: 280px;">
+                        <span class="dropdown-group-heading">Quick Start</span>
+                        <a href="/en/pages/index.html#finder"><strong>30-Second Solution Finder</strong> · 3 questions</a>
+                        <a href="/en/pages/index.html#roles"><strong>Browse by Business Goal</strong> · By team</a>
+                        <span class="dropdown-group-heading">4 Core Business Areas</span>
+                        <a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Operations &amp; Approvals</strong> · SyncVerse</a>
+                        <a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Automated Screen Checks</strong> · SyncETA</a>
+                        <a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Internal System Core</strong> · SyncBoot</a>
+                        <a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Web &amp; Multilingual Hub</strong> · SyncCMS</a>
+                        <span class="dropdown-group-heading">Extensions &amp; IT Resources</span>
+                        <a href="/en/pages/index.html#modules">Data, AI Cost, Security &amp; Operations (7)</a>
+                        <a href="/en/download_eta.html">Download SyncETA Desktop App</a>
+                        <a href="https://doc.empasy.com/en/" target="_blank" rel="noopener noreferrer">IT &amp; Developer Docs &#8599;</a>
                     </div>
                 </div>
     
+                <a href="/en/pages/index.html#finder">Solution Finder</a>
                 <a href="/en/pages/clients.html">Clients</a>
     
                 <div class="dropdown">
@@ -146,7 +153,6 @@
                     </div>
                 </div>
     
-                <a href="https://doc.empasy.com/en/" target="_blank" rel="noopener noreferrer">Docs &#8599;</a>
                 <a href="https://sync.empasy.io/en/" target="_blank" rel="noopener noreferrer">Live Demo &#8599;</a>
             </nav>
             <div class="nav-actions">
@@ -155,8 +161,7 @@
                     <a href="/en/pages/index.html" data-lang="en" class="active" aria-current="page">EN</a>
                     <a href="/ja/pages/index.html" data-lang="ja">JA</a>
                 </div>
-                <a href="/en/download_eta.html" class="btn btn-outline btn-sm">Download SyncETA</a>
-                <a href="/en/pages/contact.html" class="btn btn-primary btn-sm">Contact</a>
+                <a href="/en/pages/contact.html" class="btn btn-primary btn-sm">Contact Sales</a>
             </div>
         </div>
     </header>
@@ -247,85 +252,119 @@
     })();
     </script>
 
-    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
-        <!-- Compact Breadcrumb / Back Link -->
-        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
-            <a href="../../en/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
-                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
-                <span>Back to Tech Blog</span>
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/en/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Back to Empasy Insights</span>
             </a>
-            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
+            <span class="badge" style="margin-bottom: 0;">Decision Intelligence · SyncInsight</span>
         </div>
-        
-        <section style="padding: 0;">
-            <div class="container" style="padding: 0;">
-                ﻿<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-    <div style="line-height: 1.8; color: var(--text-primary);">
-                    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.2rem; color: var(--text-secondary); font-size: 0.9rem; flex-wrap: wrap;">
-                        <span>2026-06-25</span>
-                        <span>&bull;</span>
-                        <span>7 min read</span>
-                        <span>&bull;</span>
-                        <span style="color: var(--primary-color); font-weight: 600;">Security & Decision Intelligence</span>
-                    </div>
 
-                    <h1 style="font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.35; margin-bottom: 1.8rem; color: var(--text-primary);">Top-Level Decision Intelligence Penetrating On-Premise Security: SyncInsight's Multi-Agent Cross-Analysis Architecture</h1>
-
-        <p>High-value information such as internal ERP, groupware, in-house Wiki, and market trend data are a company's core assets. However, indiscriminately utilizing large public cloud-based LLM services to analyze this data and derive strategies exposes companies to serious security regulatory risks of leaking sensitive corporate secrets and personal information. In addition, there was a limitation in deriving integrated insights because numerous data are thoroughly isolated (Silo) in departmental systems.</p>
-        <p>Empasy's <strong>SyncInsight</strong> goes beyond simple IT infrastructure automation to become the <strong>top-tier AI decision-making intelligence platform</strong> that drives highly reliable knowledge creation from internal assets and strategic business actions by C-Level executives. This article shares the core technical architecture of SyncInsight that derives powerful business insights from fragmented data while perfectly maintaining in-house security.</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. Hybrid On-Premise Architecture Based on 100% Internal Network</h2>
-        <p>To fundamentally block data leakage risks, SyncInsight builds the entire environment, from data repositories to Large Language Model (LLM) serving servers, entirely within a <strong>100% in-house private network (Intranet)</strong> or a dedicated isolated hybrid zone.</p>
-        <p>By completely blocking physical and logical transmission paths to the external cloud, it guarantees robust Data Sovereignty that 100% meets the strictest personal information protection laws and national security regulatory requirements in fields such as finance, public sector, and advanced manufacturing.</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. Context-Aware Advanced RAG Technology Layer</h2>
-        <p>Simple keyword-matching embedding search engines have limitations in grasping the context of complex corporate documents. SyncInsight precisely applies an <strong>enterprise architecture based on the AgentScope Java 2.0.2 and sync-module-rag technology stack</strong> to operate a <strong>Context-Aware RAG pipeline</strong> that grasps the deep contextual meaning of the entire document.</p>
-        <p>It performs real-time cross-embedding of large-scale unstructured data fragmented across heterogeneous systems, including in-house wikis, groupware, ERP data, as well as external real-time market trend information collected by the <strong>SyncCrawl Agent</strong>. Through this, it permanently builds an ultra-high-quality knowledge data hub where the fatal limitation of generative AI, Hallucination, is completely controlled.</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. Strategic Autonomous Analysis via Multi-Agent Orchestration Loop</h2>
-        <p>Within SyncInsight, an intelligent virtual dedicated team operates by dividing roles and collaborating on its own.</p>
-        <div class="modern-pipeline">
-          <div class="pipeline-step">
-            <div class="pipeline-title">Collector Agent</div>
-            <div class="pipeline-desc">Heterogeneous data collection</div>
-          </div><div class="pipeline-arrow">&rarr;</div>
-          <div class="pipeline-step">
-            <div class="pipeline-title">Analyst Agent</div>
-            <div class="pipeline-desc">Python-based big data analysis</div>
-          </div><div class="pipeline-arrow">&rarr;</div>
-          <div class="pipeline-step">
-            <div class="pipeline-title">Reporter Agent</div>
-            <div class="pipeline-desc">SWOT & strategy report generation</div>
-          </div>
-        </div>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Collector Agent:</strong> Crawls and collects structured data from internal systems and external market indicators in real-time.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Analyst Agent:</strong> Autonomously executes Python scripts in a sandbox environment based on the collected raw data to perform large-scale statistical analysis and trend prediction.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Reporter Agent:</strong> Refines the analysis results and automatically generates visualization charts and SWOT strategic analysis report documents in a form that top decision-makers can grasp immediately within minutes.</li>
-        </ul>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">4. Business Action Proposal & SyncVerse Feedback (Human-in-the-loop)</h2>
-        <p>SyncInsight does not stay at the stage of simply showing static reports, but completes an organic feedback loop between system layers.</p>
-        <p>If crisis signs or new market opportunities are derived during the cross-analysis of internal and external data, it first proposes specific strategic actions to the management, such as "establishing a specific marketing promotion page and operating a target email crawling pipeline." As soon as management approves this in the system (Human-in-the-loop 1-Click approval), the top brain, SyncInsight, <strong>directly transmits a command protocol to the autonomous development/deployment belt of SyncVerse</strong>, the lower execution entity, achieving fully automated decision-making synergy that is immediately reflected on the system screen in real-time.</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <p>SyncInsight is the pinnacle of AI solutions that converts fragmented business data into real-time management assets while perfectly complying with corporate security guidelines. Through Empasy's unique autonomous operations intelligence, which connects data collection, analysis, and actual system application without any gaps, we will lead enterprise Digital Transformation (DX) to the next level.</p>
-    </div>
-</article>
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-06-25 (Updated 2026-11-23)</span>
+                <span>&bull;</span>
+                <span>7 min read</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">Data Security &amp; Analysis</span>
             </div>
-        </section>
+
+            <h1 class="ed-blog-title">Answering Business Questions Inside Private Corporate Networks: SyncInsight</h1>
+
+            <div class="ed-exec-summary" aria-label="3-Line Executive &amp; Business Summary">
+                <div class="ed-exec-summary-kicker">3-Line Executive &amp; Business Summary</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">Challenge</span><span>When security policies forbid sending corporate data to public clouds, executives and planners must wait on IT for every ad-hoc extract.</span></li>
+                    <li><span class="ed-exec-summary-tag">Approach</span><span>SyncInsight runs inside private servers, pairing a SELECT-only NL2SQL firewall with triple hybrid RAG to answer plain-language questions safely.</span></li>
+                    <li><span class="ed-exec-summary-tag">Impact</span><span>Teams accelerate data-backed decisions with cited charts and tables while handing only approved initiatives to SyncVerse.</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">Want to verify how this fits your team workflows?</span>
+                    <a href="/en/pages/contact.html?topics=data-ai" class="btn btn-primary btn-sm" style="min-height: 36px;">Request Consultation</a>
+                </div>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>Technical Deep Dive for IT &amp; Engineering Teams</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="In This Article">
+  <div class="ed-article-toc-title">In This Article</div>
+  <ol>
+    <li><a href="#sec-1">1. On-Premise &amp; Air-Gapped Security Architecture</a></li>
+    <li><a href="#sec-2">2. Read-Only NL2SQL Firewall &amp; Triple Hybrid RAG</a></li>
+    <li><a href="#sec-3">3. Multi-Agent Cross-Analysis Pipeline</a></li>
+    <li><a href="#sec-4">4. Human-Approved Handoff to SyncVerse</a></li>
+  </ol>
+</nav>
+<p>Core operational data—ERP transactions, internal wikis, financial summaries, and market feeds—often sits isolated across departmental silos. Strict confidentiality rules prevent uploading these records to public cloud AI services, leaving business teams reliant on manual IT query queues.</p>
+<p>Empasy's <a href="https://insight.empasy.io/" target="_blank" rel="noopener noreferrer">SyncInsight</a> brings plain-language analysis inside your own servers or isolated VPC, combining structured database safety with citation-backed document retrieval.</p>
+
+<h2 id="sec-1">1. On-Premise &amp; Air-Gapped Security Architecture</h2>
+<p>SyncInsight supports deploying its PostgreSQL 18.6 <code>pgvector</code> store and local LLM runtimes (vLLM, Ollama) entirely inside private corporate networks—keeping sensitive records within your regulatory boundary.</p>
+
+<h2 id="sec-2">2. Read-Only NL2SQL Firewall &amp; Triple Hybrid RAG</h2>
+<ul>
+  <li><strong>Apache Calcite + JSqlParser SELECT-Only Firewall (<code>sync-module-nl2sql</code>):</strong> Parses every generated SQL statement at the AST level, blocking any write or DDL command (<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>DROP</code>) and restricting queries strictly to authorized read-only schemas.</li>
+  <li><strong>Triple Hybrid RAG (<code>sync-module-rag</code>):</strong> Combines <code>pgvector</code> semantic search, BM25 keyword precision, and Knowledge Graph traversal across internal wikis and cleaned SyncCrawl market feeds.</li>
+</ul>
+
+<h2 id="sec-3">3. Multi-Agent Cross-Analysis Pipeline</h2>
+
+<div class="modern-pipeline">
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 01</div>
+    <div class="pipeline-title">Collector Agent</div>
+    <div class="pipeline-desc">Gathers authorized read-only SQL metrics and cited RAG evidence</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 02</div>
+    <div class="pipeline-title">Analyst Agent</div>
+    <div class="pipeline-desc">Decomposes metric shifts, anomalies, and cross-source trends</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 03</div>
+    <div class="pipeline-title">Reporter Agent</div>
+    <div class="pipeline-desc">Produces structured tables, charts, and executive summaries</div>
+  </div>
+</div>
+
+<h2 id="sec-4">4. Human-Approved Handoff to SyncVerse</h2>
+<p>Integrated directly into the <strong>SyncVerse console (<code>/analytics/*</code>)</strong>, SyncInsight presents recommended follow-up actions alongside supporting evidence. Only after responsible managers review and explicitly approve an action does SyncVerse dispatch execution across downstream domain modules.</p>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>Explore Private-Network Data Lookup With SyncInsight</strong>
+                <span>Review NL2SQL safeguards and multi-agent analytical briefings on the SyncInsight site.</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="https://insight.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit SyncInsight &#8599;</a>
+                <a href="/en/pages/contact.html?topics=data-ai" class="btn btn-outline btn-sm">Contact Us</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="Related Insights">
+        <h2 class="ed-related-heading">Related Insights</h2>
+        <div class="ed-related-grid">
+        <a href="/en/blog/enterprise-data-pipeline-automation.html" class="ed-related-card">
+            <span class="ed-related-cat">Data Organization</span>
+            <span class="ed-related-title">Automating Unstructured Document Processing Under Strict Corporate Security</span>
+            <span class="ed-related-more">Read More &rarr;</span>
+        </a>
+        <a href="/en/blog/syncllm-cost-optimization-semantic-cache-gateway.html" class="ed-related-card">
+            <span class="ed-related-cat">AI Cost &amp; Privacy</span>
+            <span class="ed-related-title">Cutting Corporate AI Bills While Protecting Privacy: SyncLLM Governance Guide</span>
+            <span class="ed-related-more">Read More &rarr;</span>
+        </a>
+        </div>
+    </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 36px; padding-bottom: 36px; border-bottom: 1px solid #e2e8f0;" class="emp-footer-grid">
@@ -334,16 +373,16 @@
                         <img src="/images/logo.svg" alt="EMPASY" style="height: 22px; width: auto; margin-bottom: 14px;">
                     </a>
                     <p style="font-size: 14px; line-height: 1.7; color: #475569; max-width: 320px;">
-                        Practical enterprise software built on a shared foundation to simplify development, testing, and daily operations.
+                        Practical enterprise software that automates repetitive business tasks while keeping humans in charge of key approvals.
                     </p>
                 </div>
                 <div>
-                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Flagship Solutions</h4>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Core Business Areas</h4>
                     <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
-                        <li><a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncVerse</a></li>
-                        <li><a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncETA</a></li>
-                        <li><a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncBoot</a></li>
-                        <li><a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncCMS</a></li>
+                        <li><a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer">Approvals &amp; Oversight (SyncVerse)</a></li>
+                        <li><a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer">Automated Screen Checks (SyncETA)</a></li>
+                        <li><a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer">Internal System Core (SyncBoot)</a></li>
+                        <li><a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer">Web &amp; Multilingual (SyncCMS)</a></li>
                     </ul>
                 </div>
                 <div>
@@ -386,6 +425,5 @@
         </style>
     </footer>
 
-    <!-- Scripts -->
 </body>
 </html>

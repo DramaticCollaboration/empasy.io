@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -16,50 +37,38 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
     <!-- End Google Tag Manager -->
-    <title>Empasy | Enterprise data pipeline automation</title>
-    <meta name="description" content="B2B Enterprise AI Integration Architecture solving DX and AI Infrastructure simultaneously.">
-    <meta name="keywords" content="Enterprise AI Ecosystem, Enterprise AI Integration Platform, DX AI Architecture, Empasy, MSA CMS AI Integration, Business Data Intelligence, SyncVerse, SyncBoot, SyncCMS, SyncInsight, SyncETA, B2B AI Solution">
-    <meta property="og:title" content="Empasy | Enterprise data pipeline automation">
-    <meta property="og:description" content="B2B Enterprise AI Integration Architecture solving DX and AI Infrastructure simultaneously.">
-    <meta property="og:type" content="website">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Empasy">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Empasy Tech Blog",
-      "url": "https://empasy.io/en/blog/enterprise-data-pipeline-automation.html",
-      "description": "Latest technical insights on Enterprise AI Agents and AI Ops",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Empasy",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.io/empasy-logo.png"
-        }
-      }
-    }
-    </script>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-    <!-- SEO & AIO Tags -->
-    
-    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <title>Automating Unstructured Document Processing Under Strict Corporate Security | Empasy</title>
+    <meta name="description" content="Enterprise unstructured data pipeline combining compliant collection, automatic PII masking, structural Markdown/JSON cleanup, and hybrid pgvector RAG.">
+    <meta name="keywords" content="Unstructured Data Pipeline, PII Masking, Enterprise RAG, SyncCrawl, SyncLLM, SyncInsight, PostgreSQL pgvector, Corporate Search">
+    <meta name="author" content="Empasy Inc.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <meta property="og:title" content="Automating Unstructured Document Processing Under Strict Corporate Security | Empasy">
+    <meta property="og:description" content="Enterprise unstructured data pipeline combining compliant collection, automatic PII masking, structural Markdown/JSON cleanup, and hybrid pgvector RAG.">
+    <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://empasy.io/en/blog/enterprise-data-pipeline-automation.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-01-10">
+    <meta property="article:modified_time" content="2026-11-23">
+    <link rel="canonical" href="https://empasy.io/en/blog/enterprise-data-pipeline-automation.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/enterprise-data-pipeline-automation.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/enterprise-data-pipeline-automation.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/enterprise-data-pipeline-automation.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/enterprise-data-pipeline-automation.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Enterprise Data Pipeline Automation Cases using LLM",
-  "description": "Learn how to structure unstructured data and utilize LLMs in security-critical enterprise environments using SyncSeries.",
+  "headline": "Automating Unstructured Document Processing Under Strict Corporate Security",
+  "description": "Enterprise unstructured data pipeline combining compliant collection, automatic PII masking, structural Markdown/JSON cleanup, and hybrid pgvector RAG.",
+  "datePublished": "2026-01-10",
+  "dateModified": "2026-11-23",
+  "inLanguage": "en",
   "author": {
     "@type": "Organization",
     "name": "Empasy Engineering Team",
@@ -67,33 +76,25 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Empasy",
+    "name": "Empasy Inc.",
     "logo": {
       "@type": "ImageObject",
       "url": "https://empasy.io/empasy-logo.png"
     }
   },
+  "image": "https://empasy.io/empasy-logo.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://empasy.io/en/blog/enterprise-data-pipeline-automation.html"
+  },
   "url": "https://empasy.io/en/blog/enterprise-data-pipeline-automation.html"
 }
     </script>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- SEO & AIO Tags -->
-    
-    
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.io/en/blog/enterprise-data-pipeline-automation.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/enterprise-data-pipeline-automation.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/enterprise-data-pipeline-automation.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/enterprise-data-pipeline-automation.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/enterprise-data-pipeline-automation.html" />
-    <meta property="og:url" content="https://empasy.io/en/blog/enterprise-data-pipeline-automation.html">
-  <script type="module" crossorigin src="/assets/i18n-3nk6-OFj.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/style-BWlNIJrj.css">
+  <script type="module" crossorigin src="/assets/modulepreload-polyfill-Dezn_h7o.js"></script>
+  <script type="module" crossorigin src="/assets/i18n-CC8j1T6V.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-BgRDHG71.css">
 </head>
 <body>
-
-    <!-- Header Navigation -->
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -117,20 +118,26 @@
             </button>
             <nav id="emp-nav-links" class="nav-links" aria-label="Main navigation">
                 <div class="dropdown">
-                    <a href="/en/pages/index.html#solutions" class="dropbtn">Solutions
+                    <a href="/en/pages/index.html#roles" class="dropbtn">Solutions
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </a>
-                    <div class="dropdown-content" style="min-width: 270px;">
-                        <span class="dropdown-group-heading">4 Flagship Solutions</span>
-                        <a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · Operations &amp; Approvals</a>
-                        <a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · Automated Testing App</a>
-                        <a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · Business System Core</a>
-                        <a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · Web &amp; Multilingual CMS</a>
-                        <span class="dropdown-group-heading">Modular Extensions</span>
-                        <a href="/en/pages/index.html#modules">Data, Security &amp; Operations (7 Modules)</a>
+                    <div class="dropdown-content" style="min-width: 280px;">
+                        <span class="dropdown-group-heading">Quick Start</span>
+                        <a href="/en/pages/index.html#finder"><strong>30-Second Solution Finder</strong> · 3 questions</a>
+                        <a href="/en/pages/index.html#roles"><strong>Browse by Business Goal</strong> · By team</a>
+                        <span class="dropdown-group-heading">4 Core Business Areas</span>
+                        <a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Operations &amp; Approvals</strong> · SyncVerse</a>
+                        <a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Automated Screen Checks</strong> · SyncETA</a>
+                        <a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Internal System Core</strong> · SyncBoot</a>
+                        <a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer"><strong>Web &amp; Multilingual Hub</strong> · SyncCMS</a>
+                        <span class="dropdown-group-heading">Extensions &amp; IT Resources</span>
+                        <a href="/en/pages/index.html#modules">Data, AI Cost, Security &amp; Operations (7)</a>
+                        <a href="/en/download_eta.html">Download SyncETA Desktop App</a>
+                        <a href="https://doc.empasy.com/en/" target="_blank" rel="noopener noreferrer">IT &amp; Developer Docs &#8599;</a>
                     </div>
                 </div>
     
+                <a href="/en/pages/index.html#finder">Solution Finder</a>
                 <a href="/en/pages/clients.html">Clients</a>
     
                 <div class="dropdown">
@@ -146,7 +153,6 @@
                     </div>
                 </div>
     
-                <a href="https://doc.empasy.com/en/" target="_blank" rel="noopener noreferrer">Docs &#8599;</a>
                 <a href="https://sync.empasy.io/en/" target="_blank" rel="noopener noreferrer">Live Demo &#8599;</a>
             </nav>
             <div class="nav-actions">
@@ -155,8 +161,7 @@
                     <a href="/en/pages/index.html" data-lang="en" class="active" aria-current="page">EN</a>
                     <a href="/ja/pages/index.html" data-lang="ja">JA</a>
                 </div>
-                <a href="/en/download_eta.html" class="btn btn-outline btn-sm">Download SyncETA</a>
-                <a href="/en/pages/contact.html" class="btn btn-primary btn-sm">Contact</a>
+                <a href="/en/pages/contact.html" class="btn btn-primary btn-sm">Contact Sales</a>
             </div>
         </div>
     </header>
@@ -247,123 +252,146 @@
     })();
     </script>
 
-    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
-        <!-- Compact Breadcrumb / Back Link -->
-        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
-            <a href="../../en/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
-                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
-                <span>Back to Tech Blog</span>
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/en/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Back to Empasy Insights</span>
             </a>
-            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
-        </div>
-        
-        <section style="padding: 0;">
-            <div class="container" style="padding: 0;">
-                <article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-    <div style="line-height: 1.8; color: var(--text-primary);">
-                    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.2rem; color: var(--text-secondary); font-size: 0.9rem; flex-wrap: wrap;">
-                        <span>2026-01-10</span>
-                        <span>&bull;</span>
-                        <span>5 min read</span>
-                        <span>&bull;</span>
-                        <span style="color: var(--primary-color); font-weight: 600;">AI Ops & Architecture</span>
-                    </div>
-
-                    <h1 style="font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.35; margin-bottom: 1.8rem; color: var(--text-primary);">Enterprise Data Pipeline Automation Case Study Using LLMs</h1>
-
-        <p>As the scale of software systems grows to the enterprise level and Agile deployment cycles become extremely short, legacy system operations have reached a clear breaking point. While the demand for regression testing due to system changes explodes, manual verification and monitoring cause process bottlenecks and pose critical risks that hinder Time-to-Market.</p>
-        <p>The real bottleneck facing IT organizations today is not just 'production' but the 'surge in Operations & Maintenance (TCO)'. Complex script-based automation tools require a high level of coding proficiency, creating business silos. Even minor changes in UI or logic can break them, leading to a vicious cycle where more resources are wasted on manual fixes.</p>
-        <p>To overcome these limitations, Empasy proposes a paradigm shift beyond simple rule-based (If-Else) automation to an <strong>'Autonomous AI Agent-based AI Ops Ecosystem'</strong> that judges for itself, understands context, and performs Self-Healing.</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. The Starting Point of Autonomous Operations: 4 Stages of AI Loop Design</h2>
-        <p>To successfully transition from legacy to AI Ops, rather than demanding unconditional answers from AI, we must provide complex business context and solidify a collaborative framework as virtual colleagues. The 4 stages of AI autonomy design proposed by the Claude Code team must be precisely transplanted into framework operations.</p>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Stage 1 (Turn-based - Result Check):</strong> The stage where it executes and gets results checked every time the user commands.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Stage 2 (Goal-based - Delegated Termination):</strong> Recognizes specific final conditions like "terminate when all test scenarios pass" and orchestrates it to iterate on its own.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Stage 3 (Time-based - Autonomous Start):</strong> Actively starts unmanned execution according to a set cycle or event trigger (e.g., Code Commit Webhook integration).</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Stage 4 (Active - Autonomous Task Decision):</strong> A complete AI Ops stage where it judges for itself what to do when system failures or defects arise and activates autonomous recovery workflows.</li>
-        </ul>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. Core Infrastructure of AI Ops: 5-Layer Intelligent Pipeline</h2>
-        <p>To realize this autonomous agent orchestration, Empasy builds a 5-layer intelligent pipeline architecture centered around the <strong>SyncETA</strong> solution, innovating legacy QA and infrastructure quality processes.</p>
-
-        <div class="modern-stack">
-          <div class="stack-layer">
-            <div class="stack-label" style="color:var(--primary-color);">LAYER 01</div>
-            <div style="flex-grow: 1;">
-                <div class="stack-content">Data Collection</div>
-                <div class="stack-desc">User behavior tracking and unstructured log JSON structuring (Zero-Recording)</div>
-            </div>
-          </div>
-          <div class="stack-layer">
-            <div class="stack-label" style="color:var(--primary-color);">LAYER 02</div>
-            <div style="flex-grow: 1;">
-                <div class="stack-content">AI Processing</div>
-                <div class="stack-desc">High-level semantic analysis based on LLM Semantic Parsing and autonomous generation of natural language specifications</div>
-            </div>
-          </div>
-          <div class="stack-layer">
-            <div class="stack-label" style="color:var(--primary-color);">LAYER 03</div>
-            <div style="flex-grow: 1;">
-                <div class="stack-content">Verification & Feedback</div>
-                <div class="stack-desc">Absorption of HITL (Human-in-the-Loop) feedback, LoRA & RAG self-evolution</div>
-            </div>
-          </div>
-          <div class="stack-layer">
-            <div class="stack-label" style="color:var(--primary-color);">LAYER 04</div>
-            <div style="flex-grow: 1;">
-                <div class="stack-content">Intelligent Execution</div>
-                <div class="stack-desc">Playwright MCP-based direct browser control and high-speed parallel distributed execution</div>
-            </div>
-          </div>
-          <div class="stack-layer">
-            <div class="stack-label" style="color:var(--primary-color);">LAYER 05</div>
-            <div style="flex-grow: 1;">
-                <div class="stack-content">Monitoring & Analysis</div>
-                <div class="stack-desc">WebSocket real-time relay and Pixel-Perfect based AI visual error verification</div>
-            </div>
-          </div>
+            <span class="badge" style="margin-bottom: 0;">Data &amp; Security Pipeline</span>
         </div>
 
-        <p style="color: var(--text-secondary); font-size: 0.85rem; text-align: right; margin-top: -1.5rem;"><em>(Source: Empasy Integrated Quality Management Architecture Specifications)</em></p>
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-01-10 (Updated 2026-11-23)</span>
+                <span>&bull;</span>
+                <span>6 min read</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">Data Structuring &amp; Privacy</span>
+            </div>
 
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem; margin-top: 1.5rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Semantic Reasoning:</strong> Analyzes raw machine data with fragmented context and automatically converts it into standard Excel test cases in human business language, realizing the 'Democratization of QA'.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Self-Healing Architecture:</strong> If UI component changes are detected at the execution layer, AI autonomously corrects it through hybrid search combining text, location, and shape, maintaining an uninterrupted TestOps deployment pipeline.</li>
-        </ul>
+            <h1 class="ed-blog-title">Automating Unstructured Document Processing Under Strict Corporate Security</h1>
 
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+            <div class="ed-exec-summary" aria-label="3-Line Executive &amp; Business Summary">
+                <div class="ed-exec-summary-kicker">3-Line Executive &amp; Business Summary</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">Challenge</span><span>Manually sorting scattered PDFs, internal posts, and public updates while redacting personal data consumes heavy staff hours and creates compliance risk.</span></li>
+                    <li><span class="ed-exec-summary-tag">Approach</span><span>Our 5-layer pipeline masks sensitive personal identifiers before indexing, strips layout clutter into clean structured text, and enforces role-based access.</span></li>
+                    <li><span class="ed-exec-summary-tag">Impact</span><span>Teams improve internal knowledge search and reporting speed while staying aligned with strict corporate privacy and air-gapped network rules.</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">Want to verify how this fits your team workflows?</span>
+                    <a href="/en/pages/contact.html?topics=data-ai" class="btn btn-primary btn-sm" style="min-height: 36px;">Request Consultation</a>
+                </div>
+            </div>
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. The Future of Incident Response: Agentic Workflow Beyond Simple Automation</h2>
-        <p>The true completion of AI Ops shines during system failure situations. While existing monitoring systems merely sent alert notifications, autonomous agents autonomously complete the systematic process of <strong>'Detection &rarr; Judgment &rarr; Action &rarr; Verification'</strong>.</p>
-        <ol style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Anomaly Detection:</strong> Real-time capture of anomalies such as P95 response time delays or spikes in payment failure rates via OpenSearch, Prometheus/Grafana infrastructure.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>AI Precision Analysis (Judgment):</strong> Starts inference using <strong>MCP (Model Context Protocol)</strong> connected to LLM, rather than simple notifications. Combines log context and Git commit history to identify the cause of the error and the person responsible for the code change within seconds.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Autonomous Action:</strong> Runs n8n workflows and integrated toolchains to search guidelines, and if it's a simple recurring defect, it immediately performs autonomous recovery such as automatic Jira ticket creation and payment routing weight switching based on the 'Fix Code' derived by AI.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Integrity Verification:</strong> Continuously tracks system success rates and performance metrics after the action to confirm return to normal trajectory, and autonomously updates debugging productivity improvement records into a permanent dataset playbook.</li>
-        </ol>
+            <details class="ed-tech-details" open>
+                <summary>Technical Deep Dive for IT &amp; Engineering Teams</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="In This Article">
+  <div class="ed-article-toc-title">In This Article</div>
+  <ol>
+    <li><a href="#sec-1">1. Three Common Bottlenecks in Enterprise Document Automation</a></li>
+    <li><a href="#sec-2">2. The 5-Layer Security-First Data Structuring Pipeline</a></li>
+    <li><a href="#sec-3">3. Privacy &amp; Private-Network Design Principles</a></li>
+    <li><a href="#sec-4">4. Practical Rollout Guidance</a></li>
+  </ol>
+</nav>
+<p>Organizations in regulated industries accumulate vast volumes of <strong>unstructured business data</strong> every day—policy PDFs, meeting minutes, internal notices, partner guidelines, and regulatory updates. When these records remain scattered across folders and portals, employees spend hours searching for answers, yet feeding raw files straight into AI search introduces serious <strong>PII exposure and retrieval noise</strong>.</p>
+<p>Empasy addresses this challenge with a 5-layer security-first data pipeline combining <strong>SyncCrawl</strong>, <strong>SyncLLM</strong>, <strong><code>sync-module-rag</code></strong>, and <strong>SyncInsight</strong>.</p>
 
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
+<h2 id="sec-1">1. Three Common Bottlenecks in Enterprise Document Automation</h2>
+<ul>
+  <li><strong>Embedded Personal Data:</strong> Customer names, phone numbers, national IDs, account numbers, and emails often appear inside free-form documents, making unredacted indexing a compliance hazard.</li>
+  <li><strong>Clutter &amp; Broken Structure:</strong> Web menus, banners, repeated PDF headers, and flattened tables degrade embedding quality and cause misleading AI summaries.</li>
+  <li><strong>Missing Access Controls &amp; Stale Copies:</strong> Pooling every department's files into one flat vector index leaks restricted records or surfaces outdated policies.</li>
+</ul>
 
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">4. Business ROI and Transition Expectations</h2>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Innovative Reduction in Effort and Time:</strong> Reduces scripting and test case creation effort by <strong>80%</strong>, and shortens Mean Time To Recovery (MTTR) by <strong>over 90%</strong> in the event of an incident.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Assetization of Volatile Know-how:</strong> Internalizes the exception handling knowledge of veteran engineers and QA into a permanent dataset (Golden Data) within the system, ensuring technical continuity for the entire organization.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Shift-Left Business Agility:</strong> By linking autonomous agents with the CI/CD integrated unmanned pipeline (Zero-Touch Pipeline), defects are preemptively discovered in the early stages of development, minimizing correction costs and boosting release agility by more than 3.5 times.</li>
-        </ul>
+<h2 id="sec-2">2. The 5-Layer Security-First Data Structuring Pipeline</h2>
+<p>Every stage from ingestion to retrieval embeds validation, redaction, and auditability rather than bolting security on afterward.</p>
 
-        <p>Empasy has proven the stability of its autonomous technology through enterprise real-world use cases such as Hyosung ITX data pipelines and Visang Education AIDT. Discard the heavy debt of legacy systems and transition to an autonomous operations ecosystem that evolves on its own. Start with Empasy now.</p>
+<div class="modern-stack">
+  <div class="stack-layer">
+    <div class="stack-label">LAYER 01</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">Compliant Collection &amp; Diffing</div>
+      <div class="stack-desc">SyncCrawl gathers approved public sources and internal repositories while skipping unchanged files via hash comparison</div>
     </div>
-</article>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">LAYER 02</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">Automatic PII Redaction</div>
+      <div class="stack-desc">Detects and masks 8 categories of personal identifiers (IDs, phone numbers, accounts, emails) prior to embedding</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">LAYER 03</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">Structural Cleanup</div>
+      <div class="stack-desc">Strips banners, navigation, and noisy markup into Clean Markdown/JSON while preserving headings, lists, and tables</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">LAYER 04</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">Triple Hybrid RAG Indexing</div>
+      <div class="stack-desc">sync-module-rag chunks by semantic boundaries into PostgreSQL 18.6 pgvector + BM25 + Knowledge Graph</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">LAYER 05</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">Role-Scoped Retrieval &amp; Audit</div>
+      <div class="stack-desc">SyncInsight serves cited answers and charts strictly within department RBAC policies and logs all queries</div>
+    </div>
+  </div>
+</div>
+
+<h2 id="sec-3">3. Privacy &amp; Private-Network Design Principles</h2>
+<ul>
+  <li><strong>Pre-Index Masking:</strong> Sensitive patterns are replaced with safe placeholders (such as <code>[MASKED_PHONE]</code>) before text ever reaches embedding or LLM inference layers.</li>
+  <li><strong>Air-Gapped Execution Ready:</strong> The entire pipeline can run inside private servers using local embedding/LLM runtimes (vLLM, Ollama) and PostgreSQL 18.6 <code>pgvector</code> with zero external network egress.</li>
+  <li><strong>Metadata-Enforced Governance:</strong> Every chunk carries document version, department ACL tags, and source citations so users only view authorized, up-to-date evidence.</li>
+</ul>
+
+<h2 id="sec-4">4. Practical Rollout Guidance</h2>
+<ul>
+  <li><strong>Reduce Manual Sorting &amp; Redaction Effort:</strong> Automating ingestion, deduplication, and PII masking lets staff focus on reviewing exceptions and approving high-value reports.</li>
+  <li><strong>Start With High-Value Knowledge Sets:</strong> Begin with a 1-2 week pilot on 1-2 recurring document sets (such as internal policies or regulatory feeds) to validate masking accuracy before expanding enterprise-wide.</li>
+</ul>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>Turn Scattered Documents Into Governed Corporate Knowledge</strong>
+                <span>See how SyncCrawl, SyncLLM, and SyncInsight clean, mask, and index documents safely inside private networks.</span>
             </div>
-        </section>
+            <div class="ed-article-footer-cta-actions">
+                <a href="https://insight.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Explore SyncInsight &#8599;</a>
+                <a href="/en/pages/contact.html?topics=data-ai" class="btn btn-outline btn-sm">Contact Us</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="Related Insights">
+        <h2 class="ed-related-heading">Related Insights</h2>
+        <div class="ed-related-grid">
+        <a href="/en/blog/synccrawl-distributed-web-data-pipeline.html" class="ed-related-card">
+            <span class="ed-related-cat">Web Data Collection</span>
+            <span class="ed-related-title">Collecting Clean Public Web Data for Internal Search: SyncCrawl Field Guide</span>
+            <span class="ed-related-more">Read More &rarr;</span>
+        </a>
+        <a href="/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html" class="ed-related-card">
+            <span class="ed-related-cat">Data &amp; Security</span>
+            <span class="ed-related-title">Answering Business Questions Inside Private Corporate Networks: SyncInsight</span>
+            <span class="ed-related-more">Read More &rarr;</span>
+        </a>
+        </div>
+    </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 36px; padding-bottom: 36px; border-bottom: 1px solid #e2e8f0;" class="emp-footer-grid">
@@ -372,16 +400,16 @@
                         <img src="/images/logo.svg" alt="EMPASY" style="height: 22px; width: auto; margin-bottom: 14px;">
                     </a>
                     <p style="font-size: 14px; line-height: 1.7; color: #475569; max-width: 320px;">
-                        Practical enterprise software built on a shared foundation to simplify development, testing, and daily operations.
+                        Practical enterprise software that automates repetitive business tasks while keeping humans in charge of key approvals.
                     </p>
                 </div>
                 <div>
-                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Flagship Solutions</h4>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Core Business Areas</h4>
                     <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
-                        <li><a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncVerse</a></li>
-                        <li><a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncETA</a></li>
-                        <li><a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncBoot</a></li>
-                        <li><a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer">SyncCMS</a></li>
+                        <li><a href="https://verse.empasy.io/en/" target="_blank" rel="noopener noreferrer">Approvals &amp; Oversight (SyncVerse)</a></li>
+                        <li><a href="https://eta.empasy.io/en/" target="_blank" rel="noopener noreferrer">Automated Screen Checks (SyncETA)</a></li>
+                        <li><a href="https://boot.empasy.io/en/" target="_blank" rel="noopener noreferrer">Internal System Core (SyncBoot)</a></li>
+                        <li><a href="https://cms.empasy.io/en/" target="_blank" rel="noopener noreferrer">Web &amp; Multilingual (SyncCMS)</a></li>
                     </ul>
                 </div>
                 <div>
@@ -424,6 +452,5 @@
         </style>
     </footer>
 
-    <!-- Scripts -->
 </body>
 </html>

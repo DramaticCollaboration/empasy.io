@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- Google Analytics (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-6BNPM5TX7C');
     </script>
@@ -16,50 +37,38 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
     <!-- End Google Tag Manager -->
-    <title>Empasy | Empasy 2026 vision autonomous operations ecosystem</title>
-    <meta name="description" content="DXとAIインフラを同時に解決するB2B企業用AI統合アーキテクチャ。企画から運営まで人間の介入を最小化するAIOpsベースのエコシステムです。">
-    <meta name="keywords" content="エンタープライズAIエコシステム, 企業用AI統合プラットフォーム, DX AIアーキテクチャ, Empasy, MSA CMS AI統合, ビジネスデータインテリジェンス, SyncVerse, SyncBoot, SyncCMS, SyncInsight, SyncETA, B2B AIソリューション">
-    <meta property="og:title" content="Empasy | Empasy 2026 vision autonomous operations ecosystem">
-    <meta property="og:description" content="DXとAIインフラを同時に解決するB2B企業用AI統合アーキテクチャ。企画から運営まで人間の介入を最小化するAIOpsベースのエコシステムです。">
-    <meta property="og:type" content="website">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Empasy">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Empasy 技術ブログ",
-      "url": "https://empasy.io/ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html",
-      "description": "エンタープライズAIエージェントおよびAIOpsに関する最新技術インサイト",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Empasy",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://empasy.io/empasy-logo.png"
-        }
-      }
-    }
-    </script>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5665;126.9780" />
-    <meta name="ICBM" content="37.5665, 126.9780" />
-    <!-- SEO & AIO Tags -->
-    
-    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <title>人の判断に集中できる企業ソフトウェア：Empasy 2026 製品開発の方向性 | Empasy</title>
+    <meta name="description" content="標準プロトコル(MCP)と段階別承認(HITL)を組み合わせ、開発・テスト・データ・セキュリティ運用の反復業務を削減するEmpasy 2026製品ロードマップ。">
+    <meta name="keywords" content="Empasy 2026 ビジョン, SyncSeries, SyncVerse, SyncETA, SyncBoot, SyncCMS, SyncInsight, SyncOps, SyncAPIM, SyncWatch, MCP, 段階別承認">
+    <meta name="author" content="株式会社Empasy (Empasy Inc.)">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <meta property="og:title" content="人の判断に集中できる企業ソフトウェア：Empasy 2026 製品開発の方向性 | Empasy">
+    <meta property="og:description" content="標準プロトコル(MCP)と段階別承認(HITL)を組み合わせ、開発・テスト・データ・セキュリティ運用の反復業務を削減するEmpasy 2026製品ロードマップ。">
+    <meta property="og:type" content="article">
     <meta property="og:locale" content="ja_JP">
+    <meta property="og:url" content="https://empasy.io/ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html">
+    <meta property="og:image" content="https://empasy.io/empasy-logo.png">
+    <meta property="article:published_time" content="2026-07-18">
+    <meta property="article:modified_time" content="2026-11-23">
+    <link rel="canonical" href="https://empasy.io/ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "[Tech Blog] Boon to Business by Agility：Empasyが宣言する2026年ビジョンと自律運用エコシステムの未来",
-  "description": "企画から開発、QA、デプロイ、運用に至る全工程をエージェント同士が自律連携するZero-Touch運用のロードマップ。",
+  "headline": "人の判断に集中できる企業ソフトウェア：Empasy 2026 製品開発の方向性",
+  "description": "標準プロトコル(MCP)と段階別承認(HITL)を組み合わせ、開発・テスト・データ・セキュリティ運用の反復業務を削減するEmpasy 2026製品ロードマップ。",
+  "datePublished": "2026-07-18",
+  "dateModified": "2026-11-23",
+  "inLanguage": "ja",
   "author": {
     "@type": "Organization",
     "name": "Empasy Engineering Team",
@@ -67,33 +76,25 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Empasy",
+    "name": "株式会社Empasy (Empasy Inc.)",
     "logo": {
       "@type": "ImageObject",
       "url": "https://empasy.io/empasy-logo.png"
     }
   },
+  "image": "https://empasy.io/empasy-logo.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://empasy.io/ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html"
+  },
   "url": "https://empasy.io/ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html"
 }
     </script>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <!-- SEO & AIO Tags -->
-    
-    
-    <!-- SEO & AIO Tags -->
-    <link rel="canonical" href="https://empasy.io/ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html">
-    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
-    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
-    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
-    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
-    <meta property="og:url" content="https://empasy.io/ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html">
-  <script type="module" crossorigin src="/assets/i18n-3nk6-OFj.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/style-BWlNIJrj.css">
+  <script type="module" crossorigin src="/assets/modulepreload-polyfill-Dezn_h7o.js"></script>
+  <script type="module" crossorigin src="/assets/i18n-CC8j1T6V.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-BgRDHG71.css">
 </head>
 <body>
-
-    <!-- Header Navigation -->
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -117,20 +118,26 @@
             </button>
             <nav id="emp-nav-links" class="nav-links" aria-label="主要メニュー">
                 <div class="dropdown">
-                    <a href="/ja/pages/index.html#solutions" class="dropbtn">ソリューション
+                    <a href="/ja/pages/index.html#roles" class="dropbtn">ソリューション
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </a>
-                    <div class="dropdown-content" style="min-width: 270px;">
-                        <span class="dropdown-group-heading">主力ソリューション 4種</span>
-                        <a href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>SyncVerse</strong> · 協業・承認統合管理</a>
-                        <a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>SyncETA</strong> · 自動テスト・PCアプリ</a>
-                        <a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>SyncBoot</strong> · 業務システム基盤</a>
-                        <a href="https://cms.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>SyncCMS</strong> · Web・多言語サイト管理</a>
-                        <span class="dropdown-group-heading">目的別拡張モジュール</span>
-                        <a href="/ja/pages/index.html#modules">データ・セキュリティ・業務拡張 (7種)</a>
+                    <div class="dropdown-content" style="min-width: 280px;">
+                        <span class="dropdown-group-heading">クイック案内</span>
+                        <a href="/ja/pages/index.html#finder"><strong>30秒 最適構成診断</strong> · 3問で提案</a>
+                        <a href="/ja/pages/index.html#roles"><strong>業務課題から探す</strong> · 部門・役割別</a>
+                        <span class="dropdown-group-heading">中核4領域</span>
+                        <a href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>協業・承認統合管理</strong> · SyncVerse</a>
+                        <a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>画面自動点検</strong> · SyncETA</a>
+                        <a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>社内管理システム基盤</strong> · SyncBoot</a>
+                        <a href="https://cms.empasy.io/ja/" target="_blank" rel="noopener noreferrer"><strong>Web・多言語サイト管理</strong> · SyncCMS</a>
+                        <span class="dropdown-group-heading">拡張領域・IT資料</span>
+                        <a href="/ja/pages/index.html#modules">データ照会・AI費用・セキュリティ・事業運営 (7種)</a>
+                        <a href="/ja/download_eta.html">SyncETA PCアプリ入手</a>
+                        <a href="https://doc.empasy.com/ja/" target="_blank" rel="noopener noreferrer">IT・開発者向け技術文書 &#8599;</a>
                     </div>
                 </div>
     
+                <a href="/ja/pages/index.html#finder">30秒診断</a>
                 <a href="/ja/pages/clients.html">導入事例</a>
     
                 <div class="dropdown">
@@ -146,8 +153,7 @@
                     </div>
                 </div>
     
-                <a href="https://doc.empasy.com/ja/" target="_blank" rel="noopener noreferrer">技術文書 &#8599;</a>
-                <a href="https://sync.empasy.io/ja/" target="_blank" rel="noopener noreferrer">統合デモ &#8599;</a>
+                <a href="https://sync.empasy.io/ja/" target="_blank" rel="noopener noreferrer">画面体験 &#8599;</a>
             </nav>
             <div class="nav-actions">
                 <div class="lang-switch" role="navigation" aria-label="言語切替">
@@ -155,7 +161,6 @@
                     <a href="/en/pages/index.html" data-lang="en">EN</a>
                     <a href="/ja/pages/index.html" data-lang="ja" class="active" aria-current="page">JA</a>
                 </div>
-                <a href="/ja/download_eta.html" class="btn btn-outline btn-sm">SyncETA 入手</a>
                 <a href="/ja/pages/contact.html" class="btn btn-primary btn-sm">お問い合わせ</a>
             </div>
         </div>
@@ -247,88 +252,132 @@
     })();
     </script>
 
-    <main class="container" style="padding-top: 95px; padding-bottom: 4rem; min-height: 80vh;">
-        <!-- Compact Breadcrumb / Back Link -->
-        <div style="max-width: 800px; margin: 0 auto 1.25rem auto; display: flex; align-items: center; justify-content: space-between;">
-            <a href="../../ja/blog/blog.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-secondary); font-size: 0.9rem; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'">
-                <i class="fas fa-arrow-left" style="font-size: 0.8rem;"></i>
-                <span>Tech Blog一覧へ</span>
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/ja/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Empasy インサイト一覧へ</span>
             </a>
-            <span class="badge" style="background: rgba(8,145,178,0.1); color: var(--primary-color); font-size: 0.8rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">Insights</span>
+            <span class="badge" style="margin-bottom: 0;">Vision &amp; Strategy</span>
         </div>
-        
-        <section style="padding: 0;">
-            <div class="container" style="padding: 0;">
-                ﻿<article style="max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: clamp(1.2rem, 5vw, 3rem); border-radius: 12px; border: 1px solid var(--border-color);">
-    <div style="line-height: 1.8; color: var(--text-primary);">
-                    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.2rem; color: var(--text-secondary); font-size: 0.9rem; flex-wrap: wrap;">
-                        <span>2026-07-18</span>
-                        <span>&bull;</span>
-                        <span>所要時間 約5分</span>
-                        <span>&bull;</span>
-                        <span style="color: var(--primary-color); font-weight: 600;">Vision & Strategy</span>
-                    </div>
 
-                    <h1 style="font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.35; margin-bottom: 1.8rem; color: var(--text-primary);">Boon to Business by Agility：Empasyが宣言する2026年ビジョンと自律運用エコシステムの未来</h1>
-
-        <p>こんにちは、Empasy技術ブログです。</p>
-        <p>ソフトウェアアーキテクチャのパラダイムがモノリシック(Monolithic)からマイクロサービスアーキテクチャ(MSA)へ、そしてクラウドネイティブを超えてAIエージェント中心へと急速に移行しています。Empasyは設立以来、<strong>「Boon to Business by Agility(俊敏性によるビジネス価値の最大化)」</strong>という確固たる哲学に基づき、エンタープライズ企業が技術的な複雑さに阻まれることなく、ビジネスの本質にのみ集中できる高性能ソリューションを提供してきました。</p>
-        <p>2026年、Empasyはこれまで培ってきた強力なソリューションラインナップを有機的に統合し、企業のコーディング・品質検証・意思決定の全プロセスを自律化する<strong>「超連結自律運用エコシステム(Self-Evolving Business Ecosystem)」</strong>への飛躍を宣言します。</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">1. 2026年のEmpasyの技術的拠点：断片化を超えた「超連結」</h2>
-        <p>これまでのIT市場は、開発の加速化(SyncBoot)、コンテンツ管理(SyncCMS)、テスト自動化(SyncETA)など、各領域の課題を解決する断片化されたAIツールの全盛期でした。しかし、各ツールが文脈(Context)を共有できなければ、結局のところ人間の開発者が途中でデータをコピーし、コマンドを入力しなければならないという断絶が生じます。</p>
-        <p>Empasyが考える2026年のコアバリューは<strong>「文脈の連結」</strong>です。グローバル標準プロトコルである<strong>MCP(Model Context Protocol)</strong>を全面的に採用し、自社のすべてのソリューションを自ら判断し協業する「独立型AIエージェント」へと進化させました。</p>
-        <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>ビジネスコアインフラ (SyncBoot):</strong> エンタープライズのクラウドネイティブ化を加速する標準MSAフルスタックアーキテクチャを提供します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>フロントエンドおよびコンテンツ制御 (SyncCMS):</strong> 開発者に依存することなく、現場の担当者が視覚的に組み立てるオープンなCMSエコシステムを維持します。</li>
-            <li style="margin-bottom: 0.5rem;"><strong>インテリジェントな品質安全網 (SyncETA):</strong> 機械語ログを人間のビジネス言語(Excel)に自律的に変換し、実行するノーコード(No-Code)テスト自動化を完成させます。</li>
-        </ul>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">2. 無人自律開発ライフサイクルの完成：SyncVerse</h2>
-        <p>2026年のEmpasyビジョンの中心軸である<strong>SyncVerse</strong>は、前述のコアソリューションを単一の頭脳のようにつなぐ中央AIオーケストレーションプラットフォームです。現場の担当者が自然言語で要件を提示すれば、人間がコーディングしたりサーバーを再起動したりしなくても、システムが自ら進化する<strong>「Zero-Touch AI DLC(Development Life Cycle)」</strong>パイプラインを稼働させます。</p>
-        <div class="modern-pipeline">
-          <div class="pipeline-step">
-            <div class="pipeline-title">自然言語要件の収れん</div>
-            <div class="pipeline-desc">ビジネス言語の入力</div>
-          </div><div class="pipeline-arrow">&rarr;</div>
-          <div class="pipeline-step">
-            <div class="pipeline-title">SyncBoot/CMS Agent</div>
-            <div class="pipeline-desc">ソースとUIの自律生成</div>
-          </div><div class="pipeline-arrow">&rarr;</div>
-          <div class="pipeline-step">
-            <div class="pipeline-title">SyncETA Agent</div>
-            <div class="pipeline-desc">無人回帰テストと自己修復</div>
-          </div><div class="pipeline-arrow">&rarr;</div>
-          <div class="pipeline-step">
-            <div class="pipeline-title">無停止自律デプロイ</div>
-            <div class="pipeline-desc">CI/CDパイプライン完走</div>
-          </div>
-        </div>
-        <p>この自律運用ループにより、大規模エンタープライズシステムの機能追加やリファクタリングの過程で発生する副作用を根本から遮断し、アイデアが商用サービスとして展開されるまでのリードタイムを劇的に短縮します。</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;">3. 最高意思決定インテリジェンスの内在化：SyncInsight</h2>
-        <p>自律運用エコシステムの最上位階層には、100%社内網内在化構造を備えた<strong>SyncInsight</strong>が位置します。</p>
-        <p>社内のERP、社内Wiki、外部の市場動向(SyncCrawl)など、異機種間で断片化されたデータ資産を<strong>Advanced RAGアーキテクチャ</strong>により統合知識化します。金融機関や公共機関の厳しいセキュリティ規制を完全に満たしながら、マルチエージェント交差分析を通じて最高経営陣(C-Level)に戦略的レポートをリアルタイムで提供します。</p>
-        <p>特に、SyncInsightが導き出した戦略的ビジネスアクションを経営陣が承認すると即座に、下位の実行主体である<strong>SyncVerseにコマンドプロトコルが直接送信</strong>され、システム開発とマーケティングページのデプロイがリアルタイムで連動する完璧な意思決定シナジーを達成します。</p>
-
-        <hr style="margin: 3rem 0; border: 0; border-top: 1px dashed var(--border-color);">
-
-        <h2 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.8rem; color: var(--text-primary); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem;"> ビジネスの舞台が変わります</h2>
-        <p>2026年にEmpasyが高度化していく技術エコシステムは、単に人間の労働を補助するシステムではありません。エンジニアが機械的なタイピングや単純な反復作業から解放され、より価値のある創造的なアーキテクチャ設計に集中できるよう支援するイノベーションです。</p>
-        <p><strong>"Boon to Business by Agility"</strong><br>Empasyは、最も安全で、最も俊敏で、自ら進化するソリューションを通じて、顧客企業のビジネスの舞台を未来へと移します。今後、技術ブログを通じて順次公開される各製品群別のMCPアーキテクチャ詳細高度化内容にぜひご期待ください。</p>
-    </div>
-</article>
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-07-18 (更新 2026-11-23)</span>
+                <span>&bull;</span>
+                <span>読了目安 約5分</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">ビジョン・方向性</span>
             </div>
-        </section>
+
+            <h1 class="ed-blog-title">人の判断に集中できる企業ソフトウェア：Empasy 2026 製品開発の方向性</h1>
+
+            <div class="ed-exec-summary" aria-label="経営層・現場担当者のための3行要約">
+                <div class="ed-exec-summary-kicker">経営層・現場担当者のための3行要約</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">従来の課題</span><span>単純な確認作業や部門間の転記業務に人手が奪われると、本来注力すべき事業企画や意思決定が遅れてしまいます。</span></li>
+                    <li><span class="ed-exec-summary-tag">解決アプローチ</span><span>反復作業は標準化された業務モジュールが担い、重要な変更はすべて担当者の確認と承認を経て安全に反映します。</span></li>
+                    <li><span class="ed-exec-summary-tag">導入効果</span><span>全社システムを一度に入れ替えることなく、課題の大きい業務から1〜2週間の検証を経て段階的に拡張できます。</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">自社の業務フローにそのまま適用できるか確認してみませんか？</span>
+                    <a href="/ja/pages/contact.html?topics=system" class="btn btn-primary btn-sm" style="min-height: 36px;">導入相談を申し込む</a>
+                </div>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>IT担当者・開発者向けの詳細技術解説</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="この記事の目次">
+  <div class="ed-article-toc-title">この記事の目次</div>
+  <ol>
+    <li><a href="#sec-1">1. 分断されたツールをつなぐ文脈連携（MCP標準）</a></li>
+    <li><a href="#sec-2">2. 段階別承認を組み込んだ協業開発サイクル：SyncVerse</a></li>
+    <li><a href="#sec-3">3. 社内セキュリティ境界を守る意思決定支援：SyncInsight</a></li>
+    <li><a href="#sec-4">4. これからの企業ソフトウェアのあり方</a></li>
+  </ol>
+</nav>
+<p>企業ソフトウェアのアーキテクチャは、単体システムや個別スクリプトの寄せ集めから、専門モジュール同士が文脈を共有しながら協調する段階へと進化しています。Empasyは創業以来掲げる<strong>「Boon to Business by Agility（俊敏性によるビジネス価値の最大化）」</strong>の理念のもと、技術的な煩雑さを取り除き、現場が本質的な判断に集中できる実務ソフトウェアを提供してきました。</p>
+<p>2026年、Empasyは4つの中核業務領域と7つの目的別拡張モジュールで構成される<strong>SyncSeries エコシステム</strong>を共通基盤上で統合し、反復業務の自動化と担当者による厳格な承認統制を両立する運用基盤をさらに強化します。</p>
+
+<h2 id="sec-1">1. 分断されたツールをつなぐ文脈連携（MCP標準）</h2>
+<p>開発支援、Webサイト管理、テスト自動化、セキュリティ監視を別々のツールで導入すると、ツール間の文脈が途切れ、担当者がチャットや表計算ソフトで手作業の転記を繰り返す課題が生じます。</p>
+<p>Empasyはオープン標準の<strong>MCP（Model Context Protocol）</strong>と共通A2A認証を全製品に採用しました。認証・権限・監査基盤を共有しているため、まずは優先度の高い1領域から小さく導入し、将来的に他領域を接続する際の統合作業を最小限に抑えられます。</p>
+<ul>
+  <li><strong>4つの中核業務領域：</strong>協業・承認管制（<strong>SyncVerse</strong>）、クリック記録による画面自動点検（<strong>SyncETA</strong>）、標準社内業務システム基盤（<strong>SyncBoot</strong>）、多言語Webサイト統合管理（<strong>SyncCMS</strong>）</li>
+  <li><strong>7つの目的別拡張モジュール：</strong>社内閉域データ照会（<strong>SyncInsight</strong>）、AI費用・個人情報統制（<strong>SyncLLM</strong>）、公開Webデータ自動収集（<strong>SyncCrawl</strong>）、利益率保護EC運営（<strong>SyncShop</strong>）、案件損益・下請法期限管理（<strong>SyncOps</strong>）、APIセキュリティ・eBPF防御（<strong>SyncAPIM</strong>）、グローバル脆弱性ルール配信（<strong>SyncWatch</strong>）</li>
+</ul>
+
+<h2 id="sec-2">2. 段階別承認を組み込んだ協業開発サイクル：SyncVerse</h2>
+<p>2026年ロードマップの中核を担う<strong>SyncVerse</strong>は、現場要件の整理から仕様策定、実装依頼、自動検証、担当者承認までを一貫して追跡できる管制ハブです。未検証の自動反映ではなく、<strong>5-Step Spec Studio</strong>と<strong>多段階承認（Multi-Party HITL）</strong>を組み合わせることで、企業現場で安心して運用できる変更ガバナンスを実現します。</p>
+
+<div class="modern-pipeline">
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 01</div>
+    <div class="pipeline-title">要件・仕様の整理</div>
+    <div class="pipeline-desc">SyncVerse Spec Studioで業務要件と受入基準を構造化</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 02</div>
+    <div class="pipeline-title">草案・コード生成</div>
+    <div class="pipeline-desc">SyncSDK 15種のコーディング基盤と各エージェントがPR・草案作成</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 03</div>
+    <div class="pipeline-title">自動回帰・品質検証</div>
+    <div class="pipeline-desc">SyncETAの画面・API点検および4-Cycle品質ゲート検証</div>
+  </div>
+  <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+  <div class="pipeline-step">
+    <div class="pipeline-kicker">STEP 04</div>
+    <div class="pipeline-title">担当者承認・反映</div>
+    <div class="pipeline-desc">開発者・管理者のレビュー承認(HITL)後にCI/CD反映・スナップショット保存</div>
+  </div>
+</div>
+
+<p>ソースコード変更を伴う作業は <code>SyncSDK</code> 経由で専用ブランチと Pull Request を作成し、社内開発者が検証・承認したうえで本番パイプラインへ進めます。コンテンツや価格などの運用変更も変更直前のスナップショットを自動保存し、万一の際に即座に復元できます。</p>
+
+<h2 id="sec-3">3. 社内セキュリティ境界を守る意思決定支援：SyncInsight</h2>
+<p>最上位レイヤーには、社内サーバーや閉域ネットワーク内で稼働する<strong>SyncInsight</strong>を配置しています。社内業務データと<strong>SyncCrawl</strong>が整形した外部市場情報を、<strong>ハイブリッドRAG（<code>pgvector</code> + BM25 + ナレッジグラフ）</strong>および<strong>読み取り専用 NL2SQL ファイアウォール</strong>で安全に横断分析します。</p>
+<p>経営層や現場担当者が日常の言葉で質問するだけで、機密データを外部クラウドに送信することなく表・グラフ・要因要約を取得でき、承認された改善施策はそのまま<strong>SyncVerse</strong>の実行フローへ連携できます。</p>
+
+<h2 id="sec-4">4. これからの企業ソフトウェアのあり方</h2>
+<p>Empasyが目指す2026年のソフトウェアは、人を排除する自動化ではありません。手作業の確認や転記、定型テストの負担をシステムが肩代わりすることで、エンジニアと事業担当者がより質の高い設計と責任ある判断に専念できる環境を整えることです。</p>
+<p><strong>「Boon to Business by Agility」</strong> — まずは最も負担の大きい1業務から1〜2週間のパイロットで効果を確かめ、安全かつ着実に拡張していく導入プロセスをご支援します。</p>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>SyncSeries 統合デモポータルで実画面をご確認いただけます</strong>
+                <span>会員登録なしで SyncVerse、SyncETA、SyncBoot、SyncCMS および拡張モジュールの動作画面を体験できます。</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="https://sync.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">実画面デモを体験 &#8599;</a>
+                <a href="/ja/pages/contact.html?topics=system" class="btn btn-outline btn-sm">導入相談</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="あわせて読みたいインサイト">
+        <h2 class="ed-related-heading">あわせて読みたいインサイト</h2>
+        <div class="ed-related-grid">
+        <a href="/ja/blog/empasy-core-solution-architecture-syncverse.html" class="ed-related-card">
+            <span class="ed-related-cat">製品群まとめ</span>
+            <span class="ed-related-title">ひとつの共通基盤で構成された SyncSeries 中核製品群の全体像</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        <a href="/ja/blog/syncverse-mcp-ai-orchestration-architecture.html" class="ed-related-card">
+            <span class="ed-related-cat">協業・段階別承認</span>
+            <span class="ed-related-title">分散した業務ツールをひとつに繋ぐ協業・承認管理：SyncVerse 運用ガイド</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        </div>
+    </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 36px; padding-bottom: 36px; border-bottom: 1px solid #e2e8f0;" class="emp-footer-grid">
@@ -337,16 +386,16 @@
                         <img src="/images/logo.svg" alt="EMPASY" style="height: 22px; width: auto; margin-bottom: 14px;">
                     </a>
                     <p style="font-size: 14px; line-height: 1.7; color: #475569; max-width: 320px;">
-                        検証済みの共通基盤の上で、企業の開発・テスト・運用業務を支える実務向けソフトウェアを提供しています。
+                        繰り返される企業業務を自動化し、重要な判断は担当者の承認を経て安全に反映する実務向けソフトウェアを提供しています。
                     </p>
                 </div>
                 <div>
-                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">主力ソリューション</h4>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">中核業務領域</h4>
                     <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
-                        <li><a href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer">SyncVerse</a></li>
-                        <li><a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer">SyncETA</a></li>
-                        <li><a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer">SyncBoot</a></li>
-                        <li><a href="https://cms.empasy.io/ja/" target="_blank" rel="noopener noreferrer">SyncCMS</a></li>
+                        <li><a href="https://verse.empasy.io/ja/" target="_blank" rel="noopener noreferrer">協業・承認管理 (SyncVerse)</a></li>
+                        <li><a href="https://eta.empasy.io/ja/" target="_blank" rel="noopener noreferrer">画面自動点検 (SyncETA)</a></li>
+                        <li><a href="https://boot.empasy.io/ja/" target="_blank" rel="noopener noreferrer">社内管理システム (SyncBoot)</a></li>
+                        <li><a href="https://cms.empasy.io/ja/" target="_blank" rel="noopener noreferrer">Web・多言語管理 (SyncCMS)</a></li>
                     </ul>
                 </div>
                 <div>
@@ -389,6 +438,5 @@
         </style>
     </footer>
 
-    <!-- Scripts -->
 </body>
 </html>
