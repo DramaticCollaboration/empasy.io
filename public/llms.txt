@@ -16,8 +16,8 @@ Rather than asking non-IT executives and business teams to navigate a catalog of
    - Connect corporate AI tools in one place to enforce departmental budgets, reuse repeated answers, and automatically mask sensitive personal information (`SyncLLM`).
    - Track requests, reviews, quality summaries, and staged human sign-offs in one transparent screen (`SyncVerse`).
 
-2. **Operations, Quality & IT (Automated Screen Checks & Standard Internal Apps)**
-   - Record routine pre-release website/app checks by clicking—with zero coding—and automatically adapt when screens or button positions change (`SyncETA`).
+2. **Operations, Quality & IT (Web Test Automation, Site Audit & Standard Internal Apps)**
+   - Automate web screen checks via browser action recording, Excel/one-line prompt conversion, multi-account testing, full link and text-overlap audits (with security keypad/cookie banner bypass and honest `[Needs Review]` triage), and one-click Bug Kanban re-verification (`SyncETA`).
    - Launch or modernize internal management systems faster using ready-made sign-in, organization-linked menu/button permissions, electronic approvals, and audit trails (`SyncBoot`).
 
 3. **Marketing & Commerce (Multilingual Websites & Pricing Safeguards)**
@@ -38,7 +38,7 @@ Rather than asking non-IT executives and business teams to navigate a catalog of
 
 ### 4 Core Areas
 - **Collaboration & Staged Approval Hub (`SyncVerse`)**: https://verse.empasy.io/ | Docs: https://doc.empasy.com/syncverse/
-- **Click-Based Automated Screen Checks (`SyncETA`)**: https://eta.empasy.io/ | Desktop App: https://empasy.io/ko/download_eta.html | Docs: https://doc.empasy.com/synceta/
+- **Web Test Automation & Site Audit Platform (`SyncETA`)**: https://eta.empasy.io/ | Desktop App: https://empasy.io/ko/download_eta.html | Brochure PDF (15p): https://empasy.io/downloads/proposals/SyncETA_Proposal.pdf | Docs: https://doc.empasy.com/synceta/
 - **Standard Internal Management System Core (`SyncBoot`)**: https://boot.empasy.io/ | Docs: https://doc.empasy.com/syncboot/
 - **Unified Multilingual Website Management (`SyncCMS`)**: https://cms.empasy.io/ | Docs: https://doc.empasy.com/synccms/
 
