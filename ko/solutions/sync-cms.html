@@ -3,101 +3,573 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SyncCMS 공식 제품 페이지 | 엠파시(Empasy)</title>
-    <meta name="robots" content="noindex, follow">
-    <link rel="canonical" href="https://cms.empasy.io/">
-    <meta http-equiv="refresh" content="0;url=https://cms.empasy.io/">
-    <script>window.location.replace('https://cms.empasy.io/');</script>
+    <title>SyncCMS — 글 작성부터 검수·다국어 발행까지 한곳에서 관리하는 웹사이트 | 엠파시(Empasy)</title>
+    <meta name="description" content="여러 브랜드 사이트와 다국어 페이지를 하나의 관리 화면에서 운영하고, 게시 전 검색 노출과 웹 접근성까지 간편하게 점검합니다.">
+    <meta name="author" content="주식회사 엠파시 (Empasy Inc.)">
+    <link rel="canonical" href="https://empasy.io/ko/solutions/sync-cms.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-cms.html">
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-cms.html">
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-cms.html">
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-cms.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="엠파시 (Empasy)">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="SyncCMS — 글 작성부터 검수·다국어 발행까지 한곳에서 관리하는 웹사이트 | 엠파시(Empasy)">
+    <meta property="og:description" content="여러 브랜드 사이트와 다국어 페이지를 하나의 관리 화면에서 운영하고, 게시 전 검색 노출과 웹 접근성까지 간편하게 점검합니다.">
+    <meta property="og:url" content="https://empasy.io/ko/solutions/sync-cms.html">
+    <meta property="og:image" content="https://empasy.io/images/screenshots/sync-cms/screen_01.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SyncCMS — 글 작성부터 검수·다국어 발행까지 한곳에서 관리하는 웹사이트 | 엠파시(Empasy)">
+    <meta name="twitter:description" content="여러 브랜드 사이트와 다국어 페이지를 하나의 관리 화면에서 운영하고, 게시 전 검색 노출과 웹 접근성까지 간편하게 점검합니다.">
+    <meta name="twitter:image" content="https://empasy.io/images/screenshots/sync-cms/screen_01.png">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            margin: 0;
-            font-family: Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-            background: #ffffff;
-            color: #0f172a;
-            display: flex;
-            min-height: 100vh;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-            box-sizing: border-box;
-        }
-        .redirect-card {
-            max-width: 460px;
-            width: 100%;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 14px;
-            padding: 36px 32px;
-            text-align: center;
-            box-shadow: 0 12px 32px -20px rgba(15, 23, 42, 0.14);
-        }
-        .redirect-brand {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: #0e7490;
-            margin-bottom: 10px;
-        }
-        h1 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin: 0 0 10px;
-            line-height: 1.35;
-        }
-        p {
-            font-size: 0.94rem;
-            color: #475569;
-            margin: 0 0 24px;
-            line-height: 1.65;
-            word-break: keep-all;
-        }
-        .redirect-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-        }
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 12px 20px;
-            border-radius: 8px;
-            background: #0f172a;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            box-sizing: border-box;
-        }
-        .btn-primary:hover {
-            background: #1e293b;
-        }
-        .link-home {
-            font-size: 0.88rem;
-            color: #475569;
-            text-decoration: underline;
-            margin-top: 4px;
-        }
-        .link-home:hover {
-            color: #0f172a;
-        }
-    </style>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SyncCMS",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "url": "https://empasy.io/ko/solutions/sync-cms.html",
+  "image": "https://empasy.io/images/screenshots/sync-cms/screen_01.png",
+  "description": "여러 브랜드 사이트와 다국어 페이지를 하나의 관리 화면에서 운영하고, 게시 전 검색 노출과 웹 접근성까지 간편하게 점검합니다.",
+  "provider": {
+    "@type": "Organization",
+    "name": "주식회사 엠파시 (Empasy Inc.)",
+    "url": "https://empasy.io/"
+  },
+  "inLanguage": "ko"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "홈",
+      "item": "https://empasy.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "솔루션",
+      "item": "https://empasy.io/#architecture"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SyncCMS",
+      "item": "https://empasy.io/ko/solutions/sync-cms.html"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "여러 개의 브랜드 홈페이지나 해외 법인 사이트를 한 번에 관리할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 하나의 관리 콘솔 안에서 사이트별 메뉴·권한·다국어 버전을 분리해 운영할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "자동 번역된 문구를 사람이 직접 다듬고 발행할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. AI 번역 초안을 확인한 뒤 담당자가 문구를 수정하고 승인해야 실제 사이트에 게시되도록 운영합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "기존 디자인을 유지하면서 콘텐츠 관리 기능만 연결할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 기존 웹사이트 디자인은 유지하면서 콘텐츠 등록·발행·다국어 관리 기능만 연동하는 방식도 가능합니다."
+      }
+    }
+  ]
+}
+    </script>
 </head>
-<body>
-    <main class="redirect-card">
-        <span class="redirect-brand">Empasy SyncSeries</span>
-        <h1>SyncCMS 공식 페이지로 이동 중입니다</h1>
-        <p>최신 제품 소개와 화면 안내는 전용 공식 사이트(https://cms.empasy.io/)에서 확인하실 수 있습니다.</p>
-        <div class="redirect-actions">
-            <a class="btn-primary" href="https://cms.empasy.io/">SyncCMS 공식 사이트 열기 &#8599;</a>
-            <a class="link-home" href="/">엠파시 홈으로 돌아가기</a>
-        </div>
+<body class="sol-page">
+    {{> header_ko }}
+
+    <main id="main-content">
+        <section class="sol-hero">
+            <div class="container">
+                <nav class="sol-breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">홈</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="/#architecture">솔루션</a>
+                    <span aria-hidden="true">/</span>
+                    <span aria-current="page" class="sol-product-name">SyncCMS</span>
+                </nav>
+
+                <div class="sol-hero-copy">
+                    <p class="sol-eyebrow">SyncSeries 주력 솔루션 · 웹사이트 및 다국어 콘텐츠 관리</p>
+                    <h1 class="sol-title">글 작성부터 검수·다국어 발행까지 한곳에서 관리하는 웹사이트</h1>
+                    <p class="sol-subtitle">여러 브랜드 사이트와 다국어 페이지를 하나의 관리 화면에서 운영하고, 게시 전 검색 노출과 웹 접근성까지 간편하게 점검합니다.</p>
+
+                    <div class="sol-actions">
+                        <a href="#demo" class="btn btn-primary">무료 체험</a>
+                        <a href="/ko/pages/contact.html" class="btn btn-outline">도입 문의</a>
+                        <a href="/downloads/proposals/SyncCMS_Proposal.pdf" target="_blank" rel="noopener noreferrer" class="sol-secondary-link">제품소개서 PDF &#8599;</a>
+                        <a href="https://demo.empasy.io/products/sync-cms" target="_blank" rel="noopener noreferrer" class="sol-secondary-link">통합 데모 포털에서 보기 &#8599;</a>
+                    </div>
+                </div>
+
+                <nav class="sol-anchor-nav" aria-label="SyncCMS">
+                    <a href="#screens">실제 화면</a>
+                    <a href="#features">주요 기능</a>
+                    <a href="#demo">바로 체험</a>
+                    <a href="#faq">자주 묻는 질문</a>
+                </nav>
+
+                <div id="screens" class="sol-showcase-wrap" data-sol-showcase data-sol-product="SyncCMS">
+                    <div class="sol-showcase-tabs" role="tablist" aria-label="실제 작동 화면 선택">
+                            <button type="button" role="tab" class="sol-showcase-tab active"
+                                aria-selected="true"
+                                data-sol-tab
+                                data-slide-title="멀티사이트 콘텐츠 및 발행 현황"
+                                data-slide-route="cms-admin.empasy.io"
+                                data-slide-summary="운영 중인 여러 사이트의 발행 건수, 검수 대기 원고, 방문 추이를 한눈에 확인합니다."
+                                data-slide-img="/images/screenshots/sync-cms/screen_01.png"
+                                data-slide-demo="https://cms-admin.empasy.io/dashboard/analysis"
+                                data-slide-external="true">
+                                통합 현황판
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="원고 작성 및 승인·버전 관리"
+                                data-slide-route="cms-admin.empasy.io"
+                                data-slide-summary="에디터에서 글을 작성하고 검수 요청, 버전 비교, 예약 발행까지 순서대로 관리합니다."
+                                data-slide-img="/images/screenshots/sync-cms/screen_02.png"
+                                data-slide-demo="https://cms-admin.empasy.io/cms/content"
+                                data-slide-external="true">
+                                콘텐츠 에디터
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="게시 전 검색 노출 및 접근성 확인"
+                                data-slide-route="cms-admin.empasy.io"
+                                data-slide-summary="제목·요약 문구, 이미지 대체 텍스트 등 놓치기 쉬운 웹 품질 항목을 게시 전에 점검합니다."
+                                data-slide-img="/images/screenshots/sync-cms/screen_03.png"
+                                data-slide-demo="https://cms-admin.empasy.io/cms/ai/audit"
+                                data-slide-external="true">
+                                검색·접근성 점검
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="브랜드 용어집 기반 다국어 현지화"
+                                data-slide-route="cms-admin.empasy.io"
+                                data-slide-summary="고유 제품명과 전문 표현의 일관성을 유지하면서 다국어 페이지 번역본을 관리합니다."
+                                data-slide-img="/images/screenshots/sync-cms/screen_04.png"
+                                data-slide-demo="https://cms-admin.empasy.io/cms/ai/localization"
+                                data-slide-external="true">
+                                다국어 관리
+                            </button>
+                    </div>
+
+                    <div class="sol-showcase-frame">
+                        <div class="sol-showcase-bar">
+                            <div class="sol-showcase-bar-left">
+                                <span class="sol-showcase-title" data-sol-title>멀티사이트 콘텐츠 및 발행 현황</span>
+                                <span class="sol-showcase-route is-mono" data-sol-route>cms-admin.empasy.io</span>
+                            </div>
+                            <div class="sol-showcase-bar-actions">
+                                <button type="button" class="sol-zoom-btn" data-sol-zoom aria-label="실제 화면 확대 보기">확대</button>
+                                <a href="https://cms-admin.empasy.io/dashboard/analysis" target="_blank" rel="noopener noreferrer" class="sol-demo-link" data-sol-demo-link>
+                                    <span class="sol-link-desktop">이 화면 직접 열어보기</span>
+                                    <span class="sol-link-mobile">열기</span>
+                                    <span aria-hidden="true">&#8599;</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="sol-showcase-viewport">
+                            <button type="button" class="sol-img-btn" data-sol-img-btn aria-label="SyncCMS 멀티사이트 콘텐츠 및 발행 현황">
+                                <img src="/images/screenshots/sync-cms/screen_01.png" alt="SyncCMS - 멀티사이트 콘텐츠 및 발행 현황" class="sol-showcase-img" loading="eager" data-sol-img>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="sol-showcase-caption" data-sol-caption>운영 중인 여러 사이트의 발행 건수, 검수 대기 원고, 방문 추이를 한눈에 확인합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">업무의 변화</p>
+                    <h2 class="ed-title">기존 방식과 무엇이 다른가요?</h2>
+                    <p class="ed-desc">공지사항, 보도자료, 브랜드 소개 페이지가 늘어날수록 번거로워지는 수정·승인·번역 작업을 정돈된 발행 흐름으로 관리합니다.</p>
+                </div>
+
+                <div class="sol-compare-grid">
+                    <div class="sol-compare-card is-before">
+                        <h3>기존 웹사이트 운영 방식</h3>
+                        <ul>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>브랜드나 국가별 사이트가 따로 구축되어 있어 문구 하나를 고치려면 여러 곳을 각각 수정해야 합니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>원고 검토와 게시 승인이 이메일·메신저로 오가며 최종 버전이 헷갈리기 쉽습니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>검색 노출 설정이나 이미지 설명 누락 여부를 게시 전에 체계적으로 점검하기 어렵습니다.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sol-compare-card is-after">
+                        <h3>SyncCMS 도입 후</h3>
+                        <ul>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>여러 브랜드와 다국어 사이트의 페이지와 원고를 하나의 관리 화면에서 통합 관리합니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>초안 작성 -&gt; 검수 -&gt; 승인 -&gt; 예약 발행과 이전 버전 되돌리기까지 흐름이 기록됩니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>게시 전에 검색 노출 항목, 접근성 기본 요소, 민감정보 포함 여부를 한 번에 점검합니다.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="ed-section">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">주요 기능</p>
+                    <h2 class="ed-title">SyncCMS로 할 수 있는 일</h2>
+                </div>
+
+                <div class="sol-features-grid">
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">01</span>
+                        <h3>멀티사이트 통합 콘텐츠 관리</h3>
+                        <p>기업 홈페이지, 제품별 사이트, 글로벌 법인 페이지를 하나의 관리자 화면에서 사이트별로 나누어 운영합니다.</p>
+                    </article>
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">02</span>
+                        <h3>작성·검수·발행 승인 흐름</h3>
+                        <p>작성자, 검수자, 발행 관리자 역할을 나누어 오타나 미승인 문구가 바로 공개되는 실수를 예방합니다.</p>
+                    </article>
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">03</span>
+                        <h3>검색 품질 점검 및 다국어 초안 지원</h3>
+                        <p>검색엔진 기본 항목과 웹 접근성을 확인하고, 사내 용어집을 참고해 영·일·중 다국어 번역 초안을 정리합니다.</p>
+                    </article>
+                </div>
+
+                <div class="sol-steps-block">
+                    <h3 class="sol-sub-heading">이렇게 사용합니다</h3>
+                    <div class="sol-steps-grid">
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 01</span>
+                            <h4>원고 작성 및 초안 정리</h4>
+                            <p>에디터에서 공지·블로그·소개 페이지를 작성하고 필요한 이미지와 검색 요약 정보를 채웁니다.</p>
+                        </div>
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 02</span>
+                            <h4>품질 점검 및 다국어 번역</h4>
+                            <p>검색 노출·접근성 체크와 브랜드 용어집 기반 다국어 초안을 확인합니다.</p>
+                        </div>
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 03</span>
+                            <h4>담당자 승인 후 게시</h4>
+                            <p>승인이 완료되면 즉시 또는 예약한 시간에 웹사이트에 반영되며, 이전 버전으로 복구할 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">직접 체험</p>
+                    <h2 class="ed-title">설치 없이 실제 화면을 눌러 보세요</h2>
+                    <p class="ed-desc">체험 환경에서 작성·수정한 콘텐츠는 매일 오전 4시에 초기 상태로 복원됩니다.</p>
+                </div>
+
+                <div class="sol-demo-grid">
+                    <div class="sol-demo-panel">
+                        <h3 class="sol-panel-title">1. 체험 화면 열기</h3>
+                        <div class="sol-entry-stack">
+                        <div class="sol-entry-card is-primary">
+                            <div class="sol-entry-info">
+                                <div class="sol-entry-title">콘텐츠 관리 콘솔</div>
+                                <p class="sol-entry-desc">원고 작성, 검수 승인, 검색 품질 점검, 다국어 관리를 체험하는 관리자 화면입니다.</p>
+                            </div>
+                            <a href="https://cms-admin.empasy.io" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">관리 콘솔 열기 &#8599;</a>
+                        </div>
+                        <div class="sol-entry-card">
+                            <div class="sol-entry-info">
+                                <div class="sol-entry-title">발행 웹사이트 보기</div>
+                                <p class="sol-entry-desc">관리 콘솔에서 게시한 콘텐츠가 실제 방문자에게 어떻게 보이는지 확인합니다.</p>
+                            </div>
+                            <a href="https://cms-app.empasy.io" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">웹사이트 열기 &#8599;</a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="sol-demo-panel">
+                        <h3 class="sol-panel-title">2. 체험 계정 복사</h3>
+                        <div class="sol-account-box is-primary">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">콘텐츠 총괄 관리자</span>
+                                <span class="sol-account-note">기본 체험 계정</span>
+                            </div>
+                            <p class="sol-account-scope">사이트 관리, 원고 발행 승인, 품질 점검, 다국어 설정 전체 권한을 체험합니다.</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="admin"
+                                    data-copy-label="콘텐츠 총괄 관리자 아이디"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">아이디</span>
+                                    <code class="sol-copy-value">admin</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="콘텐츠 총괄 관리자 비밀번호"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">비밀번호</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                            </div>
+                        </div>
+                        <details class="sol-more-accounts">
+                            <summary>다른 역할 계정 보기 (2개)</summary>
+                            <div class="sol-more-accounts-list">
+                                
+                        <div class="sol-account-box">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">편집·발행 담당자</span>
+                                
+                            </div>
+                            <p class="sol-account-scope">원고 검토 및 최종 게시 승인 흐름을 확인합니다.</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="editor"
+                                    data-copy-label="편집·발행 담당자 아이디"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">아이디</span>
+                                    <code class="sol-copy-value">editor</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="편집·발행 담당자 비밀번호"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">비밀번호</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="sol-account-box">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">콘텐츠 작성자</span>
+                                
+                            </div>
+                            <p class="sol-account-scope">초안 작성 후 검수 요청을 올리는 작성자 화면을 체험합니다.</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="writer"
+                                    data-copy-label="콘텐츠 작성자 아이디"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">아이디</span>
+                                    <code class="sol-copy-value">writer</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="콘텐츠 작성자 비밀번호"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">비밀번호</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                            </div>
+                        </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="sol-try-box">
+                    <h3 class="sol-try-title">로그인 후 확인해 볼 3가지</h3>
+                    <div class="sol-try-grid">
+                        
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">01</span>
+                                <span class="sol-try-menu">콘텐츠 관리</span>
+                            </div>
+                            <h4>원고 작성 및 승인 흐름 보기</h4>
+                            <p>작성된 글의 검수 상태와 발행 승인 절차를 직접 확인해 보세요.</p>
+                        </div>
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">02</span>
+                                <span class="sol-try-menu">품질 점검</span>
+                            </div>
+                            <h4>게시 전 검색·접근성 확인</h4>
+                            <p>검색 노출에 필요한 기본 항목과 누락 요소를 점검 결과 화면에서 살펴보세요.</p>
+                        </div>
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">03</span>
+                                <span class="sol-try-menu">다국어 관리</span>
+                            </div>
+                            <h4>용어집 기준 번역 관리</h4>
+                            <p>국문 원고가 다국어 페이지로 어떻게 연결·관리되는지 확인해 보세요.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="ed-section">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">도입 안내</p>
+                    <h2 class="ed-title">조직 상황에 맞춰 필요한 만큼만 시작하세요</h2>
+                    <p class="ed-desc">전체 시스템을 한꺼번에 바꿀 필요 없이, 현재 가장 시급한 업무 영역부터 단독으로 적용할 수 있습니다.</p>
+                </div>
+
+                <div class="sol-adoption-grid">
+                    <div class="sol-adoption-card">
+                        <h3>대표 홈페이지·블로그 통합 개편</h3>
+                        <p>흩어져 있던 브랜드 사이트와 공지·보도자료 페이지를 SyncCMS 한 곳으로 모아 작성·승인·예약 발행을 표준화합니다.</p>
+                    </div>
+                    <div class="sol-adoption-card">
+                        <h3>기존 디자인 유지 · 관리 기능 연동</h3>
+                        <p>현재 운영 중인 웹사이트 디자인은 그대로 유지하면서 원고 검수, 검색 품질 점검, 다국어 관리 기능만 연결해 도입합니다.</p>
+                    </div>
+                    <div class="sol-adoption-card">
+                        <h3>글로벌 법인·다국어 사이트 확장</h3>
+                        <p>브랜드 용어집을 기준으로 영·일·중 다국어 페이지를 일관되게 운영하고, 국가별 담당자 권한을 분리해 관리합니다.</p>
+                    </div>
+                </div>
+
+                <div class="sol-faq-block">
+                    <h3 class="sol-sub-heading">자주 묻는 질문</h3>
+                    <div class="sol-faq-list">
+                    <div class="faq-item">
+                        <details open>
+                            <summary>여러 개의 브랜드 홈페이지나 해외 법인 사이트를 한 번에 관리할 수 있나요?</summary>
+                            <div class="faq-answer">네. 하나의 관리 콘솔 안에서 사이트별 메뉴·권한·다국어 버전을 분리해 운영할 수 있습니다.</div>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>자동 번역된 문구를 사람이 직접 다듬고 발행할 수 있나요?</summary>
+                            <div class="faq-answer">네. AI 번역 초안을 확인한 뒤 담당자가 문구를 수정하고 승인해야 실제 사이트에 게시되도록 운영합니다.</div>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>기존 디자인을 유지하면서 콘텐츠 관리 기능만 연결할 수 있나요?</summary>
+                            <div class="faq-answer">네. 기존 웹사이트 디자인은 유지하면서 콘텐츠 등록·발행·다국어 관리 기능만 연동하는 방식도 가능합니다.</div>
+                        </details>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="ed-doc-callout sol-tech-callout">
+                    <p>개발·인프라 담당자를 위한 상세 아키텍처와 연동 규격은 기술 문서 포털에서 확인하실 수 있습니다.</p>
+                    <a href="https://doc.empasy.com/synccms/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">개발자 기술 문서 (doc.empasy.com) &#8599;</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="ed-section ed-section-tinted sol-related-section">
+            <div class="container">
+                <div class="sol-related-head">
+                    <div>
+                        <p class="ed-kicker">함께 쓰면 좋은 모듈</p>
+                        <h2 class="sol-related-title">SyncCMS와 자주 연결해 사용하는 기능</h2>
+                    </div>
+                    <a href="/#architecture" class="sol-all-link">전체 11종 구성도 보기 &#8594;</a>
+                </div>
+
+                <div class="sol-related-grid">
+                    <a href="/ko/solutions/sync-eta.html" class="sol-related-card">
+                        <span class="sol-related-cat">주력 · 자동 테스트</span>
+                        <h3>SyncETA</h3>
+                        <p>웹사이트 개편이나 발행 후 화면 깨짐과 링크 오류를 자동으로 점검합니다.</p>
+                        <span class="sol-related-more">자세히 보기 &#8594;</span>
+                    </a>
+                    <a href="/ko/solutions/sync-shop.html" class="sol-related-card">
+                        <span class="sol-related-cat">확장 · 쇼핑몰 운영</span>
+                        <h3>SyncShop</h3>
+                        <p>기획전·브랜드 콘텐츠를 쇼핑몰 상품 운영과 자연스럽게 연결합니다.</p>
+                        <span class="sol-related-more">자세히 보기 &#8594;</span>
+                    </a>
+                    <a href="/ko/solutions/sync-boot.html" class="sol-related-card">
+                        <span class="sol-related-cat">주력 · 업무 시스템 기반</span>
+                        <h3>SyncBoot</h3>
+                        <p>사내 조직도 및 권한 체계와 연계해 통합 운영 환경을 구성합니다.</p>
+                        <span class="sol-related-more">자세히 보기 &#8594;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
+
+    {{> footer_ko }}
+
+    <div id="sol-lightbox" class="sol-lightbox" role="dialog" aria-modal="true" aria-label="SyncCMS">
+        <div class="sol-lightbox-bar">
+            <span id="sol-lightbox-title" class="sol-lightbox-title">멀티사이트 콘텐츠 및 발행 현황</span>
+            <button type="button" id="sol-lightbox-close" class="sol-lightbox-close" aria-label="확대 닫기">닫기</button>
+        </div>
+        <div class="sol-lightbox-stage">
+            <img id="sol-lightbox-img" src="/images/screenshots/sync-cms/screen_01.png" alt="SyncCMS" class="sol-lightbox-img">
+        </div>
+        <p class="sol-lightbox-hint">좌우로 밀거나 손가락으로 확대해 세부 화면을 확인할 수 있습니다.</p>
+    </div>
+
+    <div id="sol-copy-toast" class="sol-copy-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="/assets/js/solution-page.js"></script>
 </body>
 </html>

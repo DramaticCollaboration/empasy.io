@@ -3,101 +3,537 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SyncLLM 공식 제품 페이지 | 엠파시(Empasy)</title>
-    <meta name="robots" content="noindex, follow">
-    <link rel="canonical" href="https://llm.empasy.io/">
-    <meta http-equiv="refresh" content="0;url=https://llm.empasy.io/">
-    <script>window.location.replace('https://llm.empasy.io/');</script>
+    <title>SyncLLM — 여러 AI 모델을 한곳에 연결해 비용과 개인정보를 관리하세요 | 엠파시(Empasy)</title>
+    <meta name="description" content="부서마다 제각각 쓰던 AI 이용 계정을 하나로 모아 예산을 관리하고, 비슷한 질문은 이전 답변을 재활용하며 민감정보는 전송 전 가림 처리합니다.">
+    <meta name="author" content="주식회사 엠파시 (Empasy Inc.)">
+    <link rel="canonical" href="https://empasy.io/ko/solutions/sync-llm.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-llm.html">
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-llm.html">
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-llm.html">
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-llm.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="엠파시 (Empasy)">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="SyncLLM — 여러 AI 모델을 한곳에 연결해 비용과 개인정보를 관리하세요 | 엠파시(Empasy)">
+    <meta property="og:description" content="부서마다 제각각 쓰던 AI 이용 계정을 하나로 모아 예산을 관리하고, 비슷한 질문은 이전 답변을 재활용하며 민감정보는 전송 전 가림 처리합니다.">
+    <meta property="og:url" content="https://empasy.io/ko/solutions/sync-llm.html">
+    <meta property="og:image" content="https://empasy.io/images/screenshots/sync-llm/screen_01.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SyncLLM — 여러 AI 모델을 한곳에 연결해 비용과 개인정보를 관리하세요 | 엠파시(Empasy)">
+    <meta name="twitter:description" content="부서마다 제각각 쓰던 AI 이용 계정을 하나로 모아 예산을 관리하고, 비슷한 질문은 이전 답변을 재활용하며 민감정보는 전송 전 가림 처리합니다.">
+    <meta name="twitter:image" content="https://empasy.io/images/screenshots/sync-llm/screen_01.png">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            margin: 0;
-            font-family: Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-            background: #ffffff;
-            color: #0f172a;
-            display: flex;
-            min-height: 100vh;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-            box-sizing: border-box;
-        }
-        .redirect-card {
-            max-width: 460px;
-            width: 100%;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 14px;
-            padding: 36px 32px;
-            text-align: center;
-            box-shadow: 0 12px 32px -20px rgba(15, 23, 42, 0.14);
-        }
-        .redirect-brand {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: #0e7490;
-            margin-bottom: 10px;
-        }
-        h1 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin: 0 0 10px;
-            line-height: 1.35;
-        }
-        p {
-            font-size: 0.94rem;
-            color: #475569;
-            margin: 0 0 24px;
-            line-height: 1.65;
-            word-break: keep-all;
-        }
-        .redirect-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-        }
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 12px 20px;
-            border-radius: 8px;
-            background: #0f172a;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            box-sizing: border-box;
-        }
-        .btn-primary:hover {
-            background: #1e293b;
-        }
-        .link-home {
-            font-size: 0.88rem;
-            color: #475569;
-            text-decoration: underline;
-            margin-top: 4px;
-        }
-        .link-home:hover {
-            color: #0f172a;
-        }
-    </style>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SyncLLM",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "url": "https://empasy.io/ko/solutions/sync-llm.html",
+  "image": "https://empasy.io/images/screenshots/sync-llm/screen_01.png",
+  "description": "부서마다 제각각 쓰던 AI 이용 계정을 하나로 모아 예산을 관리하고, 비슷한 질문은 이전 답변을 재활용하며 민감정보는 전송 전 가림 처리합니다.",
+  "provider": {
+    "@type": "Organization",
+    "name": "주식회사 엠파시 (Empasy Inc.)",
+    "url": "https://empasy.io/"
+  },
+  "inLanguage": "ko"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "홈",
+      "item": "https://empasy.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "솔루션",
+      "item": "https://empasy.io/#architecture"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SyncLLM",
+      "item": "https://empasy.io/ko/solutions/sync-llm.html"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "이미 운영 중인 사내 서비스에 SyncLLM을 붙이려면 기존 시스템을 많이 고쳐야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "표준 AI 연결 주소를 지원하므로 기존 서비스의 연결 주소와 계정 설정만 바꾸면 큰 수정 없이 연동할 수 있습니다. 상세 연동 규격은 개발자 기술 문서(doc.empasy.com/syncllm/)에서 확인하실 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "외부 클라우드 AI 대신 사내에 설치한 자체 모델만 연결해도 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 사내 전용 서버 AI만 단독으로 연결해 외부 인터넷이 차단된 환경에서도 안전하게 운영할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "부서별 예산이 초과되면 어떻게 동작하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "설정한 비율(예: 80%, 100%)에 도달할 때 담당자에게 알림을 보내거나 추가 이용을 제한하도록 정책을 선택할 수 있습니다."
+      }
+    }
+  ]
+}
+    </script>
 </head>
-<body>
-    <main class="redirect-card">
-        <span class="redirect-brand">Empasy SyncSeries</span>
-        <h1>SyncLLM 공식 페이지로 이동 중입니다</h1>
-        <p>최신 제품 소개와 화면 안내는 전용 공식 사이트(https://llm.empasy.io/)에서 확인하실 수 있습니다.</p>
-        <div class="redirect-actions">
-            <a class="btn-primary" href="https://llm.empasy.io/">SyncLLM 공식 사이트 열기 &#8599;</a>
-            <a class="link-home" href="/">엠파시 홈으로 돌아가기</a>
-        </div>
+<body class="sol-page">
+    {{> header_ko }}
+
+    <main id="main-content">
+        <section class="sol-hero">
+            <div class="container">
+                <nav class="sol-breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">홈</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="/#architecture">솔루션</a>
+                    <span aria-hidden="true">/</span>
+                    <span aria-current="page" class="sol-product-name">SyncLLM</span>
+                </nav>
+
+                <div class="sol-hero-copy">
+                    <p class="sol-eyebrow">SyncSeries 데이터·AI 모듈 · 사내 AI 비용 및 보안 관리</p>
+                    <h1 class="sol-title">여러 AI 모델을 한곳에 연결해 비용과 개인정보를 관리하세요</h1>
+                    <p class="sol-subtitle">부서마다 제각각 쓰던 AI 이용 계정을 하나로 모아 예산을 관리하고, 비슷한 질문은 이전 답변을 재활용하며 민감정보는 전송 전 가림 처리합니다.</p>
+
+                    <div class="sol-actions">
+                        <a href="#demo" class="btn btn-primary">무료 체험</a>
+                        <a href="/ko/pages/contact.html" class="btn btn-outline">도입 문의</a>
+                        <a href="/downloads/proposals/SyncLLM_Proposal.pdf" target="_blank" rel="noopener noreferrer" class="sol-secondary-link">제품소개서 PDF &#8599;</a>
+                        <a href="https://demo.empasy.io/products/sync-llm" target="_blank" rel="noopener noreferrer" class="sol-secondary-link">통합 데모 포털에서 보기 &#8599;</a>
+                    </div>
+                </div>
+
+                <nav class="sol-anchor-nav" aria-label="SyncLLM">
+                    <a href="#screens">실제 화면</a>
+                    <a href="#features">주요 기능</a>
+                    <a href="#demo">바로 체험</a>
+                    <a href="#faq">자주 묻는 질문</a>
+                </nav>
+
+                <div id="screens" class="sol-showcase-wrap" data-sol-showcase data-sol-product="SyncLLM">
+                    <div class="sol-showcase-tabs" role="tablist" aria-label="실제 작동 화면 선택">
+                            <button type="button" role="tab" class="sol-showcase-tab active"
+                                aria-selected="true"
+                                data-sol-tab
+                                data-slide-title="AI 사용량 및 유사 질문 재활용 대시보드"
+                                data-slide-route="llm-admin.empasy.io"
+                                data-slide-summary="모델별 호출량, 사용량 추이, 유사 질문 재활용으로 아낀 비용 현황을 한눈에 확인합니다."
+                                data-slide-img="/images/screenshots/sync-llm/screen_01.png"
+                                data-slide-demo="https://llm-admin.empasy.io/dashboard/analysis"
+                                data-slide-external="true">
+                                비용·사용량 현황
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="AI 서비스 연결 및 장애 우회 설정"
+                                data-slide-route="llm-admin.empasy.io"
+                                data-slide-summary="여러 AI 서비스와 사내 전용 서버 AI의 연결 상태를 점검하고 장애 시 대체할 예비 순서를 지정합니다."
+                                data-slide-img="/images/screenshots/sync-llm/screen_02.png"
+                                data-slide-demo="https://llm-admin.empasy.io/llm/providers"
+                                data-slide-external="true">
+                                멀티 모델·예비 연결
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="모델 단가 및 분배 규칙 관리"
+                                data-slide-route="llm-admin.empasy.io"
+                                data-slide-summary="작업 성격에 맞춰 적절한 모델이 선택되도록 분배 기준과 부서별 사용 한도를 설정합니다."
+                                data-slide-img="/images/screenshots/sync-llm/screen_03.png"
+                                data-slide-demo="https://llm-admin.empasy.io/llm/models"
+                                data-slide-external="true">
+                                모델 분배·예산
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="사용 이력 및 개인정보 가림 처리 기록"
+                                data-slide-route="llm-admin.empasy.io"
+                                data-slide-summary="어떤 요청에서 개인정보가 자동 가림 처리되었는지 사용 이력으로 투명하게 확인합니다."
+                                data-slide-img="/images/screenshots/sync-llm/screen_04.png"
+                                data-slide-demo="https://llm-admin.empasy.io/llm/request-logs"
+                                data-slide-external="true">
+                                사용 이력·정보 가림
+                            </button>
+                    </div>
+
+                    <div class="sol-showcase-frame">
+                        <div class="sol-showcase-bar">
+                            <div class="sol-showcase-bar-left">
+                                <span class="sol-showcase-title" data-sol-title>AI 사용량 및 유사 질문 재활용 대시보드</span>
+                                <span class="sol-showcase-route is-mono" data-sol-route>llm-admin.empasy.io</span>
+                            </div>
+                            <div class="sol-showcase-bar-actions">
+                                <button type="button" class="sol-zoom-btn" data-sol-zoom aria-label="실제 화면 확대 보기">확대</button>
+                                <a href="https://llm-admin.empasy.io/dashboard/analysis" target="_blank" rel="noopener noreferrer" class="sol-demo-link" data-sol-demo-link>
+                                    <span class="sol-link-desktop">이 화면 직접 열어보기</span>
+                                    <span class="sol-link-mobile">열기</span>
+                                    <span aria-hidden="true">&#8599;</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="sol-showcase-viewport">
+                            <button type="button" class="sol-img-btn" data-sol-img-btn aria-label="SyncLLM AI 사용량 및 유사 질문 재활용 대시보드">
+                                <img src="/images/screenshots/sync-llm/screen_01.png" alt="SyncLLM - AI 사용량 및 유사 질문 재활용 대시보드" class="sol-showcase-img" loading="eager" data-sol-img>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="sol-showcase-caption" data-sol-caption>모델별 호출량, 사용량 추이, 유사 질문 재활용으로 아낀 비용 현황을 한눈에 확인합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">업무의 변화</p>
+                    <h2 class="ed-title">기존 방식과 무엇이 다른가요?</h2>
+                    <p class="ed-desc">기업에서 생성형 AI를 도입할 때 가장 고민되는 비용 증가, 특정 모델 장애, 개인정보 유출 우려를 사내 AI 통합 관리 계층에서 차분하게 통제합니다.</p>
+                </div>
+
+                <div class="sol-compare-grid">
+                    <div class="sol-compare-card is-before">
+                        <h3>기존 개별 AI 연동 방식</h3>
+                        <ul>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>부서나 서비스마다 AI 이용 계정을 따로 발급받아 어디서 얼마나 비용이 나가는지 파악하기 어렵습니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>직원이 질문 내용에 고객 연락처나 주민번호 같은 민감정보를 입력해도 그대로 외부로 전송될 위험이 있습니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>특정 AI 서비스에 장애가 나면 연결된 사내 업무가 함께 멈춥니다.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sol-compare-card is-after">
+                        <h3>SyncLLM 도입 후</h3>
+                        <ul>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>상용 AI와 사내 전용 서버 AI를 단일 창구로 연결하고 부서·서비스별 사용량과 예산을 한눈에 관리합니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>반복되는 유사 질문은 이전 응답을 재활용하고, 개인정보 패턴은 외부 전송 전에 자동으로 가립니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>한 모델에 지연이나 오류가 생기면 미리 지정해 둔 예비 모델로 자동 전환해 업무 중단을 줄입니다.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="ed-section">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">주요 기능</p>
+                    <h2 class="ed-title">SyncLLM으로 할 수 있는 일</h2>
+                </div>
+
+                <div class="sol-features-grid">
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">01</span>
+                        <h3>유사 질문 재활용 및 모델 분배</h3>
+                        <p>간단한 요약은 가벼운 모델로, 복잡한 작업은 고성능 모델로 분배하고 반복 질문은 재활용해 불필요한 비용을 줄입니다.</p>
+                    </article>
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">02</span>
+                        <h3>개인정보 자동 가림 및 사용 이력 관리</h3>
+                        <p>주민등록번호, 전화번호, 계좌번호 등 사전에 정의한 민감정보 패턴을 전송 전 가림 처리하고 사용 이력을 남깁니다.</p>
+                    </article>
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">03</span>
+                        <h3>장애 시 예비 모델 자동 전환</h3>
+                        <p>상용 AI 서비스와 사내 전용 서버 AI의 응답 상태를 살피고 문제 발생 시 예비 모델로 자연스럽게 우회합니다.</p>
+                    </article>
+                </div>
+
+                <div class="sol-steps-block">
+                    <h3 class="sol-sub-heading">이렇게 사용합니다</h3>
+                    <div class="sol-steps-grid">
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 01</span>
+                            <h4>사용 중인 AI 서비스 연결</h4>
+                            <p>상용 AI 이용 계정 또는 사내 전용 서버 AI를 관리 콘솔에 등록합니다.</p>
+                        </div>
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 02</span>
+                            <h4>예산 한도 및 개인정보 규칙 설정</h4>
+                            <p>부서별 월간 한도, 예비 모델 우선순위, 가림 처리할 민감정보 항목을 지정합니다.</p>
+                        </div>
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 03</span>
+                            <h4>사용량·절감 현황 모니터링</h4>
+                            <p>대시보드에서 모델별 사용량 추이, 유사 질문 재활용 현황, 개인정보 가림 처리 내역을 수시로 점검합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">직접 체험</p>
+                    <h2 class="ed-title">설치 없이 실제 화면을 눌러 보세요</h2>
+                    <p class="ed-desc">체험 환경에서 변경한 설정과 테스트 기록은 매일 오전 4시에 초기 상태로 돌아갑니다.</p>
+                </div>
+
+                <div class="sol-demo-grid">
+                    <div class="sol-demo-panel">
+                        <h3 class="sol-panel-title">1. 체험 화면 열기</h3>
+                        <div class="sol-entry-stack">
+                        <div class="sol-entry-card is-primary">
+                            <div class="sol-entry-info">
+                                <div class="sol-entry-title">사내 AI 통합 관리 콘솔</div>
+                                <p class="sol-entry-desc">사용량 대시보드, 멀티 AI 서비스 연결, 개인정보 가림 이력을 직접 체험합니다.</p>
+                            </div>
+                            <a href="https://llm-admin.empasy.io" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">관리 콘솔 열기 &#8599;</a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="sol-demo-panel">
+                        <h3 class="sol-panel-title">2. 체험 계정 복사</h3>
+                        <div class="sol-account-box is-primary">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">AI 통합 관리자</span>
+                                <span class="sol-account-note">기본 체험 계정</span>
+                            </div>
+                            <p class="sol-account-scope">비용 대시보드, AI 서비스 연결, 예산 한도, 개인정보 가림 이력 전체 기능을 확인합니다.</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="admin"
+                                    data-copy-label="AI 통합 관리자 아이디"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">아이디</span>
+                                    <code class="sol-copy-value">admin</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="AI 통합 관리자 비밀번호"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">비밀번호</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                            </div>
+                        </div>
+                        <details class="sol-more-accounts">
+                            <summary>다른 역할 계정 보기 (1개)</summary>
+                            <div class="sol-more-accounts-list">
+                                
+                        <div class="sol-account-box">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">AI 운영 매니저</span>
+                                
+                            </div>
+                            <p class="sol-account-scope">일상 사용량 추이 확인 및 사용 이력 조회 중심으로 체험합니다.</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="emp_manager"
+                                    data-copy-label="AI 운영 매니저 아이디"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">아이디</span>
+                                    <code class="sol-copy-value">emp_manager</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="AI 운영 매니저 비밀번호"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">비밀번호</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                            </div>
+                        </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="sol-try-box">
+                    <h3 class="sol-try-title">로그인 후 확인해 볼 3가지</h3>
+                    <div class="sol-try-grid">
+                        
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">01</span>
+                                <span class="sol-try-menu">대시보드</span>
+                            </div>
+                            <h4>모델별 사용량과 절감 지표 보기</h4>
+                            <p>유사 질문 재활용 현황과 부서별 AI 사용량 추이를 살펴보세요.</p>
+                        </div>
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">02</span>
+                                <span class="sol-try-menu">AI 관리 &gt; AI 서비스 연결</span>
+                            </div>
+                            <h4>예비 모델 전환 순서 확인</h4>
+                            <p>특정 AI 서비스에 오류가 생겼을 때 어떤 예비 모델로 이어지는지 설정을 확인해 보세요.</p>
+                        </div>
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">03</span>
+                                <span class="sol-try-menu">사용 이력 &gt; 개인정보 가림</span>
+                            </div>
+                            <h4>개인정보 가림 처리 이력 보기</h4>
+                            <p>연락처나 민감정보가 전송 전에 비식별 처리된 실제 기록을 살펴보세요.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="ed-section">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">도입 안내</p>
+                    <h2 class="ed-title">조직 상황에 맞춰 필요한 만큼만 시작하세요</h2>
+                    <p class="ed-desc">전체 시스템을 한꺼번에 바꿀 필요 없이, 현재 가장 시급한 업무 영역부터 단독으로 적용할 수 있습니다.</p>
+                </div>
+
+                <div class="sol-adoption-grid">
+                    <div class="sol-adoption-card">
+                        <h3>기존 AI 연결 주소만 교체해 즉시 적용</h3>
+                        <p>표준 AI 연결 주소를 지원하므로 현재 사용 중인 사내 도구와 업무 화면의 연결 설정만 바꿔 빠르게 통합합니다.</p>
+                    </div>
+                    <div class="sol-adoption-card">
+                        <h3>부서별 예산 상한·개인정보 보호 일괄 적용</h3>
+                        <p>조직별 월간 예산 알림과 민감정보 자동 가림 정책을 중앙에서 통제해 과금 폭증과 유출 위험을 예방합니다.</p>
+                    </div>
+                    <div class="sol-adoption-card">
+                        <h3>상용 AI · 사내 전용 서버 AI 하이브리드 운영</h3>
+                        <p>일반 업무는 상용 AI로, 기밀 문서는 사내 전용 서버 AI로 자동 분배해 보안과 품질을 함께 챙깁니다.</p>
+                    </div>
+                </div>
+
+                <div class="sol-faq-block">
+                    <h3 class="sol-sub-heading">자주 묻는 질문</h3>
+                    <div class="sol-faq-list">
+                    <div class="faq-item">
+                        <details open>
+                            <summary>이미 운영 중인 사내 서비스에 SyncLLM을 붙이려면 기존 시스템을 많이 고쳐야 하나요?</summary>
+                            <div class="faq-answer">표준 AI 연결 주소를 지원하므로 기존 서비스의 연결 주소와 계정 설정만 바꾸면 큰 수정 없이 연동할 수 있습니다. 상세 연동 규격은 개발자 기술 문서(doc.empasy.com/syncllm/)에서 확인하실 수 있습니다.</div>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>외부 클라우드 AI 대신 사내에 설치한 자체 모델만 연결해도 되나요?</summary>
+                            <div class="faq-answer">네. 사내 전용 서버 AI만 단독으로 연결해 외부 인터넷이 차단된 환경에서도 안전하게 운영할 수 있습니다.</div>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>부서별 예산이 초과되면 어떻게 동작하나요?</summary>
+                            <div class="faq-answer">설정한 비율(예: 80%, 100%)에 도달할 때 담당자에게 알림을 보내거나 추가 이용을 제한하도록 정책을 선택할 수 있습니다.</div>
+                        </details>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="ed-doc-callout sol-tech-callout">
+                    <p>개발·인프라 담당자를 위한 상세 아키텍처와 연동 규격은 기술 문서 포털에서 확인하실 수 있습니다.</p>
+                    <a href="https://doc.empasy.com/syncllm/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">개발자 기술 문서 (doc.empasy.com) &#8599;</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="ed-section ed-section-tinted sol-related-section">
+            <div class="container">
+                <div class="sol-related-head">
+                    <div>
+                        <p class="ed-kicker">함께 쓰면 좋은 모듈</p>
+                        <h2 class="sol-related-title">SyncLLM과 자주 연결해 사용하는 기능</h2>
+                    </div>
+                    <a href="/#architecture" class="sol-all-link">전체 11종 구성도 보기 &#8594;</a>
+                </div>
+
+                <div class="sol-related-grid">
+                    <a href="/ko/solutions/sync-insight.html" class="sol-related-card">
+                        <span class="sol-related-cat">확장 · 데이터 조회</span>
+                        <h3>SyncInsight</h3>
+                        <p>사내 데이터 조회에 필요한 AI 호출을 안전하고 합리적인 비용으로 연결합니다.</p>
+                        <span class="sol-related-more">자세히 보기 &#8594;</span>
+                    </a>
+                    <a href="/ko/solutions/sync-apim.html" class="sol-related-card">
+                        <span class="sol-related-cat">확장 · 외부 연동 보안</span>
+                        <h3>SyncAPIM</h3>
+                        <p>사내 AI 통합 관리 구간을 포함한 전체 외부 연동의 보안과 접근 통제를 함께 관리합니다.</p>
+                        <span class="sol-related-more">자세히 보기 &#8594;</span>
+                    </a>
+                    <a href="/ko/solutions/sync-verse.html" class="sol-related-card">
+                        <span class="sol-related-cat">주력 · 협업·승인 관리</span>
+                        <h3>SyncVerse</h3>
+                        <p>여러 업무 모듈이 쓰는 AI 정책과 승인을 통합 관리합니다.</p>
+                        <span class="sol-related-more">자세히 보기 &#8594;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
+
+    {{> footer_ko }}
+
+    <div id="sol-lightbox" class="sol-lightbox" role="dialog" aria-modal="true" aria-label="SyncLLM">
+        <div class="sol-lightbox-bar">
+            <span id="sol-lightbox-title" class="sol-lightbox-title">AI 사용량 및 유사 질문 재활용 대시보드</span>
+            <button type="button" id="sol-lightbox-close" class="sol-lightbox-close" aria-label="확대 닫기">닫기</button>
+        </div>
+        <div class="sol-lightbox-stage">
+            <img id="sol-lightbox-img" src="/images/screenshots/sync-llm/screen_01.png" alt="SyncLLM" class="sol-lightbox-img">
+        </div>
+        <p class="sol-lightbox-hint">좌우로 밀거나 손가락으로 확대해 세부 화면을 확인할 수 있습니다.</p>
+    </div>
+
+    <div id="sol-copy-toast" class="sol-copy-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="/assets/js/solution-page.js"></script>
 </body>
 </html>

@@ -3,101 +3,566 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SyncBoot 공식 제품 페이지 | 엠파시(Empasy)</title>
-    <meta name="robots" content="noindex, follow">
-    <link rel="canonical" href="https://boot.empasy.io/">
-    <meta http-equiv="refresh" content="0;url=https://boot.empasy.io/">
-    <script>window.location.replace('https://boot.empasy.io/');</script>
+    <title>SyncBoot — 로그인·권한·전자결재까지, 사내 관리 시스템의 표준 기반 | 엠파시(Empasy)</title>
+    <meta name="description" content="새 업무 시스템을 만들 때마다 반복해서 개발하던 사용자·부서·메뉴 권한, 전자결재, 작업 이력 관리를 하나의 검증된 기반 위에 정리해 제공합니다.">
+    <meta name="author" content="주식회사 엠파시 (Empasy Inc.)">
+    <link rel="canonical" href="https://empasy.io/ko/solutions/sync-boot.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-boot.html">
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-boot.html">
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-boot.html">
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-boot.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="엠파시 (Empasy)">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="SyncBoot — 로그인·권한·전자결재까지, 사내 관리 시스템의 표준 기반 | 엠파시(Empasy)">
+    <meta property="og:description" content="새 업무 시스템을 만들 때마다 반복해서 개발하던 사용자·부서·메뉴 권한, 전자결재, 작업 이력 관리를 하나의 검증된 기반 위에 정리해 제공합니다.">
+    <meta property="og:url" content="https://empasy.io/ko/solutions/sync-boot.html">
+    <meta property="og:image" content="https://empasy.io/images/screenshots/sync-boot/screen_01.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SyncBoot — 로그인·권한·전자결재까지, 사내 관리 시스템의 표준 기반 | 엠파시(Empasy)">
+    <meta name="twitter:description" content="새 업무 시스템을 만들 때마다 반복해서 개발하던 사용자·부서·메뉴 권한, 전자결재, 작업 이력 관리를 하나의 검증된 기반 위에 정리해 제공합니다.">
+    <meta name="twitter:image" content="https://empasy.io/images/screenshots/sync-boot/screen_01.png">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            margin: 0;
-            font-family: Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-            background: #ffffff;
-            color: #0f172a;
-            display: flex;
-            min-height: 100vh;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-            box-sizing: border-box;
-        }
-        .redirect-card {
-            max-width: 460px;
-            width: 100%;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 14px;
-            padding: 36px 32px;
-            text-align: center;
-            box-shadow: 0 12px 32px -20px rgba(15, 23, 42, 0.14);
-        }
-        .redirect-brand {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: #0e7490;
-            margin-bottom: 10px;
-        }
-        h1 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin: 0 0 10px;
-            line-height: 1.35;
-        }
-        p {
-            font-size: 0.94rem;
-            color: #475569;
-            margin: 0 0 24px;
-            line-height: 1.65;
-            word-break: keep-all;
-        }
-        .redirect-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-        }
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 12px 20px;
-            border-radius: 8px;
-            background: #0f172a;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            box-sizing: border-box;
-        }
-        .btn-primary:hover {
-            background: #1e293b;
-        }
-        .link-home {
-            font-size: 0.88rem;
-            color: #475569;
-            text-decoration: underline;
-            margin-top: 4px;
-        }
-        .link-home:hover {
-            color: #0f172a;
-        }
-    </style>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SyncBoot",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "url": "https://empasy.io/ko/solutions/sync-boot.html",
+  "image": "https://empasy.io/images/screenshots/sync-boot/screen_01.png",
+  "description": "새 업무 시스템을 만들 때마다 반복해서 개발하던 사용자·부서·메뉴 권한, 전자결재, 작업 이력 관리를 하나의 검증된 기반 위에 정리해 제공합니다.",
+  "provider": {
+    "@type": "Organization",
+    "name": "주식회사 엠파시 (Empasy Inc.)",
+    "url": "https://empasy.io/"
+  },
+  "inLanguage": "ko"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "홈",
+      "item": "https://empasy.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "솔루션",
+      "item": "https://empasy.io/#architecture"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SyncBoot",
+      "item": "https://empasy.io/ko/solutions/sync-boot.html"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "이미 사용 중인 기존 사내 계정이나 인사 시스템과 연동할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 기존 그룹웨어나 사내 인증 체계, 인사 조직도 데이터를 연동해 중복 계정 관리 없이 사용할 수 있도록 구축을 지원합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SyncBoot를 도입하면 나중에 다른 엠파시 모듈을 붙이기 쉬운가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 엠파시의 다른 업무 모듈들이 같은 기반과 권한 구조를 공유하므로, 필요한 기능이 생길 때 별도 로그인이나 화면 이질감 없이 이어 붙일 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "우리 회사만의 특수한 업무 화면도 추가 개발할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "물론입니다. SyncBoot는 고정된 패키지가 아니라 표준 업무 시스템 기반이므로 고객사 고유 업무 화면을 자유롭게 추가·확장할 수 있습니다."
+      }
+    }
+  ]
+}
+    </script>
 </head>
-<body>
-    <main class="redirect-card">
-        <span class="redirect-brand">Empasy SyncSeries</span>
-        <h1>SyncBoot 공식 페이지로 이동 중입니다</h1>
-        <p>최신 제품 소개와 화면 안내는 전용 공식 사이트(https://boot.empasy.io/)에서 확인하실 수 있습니다.</p>
-        <div class="redirect-actions">
-            <a class="btn-primary" href="https://boot.empasy.io/">SyncBoot 공식 사이트 열기 &#8599;</a>
-            <a class="link-home" href="/">엠파시 홈으로 돌아가기</a>
-        </div>
+<body class="sol-page">
+    {{> header_ko }}
+
+    <main id="main-content">
+        <section class="sol-hero">
+            <div class="container">
+                <nav class="sol-breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">홈</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="/#architecture">솔루션</a>
+                    <span aria-hidden="true">/</span>
+                    <span aria-current="page" class="sol-product-name">SyncBoot</span>
+                </nav>
+
+                <div class="sol-hero-copy">
+                    <p class="sol-eyebrow">SyncSeries 주력 솔루션 · 기업 업무 시스템 기반</p>
+                    <h1 class="sol-title">로그인·권한·전자결재까지, 사내 관리 시스템의 표준 기반</h1>
+                    <p class="sol-subtitle">새 업무 시스템을 만들 때마다 반복해서 개발하던 사용자·부서·메뉴 권한, 전자결재, 작업 이력 관리를 하나의 검증된 기반 위에 정리해 제공합니다.</p>
+
+                    <div class="sol-actions">
+                        <a href="#demo" class="btn btn-primary">무료 체험</a>
+                        <a href="/ko/pages/contact.html" class="btn btn-outline">도입 문의</a>
+                        <a href="/downloads/proposals/SyncBoot_Proposal.pdf" target="_blank" rel="noopener noreferrer" class="sol-secondary-link">제품소개서 PDF &#8599;</a>
+                        <a href="https://demo.empasy.io/products/sync-boot" target="_blank" rel="noopener noreferrer" class="sol-secondary-link">통합 데모 포털에서 보기 &#8599;</a>
+                    </div>
+                </div>
+
+                <nav class="sol-anchor-nav" aria-label="SyncBoot">
+                    <a href="#screens">실제 화면</a>
+                    <a href="#features">주요 기능</a>
+                    <a href="#demo">바로 체험</a>
+                    <a href="#faq">자주 묻는 질문</a>
+                </nav>
+
+                <div id="screens" class="sol-showcase-wrap" data-sol-showcase data-sol-product="SyncBoot">
+                    <div class="sol-showcase-tabs" role="tablist" aria-label="실제 작동 화면 선택">
+                            <button type="button" role="tab" class="sol-showcase-tab active"
+                                aria-selected="true"
+                                data-sol-tab
+                                data-slide-title="부서별 예산·업무 실적 리포트 화면"
+                                data-slide-route="boot-admin.empasy.io"
+                                data-slide-summary="핵심 지표 카드, 기간별 추이 차트, 부서별 상세 표가 결합된 표준 관리자 리포트 예시입니다."
+                                data-slide-img="/images/screenshots/sync-boot/screen_01.png"
+                                data-slide-demo="https://boot-admin.empasy.io/showcase/analytics-report"
+                                data-slide-external="true">
+                                운영 요약 리포트
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="사용자·부서·역할별 권한 설정"
+                                data-slide-route="boot-admin.empasy.io"
+                                data-slide-summary="조직도와 연동해 계정별 직무 역할과 접근 가능한 메뉴·버튼 권한을 한 화면에서 관리합니다."
+                                data-slide-img="/images/screenshots/sync-boot/screen_02.png"
+                                data-slide-demo="https://boot-admin.empasy.io/system/user"
+                                data-slide-external="true">
+                                조직·권한 관리
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="한국형 전자결재 기안 및 결재선 관리"
+                                data-slide-route="boot-admin.empasy.io"
+                                data-slide-summary="품의·기안 양식 작성부터 다단계 결재선 지정, 실시간 진행 상태 확인까지 지원합니다."
+                                data-slide-img="/images/screenshots/sync-boot/screen_03.png"
+                                data-slide-demo="https://boot-admin.empasy.io/showcase/approval-wizard"
+                                data-slide-external="true">
+                                전자결재
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="관리자 활동 및 보안 이력 조회"
+                                data-slide-route="boot-admin.empasy.io"
+                                data-slide-summary="계정 로그인, 메뉴 접근, 주요 데이터 변경 이력을 시간순으로 조회하고 점검합니다."
+                                data-slide-img="/images/screenshots/sync-boot/screen_04.png"
+                                data-slide-demo="https://boot-admin.empasy.io/monitor/log"
+                                data-slide-external="true">
+                                작업 이력 조회
+                            </button>
+                    </div>
+
+                    <div class="sol-showcase-frame">
+                        <div class="sol-showcase-bar">
+                            <div class="sol-showcase-bar-left">
+                                <span class="sol-showcase-title" data-sol-title>부서별 예산·업무 실적 리포트 화면</span>
+                                <span class="sol-showcase-route is-mono" data-sol-route>boot-admin.empasy.io</span>
+                            </div>
+                            <div class="sol-showcase-bar-actions">
+                                <button type="button" class="sol-zoom-btn" data-sol-zoom aria-label="실제 화면 확대 보기">확대</button>
+                                <a href="https://boot-admin.empasy.io/showcase/analytics-report" target="_blank" rel="noopener noreferrer" class="sol-demo-link" data-sol-demo-link>
+                                    <span class="sol-link-desktop">이 화면 직접 열어보기</span>
+                                    <span class="sol-link-mobile">열기</span>
+                                    <span aria-hidden="true">&#8599;</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="sol-showcase-viewport">
+                            <button type="button" class="sol-img-btn" data-sol-img-btn aria-label="SyncBoot 부서별 예산·업무 실적 리포트 화면">
+                                <img src="/images/screenshots/sync-boot/screen_01.png" alt="SyncBoot - 부서별 예산·업무 실적 리포트 화면" class="sol-showcase-img" loading="eager" data-sol-img>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="sol-showcase-caption" data-sol-caption>핵심 지표 카드, 기간별 추이 차트, 부서별 상세 표가 결합된 표준 관리자 리포트 예시입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">업무의 변화</p>
+                    <h2 class="ed-title">기존 방식과 무엇이 다른가요?</h2>
+                    <p class="ed-desc">엠파시의 여러 업무 모듈이 공통으로 사용하는 사내 관리 시스템 기반입니다. 공통 기능 개발에 쓰던 시간을 줄이고 실제 업무 기능에 집중할 수 있습니다.</p>
+                </div>
+
+                <div class="sol-compare-grid">
+                    <div class="sol-compare-card is-before">
+                        <h3>기존 사내 시스템 구축 방식</h3>
+                        <ul>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>프로젝트를 시작할 때마다 로그인, 부서 트리, 역할별 메뉴 권한, 작업 이력 기록을 매번 새로 개발합니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>메뉴를 추가하거나 권한을 바꿀 때마다 매번 개발 수정과 재반영을 거쳐야 합니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>부서마다 화면 스타일과 사용 방식이 달라 운영자 교육과 유지보수 비용이 커집니다.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sol-compare-card is-after">
+                        <h3>SyncBoot 도입 후</h3>
+                        <ul>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>조직도, 역할별 메뉴·버튼 권한, 한국형 전자결재, 작업 이력이 기본 구조로 준비되어 있습니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>관리자 화면에서 메뉴와 권한을 바로 설정하고 즉시 반영할 수 있습니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>통일된 화면 구성과 운영 규칙으로 사내 여러 업무 시스템을 일관되게 확장하고 유지보수합니다.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="ed-section">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">주요 기능</p>
+                    <h2 class="ed-title">SyncBoot로 할 수 있는 일</h2>
+                </div>
+
+                <div class="sol-features-grid">
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">01</span>
+                        <h3>조직도 연계 메뉴·버튼 권한 관리</h3>
+                        <p>부서와 직무 역할에 따라 볼 수 있는 화면은 물론 조회·수정·승인 같은 세부 버튼 권한까지 관리 화면에서 제어합니다.</p>
+                    </article>
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">02</span>
+                        <h3>한국 기업 실무형 전자결재 및 리포트</h3>
+                        <p>기안 작성, 다단계 결재선 지정, 승인·반려 이력 관리와 엑셀 내보내기, 요약 리포트 화면을 표준 구성으로 제공합니다.</p>
+                    </article>
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">03</span>
+                        <h3>관리자 작업 이력 추적</h3>
+                        <p>누가 언제 어떤 화면에서 데이터를 조회하거나 변경했는지 기록해 내부 감사와 보안 점검에 활용합니다.</p>
+                    </article>
+                </div>
+
+                <div class="sol-steps-block">
+                    <h3 class="sol-sub-heading">이렇게 사용합니다</h3>
+                    <div class="sol-steps-grid">
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 01</span>
+                            <h4>조직·역할 구조 등록</h4>
+                            <p>회사의 부서 체계와 직무별 역할을 등록하고 기본 메뉴 구성을 설정합니다.</p>
+                        </div>
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 02</span>
+                            <h4>업무 화면 및 결재선 연결</h4>
+                            <p>필요한 사내 업무 화면과 전자결재 양식을 표준 화면 틀에 맞춰 배치합니다.</p>
+                        </div>
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 03</span>
+                            <h4>권한 운영 및 이력 점검</h4>
+                            <p>인사 이동이나 조직 개편 시 관리자 화면에서 권한을 즉시 조정하고 변경 기록을 관리합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">직접 체험</p>
+                    <h2 class="ed-title">설치 없이 실제 화면을 눌러 보세요</h2>
+                    <p class="ed-desc">체험 환경에서 변경한 계정·권한·결재 데이터는 매일 오전 4시에 초기 상태로 돌아갑니다.</p>
+                </div>
+
+                <div class="sol-demo-grid">
+                    <div class="sol-demo-panel">
+                        <h3 class="sol-panel-title">1. 체험 화면 열기</h3>
+                        <div class="sol-entry-stack">
+                        <div class="sol-entry-card is-primary">
+                            <div class="sol-entry-info">
+                                <div class="sol-entry-title">사내 관리 시스템 콘솔</div>
+                                <p class="sol-entry-desc">표준 운영 리포트, 조직·권한 관리, 전자결재, 이력 조회 화면을 직접 체험합니다.</p>
+                            </div>
+                            <a href="https://boot-admin.empasy.io" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">관리 콘솔 열기 &#8599;</a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="sol-demo-panel">
+                        <h3 class="sol-panel-title">2. 체험 계정 복사</h3>
+                        <div class="sol-account-box is-primary">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">총괄 관리자</span>
+                                <span class="sol-account-note">기본 체험 계정</span>
+                            </div>
+                            <p class="sol-account-scope">사용자·부서·권한 설정, 전자결재, 리포트, 작업 이력까지 전체 기능을 체험합니다.</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="admin"
+                                    data-copy-label="총괄 관리자 아이디"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">아이디</span>
+                                    <code class="sol-copy-value">admin</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="총괄 관리자 비밀번호"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">비밀번호</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                            </div>
+                        </div>
+                        <details class="sol-more-accounts">
+                            <summary>다른 역할 계정 보기 (2개)</summary>
+                            <div class="sol-more-accounts-list">
+                                
+                        <div class="sol-account-box">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">운영 매니저</span>
+                                
+                            </div>
+                            <p class="sol-account-scope">일반 운영 부서 관리자 권한으로 제한된 메뉴 구성을 확인할 수 있습니다.</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="emp_manager"
+                                    data-copy-label="운영 매니저 아이디"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">아이디</span>
+                                    <code class="sol-copy-value">emp_manager</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="운영 매니저 비밀번호"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">비밀번호</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="sol-account-box">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">보안 감사 담당자</span>
+                                
+                            </div>
+                            <p class="sol-account-scope">작업 이력 및 보안 감사 조회 화면 중심으로 체험합니다.</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="emp_auditor"
+                                    data-copy-label="보안 감사 담당자 아이디"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">아이디</span>
+                                    <code class="sol-copy-value">emp_auditor</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="보안 감사 담당자 비밀번호"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">비밀번호</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                            </div>
+                        </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="sol-try-box">
+                    <h3 class="sol-try-title">로그인 후 확인해 볼 3가지</h3>
+                    <div class="sol-try-grid">
+                        
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">01</span>
+                                <span class="sol-try-menu">샘플 &gt; 경영 실적 리포트</span>
+                            </div>
+                            <h4>표준 리포트 화면 구성 보기</h4>
+                            <p>기업 관리 시스템에서 바로 활용할 수 있는 지표 카드와 차트, 표 레이아웃을 확인해 보세요.</p>
+                        </div>
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">02</span>
+                                <span class="sol-try-menu">시스템 관리 &gt; 사용자·권한</span>
+                            </div>
+                            <h4>역할별 메뉴 권한 제어</h4>
+                            <p>역할에 따라 메뉴와 버튼 노출이 어떻게 달라지는지 직접 설정해 보세요.</p>
+                        </div>
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">03</span>
+                                <span class="sol-try-menu">샘플 &gt; 전자결재</span>
+                            </div>
+                            <h4>기안 및 결재 흐름 체험</h4>
+                            <p>결재선을 지정하고 승인·반려 이력이 기록되는 과정을 직접 눌러 보세요.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="ed-section">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">도입 안내</p>
+                    <h2 class="ed-title">조직 상황에 맞춰 필요한 만큼만 시작하세요</h2>
+                    <p class="ed-desc">전체 시스템을 한꺼번에 바꿀 필요 없이, 현재 가장 시급한 업무 영역부터 단독으로 적용할 수 있습니다.</p>
+                </div>
+
+                <div class="sol-adoption-grid">
+                    <div class="sol-adoption-card">
+                        <h3>신규 사내 시스템의 표준 출발점</h3>
+                        <p>로그인·조직도·메뉴 권한·전자결재가 준비된 SyncBoot 위에 고유 업무 화면만 얹어 구축 기간을 단축합니다.</p>
+                    </div>
+                    <div class="sol-adoption-card">
+                        <h3>기존 사내 계정·인사 시스템 연동</h3>
+                        <p>이미 운영 중인 그룹웨어나 사내 인사 조직도와 연결해 중복 계정 관리 없이 통합 권한 체계를 운영합니다.</p>
+                    </div>
+                    <div class="sol-adoption-card">
+                        <h3>단계적 업무 모듈 확장</h3>
+                        <p>사내 관리 시스템을 운영하면서 프로젝트 손익(SyncOps)이나 웹사이트 관리(SyncCMS)를 같은 화면 틀로 확장합니다.</p>
+                    </div>
+                </div>
+
+                <div class="sol-faq-block">
+                    <h3 class="sol-sub-heading">자주 묻는 질문</h3>
+                    <div class="sol-faq-list">
+                    <div class="faq-item">
+                        <details open>
+                            <summary>이미 사용 중인 기존 사내 계정이나 인사 시스템과 연동할 수 있나요?</summary>
+                            <div class="faq-answer">네. 기존 그룹웨어나 사내 인증 체계, 인사 조직도 데이터를 연동해 중복 계정 관리 없이 사용할 수 있도록 구축을 지원합니다.</div>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>SyncBoot를 도입하면 나중에 다른 엠파시 모듈을 붙이기 쉬운가요?</summary>
+                            <div class="faq-answer">네. 엠파시의 다른 업무 모듈들이 같은 기반과 권한 구조를 공유하므로, 필요한 기능이 생길 때 별도 로그인이나 화면 이질감 없이 이어 붙일 수 있습니다.</div>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>우리 회사만의 특수한 업무 화면도 추가 개발할 수 있나요?</summary>
+                            <div class="faq-answer">물론입니다. SyncBoot는 고정된 패키지가 아니라 표준 업무 시스템 기반이므로 고객사 고유 업무 화면을 자유롭게 추가·확장할 수 있습니다.</div>
+                        </details>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="ed-doc-callout sol-tech-callout">
+                    <p>개발·인프라 담당자를 위한 상세 아키텍처와 연동 규격은 기술 문서 포털에서 확인하실 수 있습니다.</p>
+                    <a href="https://doc.empasy.com/syncboot/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">개발자 기술 문서 (doc.empasy.com) &#8599;</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="ed-section ed-section-tinted sol-related-section">
+            <div class="container">
+                <div class="sol-related-head">
+                    <div>
+                        <p class="ed-kicker">함께 쓰면 좋은 모듈</p>
+                        <h2 class="sol-related-title">SyncBoot와 자주 연결해 사용하는 기능</h2>
+                    </div>
+                    <a href="/#architecture" class="sol-all-link">전체 11종 구성도 보기 &#8594;</a>
+                </div>
+
+                <div class="sol-related-grid">
+                    <a href="/ko/solutions/sync-verse.html" class="sol-related-card">
+                        <span class="sol-related-cat">주력 · 협업·승인 관리</span>
+                        <h3>SyncVerse</h3>
+                        <p>업무 요청과 변경 승인 흐름을 사내 관리 시스템 운영과 연결합니다.</p>
+                        <span class="sol-related-more">자세히 보기 &#8594;</span>
+                    </a>
+                    <a href="/ko/solutions/sync-ops.html" class="sol-related-card">
+                        <span class="sol-related-cat">확장 · 프로젝트·손익</span>
+                        <h3>SyncOps</h3>
+                        <p>프로젝트 투입 인력과 손익, 보증보험 일정을 함께 관리합니다.</p>
+                        <span class="sol-related-more">자세히 보기 &#8594;</span>
+                    </a>
+                    <a href="/ko/solutions/sync-cms.html" class="sol-related-card">
+                        <span class="sol-related-cat">주력 · 웹사이트 관리</span>
+                        <h3>SyncCMS</h3>
+                        <p>사내 관리 시스템과 함께 대외 브랜드 웹사이트·콘텐츠를 운영합니다.</p>
+                        <span class="sol-related-more">자세히 보기 &#8594;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
+
+    {{> footer_ko }}
+
+    <div id="sol-lightbox" class="sol-lightbox" role="dialog" aria-modal="true" aria-label="SyncBoot">
+        <div class="sol-lightbox-bar">
+            <span id="sol-lightbox-title" class="sol-lightbox-title">부서별 예산·업무 실적 리포트 화면</span>
+            <button type="button" id="sol-lightbox-close" class="sol-lightbox-close" aria-label="확대 닫기">닫기</button>
+        </div>
+        <div class="sol-lightbox-stage">
+            <img id="sol-lightbox-img" src="/images/screenshots/sync-boot/screen_01.png" alt="SyncBoot" class="sol-lightbox-img">
+        </div>
+        <p class="sol-lightbox-hint">좌우로 밀거나 손가락으로 확대해 세부 화면을 확인할 수 있습니다.</p>
+    </div>
+
+    <div id="sol-copy-toast" class="sol-copy-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="/assets/js/solution-page.js"></script>
 </body>
 </html>

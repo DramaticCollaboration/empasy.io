@@ -3,101 +3,595 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SyncOps 公式製品ページ | Empasy</title>
-    <meta name="robots" content="noindex, follow">
-    <link rel="canonical" href="https://ops.empasy.io/ja/">
-    <meta http-equiv="refresh" content="0;url=https://ops.empasy.io/ja/">
-    <script>window.location.replace('https://ops.empasy.io/ja/');</script>
+    <title>SyncOps — プロジェクト別の稼働人員と実損益をExcelなしでリアルタイム把握 | Empasy</title>
+    <meta name="description" content="受注金額に対する実投入原価、要員アサイン日程、各種保証保険満期、外注支払期限、電子研究ノートまでプロジェクト事業運営を一元管理します。">
+    <meta name="author" content="株式会社エムパシー (Empasy Inc.)">
+    <link rel="canonical" href="https://empasy.io/ja/solutions/sync-ops.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-ops.html">
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-ops.html">
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-ops.html">
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-ops.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Empasy">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="SyncOps — プロジェクト別の稼働人員と実損益をExcelなしでリアルタイム把握 | Empasy">
+    <meta property="og:description" content="受注金額に対する実投入原価、要員アサイン日程、各種保証保険満期、外注支払期限、電子研究ノートまでプロジェクト事業運営を一元管理します。">
+    <meta property="og:url" content="https://empasy.io/ja/solutions/sync-ops.html">
+    <meta property="og:image" content="https://empasy.io/images/screenshots/sync-ops/screen_01.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SyncOps — プロジェクト別の稼働人員と実損益をExcelなしでリアルタイム把握 | Empasy">
+    <meta name="twitter:description" content="受注金額に対する実投入原価、要員アサイン日程、各種保証保険満期、外注支払期限、電子研究ノートまでプロジェクト事業運営を一元管理します。">
+    <meta name="twitter:image" content="https://empasy.io/images/screenshots/sync-ops/screen_01.png">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            margin: 0;
-            font-family: Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-            background: #ffffff;
-            color: #0f172a;
-            display: flex;
-            min-height: 100vh;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-            box-sizing: border-box;
-        }
-        .redirect-card {
-            max-width: 460px;
-            width: 100%;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 14px;
-            padding: 36px 32px;
-            text-align: center;
-            box-shadow: 0 12px 32px -20px rgba(15, 23, 42, 0.14);
-        }
-        .redirect-brand {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: #0e7490;
-            margin-bottom: 10px;
-        }
-        h1 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin: 0 0 10px;
-            line-height: 1.35;
-        }
-        p {
-            font-size: 0.94rem;
-            color: #475569;
-            margin: 0 0 24px;
-            line-height: 1.65;
-            word-break: keep-all;
-        }
-        .redirect-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-        }
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 12px 20px;
-            border-radius: 8px;
-            background: #0f172a;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            box-sizing: border-box;
-        }
-        .btn-primary:hover {
-            background: #1e293b;
-        }
-        .link-home {
-            font-size: 0.88rem;
-            color: #475569;
-            text-decoration: underline;
-            margin-top: 4px;
-        }
-        .link-home:hover {
-            color: #0f172a;
-        }
-    </style>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SyncOps",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "url": "https://empasy.io/ja/solutions/sync-ops.html",
+  "image": "https://empasy.io/images/screenshots/sync-ops/screen_01.png",
+  "description": "受注金額に対する実投入原価、要員アサイン日程、各種保証保険満期、外注支払期限、電子研究ノートまでプロジェクト事業運営を一元管理します。",
+  "provider": {
+    "@type": "Organization",
+    "name": "株式会社エムパシー (Empasy Inc.)",
+    "url": "https://empasy.io/"
+  },
+  "inLanguage": "ja"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://empasy.io/ja/pages/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ソリューション",
+      "item": "https://empasy.io/ja/pages/index.html#architecture"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SyncOps",
+      "item": "https://empasy.io/ja/solutions/sync-ops.html"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "中堅・中小のITサービス企業や研究開発法人に適していますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。受託契約ベースのSI・SMプロジェクトや公的R&D課題を並行推進する企業の実務フローに合わせて設計されています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "経営層・PM・財務担当ごとに閲覧できる画面を分けられますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。SyncBootの権限基盤により、役職や担当プロジェクトごとに損益・人件費の閲覧範囲を細かく制限できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "これまで使っていたExcelデータを移行できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。プロジェクト一覧、要員情報、契約明細などの既存Excelをテンプレートに沿って一括登録し継続管理できます。"
+      }
+    }
+  ]
+}
+    </script>
 </head>
-<body>
-    <main class="redirect-card">
-        <span class="redirect-brand">Empasy SyncSeries</span>
-        <h1>SyncOps 公式ページへ移動しています</h1>
-        <p>最新の製品概要および画面案内は専用公式サイト(https://ops.empasy.io/ja/)でご確認いただけます。</p>
-        <div class="redirect-actions">
-            <a class="btn-primary" href="https://ops.empasy.io/ja/">SyncOps 公式サイトを開く &#8599;</a>
-            <a class="link-home" href="/ja/pages/index.html">Empasy ホームへ戻る</a>
-        </div>
+<body class="sol-page">
+    {{> header_ja }}
+
+    <main id="main-content">
+        <section class="sol-hero">
+            <div class="container">
+                <nav class="sol-breadcrumb" aria-label="Breadcrumb">
+                    <a href="/ja/pages/index.html">ホーム</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="/ja/pages/index.html#architecture">ソリューション</a>
+                    <span aria-hidden="true">/</span>
+                    <span aria-current="page" class="sol-product-name">SyncOps</span>
+                </nav>
+
+                <div class="sol-hero-copy">
+                    <p class="sol-eyebrow">SyncSeries 業務モジュール · SIプロジェクト・損益管理</p>
+                    <h1 class="sol-title">プロジェクト別の稼働人員と実損益をExcelなしでリアルタイム把握</h1>
+                    <p class="sol-subtitle">受注金額に対する実投入原価、要員アサイン日程、各種保証保険満期、外注支払期限、電子研究ノートまでプロジェクト事業運営を一元管理します。</p>
+
+                    <div class="sol-actions">
+                        <a href="#demo" class="btn btn-primary">無料デモ体験</a>
+                        <a href="/ja/pages/contact.html" class="btn btn-outline">導入のお問い合わせ</a>
+                        <a href="/downloads/proposals/SyncOps_Proposal.pdf" target="_blank" rel="noopener noreferrer" class="sol-secondary-link">製品紹介書 PDF &#8599;</a>
+                        <a href="https://demo.empasy.io/ja/products/sync-ops" target="_blank" rel="noopener noreferrer" class="sol-secondary-link">統合デモポータルで見る &#8599;</a>
+                    </div>
+                </div>
+
+                <nav class="sol-anchor-nav" aria-label="SyncOps">
+                    <a href="#screens">実画面プレビュー</a>
+                    <a href="#features">主な機能</a>
+                    <a href="#demo">今すぐ体験</a>
+                    <a href="#faq">よくある質問</a>
+                </nav>
+
+                <div id="screens" class="sol-showcase-wrap" data-sol-showcase data-sol-product="SyncOps">
+                    <div class="sol-showcase-tabs" role="tablist" aria-label="実画面プレビューを選択">
+                            <button type="button" role="tab" class="sol-showcase-tab active"
+                                aria-selected="true"
+                                data-sol-tab
+                                data-slide-title="受注・売上・プロジェクト損益ダッシュボード"
+                                data-slide-route="ops-admin.empasy.io"
+                                data-slide-summary="進行中プロジェクト全体の受注規模、売上状況、貢献利益推移をひと目で確認できます。"
+                                data-slide-img="/images/screenshots/sync-ops/screen_01.png"
+                                data-slide-demo="https://ops-admin.empasy.io/executive/dashboard"
+                                data-slide-external="true">
+                                経営ダッシュボード
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="契約金額対比 実投入原価の損益マトリクス"
+                                data-slide-route="ops-admin.empasy.io"
+                                data-slide-summary="計画工数と実投入原価を案件別に比較し、採算低下リスクのある案件を素早く把握します。"
+                                data-slide-img="/images/screenshots/sync-ops/screen_02.png"
+                                data-slide-demo="https://ops-admin.empasy.io/executive/profit-matrix"
+                                data-slide-external="true">
+                                プロジェクト損益表
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="4大保証保険および外注支払期限管理"
+                                data-slide-route="ops-admin.empasy.io"
+                                data-slide-summary="保証証券の満期日や外注支払期日など必須の法定期限を事前アラート付きで管理します。"
+                                data-slide-img="/images/screenshots/sync-ops/screen_03.png"
+                                data-slide-demo="https://ops-admin.empasy.io/contract/compliance-alerts"
+                                data-slide-external="true">
+                                保証・外注期限
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="技術等級ベースの要員配置・稼働率管理"
+                                data-slide-route="ops-admin.empasy.io"
+                                data-slide-summary="要員ごとの参画期間、終了予定日、重複アサイン有無をタイムライン形式で俯瞰できます。"
+                                data-slide-img="/images/screenshots/sync-ops/screen_04.png"
+                                data-slide-demo="https://ops-admin.empasy.io/talent/assignment-gantt"
+                                data-slide-external="true">
+                                要員アサイン日程
+                            </button>
+                    </div>
+
+                    <div class="sol-showcase-frame">
+                        <div class="sol-showcase-bar">
+                            <div class="sol-showcase-bar-left">
+                                <span class="sol-showcase-title" data-sol-title>受注・売上・プロジェクト損益ダッシュボード</span>
+                                <span class="sol-showcase-route is-mono" data-sol-route>ops-admin.empasy.io</span>
+                            </div>
+                            <div class="sol-showcase-bar-actions">
+                                <button type="button" class="sol-zoom-btn" data-sol-zoom aria-label="実画面を拡大表示">拡大</button>
+                                <a href="https://ops-admin.empasy.io/executive/dashboard" target="_blank" rel="noopener noreferrer" class="sol-demo-link" data-sol-demo-link>
+                                    <span class="sol-link-desktop">この画面を直接開く</span>
+                                    <span class="sol-link-mobile">開く</span>
+                                    <span aria-hidden="true">&#8599;</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="sol-showcase-viewport">
+                            <button type="button" class="sol-img-btn" data-sol-img-btn aria-label="SyncOps 受注・売上・プロジェクト損益ダッシュボード">
+                                <img src="/images/screenshots/sync-ops/screen_01.png" alt="SyncOps - 受注・売上・プロジェクト損益ダッシュボード" class="sol-showcase-img" loading="eager" data-sol-img>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="sol-showcase-caption" data-sol-caption>進行中プロジェクト全体の受注規模、売上状況、貢献利益推移をひと目で確認できます。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">業務の変化</p>
+                    <h2 class="ed-title">従来の業務方式と何が違いますか？</h2>
+                    <p class="ed-desc">受託型IT・SI企業や研究開発組織が複数のExcelファイルで管理していたプロジェクト採算性、要員稼働率、法定期限管理を一画面に集約しました。</p>
+                </div>
+
+                <div class="sol-compare-grid">
+                    <div class="sol-compare-card is-before">
+                        <h3>従来のSI事業管理</h3>
+                        <ul>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>案件ごとの稼働人員と実原価が複数のExcelに分散しており、赤字兆候の把握が遅れがちです。</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>入札・契約・前払・瑕疵保証の満期日や下請支払期限を手作業で管理すると見落としリスクが高まります。</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>アサイン予定・終了予定の要員状況を俯瞰しづらく、人員配置の意思決定が遅れます。</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sol-compare-card is-after">
+                        <h3>SyncOps 導入後</h3>
+                        <ul>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>契約単価と実投入人件費を自動照合し、プロジェクトごとの収益状況を随時確認できます。</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>4大保証保険の満期や法定の外注支払期限が近づくとダッシュボードと通知で事前にお知らせします。</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>技術等級別の要員配置と月次稼働予定をガントチャートでひと目で把握し計画を立てられます。</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="ed-section">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">主な機能</p>
+                    <h2 class="ed-title">SyncOpsでできること</h2>
+                </div>
+
+                <div class="sol-features-grid">
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">01</span>
+                        <h3>契約単価 vs 実投入原価の損益比較</h3>
+                        <p>計画工数・契約単価と実際の投入原価を案件ごとに比較し、利益圧迫の兆候を早期に捉えます。</p>
+                    </article>
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">02</span>
+                        <h3>保証保険・外注支払期限のアラート通知</h3>
+                        <p>入札・契約・前払・瑕疵保証証券の満期日や外注支払スケジュールを見落とさないよう一画面で追跡します。</p>
+                    </article>
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">03</span>
+                        <h3>要員アサインガントと電子研究ノート</h3>
+                        <p>エンジニア別の参画・終了日程と月次稼働率を視覚的に管理し、R&amp;D案件の研究ノート履歴も併せて保管します。</p>
+                    </article>
+                </div>
+
+                <div class="sol-steps-block">
+                    <h3 class="sol-sub-heading">導入・運用の流れ</h3>
+                    <div class="sol-steps-grid">
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 01</span>
+                            <h4>契約情報と要員計画の登録</h4>
+                            <p>受注金額、契約期間、アサイン予定要員および保証保険スケジュールを登録します。</p>
+                        </div>
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 02</span>
+                            <h4>実稼働と期限の自動集計</h4>
+                            <p>月次の投入実績が蓄積されると、案件別損益、稼働率、迫る法定期限が自動整理されます。</p>
+                        </div>
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 03</span>
+                            <h4>経営状況の把握と先手対応</h4>
+                            <p>工数超過リスクのある案件や満期が近い保証証券を早期に把握し、日程・リソースを調整します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">ライブデモ体験</p>
+                    <h2 class="ed-title">インストール不要で実際の画面をお試しいただけます</h2>
+                    <p class="ed-desc">デモ環境で入力されたプロジェクト・要員データは毎日午前4時（韓国時間）に初期状態へ戻ります。</p>
+                </div>
+
+                <div class="sol-demo-grid">
+                    <div class="sol-demo-panel">
+                        <h3 class="sol-panel-title">1. デモ画面を開く</h3>
+                        <div class="sol-entry-stack">
+                        <div class="sol-entry-card is-primary">
+                            <div class="sol-entry-info">
+                                <div class="sol-entry-title">SI事業運営管理コンソール</div>
+                                <p class="sol-entry-desc">経営ダッシュボード、プロジェクト損益表、期限アラート、要員ガントを直接体験できます。</p>
+                            </div>
+                            <a href="https://ops-admin.empasy.io" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">管理コンソールを開く &#8599;</a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="sol-demo-panel">
+                        <h3 class="sol-panel-title">2. デモアカウントをコピー</h3>
+                        <div class="sol-account-box is-primary">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">統括管理者</span>
+                                <span class="sol-account-note">標準デモアカウント</span>
+                            </div>
+                            <p class="sol-account-scope">全社損益、契約・保証管理、要員配置、研究ノートまで全機能を確認できます。</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="admin"
+                                    data-copy-label="統括管理者 ID"
+                                    data-copy-text="コピー"
+                                    data-copied-text="コピー済"
+                                    data-toast-template="{label}をコピーしました: {value}">
+                                    <span class="sol-copy-label">ID</span>
+                                    <code class="sol-copy-value">admin</code>
+                                    <span class="sol-copy-action" data-copy-action>コピー</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="統括管理者 PW"
+                                    data-copy-text="コピー"
+                                    data-copied-text="コピー済"
+                                    data-toast-template="{label}をコピーしました: {value}">
+                                    <span class="sol-copy-label">PW</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>コピー</span>
+                                </button>
+                            </div>
+                        </div>
+                        <details class="sol-more-accounts">
+                            <summary>他の役割アカウントを見る（3件）</summary>
+                            <div class="sol-more-accounts-list">
+                                
+                        <div class="sol-account-box">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">事業統括マネージャー (PMO)</span>
+                                
+                            </div>
+                            <p class="sol-account-scope">複数案件の損益比較と要員稼働率管理を中心に体験できます。</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="choiyj"
+                                    data-copy-label="事業統括マネージャー (PMO) ID"
+                                    data-copy-text="コピー"
+                                    data-copied-text="コピー済"
+                                    data-toast-template="{label}をコピーしました: {value}">
+                                    <span class="sol-copy-label">ID</span>
+                                    <code class="sol-copy-value">choiyj</code>
+                                    <span class="sol-copy-action" data-copy-action>コピー</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="事業統括マネージャー (PMO) PW"
+                                    data-copy-text="コピー"
+                                    data-copied-text="コピー済"
+                                    data-toast-template="{label}をコピーしました: {value}">
+                                    <span class="sol-copy-label">PW</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>コピー</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="sol-account-box">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">プロジェクトマネージャー (PM)</span>
+                                
+                            </div>
+                            <p class="sol-account-scope">担当プロジェクトの投入工数と日程管理画面を確認できます。</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="hongkd"
+                                    data-copy-label="プロジェクトマネージャー (PM) ID"
+                                    data-copy-text="コピー"
+                                    data-copied-text="コピー済"
+                                    data-toast-template="{label}をコピーしました: {value}">
+                                    <span class="sol-copy-label">ID</span>
+                                    <code class="sol-copy-value">hongkd</code>
+                                    <span class="sol-copy-action" data-copy-action>コピー</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="プロジェクトマネージャー (PM) PW"
+                                    data-copy-text="コピー"
+                                    data-copied-text="コピー済"
+                                    data-toast-template="{label}をコピーしました: {value}">
+                                    <span class="sol-copy-label">PW</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>コピー</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="sol-account-box">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">財務・精算担当</span>
+                                
+                            </div>
+                            <p class="sol-account-scope">売上・仕入精算および保証保険・外注期限管理画面を確認できます。</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="jungde"
+                                    data-copy-label="財務・精算担当 ID"
+                                    data-copy-text="コピー"
+                                    data-copied-text="コピー済"
+                                    data-toast-template="{label}をコピーしました: {value}">
+                                    <span class="sol-copy-label">ID</span>
+                                    <code class="sol-copy-value">jungde</code>
+                                    <span class="sol-copy-action" data-copy-action>コピー</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="財務・精算担当 PW"
+                                    data-copy-text="コピー"
+                                    data-copied-text="コピー済"
+                                    data-toast-template="{label}をコピーしました: {value}">
+                                    <span class="sol-copy-label">PW</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>コピー</span>
+                                </button>
+                            </div>
+                        </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="sol-try-box">
+                    <h3 class="sol-try-title">ログイン後に確認したい3つのポイント</h3>
+                    <div class="sol-try-grid">
+                        
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">01</span>
+                                <span class="sol-try-menu">経営ダッシュボード</span>
+                            </div>
+                            <h4>全社受注・損益サマリーを確認</h4>
+                            <p>進行中プロジェクト全体の売上と利益推移をひと目で確認してみてください。</p>
+                        </div>
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">02</span>
+                                <span class="sol-try-menu">プロジェクト損益マトリクス</span>
+                            </div>
+                            <h4>工数超過リスク案件を確認</h4>
+                            <p>契約単価と実投入人件費の乖離がシグナル表示される一覧をご確認ください。</p>
+                        </div>
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">03</span>
+                                <span class="sol-try-menu">要員アサインガント</span>
+                            </div>
+                            <h4>要員稼働スケジュールを俯瞰</h4>
+                            <p>月次アサイン状況と終了予定日をガント画面で確認してみてください。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="ed-section">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">導入ステップ</p>
+                    <h2 class="ed-title">組織の状況に合わせて必要な機能から始められます</h2>
+                    <p class="ed-desc">システム全体を一斉に入れ替える必要はなく、優先度の高い業務領域から単独導入できます。</p>
+                </div>
+
+                <div class="sol-adoption-grid">
+                    <div class="sol-adoption-card">
+                        <h3>既存Excelの案件・要員データを一括移行</h3>
+                        <p>複数シートで管理していた受注契約、技術等級、アサイン日程を標準テンプレートで取り込み即座に損益集計を開始します。</p>
+                    </div>
+                    <div class="sol-adoption-card">
+                        <h3>経営層・PM・財務担当ごとの精緻な権限分離</h3>
+                        <p>役職と担当案件に応じて閲覧可能な売上・人件費・損益範囲を細かく制御し、重要経営情報を安全に共有します。</p>
+                    </div>
+                    <div class="sol-adoption-card">
+                        <h3>保証保険・外注・研究ノートの自動期限アラート</h3>
+                        <p>4大保証証券の満期、外注支払期日、R&amp;D研究ノートの提出期限を見落とさない事前通知体制を整えます。</p>
+                    </div>
+                </div>
+
+                <div class="sol-faq-block">
+                    <h3 class="sol-sub-heading">よくある質問</h3>
+                    <div class="sol-faq-list">
+                    <div class="faq-item">
+                        <details open>
+                            <summary>中堅・中小のITサービス企業や研究開発法人に適していますか？</summary>
+                            <div class="faq-answer">はい。受託契約ベースのSI・SMプロジェクトや公的R&amp;D課題を並行推進する企業の実務フローに合わせて設計されています。</div>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>経営層・PM・財務担当ごとに閲覧できる画面を分けられますか？</summary>
+                            <div class="faq-answer">はい。SyncBootの権限基盤により、役職や担当プロジェクトごとに損益・人件費の閲覧範囲を細かく制限できます。</div>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>これまで使っていたExcelデータを移行できますか？</summary>
+                            <div class="faq-answer">はい。プロジェクト一覧、要員情報、契約明細などの既存Excelをテンプレートに沿って一括登録し継続管理できます。</div>
+                        </details>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="ed-doc-callout sol-tech-callout">
+                    <p>開発・インフラ担当者向けの詳細アーキテクチャや連携仕様は技術ドキュメントポータルでご確認いただけます。</p>
+                    <a href="https://doc.empasy.com/ja/syncops/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">開発者技術ドキュメント (doc.empasy.com) &#8599;</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="ed-section ed-section-tinted sol-related-section">
+            <div class="container">
+                <div class="sol-related-head">
+                    <div>
+                        <p class="ed-kicker">あわせて活用したいモジュール</p>
+                        <h2 class="sol-related-title">SyncOpsとよく連携して使われる機能</h2>
+                    </div>
+                    <a href="/ja/pages/index.html#architecture" class="sol-all-link">全11製品の構成図を見る &#8594;</a>
+                </div>
+
+                <div class="sol-related-grid">
+                    <a href="/ja/solutions/sync-boot.html" class="sol-related-card">
+                        <span class="sol-related-cat">主力 · 業務システム基盤</span>
+                        <h3>SyncBoot</h3>
+                        <p>社内組織図、権限管理、電子決裁と連携して業務システムを拡張します。</p>
+                        <span class="sol-related-more">詳しく見る &#8594;</span>
+                    </a>
+                    <a href="/ja/solutions/sync-insight.html" class="sol-related-card">
+                        <span class="sol-related-cat">拡張 · データ照会</span>
+                        <h3>SyncInsight</h3>
+                        <p>四半期ごとの売上・収益推移を日常の言葉で質問し即座にグラフ確認します。</p>
+                        <span class="sol-related-more">詳しく見る &#8594;</span>
+                    </a>
+                    <a href="/ja/solutions/sync-verse.html" class="sol-related-card">
+                        <span class="sol-related-cat">主力 · 協業・承認管理</span>
+                        <h3>SyncVerse</h3>
+                        <p>プロジェクト成果物や変更承認履歴を事業管理フローとあわせて追跡します。</p>
+                        <span class="sol-related-more">詳しく見る &#8594;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
+
+    {{> footer_ja }}
+
+    <div id="sol-lightbox" class="sol-lightbox" role="dialog" aria-modal="true" aria-label="SyncOps">
+        <div class="sol-lightbox-bar">
+            <span id="sol-lightbox-title" class="sol-lightbox-title">受注・売上・プロジェクト損益ダッシュボード</span>
+            <button type="button" id="sol-lightbox-close" class="sol-lightbox-close" aria-label="拡大表示を閉じる">閉じる</button>
+        </div>
+        <div class="sol-lightbox-stage">
+            <img id="sol-lightbox-img" src="/images/screenshots/sync-ops/screen_01.png" alt="SyncOps" class="sol-lightbox-img">
+        </div>
+        <p class="sol-lightbox-hint">左右スワイプまたはピンチ拡大で細部をご確認いただけます。</p>
+    </div>
+
+    <div id="sol-copy-toast" class="sol-copy-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="/assets/js/solution-page.js"></script>
 </body>
 </html>

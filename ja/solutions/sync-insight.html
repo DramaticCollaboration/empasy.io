@@ -3,101 +3,544 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SyncInsight 公式製品ページ | Empasy</title>
-    <meta name="robots" content="noindex, follow">
-    <link rel="canonical" href="https://insight.empasy.io/ja/">
-    <meta http-equiv="refresh" content="0;url=https://insight.empasy.io/ja/">
-    <script>window.location.replace('https://insight.empasy.io/ja/');</script>
+    <title>SyncInsight — 専門的な検索式なしで、言葉で聞くだけで表とグラフを返すデータ照会 | Empasy</title>
+    <meta name="description" content="社内業務データに含まれる売上・運用指標を日常の言葉で質問して確認でき、読み取り専用アクセスにより原本データを安全に保護します。">
+    <meta name="author" content="株式会社エムパシー (Empasy Inc.)">
+    <link rel="canonical" href="https://empasy.io/ja/solutions/sync-insight.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-insight.html">
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-insight.html">
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-insight.html">
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-insight.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Empasy">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="SyncInsight — 専門的な検索式なしで、言葉で聞くだけで表とグラフを返すデータ照会 | Empasy">
+    <meta property="og:description" content="社内業務データに含まれる売上・運用指標を日常の言葉で質問して確認でき、読み取り専用アクセスにより原本データを安全に保護します。">
+    <meta property="og:url" content="https://empasy.io/ja/solutions/sync-insight.html">
+    <meta property="og:image" content="https://empasy.io/images/screenshots/sync-insight/screen_02.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SyncInsight — 専門的な検索式なしで、言葉で聞くだけで表とグラフを返すデータ照会 | Empasy">
+    <meta name="twitter:description" content="社内業務データに含まれる売上・運用指標を日常の言葉で質問して確認でき、読み取り専用アクセスにより原本データを安全に保護します。">
+    <meta name="twitter:image" content="https://empasy.io/images/screenshots/sync-insight/screen_02.png">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            margin: 0;
-            font-family: Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-            background: #ffffff;
-            color: #0f172a;
-            display: flex;
-            min-height: 100vh;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-            box-sizing: border-box;
-        }
-        .redirect-card {
-            max-width: 460px;
-            width: 100%;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 14px;
-            padding: 36px 32px;
-            text-align: center;
-            box-shadow: 0 12px 32px -20px rgba(15, 23, 42, 0.14);
-        }
-        .redirect-brand {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: #0e7490;
-            margin-bottom: 10px;
-        }
-        h1 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin: 0 0 10px;
-            line-height: 1.35;
-        }
-        p {
-            font-size: 0.94rem;
-            color: #475569;
-            margin: 0 0 24px;
-            line-height: 1.65;
-            word-break: keep-all;
-        }
-        .redirect-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-        }
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 12px 20px;
-            border-radius: 8px;
-            background: #0f172a;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            box-sizing: border-box;
-        }
-        .btn-primary:hover {
-            background: #1e293b;
-        }
-        .link-home {
-            font-size: 0.88rem;
-            color: #475569;
-            text-decoration: underline;
-            margin-top: 4px;
-        }
-        .link-home:hover {
-            color: #0f172a;
-        }
-    </style>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SyncInsight",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "url": "https://empasy.io/ja/solutions/sync-insight.html",
+  "image": "https://empasy.io/images/screenshots/sync-insight/screen_02.png",
+  "description": "社内業務データに含まれる売上・運用指標を日常の言葉で質問して確認でき、読み取り専用アクセスにより原本データを安全に保護します。",
+  "provider": {
+    "@type": "Organization",
+    "name": "株式会社エムパシー (Empasy Inc.)",
+    "url": "https://empasy.io/"
+  },
+  "inLanguage": "ja"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://empasy.io/ja/pages/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ソリューション",
+      "item": "https://empasy.io/ja/pages/index.html#architecture"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SyncInsight",
+      "item": "https://empasy.io/ja/solutions/sync-insight.html"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "誤った質問によって社内の本番データが書き換えられたり消えたりしませんか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "読み取り専用の照会のみ実行されるよう制限されており、データを変更・削除する命令は実行段階で遮断されます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "AIが算出した数値が正しいかどうかはどう確認できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "グラフとともに実際に社内データへ実行された照会条件の原文と結果テーブルをそのまま表示するため、担当者が直接検証できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "社内データを外部のAIサービスへ送信せずに運用できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。社内オンプレミス構築やSyncLLMの機密情報マスキング機能と組み合わせ、外部流出を防ぎながら運用できます。"
+      }
+    }
+  ]
+}
+    </script>
 </head>
-<body>
-    <main class="redirect-card">
-        <span class="redirect-brand">Empasy SyncSeries</span>
-        <h1>SyncInsight 公式ページへ移動しています</h1>
-        <p>最新の製品概要および画面案内は専用公式サイト(https://insight.empasy.io/ja/)でご確認いただけます。</p>
-        <div class="redirect-actions">
-            <a class="btn-primary" href="https://insight.empasy.io/ja/">SyncInsight 公式サイトを開く &#8599;</a>
-            <a class="link-home" href="/ja/pages/index.html">Empasy ホームへ戻る</a>
-        </div>
+<body class="sol-page">
+    {{> header_ja }}
+
+    <main id="main-content">
+        <section class="sol-hero">
+            <div class="container">
+                <nav class="sol-breadcrumb" aria-label="Breadcrumb">
+                    <a href="/ja/pages/index.html">ホーム</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="/ja/pages/index.html#architecture">ソリューション</a>
+                    <span aria-hidden="true">/</span>
+                    <span aria-current="page" class="sol-product-name">SyncInsight</span>
+                </nav>
+
+                <div class="sol-hero-copy">
+                    <p class="sol-eyebrow">SyncSeries データ・AIモジュール · 対話型データ照会</p>
+                    <h1 class="sol-title">専門的な検索式なしで、言葉で聞くだけで表とグラフを返すデータ照会</h1>
+                    <p class="sol-subtitle">社内業務データに含まれる売上・運用指標を日常の言葉で質問して確認でき、読み取り専用アクセスにより原本データを安全に保護します。</p>
+
+                    <div class="sol-actions">
+                        <a href="#demo" class="btn btn-primary">無料デモ体験</a>
+                        <a href="/ja/pages/contact.html" class="btn btn-outline">導入のお問い合わせ</a>
+                        <a href="/downloads/proposals/SyncInsight_Proposal.pdf" target="_blank" rel="noopener noreferrer" class="sol-secondary-link">製品紹介書 PDF &#8599;</a>
+                        <a href="https://demo.empasy.io/ja/products/sync-insight" target="_blank" rel="noopener noreferrer" class="sol-secondary-link">統合デモポータルで見る &#8599;</a>
+                    </div>
+                </div>
+
+                <nav class="sol-anchor-nav" aria-label="SyncInsight">
+                    <a href="#screens">実画面プレビュー</a>
+                    <a href="#features">主な機能</a>
+                    <a href="#demo">今すぐ体験</a>
+                    <a href="#faq">よくある質問</a>
+                </nav>
+
+                <div id="screens" class="sol-showcase-wrap" data-sol-showcase data-sol-product="SyncInsight">
+                    <div class="sol-showcase-tabs" role="tablist" aria-label="実画面プレビューを選択">
+                            <button type="button" role="tab" class="sol-showcase-tab active"
+                                aria-selected="true"
+                                data-sol-tab
+                                data-slide-title="指標変動要因の整理および要約レポート"
+                                data-slide-route="データ分析 · 要約レポート"
+                                data-slide-summary="社内の運用数値と参考情報をあわせて整理し、報告用の要約ドキュメントを作成します。"
+                                data-slide-img="/images/screenshots/sync-insight/screen_02.png"
+                                data-slide-demo="https://verse-admin.empasy.io/analytics/research"
+                                data-slide-external="true">
+                                サマリーレポート分析
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="自然言語質問ベースの照会とグラフ可視化"
+                                data-slide-route="データ分析ワークスペース"
+                                data-slide-summary="検索式なしで日常の言葉で質問すると表とグラフを表示し、実際の照会条件も併せて確認できます。"
+                                data-slide-img="/images/screenshots/sync-insight/screen_01.png"
+                                data-slide-demo="https://verse-admin.empasy.io/analytics/nl2sql"
+                                data-slide-external="true">
+                                対話型データ照会
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="複数業務データの接続および稼働確認"
+                                data-slide-route="データ分析 · 接続管理"
+                                data-slide-summary="接続された複数の社内業務データの稼働状態と照会許可範囲を一画面で管理します。"
+                                data-slide-img="/images/screenshots/sync-insight/screen_03.png"
+                                data-slide-demo="https://verse-admin.empasy.io/analytics/datasources"
+                                data-slide-external="true">
+                                連携データ管理
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="指標ごとの原本データ出典マップ"
+                                data-slide-route="データ分析 · 出典マップ"
+                                data-slide-summary="特定の指標がどの元データ・項目を経由して算出されたかを視覚的に確認できます。"
+                                data-slide-img="/images/screenshots/sync-insight/screen_04.png"
+                                data-slide-demo="https://verse-admin.empasy.io/search/lineage"
+                                data-slide-external="true">
+                                データ出典フロー
+                            </button>
+                    </div>
+
+                    <div class="sol-showcase-frame">
+                        <div class="sol-showcase-bar">
+                            <div class="sol-showcase-bar-left">
+                                <span class="sol-showcase-title" data-sol-title>指標変動要因の整理および要約レポート</span>
+                                <span class="sol-showcase-route" data-sol-route>データ分析 · 要約レポート</span>
+                            </div>
+                            <div class="sol-showcase-bar-actions">
+                                <button type="button" class="sol-zoom-btn" data-sol-zoom aria-label="実画面を拡大表示">拡大</button>
+                                <a href="https://verse-admin.empasy.io/analytics/research" target="_blank" rel="noopener noreferrer" class="sol-demo-link" data-sol-demo-link>
+                                    <span class="sol-link-desktop">この画面を直接開く</span>
+                                    <span class="sol-link-mobile">開く</span>
+                                    <span aria-hidden="true">&#8599;</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="sol-showcase-viewport">
+                            <button type="button" class="sol-img-btn" data-sol-img-btn aria-label="SyncInsight 指標変動要因の整理および要約レポート">
+                                <img src="/images/screenshots/sync-insight/screen_02.png" alt="SyncInsight - 指標変動要因の整理および要約レポート" class="sol-showcase-img" loading="eager" data-sol-img>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="sol-showcase-caption" data-sol-caption>社内の運用数値と参考情報をあわせて整理し、報告用の要約ドキュメントを作成します。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">業務の変化</p>
+                    <h2 class="ed-title">従来の業務方式と何が違いますか？</h2>
+                    <p class="ed-desc">簡単な集計のために毎回開発部門へデータ抽出を依頼していた手間を減らし、業務担当者が自ら安全にデータを探索できるよう支援します。</p>
+                </div>
+
+                <div class="sol-compare-grid">
+                    <div class="sol-compare-card is-before">
+                        <h3>従来のデータ確認方式</h3>
+                        <ul>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>固定ダッシュボードにない条件を見るには開発・データ部門へ抽出を依頼し数日待つ必要があります。</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>専門的な検索式が扱えず、実務担当者がExcelで手作業の統合作業を繰り返しがちです。</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>指標がどの業務データからどのように算出された数値なのか根拠を追いにくい課題があります。</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sol-compare-card is-after">
+                        <h3>SyncInsight 導入後</h3>
+                        <ul>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>「前四半期のカテゴリ別売上推移を見せて」のように日常の言葉で聞くだけで結果とグラフを即確認できます。</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>読み取り専用照会のみを許可するため、誤操作で本番データを更新・削除するリスクを防ぎます。</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>自動生成された照会条件とデータ出典マップを併せて提示するため、担当者が根拠を直接検証できます。</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="ed-section">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">主な機能</p>
+                    <h2 class="ed-title">SyncInsightでできること</h2>
+                </div>
+
+                <div class="sol-features-grid">
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">01</span>
+                        <h3>自然言語によるデータ照会とグラフ化</h3>
+                        <p>質問を入力すると照会条件を自動生成して表とグラフで可視化し、実行された条件も透明に確認できます。</p>
+                    </article>
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">02</span>
+                        <h3>変動要因を整理するサマリーレポート支援</h3>
+                        <p>単純な集計にとどまらず、期間別の変動要因や関連情報をまとめて報告資料のドラフト作成を支援します。</p>
+                    </article>
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">03</span>
+                        <h3>複数業務データの連携と出典追跡</h3>
+                        <p>複数の社内業務データを一か所に接続し、各指標がどの元データから算出されたかを流れ図で確認できます。</p>
+                    </article>
+                </div>
+
+                <div class="sol-steps-block">
+                    <h3 class="sol-sub-heading">導入・運用の流れ</h3>
+                    <div class="sol-steps-grid">
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 01</span>
+                            <h4>読み取り専用データの接続</h4>
+                            <p>運用データの複製や分析用データベースを読み取り専用権限で安全に接続します。</p>
+                        </div>
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 02</span>
+                            <h4>日常の言葉で質問を入力</h4>
+                            <p>知りたい売上・注文・運用指標を自然言語で入力するか、おすすめ質問を選択します。</p>
+                        </div>
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 03</span>
+                            <h4>グラフ・根拠の確認と共有</h4>
+                            <p>自動生成された表とグラフ、照会根拠を確認し、レポートや会議資料としてそのまま活用します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">ライブデモ体験</p>
+                    <h2 class="ed-title">インストール不要で実際の画面をお試しいただけます</h2>
+                    <p class="ed-desc">SyncInsightはSyncVerse統合コンソール内で提供されており、デモデータは毎日午前4時（韓国時間）に初期化されます。</p>
+                </div>
+
+                <div class="sol-demo-grid">
+                    <div class="sol-demo-panel">
+                        <h3 class="sol-panel-title">1. デモ画面を開く</h3>
+                        <div class="sol-entry-stack">
+                        <div class="sol-entry-card is-primary">
+                            <div class="sol-entry-info">
+                                <div class="sol-entry-title">SyncVerse 統合分析コンソール</div>
+                                <p class="sol-entry-desc">SyncVerse管理コンソール内の[データ分析]メニューから自然言語データ質問、分析レポート、データフロー、DB接続を統合体験します。</p>
+                            </div>
+                            <a href="https://verse-admin.empasy.io/analytics/nl2sql" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">分析画面を開く &#8599;</a>
+                        </div>
+                        <div class="sol-entry-card">
+                            <div class="sol-entry-info">
+                                <div class="sol-entry-title">SyncVerse 統合ワークスペース データ質問</div>
+                                <p class="sol-entry-desc">SyncVerse統合ワークスペース画面からも同じ対話型データ照会をそのまま実行できます。</p>
+                            </div>
+                            <a href="https://verse-app.empasy.io/knowledge/nl2sql" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">ワークスペースで照会 &#8599;</a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="sol-demo-panel">
+                        <h3 class="sol-panel-title">2. デモアカウントをコピー</h3>
+                        <div class="sol-account-box is-primary">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">統括管理者（共通）</span>
+                                <span class="sol-account-note">標準デモアカウント</span>
+                            </div>
+                            <p class="sol-account-scope">SyncVerse内のデータ質問、分析レポート、データフロー、接続DB設定の全メニューを体験できます。</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="admin"
+                                    data-copy-label="統括管理者（共通） ID"
+                                    data-copy-text="コピー"
+                                    data-copied-text="コピー済"
+                                    data-toast-template="{label}をコピーしました: {value}">
+                                    <span class="sol-copy-label">ID</span>
+                                    <code class="sol-copy-value">admin</code>
+                                    <span class="sol-copy-action" data-copy-action>コピー</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="統括管理者（共通） PW"
+                                    data-copy-text="コピー"
+                                    data-copied-text="コピー済"
+                                    data-toast-template="{label}をコピーしました: {value}">
+                                    <span class="sol-copy-label">PW</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>コピー</span>
+                                </button>
+                            </div>
+                        </div>
+                        <details class="sol-more-accounts">
+                            <summary>他の役割アカウントを見る（1件）</summary>
+                            <div class="sol-more-accounts-list">
+                                
+                        <div class="sol-account-box">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">データ分析・企画担当</span>
+                                
+                            </div>
+                            <p class="sol-account-scope">接続DB設定を除く対話型データ照会、要約レポート、データ出典マップを体験できます。</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="sync_planner"
+                                    data-copy-label="データ分析・企画担当 ID"
+                                    data-copy-text="コピー"
+                                    data-copied-text="コピー済"
+                                    data-toast-template="{label}をコピーしました: {value}">
+                                    <span class="sol-copy-label">ID</span>
+                                    <code class="sol-copy-value">sync_planner</code>
+                                    <span class="sol-copy-action" data-copy-action>コピー</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="データ分析・企画担当 PW"
+                                    data-copy-text="コピー"
+                                    data-copied-text="コピー済"
+                                    data-toast-template="{label}をコピーしました: {value}">
+                                    <span class="sol-copy-label">PW</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>コピー</span>
+                                </button>
+                            </div>
+                        </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="sol-try-box">
+                    <h3 class="sol-try-title">ログイン後に確認したい3つのポイント</h3>
+                    <div class="sol-try-grid">
+                        
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">01</span>
+                                <span class="sol-try-menu">データ分析 &gt; 対話型照会</span>
+                            </div>
+                            <h4>サンプル質問で表とグラフを作成</h4>
+                            <p>用意された質問例をクリックするか自由に入力し、表とグラフが生成される流れをご確認ください。</p>
+                        </div>
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">02</span>
+                                <span class="sol-try-menu">データ分析 &gt; 分析レポート</span>
+                            </div>
+                            <h4>要約分析レポートを確認</h4>
+                            <p>数値だけでなく変動要因を整理して提示するレポート画面をご覧ください。</p>
+                        </div>
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">03</span>
+                                <span class="sol-try-menu">データ分析 &gt; 出典フロー</span>
+                            </div>
+                            <h4>データ出典マップを探索</h4>
+                            <p>指標がどの業務データからつながって算出されているか関係図をクリックして確認してみてください。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="ed-section">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">導入ステップ</p>
+                    <h2 class="ed-title">組織の状況に合わせて必要な機能から始められます</h2>
+                    <p class="ed-desc">システム全体を一斉に入れ替える必要はなく、優先度の高い業務領域から単独導入できます。</p>
+                </div>
+
+                <div class="sol-adoption-grid">
+                    <div class="sol-adoption-card">
+                        <h3>読み取り専用接続で安全にスタート</h3>
+                        <p>既存システムの複製データや分析用データだけを読み取り専用で接続し、原本変更の心配なくすぐ照会を始められます。</p>
+                    </div>
+                    <div class="sol-adoption-card">
+                        <h3>部門別の閲覧権限・質問範囲を設定</h3>
+                        <p>営業・財務・運用など部門ごとに閲覧可能な指標とテーブルを分け、現場担当者が安全に数字を引き出せます。</p>
+                    </div>
+                    <div class="sol-adoption-card">
+                        <h3>外部持ち出しなしの閉域網分析環境</h3>
+                        <p>SyncLLMの個人情報マスキングや社内専用AIモデルと組み合わせ、売上・顧客データを社外へ出さずに運用できます。</p>
+                    </div>
+                </div>
+
+                <div class="sol-faq-block">
+                    <h3 class="sol-sub-heading">よくある質問</h3>
+                    <div class="sol-faq-list">
+                    <div class="faq-item">
+                        <details open>
+                            <summary>誤った質問によって社内の本番データが書き換えられたり消えたりしませんか？</summary>
+                            <div class="faq-answer">読み取り専用の照会のみ実行されるよう制限されており、データを変更・削除する命令は実行段階で遮断されます。</div>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>AIが算出した数値が正しいかどうかはどう確認できますか？</summary>
+                            <div class="faq-answer">グラフとともに実際に社内データへ実行された照会条件の原文と結果テーブルをそのまま表示するため、担当者が直接検証できます。</div>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>社内データを外部のAIサービスへ送信せずに運用できますか？</summary>
+                            <div class="faq-answer">はい。社内オンプレミス構築やSyncLLMの機密情報マスキング機能と組み合わせ、外部流出を防ぎながら運用できます。</div>
+                        </details>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="ed-doc-callout sol-tech-callout">
+                    <p>開発・インフラ担当者向けの詳細アーキテクチャや連携仕様は技術ドキュメントポータルでご確認いただけます。</p>
+                    <a href="https://doc.empasy.com/ja/syncinsight/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">開発者技術ドキュメント (doc.empasy.com) &#8599;</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="ed-section ed-section-tinted sol-related-section">
+            <div class="container">
+                <div class="sol-related-head">
+                    <div>
+                        <p class="ed-kicker">あわせて活用したいモジュール</p>
+                        <h2 class="sol-related-title">SyncInsightとよく連携して使われる機能</h2>
+                    </div>
+                    <a href="/ja/pages/index.html#architecture" class="sol-all-link">全11製品の構成図を見る &#8594;</a>
+                </div>
+
+                <div class="sol-related-grid">
+                    <a href="/ja/solutions/sync-crawl.html" class="sol-related-card">
+                        <span class="sol-related-cat">拡張 · Webデータ収集</span>
+                        <h3>SyncCrawl</h3>
+                        <p>外部の公開Webデータを継続収集し社内分析データとして連携します。</p>
+                        <span class="sol-related-more">詳しく見る &#8594;</span>
+                    </a>
+                    <a href="/ja/solutions/sync-llm.html" class="sol-related-card">
+                        <span class="sol-related-cat">拡張 · AIコスト・セキュリティ</span>
+                        <h3>SyncLLM</h3>
+                        <p>分析に使うAIモデルの利用コストと個人情報保護基準をまとめて管理します。</p>
+                        <span class="sol-related-more">詳しく見る &#8594;</span>
+                    </a>
+                    <a href="/ja/solutions/sync-verse.html" class="sol-related-card">
+                        <span class="sol-related-cat">主力 · 協業・承認管理</span>
+                        <h3>SyncVerse</h3>
+                        <p>SyncInsightが組み込まれた統合管理画面で業務フローを一貫管理します。</p>
+                        <span class="sol-related-more">詳しく見る &#8594;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
+
+    {{> footer_ja }}
+
+    <div id="sol-lightbox" class="sol-lightbox" role="dialog" aria-modal="true" aria-label="SyncInsight">
+        <div class="sol-lightbox-bar">
+            <span id="sol-lightbox-title" class="sol-lightbox-title">指標変動要因の整理および要約レポート</span>
+            <button type="button" id="sol-lightbox-close" class="sol-lightbox-close" aria-label="拡大表示を閉じる">閉じる</button>
+        </div>
+        <div class="sol-lightbox-stage">
+            <img id="sol-lightbox-img" src="/images/screenshots/sync-insight/screen_02.png" alt="SyncInsight" class="sol-lightbox-img">
+        </div>
+        <p class="sol-lightbox-hint">左右スワイプまたはピンチ拡大で細部をご確認いただけます。</p>
+    </div>
+
+    <div id="sol-copy-toast" class="sol-copy-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="/assets/js/solution-page.js"></script>
 </body>
 </html>

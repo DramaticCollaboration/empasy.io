@@ -3,101 +3,544 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SyncInsight 공식 제품 페이지 | 엠파시(Empasy)</title>
-    <meta name="robots" content="noindex, follow">
-    <link rel="canonical" href="https://insight.empasy.io/">
-    <meta http-equiv="refresh" content="0;url=https://insight.empasy.io/">
-    <script>window.location.replace('https://insight.empasy.io/');</script>
+    <title>SyncInsight — 전문 검색식 없이, 말로 물어보면 표와 차트로 답하는 데이터 조회 | 엠파시(Empasy)</title>
+    <meta name="description" content="사내 업무 데이터에 담긴 매출·운영 지표를 일상 한국어로 질문해 확인하고, 읽기 전용 조회 방식으로 원본 데이터를 안전하게 보호합니다.">
+    <meta name="author" content="주식회사 엠파시 (Empasy Inc.)">
+    <link rel="canonical" href="https://empasy.io/ko/solutions/sync-insight.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-insight.html">
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-insight.html">
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-insight.html">
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-insight.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="엠파시 (Empasy)">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="SyncInsight — 전문 검색식 없이, 말로 물어보면 표와 차트로 답하는 데이터 조회 | 엠파시(Empasy)">
+    <meta property="og:description" content="사내 업무 데이터에 담긴 매출·운영 지표를 일상 한국어로 질문해 확인하고, 읽기 전용 조회 방식으로 원본 데이터를 안전하게 보호합니다.">
+    <meta property="og:url" content="https://empasy.io/ko/solutions/sync-insight.html">
+    <meta property="og:image" content="https://empasy.io/images/screenshots/sync-insight/screen_02.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SyncInsight — 전문 검색식 없이, 말로 물어보면 표와 차트로 답하는 데이터 조회 | 엠파시(Empasy)">
+    <meta name="twitter:description" content="사내 업무 데이터에 담긴 매출·운영 지표를 일상 한국어로 질문해 확인하고, 읽기 전용 조회 방식으로 원본 데이터를 안전하게 보호합니다.">
+    <meta name="twitter:image" content="https://empasy.io/images/screenshots/sync-insight/screen_02.png">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            margin: 0;
-            font-family: Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-            background: #ffffff;
-            color: #0f172a;
-            display: flex;
-            min-height: 100vh;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-            box-sizing: border-box;
-        }
-        .redirect-card {
-            max-width: 460px;
-            width: 100%;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 14px;
-            padding: 36px 32px;
-            text-align: center;
-            box-shadow: 0 12px 32px -20px rgba(15, 23, 42, 0.14);
-        }
-        .redirect-brand {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: #0e7490;
-            margin-bottom: 10px;
-        }
-        h1 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin: 0 0 10px;
-            line-height: 1.35;
-        }
-        p {
-            font-size: 0.94rem;
-            color: #475569;
-            margin: 0 0 24px;
-            line-height: 1.65;
-            word-break: keep-all;
-        }
-        .redirect-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-        }
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 12px 20px;
-            border-radius: 8px;
-            background: #0f172a;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            box-sizing: border-box;
-        }
-        .btn-primary:hover {
-            background: #1e293b;
-        }
-        .link-home {
-            font-size: 0.88rem;
-            color: #475569;
-            text-decoration: underline;
-            margin-top: 4px;
-        }
-        .link-home:hover {
-            color: #0f172a;
-        }
-    </style>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SyncInsight",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "url": "https://empasy.io/ko/solutions/sync-insight.html",
+  "image": "https://empasy.io/images/screenshots/sync-insight/screen_02.png",
+  "description": "사내 업무 데이터에 담긴 매출·운영 지표를 일상 한국어로 질문해 확인하고, 읽기 전용 조회 방식으로 원본 데이터를 안전하게 보호합니다.",
+  "provider": {
+    "@type": "Organization",
+    "name": "주식회사 엠파시 (Empasy Inc.)",
+    "url": "https://empasy.io/"
+  },
+  "inLanguage": "ko"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "홈",
+      "item": "https://empasy.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "솔루션",
+      "item": "https://empasy.io/#architecture"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SyncInsight",
+      "item": "https://empasy.io/ko/solutions/sync-insight.html"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "잘못된 질문으로 사내 운영 데이터가 수정되거나 지워질 위험은 없나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "읽기 전용 조회만 실행되도록 제한되어 있으며, 데이터를 변경하거나 삭제하는 명령은 실행 단계에서 차단됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "AI가 계산한 숫자가 맞는지 어떻게 확인할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "차트와 함께 실제로 사내 업무 데이터에서 조회한 조건 원문과 원본 표 데이터를 그대로 보여 주어 담당자가 직접 검증할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "사내 데이터가 외부 AI 서비스로 나가지 않게 운영할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 사내망 구축 환경이나 SyncLLM의 민감정보 가림 기능과 결합해 외부 유출 걱정 없이 운영할 수 있습니다."
+      }
+    }
+  ]
+}
+    </script>
 </head>
-<body>
-    <main class="redirect-card">
-        <span class="redirect-brand">Empasy SyncSeries</span>
-        <h1>SyncInsight 공식 페이지로 이동 중입니다</h1>
-        <p>최신 제품 소개와 화면 안내는 전용 공식 사이트(https://insight.empasy.io/)에서 확인하실 수 있습니다.</p>
-        <div class="redirect-actions">
-            <a class="btn-primary" href="https://insight.empasy.io/">SyncInsight 공식 사이트 열기 &#8599;</a>
-            <a class="link-home" href="/">엠파시 홈으로 돌아가기</a>
-        </div>
+<body class="sol-page">
+    {{> header_ko }}
+
+    <main id="main-content">
+        <section class="sol-hero">
+            <div class="container">
+                <nav class="sol-breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">홈</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="/#architecture">솔루션</a>
+                    <span aria-hidden="true">/</span>
+                    <span aria-current="page" class="sol-product-name">SyncInsight</span>
+                </nav>
+
+                <div class="sol-hero-copy">
+                    <p class="sol-eyebrow">SyncSeries 데이터·AI 모듈 · 대화형 데이터 조회</p>
+                    <h1 class="sol-title">전문 검색식 없이, 말로 물어보면 표와 차트로 답하는 데이터 조회</h1>
+                    <p class="sol-subtitle">사내 업무 데이터에 담긴 매출·운영 지표를 일상 한국어로 질문해 확인하고, 읽기 전용 조회 방식으로 원본 데이터를 안전하게 보호합니다.</p>
+
+                    <div class="sol-actions">
+                        <a href="#demo" class="btn btn-primary">무료 체험</a>
+                        <a href="/ko/pages/contact.html" class="btn btn-outline">도입 문의</a>
+                        <a href="/downloads/proposals/SyncInsight_Proposal.pdf" target="_blank" rel="noopener noreferrer" class="sol-secondary-link">제품소개서 PDF &#8599;</a>
+                        <a href="https://demo.empasy.io/products/sync-insight" target="_blank" rel="noopener noreferrer" class="sol-secondary-link">통합 데모 포털에서 보기 &#8599;</a>
+                    </div>
+                </div>
+
+                <nav class="sol-anchor-nav" aria-label="SyncInsight">
+                    <a href="#screens">실제 화면</a>
+                    <a href="#features">주요 기능</a>
+                    <a href="#demo">바로 체험</a>
+                    <a href="#faq">자주 묻는 질문</a>
+                </nav>
+
+                <div id="screens" class="sol-showcase-wrap" data-sol-showcase data-sol-product="SyncInsight">
+                    <div class="sol-showcase-tabs" role="tablist" aria-label="실제 작동 화면 선택">
+                            <button type="button" role="tab" class="sol-showcase-tab active"
+                                aria-selected="true"
+                                data-sol-tab
+                                data-slide-title="지표 변동 원인 정리 및 요약 리포트"
+                                data-slide-route="데이터 분석 · 요약 리포트"
+                                data-slide-summary="내부 운영 수치와 참고 자료를 함께 살펴보고 보고용 요약 문서를 정리합니다."
+                                data-slide-img="/images/screenshots/sync-insight/screen_02.png"
+                                data-slide-demo="https://verse-admin.empasy.io/analytics/research"
+                                data-slide-external="true">
+                                요약 리포트 분석
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="한국어 질문 기반 조회 및 차트 시각화"
+                                data-slide-route="데이터 분석 화면"
+                                data-slide-summary="전문 검색식 없이 일상 한국어로 질문하면 조회 결과를 표와 차트로 보여 주고, 실제 조회 조건도 함께 확인합니다."
+                                data-slide-img="/images/screenshots/sync-insight/screen_01.png"
+                                data-slide-demo="https://verse-admin.empasy.io/analytics/nl2sql"
+                                data-slide-external="true">
+                                말로 묻는 데이터 조회
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="여러 업무 데이터 연결 및 상태 확인"
+                                data-slide-route="데이터 분석 · 연결 관리"
+                                data-slide-summary="연결된 여러 사내 업무 데이터의 상태와 조회 허용 범위를 한 화면에서 관리합니다."
+                                data-slide-img="/images/screenshots/sync-insight/screen_03.png"
+                                data-slide-demo="https://verse-admin.empasy.io/analytics/datasources"
+                                data-slide-external="true">
+                                연결 데이터 관리
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="지표별 원본 데이터 출처 지도"
+                                data-slide-route="데이터 분석 · 출처 지도"
+                                data-slide-summary="특정 지표가 어떤 원본 업무 데이터와 항목을 거쳐 계산되었는지 시각적으로 확인합니다."
+                                data-slide-img="/images/screenshots/sync-insight/screen_04.png"
+                                data-slide-demo="https://verse-admin.empasy.io/search/lineage"
+                                data-slide-external="true">
+                                데이터 출처 흐름
+                            </button>
+                    </div>
+
+                    <div class="sol-showcase-frame">
+                        <div class="sol-showcase-bar">
+                            <div class="sol-showcase-bar-left">
+                                <span class="sol-showcase-title" data-sol-title>지표 변동 원인 정리 및 요약 리포트</span>
+                                <span class="sol-showcase-route" data-sol-route>데이터 분석 · 요약 리포트</span>
+                            </div>
+                            <div class="sol-showcase-bar-actions">
+                                <button type="button" class="sol-zoom-btn" data-sol-zoom aria-label="실제 화면 확대 보기">확대</button>
+                                <a href="https://verse-admin.empasy.io/analytics/research" target="_blank" rel="noopener noreferrer" class="sol-demo-link" data-sol-demo-link>
+                                    <span class="sol-link-desktop">이 화면 직접 열어보기</span>
+                                    <span class="sol-link-mobile">열기</span>
+                                    <span aria-hidden="true">&#8599;</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="sol-showcase-viewport">
+                            <button type="button" class="sol-img-btn" data-sol-img-btn aria-label="SyncInsight 지표 변동 원인 정리 및 요약 리포트">
+                                <img src="/images/screenshots/sync-insight/screen_02.png" alt="SyncInsight - 지표 변동 원인 정리 및 요약 리포트" class="sol-showcase-img" loading="eager" data-sol-img>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="sol-showcase-caption" data-sol-caption>내부 운영 수치와 참고 자료를 함께 살펴보고 보고용 요약 문서를 정리합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">업무의 변화</p>
+                    <h2 class="ed-title">기존 방식과 무엇이 다른가요?</h2>
+                    <p class="ed-desc">간단한 집계 하나를 뽑기 위해 개발팀에 매번 데이터 추출을 요청하던 불편을 줄이고, 현업 담당자가 직접 안전하게 데이터를 탐색할 수 있도록 돕습니다.</p>
+                </div>
+
+                <div class="sol-compare-grid">
+                    <div class="sol-compare-card is-before">
+                        <h3>기존 데이터 확인 방식</h3>
+                        <ul>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>정해진 대시보드에 없는 조건을 보려면 개발팀이나 데이터 팀에 추출을 요청하고 며칠을 기다려야 합니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>전문 검색식을 쓰기 어려워 실무자가 엑셀로 수작업 병합을 반복하게 됩니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>지표가 어떤 업무 데이터에서 어떻게 계산된 숫자인지 출처를 확인하기 어렵습니다.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sol-compare-card is-after">
+                        <h3>SyncInsight 도입 후</h3>
+                        <ul>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>&quot;지난 분기 카테고리별 매출 추이 보여줘&quot;처럼 일상 언어로 질문하면 조회 결과와 차트를 바로 확인합니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>읽기 전용 조회만 허용해 실수로 운영 데이터를 수정하거나 삭제할 위험을 막아 줍니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>생성된 조회 조건과 데이터가 어디서 왔는지 흐름도를 함께 보여 주어 결과를 검증할 수 있습니다.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="ed-section">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">주요 기능</p>
+                    <h2 class="ed-title">SyncInsight로 할 수 있는 일</h2>
+                </div>
+
+                <div class="sol-features-grid">
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">01</span>
+                        <h3>한국어 질문 기반 데이터 조회 및 차트</h3>
+                        <p>질문을 입력하면 조회 조건을 자동 작성해 표와 차트로 보여 주며, 사용된 조회 조건도 투명하게 확인할 수 있습니다.</p>
+                    </article>
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">02</span>
+                        <h3>원인 요약 리포트 작성 지원</h3>
+                        <p>단순 합계 조회를 넘어 기간별 변동 요인과 관련 자료를 함께 정리해 보고서 초안 작성을 돕습니다.</p>
+                    </article>
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">03</span>
+                        <h3>여러 업무 데이터 연결 및 출처 추적</h3>
+                        <p>여러 사내 업무 데이터를 한곳에 연결하고, 각 지표가 어떤 원본 데이터에서 산출되었는지 흐름도로 확인합니다.</p>
+                    </article>
+                </div>
+
+                <div class="sol-steps-block">
+                    <h3 class="sol-sub-heading">이렇게 사용합니다</h3>
+                    <div class="sol-steps-grid">
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 01</span>
+                            <h4>읽기 전용 데이터 연결</h4>
+                            <p>운영 데이터나 분석용 데이터를 읽기 전용 권한으로 안전하게 연결합니다.</p>
+                        </div>
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 02</span>
+                            <h4>일상 언어로 질문 입력</h4>
+                            <p>궁금한 매출·주문·운영 지표를 한국어로 입력하거나 추천 질문을 선택합니다.</p>
+                        </div>
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 03</span>
+                            <h4>차트·근거 확인 및 공유</h4>
+                            <p>자동 생성된 표와 차트, 조회 근거를 확인하고 보고서나 회의 자료로 활용합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">직접 체험</p>
+                    <h2 class="ed-title">설치 없이 실제 화면을 눌러 보세요</h2>
+                    <p class="ed-desc">SyncInsight는 SyncVerse 통합 콘솔 안에서 제공되며, 체험 데이터는 매일 오전 4시에 초기화됩니다.</p>
+                </div>
+
+                <div class="sol-demo-grid">
+                    <div class="sol-demo-panel">
+                        <h3 class="sol-panel-title">1. 체험 화면 열기</h3>
+                        <div class="sol-entry-stack">
+                        <div class="sol-entry-card is-primary">
+                            <div class="sol-entry-info">
+                                <div class="sol-entry-title">SyncVerse 통합 분석 콘솔</div>
+                                <p class="sol-entry-desc">SyncVerse 관리 콘솔 내 [데이터 분석] 메뉴에서 한국어 데이터 질문, 분석 보고서, 데이터 흐름, DB 연결을 통합 체험합니다.</p>
+                            </div>
+                            <a href="https://verse-admin.empasy.io/analytics/nl2sql" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">분석 화면 열기 &#8599;</a>
+                        </div>
+                        <div class="sol-entry-card">
+                            <div class="sol-entry-info">
+                                <div class="sol-entry-title">SyncVerse 통합 워크스페이스 데이터 질문</div>
+                                <p class="sol-entry-desc">SyncVerse 통합 워크스페이스에서도 동일한 대화형 데이터 조회를 바로 실행할 수 있습니다.</p>
+                            </div>
+                            <a href="https://verse-app.empasy.io/knowledge/nl2sql" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">워크스페이스 조회 &#8599;</a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="sol-demo-panel">
+                        <h3 class="sol-panel-title">2. 체험 계정 복사</h3>
+                        <div class="sol-account-box is-primary">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">총괄 관리자 (공통)</span>
+                                <span class="sol-account-note">기본 체험 계정</span>
+                            </div>
+                            <p class="sol-account-scope">SyncVerse 내 데이터 질문, 분석 보고서, 데이터 흐름, 연결 DB 설정 전체 메뉴를 체험합니다.</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="admin"
+                                    data-copy-label="총괄 관리자 (공통) 아이디"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">아이디</span>
+                                    <code class="sol-copy-value">admin</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="총괄 관리자 (공통) 비밀번호"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">비밀번호</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                            </div>
+                        </div>
+                        <details class="sol-more-accounts">
+                            <summary>다른 역할 계정 보기 (1개)</summary>
+                            <div class="sol-more-accounts-list">
+                                
+                        <div class="sol-account-box">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">데이터 분석·기획 담당자</span>
+                                
+                            </div>
+                            <p class="sol-account-scope">DB 연결 설정을 제외한 대화형 데이터 조회, 요약 리포트, 데이터 출처 지도를 체험할 수 있습니다.</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="sync_planner"
+                                    data-copy-label="데이터 분석·기획 담당자 아이디"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">아이디</span>
+                                    <code class="sol-copy-value">sync_planner</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="데이터 분석·기획 담당자 비밀번호"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">비밀번호</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                            </div>
+                        </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="sol-try-box">
+                    <h3 class="sol-try-title">로그인 후 확인해 볼 3가지</h3>
+                    <div class="sol-try-grid">
+                        
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">01</span>
+                                <span class="sol-try-menu">데이터 분석 &gt; 대화형 조회</span>
+                            </div>
+                            <h4>샘플 질문으로 표와 차트 확인</h4>
+                            <p>제공된 예시 질문을 클릭하거나 직접 질문을 입력해 표와 차트가 만들어지는 과정을 확인하세요.</p>
+                        </div>
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">02</span>
+                                <span class="sol-try-menu">데이터 분석 &gt; 분석 보고서</span>
+                            </div>
+                            <h4>요약 분석 리포트 확인</h4>
+                            <p>단순 수치를 넘어 변동 요인을 정리해 주는 보고서 화면을 살펴보세요.</p>
+                        </div>
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">03</span>
+                                <span class="sol-try-menu">데이터 분석 &gt; 출처 흐름</span>
+                            </div>
+                            <h4>데이터 출처 지도 탐색</h4>
+                            <p>지표가 어떤 업무 데이터에서 연결되어 나오는지 관계도를 눌러 확인해 보세요.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="ed-section">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">도입 안내</p>
+                    <h2 class="ed-title">조직 상황에 맞춰 필요한 만큼만 시작하세요</h2>
+                    <p class="ed-desc">전체 시스템을 한꺼번에 바꿀 필요 없이, 현재 가장 시급한 업무 영역부터 단독으로 적용할 수 있습니다.</p>
+                </div>
+
+                <div class="sol-adoption-grid">
+                    <div class="sol-adoption-card">
+                        <h3>읽기 전용 데이터 연결로 안전하게 시작</h3>
+                        <p>기존 운영 시스템의 복제본이나 분석용 데이터를 읽기 전용으로만 연결해 원본 변경 걱정 없이 바로 조회를 시작합니다.</p>
+                    </div>
+                    <div class="sol-adoption-card">
+                        <h3>현업 부서별 권한·질문 범위 설정</h3>
+                        <p>영업·재무·운영 부서별로 볼 수 있는 지표와 테이블 범위를 나누어 실무자가 직접 보고서용 숫자를 뽑아 쓸 수 있습니다.</p>
+                    </div>
+                    <div class="sol-adoption-card">
+                        <h3>외부 유출 없는 폐쇄망 분석 구축</h3>
+                        <p>SyncLLM의 개인정보 가림 또는 사내 전용 서버 AI와 결합해 매출·고객 데이터가 외부로 나가지 않게 운영합니다.</p>
+                    </div>
+                </div>
+
+                <div class="sol-faq-block">
+                    <h3 class="sol-sub-heading">자주 묻는 질문</h3>
+                    <div class="sol-faq-list">
+                    <div class="faq-item">
+                        <details open>
+                            <summary>잘못된 질문으로 사내 운영 데이터가 수정되거나 지워질 위험은 없나요?</summary>
+                            <div class="faq-answer">읽기 전용 조회만 실행되도록 제한되어 있으며, 데이터를 변경하거나 삭제하는 명령은 실행 단계에서 차단됩니다.</div>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>AI가 계산한 숫자가 맞는지 어떻게 확인할 수 있나요?</summary>
+                            <div class="faq-answer">차트와 함께 실제로 사내 업무 데이터에서 조회한 조건 원문과 원본 표 데이터를 그대로 보여 주어 담당자가 직접 검증할 수 있습니다.</div>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>사내 데이터가 외부 AI 서비스로 나가지 않게 운영할 수 있나요?</summary>
+                            <div class="faq-answer">네. 사내망 구축 환경이나 SyncLLM의 민감정보 가림 기능과 결합해 외부 유출 걱정 없이 운영할 수 있습니다.</div>
+                        </details>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="ed-doc-callout sol-tech-callout">
+                    <p>개발·인프라 담당자를 위한 상세 아키텍처와 연동 규격은 기술 문서 포털에서 확인하실 수 있습니다.</p>
+                    <a href="https://doc.empasy.com/syncinsight/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">개발자 기술 문서 (doc.empasy.com) &#8599;</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="ed-section ed-section-tinted sol-related-section">
+            <div class="container">
+                <div class="sol-related-head">
+                    <div>
+                        <p class="ed-kicker">함께 쓰면 좋은 모듈</p>
+                        <h2 class="sol-related-title">SyncInsight와 자주 연결해 사용하는 기능</h2>
+                    </div>
+                    <a href="/#architecture" class="sol-all-link">전체 11종 구성도 보기 &#8594;</a>
+                </div>
+
+                <div class="sol-related-grid">
+                    <a href="/ko/solutions/sync-crawl.html" class="sol-related-card">
+                        <span class="sol-related-cat">확장 · 웹 데이터 수집</span>
+                        <h3>SyncCrawl</h3>
+                        <p>외부 공개 웹 데이터를 꾸준히 모아 사내 분석 자료로 연결합니다.</p>
+                        <span class="sol-related-more">자세히 보기 &#8594;</span>
+                    </a>
+                    <a href="/ko/solutions/sync-llm.html" class="sol-related-card">
+                        <span class="sol-related-cat">확장 · AI 비용·보안</span>
+                        <h3>SyncLLM</h3>
+                        <p>분석에 쓰이는 AI 모델 호출 비용과 개인정보 보호 기준을 함께 관리합니다.</p>
+                        <span class="sol-related-more">자세히 보기 &#8594;</span>
+                    </a>
+                    <a href="/ko/solutions/sync-verse.html" class="sol-related-card">
+                        <span class="sol-related-cat">주력 · 협업·승인 관리</span>
+                        <h3>SyncVerse</h3>
+                        <p>SyncInsight가 포함된 통합 관리 화면에서 업무 흐름을 함께 관리합니다.</p>
+                        <span class="sol-related-more">자세히 보기 &#8594;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
+
+    {{> footer_ko }}
+
+    <div id="sol-lightbox" class="sol-lightbox" role="dialog" aria-modal="true" aria-label="SyncInsight">
+        <div class="sol-lightbox-bar">
+            <span id="sol-lightbox-title" class="sol-lightbox-title">지표 변동 원인 정리 및 요약 리포트</span>
+            <button type="button" id="sol-lightbox-close" class="sol-lightbox-close" aria-label="확대 닫기">닫기</button>
+        </div>
+        <div class="sol-lightbox-stage">
+            <img id="sol-lightbox-img" src="/images/screenshots/sync-insight/screen_02.png" alt="SyncInsight" class="sol-lightbox-img">
+        </div>
+        <p class="sol-lightbox-hint">좌우로 밀거나 손가락으로 확대해 세부 화면을 확인할 수 있습니다.</p>
+    </div>
+
+    <div id="sol-copy-toast" class="sol-copy-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="/assets/js/solution-page.js"></script>
 </body>
 </html>

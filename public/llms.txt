@@ -37,19 +37,19 @@ Rather than asking non-IT executives and business teams to navigate a catalog of
 ## Product Directory (4 Core Areas + 7 Modular Extensions)
 
 ### 4 Core Areas
-- **Collaboration & Staged Approval Hub (`SyncVerse`)**: https://verse.empasy.io/ | Docs: https://doc.empasy.com/syncverse/
-- **Web Test Automation & Site Audit Platform (`SyncETA`)**: https://eta.empasy.io/ | Desktop App: https://empasy.io/ko/download_eta.html | Brochure PDF (15p): https://empasy.io/downloads/proposals/SyncETA_Proposal.pdf | Docs: https://doc.empasy.com/synceta/
-- **Standard Internal Management System Core (`SyncBoot`)**: https://boot.empasy.io/ | Docs: https://doc.empasy.com/syncboot/
-- **Unified Multilingual Website Management (`SyncCMS`)**: https://cms.empasy.io/ | Docs: https://doc.empasy.com/synccms/
+- **Collaboration & Staged Approval Hub (`SyncVerse`)**: https://empasy.io/ko/solutions/sync-verse.html | Docs: https://doc.empasy.com/syncverse/
+- **Web Test Automation & Site Audit Platform (`SyncETA`)**: https://empasy.io/ko/solutions/sync-eta.html | Desktop App: https://empasy.io/ko/download_eta.html | Brochure PDF (15p): https://empasy.io/downloads/proposals/SyncETA_Proposal.pdf | Docs: https://doc.empasy.com/synceta/
+- **Standard Internal Management System Core (`SyncBoot`)**: https://empasy.io/ko/solutions/sync-boot.html | Docs: https://doc.empasy.com/syncboot/
+- **Unified Multilingual Website Management (`SyncCMS`)**: https://empasy.io/ko/solutions/sync-cms.html | Docs: https://doc.empasy.com/synccms/
 
 ### 7 Modular Extensions
-- **Plain-Language Data Lookup (`SyncInsight`)**: https://insight.empasy.io/ | Docs: https://doc.empasy.com/syncinsight/
-- **Corporate AI Cost & Privacy Control (`SyncLLM`)**: https://llm.empasy.io/ | Docs: https://doc.empasy.com/syncllm/
-- **Automated Public Web Data Collection (`SyncCrawl`)**: https://crawl.empasy.io/ | Docs: https://doc.empasy.com/synccrawl/
-- **System Integration Visibility & Defense (`SyncAPIM`)**: https://apim.empasy.io/ | Docs: https://doc.empasy.com/syncapim/
-- **Security Advisory & Policy Tracking (`SyncWatch`)**: https://watch.empasy.io/ | Docs: https://doc.empasy.com/syncwatch/
-- **Commerce Margin & Price Protection (`SyncShop`)**: https://shop.empasy.io/ | Docs: https://doc.empasy.com/syncshop/
-- **Project Profitability & Deadline Tracking (`SyncOps`)**: https://ops.empasy.io/ | Docs: https://doc.empasy.com/syncops/
+- **Plain-Language Data Lookup (`SyncInsight`)**: https://empasy.io/ko/solutions/sync-insight.html | Docs: https://doc.empasy.com/syncinsight/
+- **Corporate AI Cost & Privacy Control (`SyncLLM`)**: https://empasy.io/ko/solutions/sync-llm.html | Docs: https://doc.empasy.com/syncllm/
+- **Automated Public Web Data Collection (`SyncCrawl`)**: https://empasy.io/ko/solutions/sync-crawl.html | Docs: https://doc.empasy.com/synccrawl/
+- **System Integration Visibility & Defense (`SyncAPIM`)**: https://empasy.io/ko/solutions/sync-apim.html | Docs: https://doc.empasy.com/syncapim/
+- **Security Advisory & Policy Tracking (`SyncWatch`)**: https://empasy.io/ko/solutions/sync-watch.html | Docs: https://doc.empasy.com/syncwatch/
+- **Commerce Margin & Price Protection (`SyncShop`)**: https://empasy.io/ko/solutions/sync-shop.html | Docs: https://doc.empasy.com/syncshop/
+- **Project Profitability & Deadline Tracking (`SyncOps`)**: https://empasy.io/ko/solutions/sync-ops.html | Docs: https://doc.empasy.com/syncops/
 
 ## Technical Architecture Summary (For IT & Engineering Teams)
 - **Shared Core Stack**: Java 25, Spring Boot 4.0, PostgreSQL 18.6 (`pgvector`), Vue 3, Nuxt 3 SSR, Playwright execution engine.
@@ -59,7 +59,7 @@ Rather than asking non-IT executives and business teams to navigate a catalog of
 
 ## Official Resources & Corporate Credentials
 - Website (30-Second Solution Finder & Role Guides): https://empasy.io
-- Public Live Demo Portal (No Registration Required): https://sync.empasy.io
+- Public Live Demo Portal (No Registration Required): https://demo.empasy.io
 - Engineering Documentation Hub: https://doc.empasy.com
 - Executive Summary Brochure PDF: https://empasy.io/downloads/proposals/SyncSeries_Brochure_v1.0.pdf
 - Master Business Proposal PDF: https://empasy.io/downloads/proposals/SyncSeries_Master_Proposal.pdf
