@@ -486,8 +486,11 @@
             </div>
         </section>
 
+        <!-- 6-2. 全11製品構成図 -->
+        {{> arch_map_ja }}
+
         <!-- 7. 中核業務領域 4種 -->
-        <section id="solutions" class="ed-section">
+        <section id="solutions" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">中核業務領域 4種</p>
@@ -574,7 +577,7 @@
         </section>
 
         <!-- 8. 目的別拡張モジュール 7種 -->
-        <section id="modules" class="ed-section ed-section-tinted">
+        <section id="modules" class="ed-section">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">目的別拡張領域</p>
@@ -585,13 +588,14 @@
                 </div>
 
                 <div class="ed-tabs" style="justify-content: flex-start; margin-bottom: 24px;" role="tablist" aria-label="拡張モジュール分野選択">
-                    <button type="button" class="ed-tab active" role="tab" aria-selected="true" data-ext="data-ai">データ・AI (3)</button>
+                    <button type="button" class="ed-tab active" role="tab" aria-selected="true" data-ext="all">すべて (7)</button>
+                    <button type="button" class="ed-tab" role="tab" aria-selected="false" data-ext="data-ai">データ・AI (3)</button>
                     <button type="button" class="ed-tab" role="tab" aria-selected="false" data-ext="security">セキュリティ管理 (2)</button>
                     <button type="button" class="ed-tab" role="tab" aria-selected="false" data-ext="operations">EC・事業運営 (2)</button>
                 </div>
 
-                <div class="ed-ext-grid ed-ext-pane active" data-ext-pane="data-ai">
-                    <div class="ed-ext-card">
+                <div class="ed-ext-grid" data-ext-unified-grid>
+                    <div class="ed-ext-card" data-ext-cat="data-ai">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">経営・現場分析</span>
@@ -602,7 +606,7 @@
                         </div>
                         <a href="https://insight.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">詳しく見る &#8599;</a>
                     </div>
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="data-ai">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">AI予算・個人情報</span>
@@ -613,7 +617,7 @@
                         </div>
                         <a href="https://llm.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">詳しく見る &#8599;</a>
                     </div>
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="data-ai">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">市場調査・情報整理</span>
@@ -624,10 +628,7 @@
                         </div>
                         <a href="https://crawl.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">詳しく見る &#8599;</a>
                     </div>
-                </div>
-
-                <div class="ed-ext-grid ed-ext-pane" data-ext-pane="security">
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="security">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">連携セキュリティ</span>
@@ -638,7 +639,7 @@
                         </div>
                         <a href="https://apim.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">詳しく見る &#8599;</a>
                     </div>
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="security">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">脆弱性対応・履歴</span>
@@ -649,10 +650,7 @@
                         </div>
                         <a href="https://watch.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">詳しく見る &#8599;</a>
                     </div>
-                </div>
-
-                <div class="ed-ext-grid ed-ext-pane" data-ext-pane="operations">
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="operations">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">EC利益率保護</span>
@@ -663,7 +661,7 @@
                         </div>
                         <a href="https://shop.empasy.io/ja/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">詳しく見る &#8599;</a>
                     </div>
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="operations">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">受注案件・原価</span>
@@ -679,7 +677,7 @@
         </section>
 
         <!-- 9. 3段階導入ステップ + 経営層CTA + IT資料分離バー -->
-        <section id="adoption" class="ed-section">
+        <section id="adoption" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">導入ステップ</p>

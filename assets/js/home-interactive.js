@@ -61,7 +61,7 @@
       });
     });
 
-    // 2. Extension Module Category Tabs
+    // 2. Extension Module Category Tabs (All + Filtered)
     function activateExtTab(key) {
       var targetBtn = document.querySelector('[data-ext="' + key + '"]');
       if (!targetBtn) return;
@@ -70,9 +70,17 @@
         b.classList.toggle('active', active);
         b.setAttribute('aria-selected', active ? 'true' : 'false');
       });
-      document.querySelectorAll('[data-ext-pane]').forEach(function (pane) {
-        pane.classList.toggle('active', pane.getAttribute('data-ext-pane') === key);
-      });
+      var unifiedCards = document.querySelectorAll('[data-ext-unified-grid] [data-ext-cat]');
+      if (unifiedCards.length > 0) {
+        unifiedCards.forEach(function (card) {
+          var show = key === 'all' || card.getAttribute('data-ext-cat') === key;
+          card.classList.toggle('is-hidden', !show);
+        });
+      } else {
+        document.querySelectorAll('[data-ext-pane]').forEach(function (pane) {
+          pane.classList.toggle('active', pane.getAttribute('data-ext-pane') === key);
+        });
+      }
     }
 
     document.querySelectorAll('[data-ext]').forEach(function (btn) {
@@ -88,6 +96,147 @@
         if (extKey) activateExtTab(extKey);
       });
     });
+
+    // 2-2. Interactive Architecture Product Map
+    var archBoard = document.querySelector('[data-emp-arch]');
+    if (archBoard) {
+      var archNodes = Array.prototype.slice.call(archBoard.querySelectorAll('[data-arch-node]'));
+      var nodeMap = {};
+      archNodes.forEach(function (el) {
+        var id = el.getAttribute('data-arch-node');
+        if (id) nodeMap[id] = el;
+      });
+
+      var insThumbLink = archBoard.querySelector('[data-arch-ins-thumb-link]');
+      var insImg = archBoard.querySelector('[data-arch-ins-img]');
+      var insBadge = archBoard.querySelector('[data-arch-ins-badge]');
+      var insName = archBoard.querySelector('[data-arch-ins-name]');
+      var insDesc = archBoard.querySelector('[data-arch-ins-desc]');
+      var insRel = archBoard.querySelector('[data-arch-ins-rel]');
+      var insSite = archBoard.querySelector('[data-arch-ins-site]');
+      var insDemo = archBoard.querySelector('[data-arch-ins-demo]');
+      var insContact = archBoard.querySelector('[data-arch-ins-contact]');
+      var foundationTrigger = archBoard.querySelector('[data-arch-foundation-trigger]');
+      var foundationNode = archNodes.find(function (el) {
+        return el.getAttribute('data-arch-foundation') === 'true';
+      });
+
+      function selectArchNode(productId) {
+        var target = nodeMap[productId];
+        if (!target) return;
+        var isHub = target.getAttribute('data-arch-hub') === 'true';
+        var connectedIds = (target.getAttribute('data-arch-connected') || '')
+          .split(',')
+          .map(function (s) { return s.trim(); })
+          .filter(Boolean);
+        var relatedSet = {};
+        if (!isHub) {
+          connectedIds.forEach(function (cid) { relatedSet[cid] = true; });
+        }
+
+        archNodes.forEach(function (el) {
+          var id = el.getAttribute('data-arch-node');
+          var selected = id === productId;
+          var related = !selected && Boolean(relatedSet[id]);
+          el.classList.toggle('is-selected', selected);
+          el.classList.toggle('is-related', related);
+          el.setAttribute('aria-pressed', selected ? 'true' : 'false');
+
+          var stem = archBoard.querySelector('[data-arch-stem="' + id + '"]');
+          if (stem) {
+            stem.classList.toggle('is-lit', isHub || selected || related);
+          }
+        });
+
+        archBoard.querySelectorAll('[data-arch-group]').forEach(function (grp) {
+          var grpKey = grp.getAttribute('data-arch-group');
+          var hasLit = Boolean(
+            grp.querySelector('[data-arch-node].is-selected, [data-arch-node].is-related')
+          ) || isHub;
+          grp.classList.toggle('has-active', hasLit);
+          var gStem = archBoard.querySelector('[data-arch-group-stem="' + grpKey + '"]');
+          if (gStem) gStem.classList.toggle('is-lit', hasLit);
+        });
+
+        if (foundationTrigger && foundationNode) {
+          foundationTrigger.classList.toggle(
+            'is-selected',
+            foundationNode.getAttribute('data-arch-node') === productId
+          );
+        }
+
+        var name = target.getAttribute('data-arch-name') || '';
+        var badge = target.getAttribute('data-arch-badge') || '';
+        var desc = target.getAttribute('data-arch-desc') || '';
+        var site = target.getAttribute('data-arch-site') || '';
+        var demo = target.getAttribute('data-arch-demo') || '';
+        var contact = target.getAttribute('data-arch-contact') || '';
+        var img = target.getAttribute('data-arch-img') || '';
+        var hubNote = target.getAttribute('data-arch-hub-note') || '';
+
+        if (insBadge) insBadge.textContent = badge;
+        if (insName) insName.textContent = name;
+        if (insDesc) insDesc.textContent = desc;
+        if (insSite && site) insSite.setAttribute('href', site);
+        if (insThumbLink && site) insThumbLink.setAttribute('href', site);
+        if (insDemo && demo) insDemo.setAttribute('href', demo);
+        if (insContact && contact) insContact.setAttribute('href', contact);
+        if (insImg && img) {
+          insImg.setAttribute('src', img);
+          insImg.setAttribute('alt', name);
+        }
+
+        if (insRel) {
+          insRel.innerHTML = '';
+          if (isHub && hubNote) {
+            var noteEl = document.createElement('span');
+            noteEl.className = 'emp-arch-hub-note';
+            noteEl.textContent = hubNote;
+            insRel.appendChild(noteEl);
+          } else {
+            connectedIds.forEach(function (cid) {
+              var relEl = nodeMap[cid];
+              if (!relEl) return;
+              var chip = document.createElement('button');
+              chip.type = 'button';
+              chip.className = 'emp-arch-rel-chip';
+              chip.textContent = relEl.getAttribute('data-arch-name') || cid;
+              chip.addEventListener('click', function () {
+                selectArchNode(cid);
+              });
+              insRel.appendChild(chip);
+            });
+          }
+        }
+      }
+
+      archNodes.forEach(function (el) {
+        var id = el.getAttribute('data-arch-node');
+        if (!id) return;
+        el.addEventListener('click', function () {
+          selectArchNode(id);
+        });
+        el.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            selectArchNode(id);
+          }
+        });
+        var launch = el.querySelector('[data-arch-launch]');
+        if (launch) {
+          launch.addEventListener('click', function (e) {
+            e.stopPropagation();
+          });
+        }
+      });
+
+      if (foundationTrigger && foundationNode) {
+        foundationTrigger.addEventListener('click', function () {
+          var fid = foundationNode.getAttribute('data-arch-node');
+          if (fid) selectArchNode(fid);
+        });
+      }
+    }
 
     // 3. 30-Second Interactive Module Finder
     var finderRoot = document.getElementById('ed-finder-app');

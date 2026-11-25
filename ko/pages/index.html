@@ -485,8 +485,11 @@
             </div>
         </section>
 
+        <!-- 6-2. 전체 제품 구성도 -->
+        {{> arch_map_ko }}
+
         <!-- 7. 핵심 업무 영역 4종 (역할 제목 우선, 제품명 보조 배지) -->
-        <section id="solutions" class="ed-section">
+        <section id="solutions" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">핵심 업무 영역 4종</p>
@@ -572,8 +575,8 @@
             </div>
         </section>
 
-        <!-- 8. 목적별 확장 영역 7종 (3개 분야 탭) -->
-        <section id="modules" class="ed-section ed-section-tinted">
+        <!-- 8. 목적별 확장 영역 7종 (전체 기본 노출 + 분야 필터) -->
+        <section id="modules" class="ed-section">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">목적별 확장 영역</p>
@@ -584,13 +587,14 @@
                 </div>
 
                 <div class="ed-tabs" style="justify-content: flex-start; margin-bottom: 24px;" role="tablist" aria-label="확장 업무 분야 선택">
-                    <button type="button" class="ed-tab active" role="tab" aria-selected="true" data-ext="data-ai">데이터 · AI (3)</button>
+                    <button type="button" class="ed-tab active" role="tab" aria-selected="true" data-ext="all">전체 (7)</button>
+                    <button type="button" class="ed-tab" role="tab" aria-selected="false" data-ext="data-ai">데이터 · AI (3)</button>
                     <button type="button" class="ed-tab" role="tab" aria-selected="false" data-ext="security">보안 관리 (2)</button>
                     <button type="button" class="ed-tab" role="tab" aria-selected="false" data-ext="operations">쇼핑몰 · 사업운영 (2)</button>
                 </div>
 
-                <div class="ed-ext-grid ed-ext-pane active" data-ext-pane="data-ai">
-                    <div class="ed-ext-card">
+                <div class="ed-ext-grid" data-ext-unified-grid>
+                    <div class="ed-ext-card" data-ext-cat="data-ai">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">경영 · 현업 분석</span>
@@ -601,7 +605,7 @@
                         </div>
                         <a href="https://insight.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">자세히 보기 &#8599;</a>
                     </div>
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="data-ai">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">AI 예산 · 개인정보</span>
@@ -612,7 +616,7 @@
                         </div>
                         <a href="https://llm.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">자세히 보기 &#8599;</a>
                     </div>
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="data-ai">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">시장 조사 · 자료 정리</span>
@@ -623,10 +627,7 @@
                         </div>
                         <a href="https://crawl.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">자세히 보기 &#8599;</a>
                     </div>
-                </div>
-
-                <div class="ed-ext-grid ed-ext-pane" data-ext-pane="security">
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="security">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">연동 보안 · 유출 방지</span>
@@ -637,7 +638,7 @@
                         </div>
                         <a href="https://apim.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">자세히 보기 &#8599;</a>
                     </div>
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="security">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">취약점 대응 · 이력</span>
@@ -648,10 +649,7 @@
                         </div>
                         <a href="https://watch.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">자세히 보기 &#8599;</a>
                     </div>
-                </div>
-
-                <div class="ed-ext-grid ed-ext-pane" data-ext-pane="operations">
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="operations">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">커머스 · 마진 보호</span>
@@ -662,7 +660,7 @@
                         </div>
                         <a href="https://shop.empasy.io/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">자세히 보기 &#8599;</a>
                     </div>
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="operations">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">수주 사업 · 컴플라이언스</span>
@@ -678,7 +676,7 @@
         </section>
 
         <!-- 9. 작게 시작하는 3단계 도입 모델 + 경영진 CTA + IT/개발자 자료 분리 -->
-        <section id="adoption" class="ed-section">
+        <section id="adoption" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">도입 절차</p>

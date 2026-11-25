@@ -485,8 +485,11 @@
             </div>
         </section>
 
+        <!-- 6-2. All 11 Products Interactive Map -->
+        {{> arch_map_en }}
+
         <!-- 7. 4 Core Business Areas (Capability First, Product Code Badge Second) -->
-        <section id="solutions" class="ed-section">
+        <section id="solutions" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">4 Core Business Areas</p>
@@ -573,7 +576,7 @@
         </section>
 
         <!-- 8. 7 Modular Extensions -->
-        <section id="modules" class="ed-section ed-section-tinted">
+        <section id="modules" class="ed-section">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">Modular Extensions</p>
@@ -584,13 +587,14 @@
                 </div>
 
                 <div class="ed-tabs" style="justify-content: flex-start; margin-bottom: 24px;" role="tablist" aria-label="Extension module categories">
-                    <button type="button" class="ed-tab active" role="tab" aria-selected="true" data-ext="data-ai">Data &amp; AI (3)</button>
+                    <button type="button" class="ed-tab active" role="tab" aria-selected="true" data-ext="all">All (7)</button>
+                    <button type="button" class="ed-tab" role="tab" aria-selected="false" data-ext="data-ai">Data &amp; AI (3)</button>
                     <button type="button" class="ed-tab" role="tab" aria-selected="false" data-ext="security">Security &amp; Governance (2)</button>
                     <button type="button" class="ed-tab" role="tab" aria-selected="false" data-ext="operations">Commerce &amp; Project Ops (2)</button>
                 </div>
 
-                <div class="ed-ext-grid ed-ext-pane active" data-ext-pane="data-ai">
-                    <div class="ed-ext-card">
+                <div class="ed-ext-grid" data-ext-unified-grid>
+                    <div class="ed-ext-card" data-ext-cat="data-ai">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">Executive Analytics</span>
@@ -601,7 +605,7 @@
                         </div>
                         <a href="https://insight.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">Learn More &#8599;</a>
                     </div>
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="data-ai">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">AI Budget &amp; Privacy</span>
@@ -612,7 +616,7 @@
                         </div>
                         <a href="https://llm.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">Learn More &#8599;</a>
                     </div>
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="data-ai">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">Market Research</span>
@@ -623,10 +627,7 @@
                         </div>
                         <a href="https://crawl.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">Learn More &#8599;</a>
                     </div>
-                </div>
-
-                <div class="ed-ext-grid ed-ext-pane" data-ext-pane="security">
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="security">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">Integration Defense</span>
@@ -637,7 +638,7 @@
                         </div>
                         <a href="https://apim.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">Learn More &#8599;</a>
                     </div>
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="security">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">Vulnerability Alerts</span>
@@ -648,10 +649,7 @@
                         </div>
                         <a href="https://watch.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">Learn More &#8599;</a>
                     </div>
-                </div>
-
-                <div class="ed-ext-grid ed-ext-pane" data-ext-pane="operations">
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="operations">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">Commerce Safeguards</span>
@@ -662,7 +660,7 @@
                         </div>
                         <a href="https://shop.empasy.io/en/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: fit-content;">Learn More &#8599;</a>
                     </div>
-                    <div class="ed-ext-card">
+                    <div class="ed-ext-card" data-ext-cat="operations">
                         <div>
                             <div class="ed-card-meta-row">
                                 <span class="ed-flagship-role">Project P&amp;L</span>
@@ -678,7 +676,7 @@
         </section>
 
         <!-- 9. Small-Start 3-Step Adoption + Executive CTA + Separate IT Resource Bar -->
-        <section id="adoption" class="ed-section">
+        <section id="adoption" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">Adoption Process</p>
