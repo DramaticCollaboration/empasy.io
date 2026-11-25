@@ -18,101 +18,796 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SyncAPIM 공식 제품 페이지 | 엠파시(Empasy)</title>
-    <meta name="robots" content="noindex, follow">
-    <link rel="canonical" href="https://apim.empasy.io/">
-    <meta http-equiv="refresh" content="0;url=https://apim.empasy.io/">
-    <script>window.location.replace('https://apim.empasy.io/');</script>
+    <title>SyncAPIM — 관리 누락 연동 경로까지 찾아내고 비정상 접근을 점검합니다 | 엠파시(Empasy)</title>
+    <meta name="description" content="실제 통신 기록을 바탕으로 문서에 빠진 숨은 연동 구간을 파악하고, 비정상 공격 시도와 민감정보 노출 여부를 한 화면에서 관리합니다.">
+    <meta name="author" content="주식회사 엠파시 (Empasy Inc.)">
+    <link rel="canonical" href="https://empasy.io/ko/solutions/sync-apim.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-apim.html">
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-apim.html">
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-apim.html">
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-apim.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="엠파시 (Empasy)">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="SyncAPIM — 관리 누락 연동 경로까지 찾아내고 비정상 접근을 점검합니다 | 엠파시(Empasy)">
+    <meta property="og:description" content="실제 통신 기록을 바탕으로 문서에 빠진 숨은 연동 구간을 파악하고, 비정상 공격 시도와 민감정보 노출 여부를 한 화면에서 관리합니다.">
+    <meta property="og:url" content="https://empasy.io/ko/solutions/sync-apim.html">
+    <meta property="og:image" content="https://empasy.io/images/screenshots/sync-apim/screen_01.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SyncAPIM — 관리 누락 연동 경로까지 찾아내고 비정상 접근을 점검합니다 | 엠파시(Empasy)">
+    <meta name="twitter:description" content="실제 통신 기록을 바탕으로 문서에 빠진 숨은 연동 구간을 파악하고, 비정상 공격 시도와 민감정보 노출 여부를 한 화면에서 관리합니다.">
+    <meta name="twitter:image" content="https://empasy.io/images/screenshots/sync-apim/screen_01.png">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            margin: 0;
-            font-family: Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-            background: #ffffff;
-            color: #0f172a;
-            display: flex;
-            min-height: 100vh;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-            box-sizing: border-box;
-        }
-        .redirect-card {
-            max-width: 460px;
-            width: 100%;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 14px;
-            padding: 36px 32px;
-            text-align: center;
-            box-shadow: 0 12px 32px -20px rgba(15, 23, 42, 0.14);
-        }
-        .redirect-brand {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: #0e7490;
-            margin-bottom: 10px;
-        }
-        h1 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin: 0 0 10px;
-            line-height: 1.35;
-        }
-        p {
-            font-size: 0.94rem;
-            color: #475569;
-            margin: 0 0 24px;
-            line-height: 1.65;
-            word-break: keep-all;
-        }
-        .redirect-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-        }
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 12px 20px;
-            border-radius: 8px;
-            background: #0f172a;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            box-sizing: border-box;
-        }
-        .btn-primary:hover {
-            background: #1e293b;
-        }
-        .link-home {
-            font-size: 0.88rem;
-            color: #475569;
-            text-decoration: underline;
-            margin-top: 4px;
-        }
-        .link-home:hover {
-            color: #0f172a;
-        }
-    </style>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SyncAPIM",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "url": "https://empasy.io/ko/solutions/sync-apim.html",
+  "image": "https://empasy.io/images/screenshots/sync-apim/screen_01.png",
+  "description": "실제 통신 기록을 바탕으로 문서에 빠진 숨은 연동 구간을 파악하고, 비정상 공격 시도와 민감정보 노출 여부를 한 화면에서 관리합니다.",
+  "provider": {
+    "@type": "Organization",
+    "name": "주식회사 엠파시 (Empasy Inc.)",
+    "url": "https://empasy.io/"
+  },
+  "inLanguage": "ko"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "홈",
+      "item": "https://empasy.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "솔루션",
+      "item": "https://empasy.io/#architecture"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SyncAPIM",
+      "item": "https://empasy.io/ko/solutions/sync-apim.html"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "이미 운영 중인 서비스 앞단에 붙이면 서비스 속도가 느려지지 않나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "운영에 부담 없는 복사 점검 방식으로 먼저 현황을 파악한 뒤, 필요한 구간만 차단 모드로 전환할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "기존 웹 보안 장비와 무엇이 다른가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "기존 웹 보안 장비가 알려진 공격 차단에 집중한다면, SyncAPIM은 전체 연동 목록 자동 파악, 연동 규격 점검, 응답 내 민감정보 노출 확인까지 외부 연동 보안에 특화되어 있습니다. 상세 기술 규격은 개발자 기술 문서(doc.empasy.com/syncapim/)에서 확인하실 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "SyncWatch와 함께 쓰면 어떤 점이 좋나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SyncWatch가 새로 공개된 보안 취약점을 정리해 주면, SyncAPIM에서 해당 위협에 대응하는 점검·차단 규칙을 더 빠르게 반영할 수 있습니다."
+      }
+    }
+  ]
+}
+    </script>
+  <script type="module" crossorigin src="/assets/modulepreload-polyfill-Dezn_h7o.js"></script>
+  <script type="module" crossorigin src="/assets/solution-page-C1NLLQW6.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-DENEAOqs.css">
 </head>
-<body>
-    <main class="redirect-card">
-        <span class="redirect-brand">Empasy SyncSeries</span>
-        <h1>SyncAPIM 공식 페이지로 이동 중입니다</h1>
-        <p>최신 제품 소개와 화면 안내는 전용 공식 사이트(https://apim.empasy.io/)에서 확인하실 수 있습니다.</p>
-        <div class="redirect-actions">
-            <a class="btn-primary" href="https://apim.empasy.io/">SyncAPIM 공식 사이트 열기 &#8599;</a>
-            <a class="link-home" href="/">엠파시 홈으로 돌아가기</a>
+<body class="sol-page">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="glass-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/" aria-label="엠파시 홈">
+                    <img src="/images/logo.svg" alt="EMPASY" class="logo-img">
+                </a>
+            </div>
+            <button type="button" class="mobile-menu-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="emp-nav-links">
+                <svg class="icon-hamburger" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg class="icon-close" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <nav id="emp-nav-links" class="nav-links" aria-label="주요 메뉴">
+                <div class="dropdown dropdown-mega-host">
+                    <a href="/#architecture" class="dropbtn">솔루션
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="dropdown-content dropdown-mega-solutions">
+                        <div class="emp-mega-grid">
+                            <div class="emp-mega-col">
+                                <span class="dropdown-group-heading">핵심 업무 4종</span>
+                                <a href="/ko/solutions/sync-verse.html"><strong>SyncVerse</strong> · 협업·승인 관리</a>
+                                <a href="/ko/solutions/sync-eta.html"><strong>SyncETA</strong> · 웹 화면 자동 점검</a>
+                                <a href="/ko/solutions/sync-boot.html"><strong>SyncBoot</strong> · 사내 관리 시스템 기반</a>
+                                <a href="/ko/solutions/sync-cms.html"><strong>SyncCMS</strong> · 웹사이트·다국어 관리</a>
+                            </div>
+                            <div class="emp-mega-col">
+                                <span class="dropdown-group-heading">데이터 · AI (3종)</span>
+                                <a href="/ko/solutions/sync-insight.html"><strong>SyncInsight</strong> · 말로 묻는 데이터 조회</a>
+                                <a href="/ko/solutions/sync-llm.html"><strong>SyncLLM</strong> · AI 비용·개인정보 관리</a>
+                                <a href="/ko/solutions/sync-crawl.html"><strong>SyncCrawl</strong> · 공개 웹 자료 수집</a>
+                                <span class="dropdown-group-heading">보안 관리 (2종)</span>
+                                <a href="/ko/solutions/sync-apim.html"><strong>SyncAPIM</strong> · 외부 연동 점검·보안</a>
+                                <a href="/ko/solutions/sync-watch.html"><strong>SyncWatch</strong> · 보안 취약점·규칙 관리</a>
+                            </div>
+                            <div class="emp-mega-col">
+                                <span class="dropdown-group-heading">쇼핑몰 · 사업운영 (2종)</span>
+                                <a href="/ko/solutions/sync-shop.html"><strong>SyncShop</strong> · 쇼핑몰 운영·가격 관리</a>
+                                <a href="/ko/solutions/sync-ops.html"><strong>SyncOps</strong> · 프로젝트 손익·인력 관리</a>
+                                <span class="dropdown-group-heading">빠른 안내</span>
+                                <a href="/#architecture">전체 구성도 한눈에 보기</a>
+                                <a href="/#finder">30초 맞춤 솔루션 찾기</a>
+                                <a href="/ko/download_eta.html">SyncETA PC 앱 다운로드</a>
+                                <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer">개발자 기술 문서 &#8599;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <a href="/#finder">맞춤 찾기</a>
+                <a href="/ko/pages/clients.html">고객 사례</a>
+    
+                <div class="dropdown">
+                    <a href="/ko/pages/vision.html" class="dropbtn">회사 소개
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="/ko/pages/vision.html">비전 및 벤처 인증</a>
+                        <a href="/ko/pages/team.html">팀 소개</a>
+                        <a href="/ko/pages/careers.html">채용 안내</a>
+                        <a href="/ko/pages/faq.html">자주 묻는 질문</a>
+                        <a href="/ko/blog/blog.html">엠파시 인사이트</a>
+                    </div>
+                </div>
+    
+                <a href="https://demo.empasy.io/" target="_blank" rel="noopener noreferrer">화면 체험 &#8599;</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="lang-switch" role="navigation" aria-label="언어 선택">
+                    <a href="/" data-lang="ko" class="active" aria-current="page">KO</a>
+                    <a href="/en/pages/index.html" data-lang="en">EN</a>
+                    <a href="/ja/pages/index.html" data-lang="ja">JA</a>
+                </div>
+                <a href="/ko/pages/contact.html" class="btn btn-primary btn-sm">도입 문의</a>
+            </div>
         </div>
+    </header>
+    <script>
+    (function () {
+        var nav = document.querySelector('.glass-header .nav-container');
+        if (!nav || nav.dataset.empNavBound === 'true') return;
+        nav.dataset.empNavBound = 'true';
+        var btn = nav.querySelector('.mobile-menu-btn');
+        var links = nav.querySelector('.nav-links');
+        var actions = nav.querySelector('.nav-actions');
+        var setOpen = function (open) {
+            nav.classList.toggle('active', open);
+            if (links) links.classList.toggle('active', open);
+            if (actions) actions.classList.toggle('active', open);
+            document.documentElement.classList.toggle('mobile-menu-open', open);
+            document.body.classList.toggle('mobile-menu-open', open);
+            if (btn) {
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                btn.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+            }
+            if (!open) nav.scrollTop = 0;
+        };
+        if (btn) {
+            btn.addEventListener('click', function () {
+                setOpen(!nav.classList.contains('active'));
+            });
+        }
+        nav.querySelectorAll('.dropdown > .dropbtn').forEach(function (drop) {
+            drop.addEventListener('click', function (e) {
+                if (window.innerWidth <= 1023) {
+                    e.preventDefault();
+                    var parent = drop.parentElement;
+                    nav.querySelectorAll('.dropdown').forEach(function (d) {
+                        if (d !== parent) d.classList.remove('open');
+                    });
+                    parent.classList.toggle('open');
+                }
+            });
+        });
+        nav.querySelectorAll('a:not(.dropbtn)').forEach(function (a) {
+            a.addEventListener('click', function () {
+                if (window.innerWidth <= 1023 && nav.classList.contains('active')) {
+                    setOpen(false);
+                }
+            });
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && nav.classList.contains('active')) setOpen(false);
+        });
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 1023 && nav.classList.contains('active')) setOpen(false);
+        });
+        var syncEmpasyLocaleCookies = function (lang) {
+            var siteLocale = lang === 'en' ? 'en-US' : (lang === 'ja' ? 'ja-JP' : 'ko-KR');
+            var adminLocale = lang === 'ko' ? 'ko-KR' : 'en-US';
+            var host = window.location.hostname || '';
+            var domainPart = (host === 'empasy.io' || host.endsWith('.empasy.io')) ? '; domain=.empasy.io' : '';
+            var securePart = window.location.protocol === 'https:' ? '; Secure' : '';
+            var attrs = '; path=/; max-age=31536000; SameSite=Lax' + domainPart + securePart;
+            try {
+                document.cookie = 'empasy_site_locale=' + encodeURIComponent(siteLocale) + attrs;
+                document.cookie = 'empasy_locale=' + encodeURIComponent(adminLocale) + attrs;
+            } catch (err) {}
+        };
+        syncEmpasyLocaleCookies('ko');
+        var path = window.location.pathname || '/';
+        var m = path.match(/\/(ko|en|ja)\/(.*)/);
+        nav.querySelectorAll('.lang-switch a[data-lang]').forEach(function (a) {
+            if (a.dataset.langBound === 'true') return;
+            a.dataset.langBound = 'true';
+            var target = a.getAttribute('data-lang');
+            var url = target === 'ko' ? '/' : '/' + target + '/pages/index.html';
+            if (m) {
+                var sub = m[2] || 'pages/index.html';
+                if (target === 'ko' && (sub === 'pages/index.html' || sub === 'pages/' || sub === '')) {
+                    url = '/';
+                } else {
+                    url = '/' + target + '/' + sub;
+                }
+            }
+            a.setAttribute('href', url);
+            a.addEventListener('click', function () {
+                try { localStorage.setItem('preferred_lang', target); } catch (err) {}
+                syncEmpasyLocaleCookies(target);
+            });
+        });
+    })();
+    </script>
+
+    <main id="main-content">
+        <section class="sol-hero">
+            <div class="container">
+                <nav class="sol-breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">홈</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="/#architecture">솔루션</a>
+                    <span aria-hidden="true">/</span>
+                    <span aria-current="page" class="sol-product-name">SyncAPIM</span>
+                </nav>
+
+                <div class="sol-hero-copy">
+                    <p class="sol-eyebrow">SyncSeries 보안 모듈 · 외부 연동 현황 파악 및 보안 관리</p>
+                    <h1 class="sol-title">관리 누락 연동 경로까지 찾아내고 비정상 접근을 점검합니다</h1>
+                    <p class="sol-subtitle">실제 통신 기록을 바탕으로 문서에 빠진 숨은 연동 구간을 파악하고, 비정상 공격 시도와 민감정보 노출 여부를 한 화면에서 관리합니다.</p>
+
+                    <div class="sol-actions">
+                        <a href="#demo" class="btn btn-primary">무료 체험</a>
+                        <a href="/ko/pages/contact.html" class="btn btn-outline">도입 문의</a>
+                        <a href="/downloads/proposals/SyncAPIM_Proposal.pdf" target="_blank" rel="noopener noreferrer" class="sol-secondary-link">제품소개서 PDF &#8599;</a>
+                        <a href="https://demo.empasy.io/products/sync-apim" target="_blank" rel="noopener noreferrer" class="sol-secondary-link">통합 데모 포털에서 보기 &#8599;</a>
+                    </div>
+                </div>
+
+                <nav class="sol-anchor-nav" aria-label="SyncAPIM">
+                    <a href="#screens">실제 화면</a>
+                    <a href="#features">주요 기능</a>
+                    <a href="#demo">바로 체험</a>
+                    <a href="#faq">자주 묻는 질문</a>
+                </nav>
+
+                <div id="screens" class="sol-showcase-wrap" data-sol-showcase data-sol-product="SyncAPIM">
+                    <div class="sol-showcase-tabs" role="tablist" aria-label="실제 작동 화면 선택">
+                            <button type="button" role="tab" class="sol-showcase-tab active"
+                                aria-selected="true"
+                                data-sol-tab
+                                data-slide-title="보호 대상 서버 및 위협 탐지 대시보드"
+                                data-slide-route="apim-admin.empasy.io"
+                                data-slide-summary="관리 중인 서버, 활성 연동 경로 수, 최근 탐지·차단된 비정상 접근 추이를 한눈에 확인합니다."
+                                data-slide-img="/images/screenshots/sync-apim/screen_01.png"
+                                data-slide-demo="https://apim-admin.empasy.io/dashboard/analysis"
+                                data-slide-external="true">
+                                외부 연동 보안 현황판
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="전체 연동 목록 자동 수집 및 숨은 연동 구간 확인"
+                                data-slide-route="apim-admin.empasy.io"
+                                data-slide-summary="실제 통신 기록에서 발견된 전체 연동 목록과 관리 누락 연동 경로를 한 화면에서 점검합니다."
+                                data-slide-img="/images/screenshots/sync-apim/screen_02.png"
+                                data-slide-demo="https://apim-admin.empasy.io/apim/endpoints"
+                                data-slide-external="true">
+                                관리 누락 연동 탐색
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="표준 연동 규격서 대비 불일치 점검"
+                                data-slide-route="apim-admin.empasy.io"
+                                data-slide-summary="문서에 정의된 형식과 실제 운영 응답의 차이를 비교해 누락되거나 초과 노출된 항목을 확인합니다."
+                                data-slide-img="/images/screenshots/sync-apim/screen_03.png"
+                                data-slide-demo="https://apim-admin.empasy.io/apim/openapi-specs"
+                                data-slide-external="true">
+                                연동 규격 점검
+                            </button>
+                            <button type="button" role="tab" class="sol-showcase-tab"
+                                aria-selected="false"
+                                data-sol-tab
+                                data-slide-title="비정상 공격 시도 상세 확인 및 정책 적용"
+                                data-slide-route="apim-admin.empasy.io"
+                                data-slide-summary="탐지된 비정상 공격 시도의 상세 내용을 조회하고 민감정보 가림 및 차단 정책을 관리합니다."
+                                data-slide-img="/images/screenshots/sync-apim/screen_04.png"
+                                data-slide-demo="https://apim-admin.empasy.io/apim/detect-events"
+                                data-slide-external="true">
+                                탐지 이벤트 상세
+                            </button>
+                    </div>
+
+                    <div class="sol-showcase-frame">
+                        <div class="sol-showcase-bar">
+                            <div class="sol-showcase-bar-left">
+                                <span class="sol-showcase-title" data-sol-title>보호 대상 서버 및 위협 탐지 대시보드</span>
+                                <span class="sol-showcase-route is-mono" data-sol-route>apim-admin.empasy.io</span>
+                            </div>
+                            <div class="sol-showcase-bar-actions">
+                                <button type="button" class="sol-zoom-btn" data-sol-zoom aria-label="실제 화면 확대 보기">확대</button>
+                                <a href="https://apim-admin.empasy.io/dashboard/analysis" target="_blank" rel="noopener noreferrer" class="sol-demo-link" data-sol-demo-link>
+                                    <span class="sol-link-desktop">이 화면 직접 열어보기</span>
+                                    <span class="sol-link-mobile">열기</span>
+                                    <span aria-hidden="true">&#8599;</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="sol-showcase-viewport">
+                            <button type="button" class="sol-img-btn" data-sol-img-btn aria-label="SyncAPIM 보호 대상 서버 및 위협 탐지 대시보드">
+                                <img src="/images/screenshots/sync-apim/screen_01.png" alt="SyncAPIM - 보호 대상 서버 및 위협 탐지 대시보드" class="sol-showcase-img" loading="eager" data-sol-img>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="sol-showcase-caption" data-sol-caption>관리 중인 서버, 활성 연동 경로 수, 최근 탐지·차단된 비정상 접근 추이를 한눈에 확인합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">업무의 변화</p>
+                    <h2 class="ed-title">기존 방식과 무엇이 다른가요?</h2>
+                    <p class="ed-desc">서비스가 늘어나면서 파악하기 어려워진 사내 전체 연동 목록을 자동으로 정리하고, 연동 규격 불일치와 보안 위협에 빠르게 대응할 수 있도록 돕습니다.</p>
+                </div>
+
+                <div class="sol-compare-grid">
+                    <div class="sol-compare-card is-before">
+                        <h3>기존 외부 연동 관리 방식</h3>
+                        <ul>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>개발 과정에서 임시로 열었거나 문서화가 빠진 숨은 연동 구간이 방치되어 보안 사각지대가 생깁니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>문서에 적혀 있지 않은 고객 정보 항목이 응답에 포함되어 나가도 바로 알아차리기 어렵습니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-minus" aria-hidden="true">&#8722;</span>
+                                <span>공격 시도가 발생했을 때 어떤 요청이 들어왔는지 기록을 뒤져 파악하는 데 시간이 오래 걸립니다.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sol-compare-card is-after">
+                        <h3>SyncAPIM 도입 후</h3>
+                        <ul>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>실제 오가는 통신 흐름을 분석해 등록되지 않은 숨은 연동 구간을 자동으로 찾아 전체 연동 목록으로 정리합니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>표준 연동 규격서와 실제 응답 내용을 비교해 정의되지 않은 민감 항목 노출을 알려 줍니다.</span>
+                            </li>
+                            <li>
+                                <span class="sol-compare-mark is-plus" aria-hidden="true">&#10003;</span>
+                                <span>비정상 공격 시도의 상세 내용을 한 화면에서 확인하고 차단 규칙을 신속하게 적용할 수 있습니다.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="ed-section">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">주요 기능</p>
+                    <h2 class="ed-title">SyncAPIM으로 할 수 있는 일</h2>
+                </div>
+
+                <div class="sol-features-grid">
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">01</span>
+                        <h3>관리 누락 연동 경로 자동 목록화</h3>
+                        <p>실제 통신 기록에서 외부 연동 경로와 데이터 항목을 추출해 문서에서 누락된 숨은 연동 구간을 빠짐없이 파악합니다.</p>
+                    </article>
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">02</span>
+                        <h3>연동 규격 불일치 및 민감정보 점검</h3>
+                        <p>등록된 표준 규격과 실제 응답을 대조해 예기치 않은 개인정보·계좌번호 등이 노출되지 않는지 확인합니다.</p>
+                    </article>
+                    <article class="sol-feature-card">
+                        <span class="sol-feature-no">03</span>
+                        <h3>비정상 공격 시도 확인 및 차단 정책</h3>
+                        <p>비정상 대량 호출이나 비정상 공격 시도의 상세 내역을 조회하고 상황에 맞는 차단 규칙을 적용합니다.</p>
+                    </article>
+                </div>
+
+                <div class="sol-steps-block">
+                    <h3 class="sol-sub-heading">이렇게 사용합니다</h3>
+                    <div class="sol-steps-grid">
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 01</span>
+                            <h4>외부 연동 통신 흐름 연결</h4>
+                            <p>운영 중인 서비스 앞단이나 운영에 부담 없는 복사 점검 구간을 연결해 실제 외부 연동 현황을 수집합니다.</p>
+                        </div>
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 02</span>
+                            <h4>숨은 연동 구간 및 민감정보 진단</h4>
+                            <p>문서에 없는 관리 누락 연동 경로와 민감 데이터 포함 응답을 목록으로 분류해 우선순위를 보여 줍니다.</p>
+                        </div>
+                        <div class="sol-step-card">
+                            <span class="sol-step-label">STEP 03</span>
+                            <h4>차단·가림 정책 적용 및 추적</h4>
+                            <p>확인이 끝난 위협 패턴에 차단 규칙과 민감정보 가림 정책을 적용하고 이력을 기록합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="ed-section ed-section-tinted">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">직접 체험</p>
+                    <h2 class="ed-title">설치 없이 실제 화면을 눌러 보세요</h2>
+                    <p class="ed-desc">체험 환경에서 변경한 보안 정책은 매일 오전 4시에 초기 상태로 돌아갑니다.</p>
+                </div>
+
+                <div class="sol-demo-grid">
+                    <div class="sol-demo-panel">
+                        <h3 class="sol-panel-title">1. 체험 화면 열기</h3>
+                        <div class="sol-entry-stack">
+                        <div class="sol-entry-card is-primary">
+                            <div class="sol-entry-info">
+                                <div class="sol-entry-title">외부 연동 보안 콘솔</div>
+                                <p class="sol-entry-desc">보안 현황판, 전체 연동 목록, 연동 규격 점검, 탐지 이벤트 분석 화면을 체험합니다.</p>
+                            </div>
+                            <a href="https://apim-admin.empasy.io" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">관리 콘솔 열기 &#8599;</a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="sol-demo-panel">
+                        <h3 class="sol-panel-title">2. 체험 계정 복사</h3>
+                        <div class="sol-account-box is-primary">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">연동 보안 관리자</span>
+                                <span class="sol-account-note">기본 체험 계정</span>
+                            </div>
+                            <p class="sol-account-scope">전체 연동 목록, 연동 규격 점검, 탐지 이벤트 및 차단 정책 전체 기능을 체험합니다.</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="admin"
+                                    data-copy-label="연동 보안 관리자 아이디"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">아이디</span>
+                                    <code class="sol-copy-value">admin</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="연동 보안 관리자 비밀번호"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">비밀번호</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                            </div>
+                        </div>
+                        <details class="sol-more-accounts">
+                            <summary>다른 역할 계정 보기 (2개)</summary>
+                            <div class="sol-more-accounts-list">
+                                
+                        <div class="sol-account-box">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">보안 관제 담당자</span>
+                                
+                            </div>
+                            <p class="sol-account-scope">실시간 위협 탐지 이벤트 조회 및 대응 화면 중심으로 체험합니다.</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="secops"
+                                    data-copy-label="보안 관제 담당자 아이디"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">아이디</span>
+                                    <code class="sol-copy-value">secops</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="보안 관제 담당자 비밀번호"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">비밀번호</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="sol-account-box">
+                            <div class="sol-account-header">
+                                <span class="sol-account-role">연동 설계 담당자</span>
+                                
+                            </div>
+                            <p class="sol-account-scope">전체 연동 목록과 연동 규격 불일치 점검 화면 중심으로 확인합니다.</p>
+                            <div class="sol-copy-row">
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="apidev"
+                                    data-copy-label="연동 설계 담당자 아이디"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">아이디</span>
+                                    <code class="sol-copy-value">apidev</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                                <button type="button" class="sol-copy-btn"
+                                    data-copy-value="123456"
+                                    data-copy-label="연동 설계 담당자 비밀번호"
+                                    data-copy-text="복사"
+                                    data-copied-text="복사됨"
+                                    data-toast-template="{label} 복사됨: {value}">
+                                    <span class="sol-copy-label">비밀번호</span>
+                                    <code class="sol-copy-value">123456</code>
+                                    <span class="sol-copy-action" data-copy-action>복사</span>
+                                </button>
+                            </div>
+                        </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="sol-try-box">
+                    <h3 class="sol-try-title">로그인 후 확인해 볼 3가지</h3>
+                    <div class="sol-try-grid">
+                        
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">01</span>
+                                <span class="sol-try-menu">대시보드</span>
+                            </div>
+                            <h4>외부 연동 호출 및 탐지 현황 보기</h4>
+                            <p>관리 대상 연동 경로 현황과 최근 탐지된 비정상 접근 유형을 확인해 보세요.</p>
+                        </div>
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">02</span>
+                                <span class="sol-try-menu">연동 목록</span>
+                            </div>
+                            <h4>관리 누락 연동 경로 식별 결과 확인</h4>
+                            <p>문서에 빠져 있던 숨은 연동 구간이 어떻게 분류되어 표시되는지 살펴보세요.</p>
+                        </div>
+                        <div class="sol-try-card">
+                            <div class="sol-try-meta">
+                                <span class="sol-try-step">03</span>
+                                <span class="sol-try-menu">위협 탐지 이력</span>
+                            </div>
+                            <h4>비정상 공격 시도 상세 내역 보기</h4>
+                            <p>의심 요청의 상세 정보와 차단·가림 정책 설정 화면을 확인해 보세요.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="ed-section">
+            <div class="container">
+                <div class="ed-head">
+                    <p class="ed-kicker">도입 안내</p>
+                    <h2 class="ed-title">조직 상황에 맞춰 필요한 만큼만 시작하세요</h2>
+                    <p class="ed-desc">전체 시스템을 한꺼번에 바꿀 필요 없이, 현재 가장 시급한 업무 영역부터 단독으로 적용할 수 있습니다.</p>
+                </div>
+
+                <div class="sol-adoption-grid">
+                    <div class="sol-adoption-card">
+                        <h3>운영에 부담 없는 복사 점검으로 시작</h3>
+                        <p>운영 서비스 속도나 장애 우려 없이 통신 기록을 복제해 숨은 연동 구간과 민감정보 노출 현황부터 파악합니다.</p>
+                    </div>
+                    <div class="sol-adoption-card">
+                        <h3>핵심 구간 단계적 차단·가림 적용</h3>
+                        <p>결제·회원·개인정보 조회처럼 중요한 연동 경로부터 선택적으로 실시간 차단 및 개인정보 가림 정책을 적용합니다.</p>
+                    </div>
+                    <div class="sol-adoption-card">
+                        <h3>SyncWatch 연계 선제적 위협 대응</h3>
+                        <p>새로 발표되는 보안 취약점 경보를 SyncWatch와 연결해 외부 연동 방어 규칙을 빠르게 반영하고 이력을 남깁니다.</p>
+                    </div>
+                </div>
+
+                <div class="sol-faq-block">
+                    <h3 class="sol-sub-heading">자주 묻는 질문</h3>
+                    <div class="sol-faq-list">
+                    <div class="faq-item">
+                        <details open>
+                            <summary>이미 운영 중인 서비스 앞단에 붙이면 서비스 속도가 느려지지 않나요?</summary>
+                            <div class="faq-answer">운영에 부담 없는 복사 점검 방식으로 먼저 현황을 파악한 뒤, 필요한 구간만 차단 모드로 전환할 수 있습니다.</div>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>기존 웹 보안 장비와 무엇이 다른가요?</summary>
+                            <div class="faq-answer">기존 웹 보안 장비가 알려진 공격 차단에 집중한다면, SyncAPIM은 전체 연동 목록 자동 파악, 연동 규격 점검, 응답 내 민감정보 노출 확인까지 외부 연동 보안에 특화되어 있습니다. 상세 기술 규격은 개발자 기술 문서(doc.empasy.com/syncapim/)에서 확인하실 수 있습니다.</div>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>SyncWatch와 함께 쓰면 어떤 점이 좋나요?</summary>
+                            <div class="faq-answer">SyncWatch가 새로 공개된 보안 취약점을 정리해 주면, SyncAPIM에서 해당 위협에 대응하는 점검·차단 규칙을 더 빠르게 반영할 수 있습니다.</div>
+                        </details>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="ed-doc-callout sol-tech-callout">
+                    <p>개발·인프라 담당자를 위한 상세 아키텍처와 연동 규격은 기술 문서 포털에서 확인하실 수 있습니다.</p>
+                    <a href="https://doc.empasy.com/syncapim/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">개발자 기술 문서 (doc.empasy.com) &#8599;</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="ed-section ed-section-tinted sol-related-section">
+            <div class="container">
+                <div class="sol-related-head">
+                    <div>
+                        <p class="ed-kicker">함께 쓰면 좋은 모듈</p>
+                        <h2 class="sol-related-title">SyncAPIM과 자주 연결해 사용하는 기능</h2>
+                    </div>
+                    <a href="/#architecture" class="sol-all-link">전체 11종 구성도 보기 &#8594;</a>
+                </div>
+
+                <div class="sol-related-grid">
+                    <a href="/ko/solutions/sync-watch.html" class="sol-related-card">
+                        <span class="sol-related-cat">확장 · 보안 위협 관리</span>
+                        <h3>SyncWatch</h3>
+                        <p>국내외 최신 보안 취약점 정보를 모아 SyncAPIM 방어 규칙으로 연결합니다.</p>
+                        <span class="sol-related-more">자세히 보기 &#8594;</span>
+                    </a>
+                    <a href="/ko/solutions/sync-llm.html" class="sol-related-card">
+                        <span class="sol-related-cat">확장 · AI 비용·보안</span>
+                        <h3>SyncLLM</h3>
+                        <p>사내 AI 호출 구간까지 개인정보 가림과 사용 이력을 일관되게 관리합니다.</p>
+                        <span class="sol-related-more">자세히 보기 &#8594;</span>
+                    </a>
+                    <a href="/ko/solutions/sync-boot.html" class="sol-related-card">
+                        <span class="sol-related-cat">주력 · 업무 시스템 기반</span>
+                        <h3>SyncBoot</h3>
+                        <p>사내 업무 연동 경로와 관리자 권한 체계를 표준 구조로 운영합니다.</p>
+                        <span class="sol-related-more">자세히 보기 &#8594;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 36px; padding-bottom: 36px; border-bottom: 1px solid #e2e8f0;" class="emp-footer-grid">
+                <div>
+                    <a href="/" aria-label="엠파시 공식 홈페이지">
+                        <img src="/images/logo.svg" alt="EMPASY" style="height: 22px; width: auto; margin-bottom: 14px;">
+                    </a>
+                    <p style="font-size: 14px; line-height: 1.7; color: #475569; max-width: 320px;">
+                        반복되는 기업 업무는 자동화하고, 중요한 결정은 담당자 확인을 거쳐 안전하게 반영하는 실무형 기업 소프트웨어를 만듭니다.
+                    </p>
+                </div>
+                <div>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">핵심 업무 영역</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
+                        <li><a href="/ko/solutions/sync-verse.html">협업·승인 통합 (SyncVerse)</a></li>
+                        <li><a href="/ko/solutions/sync-eta.html">자동 화면 점검 (SyncETA)</a></li>
+                        <li><a href="/ko/solutions/sync-boot.html">사내 관리 시스템 (SyncBoot)</a></li>
+                        <li><a href="/ko/solutions/sync-cms.html">웹사이트·다국어 (SyncCMS)</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">회사 및 사례</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
+                        <li><a href="/ko/pages/clients.html">고객 사례</a></li>
+                        <li><a href="/ko/pages/team.html">팀 소개</a></li>
+                        <li><a href="/ko/pages/vision.html">비전 · 벤처 인증</a></li>
+                        <li><a href="/ko/pages/careers.html">채용 안내</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">체험 · 문서 · 문의</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
+                        <li><a href="https://demo.empasy.io/" target="_blank" rel="noopener noreferrer">통합 데모 포털 &#8599;</a></li>
+                        <li><a href="/ko/download_eta.html">SyncETA 다운로드</a></li>
+                        <li><a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer">개발자 기술 문서 &#8599;</a></li>
+                        <li><a href="/ko/pages/contact.html">도입 상담 문의</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom" style="padding-top: 24px; text-align: left;">
+                <address class="emp-legal-list">
+                    <span class="emp-legal-seg"><strong style="color: #0f172a;">주식회사 엠파시</strong></span>
+                    <span class="emp-legal-seg">대표이사 오병문</span>
+                    <span class="emp-legal-seg">사업자등록번호 547-81-03408</span>
+                    <span class="emp-legal-seg is-wrap">혁신성장유형 벤처기업 확인 (제 20261111030084 호)</span>
+                    <span class="emp-legal-seg is-wrap">서울 금천구 가산디지털1로 205-27 2층 208호</span>
+                    <span class="emp-legal-seg">도입 문의 <a href="mailto:poh@empasy.com" style="color: #0e7490; text-decoration: underline;">poh@empasy.com</a></span>
+                    <span class="emp-legal-seg">대표번호 <a href="tel:0507-1360-8169" style="color: #0f172a;">0507-1360-8169</a></span>
+                    <span class="emp-legal-seg"><a href="/ko/pages/terms.html">이용약관</a></span>
+                    <span class="emp-legal-seg"><a href="/ko/pages/privacy.html">개인정보 처리방침</a></span>
+                </address>
+                <p style="color: #64748b; font-size: 12px; margin-top: 8px;">&copy; 2026 Empasy Inc. All rights reserved.</p>
+            </div>
+        </div>
+        <style>
+          @media (max-width: 900px) { .emp-footer-grid { grid-template-columns: 1fr 1fr !important; } }
+          @media (max-width: 560px) { .emp-footer-grid { grid-template-columns: 1fr !important; } }
+        </style>
+    </footer>
+
+    <div id="sol-lightbox" class="sol-lightbox" role="dialog" aria-modal="true" aria-label="SyncAPIM">
+        <div class="sol-lightbox-bar">
+            <span id="sol-lightbox-title" class="sol-lightbox-title">보호 대상 서버 및 위협 탐지 대시보드</span>
+            <button type="button" id="sol-lightbox-close" class="sol-lightbox-close" aria-label="확대 닫기">닫기</button>
+        </div>
+        <div class="sol-lightbox-stage">
+            <img id="sol-lightbox-img" src="/images/screenshots/sync-apim/screen_01.png" alt="SyncAPIM" class="sol-lightbox-img">
+        </div>
+        <p class="sol-lightbox-hint">좌우로 밀거나 손가락으로 확대해 세부 화면을 확인할 수 있습니다.</p>
+    </div>
+
+    <div id="sol-copy-toast" class="sol-copy-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
 </body>
 </html>
