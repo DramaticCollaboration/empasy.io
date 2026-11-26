@@ -1,9 +1,9 @@
 const downloadLink = {
-  "version": "0.0.65",
+  "version": "0.0.66",
   "releaseNote": "",
   "files": {
-    "winX64": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/releases/eta/0.0.65/win/x64/SyncETA%20Setup%200.0.65.exe",
-    "winArm64": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/releases/eta/0.0.65/win/x64/SyncETA%20Setup%200.0.65.exe",
+    "winX64": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/releases/eta/0.0.66/win/x64/SyncETA%20Setup%200.0.66.exe",
+    "winArm64": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/releases/eta/0.0.66/win/x64/SyncETA%20Setup%200.0.66.exe",
     "macIntel": "",
     "macSilicon": ""
   }
