@@ -162,7 +162,12 @@
           var related = !selected && Boolean(relatedSet[id]);
           el.classList.toggle('is-selected', selected);
           el.classList.toggle('is-related', related);
-          el.setAttribute('aria-pressed', selected ? 'true' : 'false');
+          var selectBtn = el.querySelector('[data-arch-select]');
+          if (selectBtn) {
+            selectBtn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+          } else {
+            el.setAttribute('aria-pressed', selected ? 'true' : 'false');
+          }
 
           var stem = archBoard.querySelector('[data-arch-stem="' + id + '"]');
           if (stem) {
@@ -235,19 +240,20 @@
       archNodes.forEach(function (el) {
         var id = el.getAttribute('data-arch-node');
         if (!id) return;
-        el.addEventListener('click', function () {
-          selectArchNode(id);
-        });
-        el.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
+        var selectBtn = el.querySelector('[data-arch-select]');
+        if (selectBtn) {
+          selectBtn.addEventListener('click', function () {
             selectArchNode(id);
-          }
-        });
-        var launch = el.querySelector('[data-arch-launch]');
-        if (launch) {
-          launch.addEventListener('click', function (e) {
-            e.stopPropagation();
+          });
+        } else {
+          el.addEventListener('click', function () {
+            selectArchNode(id);
+          });
+          el.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              selectArchNode(id);
+            }
           });
         }
       });

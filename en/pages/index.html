@@ -88,31 +88,73 @@
     {{> header_en }}
 
     <main>
-        <!-- 1. Compact Hero + Interactive All-11 Product Map (Above the Fold) -->
-        <section class="ed-hero ed-hero-arch-first">
+        <!-- 1. Split Executive Hero + Task-Based Screen Preview + Trust Strip -->
+        <section class="ed-hero ed-hero-split-section">
             <div class="container">
-                <div class="ed-hero-compact-row">
-                    <div class="ed-hero-compact-copy">
+                <div class="ed-hero-split">
+                    <div class="ed-hero-split-copy">
                         <p class="ed-eyebrow">Empasy Inc. · Practical Enterprise Software</p>
                         <h1 class="ed-hero-title">Automate repetitive business work, keep humans in charge of key decisions</h1>
                         <p class="ed-hero-desc">
-                            Pick one urgent workflow to validate in two weeks, then connect additional modules on the same shared foundation anytime.
+                            From websites and internal management systems to data lookup and screen checks,
+                            validate one urgent workflow in two weeks and expand on the same shared foundation.
                         </p>
-                    </div>
-                    <div class="ed-hero-compact-actions">
                         <div class="ed-hero-actions">
-                            <a href="#finder" class="btn btn-primary btn-sm">30-Second Finder</a>
-                            <a href="/en/pages/contact.html" class="btn btn-outline btn-sm">Contact Sales</a>
+                            <a href="#finder" class="btn btn-primary ed-btn-hero">30-Second Solution Finder</a>
+                            <a href="/en/pages/contact.html" class="btn btn-outline ed-btn-hero">Contact Sales</a>
                         </div>
                         <div class="ed-hero-sublinks">
                             <a href="https://demo.empasy.io/en/" target="_blank" rel="noopener noreferrer">Live Demo &#8599;</a>
+                            <a href="#architecture">All-11 Product Map &#8595;</a>
                             <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" download>Summary PDF</a>
                             <a href="#it-resources">IT Resources &#8595;</a>
                         </div>
                     </div>
+
+                    <div class="ed-hero-split-visual">
+                        <div class="ed-tabs ed-hero-preview-tabs" role="tablist" aria-label="Core workflow screen previews">
+                            <button type="button" class="ed-tab active" role="tab" aria-selected="true" data-preview="verse">Approvals &amp; Hub</button>
+                            <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="eta">Click QA Audit</button>
+                            <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="boot">Internal Reports</button>
+                            <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="cms">Multilingual Web</button>
+                        </div>
+                        <div class="ed-frame ed-hero-frame">
+                            <div class="ed-frame-bar">
+                                <strong id="preview-title">Collaboration &amp; Staged Approval Dashboard (SyncVerse)</strong>
+                                <div class="ed-frame-actions">
+                                    <button type="button" id="preview-zoom-btn" class="ed-zoom-btn">Zoom</button>
+                                    <a id="preview-link" href="/en/solutions/sync-verse.html">Details &#8594;</a>
+                                </div>
+                            </div>
+                            <div id="preview-callout" class="ed-frame-callout" aria-label="Key screen highlights">
+                                <span class="ed-callout-pill"><span class="ed-callout-dot" aria-hidden="true"></span><span>Human approval before going live</span></span>
+                                <span class="ed-callout-pill"><span class="ed-callout-dot" aria-hidden="true"></span><span>Clear before-and-after review</span></span>
+                            </div>
+                            <div class="ed-hero-frame-media">
+                                <img id="preview-img" src="/images/screenshots/sync-verse/screen_01.png" alt="Collaboration and staged approval dashboard live screen">
+                            </div>
+                        </div>
+                        <p id="preview-caption" class="ed-frame-caption ed-hero-frame-caption">
+                            Track requirements, review summaries, quality checks, and staged approval records in a single clear screen.
+                        </p>
+                    </div>
                 </div>
 
-                {{> arch_map_en }}
+                <div class="ed-hero-trust-strip" aria-label="Key enterprise and institutional references">
+                    <span class="ed-hero-trust-label">Proven Experience</span>
+                    <div class="ed-hero-trust-names">
+                        <span>Samsung.com</span>
+                        <span>LG CNS</span>
+                        <span>LG Electronics</span>
+                        <span>LG Chem</span>
+                        <span>Hyundai Motor</span>
+                        <span>AUTOCRYPT</span>
+                        <span>Penta Security</span>
+                        <span>Gyeonggi Office of Education</span>
+                        <span>Visang Education</span>
+                    </div>
+                    <a href="#case-studies" class="ed-hero-trust-link">View Track Record &#8595;</a>
+                </div>
             </div>
         </section>
 
@@ -459,8 +501,11 @@
             </div>
         </section>
 
+        <!-- 6-2. Interactive All-11 Product Map (Dedicated Section) -->
+        {{> arch_map_en }}
+
         <!-- 7. 4 Core Business Areas (Capability First, Product Code Badge Second) -->
-        <section id="solutions" class="ed-section">
+        <section id="solutions" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">4 Core Business Areas</p>
@@ -547,7 +592,7 @@
         </section>
 
         <!-- 8. 7 Modular Extensions -->
-        <section id="modules" class="ed-section ed-section-tinted">
+        <section id="modules" class="ed-section">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">Modular Extensions</p>
@@ -647,7 +692,7 @@
         </section>
 
         <!-- 9. Small-Start 3-Step Adoption + Executive CTA + Separate IT Resource Bar -->
-        <section id="adoption" class="ed-section">
+        <section id="adoption" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">Adoption Process</p>

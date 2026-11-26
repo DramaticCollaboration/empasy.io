@@ -1,13 +1,25 @@
-        <!-- Interactive Product Map (All 11 Products · Integrated in Hero) -->
-        <div id="architecture" class="emp-arch-hero-wrap">
-                <div class="emp-arch-board is-hero-board" data-emp-arch>
+        <!-- Interactive Product Map (All 11 Products · Dedicated Section) -->
+        <section id="architecture" class="ed-section emp-arch-section">
+            <div class="container">
+                <div class="emp-arch-head">
+                    <div class="ed-head" style="margin-bottom: 0;">
+                        <p class="ed-kicker">All 11 Products at a Glance</p>
+                        <h2 class="ed-title">Start with one workflow and connect more when needed</h2>
+                        <p class="ed-desc">
+                            Four core products and seven optional modules are organized in one interactive map. Select any card to preview its screen, summary, and demo links below.
+                        </p>
+                    </div>
+                    <span class="emp-arch-standalone">Start with one · Connect later</span>
+                </div>
+
+                <div class="emp-arch-board" data-emp-arch>
                     <div class="emp-arch-board-head">
                         <div class="emp-arch-brand">
                             <span class="emp-arch-dot" aria-hidden="true"></span>
                             <span class="emp-arch-brand-text">SYNCSERIES PRODUCT MAP</span>
                         </div>
                         <div class="emp-arch-meta">
-                            <span class="emp-arch-hint">Click box: summary &amp; links · Click &#8599;: open product site</span>
+                            <span class="emp-arch-hint">Select card: preview below · Click &#8594;: open product page</span>
                             <span class="emp-arch-pill">11 Modules · Shared Core</span>
                         </div>
                     </div>
@@ -16,7 +28,7 @@
                         <div class="emp-arch-layer-label">Core Business Areas (4)</div>
                         <div class="emp-arch-flagship-grid">
                             <div class="emp-arch-node-wrap">
-                                <div role="button" tabindex="0" class="emp-arch-node is-hub is-selected" aria-pressed="true"
+                                <div class="emp-arch-node is-hub is-selected"
                                      data-arch-node="sync-verse"
                                      data-arch-hub="true"
                                      data-arch-name="SyncVerse"
@@ -28,18 +40,18 @@
                                      data-arch-img="/images/screenshots/sync-verse/screen_01.png"
                                      data-arch-hub-note="Can connect tasks and approval records across the other 10 modules as needed"
                                      data-arch-connected="sync-eta,sync-boot,sync-cms,sync-insight,sync-llm,sync-crawl,sync-apim,sync-watch,sync-shop,sync-ops">
-                                    <div class="emp-arch-node-top">
+                                    <button type="button" class="emp-arch-node-btn" aria-pressed="true" data-arch-select>
                                         <span class="emp-arch-node-name">SyncVerse</span>
-                                        <a href="/en/solutions/sync-verse.html" class="emp-arch-launch" aria-label="Open SyncVerse site" data-arch-launch>&#8594;</a>
-                                    </div>
-                                    <p class="emp-arch-node-role">Collaboration &amp; Approvals</p>
-                                    <span class="emp-arch-node-tag is-hub-tag">Central Hub</span>
+                                        <span class="emp-arch-node-role">Collaboration &amp; Approvals</span>
+                                        <span class="emp-arch-node-tag is-hub-tag">Central Hub</span>
+                                    </button>
+                                    <a href="/en/solutions/sync-verse.html" class="emp-arch-launch" aria-label="Open SyncVerse page" title="Open SyncVerse page" data-arch-launch>&#8594;</a>
                                 </div>
                                 <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-stem="sync-verse" aria-hidden="true"></span>
                             </div>
 
                             <div class="emp-arch-node-wrap">
-                                <div role="button" tabindex="0" class="emp-arch-node" aria-pressed="false"
+                                <div class="emp-arch-node"
                                      data-arch-node="sync-eta"
                                      data-arch-name="SyncETA"
                                      data-arch-badge="Core · Web Screen Testing"
@@ -49,18 +61,18 @@
                                      data-arch-contact="/en/pages/contact.html?topics=qa"
                                      data-arch-img="/images/screenshots/sync-eta/screen_01.png"
                                      data-arch-connected="sync-verse,sync-cms,sync-shop">
-                                    <div class="emp-arch-node-top">
+                                    <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
                                         <span class="emp-arch-node-name">SyncETA</span>
-                                        <a href="/en/solutions/sync-eta.html" class="emp-arch-launch" aria-label="Open SyncETA site" data-arch-launch>&#8594;</a>
-                                    </div>
-                                    <p class="emp-arch-node-role">Web Screen Checking</p>
-                                    <span class="emp-arch-node-tag">UI Testing</span>
+                                        <span class="emp-arch-node-role">Web Screen Checking</span>
+                                        <span class="emp-arch-node-tag">UI Testing</span>
+                                    </button>
+                                    <a href="/en/solutions/sync-eta.html" class="emp-arch-launch" aria-label="Open SyncETA page" title="Open SyncETA page" data-arch-launch>&#8594;</a>
                                 </div>
                                 <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-stem="sync-eta" aria-hidden="true"></span>
                             </div>
 
                             <div class="emp-arch-node-wrap">
-                                <div role="button" tabindex="0" class="emp-arch-node" aria-pressed="false"
+                                <div class="emp-arch-node"
                                      data-arch-node="sync-boot"
                                      data-arch-foundation="true"
                                      data-arch-name="SyncBoot"
@@ -71,18 +83,18 @@
                                      data-arch-contact="/en/pages/contact.html?topics=system"
                                      data-arch-img="/images/screenshots/sync-boot/screen_01.png"
                                      data-arch-connected="sync-verse,sync-ops,sync-cms,sync-shop,sync-apim">
-                                    <div class="emp-arch-node-top">
+                                    <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
                                         <span class="emp-arch-node-name">SyncBoot</span>
-                                        <a href="/en/solutions/sync-boot.html" class="emp-arch-launch" aria-label="Open SyncBoot site" data-arch-launch>&#8594;</a>
-                                    </div>
-                                    <p class="emp-arch-node-role">Internal Admin Base</p>
-                                    <span class="emp-arch-node-tag">Shared Core</span>
+                                        <span class="emp-arch-node-role">Internal Admin Base</span>
+                                        <span class="emp-arch-node-tag">Standard Backoffice</span>
+                                    </button>
+                                    <a href="/en/solutions/sync-boot.html" class="emp-arch-launch" aria-label="Open SyncBoot page" title="Open SyncBoot page" data-arch-launch>&#8594;</a>
                                 </div>
                                 <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-stem="sync-boot" aria-hidden="true"></span>
                             </div>
 
                             <div class="emp-arch-node-wrap">
-                                <div role="button" tabindex="0" class="emp-arch-node" aria-pressed="false"
+                                <div class="emp-arch-node"
                                      data-arch-node="sync-cms"
                                      data-arch-name="SyncCMS"
                                      data-arch-badge="Core · Websites &amp; Languages"
@@ -92,12 +104,12 @@
                                      data-arch-contact="/en/pages/contact.html?topics=web"
                                      data-arch-img="/images/screenshots/sync-cms/screen_01.png"
                                      data-arch-connected="sync-verse,sync-eta,sync-boot,sync-llm">
-                                    <div class="emp-arch-node-top">
+                                    <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
                                         <span class="emp-arch-node-name">SyncCMS</span>
-                                        <a href="/en/solutions/sync-cms.html" class="emp-arch-launch" aria-label="Open SyncCMS site" data-arch-launch>&#8594;</a>
-                                    </div>
-                                    <p class="emp-arch-node-role">Websites &amp; Languages</p>
-                                    <span class="emp-arch-node-tag">Content CMS</span>
+                                        <span class="emp-arch-node-role">Websites &amp; Languages</span>
+                                        <span class="emp-arch-node-tag">Content CMS</span>
+                                    </button>
+                                    <a href="/en/solutions/sync-cms.html" class="emp-arch-launch" aria-label="Open SyncCMS page" title="Open SyncCMS page" data-arch-launch>&#8594;</a>
                                 </div>
                                 <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-stem="sync-cms" aria-hidden="true"></span>
                             </div>
@@ -108,167 +120,167 @@
                         </div>
 
                         <div class="emp-arch-ext-wrap" data-arch-ext-wrap>
-                        <div class="emp-arch-layer-ext-head">
-                            <div class="emp-arch-layer-label">Domain Modules (7)</div>
-                            <button type="button" class="emp-arch-mobile-toggle" data-arch-ext-toggle data-label-expand="Show 7 modules" data-label-collapse="Hide modules" aria-expanded="false">Show 7 modules</button>
-                        </div>
-                        <div class="emp-arch-ext-groups">
-                            <div class="emp-arch-ext-group-wrap">
-                                <div class="emp-arch-ext-group has-active" data-arch-group="data-ai">
-                                    <div class="emp-arch-ext-group-title">Data &amp; AI (3)</div>
-                                    <div class="emp-arch-ext-grid cols-3">
-                                        <div role="button" tabindex="0" class="emp-arch-node emp-arch-node-ext" aria-pressed="false"
-                                             data-arch-node="sync-insight"
-                                             data-arch-name="SyncInsight"
-                                             data-arch-badge="Data &amp; AI · Built into SyncVerse"
-                                             data-arch-desc="Ask questions about internal records in everyday language to see tables and charts under read-only safeguards."
-                                             data-arch-site="/en/solutions/sync-insight.html"
-                                             data-arch-demo="https://demo.empasy.io/en/products/sync-insight"
-                                             data-arch-contact="/en/pages/contact.html?topics=data-ai"
-                                             data-arch-img="/images/screenshots/sync-insight/screen_02.png"
-                                             data-arch-connected="sync-verse,sync-crawl,sync-llm,sync-ops">
-                                            <div class="emp-arch-node-top">
-                                                <span class="emp-arch-node-name">SyncInsight</span>
-                                                <a href="/en/solutions/sync-insight.html" class="emp-arch-launch" aria-label="Open SyncInsight site" data-arch-launch>&#8594;</a>
+                            <div class="emp-arch-layer-ext-head">
+                                <div class="emp-arch-layer-label">Domain Modules (7)</div>
+                                <button type="button" class="emp-arch-mobile-toggle" data-arch-ext-toggle data-label-expand="Show 7 modules" data-label-collapse="Hide modules" aria-expanded="false">Show 7 modules</button>
+                            </div>
+                            <div class="emp-arch-ext-groups">
+                                <div class="emp-arch-ext-group-wrap">
+                                    <div class="emp-arch-ext-group has-active" data-arch-group="data-ai">
+                                        <div class="emp-arch-ext-group-title">Data &amp; AI (3)</div>
+                                        <div class="emp-arch-ext-grid cols-3">
+                                            <div class="emp-arch-node emp-arch-node-ext"
+                                                 data-arch-node="sync-insight"
+                                                 data-arch-name="SyncInsight"
+                                                 data-arch-badge="Data &amp; AI · Built into SyncVerse"
+                                                 data-arch-desc="Ask questions about internal records in everyday language to see tables and charts under read-only safeguards."
+                                                 data-arch-site="/en/solutions/sync-insight.html"
+                                                 data-arch-demo="https://demo.empasy.io/en/products/sync-insight"
+                                                 data-arch-contact="/en/pages/contact.html?topics=data-ai"
+                                                 data-arch-img="/images/screenshots/sync-insight/screen_02.png"
+                                                 data-arch-connected="sync-verse,sync-crawl,sync-llm,sync-ops">
+                                                <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
+                                                    <span class="emp-arch-node-name">SyncInsight</span>
+                                                    <span class="emp-arch-ext-tag">Data Query</span>
+                                                    <span class="emp-arch-integrated">In SyncVerse</span>
+                                                </button>
+                                                <a href="/en/solutions/sync-insight.html" class="emp-arch-launch" aria-label="Open SyncInsight page" title="Open SyncInsight page" data-arch-launch>&#8594;</a>
                                             </div>
-                                            <span class="emp-arch-ext-tag">Data Query</span>
-                                            <span class="emp-arch-integrated">In SyncVerse</span>
-                                        </div>
 
-                                        <div role="button" tabindex="0" class="emp-arch-node emp-arch-node-ext" aria-pressed="false"
-                                             data-arch-node="sync-llm"
-                                             data-arch-name="SyncLLM"
-                                             data-arch-badge="Data &amp; AI · Budget &amp; Privacy"
-                                             data-arch-desc="Connect multiple AI providers in one place, track team budgets, reuse repeat answers, and mask personal details before sending."
-                                             data-arch-site="/en/solutions/sync-llm.html"
-                                             data-arch-demo="https://demo.empasy.io/en/products/sync-llm"
-                                             data-arch-contact="/en/pages/contact.html?topics=data-ai"
-                                             data-arch-img="/images/screenshots/sync-llm/screen_01.png"
-                                             data-arch-connected="sync-verse,sync-insight,sync-crawl,sync-cms">
-                                            <div class="emp-arch-node-top">
-                                                <span class="emp-arch-node-name">SyncLLM</span>
-                                                <a href="/en/solutions/sync-llm.html" class="emp-arch-launch" aria-label="Open SyncLLM site" data-arch-launch>&#8594;</a>
+                                            <div class="emp-arch-node emp-arch-node-ext"
+                                                 data-arch-node="sync-llm"
+                                                 data-arch-name="SyncLLM"
+                                                 data-arch-badge="Data &amp; AI · Budget &amp; Privacy"
+                                                 data-arch-desc="Connect multiple AI providers in one place, track team budgets, reuse repeat answers, and mask personal details before sending."
+                                                 data-arch-site="/en/solutions/sync-llm.html"
+                                                 data-arch-demo="https://demo.empasy.io/en/products/sync-llm"
+                                                 data-arch-contact="/en/pages/contact.html?topics=data-ai"
+                                                 data-arch-img="/images/screenshots/sync-llm/screen_01.png"
+                                                 data-arch-connected="sync-verse,sync-insight,sync-crawl,sync-cms">
+                                                <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
+                                                    <span class="emp-arch-node-name">SyncLLM</span>
+                                                    <span class="emp-arch-ext-tag">AI Gateway</span>
+                                                </button>
+                                                <a href="/en/solutions/sync-llm.html" class="emp-arch-launch" aria-label="Open SyncLLM page" title="Open SyncLLM page" data-arch-launch>&#8594;</a>
                                             </div>
-                                            <span class="emp-arch-ext-tag">AI Gateway</span>
-                                        </div>
 
-                                        <div role="button" tabindex="0" class="emp-arch-node emp-arch-node-ext" aria-pressed="false"
-                                             data-arch-node="sync-crawl"
-                                             data-arch-name="SyncCrawl"
-                                             data-arch-badge="Data &amp; AI · Public Web Data"
-                                             data-arch-desc="Gather public web updates consistently even when page layouts change, stripping clutter into clean searchable text."
-                                             data-arch-site="/en/solutions/sync-crawl.html"
-                                             data-arch-demo="https://demo.empasy.io/en/products/sync-crawl"
-                                             data-arch-contact="/en/pages/contact.html?topics=data-ai"
-                                             data-arch-img="/images/screenshots/sync-crawl/screen_02.png"
-                                             data-arch-connected="sync-verse,sync-insight,sync-llm">
-                                            <div class="emp-arch-node-top">
-                                                <span class="emp-arch-node-name">SyncCrawl</span>
-                                                <a href="/en/solutions/sync-crawl.html" class="emp-arch-launch" aria-label="Open SyncCrawl site" data-arch-launch>&#8594;</a>
+                                            <div class="emp-arch-node emp-arch-node-ext"
+                                                 data-arch-node="sync-crawl"
+                                                 data-arch-name="SyncCrawl"
+                                                 data-arch-badge="Data &amp; AI · Public Web Data"
+                                                 data-arch-desc="Gather public web updates consistently even when page layouts change, stripping clutter into clean searchable text."
+                                                 data-arch-site="/en/solutions/sync-crawl.html"
+                                                 data-arch-demo="https://demo.empasy.io/en/products/sync-crawl"
+                                                 data-arch-contact="/en/pages/contact.html?topics=data-ai"
+                                                 data-arch-img="/images/screenshots/sync-crawl/screen_02.png"
+                                                 data-arch-connected="sync-verse,sync-insight,sync-llm">
+                                                <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
+                                                    <span class="emp-arch-node-name">SyncCrawl</span>
+                                                    <span class="emp-arch-ext-tag">Web Crawl</span>
+                                                </button>
+                                                <a href="/en/solutions/sync-crawl.html" class="emp-arch-launch" aria-label="Open SyncCrawl page" title="Open SyncCrawl page" data-arch-launch>&#8594;</a>
                                             </div>
-                                            <span class="emp-arch-ext-tag">Web Crawl</span>
                                         </div>
                                     </div>
+                                    <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-group-stem="data-ai" aria-hidden="true"></span>
                                 </div>
-                                <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-group-stem="data-ai" aria-hidden="true"></span>
-                            </div>
 
-                            <div class="emp-arch-ext-group-wrap">
-                                <div class="emp-arch-ext-group has-active" data-arch-group="security">
-                                    <div class="emp-arch-ext-group-title">Security (2)</div>
-                                    <div class="emp-arch-ext-grid cols-2">
-                                        <div role="button" tabindex="0" class="emp-arch-node emp-arch-node-ext" aria-pressed="false"
-                                             data-arch-node="sync-apim"
-                                             data-arch-name="SyncAPIM"
-                                             data-arch-badge="Security · API Visibility"
-                                             data-arch-desc="Spot undocumented external API paths from real traffic and review unusual requests or exposed personal fields."
-                                             data-arch-site="/en/solutions/sync-apim.html"
-                                             data-arch-demo="https://demo.empasy.io/en/products/sync-apim"
-                                             data-arch-contact="/en/pages/contact.html?topics=security"
-                                             data-arch-img="/images/screenshots/sync-apim/screen_01.png"
-                                             data-arch-connected="sync-verse,sync-watch,sync-boot">
-                                            <div class="emp-arch-node-top">
-                                                <span class="emp-arch-node-name">SyncAPIM</span>
-                                                <a href="/en/solutions/sync-apim.html" class="emp-arch-launch" aria-label="Open SyncAPIM site" data-arch-launch>&#8594;</a>
+                                <div class="emp-arch-ext-group-wrap">
+                                    <div class="emp-arch-ext-group has-active" data-arch-group="security">
+                                        <div class="emp-arch-ext-group-title">Security (2)</div>
+                                        <div class="emp-arch-ext-grid cols-2">
+                                            <div class="emp-arch-node emp-arch-node-ext"
+                                                 data-arch-node="sync-apim"
+                                                 data-arch-name="SyncAPIM"
+                                                 data-arch-badge="Security · API Visibility"
+                                                 data-arch-desc="Spot undocumented external API paths from real traffic and review unusual requests or exposed personal fields."
+                                                 data-arch-site="/en/solutions/sync-apim.html"
+                                                 data-arch-demo="https://demo.empasy.io/en/products/sync-apim"
+                                                 data-arch-contact="/en/pages/contact.html?topics=security"
+                                                 data-arch-img="/images/screenshots/sync-apim/screen_01.png"
+                                                 data-arch-connected="sync-verse,sync-watch,sync-boot">
+                                                <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
+                                                    <span class="emp-arch-node-name">SyncAPIM</span>
+                                                    <span class="emp-arch-ext-tag">API Security</span>
+                                                </button>
+                                                <a href="/en/solutions/sync-apim.html" class="emp-arch-launch" aria-label="Open SyncAPIM page" title="Open SyncAPIM page" data-arch-launch>&#8594;</a>
                                             </div>
-                                            <span class="emp-arch-ext-tag">API Security</span>
-                                        </div>
 
-                                        <div role="button" tabindex="0" class="emp-arch-node emp-arch-node-ext" aria-pressed="false"
-                                             data-arch-node="sync-watch"
-                                             data-arch-name="SyncWatch"
-                                             data-arch-badge="Security · Advisories &amp; Rules"
-                                             data-arch-desc="Collect new security advisories in one list, check which internal services are affected, and track rule updates."
-                                             data-arch-site="/en/solutions/sync-watch.html"
-                                             data-arch-demo="https://demo.empasy.io/en/products/sync-watch"
-                                             data-arch-contact="/en/pages/contact.html?topics=security"
-                                             data-arch-img="/images/screenshots/sync-watch/screen_01.png"
-                                             data-arch-connected="sync-verse,sync-apim">
-                                            <div class="emp-arch-node-top">
-                                                <span class="emp-arch-node-name">SyncWatch</span>
-                                                <a href="/en/solutions/sync-watch.html" class="emp-arch-launch" aria-label="Open SyncWatch site" data-arch-launch>&#8594;</a>
+                                            <div class="emp-arch-node emp-arch-node-ext"
+                                                 data-arch-node="sync-watch"
+                                                 data-arch-name="SyncWatch"
+                                                 data-arch-badge="Security · Advisories &amp; Rules"
+                                                 data-arch-desc="Collect new security advisories in one list, check which internal services are affected, and track rule updates."
+                                                 data-arch-site="/en/solutions/sync-watch.html"
+                                                 data-arch-demo="https://demo.empasy.io/en/products/sync-watch"
+                                                 data-arch-contact="/en/pages/contact.html?topics=security"
+                                                 data-arch-img="/images/screenshots/sync-watch/screen_01.png"
+                                                 data-arch-connected="sync-verse,sync-apim">
+                                                <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
+                                                    <span class="emp-arch-node-name">SyncWatch</span>
+                                                    <span class="emp-arch-ext-tag">Vuln Alerts</span>
+                                                </button>
+                                                <a href="/en/solutions/sync-watch.html" class="emp-arch-launch" aria-label="Open SyncWatch page" title="Open SyncWatch page" data-arch-launch>&#8594;</a>
                                             </div>
-                                            <span class="emp-arch-ext-tag">Vuln Alerts</span>
                                         </div>
                                     </div>
+                                    <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-group-stem="security" aria-hidden="true"></span>
                                 </div>
-                                <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-group-stem="security" aria-hidden="true"></span>
-                            </div>
 
-                            <div class="emp-arch-ext-group-wrap">
-                                <div class="emp-arch-ext-group has-active" data-arch-group="operations">
-                                    <div class="emp-arch-ext-group-title">Commerce &amp; Ops (2)</div>
-                                    <div class="emp-arch-ext-grid cols-2">
-                                        <div role="button" tabindex="0" class="emp-arch-node emp-arch-node-ext" aria-pressed="false"
-                                             data-arch-node="sync-shop"
-                                             data-arch-name="SyncShop"
-                                             data-arch-badge="Commerce · Store &amp; Pricing"
-                                             data-arch-desc="Manage store products, orders, and promotions with minimum-margin checks and saved prior prices ready to restore."
-                                             data-arch-site="/en/solutions/sync-shop.html"
-                                             data-arch-demo="https://demo.empasy.io/en/products/sync-shop"
-                                             data-arch-contact="/en/pages/contact.html?topics=commerce"
-                                             data-arch-img="/images/screenshots/sync-shop/screen_01.png"
-                                             data-arch-connected="sync-verse,sync-eta,sync-boot">
-                                            <div class="emp-arch-node-top">
-                                                <span class="emp-arch-node-name">SyncShop</span>
-                                                <a href="/en/solutions/sync-shop.html" class="emp-arch-launch" aria-label="Open SyncShop site" data-arch-launch>&#8594;</a>
+                                <div class="emp-arch-ext-group-wrap">
+                                    <div class="emp-arch-ext-group has-active" data-arch-group="operations">
+                                        <div class="emp-arch-ext-group-title">Commerce &amp; Ops (2)</div>
+                                        <div class="emp-arch-ext-grid cols-2">
+                                            <div class="emp-arch-node emp-arch-node-ext"
+                                                 data-arch-node="sync-shop"
+                                                 data-arch-name="SyncShop"
+                                                 data-arch-badge="Commerce · Store &amp; Pricing"
+                                                 data-arch-desc="Manage store products, orders, and promotions with minimum-margin checks and saved prior prices ready to restore."
+                                                 data-arch-site="/en/solutions/sync-shop.html"
+                                                 data-arch-demo="https://demo.empasy.io/en/products/sync-shop"
+                                                 data-arch-contact="/en/pages/contact.html?topics=commerce"
+                                                 data-arch-img="/images/screenshots/sync-shop/screen_01.png"
+                                                 data-arch-connected="sync-verse,sync-eta,sync-boot">
+                                                <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
+                                                    <span class="emp-arch-node-name">SyncShop</span>
+                                                    <span class="emp-arch-ext-tag">Store Ops</span>
+                                                </button>
+                                                <a href="/en/solutions/sync-shop.html" class="emp-arch-launch" aria-label="Open SyncShop page" title="Open SyncShop page" data-arch-launch>&#8594;</a>
                                             </div>
-                                            <span class="emp-arch-ext-tag">Store Ops</span>
-                                        </div>
 
-                                        <div role="button" tabindex="0" class="emp-arch-node emp-arch-node-ext" aria-pressed="false"
-                                             data-arch-node="sync-ops"
-                                             data-arch-name="SyncOps"
-                                             data-arch-badge="Operations · Project P&amp;L"
-                                             data-arch-desc="Track project budgets against real staffing costs, monthly allocation timelines, guarantee expiries, and R&amp;D logs."
-                                             data-arch-site="/en/solutions/sync-ops.html"
-                                             data-arch-demo="https://demo.empasy.io/en/products/sync-ops"
-                                             data-arch-contact="/en/pages/contact.html?topics=ops-security"
-                                             data-arch-img="/images/screenshots/sync-ops/screen_01.png"
-                                             data-arch-connected="sync-verse,sync-boot,sync-insight">
-                                            <div class="emp-arch-node-top">
-                                                <span class="emp-arch-node-name">SyncOps</span>
-                                                <a href="/en/solutions/sync-ops.html" class="emp-arch-launch" aria-label="Open SyncOps site" data-arch-launch>&#8594;</a>
+                                            <div class="emp-arch-node emp-arch-node-ext"
+                                                 data-arch-node="sync-ops"
+                                                 data-arch-name="SyncOps"
+                                                 data-arch-badge="Operations · Project P&amp;L"
+                                                 data-arch-desc="Track project budgets against real staffing costs, monthly allocation timelines, guarantee expiries, and R&amp;D logs."
+                                                 data-arch-site="/en/solutions/sync-ops.html"
+                                                 data-arch-demo="https://demo.empasy.io/en/products/sync-ops"
+                                                 data-arch-contact="/en/pages/contact.html?topics=ops-security"
+                                                 data-arch-img="/images/screenshots/sync-ops/screen_01.png"
+                                                 data-arch-connected="sync-verse,sync-boot,sync-insight">
+                                                <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
+                                                    <span class="emp-arch-node-name">SyncOps</span>
+                                                    <span class="emp-arch-ext-tag">Project P&amp;L</span>
+                                                </button>
+                                                <a href="/en/solutions/sync-ops.html" class="emp-arch-launch" aria-label="Open SyncOps page" title="Open SyncOps page" data-arch-launch>&#8594;</a>
                                             </div>
-                                            <span class="emp-arch-ext-tag">Project P&amp;L</span>
                                         </div>
                                     </div>
+                                    <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-group-stem="operations" aria-hidden="true"></span>
                                 </div>
-                                <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-group-stem="operations" aria-hidden="true"></span>
                             </div>
-                        </div>
                         </div>
 
                         <button type="button" class="emp-arch-foundation" data-arch-foundation-trigger>
-                            <div class="emp-arch-foundation-accent" aria-hidden="true"></div>
-                            <div class="emp-arch-foundation-copy">
-                                <strong>SyncBoot Shared Foundation</strong>
-                                <span>All 11 products share the same sign-in, permissions, and activity history base</span>
-                            </div>
-                            <div class="emp-arch-foundation-badges" aria-hidden="true">
+                            <span class="emp-arch-foundation-accent" aria-hidden="true"></span>
+                            <span class="emp-arch-foundation-copy">
+                                <strong>Shared Operational Foundation (Powered by SyncBoot Core)</strong>
+                                <span>Selected modules share the same sign-in, organization roles, and activity logs</span>
+                            </span>
+                            <span class="emp-arch-foundation-badges" aria-hidden="true">
                                 <span>Shared Roles</span>
                                 <span>Audit Logs</span>
-                            </div>
+                            </span>
                         </button>
                     </div>
 
@@ -294,4 +306,5 @@
                         </div>
                     </div>
                 </div>
-        </div>
+            </div>
+        </section>

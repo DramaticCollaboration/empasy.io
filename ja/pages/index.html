@@ -88,31 +88,73 @@
     {{> header_ja }}
 
     <main>
-        <!-- 1. コンパクト Hero + 全11製品構成図（ファーストビュー即表示） -->
-        <section class="ed-hero ed-hero-arch-first">
+        <!-- 1. 2カラム価値提案 Hero + 実画面プレビュー + 実績トラストストリップ -->
+        <section class="ed-hero ed-hero-split-section">
             <div class="container">
-                <div class="ed-hero-compact-row">
-                    <div class="ed-hero-compact-copy">
+                <div class="ed-hero-split">
+                    <div class="ed-hero-split-copy">
                         <p class="ed-eyebrow">株式会社エムパシー · 実務向け企業業務ソフトウェア</p>
-                        <h1 class="ed-hero-title">繰り返される企業業務は自動化し、重要な判断は人が承認します</h1>
+                        <h1 class="ed-hero-title">繰り返される企業業務は自動化し、<br>重要な判断は人が承認します</h1>
                         <p class="ed-hero-desc">
-                            今もっとも負担の大きい1業務だけを選び2週間で検証し、運用に合わせて同じ基盤上で拡張できます。
+                            Webサイト、社内管理システム、経営データ照会、自動点検まで。
+                            今もっとも負担の大きい1業務だけを2週間で検証し、同じ基盤上で拡張できます。
                         </p>
-                    </div>
-                    <div class="ed-hero-compact-actions">
                         <div class="ed-hero-actions">
-                            <a href="#finder" class="btn btn-primary btn-sm">30秒で最適診断</a>
-                            <a href="/ja/pages/contact.html" class="btn btn-outline btn-sm">導入のご相談</a>
+                            <a href="#finder" class="btn btn-primary ed-btn-hero">30秒で最適構成を診断</a>
+                            <a href="/ja/pages/contact.html" class="btn btn-outline ed-btn-hero">導入のご相談</a>
                         </div>
                         <div class="ed-hero-sublinks">
                             <a href="https://demo.empasy.io/ja/" target="_blank" rel="noopener noreferrer">実画面を体験 &#8599;</a>
+                            <a href="#architecture">全11製品構成図 &#8595;</a>
                             <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" download>概要 PDF</a>
                             <a href="#it-resources">開発者資料 &#8595;</a>
                         </div>
                     </div>
+
+                    <div class="ed-hero-split-visual">
+                        <div class="ed-tabs ed-hero-preview-tabs" role="tablist" aria-label="主要業務画面プレビュー">
+                            <button type="button" class="ed-tab active" role="tab" aria-selected="true" data-preview="verse">決裁・承認管理</button>
+                            <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="eta">クリック自動点検</button>
+                            <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="boot">社内経営レポート</button>
+                            <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="cms">多言語サイト編集</button>
+                        </div>
+                        <div class="ed-frame ed-hero-frame">
+                            <div class="ed-frame-bar">
+                                <strong id="preview-title">協業・段階別承認ダッシュボード (SyncVerse)</strong>
+                                <div class="ed-frame-actions">
+                                    <button type="button" id="preview-zoom-btn" class="ed-zoom-btn">拡大表示</button>
+                                    <a id="preview-link" href="/ja/solutions/sync-verse.html">詳しく &#8594;</a>
+                                </div>
+                            </div>
+                            <div id="preview-callout" class="ed-frame-callout" aria-label="画面の注目ポイント">
+                                <span class="ed-callout-pill"><span class="ed-callout-dot" aria-hidden="true"></span><span>担当者の最終承認後に本番反映</span></span>
+                                <span class="ed-callout-pill"><span class="ed-callout-dot" aria-hidden="true"></span><span>変更前後の差分を一目で確認</span></span>
+                            </div>
+                            <div class="ed-hero-frame-media">
+                                <img id="preview-img" src="/images/screenshots/sync-verse/screen_01.png" alt="協業・段階別承認ダッシュボード 実画面">
+                            </div>
+                        </div>
+                        <p id="preview-caption" class="ed-frame-caption ed-hero-frame-caption">
+                            要件整理から作業レビュー、品質点検、担当者の段階別承認履歴までをひとつの画面で透明に確認できます。
+                        </p>
+                    </div>
                 </div>
 
-                {{> arch_map_ja }}
+                <div class="ed-hero-trust-strip" aria-label="主な支援・協業企業および機関">
+                    <span class="ed-hero-trust-label">主な支援実績</span>
+                    <div class="ed-hero-trust-names">
+                        <span>Samsung.com</span>
+                        <span>LG CNS</span>
+                        <span>LGエレクトロニクス</span>
+                        <span>LG化学</span>
+                        <span>現代自動車</span>
+                        <span>AUTOCRYPT</span>
+                        <span>Penta Security</span>
+                        <span>京畿道教育庁</span>
+                        <span>Visang Education</span>
+                    </div>
+                    <a href="#case-studies" class="ed-hero-trust-link">導入・支援実績を見る &#8595;</a>
+                </div>
             </div>
         </section>
 
@@ -460,8 +502,11 @@
             </div>
         </section>
 
+        <!-- 6-2. 全11製品構成図（独立セクション） -->
+        {{> arch_map_ja }}
+
         <!-- 7. 中核業務領域 4種 -->
-        <section id="solutions" class="ed-section">
+        <section id="solutions" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">中核業務領域 4種</p>
@@ -548,7 +593,7 @@
         </section>
 
         <!-- 8. 目的別拡張モジュール 7種 -->
-        <section id="modules" class="ed-section ed-section-tinted">
+        <section id="modules" class="ed-section">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">目的別拡張領域</p>
@@ -648,7 +693,7 @@
         </section>
 
         <!-- 9. 3段階導入ステップ + 経営層CTA + IT資料分離バー -->
-        <section id="adoption" class="ed-section">
+        <section id="adoption" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">導入ステップ</p>

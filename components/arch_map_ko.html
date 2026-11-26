@@ -1,13 +1,25 @@
-        <!-- 전체 구성도 (SyncVerse 중심 11종 제품 맵 · Hero 통합) -->
-        <div id="architecture" class="emp-arch-hero-wrap">
-                <div class="emp-arch-board is-hero-board" data-emp-arch>
+        <!-- 전체 구성도 (SyncVerse 중심 11종 제품 맵 · 독립 섹션) -->
+        <section id="architecture" class="ed-section emp-arch-section">
+            <div class="container">
+                <div class="emp-arch-head">
+                    <div class="ed-head" style="margin-bottom: 0;">
+                        <p class="ed-kicker">전체 제품 한눈에 보기</p>
+                        <h2 class="ed-title">필요한 업무 하나부터 쓰고, 운영하면서 이어 붙일 수 있습니다</h2>
+                        <p class="ed-desc">
+                            자주 찾는 핵심 4종과 업무별 확장 7종을 한 구성도에 정리했습니다. 궁금한 카드를 누르면 아래에서 화면 미리보기와 설명, 체험 링크를 바로 확인하실 수 있습니다.
+                        </p>
+                    </div>
+                    <span class="emp-arch-standalone">하나씩 도입 · 필요할 때 연결</span>
+                </div>
+
+                <div class="emp-arch-board" data-emp-arch>
                     <div class="emp-arch-board-head">
                         <div class="emp-arch-brand">
                             <span class="emp-arch-dot" aria-hidden="true"></span>
                             <span class="emp-arch-brand-text">SYNCSERIES PRODUCT MAP</span>
                         </div>
                         <div class="emp-arch-meta">
-                            <span class="emp-arch-hint">박스 클릭: 설명·링크 보기 · &#8599; 클릭: 제품 소개 페이지 열기</span>
+                            <span class="emp-arch-hint">카드 선택: 아래에서 상세 보기 · &#8594; 버튼: 제품 소개 페이지 이동</span>
                             <span class="emp-arch-pill">11개 모듈 · 공통 기반</span>
                         </div>
                     </div>
@@ -16,7 +28,7 @@
                         <div class="emp-arch-layer-label">핵심 업무 영역 (4종)</div>
                         <div class="emp-arch-flagship-grid">
                             <div class="emp-arch-node-wrap">
-                                <div role="button" tabindex="0" class="emp-arch-node is-hub is-selected" aria-pressed="true"
+                                <div class="emp-arch-node is-hub is-selected"
                                      data-arch-node="sync-verse"
                                      data-arch-hub="true"
                                      data-arch-name="SyncVerse"
@@ -28,18 +40,18 @@
                                      data-arch-img="/images/screenshots/sync-verse/screen_01.png"
                                      data-arch-hub-note="다른 10개 모듈의 작업과 승인 내역을 필요할 때 한곳에서 이어 볼 수 있습니다"
                                      data-arch-connected="sync-eta,sync-boot,sync-cms,sync-insight,sync-llm,sync-crawl,sync-apim,sync-watch,sync-shop,sync-ops">
-                                    <div class="emp-arch-node-top">
+                                    <button type="button" class="emp-arch-node-btn" aria-pressed="true" data-arch-select>
                                         <span class="emp-arch-node-name">SyncVerse</span>
-                                        <a href="/ko/solutions/sync-verse.html" class="emp-arch-launch" aria-label="SyncVerse 소개 페이지 열기" data-arch-launch>&#8594;</a>
-                                    </div>
-                                    <p class="emp-arch-node-role">협업 · 승인 관리</p>
-                                    <span class="emp-arch-node-tag is-hub-tag">협업 허브</span>
+                                        <span class="emp-arch-node-role">협업 · 승인 관리</span>
+                                        <span class="emp-arch-node-tag is-hub-tag">협업 허브</span>
+                                    </button>
+                                    <a href="/ko/solutions/sync-verse.html" class="emp-arch-launch" aria-label="SyncVerse 소개 페이지 열기" title="SyncVerse 소개 페이지 열기" data-arch-launch>&#8594;</a>
                                 </div>
                                 <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-stem="sync-verse" aria-hidden="true"></span>
                             </div>
 
                             <div class="emp-arch-node-wrap">
-                                <div role="button" tabindex="0" class="emp-arch-node" aria-pressed="false"
+                                <div class="emp-arch-node"
                                      data-arch-node="sync-eta"
                                      data-arch-name="SyncETA"
                                      data-arch-badge="핵심 · 웹 화면 자동 점검"
@@ -49,18 +61,18 @@
                                      data-arch-contact="/ko/pages/contact.html?topics=qa"
                                      data-arch-img="/images/screenshots/sync-eta/screen_01.png"
                                      data-arch-connected="sync-verse,sync-cms,sync-shop">
-                                    <div class="emp-arch-node-top">
+                                    <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
                                         <span class="emp-arch-node-name">SyncETA</span>
-                                        <a href="/ko/solutions/sync-eta.html" class="emp-arch-launch" aria-label="SyncETA 소개 페이지 열기" data-arch-launch>&#8594;</a>
-                                    </div>
-                                    <p class="emp-arch-node-role">웹 화면 자동 점검</p>
-                                    <span class="emp-arch-node-tag">화면 테스트</span>
+                                        <span class="emp-arch-node-role">웹 화면 자동 점검</span>
+                                        <span class="emp-arch-node-tag">화면 테스트</span>
+                                    </button>
+                                    <a href="/ko/solutions/sync-eta.html" class="emp-arch-launch" aria-label="SyncETA 소개 페이지 열기" title="SyncETA 소개 페이지 열기" data-arch-launch>&#8594;</a>
                                 </div>
                                 <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-stem="sync-eta" aria-hidden="true"></span>
                             </div>
 
                             <div class="emp-arch-node-wrap">
-                                <div role="button" tabindex="0" class="emp-arch-node" aria-pressed="false"
+                                <div class="emp-arch-node"
                                      data-arch-node="sync-boot"
                                      data-arch-foundation="true"
                                      data-arch-name="SyncBoot"
@@ -71,18 +83,18 @@
                                      data-arch-contact="/ko/pages/contact.html?topics=system"
                                      data-arch-img="/images/screenshots/sync-boot/screen_01.png"
                                      data-arch-connected="sync-verse,sync-ops,sync-cms,sync-shop,sync-apim">
-                                    <div class="emp-arch-node-top">
+                                    <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
                                         <span class="emp-arch-node-name">SyncBoot</span>
-                                        <a href="/ko/solutions/sync-boot.html" class="emp-arch-launch" aria-label="SyncBoot 소개 페이지 열기" data-arch-launch>&#8594;</a>
-                                    </div>
-                                    <p class="emp-arch-node-role">사내 관리 시스템 기반</p>
-                                    <span class="emp-arch-node-tag">공통 기반</span>
+                                        <span class="emp-arch-node-role">사내 관리 시스템 기반</span>
+                                        <span class="emp-arch-node-tag">표준 백오피스</span>
+                                    </button>
+                                    <a href="/ko/solutions/sync-boot.html" class="emp-arch-launch" aria-label="SyncBoot 소개 페이지 열기" title="SyncBoot 소개 페이지 열기" data-arch-launch>&#8594;</a>
                                 </div>
                                 <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-stem="sync-boot" aria-hidden="true"></span>
                             </div>
 
                             <div class="emp-arch-node-wrap">
-                                <div role="button" tabindex="0" class="emp-arch-node" aria-pressed="false"
+                                <div class="emp-arch-node"
                                      data-arch-node="sync-cms"
                                      data-arch-name="SyncCMS"
                                      data-arch-badge="핵심 · 웹사이트 · 다국어 관리"
@@ -92,12 +104,12 @@
                                      data-arch-contact="/ko/pages/contact.html?topics=web"
                                      data-arch-img="/images/screenshots/sync-cms/screen_01.png"
                                      data-arch-connected="sync-verse,sync-eta,sync-boot,sync-llm">
-                                    <div class="emp-arch-node-top">
+                                    <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
                                         <span class="emp-arch-node-name">SyncCMS</span>
-                                        <a href="/ko/solutions/sync-cms.html" class="emp-arch-launch" aria-label="SyncCMS 소개 페이지 열기" data-arch-launch>&#8594;</a>
-                                    </div>
-                                    <p class="emp-arch-node-role">웹사이트 · 다국어</p>
-                                    <span class="emp-arch-node-tag">콘텐츠 관리</span>
+                                        <span class="emp-arch-node-role">웹사이트 · 다국어</span>
+                                        <span class="emp-arch-node-tag">콘텐츠 관리</span>
+                                    </button>
+                                    <a href="/ko/solutions/sync-cms.html" class="emp-arch-launch" aria-label="SyncCMS 소개 페이지 열기" title="SyncCMS 소개 페이지 열기" data-arch-launch>&#8594;</a>
                                 </div>
                                 <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-stem="sync-cms" aria-hidden="true"></span>
                             </div>
@@ -108,167 +120,167 @@
                         </div>
 
                         <div class="emp-arch-ext-wrap" data-arch-ext-wrap>
-                        <div class="emp-arch-layer-ext-head">
-                            <div class="emp-arch-layer-label">목적별 확장 영역 (7종)</div>
-                            <button type="button" class="emp-arch-mobile-toggle" data-arch-ext-toggle data-label-expand="확장 7종 펼치기" data-label-collapse="확장 접기" aria-expanded="false">확장 7종 펼치기</button>
-                        </div>
-                        <div class="emp-arch-ext-groups">
-                            <div class="emp-arch-ext-group-wrap">
-                                <div class="emp-arch-ext-group has-active" data-arch-group="data-ai">
-                                    <div class="emp-arch-ext-group-title">데이터 · AI (3종)</div>
-                                    <div class="emp-arch-ext-grid cols-3">
-                                        <div role="button" tabindex="0" class="emp-arch-node emp-arch-node-ext" aria-pressed="false"
-                                             data-arch-node="sync-insight"
-                                             data-arch-name="SyncInsight"
-                                             data-arch-badge="데이터 · AI · SyncVerse 통합"
-                                             data-arch-desc="복잡한 검색식 없이 일상 한국어로 사내 데이터를 질문해 표와 차트로 확인하며, 읽기 전용으로 원본 데이터를 보호합니다."
-                                             data-arch-site="/ko/solutions/sync-insight.html"
-                                             data-arch-demo="https://demo.empasy.io/products/sync-insight"
-                                             data-arch-contact="/ko/pages/contact.html?topics=data-ai"
-                                             data-arch-img="/images/screenshots/sync-insight/screen_02.png"
-                                             data-arch-connected="sync-verse,sync-crawl,sync-llm,sync-ops">
-                                            <div class="emp-arch-node-top">
-                                                <span class="emp-arch-node-name">SyncInsight</span>
-                                                <a href="/ko/solutions/sync-insight.html" class="emp-arch-launch" aria-label="SyncInsight 소개 페이지 열기" data-arch-launch>&#8594;</a>
+                            <div class="emp-arch-layer-ext-head">
+                                <div class="emp-arch-layer-label">목적별 확장 영역 (7종)</div>
+                                <button type="button" class="emp-arch-mobile-toggle" data-arch-ext-toggle data-label-expand="확장 7종 펼치기" data-label-collapse="확장 접기" aria-expanded="false">확장 7종 펼치기</button>
+                            </div>
+                            <div class="emp-arch-ext-groups">
+                                <div class="emp-arch-ext-group-wrap">
+                                    <div class="emp-arch-ext-group has-active" data-arch-group="data-ai">
+                                        <div class="emp-arch-ext-group-title">데이터 · AI (3종)</div>
+                                        <div class="emp-arch-ext-grid cols-3">
+                                            <div class="emp-arch-node emp-arch-node-ext"
+                                                 data-arch-node="sync-insight"
+                                                 data-arch-name="SyncInsight"
+                                                 data-arch-badge="데이터 · AI · SyncVerse 통합"
+                                                 data-arch-desc="복잡한 검색식 없이 일상 한국어로 사내 데이터를 질문해 표와 차트로 확인하며, 읽기 전용으로 원본 데이터를 보호합니다."
+                                                 data-arch-site="/ko/solutions/sync-insight.html"
+                                                 data-arch-demo="https://demo.empasy.io/products/sync-insight"
+                                                 data-arch-contact="/ko/pages/contact.html?topics=data-ai"
+                                                 data-arch-img="/images/screenshots/sync-insight/screen_02.png"
+                                                 data-arch-connected="sync-verse,sync-crawl,sync-llm,sync-ops">
+                                                <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
+                                                    <span class="emp-arch-node-name">SyncInsight</span>
+                                                    <span class="emp-arch-ext-tag">데이터 질문</span>
+                                                    <span class="emp-arch-integrated">SyncVerse 통합</span>
+                                                </button>
+                                                <a href="/ko/solutions/sync-insight.html" class="emp-arch-launch" aria-label="SyncInsight 소개 페이지 열기" title="SyncInsight 소개 페이지 열기" data-arch-launch>&#8594;</a>
                                             </div>
-                                            <span class="emp-arch-ext-tag">데이터 질문</span>
-                                            <span class="emp-arch-integrated">SyncVerse 통합</span>
-                                        </div>
 
-                                        <div role="button" tabindex="0" class="emp-arch-node emp-arch-node-ext" aria-pressed="false"
-                                             data-arch-node="sync-llm"
-                                             data-arch-name="SyncLLM"
-                                             data-arch-badge="데이터 · AI · 비용 및 정보 보호"
-                                             data-arch-desc="여러 AI 모델을 한 창구로 연결해 부서별 예산을 관리하고, 비슷한 질문 재사용과 전송 전 개인정보 자동 가림을 돕습니다."
-                                             data-arch-site="/ko/solutions/sync-llm.html"
-                                             data-arch-demo="https://demo.empasy.io/products/sync-llm"
-                                             data-arch-contact="/ko/pages/contact.html?topics=data-ai"
-                                             data-arch-img="/images/screenshots/sync-llm/screen_01.png"
-                                             data-arch-connected="sync-verse,sync-insight,sync-crawl,sync-cms">
-                                            <div class="emp-arch-node-top">
-                                                <span class="emp-arch-node-name">SyncLLM</span>
-                                                <a href="/ko/solutions/sync-llm.html" class="emp-arch-launch" aria-label="SyncLLM 소개 페이지 열기" data-arch-launch>&#8594;</a>
+                                            <div class="emp-arch-node emp-arch-node-ext"
+                                                 data-arch-node="sync-llm"
+                                                 data-arch-name="SyncLLM"
+                                                 data-arch-badge="데이터 · AI · 비용 및 정보 보호"
+                                                 data-arch-desc="여러 AI 모델을 한 창구로 연결해 부서별 예산을 관리하고, 비슷한 질문 재사용과 전송 전 개인정보 자동 가림을 돕습니다."
+                                                 data-arch-site="/ko/solutions/sync-llm.html"
+                                                 data-arch-demo="https://demo.empasy.io/products/sync-llm"
+                                                 data-arch-contact="/ko/pages/contact.html?topics=data-ai"
+                                                 data-arch-img="/images/screenshots/sync-llm/screen_01.png"
+                                                 data-arch-connected="sync-verse,sync-insight,sync-crawl,sync-cms">
+                                                <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
+                                                    <span class="emp-arch-node-name">SyncLLM</span>
+                                                    <span class="emp-arch-ext-tag">AI 비용·보안</span>
+                                                </button>
+                                                <a href="/ko/solutions/sync-llm.html" class="emp-arch-launch" aria-label="SyncLLM 소개 페이지 열기" title="SyncLLM 소개 페이지 열기" data-arch-launch>&#8594;</a>
                                             </div>
-                                            <span class="emp-arch-ext-tag">AI 비용·보안</span>
-                                        </div>
 
-                                        <div role="button" tabindex="0" class="emp-arch-node emp-arch-node-ext" aria-pressed="false"
-                                             data-arch-node="sync-crawl"
-                                             data-arch-name="SyncCrawl"
-                                             data-arch-badge="데이터 · AI · 공개 웹 자료 수집"
-                                             data-arch-desc="대상 웹사이트 구성이 바뀌어도 필요한 공개 자료를 꾸준히 모으고, 광고 등 불필요한 부분을 덜어내 정리합니다."
-                                             data-arch-site="/ko/solutions/sync-crawl.html"
-                                             data-arch-demo="https://demo.empasy.io/products/sync-crawl"
-                                             data-arch-contact="/ko/pages/contact.html?topics=data-ai"
-                                             data-arch-img="/images/screenshots/sync-crawl/screen_02.png"
-                                             data-arch-connected="sync-verse,sync-insight,sync-llm">
-                                            <div class="emp-arch-node-top">
-                                                <span class="emp-arch-node-name">SyncCrawl</span>
-                                                <a href="/ko/solutions/sync-crawl.html" class="emp-arch-launch" aria-label="SyncCrawl 소개 페이지 열기" data-arch-launch>&#8594;</a>
+                                            <div class="emp-arch-node emp-arch-node-ext"
+                                                 data-arch-node="sync-crawl"
+                                                 data-arch-name="SyncCrawl"
+                                                 data-arch-badge="데이터 · AI · 공개 웹 자료 수집"
+                                                 data-arch-desc="대상 웹사이트 구성이 바뀌어도 필요한 공개 자료를 꾸준히 모으고, 광고 등 불필요한 부분을 덜어내 정리합니다."
+                                                 data-arch-site="/ko/solutions/sync-crawl.html"
+                                                 data-arch-demo="https://demo.empasy.io/products/sync-crawl"
+                                                 data-arch-contact="/ko/pages/contact.html?topics=data-ai"
+                                                 data-arch-img="/images/screenshots/sync-crawl/screen_02.png"
+                                                 data-arch-connected="sync-verse,sync-insight,sync-llm">
+                                                <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
+                                                    <span class="emp-arch-node-name">SyncCrawl</span>
+                                                    <span class="emp-arch-ext-tag">웹 수집</span>
+                                                </button>
+                                                <a href="/ko/solutions/sync-crawl.html" class="emp-arch-launch" aria-label="SyncCrawl 소개 페이지 열기" title="SyncCrawl 소개 페이지 열기" data-arch-launch>&#8594;</a>
                                             </div>
-                                            <span class="emp-arch-ext-tag">웹 수집</span>
                                         </div>
                                     </div>
+                                    <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-group-stem="data-ai" aria-hidden="true"></span>
                                 </div>
-                                <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-group-stem="data-ai" aria-hidden="true"></span>
-                            </div>
 
-                            <div class="emp-arch-ext-group-wrap">
-                                <div class="emp-arch-ext-group has-active" data-arch-group="security">
-                                    <div class="emp-arch-ext-group-title">보안 관리 (2종)</div>
-                                    <div class="emp-arch-ext-grid cols-2">
-                                        <div role="button" tabindex="0" class="emp-arch-node emp-arch-node-ext" aria-pressed="false"
-                                             data-arch-node="sync-apim"
-                                             data-arch-name="SyncAPIM"
-                                             data-arch-badge="보안 관리 · 외부 연동 보안"
-                                             data-arch-desc="실제 통신 기록에서 문서에 빠진 숨은 외부 연동 경로를 찾아내고, 비정상 접근과 민감정보 노출 위험을 점검합니다."
-                                             data-arch-site="/ko/solutions/sync-apim.html"
-                                             data-arch-demo="https://demo.empasy.io/products/sync-apim"
-                                             data-arch-contact="/ko/pages/contact.html?topics=security"
-                                             data-arch-img="/images/screenshots/sync-apim/screen_01.png"
-                                             data-arch-connected="sync-verse,sync-watch,sync-boot">
-                                            <div class="emp-arch-node-top">
-                                                <span class="emp-arch-node-name">SyncAPIM</span>
-                                                <a href="/ko/solutions/sync-apim.html" class="emp-arch-launch" aria-label="SyncAPIM 소개 페이지 열기" data-arch-launch>&#8594;</a>
+                                <div class="emp-arch-ext-group-wrap">
+                                    <div class="emp-arch-ext-group has-active" data-arch-group="security">
+                                        <div class="emp-arch-ext-group-title">보안 관리 (2종)</div>
+                                        <div class="emp-arch-ext-grid cols-2">
+                                            <div class="emp-arch-node emp-arch-node-ext"
+                                                 data-arch-node="sync-apim"
+                                                 data-arch-name="SyncAPIM"
+                                                 data-arch-badge="보안 관리 · 외부 연동 보안"
+                                                 data-arch-desc="실제 통신 기록에서 문서에 빠진 숨은 외부 연동 경로를 찾아내고, 비정상 접근과 민감정보 노출 위험을 점검합니다."
+                                                 data-arch-site="/ko/solutions/sync-apim.html"
+                                                 data-arch-demo="https://demo.empasy.io/products/sync-apim"
+                                                 data-arch-contact="/ko/pages/contact.html?topics=security"
+                                                 data-arch-img="/images/screenshots/sync-apim/screen_01.png"
+                                                 data-arch-connected="sync-verse,sync-watch,sync-boot">
+                                                <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
+                                                    <span class="emp-arch-node-name">SyncAPIM</span>
+                                                    <span class="emp-arch-ext-tag">연동 보안</span>
+                                                </button>
+                                                <a href="/ko/solutions/sync-apim.html" class="emp-arch-launch" aria-label="SyncAPIM 소개 페이지 열기" title="SyncAPIM 소개 페이지 열기" data-arch-launch>&#8594;</a>
                                             </div>
-                                            <span class="emp-arch-ext-tag">연동 보안</span>
-                                        </div>
 
-                                        <div role="button" tabindex="0" class="emp-arch-node emp-arch-node-ext" aria-pressed="false"
-                                             data-arch-node="sync-watch"
-                                             data-arch-name="SyncWatch"
-                                             data-arch-badge="보안 관리 · 취약점 점검"
-                                             data-arch-desc="국내외 주요 보안 공지와 취약점 정보를 한곳에 모아 영향 범위를 확인하고, 점검 규칙과 조치 이력을 정리합니다."
-                                             data-arch-site="/ko/solutions/sync-watch.html"
-                                             data-arch-demo="https://demo.empasy.io/products/sync-watch"
-                                             data-arch-contact="/ko/pages/contact.html?topics=security"
-                                             data-arch-img="/images/screenshots/sync-watch/screen_01.png"
-                                             data-arch-connected="sync-verse,sync-apim">
-                                            <div class="emp-arch-node-top">
-                                                <span class="emp-arch-node-name">SyncWatch</span>
-                                                <a href="/ko/solutions/sync-watch.html" class="emp-arch-launch" aria-label="SyncWatch 소개 페이지 열기" data-arch-launch>&#8594;</a>
+                                            <div class="emp-arch-node emp-arch-node-ext"
+                                                 data-arch-node="sync-watch"
+                                                 data-arch-name="SyncWatch"
+                                                 data-arch-badge="보안 관리 · 취약점 점검"
+                                                 data-arch-desc="국내외 주요 보안 공지와 취약점 정보를 한곳에 모아 영향 범위를 확인하고, 점검 규칙과 조치 이력을 정리합니다."
+                                                 data-arch-site="/ko/solutions/sync-watch.html"
+                                                 data-arch-demo="https://demo.empasy.io/products/sync-watch"
+                                                 data-arch-contact="/ko/pages/contact.html?topics=security"
+                                                 data-arch-img="/images/screenshots/sync-watch/screen_01.png"
+                                                 data-arch-connected="sync-verse,sync-apim">
+                                                <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
+                                                    <span class="emp-arch-node-name">SyncWatch</span>
+                                                    <span class="emp-arch-ext-tag">취약점 관리</span>
+                                                </button>
+                                                <a href="/ko/solutions/sync-watch.html" class="emp-arch-launch" aria-label="SyncWatch 소개 페이지 열기" title="SyncWatch 소개 페이지 열기" data-arch-launch>&#8594;</a>
                                             </div>
-                                            <span class="emp-arch-ext-tag">취약점 관리</span>
                                         </div>
                                     </div>
+                                    <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-group-stem="security" aria-hidden="true"></span>
                                 </div>
-                                <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-group-stem="security" aria-hidden="true"></span>
-                            </div>
 
-                            <div class="emp-arch-ext-group-wrap">
-                                <div class="emp-arch-ext-group has-active" data-arch-group="operations">
-                                    <div class="emp-arch-ext-group-title">쇼핑몰 · 사업운영 (2종)</div>
-                                    <div class="emp-arch-ext-grid cols-2">
-                                        <div role="button" tabindex="0" class="emp-arch-node emp-arch-node-ext" aria-pressed="false"
-                                             data-arch-node="sync-shop"
-                                             data-arch-name="SyncShop"
-                                             data-arch-badge="쇼핑몰 · 가격 및 마진 관리"
-                                             data-arch-desc="상품별 최소 마진 기준을 확인해 할인 입력 실수를 줄이고, 변경 직전 가격을 보관해 필요할 때 되돌릴 수 있는 쇼핑몰 솔루션입니다."
-                                             data-arch-site="/ko/solutions/sync-shop.html"
-                                             data-arch-demo="https://demo.empasy.io/products/sync-shop"
-                                             data-arch-contact="/ko/pages/contact.html?topics=commerce"
-                                             data-arch-img="/images/screenshots/sync-shop/screen_01.png"
-                                             data-arch-connected="sync-verse,sync-eta,sync-boot">
-                                            <div class="emp-arch-node-top">
-                                                <span class="emp-arch-node-name">SyncShop</span>
-                                                <a href="/ko/solutions/sync-shop.html" class="emp-arch-launch" aria-label="SyncShop 소개 페이지 열기" data-arch-launch>&#8594;</a>
+                                <div class="emp-arch-ext-group-wrap">
+                                    <div class="emp-arch-ext-group has-active" data-arch-group="operations">
+                                        <div class="emp-arch-ext-group-title">쇼핑몰 · 사업운영 (2종)</div>
+                                        <div class="emp-arch-ext-grid cols-2">
+                                            <div class="emp-arch-node emp-arch-node-ext"
+                                                 data-arch-node="sync-shop"
+                                                 data-arch-name="SyncShop"
+                                                 data-arch-badge="쇼핑몰 · 가격 및 마진 관리"
+                                                 data-arch-desc="상품별 최소 마진 기준을 확인해 할인 입력 실수를 줄이고, 변경 직전 가격을 보관해 필요할 때 되돌릴 수 있는 쇼핑몰 솔루션입니다."
+                                                 data-arch-site="/ko/solutions/sync-shop.html"
+                                                 data-arch-demo="https://demo.empasy.io/products/sync-shop"
+                                                 data-arch-contact="/ko/pages/contact.html?topics=commerce"
+                                                 data-arch-img="/images/screenshots/sync-shop/screen_01.png"
+                                                 data-arch-connected="sync-verse,sync-eta,sync-boot">
+                                                <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
+                                                    <span class="emp-arch-node-name">SyncShop</span>
+                                                    <span class="emp-arch-ext-tag">쇼핑몰 운영</span>
+                                                </button>
+                                                <a href="/ko/solutions/sync-shop.html" class="emp-arch-launch" aria-label="SyncShop 소개 페이지 열기" title="SyncShop 소개 페이지 열기" data-arch-launch>&#8594;</a>
                                             </div>
-                                            <span class="emp-arch-ext-tag">쇼핑몰 운영</span>
-                                        </div>
 
-                                        <div role="button" tabindex="0" class="emp-arch-node emp-arch-node-ext" aria-pressed="false"
-                                             data-arch-node="sync-ops"
-                                             data-arch-name="SyncOps"
-                                             data-arch-badge="사업운영 · 프로젝트 손익"
-                                             data-arch-desc="계약 금액 대비 실제 투입 원가, 인력 배정 일정, 4대 보증보험 만기와 하도급 지급 기한을 엑셀 없이 한 화면에서 챙깁니다."
-                                             data-arch-site="/ko/solutions/sync-ops.html"
-                                             data-arch-demo="https://demo.empasy.io/products/sync-ops"
-                                             data-arch-contact="/ko/pages/contact.html?topics=ops-security"
-                                             data-arch-img="/images/screenshots/sync-ops/screen_01.png"
-                                             data-arch-connected="sync-verse,sync-boot,sync-insight">
-                                            <div class="emp-arch-node-top">
-                                                <span class="emp-arch-node-name">SyncOps</span>
-                                                <a href="/ko/solutions/sync-ops.html" class="emp-arch-launch" aria-label="SyncOps 소개 페이지 열기" data-arch-launch>&#8594;</a>
+                                            <div class="emp-arch-node emp-arch-node-ext"
+                                                 data-arch-node="sync-ops"
+                                                 data-arch-name="SyncOps"
+                                                 data-arch-badge="사업운영 · 프로젝트 손익"
+                                                 data-arch-desc="계약 금액 대비 실제 투입 원가, 인력 배정 일정, 4대 보증보험 만기와 하도급 지급 기한을 엑셀 없이 한 화면에서 챙깁니다."
+                                                 data-arch-site="/ko/solutions/sync-ops.html"
+                                                 data-arch-demo="https://demo.empasy.io/products/sync-ops"
+                                                 data-arch-contact="/ko/pages/contact.html?topics=ops-security"
+                                                 data-arch-img="/images/screenshots/sync-ops/screen_01.png"
+                                                 data-arch-connected="sync-verse,sync-boot,sync-insight">
+                                                <button type="button" class="emp-arch-node-btn" aria-pressed="false" data-arch-select>
+                                                    <span class="emp-arch-node-name">SyncOps</span>
+                                                    <span class="emp-arch-ext-tag">프로젝트 손익</span>
+                                                </button>
+                                                <a href="/ko/solutions/sync-ops.html" class="emp-arch-launch" aria-label="SyncOps 소개 페이지 열기" title="SyncOps 소개 페이지 열기" data-arch-launch>&#8594;</a>
                                             </div>
-                                            <span class="emp-arch-ext-tag">프로젝트 손익</span>
                                         </div>
                                     </div>
+                                    <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-group-stem="operations" aria-hidden="true"></span>
                                 </div>
-                                <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-group-stem="operations" aria-hidden="true"></span>
                             </div>
-                        </div>
                         </div>
 
                         <button type="button" class="emp-arch-foundation" data-arch-foundation-trigger>
-                            <div class="emp-arch-foundation-accent" aria-hidden="true"></div>
-                            <div class="emp-arch-foundation-copy">
-                                <strong>SyncBoot 공통 업무 기반</strong>
-                                <span>로그인 · 조직도 · 부서 권한 · 작업 이력을 11개 제품이 함께 사용합니다</span>
-                            </div>
-                            <div class="emp-arch-foundation-badges" aria-hidden="true">
+                            <span class="emp-arch-foundation-accent" aria-hidden="true"></span>
+                            <span class="emp-arch-foundation-copy">
+                                <strong>공통 업무 기반 레이어 (SyncBoot 코어 공유)</strong>
+                                <span>로그인 · 조직도 · 부서 권한 · 작업 이력을 도입한 모듈끼리 함께 공유합니다</span>
+                            </span>
+                            <span class="emp-arch-foundation-badges" aria-hidden="true">
                                 <span>공통 권한</span>
                                 <span>작업 이력</span>
-                            </div>
+                            </span>
                         </button>
                     </div>
 
@@ -294,4 +306,5 @@
                         </div>
                     </div>
                 </div>
-        </div>
+            </div>
+        </section>
