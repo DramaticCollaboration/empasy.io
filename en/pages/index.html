@@ -88,57 +88,31 @@
     {{> header_en }}
 
     <main>
-        <!-- 1. Executive Hero + Task-Based Screen Preview -->
-        <section class="ed-hero">
+        <!-- 1. Compact Hero + Interactive All-11 Product Map (Above the Fold) -->
+        <section class="ed-hero ed-hero-arch-first">
             <div class="container">
-                <div class="ed-hero-copy">
-                    <p class="ed-eyebrow">Empasy Inc. · Practical Enterprise Software</p>
-                    <h1 class="ed-hero-title">Automate repetitive business work, <br>keep humans in charge of key decisions</h1>
-                    <p class="ed-hero-desc">
-                        From corporate websites and internal business systems to data lookup and quality checks, <br>
-                        pick one urgent workflow and validate measurable results in two weeks.
-                    </p>
-                    <div class="ed-hero-actions">
-                        <a href="#finder" class="btn btn-primary btn-lg">
-                            30-Second Solution Finder
-                        </a>
-                        <a href="/en/pages/contact.html" class="btn btn-outline btn-lg">
-                            Contact Sales
-                        </a>
+                <div class="ed-hero-compact-row">
+                    <div class="ed-hero-compact-copy">
+                        <p class="ed-eyebrow">Empasy Inc. · Practical Enterprise Software</p>
+                        <h1 class="ed-hero-title">Automate repetitive business work, keep humans in charge of key decisions</h1>
+                        <p class="ed-hero-desc">
+                            Pick one urgent workflow to validate in two weeks, then connect additional modules on the same shared foundation anytime.
+                        </p>
                     </div>
-                    <div class="ed-hero-sublinks">
-                        <a href="https://demo.empasy.io/en/" target="_blank" rel="noopener noreferrer">Explore Live Screens (demo.empasy.io) &#8599;</a>
-                        <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" download>Executive Summary PDF</a>
-                        <a href="#it-resources">IT &amp; Developer Resources &#8595;</a>
+                    <div class="ed-hero-compact-actions">
+                        <div class="ed-hero-actions">
+                            <a href="#finder" class="btn btn-primary btn-sm">30-Second Finder</a>
+                            <a href="/en/pages/contact.html" class="btn btn-outline btn-sm">Contact Sales</a>
+                        </div>
+                        <div class="ed-hero-sublinks">
+                            <a href="https://demo.empasy.io/en/" target="_blank" rel="noopener noreferrer">Live Demo &#8599;</a>
+                            <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" download>Summary PDF</a>
+                            <a href="#it-resources">IT Resources &#8595;</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- 4 Task-Based Screen Previews -->
-                <div class="ed-preview-wrap">
-                    <div class="ed-tabs" role="tablist" aria-label="Core business workflow previews">
-                        <button type="button" class="ed-tab active" role="tab" aria-selected="true" data-preview="verse">Approvals &amp; Tracking</button>
-                        <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="eta">Click Screen Checks</button>
-                        <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="boot">Internal Reports</button>
-                        <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="cms">Multilingual Web</button>
-                    </div>
-                    <div class="ed-frame">
-                        <div class="ed-frame-bar">
-                            <strong id="preview-title">Collaboration &amp; Staged Approval Dashboard (SyncVerse)</strong>
-                            <div class="ed-frame-actions">
-                                <button type="button" id="preview-zoom-btn" class="ed-zoom-btn">Zoom</button>
-                                <a id="preview-link" href="/en/solutions/sync-verse.html">Details &#8594;</a>
-                            </div>
-                        </div>
-                        <div id="preview-callout" class="ed-frame-callout" aria-label="Key highlights">
-                            <span class="ed-callout-pill"><span class="ed-callout-dot" aria-hidden="true"></span><span>Human approval before going live</span></span>
-                            <span class="ed-callout-pill"><span class="ed-callout-dot" aria-hidden="true"></span><span>Clear before-and-after review</span></span>
-                        </div>
-                        <img id="preview-img" src="/images/screenshots/sync-verse/screen_01.png" alt="Collaboration and staged approval dashboard" style="width: 100%; height: auto;">
-                    </div>
-                    <p id="preview-caption" class="ed-frame-caption">
-                        Track requirements, review summaries, quality checks, and staged approval records in a single clear screen.
-                    </p>
-                </div>
+                {{> arch_map_en }}
             </div>
         </section>
 
@@ -485,11 +459,8 @@
             </div>
         </section>
 
-        <!-- 6-2. All 11 Products Interactive Map -->
-        {{> arch_map_en }}
-
         <!-- 7. 4 Core Business Areas (Capability First, Product Code Badge Second) -->
-        <section id="solutions" class="ed-section ed-section-tinted">
+        <section id="solutions" class="ed-section">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">4 Core Business Areas</p>
@@ -576,7 +547,7 @@
         </section>
 
         <!-- 8. 7 Modular Extensions -->
-        <section id="modules" class="ed-section">
+        <section id="modules" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">Modular Extensions</p>
@@ -676,7 +647,7 @@
         </section>
 
         <!-- 9. Small-Start 3-Step Adoption + Executive CTA + Separate IT Resource Bar -->
-        <section id="adoption" class="ed-section ed-section-tinted">
+        <section id="adoption" class="ed-section">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">Adoption Process</p>

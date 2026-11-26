@@ -56,7 +56,16 @@
     "relatedKicker": "함께 쓰면 좋은 모듈",
     "frequentlyPairedSuffix": "자주 연결해 사용하는 기능",
     "viewAllSolutions": "전체 11종 구성도 보기",
-    "learnMore": "자세히 보기"
+    "learnMore": "자세히 보기",
+    "ctxMapLabel": "생태계 위치",
+    "ctxConnectedLabel": "함께 연결",
+    "ctxMapExpand": "전체 구성도 펼치기",
+    "ctxMapCollapse": "구성도 접기",
+    "ctxMoreSuffix": "종 더보기",
+    "ctxFlagshipHeading": "핵심 업무 4종",
+    "ctxExtHeading": "확장 모듈 7종",
+    "ctxBusLabel": "공통 로그인 · 권한 · 승인 이력 · 표준 REST/MCP 연동",
+    "ctxFoundationLabel": "SyncBoot 공통 업무 기반"
   },
   "en": {
     "htmlLang": "en",
@@ -115,7 +124,16 @@
     "relatedKicker": "Recommended Pairings",
     "frequentlyPairedPrefix": "Modules frequently paired with ",
     "viewAllSolutions": "View All 11 Solutions Map",
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "ctxMapLabel": "Suite Position",
+    "ctxConnectedLabel": "Connects with",
+    "ctxMapExpand": "Show Full Map",
+    "ctxMapCollapse": "Hide Map",
+    "ctxMoreSuffix": " more",
+    "ctxFlagshipHeading": "4 Core Solutions",
+    "ctxExtHeading": "7 Domain Modules",
+    "ctxBusLabel": "Shared Sign-In · RBAC · Approvals · REST / MCP",
+    "ctxFoundationLabel": "SyncBoot Shared Foundation"
   },
   "ja": {
     "htmlLang": "ja",
@@ -174,6 +192,15 @@
     "relatedKicker": "あわせて活用したいモジュール",
     "frequentlyPairedSuffix": "とよく連携して使われる機能",
     "viewAllSolutions": "全11製品の構成図を見る",
-    "learnMore": "詳しく見る"
+    "learnMore": "詳しく見る",
+    "ctxMapLabel": "全体構成での位置",
+    "ctxConnectedLabel": "主な連携先",
+    "ctxMapExpand": "全体構成図を開く",
+    "ctxMapCollapse": "構成図を閉じる",
+    "ctxMoreSuffix": "種",
+    "ctxFlagshipHeading": "中核ソリューション 4種",
+    "ctxExtHeading": "拡張モジュール 7種",
+    "ctxBusLabel": "共通ログイン · 権限 · 承認履歴 · 標準 REST/MCP 連携",
+    "ctxFoundationLabel": "SyncBoot 共通業務基盤"
   }
 }

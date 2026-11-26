@@ -48,7 +48,81 @@ function loadCatalogByLocale(lang) {
   for (const prod of raw.products || []) {
     map.set(prod.id, prod);
   }
-  return map;
+  const topologyNodes = Array.isArray(raw.topologyNodes) ? raw.topologyNodes : [];
+  return { productMap: map, topologyNodes };
+}
+
+function renderContextStripHtml(product, topologyNodes, lang, ui) {
+  const nodeMap = new Map(topologyNodes.map((n) => [n.productId, n]));
+  const current = nodeMap.get(product.id);
+  if (!current) return '';
+
+  const connectedNodes = (current.connectedTo || [])
+    .map((id) => nodeMap.get(id))
+    .filter(Boolean);
+  const visibleConnected = connectedNodes.slice(0, 4);
+  const extraCount = Math.max(0, connectedNodes.length - 4);
+  const connectedSet = new Set(current.connectedTo || []);
+
+  const chipsHtml = visibleConnected
+    .map(
+      (rel) =>
+        `<a href="/${lang}/solutions/${escapeHtml(rel.productId)}.html" class="sol-ctx-chip">${escapeHtml(rel.label)}</a>`,
+    )
+    .join('');
+
+  const moreHtml =
+    extraCount > 0
+      ? `<span class="sol-ctx-more">+${extraCount}${escapeHtml(ui.ctxMoreSuffix)}</span>`
+      : '';
+
+  const flagshipNodes = topologyNodes.filter((n) => n.architectureZone === 'flagship');
+  const extNodes = topologyNodes.filter((n) => n.architectureZone !== 'flagship');
+
+  const renderMiniNode = (n) => {
+    const isCurrent = n.productId === product.id;
+    const isRelated = !isCurrent && (Boolean(current.isHub) || connectedSet.has(n.productId));
+    const stateCls = isCurrent ? ' is-current' : isRelated ? ' is-related' : '';
+    const href = `/${lang}/solutions/${escapeHtml(n.productId)}.html`;
+    return `<a href="${href}" class="sol-mini-node${stateCls}"${isCurrent ? ' aria-current="page"' : ''}>
+                                <span class="sol-mini-name">${escapeHtml(n.label)}</span>
+                                <span class="sol-mini-role">${escapeHtml(n.shortTag || n.roleSummary)}</span>
+                            </a>`;
+  };
+
+  return `
+                <div class="sol-context-strip">
+                    <div class="sol-context-row">
+                        <div class="sol-context-current">
+                            <span class="sol-context-kicker">${escapeHtml(ui.ctxMapLabel)}</span>
+                            <strong class="sol-context-name">${escapeHtml(current.label)}</strong>
+                            <span class="sol-context-role">${escapeHtml(current.roleSummary)}</span>
+                        </div>
+                        <div class="sol-context-links">
+                            <span class="sol-context-rel-label">${escapeHtml(ui.ctxConnectedLabel)}</span>
+                            <div class="sol-context-chips">${chipsHtml}${moreHtml}</div>
+                        </div>
+                        <button type="button" class="btn btn-outline btn-sm sol-context-toggle"
+                            data-sol-ctx-toggle
+                            data-label-expand="${escapeHtml(ui.ctxMapExpand)}"
+                            data-label-collapse="${escapeHtml(ui.ctxMapCollapse)}"
+                            aria-expanded="false">
+                            ${escapeHtml(ui.ctxMapExpand)}
+                        </button>
+                    </div>
+                    <div class="sol-context-drawer" data-sol-ctx-drawer hidden>
+                        <div class="sol-mini-group-label">${escapeHtml(ui.ctxFlagshipHeading)}</div>
+                        <div class="sol-mini-grid cols-4">
+                            ${flagshipNodes.map(renderMiniNode).join('\n                            ')}
+                        </div>
+                        <div class="sol-mini-bus">${escapeHtml(ui.ctxBusLabel)}</div>
+                        <div class="sol-mini-group-label">${escapeHtml(ui.ctxExtHeading)}</div>
+                        <div class="sol-mini-grid cols-7">
+                            ${extNodes.map(renderMiniNode).join('\n                            ')}
+                        </div>
+                        <div class="sol-mini-foundation">${escapeHtml(ui.ctxFoundationLabel)}</div>
+                    </div>
+                </div>`;
 }
 
 function loadHomepageProductData(productId, lang) {
@@ -198,7 +272,7 @@ function renderAccountBox(acc, ui, isPrimary) {
                         </div>`;
 }
 
-function buildPageHtml(productMeta, product, catalogProduct, lang) {
+function buildPageHtml(productMeta, product, catalogProduct, topologyNodes, lang) {
   const ui = uiLabels[lang];
   const canonicalUrl = `https://empasy.io/${lang}/solutions/${product.id}.html`;
   const koUrl = `https://empasy.io/ko/solutions/${product.id}.html`;
@@ -430,6 +504,7 @@ function buildPageHtml(productMeta, product, catalogProduct, lang) {
   const firstDemoAttrs = firstSlide.demoExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
   const firstDemoArrow = firstSlide.demoExternal ? '<span aria-hidden="true">&#8599;</span>' : '<span aria-hidden="true">&#8594;</span>';
   const primaryCtaTarget = primaryCtaIsExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
+  const contextStripHtml = renderContextStripHtml(product, topologyNodes, lang, ui);
 
   return `<!DOCTYPE html>
 <html lang="${ui.htmlLang}">
@@ -500,7 +575,7 @@ ${escapeJsonLd(faqJsonLd)}
                     <a href="#features">${escapeHtml(ui.navFeatures)}</a>
                     <a href="#demo">${escapeHtml(ui.navDemo)}</a>
                     <a href="#faq">${escapeHtml(ui.navFaq)}</a>
-                </nav>
+                </nav>${contextStripHtml}
 
                 <div id="screens" class="sol-showcase-wrap" data-sol-showcase data-sol-product="${escapeHtml(product.name)}">
                     <div class="sol-showcase-tabs" role="tablist" aria-label="${escapeHtml(ui.tabsAria)}">${tabsHtml}
@@ -662,14 +737,14 @@ ${escapeJsonLd(faqJsonLd)}
 let generatedCount = 0;
 
 for (const lang of LOCALES) {
-  const catalogMap = loadCatalogByLocale(lang);
+  const { productMap, topologyNodes } = loadCatalogByLocale(lang);
   const outDir = resolve(empasyRoot, lang, 'solutions');
   mkdirSync(outDir, { recursive: true });
 
   for (const productMeta of PRODUCTS) {
     const productData = loadHomepageProductData(productMeta.id, lang);
-    const catalogProduct = catalogMap.get(productMeta.id);
-    const html = buildPageHtml(productMeta, productData, catalogProduct, lang);
+    const catalogProduct = productMap.get(productMeta.id);
+    const html = buildPageHtml(productMeta, productData, catalogProduct, topologyNodes, lang);
     const outPath = resolve(outDir, `${productMeta.id}.html`);
     writeFileSync(outPath, html, 'utf-8');
     generatedCount += 1;

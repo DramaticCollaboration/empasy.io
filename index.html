@@ -87,57 +87,31 @@
     {{> header_ko }}
 
     <main>
-        <!-- 1. Executive Editorial Hero + 업무 장면 미리보기 -->
-        <section class="ed-hero">
+        <!-- 1. 컴팩트 Hero + 전체 제품 구성도 (첫 화면 즉시 노출) -->
+        <section class="ed-hero ed-hero-arch-first">
             <div class="container">
-                <div class="ed-hero-copy">
-                    <p class="ed-eyebrow">주식회사 엠파시 · 실무형 기업 업무 소프트웨어</p>
-                    <h1 class="ed-hero-title">반복되는 기업 업무는 자동화하고, <br>중요한 결정은 사람이 승인합니다</h1>
-                    <p class="ed-hero-desc">
-                        웹사이트, 사내 관리 시스템, 경영 데이터 조회, 품질 점검까지 <br>
-                        지금 가장 급한 업무 하나만 골라 2주 안에 먼저 검증해 보세요.
-                    </p>
-                    <div class="ed-hero-actions">
-                        <a href="#finder" class="btn btn-primary btn-lg">
-                            30초 맞춤 솔루션 찾기
-                        </a>
-                        <a href="/ko/pages/contact.html" class="btn btn-outline btn-lg">
-                            도입 상담 문의
-                        </a>
+                <div class="ed-hero-compact-row">
+                    <div class="ed-hero-compact-copy">
+                        <p class="ed-eyebrow">주식회사 엠파시 · 실무형 기업 업무 소프트웨어</p>
+                        <h1 class="ed-hero-title">반복되는 기업 업무는 자동화하고, 중요한 결정은 사람이 승인합니다</h1>
+                        <p class="ed-hero-desc">
+                            지금 가장 급한 업무 하나만 골라 2주 안에 먼저 검증하고, 운영하면서 같은 기반 위에서 이어 붙일 수 있습니다.
+                        </p>
                     </div>
-                    <div class="ed-hero-sublinks">
-                        <a href="https://demo.empasy.io/" target="_blank" rel="noopener noreferrer">실제 화면 체험 (demo.empasy.io) &#8599;</a>
-                        <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" download>경영진 요약 브로셔 PDF</a>
-                        <a href="#it-resources">IT·개발 담당자 자료 보기 &#8595;</a>
+                    <div class="ed-hero-compact-actions">
+                        <div class="ed-hero-actions">
+                            <a href="#finder" class="btn btn-primary btn-sm">30초 맞춤 찾기</a>
+                            <a href="/ko/pages/contact.html" class="btn btn-outline btn-sm">도입 상담 문의</a>
+                        </div>
+                        <div class="ed-hero-sublinks">
+                            <a href="https://demo.empasy.io/" target="_blank" rel="noopener noreferrer">실제 화면 체험 &#8599;</a>
+                            <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" download>요약 브로셔 PDF</a>
+                            <a href="#it-resources">개발자 자료 &#8595;</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- 핵심 업무 장면 미리보기 -->
-                <div class="ed-preview-wrap">
-                    <div class="ed-tabs" role="tablist" aria-label="핵심 업무 화면 미리보기">
-                        <button type="button" class="ed-tab active" role="tab" aria-selected="true" data-preview="verse">결재·승인 관리</button>
-                        <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="eta">클릭 자동 점검</button>
-                        <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="boot">사내 경영 리포트</button>
-                        <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="cms">다국어 사이트 편집</button>
-                    </div>
-                    <div class="ed-frame">
-                        <div class="ed-frame-bar">
-                            <strong id="preview-title">협업 및 단계별 승인 대시보드 (SyncVerse)</strong>
-                            <div class="ed-frame-actions">
-                                <button type="button" id="preview-zoom-btn" class="ed-zoom-btn">확대 보기</button>
-                                <a id="preview-link" href="/ko/solutions/sync-verse.html">자세히 &#8594;</a>
-                            </div>
-                        </div>
-                        <div id="preview-callout" class="ed-frame-callout" aria-label="화면 핵심 포인트">
-                            <span class="ed-callout-pill"><span class="ed-callout-dot" aria-hidden="true"></span><span>담당자 최종 승인 후 실제 반영</span></span>
-                            <span class="ed-callout-pill"><span class="ed-callout-dot" aria-hidden="true"></span><span>변경 전후 내역 한눈에 비교</span></span>
-                        </div>
-                        <img id="preview-img" src="/images/screenshots/sync-verse/screen_01.png" alt="협업 및 단계별 승인 대시보드 실제 화면" style="width: 100%; height: auto;">
-                    </div>
-                    <p id="preview-caption" class="ed-frame-caption">
-                        요구사항 정리부터 작업 검토, 품질 점검 결과, 담당자 승인 이력까지 한 화면에서 투명하게 확인합니다.
-                    </p>
-                </div>
+                {{> arch_map_ko }}
             </div>
         </section>
 
@@ -485,11 +459,8 @@
             </div>
         </section>
 
-        <!-- 6-2. 전체 제품 구성도 -->
-        {{> arch_map_ko }}
-
         <!-- 7. 핵심 업무 영역 4종 (역할 제목 우선, 제품명 보조 배지) -->
-        <section id="solutions" class="ed-section ed-section-tinted">
+        <section id="solutions" class="ed-section">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">핵심 업무 영역 4종</p>
@@ -576,7 +547,7 @@
         </section>
 
         <!-- 8. 목적별 확장 영역 7종 (전체 기본 노출 + 분야 필터) -->
-        <section id="modules" class="ed-section">
+        <section id="modules" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">목적별 확장 영역</p>
@@ -676,7 +647,7 @@
         </section>
 
         <!-- 9. 작게 시작하는 3단계 도입 모델 + 경영진 CTA + IT/개발자 자료 분리 -->
-        <section id="adoption" class="ed-section ed-section-tinted">
+        <section id="adoption" class="ed-section">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">도입 절차</p>

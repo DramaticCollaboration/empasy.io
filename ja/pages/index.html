@@ -88,57 +88,31 @@
     {{> header_ja }}
 
     <main>
-        <!-- 1. Executive Hero + 業務シーン別プレビュー -->
-        <section class="ed-hero">
+        <!-- 1. コンパクト Hero + 全11製品構成図（ファーストビュー即表示） -->
+        <section class="ed-hero ed-hero-arch-first">
             <div class="container">
-                <div class="ed-hero-copy">
-                    <p class="ed-eyebrow">株式会社エムパシー · 実務向け企業業務ソフトウェア</p>
-                    <h1 class="ed-hero-title">繰り返される企業業務は自動化し、<br>重要な判断は人が承認します</h1>
-                    <p class="ed-hero-desc">
-                        Webサイト、社内管理システム、経営データ照会、品質点検まで。<br>
-                        今もっとも負担の大きい1業務だけを選び、2週間で効果を検証できます。
-                    </p>
-                    <div class="ed-hero-actions">
-                        <a href="#finder" class="btn btn-primary btn-lg">
-                            30秒で最適構成を診断
-                        </a>
-                        <a href="/ja/pages/contact.html" class="btn btn-outline btn-lg">
-                            導入のご相談
-                        </a>
+                <div class="ed-hero-compact-row">
+                    <div class="ed-hero-compact-copy">
+                        <p class="ed-eyebrow">株式会社エムパシー · 実務向け企業業務ソフトウェア</p>
+                        <h1 class="ed-hero-title">繰り返される企業業務は自動化し、重要な判断は人が承認します</h1>
+                        <p class="ed-hero-desc">
+                            今もっとも負担の大きい1業務だけを選び2週間で検証し、運用に合わせて同じ基盤上で拡張できます。
+                        </p>
                     </div>
-                    <div class="ed-hero-sublinks">
-                        <a href="https://demo.empasy.io/ja/" target="_blank" rel="noopener noreferrer">実画面を体験 (demo.empasy.io) &#8599;</a>
-                        <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" download>概要パンフレット PDF</a>
-                        <a href="#it-resources">IT・開発担当者向け資料 &#8595;</a>
+                    <div class="ed-hero-compact-actions">
+                        <div class="ed-hero-actions">
+                            <a href="#finder" class="btn btn-primary btn-sm">30秒で最適診断</a>
+                            <a href="/ja/pages/contact.html" class="btn btn-outline btn-sm">導入のご相談</a>
+                        </div>
+                        <div class="ed-hero-sublinks">
+                            <a href="https://demo.empasy.io/ja/" target="_blank" rel="noopener noreferrer">実画面を体験 &#8599;</a>
+                            <a href="/downloads/proposals/SyncSeries_Brochure_v1.0.pdf" download>概要 PDF</a>
+                            <a href="#it-resources">開発者資料 &#8595;</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- 業務シーン別プレビュー -->
-                <div class="ed-preview-wrap">
-                    <div class="ed-tabs" role="tablist" aria-label="主要業務画面プレビュー">
-                        <button type="button" class="ed-tab active" role="tab" aria-selected="true" data-preview="verse">決裁・承認管理</button>
-                        <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="eta">クリック自動点検</button>
-                        <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="boot">社内経営レポート</button>
-                        <button type="button" class="ed-tab" role="tab" aria-selected="false" data-preview="cms">多言語サイト編集</button>
-                    </div>
-                    <div class="ed-frame">
-                        <div class="ed-frame-bar">
-                            <strong id="preview-title">協業・段階別承認ダッシュボード (SyncVerse)</strong>
-                            <div class="ed-frame-actions">
-                                <button type="button" id="preview-zoom-btn" class="ed-zoom-btn">拡大表示</button>
-                                <a id="preview-link" href="/ja/solutions/sync-verse.html">詳しく &#8594;</a>
-                            </div>
-                        </div>
-                        <div id="preview-callout" class="ed-frame-callout" aria-label="画面の注目ポイント">
-                            <span class="ed-callout-pill"><span class="ed-callout-dot" aria-hidden="true"></span><span>担当者の最終承認後に本番反映</span></span>
-                            <span class="ed-callout-pill"><span class="ed-callout-dot" aria-hidden="true"></span><span>変更前後の差分を一目で確認</span></span>
-                        </div>
-                        <img id="preview-img" src="/images/screenshots/sync-verse/screen_01.png" alt="協業・段階別承認ダッシュボード 実画面" style="width: 100%; height: auto;">
-                    </div>
-                    <p id="preview-caption" class="ed-frame-caption">
-                        要件整理から作業レビュー、品質点検、担当者の段階別承認履歴までをひとつの画面で透明に確認できます。
-                    </p>
-                </div>
+                {{> arch_map_ja }}
             </div>
         </section>
 
@@ -486,11 +460,8 @@
             </div>
         </section>
 
-        <!-- 6-2. 全11製品構成図 -->
-        {{> arch_map_ja }}
-
         <!-- 7. 中核業務領域 4種 -->
-        <section id="solutions" class="ed-section ed-section-tinted">
+        <section id="solutions" class="ed-section">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">中核業務領域 4種</p>
@@ -577,7 +548,7 @@
         </section>
 
         <!-- 8. 目的別拡張モジュール 7種 -->
-        <section id="modules" class="ed-section">
+        <section id="modules" class="ed-section ed-section-tinted">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">目的別拡張領域</p>
@@ -677,7 +648,7 @@
         </section>
 
         <!-- 9. 3段階導入ステップ + 経営層CTA + IT資料分離バー -->
-        <section id="adoption" class="ed-section ed-section-tinted">
+        <section id="adoption" class="ed-section">
             <div class="container">
                 <div class="ed-head">
                     <p class="ed-kicker">導入ステップ</p>

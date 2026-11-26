@@ -1,18 +1,6 @@
-        <!-- 全体構成図（全11製品マップ） -->
-        <section id="architecture" class="ed-section">
-            <div class="container">
-                <div class="emp-arch-head">
-                    <div class="ed-head" style="margin-bottom: 0;">
-                        <p class="ed-kicker">全11製品の全体構成</p>
-                        <h2 class="ed-title">必要な業務から始めて、運用に合わせて広げていけます</h2>
-                        <p class="ed-desc">
-                            よく使われる中核4製品と用途別の7製品（SyncAPIM・SyncShop含む）を1つの構成図にまとめました。気になる項目を選ぶと、下で概要と紹介ページ・体験リンクを確認できます。
-                        </p>
-                    </div>
-                    <span class="emp-arch-standalone">1つから導入 · 必要な時に連携</span>
-                </div>
-
-                <div class="emp-arch-board" data-emp-arch>
+        <!-- 全体構成図（全11製品マップ・Hero統合） -->
+        <div id="architecture" class="emp-arch-hero-wrap">
+                <div class="emp-arch-board is-hero-board" data-emp-arch>
                     <div class="emp-arch-board-head">
                         <div class="emp-arch-brand">
                             <span class="emp-arch-dot" aria-hidden="true"></span>
@@ -119,7 +107,11 @@
                             <span>共通ログイン · 部署別権限 · 承認履歴 · 業務データ連携</span>
                         </div>
 
-                        <div class="emp-arch-layer-label" style="margin-top: 14px;">用途別の拡張モジュール（7種）</div>
+                        <div class="emp-arch-ext-wrap" data-arch-ext-wrap>
+                        <div class="emp-arch-layer-ext-head">
+                            <div class="emp-arch-layer-label">用途別の拡張モジュール（7種）</div>
+                            <button type="button" class="emp-arch-mobile-toggle" data-arch-ext-toggle data-label-expand="拡張7種を表示" data-label-collapse="拡張を閉じる" aria-expanded="false">拡張7種を表示</button>
+                        </div>
                         <div class="emp-arch-ext-groups">
                             <div class="emp-arch-ext-group-wrap">
                                 <div class="emp-arch-ext-group has-active" data-arch-group="data-ai">
@@ -265,6 +257,7 @@
                                 <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-group-stem="operations" aria-hidden="true"></span>
                             </div>
                         </div>
+                        </div>
 
                         <button type="button" class="emp-arch-foundation" data-arch-foundation-trigger>
                             <div class="emp-arch-foundation-accent" aria-hidden="true"></div>
@@ -301,5 +294,4 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+        </div>

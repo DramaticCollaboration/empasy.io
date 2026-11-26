@@ -77,6 +77,25 @@
       });
     }
 
+    // 1-2. Ecosystem Context Map Drawer Toggle
+    var ctxToggle = document.querySelector('[data-sol-ctx-toggle]');
+    var ctxDrawer = document.querySelector('[data-sol-ctx-drawer]');
+    if (ctxToggle && ctxDrawer) {
+      ctxToggle.addEventListener('click', function () {
+        var nextOpen = ctxDrawer.hasAttribute('hidden');
+        if (nextOpen) {
+          ctxDrawer.removeAttribute('hidden');
+        } else {
+          ctxDrawer.setAttribute('hidden', '');
+        }
+        ctxToggle.setAttribute('aria-expanded', nextOpen ? 'true' : 'false');
+        var nextText = nextOpen
+          ? ctxToggle.getAttribute('data-label-collapse')
+          : ctxToggle.getAttribute('data-label-expand');
+        if (nextText) ctxToggle.textContent = nextText;
+      });
+    }
+
     // 2. Lightbox Zoom
     function openLightbox() {
       if (!lightbox || !lbImg || !imgEl) return;

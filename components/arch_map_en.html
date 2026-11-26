@@ -1,18 +1,6 @@
-        <!-- Interactive Product Map (All 11 Products) -->
-        <section id="architecture" class="ed-section">
-            <div class="container">
-                <div class="emp-arch-head">
-                    <div class="ed-head" style="margin-bottom: 0;">
-                        <p class="ed-kicker">All 11 Products at a Glance</p>
-                        <h2 class="ed-title">Start with one workflow and connect more when needed</h2>
-                        <p class="ed-desc">
-                            Four core products and seven optional modules (including SyncAPIM and SyncShop) are arranged in one view. Select any box to see a short summary, product page, and live demo link below.
-                        </p>
-                    </div>
-                    <span class="emp-arch-standalone">Start with one · Connect later</span>
-                </div>
-
-                <div class="emp-arch-board" data-emp-arch>
+        <!-- Interactive Product Map (All 11 Products · Integrated in Hero) -->
+        <div id="architecture" class="emp-arch-hero-wrap">
+                <div class="emp-arch-board is-hero-board" data-emp-arch>
                     <div class="emp-arch-board-head">
                         <div class="emp-arch-brand">
                             <span class="emp-arch-dot" aria-hidden="true"></span>
@@ -119,7 +107,11 @@
                             <span>Shared Sign-In · Role Permissions · Approval History · Connected Data</span>
                         </div>
 
-                        <div class="emp-arch-layer-label" style="margin-top: 14px;">Domain Modules (7)</div>
+                        <div class="emp-arch-ext-wrap" data-arch-ext-wrap>
+                        <div class="emp-arch-layer-ext-head">
+                            <div class="emp-arch-layer-label">Domain Modules (7)</div>
+                            <button type="button" class="emp-arch-mobile-toggle" data-arch-ext-toggle data-label-expand="Show 7 modules" data-label-collapse="Hide modules" aria-expanded="false">Show 7 modules</button>
+                        </div>
                         <div class="emp-arch-ext-groups">
                             <div class="emp-arch-ext-group-wrap">
                                 <div class="emp-arch-ext-group has-active" data-arch-group="data-ai">
@@ -265,6 +257,7 @@
                                 <span class="emp-arch-stem emp-arch-stem-down is-lit" data-arch-group-stem="operations" aria-hidden="true"></span>
                             </div>
                         </div>
+                        </div>
 
                         <button type="button" class="emp-arch-foundation" data-arch-foundation-trigger>
                             <div class="emp-arch-foundation-accent" aria-hidden="true"></div>
@@ -301,5 +294,4 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+        </div>

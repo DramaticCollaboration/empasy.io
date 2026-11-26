@@ -120,10 +120,32 @@
       var foundationNode = archNodes.find(function (el) {
         return el.getAttribute('data-arch-foundation') === 'true';
       });
+      var extWrap = archBoard.querySelector('[data-arch-ext-wrap]');
+      var extToggle = archBoard.querySelector('[data-arch-ext-toggle]');
+
+      function setMobileExtOpen(open) {
+        if (!extWrap || !extToggle) return;
+        extWrap.classList.toggle('is-mobile-expanded', open);
+        extToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        var nextLabel = open
+          ? extToggle.getAttribute('data-label-collapse')
+          : extToggle.getAttribute('data-label-expand');
+        if (nextLabel) extToggle.textContent = nextLabel;
+      }
+
+      if (extToggle) {
+        extToggle.addEventListener('click', function () {
+          var isOpen = extWrap && extWrap.classList.contains('is-mobile-expanded');
+          setMobileExtOpen(!isOpen);
+        });
+      }
 
       function selectArchNode(productId) {
         var target = nodeMap[productId];
         if (!target) return;
+        if (target.classList.contains('emp-arch-node-ext')) {
+          setMobileExtOpen(true);
+        }
         var isHub = target.getAttribute('data-arch-hub') === 'true';
         var connectedIds = (target.getAttribute('data-arch-connected') || '')
           .split(',')
