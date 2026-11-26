@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
+        gtag('js', new Date());
+        gtag('config', 'G-6BNPM5TX7C');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excelテスト仕様書をノーコードAIテスト自動化へ移行する実務ガイド：標本URLからバグカンバン再検証まで | Empasy</title>
+    <meta name="description" content="QAチームが蓄積してきたExcel・CSV試験表をそのまま活かし、行別データセット連携、代表・標本URLによる多ページ適用、マルチアカウント検証、バグカンバン[今すぐ確認]再検証へ移行する手順を解説します。">
+    <meta name="keywords" content="Excelテスト自動化, AIテスト自動化, ノーコードE2Eテスト, QA自動化移行, 標本URLテスト, バグカンバン, SyncETA, Empasy">
+    <meta name="author" content="株式会社Empasy (Empasy Inc.)">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="Excelテスト仕様書をノーコードAIテスト自動化へ移行する実務ガイド：標本URLからバグカンバン再検証まで | Empasy">
+    <meta property="og:description" content="既存のExcelテスト仕様書をノーコードAIテスト自動化とバグカンバン運用へ接続する4ステップ実践ガイド。">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:url" content="https://empasy.io/ja/blog/excel-testcase-to-nocode-e2e-test-automation.html">
+    <meta property="og:image" content="https://empasy.io/images/screenshots/sync-eta/screen_03.png">
+    <meta property="article:published_time" content="2026-11-27">
+    <meta property="article:modified_time" content="2026-11-27">
+    <link rel="canonical" href="https://empasy.io/ja/blog/excel-testcase-to-nocode-e2e-test-automation.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Excelテスト仕様書をノーコードAIテスト自動化へ移行する実務ガイド：標本URLからバグカンバン再検証まで",
+      "description": "既存Excel試験表をSyncETAの行別シナリオ変換、データセット変数検証、標本URL適用、バグカンバン再検証へ移行する実務手順。",
+      "datePublished": "2026-11-27",
+      "dateModified": "2026-11-27",
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Organization",
+        "name": "Empasy Engineering Team",
+        "url": "https://empasy.io"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "株式会社Empasy (Empasy Inc.)",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/empasy-logo.png"
+        }
+      },
+      "image": "https://empasy.io/images/screenshots/sync-eta/screen_03.png",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://empasy.io/ja/blog/excel-testcase-to-nocode-e2e-test-automation.html"
+      },
+      "url": "https://empasy.io/ja/blog/excel-testcase-to-nocode-e2e-test-automation.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://empasy.io/ja/pages/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Empasy インサイト", "item": "https://empasy.io/ja/blog/blog.html" },
+        { "@type": "ListItem", "position": 3, "name": "Excelテスト仕様書のAIテスト自動化移行ガイド", "item": "https://empasy.io/ja/blog/excel-testcase-to-nocode-e2e-test-automation.html" }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    {{> header_ja }}
+
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/ja/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Empasy インサイト一覧へ</span>
+            </a>
+            <span class="badge" style="margin-bottom: 0;">AIテスト自動化・QA移行</span>
+        </div>
+
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-11-27</span>
+                <span>&bull;</span>
+                <span>読了目安 約7分</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">Excelテスト仕様書・ノーコードE2E</span>
+            </div>
+
+            <h1 class="ed-blog-title">Excelテスト仕様書をノーコードAIテスト自動化へ移行する実務ガイド：標本URLからバグカンバン再検証まで</h1>
+
+            <div class="ed-exec-summary" aria-label="経営層・現場担当者のための3行要約">
+                <div class="ed-exec-summary-kicker">経営層・現場担当者のための3行要約</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">資産活用</span><span>現場に蓄積されたExcel試験表を捨てずに、対象行を選んで1行=1シナリオとしてAIテスト自動化へ移行できます。</span></li>
+                    <li><span class="ed-exec-summary-tag">多ページ拡張</span><span>代表URLと標本URLの組み合わせにより、数百ページの国別・商品サイトへ共通シナリオを横展開できます。</span></li>
+                    <li><span class="ed-exec-summary-tag">即時再検証</span><span>曖昧な画面は[確認必要]に誠実に分離し、写真付きバグカンバンから[今すぐ確認]ボタン一つで修正を再検証します。</span></li>
+                </ul>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>4ステップ移行手順とパイロット計測指標を読む</summary>
+                <div class="ed-tech-details-body">
+<h2 id="sec-1">1. 行別シナリオ変換とマスキング済みデータセット連携</h2>
+<p><a href="/ja/solutions/sync-eta.html">SyncETA</a>はExcel・CSV試験表をアップロードして対象行だけを選択変換します。各行にデータセットを紐付け、生成前に<code>${変数}</code>の欠落を自動検証します。プロンプトには変数名のみを渡し、実データ値はローカル実行時のみ注入することで機密流出を防ぎます。</p>
+
+<h2 id="sec-2">2. 代表・標本URLによる多ページ共通検証</h2>
+<p>国別・商品別の共通テンプレートを持つ大規模サイトでは、代表URLで検証済みシナリオを作成し、複数の標本URLを追加再生先に指定するだけで幅広いページを効率よくカバーできます。</p>
+
+<h2 id="sec-3">3. マルチアカウント同時実行と誠実な<code>[確認必要]</code>分類</h2>
+<p>顧客画面と管理者画面を独立セッションで同時実行して録画比較でき、確実に検証できた項目のみを正常集計します。判断が曖昧な画面は写真付きで<code>[確認必要]</code>に分離します。</p>
+
+<h2 id="sec-4">4. バグカンバンと<code>[今すぐ確認]</code>ワンクリック再検証</h2>
+<p>重複チケット抑止、<code>[バグではありません]</code>の永続記憶、そして修正後に該当不具合だけを再確認する<code>[今すぐ確認]</code>により、QAと開発の往復工数を最小化します。導入時は運用サイト1件で2〜4週間試行し、削減時間と事前検出件数を実測することを推奨します。</p>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>手元のExcel試験表からノーコードAIテスト自動化を始めましょう</strong>
+                <span>Windows・macOS用SyncETAデスクトップ版を無料ダウンロードしてすぐにお試しいただけます。</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="/ja/solutions/sync-eta.html" class="btn btn-primary btn-sm">SyncETA 公式サイト &#8594;</a>
+                <a href="/ja/download_eta.html" class="btn btn-outline btn-sm">無料ダウンロード</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="あわせて読みたいAIテスト自動化インサイト">
+        <h2 class="ed-related-heading">あわせて読みたいAIテスト自動化インサイト</h2>
+        <div class="ed-related-grid">
+        <a href="/ja/blog/ai-test-automation-tools-comparison-2026.html" class="ed-related-card">
+            <span class="ed-related-cat">AIテスト自動化・ツール比較</span>
+            <span class="ed-related-title">AIテスト自動化ツール比較ガイド（2026）：Selenium・Playwright vs AIコーディング支援 vs ノーコードE2E</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        <a href="/ja/blog/playwright-selector-self-healing-vision-llm-guide.html" class="ed-related-card">
+            <span class="ed-related-cat">AIテスト自動化・自己修復</span>
+            <span class="ed-related-title">UI改修のたびに壊れるPlaywright・Seleniumテスト対策：Vision-LLMとDOM文脈による自己修復設計</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        <a href="/ja/blog/web-test-automation-keypad-cookie-visual-audit.html" class="ed-related-card">
+            <span class="ed-related-cat">AIテスト自動化・実運用解決</span>
+            <span class="ed-related-title">仮想セキュリティキーパッド・Cookieバナー・画面崩れ：Webテスト自動化を止める4大障壁の解決法</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        <a href="/ja/blog/synceta-intelligent-regression-testing-pipeline.html" class="ed-related-card">
+            <span class="ed-related-cat">AIテスト自動化・アーキテクチャ</span>
+            <span class="ed-related-title">AIテスト自動化導入ガイド：クリック録画から自己修復E2E回帰テストまで</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        </div>
+    </section>
+    </main>
+
+    {{> footer_ja }}
+
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

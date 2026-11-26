@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
+        gtag('js', new Date());
+        gtag('config', 'G-6BNPM5TX7C');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI改修のたびに壊れるPlaywright・Seleniumテスト対策：Vision-LLMとDOM文脈による自己修復（Self-Healing）設計 | Empasy</title>
+    <meta name="description" content="React・Vueのハッシュクラス変更やDOM構造変更で壊れるPlaywright・Seleniumテストを、Vision-LLMバウンディングボックス推論・CDP逆追跡・4段階セレクター順位付け・Human-in-the-Loop承認で解決するSyncETA設計解説。">
+    <meta name="keywords" content="AIテスト自動化, セレクター自己修復, Self-Healing QA, Playwright, Selenium保守, Vision-LLMテスト, CDP DOM.getNodeForLocation, SyncETA, Empasy">
+    <meta name="author" content="株式会社Empasy (Empasy Inc.)">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="UI改修のたびに壊れるPlaywright・Seleniumテスト対策：Vision-LLMとDOM文脈による自己修復（Self-Healing）設計 | Empasy">
+    <meta property="og:description" content="Vision-LLM座標推論、CDPノード逆追跡、4段階セレクター安定順位、Human-in-the-Loop承認キューによる自己修復アーキテクチャを解説します。">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:url" content="https://empasy.io/ja/blog/playwright-selector-self-healing-vision-llm-guide.html">
+    <meta property="og:image" content="https://empasy.io/images/screenshots/sync-eta/screen_02.png">
+    <meta property="article:published_time" content="2026-11-27">
+    <meta property="article:modified_time" content="2026-11-27">
+    <link rel="canonical" href="https://empasy.io/ja/blog/playwright-selector-self-healing-vision-llm-guide.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "UI改修のたびに壊れるPlaywright・Seleniumテスト対策：Vision-LLMとDOM文脈による自己修復（Self-Healing）設計",
+      "description": "Vision-LLMバウンディングボックス推論、CDP DOM.getNodeForLocation逆追跡、4段階セレクター順位付け、Human-in-the-Loop承認によるSyncETA自己修復アーキテクチャ解説。",
+      "datePublished": "2026-11-27",
+      "dateModified": "2026-11-27",
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Organization",
+        "name": "Empasy Engineering Team",
+        "url": "https://empasy.io"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "株式会社Empasy (Empasy Inc.)",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/empasy-logo.png"
+        }
+      },
+      "image": "https://empasy.io/images/screenshots/sync-eta/screen_02.png",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://empasy.io/ja/blog/playwright-selector-self-healing-vision-llm-guide.html"
+      },
+      "url": "https://empasy.io/ja/blog/playwright-selector-self-healing-vision-llm-guide.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://empasy.io/ja/pages/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Empasy インサイト", "item": "https://empasy.io/ja/blog/blog.html" },
+        { "@type": "ListItem", "position": 3, "name": "Playwright・Seleniumセレクター自己修復設計", "item": "https://empasy.io/ja/blog/playwright-selector-self-healing-vision-llm-guide.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "自己修復（Self-Healing）が本当の不具合（ボタン消失など）を正常と誤判定しませんか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncETAはテスト資産を無断で上書きしません。高リスク変更や信頼度不足の候補は[確認必要]およびHuman-in-the-Loop承認キューへ分離し、担当者がBefore/After画面を見比べて承認した場合のみ永続更新します。"
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    {{> header_ja }}
+
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/ja/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Empasy インサイト一覧へ</span>
+            </a>
+            <span class="badge" style="margin-bottom: 0;">AIテスト自動化・自己修復</span>
+        </div>
+
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-11-27</span>
+                <span>&bull;</span>
+                <span>読了目安 約7分</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">Self-Healing QA・Playwright設計</span>
+            </div>
+
+            <h1 class="ed-blog-title">UI改修のたびに壊れるPlaywright・Seleniumテスト対策：Vision-LLMとDOM文脈による自己修復（Self-Healing）設計</h1>
+
+            <div class="ed-exec-summary" aria-label="経営層・現場担当者のための3行要約">
+                <div class="ed-exec-summary-kicker">経営層・現場担当者のための3行要約</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">現場の課題</span><span>ビルドごとのハッシュクラス変更やレイアウト微調整だけで従来のE2Eテストが失敗し、保守工数が膨らみます。</span></li>
+                    <li><span class="ed-exec-summary-tag">解決設計</span><span>通常時はPlaywrightで高速再生し、要素探索失敗時のみVision-LLM座標推論とCDP DOM逆追跡で代替セレクターを自動修復します。</span></li>
+                    <li><span class="ed-exec-summary-tag">誤検知防止</span><span>4段階の安定性順位付けとBefore/AfterスクリーンショットによるHuman-in-the-Loop承認で、不具合の見逃しを防ぎます。</span></li>
+                </ul>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>技術アーキテクチャと検証結果の詳細を読む</summary>
+                <div class="ed-tech-details-body">
+<h2 id="sec-1">1. モダンフロントエンドで静的セレクターが壊れる理由</h2>
+<p>React・Vue 3・Tailwind CSS環境では、ビルドごとのハッシュクラス名変化やラッパー<code>div</code>の追加により、絶対XPathやクラス依存セレクターが頻繁に破損します。</p>
+
+<h2 id="sec-2">2. 失敗時トリガーによる4段階自己修復パイプライン</h2>
+<ol>
+  <li><strong>失敗スナップショット収集：</strong>Playwrightの<code>TimeoutError</code>発生時、現在のPNGスクリーンショット、Accessibility Tree要約、元の操作意図を収集します。</li>
+  <li><strong>Vision-LLMバウンディングボックス推論：</strong>画面文脈から対象要素の正規化座標（0〜1000）を算出します。</li>
+  <li><strong>CDPによるDOMノード逆追跡：</strong>中心座標をCSSピクセルへ変換し、<code>DOM.getNodeForLocation</code>で実DOMの<code>backendNodeId</code>を取得します。</li>
+  <li><strong>代替セレクター生成と再開：</strong>一意性と操作可能性を確認した代替セレクターを生成し、テストを再開します。</li>
+</ol>
+
+<h2 id="sec-3">3. 壊れにくい代替セレクターの4段階優先順位</h2>
+<table>
+  <thead>
+    <tr>
+      <th>優先順位</th>
+      <th>セレクター種別</th>
+      <th>生成例</th>
+      <th>採用理由</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>第1順位</strong></td>
+      <td>テスト専用属性</td>
+      <td><code>[data-testid="submit-order"]</code></td>
+      <td>開発者が明示した最も安定した識別子</td>
+    </tr>
+    <tr>
+      <td><strong>第2順位</strong></td>
+      <td>セマンティックRole・ラベル</td>
+      <td><code>role=button[name="決済する"]</code></td>
+      <td>デザイン変更後も業務上の意味が維持される</td>
+    </tr>
+    <tr>
+      <td><strong>第3順位</strong></td>
+      <td>近接テキストアンカー</td>
+      <td><code>div:has-text("合計金額") &gt;&gt; button</code></td>
+      <td>文脈的な相対位置で誤一致を防止</td>
+    </tr>
+    <tr>
+      <td><strong>第4順位</strong></td>
+      <td>フォーム・構造フォールバック</td>
+      <td><code>form.order-form button[type="submit"]</code></td>
+      <td>ハッシュクラス変更を回避する構造指定</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="sec-4">4. Human-in-the-Loop承認キューと検証結果</h2>
+<p><a href="/ja/solutions/sync-eta.html">SyncETA</a>は高リスク変更を<code>[確認必要]</code>および承認キューに分離し、担当者の承認後のみ永続更新します。10サイト・計1,200回の回帰テスト評価（<a href="https://doc.empasy.com/ja/study/vision-llm-self-healing-algorithm" target="_blank" rel="noopener noreferrer">技術研究アーカイブ</a>）では、セレクター破損342件中318件（93.0%）を平均1.2秒で自動補正し、手動更新工数を78.4%削減しました。</p>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>UI変更に強いAIテスト自動化を直接お試しください</strong>
+                <span>SyncETAデスクトップ版の無料ダウンロードとWeb管理デモをご用意しています。</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="/ja/solutions/sync-eta.html" class="btn btn-primary btn-sm">SyncETA 公式サイト &#8594;</a>
+                <a href="/ja/download_eta.html" class="btn btn-outline btn-sm">無料ダウンロード</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="あわせて読みたいAIテスト自動化インサイト">
+        <h2 class="ed-related-heading">あわせて読みたいAIテスト自動化インサイト</h2>
+        <div class="ed-related-grid">
+        <a href="/ja/blog/ai-test-automation-tools-comparison-2026.html" class="ed-related-card">
+            <span class="ed-related-cat">AIテスト自動化・ツール比較</span>
+            <span class="ed-related-title">AIテスト自動化ツール比較ガイド（2026）：Selenium・Playwright vs AIコーディング支援 vs ノーコードE2E</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        <a href="/ja/blog/excel-testcase-to-nocode-e2e-test-automation.html" class="ed-related-card">
+            <span class="ed-related-cat">AIテスト自動化・QA移行</span>
+            <span class="ed-related-title">Excelテスト仕様書をノーコードAIテスト自動化へ移行する実務ガイド</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        <a href="/ja/blog/web-test-automation-keypad-cookie-visual-audit.html" class="ed-related-card">
+            <span class="ed-related-cat">AIテスト自動化・実運用解決</span>
+            <span class="ed-related-title">仮想セキュリティキーパッド・Cookieバナー・画面崩れ：Webテスト自動化を止める4大障壁の解決法</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        <a href="/ja/blog/synceta-intelligent-regression-testing-pipeline.html" class="ed-related-card">
+            <span class="ed-related-cat">AIテスト自動化・アーキテクチャ</span>
+            <span class="ed-related-title">AIテスト自動化導入ガイド：クリック録画から自己修復E2E回帰テストまで</span>
+            <span class="ed-related-more">詳しく読む &rarr;</span>
+        </a>
+        </div>
+    </section>
+    </main>
+
+    {{> footer_ja }}
+
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

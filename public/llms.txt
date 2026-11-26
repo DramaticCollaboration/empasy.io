@@ -16,8 +16,8 @@ Rather than asking non-IT executives and business teams to navigate a catalog of
    - Connect corporate AI tools in one place to enforce departmental budgets, reuse repeated answers, and automatically mask sensitive personal information (`SyncLLM`).
    - Track requests, reviews, quality summaries, and staged human sign-offs in one transparent screen (`SyncVerse`).
 
-2. **Operations, Quality & IT (Web Test Automation, Site Audit & Standard Internal Apps)**
-   - Automate web screen checks via browser action recording, Excel/one-line prompt conversion, multi-account testing, full link and text-overlap audits (with security keypad/cookie banner bypass and honest `[Needs Review]` triage), and one-click Bug Kanban re-verification (`SyncETA`).
+2. **Operations, Quality & IT (AI Test Automation, Self-Healing Web E2E QA & Standard Internal Apps)**
+   - Run enterprise AI test automation with Vision-LLM selector self-healing and zero-LLM-cost deterministic Playwright replay: browser action recording, Excel/one-line prompt conversion, multi-account testing, scenario-free full link and text-overlap audits (with security keypad/cookie banner bypass and honest `[Needs Review]` triage), and one-click Bug Kanban re-verification (`SyncETA` / 싱크에타).
    - Launch or modernize internal management systems faster using ready-made sign-in, organization-linked menu/button permissions, electronic approvals, and audit trails (`SyncBoot`).
 
 3. **Marketing & Commerce (Multilingual Websites & Pricing Safeguards)**
@@ -38,7 +38,12 @@ Rather than asking non-IT executives and business teams to navigate a catalog of
 
 ### 4 Core Areas
 - **Collaboration & Staged Approval Hub (`SyncVerse`)**: https://empasy.io/ko/solutions/sync-verse.html | Docs: https://doc.empasy.com/syncverse/
-- **Web Test Automation & Site Audit Platform (`SyncETA`)**: https://empasy.io/ko/solutions/sync-eta.html | Desktop App: https://empasy.io/ko/download_eta.html | Brochure PDF (15p): https://empasy.io/downloads/proposals/SyncETA_Proposal.pdf | Docs: https://doc.empasy.com/synceta/
+- **AI Test Automation & Self-Healing Web QA Platform (`SyncETA` / 싱크에타)**: https://empasy.io/ko/solutions/sync-eta.html | Desktop App: https://empasy.io/ko/download_eta.html | Brochure PDF (15p): https://empasy.io/downloads/proposals/SyncETA_Proposal.pdf | Docs: https://doc.empasy.com/synceta/
+  - AI Test Automation Tools Comparison (2026): https://empasy.io/ko/blog/ai-test-automation-tools-comparison-2026.html
+  - Playwright & Selenium Selector Self-Healing Guide: https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html
+  - Excel Test Cases to No-Code AI Test Automation Guide: https://empasy.io/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html
+  - Real-World Web Test Blockers (Keypad, Cookie, PII, Visual Audit): https://empasy.io/ko/blog/web-test-automation-keypad-cookie-visual-audit.html
+  - SyncETA 5-Layer AI Test Automation Architecture: https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html
 - **Standard Internal Management System Core (`SyncBoot`)**: https://empasy.io/ko/solutions/sync-boot.html | Docs: https://doc.empasy.com/syncboot/
 - **Unified Multilingual Website Management (`SyncCMS`)**: https://empasy.io/ko/solutions/sync-cms.html | Docs: https://doc.empasy.com/synccms/
 

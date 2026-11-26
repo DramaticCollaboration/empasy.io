@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
-import { resolve, dirname } from 'path';
+import { resolve, dirname, relative } from 'path';
 import { fileURLToPath } from 'url';
 import { globSync } from 'glob';
 
@@ -55,19 +55,29 @@ export default defineConfig({
                 if (!updated.includes('G-6BNPM5TX7C') || !updated.includes('GTM-KPMTVVXN')) {
                     updated = updated.replace('<head>', `<head>${analyticsHeadSnippet}`);
                 }
-                if (ctx && ctx.filename && !updated.includes('rel="canonical"')) {
-                    const relPath = ctx.filename.replace(/\\/g, '/').split('/empasy.io/')[1] || '';
-                    if (relPath && !relPath.startsWith('naver') && relPath !== '404.html') {
-                        let canonicalHref = `https://empasy.io/${relPath}`;
-                        let extraTags = '';
-                        if (relPath === 'index.html' || relPath === 'ko/pages/index.html') {
-                            canonicalHref = 'https://empasy.io/';
-                        } else if (relPath.endsWith('/pages/download_eta.html')) {
-                            const lang = relPath.split('/')[0];
-                            canonicalHref = `https://empasy.io/${lang}/download_eta.html`;
-                            extraTags = '\n    <meta name="robots" content="noindex, follow">';
+                if (ctx && ctx.filename) {
+                    const relPath = relative(__dirname, ctx.filename).replace(/\\/g, '/');
+                    if (relPath && !relPath.startsWith('..') && !relPath.startsWith('naver') && relPath !== '404.html') {
+                        if (relPath === 'ko/pages/index.html') {
+                            updated = updated.replace(
+                                /<meta\s+name="robots"\s+content="[^"]*"\s*\/?>/i,
+                                '<meta name="robots" content="noindex, follow">'
+                            );
                         }
-                        updated = updated.replace('</head>', `    <link rel="canonical" href="${canonicalHref}">${extraTags}\n</head>`);
+                        if (!updated.includes('rel="canonical"')) {
+                            let canonicalHref = `https://empasy.io/${relPath}`;
+                            let extraTags = '';
+                            if (relPath === 'index.html' || relPath === 'ko/pages/index.html') {
+                                canonicalHref = 'https://empasy.io/';
+                            } else if (relPath.endsWith('/pages/download_eta.html')) {
+                                const lang = relPath.split('/')[0];
+                                canonicalHref = `https://empasy.io/${lang}/download_eta.html`;
+                                if (!/name="robots"/i.test(updated)) {
+                                    extraTags = '\n    <meta name="robots" content="noindex, follow">';
+                                }
+                            }
+                            updated = updated.replace('</head>', `    <link rel="canonical" href="${canonicalHref}">${extraTags}\n</head>`);
+                        }
                     }
                 }
                 return updated;

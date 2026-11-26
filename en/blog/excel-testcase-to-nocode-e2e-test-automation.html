@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
+        gtag('js', new Date());
+        gtag('config', 'G-6BNPM5TX7C');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converting Excel Test Cases into No-Code AI Test Automation: From Sample URLs to Bug Kanban Rechecks | Empasy</title>
+    <meta name="description" content="Practical guide to turning existing Excel/CSV QA spreadsheets into no-code AI test automation: row-level dataset binding, representative/sample URL coverage, multi-account sessions, [Needs Review] triage, and one-click [Check Now] re-verification.">
+    <meta name="keywords" content="Excel test case automation, AI test automation, no-code E2E testing, QA automation migration, sample URL testing, Bug Kanban, SyncETA, Empasy">
+    <meta name="author" content="Empasy Inc.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="Converting Excel Test Cases into No-Code AI Test Automation: From Sample URLs to Bug Kanban Rechecks | Empasy">
+    <meta property="og:description" content="How QA teams turn existing Excel test specifications into resilient no-code AI E2E checks without exposing sensitive test data to external LLMs.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://empasy.io/en/blog/excel-testcase-to-nocode-e2e-test-automation.html">
+    <meta property="og:image" content="https://empasy.io/images/screenshots/sync-eta/screen_03.png">
+    <meta property="article:published_time" content="2026-11-27">
+    <meta property="article:modified_time" content="2026-11-27">
+    <link rel="canonical" href="https://empasy.io/en/blog/excel-testcase-to-nocode-e2e-test-automation.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Converting Excel Test Cases into No-Code AI Test Automation: From Sample URLs to Bug Kanban Rechecks",
+      "description": "Four-step guide to converting Excel/CSV QA sheets into SyncETA no-code AI E2E scenarios with dataset variable validation, sample URL targeting, and one-click Bug Kanban re-verification.",
+      "datePublished": "2026-11-27",
+      "dateModified": "2026-11-27",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "Empasy Engineering Team",
+        "url": "https://empasy.io"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Empasy Inc.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/empasy-logo.png"
+        }
+      },
+      "image": "https://empasy.io/images/screenshots/sync-eta/screen_03.png",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://empasy.io/en/blog/excel-testcase-to-nocode-e2e-test-automation.html"
+      },
+      "url": "https://empasy.io/en/blog/excel-testcase-to-nocode-e2e-test-automation.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://empasy.io/en/pages/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Empasy Insights", "item": "https://empasy.io/en/blog/blog.html" },
+        { "@type": "ListItem", "position": 3, "name": "Excel Test Cases to No-Code AI Test Automation", "item": "https://empasy.io/en/blog/excel-testcase-to-nocode-e2e-test-automation.html" }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    {{> header_en }}
+
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/en/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>Back to Empasy Insights</span>
+            </a>
+            <span class="badge" style="margin-bottom: 0;">AI Test Automation · QA Migration</span>
+        </div>
+
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-11-27</span>
+                <span>&bull;</span>
+                <span>7 min read</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">Excel Test Cases · No-Code E2E</span>
+            </div>
+
+            <h1 class="ed-blog-title">Converting Excel Test Cases into No-Code AI Test Automation: From Sample URLs to Bug Kanban Rechecks</h1>
+
+            <div class="ed-exec-summary" aria-label="3-Line Executive &amp; Business Summary">
+                <div class="ed-exec-summary-kicker">3-Line Executive &amp; Business Summary</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">Reuse Assets</span><span>Most enterprise QA knowledge already lives in Excel spreadsheets; rewriting every case in code breaks sync with business specs.</span></li>
+                    <li><span class="ed-exec-summary-tag">Row-to-Scenario</span><span>SyncETA converts selected spreadsheet rows 1:1 into executable E2E scenarios, binds masked datasets, and applies them across representative and sample URLs.</span></li>
+                    <li><span class="ed-exec-summary-tag">Closed Loop</span><span>Uncertain screens are honestly isolated as [Needs Review], and photo-attached Bug Kanban tickets re-verify fixes with one click on [Check Now].</span></li>
+                </ul>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>Read the 4-Step Migration Workflow &amp; Pilot KPI Guide</summary>
+                <div class="ed-tech-details-body">
+<h2 id="sec-1">1. Row-Selective Excel Conversion With Masked Datasets</h2>
+<p>Rather than discarding existing Excel/CSV test sheets, <a href="/en/solutions/sync-eta.html">SyncETA</a> lets QA teams upload spreadsheets, pick target rows (one row = one scenario), and attach structured test datasets per row. Variable placeholders such as <code>${keyword}</code> are validated against dataset columns before generation, and only variable names—never live sensitive values—cross the LLM prompt boundary; real values are injected locally during browser execution.</p>
+
+<h2 id="sec-2">2. Scaling Across Hundreds of Pages via Representative &amp; Sample URLs</h2>
+<p>Global commerce and multi-product sites share page templates across dozens of locales. Defining one representative URL for scenario creation and binding additional sample URLs lets one validated test cover broad page sets without duplicating scripts.</p>
+
+<h2 id="sec-3">3. Multi-Account Simultaneous Sessions &amp; Honest [Needs Review] Triage</h2>
+<p>Cross-role workflows (such as customer submission in Tab 0 and administrator approval in Tab 1) run simultaneously in isolated browser sessions with synchronized video playback. Only verified checks count as passed; ambiguous screens are surfaced with screenshots under <code>[Needs Review]</code> rather than silently passing.</p>
+
+<h2 id="sec-4">4. Photo-Backed Bug Kanban &amp; One-Click [Check Now] Re-Verification</h2>
+<p>Detected defects generate deduplicated Kanban cards across Backlog, Open, Resolved, and Closed columns, remember permanent <code>[Not a Bug]</code> rules, and let QA verify fixes immediately with a single click on <code>[Check Now]</code>. During a 2–4 week pilot on one live site, teams measure weekly manual QA hours saved and pre-release defects caught directly.</p>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>Turn Your Existing Excel Test Sheets into Automated E2E Checks</strong>
+                <span>Download SyncETA Desktop for Windows or macOS and run your first spreadsheet conversion locally.</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="/en/solutions/sync-eta.html" class="btn btn-primary btn-sm">Explore SyncETA &#8594;</a>
+                <a href="/en/download_eta.html" class="btn btn-outline btn-sm">Download Desktop App</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="Related AI Test Automation Insights">
+        <h2 class="ed-related-heading">Related AI Test Automation Insights</h2>
+        <div class="ed-related-grid">
+        <a href="/en/blog/ai-test-automation-tools-comparison-2026.html" class="ed-related-card">
+            <span class="ed-related-cat">AI Test Automation · Comparison</span>
+            <span class="ed-related-title">AI Test Automation Tools Compared (2026): Selenium &amp; Playwright vs. AI Coding Agents vs. No-Code E2E</span>
+            <span class="ed-related-more">Read More &rarr;</span>
+        </a>
+        <a href="/en/blog/playwright-selector-self-healing-vision-llm-guide.html" class="ed-related-card">
+            <span class="ed-related-cat">AI Test Automation · Self-Healing</span>
+            <span class="ed-related-title">Fixing Fragile Playwright &amp; Selenium Selectors: Vision-LLM and DOM Context Self-Healing Architecture</span>
+            <span class="ed-related-more">Read More &rarr;</span>
+        </a>
+        <a href="/en/blog/web-test-automation-keypad-cookie-visual-audit.html" class="ed-related-card">
+            <span class="ed-related-cat">AI Test Automation · Field Guide</span>
+            <span class="ed-related-title">Solving 4 Real-World Web Test Blockers: Virtual Keypads, Cookie Popups, PII Masking &amp; Visual Audits</span>
+            <span class="ed-related-more">Read More &rarr;</span>
+        </a>
+        <a href="/en/blog/synceta-intelligent-regression-testing-pipeline.html" class="ed-related-card">
+            <span class="ed-related-cat">AI Test Automation · Architecture</span>
+            <span class="ed-related-title">AI Test Automation Guide: From Click Recording to Self-Healing E2E Regression With SyncETA</span>
+            <span class="ed-related-more">Read More &rarr;</span>
+        </a>
+        </div>
+    </section>
+    </main>
+
+    {{> footer_en }}
+
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

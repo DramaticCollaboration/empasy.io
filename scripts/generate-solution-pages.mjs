@@ -272,6 +272,107 @@ function renderAccountBox(acc, ui, isPrimary) {
                         </div>`;
 }
 
+const PRODUCT_INSIGHT_GUIDES = {
+  'sync-eta': {
+    ko: {
+      kicker: 'AI 테스트 자동화 심층 가이드',
+      heading: '실무 도입 전 함께 읽으면 좋은 AI 테스트 자동화 인사이트',
+      allLabel: '전체 인사이트 보기',
+      items: [
+        {
+          href: '/ko/blog/ai-test-automation-tools-comparison-2026.html',
+          cat: '도구 비교 가이드',
+          title: 'AI 테스트 자동화 도구 비교 (2026): Selenium·Playwright vs AI 코딩 에이전트 vs 노코드 E2E',
+        },
+        {
+          href: '/ko/blog/playwright-selector-self-healing-vision-llm-guide.html',
+          cat: '자가 치유 아키텍처',
+          title: 'UI 개편마다 깨지는 Playwright·Selenium 테스트 해결기: Vision-LLM 셀렉터 자가 치유 설계',
+        },
+        {
+          href: '/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html',
+          cat: 'QA 전환 실무',
+          title: '엑셀 테스트케이스를 노코드 AI 테스트 자동화로 전환하는 실무 가이드',
+        },
+        {
+          href: '/ko/blog/web-test-automation-keypad-cookie-visual-audit.html',
+          cat: '실전 장애물 해결',
+          title: '금융 보안 가상 키패드·글로벌 쿠키 팝업·화면 깨짐까지: 웹 테스트 자동화 4대 장애물 해결법',
+        },
+        {
+          href: '/ko/blog/synceta-intelligent-regression-testing-pipeline.html',
+          cat: '5대 레이어 아키텍처',
+          title: 'AI 테스트 자동화 도입 가이드: 클릭 녹화부터 자가 치유 E2E 회귀 테스트까지',
+        },
+      ],
+    },
+    en: {
+      kicker: 'AI Test Automation Deep Dives',
+      heading: 'Recommended Engineering Guides on AI Test Automation',
+      allLabel: 'View all insights',
+      items: [
+        {
+          href: '/en/blog/ai-test-automation-tools-comparison-2026.html',
+          cat: 'Tool Comparison',
+          title: 'AI Test Automation Tools Compared (2026): Selenium & Playwright vs. AI Coding Agents vs. No-Code E2E',
+        },
+        {
+          href: '/en/blog/playwright-selector-self-healing-vision-llm-guide.html',
+          cat: 'Self-Healing Design',
+          title: 'Fixing Fragile Playwright & Selenium Selectors: Vision-LLM and DOM Context Self-Healing Architecture',
+        },
+        {
+          href: '/en/blog/excel-testcase-to-nocode-e2e-test-automation.html',
+          cat: 'QA Modernization',
+          title: 'Converting Excel Test Cases into No-Code AI Test Automation With Sample URLs and Bug Kanban',
+        },
+        {
+          href: '/en/blog/web-test-automation-keypad-cookie-visual-audit.html',
+          cat: 'Real-World QA',
+          title: 'Solving 4 Real-World Web Test Blockers: Virtual Keypads, Cookie Popups, PII Masking & Visual Audits',
+        },
+        {
+          href: '/en/blog/synceta-intelligent-regression-testing-pipeline.html',
+          cat: '5-Layer Architecture',
+          title: 'AI Test Automation Guide: From Click Recording to Self-Healing E2E Regression With SyncETA',
+        },
+      ],
+    },
+    ja: {
+      kicker: 'AIテスト自動化 実践ガイド',
+      heading: '導入前にあわせて読みたいAIテスト自動化インサイト',
+      allLabel: 'インサイト一覧へ',
+      items: [
+        {
+          href: '/ja/blog/ai-test-automation-tools-comparison-2026.html',
+          cat: 'ツール比較ガイド',
+          title: 'AIテスト自動化ツール比較（2026）：Selenium・Playwright vs AIコーディング支援 vs ノーコードE2E',
+        },
+        {
+          href: '/ja/blog/playwright-selector-self-healing-vision-llm-guide.html',
+          cat: '自己修復アーキテクチャ',
+          title: 'UI改修のたびに壊れるPlaywright・Seleniumテスト対策：Vision-LLMとDOM文脈による自己修復設計',
+        },
+        {
+          href: '/ja/blog/excel-testcase-to-nocode-e2e-test-automation.html',
+          cat: 'QA移行の実践',
+          title: 'Excelテスト仕様書をノーコードAIテスト自動化へ移行する実務ガイド',
+        },
+        {
+          href: '/ja/blog/web-test-automation-keypad-cookie-visual-audit.html',
+          cat: '実運用課題の解決',
+          title: '仮想セキュリティキーパッド・Cookieバナー・画面崩れ：Webテスト自動化を止める4大障壁の解決法',
+        },
+        {
+          href: '/ja/blog/synceta-intelligent-regression-testing-pipeline.html',
+          cat: '5層アーキテクチャ',
+          title: 'AIテスト自動化導入ガイド：クリック録画から自己修復E2E回帰テストまで',
+        },
+      ],
+    },
+  },
+};
+
 function buildPageHtml(productMeta, product, catalogProduct, topologyNodes, lang) {
   const ui = uiLabels[lang];
   const canonicalUrl = `https://empasy.io/${lang}/solutions/${product.id}.html`;
@@ -311,19 +412,30 @@ function buildPageHtml(productMeta, product, catalogProduct, topologyNodes, lang
   const primaryCtaIsExternal = primaryCtaHref.startsWith('http');
   const primaryCtaLabel = product.primaryCtaExternal ? product.primaryCtaLabel : ui.freeDemo;
 
-  const portalProductUrl = `${ui.portalBaseUrl}/products/${product.id}`;
+  const portalProductUrl = `${ui.portalBaseUrl}/products/${product.id}/`;
   const demoAccounts = mergeDemoAccounts(product, catalogProduct);
   const entryLinks = mergeEntryLinks(product, catalogProduct, lang);
 
+  const isSyncEta = product.id === 'sync-eta';
   const softwareJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: product.name,
-    applicationCategory: 'BusinessApplication',
-    operatingSystem: 'Web',
+    ...(isSyncEta ? { alternateName: lang === 'ko' ? ['싱크에타', 'SyncETA Desktop'] : ['SyncETA Desktop'] } : {}),
+    applicationCategory: isSyncEta ? 'DeveloperApplication, BusinessApplication' : 'BusinessApplication',
+    operatingSystem: isSyncEta ? 'Windows 10, Windows 11, macOS 12+, Web' : 'Web',
     url: canonicalUrl,
     image: ogImageUrl,
     description: pageDesc,
+    ...(isSyncEta
+      ? {
+          offers: {
+            '@type': 'Offer',
+            price: '0',
+            priceCurrency: lang === 'ko' ? 'KRW' : lang === 'ja' ? 'JPY' : 'USD',
+          },
+        }
+      : {}),
     provider: {
       '@type': 'Organization',
       name: ui.orgName,
@@ -506,6 +618,34 @@ function buildPageHtml(productMeta, product, catalogProduct, topologyNodes, lang
   const primaryCtaTarget = primaryCtaIsExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
   const contextStripHtml = renderContextStripHtml(product, topologyNodes, lang, ui);
 
+  const guidePack = PRODUCT_INSIGHT_GUIDES[product.id]?.[lang];
+  const insightGuidesHtml = guidePack
+    ? `
+        <section class="ed-section sol-guides-section" aria-label="${escapeHtml(guidePack.heading)}">
+            <div class="container">
+                <div class="sol-related-head">
+                    <div>
+                        <p class="ed-kicker">${escapeHtml(guidePack.kicker)}</p>
+                        <h2 class="sol-related-title">${escapeHtml(guidePack.heading)}</h2>
+                    </div>
+                    <a href="/${lang}/blog/blog.html" class="sol-all-link">${escapeHtml(guidePack.allLabel)} &#8594;</a>
+                </div>
+                <div class="ed-related-grid">
+                    ${guidePack.items
+                      .map(
+                        (item) => `
+                    <a href="${escapeHtml(item.href)}" class="ed-related-card">
+                        <span class="ed-related-cat">${escapeHtml(item.cat)}</span>
+                        <span class="ed-related-title">${escapeHtml(item.title)}</span>
+                        <span class="ed-related-more">${escapeHtml(ui.learnMore)} &#8594;</span>
+                    </a>`,
+                      )
+                      .join('')}
+                </div>
+            </div>
+        </section>`
+    : '';
+
   return `<!DOCTYPE html>
 <html lang="${ui.htmlLang}">
 <head>
@@ -514,6 +654,7 @@ function buildPageHtml(productMeta, product, catalogProduct, topologyNodes, lang
     <title>${escapeHtml(pageTitle)}</title>
     <meta name="description" content="${escapeHtml(pageDesc)}">
     <meta name="author" content="${escapeHtml(ui.orgName)}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="${canonicalUrl}">
     <link rel="alternate" hreflang="ko" href="${koUrl}">
     <link rel="alternate" hreflang="en" href="${enUrl}">
@@ -695,7 +836,7 @@ ${escapeJsonLd(faqJsonLd)}
                     <a href="${escapeHtml(product.docUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">${escapeHtml(ui.techDocBannerLink)} &#8599;</a>
                 </div>
             </div>
-        </section>
+        </section>${insightGuidesHtml}
 
         <section class="ed-section ed-section-tinted sol-related-section">
             <div class="container">

@@ -54,7 +54,7 @@ for (const filePath of collectFiles(empasyRoot)) {
 
   const isHtml = rel.endsWith('.html');
   const isLlms = rel === 'llms.txt' || rel === 'public/llms.txt';
-  const isSitemap = rel === 'public/sitemap.xml';
+  const isSitemap = rel === 'sitemap.xml';
   if (!isHtml && !isLlms && !isSitemap) continue;
 
   const original = readFileSync(filePath, 'utf-8');
@@ -80,7 +80,7 @@ for (const filePath of collectFiles(empasyRoot)) {
       (_m, sub, urlLang) => {
         const lang = urlLang || fileLang;
         const prefix = lang === 'ko' ? '' : `/${lang}`;
-        return `"demoUrl": "https://demo.empasy.io${prefix}/products/sync-${sub}"`;
+        return `"demoUrl": "https://demo.empasy.io${prefix}/products/sync-${sub}/"`;
       },
     );
 

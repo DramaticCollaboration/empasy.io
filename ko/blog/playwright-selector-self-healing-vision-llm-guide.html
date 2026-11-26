@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
+        gtag('js', new Date());
+        gtag('config', 'G-6BNPM5TX7C');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI 개편마다 깨지는 Playwright·Selenium 테스트 자동화 해결기: Vision-LLM 셀렉터 자가 치유(Self-Healing) 설계 | 엠파시(Empasy)</title>
+    <meta name="description" content="React·Vue 빌드 해시 클래스와 DOM 구조 변경으로 깨지는 Playwright·Selenium E2E 테스트 자동화를 Vision-LLM 바운딩 박스 추론, CDP DOM.getNodeForLocation 역추적, 4단계 선택자 순위화 및 Human-in-the-Loop 승인으로 해결한 SyncETA 자가 치유 아키텍처를 공개합니다.">
+    <meta name="keywords" content="AI 테스트 자동화, 셀렉터 자가 치유, Self-Healing QA, Playwright 셀렉터 깨짐, Selenium 유지보수, Vision-LLM 테스트, CDP DOM.getNodeForLocation, SyncETA, 엠파시">
+    <meta name="author" content="주식회사 엠파시 (Empasy)">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="UI 개편마다 깨지는 Playwright·Selenium 테스트 자동화 해결기: Vision-LLM 셀렉터 자가 치유(Self-Healing) 설계 | 엠파시(Empasy)">
+    <meta property="og:description" content="Vision-LLM 바운딩 박스 추론, CDP 역추적, 4단계 선택자 안정성 순위화, Human-in-the-Loop 승인 큐로 거짓 양성 없이 셀렉터를 자가 치유하는 설계 기록.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:url" content="https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html">
+    <meta property="og:image" content="https://empasy.io/images/screenshots/sync-eta/screen_02.png">
+    <meta property="article:published_time" content="2026-11-27">
+    <meta property="article:modified_time" content="2026-11-27">
+    <link rel="canonical" href="https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "UI 개편마다 깨지는 Playwright·Selenium 테스트 자동화 해결기: Vision-LLM 셀렉터 자가 치유(Self-Healing) 설계",
+      "description": "Vision-LLM 바운딩 박스 추론과 CDP DOM.getNodeForLocation 역추적, 4단계 선택자 안정성 순위화, Human-in-the-Loop 승인을 결합한 SyncETA 셀렉터 자가 치유 아키텍처 기술 기록.",
+      "datePublished": "2026-11-27",
+      "dateModified": "2026-11-27",
+      "inLanguage": "ko",
+      "author": {
+        "@type": "Organization",
+        "name": "Empasy Engineering Team",
+        "url": "https://empasy.io"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "주식회사 엠파시 (Empasy)",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/empasy-logo.png"
+        }
+      },
+      "image": "https://empasy.io/images/screenshots/sync-eta/screen_02.png",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html"
+      },
+      "url": "https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://empasy.io/" },
+        { "@type": "ListItem", "position": 2, "name": "엠파시 인사이트", "item": "https://empasy.io/ko/blog/blog.html" },
+        { "@type": "ListItem", "position": 3, "name": "Playwright·Selenium 셀렉터 자가 치유 설계", "item": "https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "자가 치유(Self-Healing)가 실제 버그(사라진 버튼)를 정상으로 오판하지는 않나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SyncETA는 임의로 스크립트를 덮어쓰지 않습니다. 대체 선택자의 고유성과 상호작용 가능성을 검증한 뒤에도 고위험 변경이나 신뢰도 임계치 미만 화면은 Human-in-the-Loop 승인 큐(Healing Queue)와 [확인 필요] 상태로 분리해, 담당자가 Before/After 스크린샷을 대조하고 1클릭 승인할 때만 테스트 자산을 영구 갱신합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vision-LLM 좌표에서 실제 DOM 선택자를 어떻게 다시 추출하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vision-LLM이 반환한 정규화 바운딩 박스(0~1000)의 중심 좌표를 현재 뷰포트 CSS 픽셀로 변환한 뒤 Chrome DevTools Protocol(CDP)의 DOM.getNodeForLocation으로 실제 활성 노드(backendNodeId)를 역추적합니다. 이후 data-testid, 시맨틱 role·접근성 라벨, 인접 텍스트 앵커, 구조 CSS 순으로 가장 깨지기 어려운 대체 선택자를 생성합니다."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    {{> header_ko }}
+
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/ko/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>엠파시 인사이트 목록으로</span>
+            </a>
+            <span class="badge" style="margin-bottom: 0;">AI 테스트 자동화 · 자가 치유</span>
+        </div>
+
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-11-27</span>
+                <span>&bull;</span>
+                <span>읽는 시간 약 7분</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">Self-Healing QA · Playwright 엔지니어링</span>
+            </div>
+
+            <h1 class="ed-blog-title">UI 개편마다 깨지는 Playwright·Selenium 테스트 자동화 해결기: Vision-LLM 셀렉터 자가 치유(Self-Healing) 설계</h1>
+
+            <div class="ed-exec-summary" aria-label="경영진 · 현업 담당자를 위한 3줄 요약">
+                <div class="ed-exec-summary-kicker">경영진 · 현업 담당자를 위한 3줄 요약</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">현장 문제</span><span>버튼 위치나 CSS 클래스가 조금만 바뀌어도 기존 E2E 스크립트가 실패해 QA·개발팀이 매 배포마다 수동으로 셀렉터를 고쳐야 합니다.</span></li>
+                    <li><span class="ed-exec-summary-tag">기술 해법</span><span>평상시에는 Playwright로 고속 재생하고, 요소를 찾지 못한 실패 시점에만 Vision-LLM 바운딩 박스 추론과 CDP DOM 역추적으로 대체 선택자를 자동 복구합니다.</span></li>
+                    <li><span class="ed-exec-summary-tag">안전 장치</span><span>실제 결함을 정상으로 오판하지 않도록 4단계 선택자 안정성 순위화와 Before/After 스크린샷 기반 관리자 승인(Human-in-the-Loop) 절차를 결합했습니다.</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">자가 치유 기술 분석 원문과 알고리즘 상세는 기술 문서에서도 공개되어 있습니다.</span>
+                    <a href="https://doc.empasy.com/study/vision-llm-self-healing-algorithm" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="min-height: 36px;">알고리즘 기술 문서 보기 &#8599;</a>
+                </div>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>엔지니어링 설계 상세 및 실증 평가 결과 보기</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="이 글의 목차">
+  <div class="ed-article-toc-title">이 글의 목차</div>
+  <ol>
+    <li><a href="#sec-1">1. 현대 프론트엔드에서 정적 셀렉터가 깨지는 3가지 패턴</a></li>
+    <li><a href="#sec-2">2. 왜 "실패 시점 트리거 + 하이브리드 복구"로 설계했는가</a></li>
+    <li><a href="#sec-3">3. Vision-LLM 좌표에서 DOM 노드를 역추적하는 4단계 파이프라인</a></li>
+    <li><a href="#sec-4">4. 깨지기 어려운 대체 선택자를 고르는 4순위 규칙</a></li>
+    <li><a href="#sec-5">5. 거짓 양성(False Positive)을 막는 Human-in-the-Loop 승인 큐</a></li>
+    <li><a href="#sec-6">6. 내부 실증 평가 결과 요약</a></li>
+  </ol>
+</nav>
+
+<h2 id="sec-1">1. 현대 프론트엔드에서 정적 셀렉터가 깨지는 3가지 패턴</h2>
+<p>React, Vue 3, Tailwind CSS, CSS-in-JS가 표준이 된 환경에서 기존 CSS 선택자나 절대 XPath는 작은 UI 변경에도 쉽게 무력화됩니다.</p>
+<ul>
+  <li><strong>빌드 타임 해시 클래스 교체:</strong> <code>.btn-submit_3kQ8z</code>처럼 번들러(Vite, Webpack)가 생성한 클래스명이 다음 빌드에서 바뀌는 경우</li>
+  <li><strong>래퍼 컨테이너 삽입:</strong> 배너나 안내 문구 <code>div</code>가 하나 추가되면서 <code>div:nth-child(3) &gt; button</code> 같은 위치 의존 XPath가 어긋나는 경우</li>
+  <li><strong>문구 및 배치 리뉴얼:</strong> 프로모션 개편으로 버튼 텍스트가 "구매하기"에서 "바로 결제"로 바뀌거나 우측 하단으로 이동하는 경우</li>
+</ul>
+
+<h2 id="sec-2">2. 왜 "실패 시점 트리거 + 하이브리드 복구"로 설계했는가</h2>
+<p>처음부터 모든 클릭을 Vision-LLM에 맡기면 셀렉터는 깨지지 않지만, 회귀 테스트 1건에 수십 초가 걸리고 LLM 토큰 비용이 매번 청구됩니다. <a href="/ko/solutions/sync-eta.html">SyncETA</a>는 정상 경로에서는 기존 Playwright 로케이터를 그대로 고속 재생하고, <code>TimeoutError</code>나 <code>NoSuchElementError</code> 또는 가림 현상이 발생했을 때만 <strong>Self-Healing 인터셉터</strong>가 개입하도록 분리했습니다.</p>
+
+<h2 id="sec-3">3. Vision-LLM 좌표에서 DOM 노드를 역추적하는 4단계 파이프라인</h2>
+<div class="modern-stack">
+  <div class="stack-layer">
+    <div class="stack-label">STEP 01</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">실패 시점 컨텍스트 수집</div>
+      <div class="stack-desc">현재 뷰포트 스크린샷(PNG), 접근성 트리(Accessibility Tree) 요약, 원본 동작 의도("결제하기 버튼 클릭")를 함께 묶어 수집합니다.</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">STEP 02</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">Vision-LLM 정규화 바운딩 박스 추론</div>
+      <div class="stack-desc">비전 모델이 화면 문맥에서 목표 컴포넌트의 정규화 좌표 <code>[ymin, xmin, ymax, xmax]</code>(0~1000 스케일)를 추론합니다.</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">STEP 03</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">CDP <code>DOM.getNodeForLocation</code> 노드 역추적</div>
+      <div class="stack-desc">정규화 좌표의 중심점을 실제 뷰포트 CSS 픽셀로 환산해 Chrome DevTools Protocol로 활성 DOM 노드의 <code>backendNodeId</code>를 정확히 획득합니다.</div>
+    </div>
+  </div>
+  <div class="stack-layer">
+    <div class="stack-label">STEP 04</div>
+    <div style="flex-grow: 1;">
+      <div class="stack-content">대체 선택자 생성 · 고유성 검증 · 재개</div>
+      <div class="stack-desc">추출된 노드에서 페이지 내 유일하게 매칭되고 상호작용 가능한(visible, enabled) 대체 선택자를 산출한 뒤 테스트를 이어갑니다.</div>
+    </div>
+  </div>
+</div>
+
+<pre><code>// 정규화 좌표(0~1000) -> 뷰포트 CSS 픽셀 -> CDP 물리 DOM 노드 역추적 핵심 로직
+const centerX = Math.round(((box.xmin + box.xmax) / 2000) * viewport.width);
+const centerY = Math.round(((box.ymin + box.ymax) / 2000) * viewport.height);
+
+const cdp = await page.context().newCDPSession(page);
+const { backendNodeId } = await cdp.send('DOM.getNodeForLocation', {
+  x: centerX,
+  y: centerY,
+  includeUserAgentShadowDOM: true,
+  ignorePointerEventsNone: false,
+});</code></pre>
+
+<h2 id="sec-4">4. 깨지기 어려운 대체 선택자를 고르는 4순위 규칙</h2>
+<p>단순히 좌표 클릭으로만 넘어가면 다음 실행 때 또 Vision-LLM을 호출해야 합니다. SyncETA는 역추적한 DOM 노드에서 다음 우선순위로 안정적인 선택자를 재생성해 자산화합니다.</p>
+<table>
+  <thead>
+    <tr>
+      <th>우선순위</th>
+      <th>선택자 유형</th>
+      <th>생성 예시</th>
+      <th>선정 근거</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1순위</strong></td>
+      <td>테스트 전용 속성</td>
+      <td><code>[data-testid="submit-order"]</code></td>
+      <td>개발팀이 명시한 가장 안정적인 식별자</td>
+    </tr>
+    <tr>
+      <td><strong>2순위</strong></td>
+      <td>시맨틱 역할 · 접근성 라벨</td>
+      <td><code>role=button[name="결제하기"]</code></td>
+      <td>디자인·클래스 개편에도 비즈니스 역할 유지</td>
+    </tr>
+    <tr>
+      <td><strong>3순위</strong></td>
+      <td>인접 텍스트 앵커링</td>
+      <td><code>div:has-text("총 결제금액") &gt;&gt; button</code></td>
+      <td>화면 내 문맥적 상대 위치를 활용해 오매칭 방지</td>
+    </tr>
+    <tr>
+      <td><strong>4순위</strong></td>
+      <td>고유 구조 · 폼 속성 조합</td>
+      <td><code>form.order-form button[type="submit"]</code></td>
+      <td>해시 클래스 교체를 피하는 구조 기반 폴백</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="sec-5">5. 거짓 양성(False Positive)을 막는 Human-in-the-Loop 승인 큐</h2>
+<p>자가 치유 기능에서 QA 엔지니어가 가장 경계하는 위험은 <strong>"결제 버튼이 실제로 사라진 장애인데 AI가 옆의 취소 버튼을 눌러 통과(Pass)로 처리해 버리는 사고"</strong>입니다. 이를 막기 위해 SyncETA는 다음 3중 안전장치를 적용합니다.</p>
+<ul>
+  <li><strong>위험도 분리 정책:</strong> 단순 클래스명 변경 같은 저위험 보정은 임시 실행 후 이력을 남기고, 버튼 의미·위치가 크게 바뀐 고위험 항목은 자동 확정하지 않고 <code>[확인 필요]</code> 및 자가 치유 제안 큐(Healing Queue)로 격리합니다.</li>
+  <li><strong>Before/After 시각 대조:</strong> 이전 기준 스크린샷과 현재 대체 선택자가 가리키는 요소를 나란히 보여주고, 담당자가 1클릭으로 승인할 때만 기준 시나리오를 영구 갱신합니다.</li>
+  <li><strong>감사 이력 보관:</strong> 누가 언제 어떤 사유로 선택자 갱신을 승인했는지 감사 로그에 남겨 엔터프라이즈 QA 거버넌스를 충족합니다.</li>
+</ul>
+
+<h2 id="sec-6">6. 내부 실증 평가 결과 요약</h2>
+<p>엠파시 엔지니어링 팀은 국내 이커머스 및 엔터프라이즈 포털 10개 사이트를 대상으로 6개월간 1,200회의 릴리즈 회귀 테스트에서 본 알고리즘을 평가했습니다(<a href="https://doc.empasy.com/study/vision-llm-self-healing-algorithm" target="_blank" rel="noopener noreferrer">연구 아카이브 원문</a> 기준).</p>
+<ul>
+  <li><strong>식별자 파손 복구율:</strong> 식별자 파손 342건 중 318건(93.0%)을 수동 코드 수정 없이 대체 선택자로 자동 보정해 실행을 완료했습니다.</li>
+  <li><strong>평균 치유 소요 시간:</strong> 스냅샷 캡처부터 바운딩 박스 추론·CDP 노드 확정·실행 재개까지 평균 1.2초가 소요되었습니다.</li>
+  <li><strong>유지보수 공수 변화:</strong> 동일 테스트 스위트의 릴리즈별 셀렉터 수동 갱신 작업 시간이 평균 78.4% 감소했습니다. (실제 도입 조직별 절감율은 운영 사이트 1곳 대상 2~4주 시범 적용으로 직접 계측합니다.)</li>
+</ul>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>UI 개편에도 멈추지 않는 AI 테스트 자동화를 직접 확인해 보세요</strong>
+                <span>SyncETA 데스크톱 앱 다운로드와 라이브 웹 관제 데모로 셀렉터 보정 이력과 실행 영상을 살펴볼 수 있습니다.</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="/ko/solutions/sync-eta.html" class="btn btn-primary btn-sm">SyncETA 자세히 보기 &#8594;</a>
+                <a href="/ko/download_eta.html" class="btn btn-outline btn-sm">무료 다운로드</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="함께 읽으면 좋은 AI 테스트 자동화 인사이트">
+        <h2 class="ed-related-heading">함께 읽으면 좋은 AI 테스트 자동화 인사이트</h2>
+        <div class="ed-related-grid">
+        <a href="/ko/blog/ai-test-automation-tools-comparison-2026.html" class="ed-related-card">
+            <span class="ed-related-cat">AI 테스트 자동화 · 도구 비교</span>
+            <span class="ed-related-title">AI 테스트 자동화 도구 비교 가이드 (2026): Selenium·Playwright vs AI 코딩 에이전트 vs 노코드 E2E</span>
+            <span class="ed-related-more">자세히 읽기 &rarr;</span>
+        </a>
+        <a href="/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html" class="ed-related-card">
+            <span class="ed-related-cat">AI 테스트 자동화 · QA 전환</span>
+            <span class="ed-related-title">엑셀 테스트케이스를 노코드 AI 테스트 자동화로 전환하는 실무 가이드</span>
+            <span class="ed-related-more">자세히 읽기 &rarr;</span>
+        </a>
+        <a href="/ko/blog/web-test-automation-keypad-cookie-visual-audit.html" class="ed-related-card">
+            <span class="ed-related-cat">AI 테스트 자동화 · 실전 해결</span>
+            <span class="ed-related-title">금융 보안 가상 키패드·글로벌 쿠키 팝업·화면 깨짐까지: 웹 테스트 자동화 4대 장애물 해결법</span>
+            <span class="ed-related-more">자세히 읽기 &rarr;</span>
+        </a>
+        <a href="/ko/blog/synceta-intelligent-regression-testing-pipeline.html" class="ed-related-card">
+            <span class="ed-related-cat">AI 테스트 자동화 · 아키텍처</span>
+            <span class="ed-related-title">AI 테스트 자동화 도입 가이드: 클릭 녹화부터 자가 치유 E2E 회귀 테스트까지</span>
+            <span class="ed-related-more">자세히 읽기 &rarr;</span>
+        </a>
+        </div>
+    </section>
+    </main>
+
+    {{> footer_ko }}
+
+    <script type="module" src="/assets/js/i18n.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -17,11 +17,11 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
     <!-- End Google Tag Manager -->
-    <title>엠파시(Empasy) | 메인 페이지로 이동 중...</title>
-    <meta name="description" content="주식회사 엠파시(Empasy) 실무형 기업 소프트웨어 SyncSeries 공식 홈페이지">
+    <title>404 | 페이지를 찾을 수 없습니다 - 엠파시(Empasy)</title>
+    <meta name="description" content="요청하신 페이지를 찾을 수 없습니다. 주식회사 엠파시(Empasy) 공식 홈페이지에서 원하시는 정보를 찾아보세요.">
     <meta name="robots" content="noindex, follow">
-    <link rel="canonical" href="https://empasy.io/">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
         (function () {
             var rawPath = window.location.pathname;
@@ -35,29 +35,37 @@
                 window.location.replace('/en/pages/index.html');
             } else if (path === '/ja' || path === '/ja/') {
                 window.location.replace('/ja/pages/index.html');
-            } else {
-                var preferred = '';
-                try { preferred = localStorage.getItem('preferred_lang') || ''; } catch (e) {}
-                var target = '/';
-                if (preferred === 'en') {
-                    target = '/en/pages/index.html';
-                } else if (preferred === 'ja') {
-                    target = '/ja/pages/index.html';
-                }
-                window.location.replace(target);
             }
         })();
     </script>
-    <meta http-equiv="refresh" content="0; url=/">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { margin: 0; font-family: Pretendard, -apple-system, BlinkMacSystemFont, sans-serif; background: #f8fafc; color: #0f172a; display: flex; min-height: 100vh; align-items: center; justify-content: center; padding: 24px; }
+        .notfound-card { max-width: 480px; width: 100%; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 36px 32px; text-align: center; }
+        .notfound-code { font-size: 0.9rem; font-weight: 700; color: #0e7490; letter-spacing: 0.08em; margin-bottom: 8px; }
+        h1 { font-size: 1.4rem; margin: 0 0 12px; color: #0f172a; }
+        p { font-size: 0.95rem; color: #475569; margin: 0 0 24px; line-height: 1.65; }
+        .notfound-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .notfound-btn { display: inline-block; padding: 10px 18px; border-radius: 8px; font-size: 0.92rem; font-weight: 600; text-decoration: none; }
+        .notfound-btn-primary { background: #0f172a; color: #ffffff; }
+        .notfound-btn-secondary { border: 1px solid #cbd5e1; color: #0f172a; background: #ffffff; }
+    </style>
 </head>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <p>요청하신 페이지를 찾을 수 없습니다. <a href="https://empasy.io/">엠파시 공식 홈페이지(empasy.io)</a>로 이동합니다...</p>
+    <main class="notfound-card">
+        <div class="notfound-code">404 NOT FOUND</div>
+        <h1>요청하신 페이지를 찾을 수 없습니다</h1>
+        <p>주소가 변경되었거나 삭제된 페이지입니다. 아래 메뉴에서 엠파시 공식 홈페이지나 기술 문서로 이동하실 수 있습니다.</p>
+        <div class="notfound-actions">
+            <a class="notfound-btn notfound-btn-primary" href="https://empasy.io/">엠파시 홈으로 이동</a>
+            <a class="notfound-btn notfound-btn-secondary" href="https://doc.empasy.com/">기술 문서</a>
+            <a class="notfound-btn notfound-btn-secondary" href="https://demo.empasy.io/">통합 데모</a>
+        </div>
+    </main>
 </body>
 
 </html>

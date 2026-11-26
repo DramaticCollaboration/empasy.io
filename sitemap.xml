@@ -1,618 +1,1165 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://empasy.io/</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/index.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/" />
+    <lastmod>2026-11-26T17:31:55+09:00</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://empasy.io/en/pages/index.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/index.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/" />
+    <lastmod>2026-11-26T17:31:55+09:00</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://empasy.io/ja/pages/index.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/index.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/" />
+    <lastmod>2026-11-26T17:31:55+09:00</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://empasy.io/ko/download_eta.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.9</priority>
+    <loc>https://empasy.io/ko/blog/ai-test-automation-tools-comparison-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/ai-test-automation-tools-comparison-2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/ai-test-automation-tools-comparison-2026.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/ai-test-automation-tools-comparison-2026.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/ai-test-automation-tools-comparison-2026.html" />
+    <lastmod>2026-11-26T17:19:05.325Z</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://empasy.io/ko/solutions/sync-boot.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
+    <loc>https://empasy.io/en/blog/ai-test-automation-tools-comparison-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/ai-test-automation-tools-comparison-2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/ai-test-automation-tools-comparison-2026.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/ai-test-automation-tools-comparison-2026.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/ai-test-automation-tools-comparison-2026.html" />
+    <lastmod>2026-11-26T17:19:06.735Z</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://empasy.io/ko/solutions/sync-cms.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/solutions/sync-crawl.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/solutions/sync-eta.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/solutions/sync-insight.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/solutions/sync-llm.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/solutions/sync-apim.html</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/solutions/sync-watch.html</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/solutions/sync-apim.html</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/solutions/sync-watch.html</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/solutions/sync-apim.html</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/solutions/sync-watch.html</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/solutions/sync-shop.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/solutions/sync-ops.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/solutions/sync-verse.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/pages/careers.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/pages/clients.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/pages/contact.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/pages/faq.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/pages/privacy.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/pages/team.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/pages/terms.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/pages/vision.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
+    <loc>https://empasy.io/ja/blog/ai-test-automation-tools-comparison-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/ai-test-automation-tools-comparison-2026.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/ai-test-automation-tools-comparison-2026.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/ai-test-automation-tools-comparison-2026.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/ai-test-automation-tools-comparison-2026.html" />
+    <lastmod>2026-11-26T17:19:08.262Z</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://empasy.io/ko/blog/blog.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/blog.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/blog.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/blog.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/blog.html" />
+    <lastmod>2026-11-23T13:02:10+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/blog.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/blog.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/blog.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/blog.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/blog.html" />
+    <lastmod>2026-11-23T13:02:10+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/blog.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/blog.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/blog.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/blog.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/blog.html" />
+    <lastmod>2026-11-23T13:02:10+09:00</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://empasy.io/ko/blog/case-study-finance.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/blog/enterprise-data-pipeline-automation.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/blog/syncboot-cloud-native-msa-architecture.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/blog/synccms-development-oriented-architecture.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/blog/syncllm-cost-optimization-semantic-cache-gateway.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/blog/syncshop-batch-pricing-margin-protection-architecture.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/blog/syncverse-mcp-ai-orchestration-architecture.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/download_eta.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/solutions/sync-boot.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/solutions/sync-cms.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/solutions/sync-crawl.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/solutions/sync-eta.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/solutions/sync-insight.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/solutions/sync-llm.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/solutions/sync-shop.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/solutions/sync-ops.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/solutions/sync-verse.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/pages/careers.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/pages/clients.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/pages/contact.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/pages/faq.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/pages/privacy.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/pages/team.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/pages/terms.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/pages/vision.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/blog/blog.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/case-study-finance.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/case-study-finance.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/case-study-finance.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/case-study-finance.html" />
+    <lastmod>2026-11-23T13:02:10+09:00</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://empasy.io/en/blog/case-study-finance.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/blog/empasy-2026-vision-autonomous-operations-ecosystem.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/blog/empasy-core-solution-architecture-syncverse.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/blog/enterprise-data-pipeline-automation.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/blog/syncboot-cloud-native-msa-architecture.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/blog/synccms-development-oriented-architecture.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/blog/synccrawl-distributed-web-data-pipeline.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/blog/synceta-intelligent-regression-testing-pipeline.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/blog/syncllm-cost-optimization-semantic-cache-gateway.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/blog/syncshop-batch-pricing-margin-protection-architecture.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/blog/syncverse-mcp-ai-orchestration-architecture.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/download_eta.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/solutions/sync-boot.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/solutions/sync-cms.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/solutions/sync-crawl.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/solutions/sync-eta.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/solutions/sync-insight.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/solutions/sync-llm.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/solutions/sync-shop.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/solutions/sync-ops.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/solutions/sync-verse.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/pages/careers.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/pages/clients.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/pages/contact.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/pages/faq.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/pages/privacy.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/pages/team.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/pages/terms.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/pages/vision.html</loc>
-    <lastmod>2026-10-22T00:00:00+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/blog/blog.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/case-study-finance.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/case-study-finance.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/case-study-finance.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/case-study-finance.html" />
+    <lastmod>2026-11-23T13:02:10+09:00</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://empasy.io/ja/blog/case-study-finance.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/case-study-finance.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/case-study-finance.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/case-study-finance.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/case-study-finance.html" />
+    <lastmod>2026-11-23T13:02:10+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/empasy-2026-vision-autonomous-operations-ecosystem.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://empasy.io/ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/empasy-2026-vision-autonomous-operations-ecosystem.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/empasy-core-solution-architecture-syncverse.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/empasy-core-solution-architecture-syncverse.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/empasy-core-solution-architecture-syncverse.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/empasy-core-solution-architecture-syncverse.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/empasy-core-solution-architecture-syncverse.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://empasy.io/ja/blog/empasy-core-solution-architecture-syncverse.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/empasy-core-solution-architecture-syncverse.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/empasy-core-solution-architecture-syncverse.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/empasy-core-solution-architecture-syncverse.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/enterprise-data-pipeline-automation.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/enterprise-data-pipeline-automation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/enterprise-data-pipeline-automation.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/enterprise-data-pipeline-automation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/enterprise-data-pipeline-automation.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/enterprise-data-pipeline-automation.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/enterprise-data-pipeline-automation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/enterprise-data-pipeline-automation.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/enterprise-data-pipeline-automation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/enterprise-data-pipeline-automation.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://empasy.io/ja/blog/enterprise-data-pipeline-automation.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/blog/syncboot-cloud-native-msa-architecture.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/blog/synccms-development-oriented-architecture.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/blog/synccrawl-distributed-web-data-pipeline.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/blog/synceta-intelligent-regression-testing-pipeline.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/blog/syncllm-cost-optimization-semantic-cache-gateway.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/blog/syncshop-batch-pricing-margin-protection-architecture.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/blog/syncops-si-profitability-subcontract-governance.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/blog/syncops-si-profitability-subcontract-governance.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/blog/syncops-si-profitability-subcontract-governance.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/blog/syncapim-ai-api-gateway-ebpf-defense.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/blog/syncapim-ai-api-gateway-ebpf-defense.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/blog/syncapim-ai-api-gateway-ebpf-defense.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ko/blog/syncwatch-security-advisory-rule-compiler.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/en/blog/syncwatch-security-advisory-rule-compiler.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://empasy.io/ja/blog/syncwatch-security-advisory-rule-compiler.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/enterprise-data-pipeline-automation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/enterprise-data-pipeline-automation.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/enterprise-data-pipeline-automation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/enterprise-data-pipeline-automation.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://empasy.io/ko/blog/eta-autoscaling-keda-graceful-scalein.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/eta-autoscaling-keda-graceful-scalein.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/eta-autoscaling-keda-graceful-scalein.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/eta-autoscaling-keda-graceful-scalein.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/eta-autoscaling-keda-graceful-scalein.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://empasy.io/en/blog/eta-autoscaling-keda-graceful-scalein.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/eta-autoscaling-keda-graceful-scalein.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/eta-autoscaling-keda-graceful-scalein.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/eta-autoscaling-keda-graceful-scalein.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/eta-autoscaling-keda-graceful-scalein.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://empasy.io/ja/blog/eta-autoscaling-keda-graceful-scalein.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/eta-autoscaling-keda-graceful-scalein.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/eta-autoscaling-keda-graceful-scalein.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/eta-autoscaling-keda-graceful-scalein.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/eta-autoscaling-keda-graceful-scalein.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://empasy.io/ko/blog/syncsdk-spec-studio-multi-engine-codev.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
+    <loc>https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://empasy.io/en/blog/syncsdk-spec-studio-multi-engine-codev.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
+    <loc>https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://empasy.io/ja/blog/syncsdk-spec-studio-multi-engine-codev.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
+    <loc>https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/eta-autoscaling-worker-scaling.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/eta-autoscaling-worker-scaling.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/eta-autoscaling-worker-scaling.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <lastmod>2026-11-26T17:22:33.164Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/excel-testcase-to-nocode-e2e-test-automation.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <lastmod>2026-11-26T17:22:34.436Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/excel-testcase-to-nocode-e2e-test-automation.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html" />
+    <lastmod>2026-11-26T17:22:37.110Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <lastmod>2026-11-26T17:32:06.404Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/playwright-selector-self-healing-vision-llm-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <lastmod>2026-11-26T17:19:11.110Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/playwright-selector-self-healing-vision-llm-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html" />
+    <lastmod>2026-11-26T17:22:31.632Z</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://empasy.io/ko/blog/sync-core-dynamic-config-prompt-cluster-sync.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/sync-core-dynamic-config-prompt-cluster-sync.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/sync-core-dynamic-config-prompt-cluster-sync.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/sync-core-dynamic-config-prompt-cluster-sync.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/sync-core-dynamic-config-prompt-cluster-sync.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://empasy.io/en/blog/sync-core-dynamic-config-prompt-cluster-sync.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/sync-core-dynamic-config-prompt-cluster-sync.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/sync-core-dynamic-config-prompt-cluster-sync.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/sync-core-dynamic-config-prompt-cluster-sync.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/sync-core-dynamic-config-prompt-cluster-sync.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://empasy.io/ja/blog/sync-core-dynamic-config-prompt-cluster-sync.html</loc>
-    <lastmod>2026-11-23T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/sync-core-dynamic-config-prompt-cluster-sync.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/sync-core-dynamic-config-prompt-cluster-sync.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/sync-core-dynamic-config-prompt-cluster-sync.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/sync-core-dynamic-config-prompt-cluster-sync.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/syncapim-ai-api-gateway-ebpf-defense.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncapim-ai-api-gateway-ebpf-defense.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncapim-ai-api-gateway-ebpf-defense.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncapim-ai-api-gateway-ebpf-defense.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncapim-ai-api-gateway-ebpf-defense.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/syncapim-ai-api-gateway-ebpf-defense.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncapim-ai-api-gateway-ebpf-defense.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncapim-ai-api-gateway-ebpf-defense.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncapim-ai-api-gateway-ebpf-defense.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncapim-ai-api-gateway-ebpf-defense.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/syncapim-ai-api-gateway-ebpf-defense.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncapim-ai-api-gateway-ebpf-defense.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncapim-ai-api-gateway-ebpf-defense.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncapim-ai-api-gateway-ebpf-defense.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncapim-ai-api-gateway-ebpf-defense.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/syncboot-cloud-native-msa-architecture.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncboot-cloud-native-msa-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncboot-cloud-native-msa-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncboot-cloud-native-msa-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncboot-cloud-native-msa-architecture.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/syncboot-cloud-native-msa-architecture.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncboot-cloud-native-msa-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncboot-cloud-native-msa-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncboot-cloud-native-msa-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncboot-cloud-native-msa-architecture.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/syncboot-cloud-native-msa-architecture.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncboot-cloud-native-msa-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncboot-cloud-native-msa-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncboot-cloud-native-msa-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncboot-cloud-native-msa-architecture.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/synccms-development-oriented-architecture.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/synccms-development-oriented-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/synccms-development-oriented-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/synccms-development-oriented-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/synccms-development-oriented-architecture.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/synccms-development-oriented-architecture.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/synccms-development-oriented-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/synccms-development-oriented-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/synccms-development-oriented-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/synccms-development-oriented-architecture.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/synccms-development-oriented-architecture.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/synccms-development-oriented-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/synccms-development-oriented-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/synccms-development-oriented-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/synccms-development-oriented-architecture.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/synccrawl-distributed-web-data-pipeline.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/synccrawl-distributed-web-data-pipeline.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/synccrawl-distributed-web-data-pipeline.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/synceta-intelligent-regression-testing-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/synceta-intelligent-regression-testing-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/synceta-intelligent-regression-testing-pipeline.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/synceta-intelligent-regression-testing-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/synceta-intelligent-regression-testing-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/synceta-intelligent-regression-testing-pipeline.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/synceta-intelligent-regression-testing-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/synceta-intelligent-regression-testing-pipeline.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/synceta-intelligent-regression-testing-pipeline.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncinsight-on-premise-decision-intelligence-architecture.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/syncllm-cost-optimization-semantic-cache-gateway.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncllm-cost-optimization-semantic-cache-gateway.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncllm-cost-optimization-semantic-cache-gateway.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncllm-cost-optimization-semantic-cache-gateway.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncllm-cost-optimization-semantic-cache-gateway.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/syncllm-cost-optimization-semantic-cache-gateway.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncllm-cost-optimization-semantic-cache-gateway.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncllm-cost-optimization-semantic-cache-gateway.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncllm-cost-optimization-semantic-cache-gateway.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncllm-cost-optimization-semantic-cache-gateway.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/syncllm-cost-optimization-semantic-cache-gateway.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncllm-cost-optimization-semantic-cache-gateway.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncllm-cost-optimization-semantic-cache-gateway.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncllm-cost-optimization-semantic-cache-gateway.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncllm-cost-optimization-semantic-cache-gateway.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/syncops-si-profitability-subcontract-governance.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncops-si-profitability-subcontract-governance.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncops-si-profitability-subcontract-governance.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncops-si-profitability-subcontract-governance.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncops-si-profitability-subcontract-governance.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/syncops-si-profitability-subcontract-governance.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncops-si-profitability-subcontract-governance.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncops-si-profitability-subcontract-governance.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncops-si-profitability-subcontract-governance.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncops-si-profitability-subcontract-governance.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/syncops-si-profitability-subcontract-governance.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncops-si-profitability-subcontract-governance.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncops-si-profitability-subcontract-governance.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncops-si-profitability-subcontract-governance.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncops-si-profitability-subcontract-governance.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/syncsdk-spec-studio-multi-engine-codev.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/syncsdk-spec-studio-multi-engine-codev.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/syncsdk-spec-studio-multi-engine-codev.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncsdk-spec-studio-multi-engine-codev.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/syncshop-batch-pricing-margin-protection-architecture.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncshop-batch-pricing-margin-protection-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncshop-batch-pricing-margin-protection-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncshop-batch-pricing-margin-protection-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncshop-batch-pricing-margin-protection-architecture.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/syncshop-batch-pricing-margin-protection-architecture.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncshop-batch-pricing-margin-protection-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncshop-batch-pricing-margin-protection-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncshop-batch-pricing-margin-protection-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncshop-batch-pricing-margin-protection-architecture.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/syncshop-batch-pricing-margin-protection-architecture.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncshop-batch-pricing-margin-protection-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncshop-batch-pricing-margin-protection-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncshop-batch-pricing-margin-protection-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncshop-batch-pricing-margin-protection-architecture.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/syncverse-mcp-ai-orchestration-architecture.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncverse-mcp-ai-orchestration-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncverse-mcp-ai-orchestration-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncverse-mcp-ai-orchestration-architecture.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/syncverse-mcp-ai-orchestration-architecture.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncverse-mcp-ai-orchestration-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncverse-mcp-ai-orchestration-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncverse-mcp-ai-orchestration-architecture.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncverse-mcp-ai-orchestration-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncverse-mcp-ai-orchestration-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncverse-mcp-ai-orchestration-architecture.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncverse-mcp-ai-orchestration-architecture.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/syncwatch-security-advisory-rule-compiler.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/syncwatch-security-advisory-rule-compiler.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/syncwatch-security-advisory-rule-compiler.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/syncwatch-security-advisory-rule-compiler.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/blog/web-test-automation-keypad-cookie-visual-audit.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/web-test-automation-keypad-cookie-visual-audit.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/web-test-automation-keypad-cookie-visual-audit.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/web-test-automation-keypad-cookie-visual-audit.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/web-test-automation-keypad-cookie-visual-audit.html" />
+    <lastmod>2026-11-26T17:22:38.745Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/blog/web-test-automation-keypad-cookie-visual-audit.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/web-test-automation-keypad-cookie-visual-audit.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/web-test-automation-keypad-cookie-visual-audit.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/web-test-automation-keypad-cookie-visual-audit.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/web-test-automation-keypad-cookie-visual-audit.html" />
+    <lastmod>2026-11-26T17:46:54.189Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/blog/web-test-automation-keypad-cookie-visual-audit.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/web-test-automation-keypad-cookie-visual-audit.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/web-test-automation-keypad-cookie-visual-audit.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/web-test-automation-keypad-cookie-visual-audit.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/web-test-automation-keypad-cookie-visual-audit.html" />
+    <lastmod>2026-11-26T17:22:41.916Z</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/download_eta.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/download_eta.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/download_eta.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/download_eta.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/download_eta.html" />
+    <lastmod>2026-11-24T12:21:02+09:00</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/download_eta.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/download_eta.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/download_eta.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/download_eta.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/download_eta.html" />
+    <lastmod>2026-11-24T12:21:02+09:00</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/download_eta.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/download_eta.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/download_eta.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/download_eta.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/download_eta.html" />
+    <lastmod>2026-11-24T12:21:02+09:00</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/pages/careers.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/careers.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/careers.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/careers.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/careers.html" />
+    <lastmod>2026-11-20T13:46:08+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/pages/careers.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/careers.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/careers.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/careers.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/careers.html" />
+    <lastmod>2026-11-20T13:46:08+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/pages/careers.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/careers.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/careers.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/careers.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/careers.html" />
+    <lastmod>2026-11-20T13:46:08+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/pages/clients.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/clients.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/clients.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/clients.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/clients.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/pages/clients.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/clients.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/clients.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/clients.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/clients.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/pages/clients.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/clients.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/clients.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/clients.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/clients.html" />
+    <lastmod>2026-11-25T17:29:36+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/pages/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/contact.html" />
+    <lastmod>2026-11-23T13:02:10+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/pages/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/contact.html" />
+    <lastmod>2026-11-23T13:02:10+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/pages/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/contact.html" />
+    <lastmod>2026-11-23T13:02:10+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/pages/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/faq.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/faq.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/faq.html" />
+    <lastmod>2026-11-20T13:46:08+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/pages/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/faq.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/faq.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/faq.html" />
+    <lastmod>2026-11-22T05:40:24+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/pages/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/faq.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/faq.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/faq.html" />
+    <lastmod>2026-11-22T05:40:24+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/pages/team.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/team.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/team.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/team.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/team.html" />
+    <lastmod>2026-11-20T13:46:08+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/pages/team.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/team.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/team.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/team.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/team.html" />
+    <lastmod>2026-11-20T13:46:08+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/pages/team.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/team.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/team.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/team.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/team.html" />
+    <lastmod>2026-11-20T13:46:08+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/pages/vision.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/vision.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/vision.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/vision.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/vision.html" />
+    <lastmod>2026-11-20T13:46:08+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/pages/vision.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/vision.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/vision.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/vision.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/vision.html" />
+    <lastmod>2026-11-20T13:46:08+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/pages/vision.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/pages/vision.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/pages/vision.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/pages/vision.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/pages/vision.html" />
+    <lastmod>2026-11-20T13:46:08+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/solutions/sync-apim.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-apim.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-apim.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-apim.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-apim.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/solutions/sync-apim.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-apim.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-apim.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-apim.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-apim.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/solutions/sync-apim.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-apim.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-apim.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-apim.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-apim.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/solutions/sync-boot.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-boot.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-boot.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-boot.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-boot.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/solutions/sync-boot.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-boot.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-boot.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-boot.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-boot.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/solutions/sync-boot.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-boot.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-boot.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-boot.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-boot.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/solutions/sync-cms.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-cms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-cms.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-cms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-cms.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/solutions/sync-cms.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-cms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-cms.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-cms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-cms.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/solutions/sync-cms.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-cms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-cms.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-cms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-cms.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/solutions/sync-crawl.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-crawl.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-crawl.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-crawl.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-crawl.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/solutions/sync-crawl.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-crawl.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-crawl.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-crawl.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-crawl.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/solutions/sync-crawl.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-crawl.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-crawl.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-crawl.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-crawl.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/solutions/sync-eta.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-eta.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-eta.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-eta.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-eta.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/solutions/sync-eta.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-eta.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-eta.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-eta.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-eta.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/solutions/sync-eta.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-eta.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-eta.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-eta.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-eta.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/solutions/sync-insight.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-insight.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-insight.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-insight.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-insight.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/solutions/sync-insight.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-insight.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-insight.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-insight.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-insight.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/solutions/sync-insight.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-insight.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-insight.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-insight.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-insight.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/solutions/sync-llm.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-llm.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-llm.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-llm.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-llm.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/solutions/sync-llm.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-llm.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-llm.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-llm.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-llm.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/solutions/sync-llm.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-llm.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-llm.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-llm.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-llm.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/solutions/sync-ops.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-ops.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-ops.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-ops.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-ops.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/solutions/sync-ops.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-ops.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-ops.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-ops.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-ops.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/solutions/sync-ops.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-ops.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-ops.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-ops.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-ops.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/solutions/sync-shop.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-shop.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-shop.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-shop.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-shop.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/solutions/sync-shop.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-shop.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-shop.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-shop.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-shop.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/solutions/sync-shop.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-shop.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-shop.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-shop.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-shop.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/solutions/sync-verse.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-verse.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-verse.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-verse.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-verse.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/solutions/sync-verse.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-verse.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-verse.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-verse.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-verse.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/solutions/sync-verse.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-verse.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-verse.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-verse.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-verse.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ko/solutions/sync-watch.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-watch.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-watch.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-watch.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-watch.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/en/solutions/sync-watch.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-watch.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-watch.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-watch.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-watch.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://empasy.io/ja/solutions/sync-watch.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://empasy.io/ko/solutions/sync-watch.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://empasy.io/en/solutions/sync-watch.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://empasy.io/ja/solutions/sync-watch.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/solutions/sync-watch.html" />
+    <lastmod>2026-11-26T16:03:02+09:00</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>

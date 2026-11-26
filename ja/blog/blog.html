@@ -40,8 +40,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empasy インサイト | 現場適用ノート・導入ガイド</title>
-    <meta name="description" content="Empasyの現場導入ノート。画面自動点検(SyncETA)、社内システム刷新(SyncBoot)、多言語Web運営(SyncCMS)、データ照会・AI費用管理(SyncInsight・SyncLLM)、案件損益管理(SyncOps)、API・セキュリティ管制(SyncAPIM・SyncWatch)の実践ガイドを公開しています。">
-    <meta name="keywords" content="Empasy インサイト, 導入ガイド, SyncVerse, SyncETA, SyncBoot, SyncCMS, SyncInsight, SyncLLM, SyncCrawl, SyncShop, SyncOps, SyncAPIM, SyncWatch">
+    <meta name="description" content="Empasyの現場導入ノート。AIテスト自動化・自己修復E2E QA(SyncETA)、社内システム刷新(SyncBoot)、多言語Web運営(SyncCMS)、データ照会・AI費用管理(SyncInsight・SyncLLM)、案件損益管理(SyncOps)、API・セキュリティ管制(SyncAPIM・SyncWatch)の実践ガイドを公開しています。">
+    <meta name="keywords" content="AIテスト自動化, テスト自動化, 自己修復QA, Empasy インサイト, 導入ガイド, SyncVerse, SyncETA, SyncBoot, SyncCMS, SyncInsight, SyncLLM, SyncCrawl, SyncShop, SyncOps, SyncAPIM, SyncWatch">
     <meta name="author" content="株式会社Empasy (Empasy Inc.)">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta property="og:title" content="Empasy インサイト | 現場適用ノート・導入ガイド">
@@ -90,7 +90,7 @@
 
         <div class="blog-filter-tabs" role="tablist" aria-label="インサイトカテゴリフィルタ">
             <button type="button" class="blog-filter-btn active" data-filter="all" role="tab" aria-selected="true">すべて</button>
-            <button type="button" class="blog-filter-btn" data-filter="qa" role="tab" aria-selected="false">画面自動点検</button>
+            <button type="button" class="blog-filter-btn" data-filter="qa" role="tab" aria-selected="false">AIテスト自動化</button>
             <button type="button" class="blog-filter-btn" data-filter="orchestration" role="tab" aria-selected="false">承認・業務運営</button>
             <button type="button" class="blog-filter-btn" data-filter="cloud" role="tab" aria-selected="false">社内システム・Web</button>
             <button type="button" class="blog-filter-btn" data-filter="decision" role="tab" aria-selected="false">データ・AI費用</button>
@@ -99,6 +99,50 @@
         </div>
 
         <div class="blog-grid">
+            <a href="/ja/blog/ai-test-automation-tools-comparison-2026.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">AIテスト自動化・ツール比較</div>
+                    <h2>AIテスト自動化ツール比較ガイド（2026）：Selenium・Playwright vs AIコーディング支援 vs ノーコードE2E</h2>
+                    <p>4つのAIテスト自動化方式を保守コスト、反復実行時のLLMトークン費用、自己修復（Self-Healing）、社内閉域網セキュリティの観点で比較解説します。</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-27 &bull; 約8分</span>
+                        <span class="blog-card-more">詳しく読む &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/ja/blog/playwright-selector-self-healing-vision-llm-guide.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">AIテスト自動化・自己修復</div>
+                    <h2>UI改修のたびに壊れるPlaywright・Seleniumテスト対策：Vision-LLMとDOM文脈による自己修復設計</h2>
+                    <p>失敗時のみVision-LLMバウンディングボックス推論とCDP逆追跡を起動し、4段階安定順位とHuman-in-the-Loop承認で誤判定を防ぐ設計を解説します。</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-27 &bull; 約7分</span>
+                        <span class="blog-card-more">詳しく読む &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/ja/blog/excel-testcase-to-nocode-e2e-test-automation.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">AIテスト自動化・QA移行</div>
+                    <h2>Excelテスト仕様書をノーコードAIテスト自動化へ移行する実務ガイド：標本URLからバグカンバン再検証まで</h2>
+                    <p>既存のExcel試験表を1行=1シナリオへ選択変換し、マスキング済みデータセット・代表/標本URL・バグカンバン[今すぐ確認]再検証へ移行する手順を解説します。</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-27 &bull; 約7分</span>
+                        <span class="blog-card-more">詳しく読む &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/ja/blog/web-test-automation-keypad-cookie-visual-audit.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">AIテスト自動化・実運用解決</div>
+                    <h2>仮想セキュリティキーパッド・Cookieバナー・画面崩れ：実運用のWebテスト自動化を止める4大障壁の解決法</h2>
+                    <p>仮想キーパッド認識、WeakSetによる遅延Cookieモーダル自動処理、個人情報マスキング、シナリオ不要の404リンク・文字重なり全数検査を解説します。</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-27 &bull; 約7分</span>
+                        <span class="blog-card-more">詳しく読む &rarr;</span>
+                    </div>
+                </article>
+            </a>
             <a href="/ja/blog/sync-core-dynamic-config-prompt-cluster-sync.html" class="blog-card-item" data-category="cloud">
                 <article class="blog-card">
                     <div class="blog-card-cat">共通コア・運用設計</div>
@@ -277,9 +321,9 @@
             </a>
             <a href="/ja/blog/synceta-intelligent-regression-testing-pipeline.html" class="blog-card-item" data-category="qa">
                 <article class="blog-card">
-                    <div class="blog-card-cat">自動点検ガイド</div>
-                    <h2>コード不要の画面自動点検ガイド：クリック記録から画面変更への自動追従まで</h2>
-                    <p>クリック記録や既存Excelチェック表の変換、決定論的Playwright再生、UI変更時の自己修復まで、実務に定着する自動点検アーキテクチャを解説します。</p>
+                    <div class="blog-card-cat">AIテスト自動化導入ガイド</div>
+                    <h2>AIテスト自動化導入ガイド：クリック録画から自己修復（Self-Healing）E2E回帰テストまで — SyncETA活用法</h2>
+                    <p>クリック記録や既存Excelチェック表の変換、LLM費用ゼロの決定論的Playwright再生、UI変更時のVision-LLM自己修復まで5層アーキテクチャを解説します。</p>
                     <div class="blog-card-meta">
                         <span>2026-03-15 &bull; 約6分</span>
                         <span class="blog-card-more">詳しく読む &rarr;</span>
