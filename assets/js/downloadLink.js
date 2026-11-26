@@ -1,9 +1,9 @@
 const downloadLink = {
-  "version": "0.0.64",
+  "version": "0.0.65",
   "releaseNote": "",
   "files": {
-    "winX64": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/releases/eta/0.0.64/win/x64/SyncETA%20Setup%200.0.64.exe",
-    "winArm64": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/releases/eta/0.0.64/win/x64/SyncETA%20Setup%200.0.64.exe",
+    "winX64": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/releases/eta/0.0.65/win/x64/SyncETA%20Setup%200.0.65.exe",
+    "winArm64": "https://synceta-release.s3.ap-northeast-2.amazonaws.com/releases/eta/0.0.65/win/x64/SyncETA%20Setup%200.0.65.exe",
     "macIntel": "",
     "macSilicon": ""
   }
@@ -12,10 +12,8 @@ const downloadLink = {
 const updateLink = (id, url) => {
   const el = document.getElementById(id);
   if (!el) return;
-  if (!url) {
-    el.hidden = true;
-    return;
-  }
+  el.hidden = !url;
+  if (!url) return;
   el.href = url;
   el.setAttribute('target', '_blank');
 };
