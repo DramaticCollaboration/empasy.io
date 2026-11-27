@@ -93,8 +93,7 @@ function main() {
     if (
       relFile === '404.html' ||
       relFile.startsWith('naver') ||
-      relFile === 'ko/pages/index.html' ||
-      relFile.endsWith('/pages/download_eta.html')
+      relFile === 'ko/pages/index.html'
     ) {
       excluded.push({ relFile, reason: 'system-or-duplicate-redirect' });
       continue;

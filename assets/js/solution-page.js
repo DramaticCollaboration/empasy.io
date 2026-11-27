@@ -148,19 +148,6 @@
       }, 2400);
     }
 
-    function fallbackCopy(text) {
-      var area = document.createElement('textarea');
-      area.value = text;
-      area.style.position = 'fixed';
-      area.style.opacity = '0';
-      document.body.appendChild(area);
-      area.select();
-      try {
-        document.execCommand('copy');
-      } catch (err) {}
-      document.body.removeChild(area);
-    }
-
     document.querySelectorAll('[data-copy-value]').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var val = btn.getAttribute('data-copy-value') || '';
@@ -191,13 +178,7 @@
         };
 
         if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
-          navigator.clipboard.writeText(val).then(done).catch(function () {
-            fallbackCopy(val);
-            done();
-          });
-        } else {
-          fallbackCopy(val);
-          done();
+          navigator.clipboard.writeText(val).then(done).catch(function () {});
         }
       });
     });

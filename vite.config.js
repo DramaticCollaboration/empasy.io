@@ -66,17 +66,10 @@ export default defineConfig({
                         }
                         if (!updated.includes('rel="canonical"')) {
                             let canonicalHref = `https://empasy.io/${relPath}`;
-                            let extraTags = '';
                             if (relPath === 'index.html' || relPath === 'ko/pages/index.html') {
                                 canonicalHref = 'https://empasy.io/';
-                            } else if (relPath.endsWith('/pages/download_eta.html')) {
-                                const lang = relPath.split('/')[0];
-                                canonicalHref = `https://empasy.io/${lang}/download_eta.html`;
-                                if (!/name="robots"/i.test(updated)) {
-                                    extraTags = '\n    <meta name="robots" content="noindex, follow">';
-                                }
                             }
-                            updated = updated.replace('</head>', `    <link rel="canonical" href="${canonicalHref}">${extraTags}\n</head>`);
+                            updated = updated.replace('</head>', `    <link rel="canonical" href="${canonicalHref}">\n</head>`);
                         }
                     }
                 }

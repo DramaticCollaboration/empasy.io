@@ -814,14 +814,6 @@ body.has-announcement-bar .top-announcement-bar {
     100% { opacity: 0; transform: scale(0); }
 }
 
-/* Typewriter (Legacy if exists) */
-.typewriter {
-    display: inline-block; overflow: hidden; white-space: nowrap;
-    border-right: 2px solid var(--primary-color);
-    animation: blink-caret .75s step-end infinite;
-}
-@keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--primary-color); } }
-
 /* Numbers */
 .counter-val {
     font-size: 3.5rem; font-weight: 900; color: var(--primary-color);
@@ -2896,7 +2888,7 @@ body.has-announcement-bar .top-announcement-bar {
 
 
 /* =========================================
-   Enterprise Contact Form & Custom Light Select
+   Enterprise Contact Form
 ========================================= */
 .contact-form {
     background: #ffffff;
@@ -2963,166 +2955,9 @@ body.has-announcement-bar .top-announcement-bar {
     box-shadow: 0 0 0 3px rgba(14, 116, 144, 0.14);
 }
 
-/* Native Select Fallback (Light Editorial) */
-select.form-control {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: #ffffff !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230f172a' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 16px;
-    padding-right: 2.6rem;
-    cursor: pointer;
-    color: #0f172a;
-}
-
-select.form-control option {
-    background-color: #ffffff;
-    color: #0f172a;
-    padding: 10px 14px;
-}
-
 textarea.form-control {
     min-height: 140px;
     resize: vertical;
-}
-
-/* Custom Light Editorial Select Dropdown */
-.custom-select-wrapper {
-    position: relative;
-    width: 100%;
-    z-index: 30;
-}
-
-.custom-select-wrapper.is-open {
-    z-index: 60;
-}
-
-.custom-select-trigger {
-    width: 100%;
-    padding: 0.85rem 1rem;
-    background: #ffffff;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    color: #0f172a;
-    font-family: inherit;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    text-align: left;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.custom-select-trigger:hover {
-    border-color: #94a3b8;
-    background: #f8fafc;
-}
-
-.custom-select-wrapper.is-open .custom-select-trigger,
-.custom-select-trigger:focus-visible {
-    outline: none;
-    border-color: #0e7490;
-    background: #ffffff;
-    box-shadow: 0 0 0 3px rgba(14, 116, 144, 0.14);
-}
-
-.custom-select-trigger-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-weight: 500;
-}
-
-.custom-select-chevron {
-    width: 18px;
-    height: 18px;
-    color: #475569;
-    flex-shrink: 0;
-    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.custom-select-wrapper.is-open .custom-select-chevron {
-    transform: rotate(180deg);
-}
-
-.custom-select-menu {
-    position: absolute;
-    top: calc(100% + 6px);
-    left: 0;
-    right: 0;
-    background: #ffffff;
-    border: 1px solid #cbd5e1;
-    border-radius: 10px;
-    box-shadow: 0 18px 40px -16px rgba(15, 23, 42, 0.2);
-    padding: 0.4rem;
-    max-height: 300px;
-    overflow-y: auto;
-    display: none;
-    z-index: 100;
-    scrollbar-width: thin;
-    scrollbar-color: #cbd5e1 #ffffff;
-}
-
-.custom-select-wrapper.is-open .custom-select-menu {
-    display: block;
-    animation: selectMenuFadeIn 0.16s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@keyframes selectMenuFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-4px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.custom-select-option {
-    padding: 0.65rem 0.85rem;
-    border-radius: 6px;
-    color: #334155;
-    font-size: 0.92rem;
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    transition: background-color 0.15s ease, color 0.15s ease;
-    user-select: none;
-}
-
-.custom-select-option:hover,
-.custom-select-option.is-focused {
-    background: #f1f5f9;
-    color: #0f172a;
-}
-
-.custom-select-option.is-selected {
-    background: #ecfeff;
-    color: #0e7490;
-    font-weight: 600;
-}
-
-.custom-select-check {
-    width: 16px;
-    height: 16px;
-    color: #0e7490;
-    flex-shrink: 0;
-    opacity: 0;
-    transition: opacity 0.15s ease;
-}
-
-.custom-select-option.is-selected .custom-select-check {
-    opacity: 1;
 }
 
 /* Enterprise Security & Verification Options Box (Light Editorial) */
