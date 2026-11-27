@@ -40,8 +40,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>엠파시 인사이트 | 엠파시(Empasy)</title>
-    <meta name="description" content="엠파시(Empasy) 현장 적용 노트. 자동 화면 테스트(SyncETA), 업무 시스템 현대화(SyncBoot), 다국어 웹사이트 운영(SyncCMS), 데이터·AI 비용(SyncInsight·SyncLLM), 프로젝트 운영(SyncOps), API·보안 관제(SyncAPIM·SyncWatch) 실무 가이드를 공유합니다.">
-    <meta name="keywords" content="엠파시 인사이트, 현장 적용 노트, SyncVerse, SyncETA, SyncBoot, SyncCMS, SyncInsight, SyncLLM, SyncCrawl, SyncShop, SyncOps, SyncAPIM, SyncWatch">
+    <meta name="description" content="엠파시(Empasy) 현장 적용 노트. AI 테스트 자동화·자가 치유 E2E QA(SyncETA), 업무 시스템 현대화(SyncBoot), 다국어 웹사이트 운영(SyncCMS), 데이터·AI 비용(SyncInsight·SyncLLM), 프로젝트 운영(SyncOps), API·보안 관제(SyncAPIM·SyncWatch) 실무 가이드를 공유합니다.">
+    <meta name="keywords" content="AI 테스트 자동화, 테스트 자동화, 자가 치유 QA, 엠파시 인사이트, 현장 적용 노트, SyncVerse, SyncETA, 싱크에타, SyncBoot, SyncCMS, SyncInsight, SyncLLM, SyncCrawl, SyncShop, SyncOps, SyncAPIM, SyncWatch">
     <meta name="author" content="주식회사 엠파시 (Empasy)">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta property="og:title" content="엠파시 인사이트 | 엠파시(Empasy)">
@@ -263,7 +263,7 @@
 
         <div class="blog-filter-tabs" role="tablist" aria-label="인사이트 주제 필터">
             <button type="button" class="blog-filter-btn active" data-filter="all" role="tab" aria-selected="true">전체</button>
-            <button type="button" class="blog-filter-btn" data-filter="qa" role="tab" aria-selected="false">자동 테스트</button>
+            <button type="button" class="blog-filter-btn" data-filter="qa" role="tab" aria-selected="false">AI 테스트 자동화</button>
             <button type="button" class="blog-filter-btn" data-filter="orchestration" role="tab" aria-selected="false">협업 · 운영 관리</button>
             <button type="button" class="blog-filter-btn" data-filter="cloud" role="tab" aria-selected="false">업무 시스템 · 웹</button>
             <button type="button" class="blog-filter-btn" data-filter="decision" role="tab" aria-selected="false">데이터 · AI 비용</button>
@@ -272,6 +272,50 @@
         </div>
 
         <div class="blog-grid">
+            <a href="/ko/blog/ai-test-automation-tools-comparison-2026.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">AI 테스트 자동화 · 도구 비교</div>
+                    <h2>AI 테스트 자동화 도구 비교 가이드 (2026): Selenium·Playwright vs AI 코딩 에이전트 vs 노코드 E2E</h2>
+                    <p>4가지 AI 테스트 자동화 패러다임을 UI 변경 유지보수 공수, 반복 실행 LLM 토큰 비용, 자가 치유(Self-Healing), 폐쇄망 보안 기준에서 비교하고 조직 유형별 조합 전략을 정리합니다.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-27 &bull; 8분 읽기</span>
+                        <span class="blog-card-more">자세히 읽기 &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/ko/blog/playwright-selector-self-healing-vision-llm-guide.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">AI 테스트 자동화 · 자가 치유</div>
+                    <h2>UI 개편마다 깨지는 Playwright·Selenium 테스트 해결기: Vision-LLM과 DOM 문맥 기반 셀렉터 자가 치유 설계</h2>
+                    <p>실패 시점에만 Vision-LLM 바운딩 박스 추론과 CDP DOM.getNodeForLocation 역추적을 수행하고 4단계 선택자 안정성 순위화와 Human-in-the-Loop 승인으로 거짓 양성을 막는 아키텍처를 공개합니다.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-27 &bull; 7분 읽기</span>
+                        <span class="blog-card-more">자세히 읽기 &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">AI 테스트 자동화 · QA 전환</div>
+                    <h2>엑셀 테스트케이스를 노코드 AI 테스트 자동화로 전환하는 실무 가이드: 표본 URL부터 버그 칸반 재검증까지</h2>
+                    <p>기존 엑셀·CSV 시험표를 1행당 1시나리오로 선택 변환하고, 마스킹된 데이터셋·대표/표본 URL·멀티 계정 동시 검증·버그 칸반 원클릭 재검증으로 정착시키는 4단계 실무 가이드입니다.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-27 &bull; 7분 읽기</span>
+                        <span class="blog-card-more">자세히 읽기 &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/ko/blog/web-test-automation-keypad-cookie-visual-audit.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">AI 테스트 자동화 · 실전 해결</div>
+                    <h2>금융 보안 가상 키패드·글로벌 쿠키 팝업·화면 깨짐까지: 실무 웹 테스트 자동화가 멈추는 4가지 장애물 해결법</h2>
+                    <p>보안 가상 키패드, 지연 등장 쿠키 동의 모달(WeakSet 페이지 추적), 증적 속 개인정보 마스킹, 시나리오 없는 404 링크·글자 겹침 전수 검사까지 실전 웹 QA 장애물 4가지를 해결하는 설계를 소개합니다.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-27 &bull; 7분 읽기</span>
+                        <span class="blog-card-more">자세히 읽기 &rarr;</span>
+                    </div>
+                </article>
+            </a>
             <a href="/ko/blog/sync-core-dynamic-config-prompt-cluster-sync.html" class="blog-card-item" data-category="cloud">
                 <article class="blog-card">
                     <div class="blog-card-cat">공통 코어 · 운영 설계</div>
@@ -450,9 +494,9 @@
             </a>
             <a href="/ko/blog/synceta-intelligent-regression-testing-pipeline.html" class="blog-card-item" data-category="qa">
                 <article class="blog-card">
-                    <div class="blog-card-cat">자동 테스트 도입 가이드</div>
-                    <h2>자동 화면 테스트 도입 가이드: 클릭 녹화부터 화면 변경 자동 대응까지 — SyncETA 활용법</h2>
-                    <p>코딩 없는 클릭 녹화, 기존 엑셀 점검표 변환, 실패 원인 요약, 디자인 변경 시 셀렉터 자가 치유까지 실무 테스트 운영 방식을 알기 쉽게 정리합니다.</p>
+                    <div class="blog-card-cat">AI 테스트 자동화 도입 가이드</div>
+                    <h2>AI 테스트 자동화 도입 가이드: 클릭 녹화부터 자가 치유(Self-Healing) E2E 회귀 테스트까지 — SyncETA 아키텍처</h2>
+                    <p>코딩 없는 클릭 녹화, 기존 엑셀 점검표 변환, LLM 비용 없는 Playwright 재생, 디자인 변경 시 Vision-LLM 셀렉터 자가 치유까지 5대 레이어 아키텍처를 정리합니다.</p>
                     <div class="blog-card-meta">
                         <span>2026-03-15 &bull; 6분 읽기</span>
                         <span class="blog-card-more">자세히 읽기 &rarr;</span>

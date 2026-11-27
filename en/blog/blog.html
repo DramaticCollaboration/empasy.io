@@ -40,8 +40,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empasy Insights | Field Notes &amp; Adoption Guides</title>
-    <meta name="description" content="Practical field notes from Empasy covering automated screen verification (SyncETA), internal system modernization (SyncBoot), multilingual web operations (SyncCMS), data &amp; AI governance (SyncInsight, SyncLLM), project ops (SyncOps), and API/security defense (SyncAPIM, SyncWatch).">
-    <meta name="keywords" content="Empasy Insights, Field Guide, SyncVerse, SyncETA, SyncBoot, SyncCMS, SyncInsight, SyncLLM, SyncCrawl, SyncShop, SyncOps, SyncAPIM, SyncWatch">
+    <meta name="description" content="Practical field notes from Empasy covering AI test automation &amp; self-healing E2E QA (SyncETA), internal system modernization (SyncBoot), multilingual web operations (SyncCMS), data &amp; AI governance (SyncInsight, SyncLLM), project ops (SyncOps), and API/security defense (SyncAPIM, SyncWatch).">
+    <meta name="keywords" content="AI Test Automation, Test Automation, Self-Healing QA, Empasy Insights, Field Guide, SyncVerse, SyncETA, SyncBoot, SyncCMS, SyncInsight, SyncLLM, SyncCrawl, SyncShop, SyncOps, SyncAPIM, SyncWatch">
     <meta name="author" content="Empasy Inc.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta property="og:title" content="Empasy Insights | Field Notes &amp; Adoption Guides">
@@ -263,7 +263,7 @@
 
         <div class="blog-filter-tabs" role="tablist" aria-label="Insights topic filter">
             <button type="button" class="blog-filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
-            <button type="button" class="blog-filter-btn" data-filter="qa" role="tab" aria-selected="false">Screen Checks</button>
+            <button type="button" class="blog-filter-btn" data-filter="qa" role="tab" aria-selected="false">AI Test Automation</button>
             <button type="button" class="blog-filter-btn" data-filter="orchestration" role="tab" aria-selected="false">Approvals &amp; Ops</button>
             <button type="button" class="blog-filter-btn" data-filter="cloud" role="tab" aria-selected="false">Systems &amp; Web</button>
             <button type="button" class="blog-filter-btn" data-filter="decision" role="tab" aria-selected="false">Data &amp; AI Cost</button>
@@ -272,6 +272,50 @@
         </div>
 
         <div class="blog-grid">
+            <a href="/en/blog/ai-test-automation-tools-comparison-2026.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">AI Test Automation · Comparison</div>
+                    <h2>AI Test Automation Tools Compared (2026): Selenium &amp; Playwright vs. AI Coding Agents vs. No-Code E2E</h2>
+                    <p>Compare four AI test automation paradigms across selector maintenance, recurring LLM token costs, visual/link audits, and private intranet readiness.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-27 &bull; 8 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/playwright-selector-self-healing-vision-llm-guide.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">AI Test Automation · Self-Healing</div>
+                    <h2>Fixing Fragile Playwright &amp; Selenium Selectors: Vision-LLM and DOM Context Self-Healing Architecture</h2>
+                    <p>How on-failure Vision-LLM bounding boxes, CDP DOM.getNodeForLocation lookup, 4-tier selector ranking, and Human-in-the-Loop approval prevent brittle E2E suites.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-27 &bull; 7 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/excel-testcase-to-nocode-e2e-test-automation.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">AI Test Automation · QA Migration</div>
+                    <h2>Converting Excel Test Cases into No-Code AI Test Automation: From Sample URLs to Bug Kanban Rechecks</h2>
+                    <p>Turn existing Excel/CSV QA sheets into executable no-code E2E scenarios with masked datasets, representative/sample URLs, and one-click [Check Now] re-verification.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-27 &bull; 7 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
+            <a href="/en/blog/web-test-automation-keypad-cookie-visual-audit.html" class="blog-card-item" data-category="qa">
+                <article class="blog-card">
+                    <div class="blog-card-cat">AI Test Automation · Field Guide</div>
+                    <h2>Solving 4 Real-World Web Test Automation Blockers: Virtual Keypads, Cookie Popups, PII Masking &amp; Visual Audits</h2>
+                    <p>Engine-level patterns for virtual security keypads, WeakSet-tracked late cookie consent overlays, PII masking, and scenario-free 404/overlap site audits.</p>
+                    <div class="blog-card-meta">
+                        <span>2026-11-27 &bull; 7 min read</span>
+                        <span class="blog-card-more">Read More &rarr;</span>
+                    </div>
+                </article>
+            </a>
             <a href="/en/blog/sync-core-dynamic-config-prompt-cluster-sync.html" class="blog-card-item" data-category="cloud">
                 <article class="blog-card">
                     <div class="blog-card-cat">Core Infrastructure</div>
@@ -450,9 +494,9 @@
             </a>
             <a href="/en/blog/synceta-intelligent-regression-testing-pipeline.html" class="blog-card-item" data-category="qa">
                 <article class="blog-card">
-                    <div class="blog-card-cat">Verification Guide</div>
-                    <h2>Automated Screen Checks Without Coding: From Click Recording to Self-Recovery</h2>
-                    <p>How SyncETA combines click recording, Excel checklists, deterministic Playwright replay, and self-healing locators to eliminate brittle QA scripts.</p>
+                    <div class="blog-card-cat">AI Test Automation Guide</div>
+                    <h2>AI Test Automation Guide: From Click Recording to Self-Healing E2E Regression With SyncETA</h2>
+                    <p>How SyncETA combines click recording, Excel checklists, zero-LLM-cost deterministic Playwright replay, and Vision-LLM self-healing locators.</p>
                     <div class="blog-card-meta">
                         <span>2026-03-15 &bull; 6 min read</span>
                         <span class="blog-card-more">Read More &rarr;</span>

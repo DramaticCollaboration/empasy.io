@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Google Consent Mode v2 & Analytics (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+        (function () {
+            try {
+                if (localStorage.getItem('empasy_cookie_consent') === 'granted') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BNPM5TX7C"></script>
+    <script>
+        gtag('js', new Date());
+        gtag('config', 'G-6BNPM5TX7C');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPMTVVXN');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>금융 보안 가상 키패드·글로벌 쿠키 팝업·화면 깨짐까지: 실무 웹 테스트 자동화가 멈추는 4가지 장애물 해결법 | 엠파시(Empasy)</title>
+    <meta name="description" content="실제 기업 웹사이트에서 Playwright·Selenium 테스트 자동화가 자주 막히는 4대 장애물(금융 보안 가상 키패드, 지연 등장 글로벌 쿠키 동의 배너, 증적 영상·캡처 속 개인정보 노출, 시나리오 밖 404 링크·글자 겹침)을 SyncETA가 엔진 레벨에서 해결한 설계를 공유합니다.">
+    <meta name="keywords" content="웹 테스트 자동화, AI 테스트 자동화, 보안 가상 키패드 테스트, 쿠키 팝업 자동 닫기, 개인정보 마스킹 QA, 링크 전수 검사, 글자 겹침 검출, SyncETA, 엠파시">
+    <meta name="author" content="주식회사 엠파시 (Empasy)">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="금융 보안 가상 키패드·글로벌 쿠키 팝업·화면 깨짐까지: 실무 웹 테스트 자동화가 멈추는 4가지 장애물 해결법 | 엠파시(Empasy)">
+    <meta property="og:description" content="보안 가상 키패드, 지연 노출 쿠키 모달, 증적 내 개인정보 마스킹, 시나리오 없는 링크·시각 결함 전수 검사까지 실무 웹 QA 장애물 4가지 해결 아키텍처.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:url" content="https://empasy.io/ko/blog/web-test-automation-keypad-cookie-visual-audit.html">
+    <meta property="og:image" content="https://empasy.io/images/screenshots/sync-eta/screen_05.png">
+    <meta property="article:published_time" content="2026-11-27">
+    <meta property="article:modified_time" content="2026-11-27">
+    <link rel="canonical" href="https://empasy.io/ko/blog/web-test-automation-keypad-cookie-visual-audit.html">
+    <link rel="alternate" hreflang="ko" href="https://empasy.io/ko/blog/web-test-automation-keypad-cookie-visual-audit.html" />
+    <link rel="alternate" hreflang="en" href="https://empasy.io/en/blog/web-test-automation-keypad-cookie-visual-audit.html" />
+    <link rel="alternate" hreflang="ja" href="https://empasy.io/ja/blog/web-test-automation-keypad-cookie-visual-audit.html" />
+    <link rel="alternate" hreflang="x-default" href="https://empasy.io/ko/blog/web-test-automation-keypad-cookie-visual-audit.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "금융 보안 가상 키패드·글로벌 쿠키 팝업·화면 깨짐까지: 실무 웹 테스트 자동화가 멈추는 4가지 장애물 해결법",
+      "description": "보안 가상 키패드 입력, 지연 노출 쿠키 동의 배너(WeakSet 페이지 추적), DOM/스크린샷 PII 마스킹, 사이트 지식그래프 기반 링크·화면 결함 전수 검사 구현 가이드.",
+      "datePublished": "2026-11-27",
+      "dateModified": "2026-11-27",
+      "inLanguage": "ko",
+      "author": {
+        "@type": "Organization",
+        "name": "Empasy Engineering Team",
+        "url": "https://empasy.io"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "주식회사 엠파시 (Empasy)",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://empasy.io/empasy-logo.png"
+        }
+      },
+      "image": "https://empasy.io/images/screenshots/sync-eta/screen_05.png",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://empasy.io/ko/blog/web-test-automation-keypad-cookie-visual-audit.html"
+      },
+      "url": "https://empasy.io/ko/blog/web-test-automation-keypad-cookie-visual-audit.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://empasy.io/" },
+        { "@type": "ListItem", "position": 2, "name": "엠파시 인사이트", "item": "https://empasy.io/ko/blog/blog.html" },
+        { "@type": "ListItem", "position": 3, "name": "실무 웹 테스트 자동화 4대 장애물 해결법", "item": "https://empasy.io/ko/blog/web-test-automation-keypad-cookie-visual-audit.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "페이지 이동 직후가 아니라 몇 초 뒤에 늦게 뜨는 쿠키 동의 팝업 때문에 테스트가 자꾸 실패합니다. 어떻게 처리하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "이동(goto) 직후 고정 시간 대기만 걸면 지연 로드되는 쿠키 모달을 놓치기 쉽습니다. SyncETA는 각 실행 레코드의 DOM 요소 탐색 직전에 쿠키 모달을 검사하고, 닫기 성공 이력을 WeakSet<Page>으로 페이지별 관리하다가 메인 프레임의 framenavigated 이벤트 발생 시 초기화하는 방식으로 지연 모달을 안정적으로 통과합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "시나리오를 일일이 작성하지 않아도 404 링크나 글자 겹침 같은 화면 깨짐을 찾을 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네. SyncETA는 사이트 지식그래프를 활용해 시나리오 없이도 페이지 내 하위 링크의 404 오류, 링크 문구와 이동 페이지의 의미 불일치, 글자 겹침·빈 영역·미디어 재생 오류를 자동 전수 검사합니다."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  <script type="module" crossorigin src="/assets/modulepreload-polyfill-Dezn_h7o.js"></script>
+  <script type="module" crossorigin src="/assets/i18n-CC8j1T6V.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-Ciz_Bc9L.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPMTVVXN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="glass-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="/" aria-label="엠파시 홈">
+                    <img src="/images/logo.svg" alt="EMPASY" class="logo-img">
+                </a>
+            </div>
+            <button type="button" class="mobile-menu-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="emp-nav-links">
+                <svg class="icon-hamburger" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg class="icon-close" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <nav id="emp-nav-links" class="nav-links" aria-label="주요 메뉴">
+                <div class="dropdown dropdown-mega-host">
+                    <a href="/#architecture" class="dropbtn">솔루션
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="dropdown-content dropdown-mega-solutions">
+                        <div class="emp-mega-grid">
+                            <div class="emp-mega-col">
+                                <span class="dropdown-group-heading">핵심 업무 4종</span>
+                                <a href="/ko/solutions/sync-verse.html"><strong>SyncVerse</strong> · 협업·승인 관리</a>
+                                <a href="/ko/solutions/sync-eta.html"><strong>SyncETA</strong> · 웹 화면 자동 점검</a>
+                                <a href="/ko/solutions/sync-boot.html"><strong>SyncBoot</strong> · 사내 관리 시스템 기반</a>
+                                <a href="/ko/solutions/sync-cms.html"><strong>SyncCMS</strong> · 웹사이트·다국어 관리</a>
+                            </div>
+                            <div class="emp-mega-col">
+                                <span class="dropdown-group-heading">데이터 · AI (3종)</span>
+                                <a href="/ko/solutions/sync-insight.html"><strong>SyncInsight</strong> · 말로 묻는 데이터 조회</a>
+                                <a href="/ko/solutions/sync-llm.html"><strong>SyncLLM</strong> · AI 비용·개인정보 관리</a>
+                                <a href="/ko/solutions/sync-crawl.html"><strong>SyncCrawl</strong> · 공개 웹 자료 수집</a>
+                                <span class="dropdown-group-heading">보안 관리 (2종)</span>
+                                <a href="/ko/solutions/sync-apim.html"><strong>SyncAPIM</strong> · 외부 연동 점검·보안</a>
+                                <a href="/ko/solutions/sync-watch.html"><strong>SyncWatch</strong> · 보안 취약점·규칙 관리</a>
+                            </div>
+                            <div class="emp-mega-col">
+                                <span class="dropdown-group-heading">쇼핑몰 · 사업운영 (2종)</span>
+                                <a href="/ko/solutions/sync-shop.html"><strong>SyncShop</strong> · 쇼핑몰 운영·가격 관리</a>
+                                <a href="/ko/solutions/sync-ops.html"><strong>SyncOps</strong> · 프로젝트 손익·인력 관리</a>
+                                <span class="dropdown-group-heading">빠른 안내</span>
+                                <a href="/#architecture">전체 구성도 한눈에 보기</a>
+                                <a href="/#finder">30초 맞춤 솔루션 찾기</a>
+                                <a href="/ko/download_eta.html">SyncETA PC 앱 다운로드</a>
+                                <a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer">개발자 기술 문서 &#8599;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <a href="/#finder">맞춤 찾기</a>
+                <a href="/ko/pages/clients.html">고객 사례</a>
+    
+                <div class="dropdown">
+                    <a href="/ko/pages/vision.html" class="dropbtn">회사 소개
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="/ko/pages/vision.html">비전 및 벤처 인증</a>
+                        <a href="/ko/pages/team.html">팀 소개</a>
+                        <a href="/ko/pages/careers.html">채용 안내</a>
+                        <a href="/ko/pages/faq.html">자주 묻는 질문</a>
+                        <a href="/ko/blog/blog.html">엠파시 인사이트</a>
+                    </div>
+                </div>
+    
+                <a href="https://demo.empasy.io/" target="_blank" rel="noopener noreferrer">화면 체험 &#8599;</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="lang-switch" role="navigation" aria-label="언어 선택">
+                    <a href="/" data-lang="ko" class="active" aria-current="page">KO</a>
+                    <a href="/en/pages/index.html" data-lang="en">EN</a>
+                    <a href="/ja/pages/index.html" data-lang="ja">JA</a>
+                </div>
+                <a href="/ko/pages/contact.html" class="btn btn-primary btn-sm">도입 문의</a>
+            </div>
+        </div>
+    </header>
+    <script>
+    (function () {
+        var nav = document.querySelector('.glass-header .nav-container');
+        if (!nav || nav.dataset.empNavBound === 'true') return;
+        nav.dataset.empNavBound = 'true';
+        var btn = nav.querySelector('.mobile-menu-btn');
+        var links = nav.querySelector('.nav-links');
+        var actions = nav.querySelector('.nav-actions');
+        var setOpen = function (open) {
+            nav.classList.toggle('active', open);
+            if (links) links.classList.toggle('active', open);
+            if (actions) actions.classList.toggle('active', open);
+            document.documentElement.classList.toggle('mobile-menu-open', open);
+            document.body.classList.toggle('mobile-menu-open', open);
+            if (btn) {
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                btn.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+            }
+            if (!open) nav.scrollTop = 0;
+        };
+        if (btn) {
+            btn.addEventListener('click', function () {
+                setOpen(!nav.classList.contains('active'));
+            });
+        }
+        nav.querySelectorAll('.dropdown > .dropbtn').forEach(function (drop) {
+            drop.addEventListener('click', function (e) {
+                if (window.innerWidth <= 1023) {
+                    e.preventDefault();
+                    var parent = drop.parentElement;
+                    nav.querySelectorAll('.dropdown').forEach(function (d) {
+                        if (d !== parent) d.classList.remove('open');
+                    });
+                    parent.classList.toggle('open');
+                }
+            });
+        });
+        nav.querySelectorAll('a:not(.dropbtn)').forEach(function (a) {
+            a.addEventListener('click', function () {
+                if (window.innerWidth <= 1023 && nav.classList.contains('active')) {
+                    setOpen(false);
+                }
+            });
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && nav.classList.contains('active')) setOpen(false);
+        });
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 1023 && nav.classList.contains('active')) setOpen(false);
+        });
+        var syncEmpasyLocaleCookies = function (lang) {
+            var siteLocale = lang === 'en' ? 'en-US' : (lang === 'ja' ? 'ja-JP' : 'ko-KR');
+            var adminLocale = lang === 'ko' ? 'ko-KR' : 'en-US';
+            var host = window.location.hostname || '';
+            var domainPart = (host === 'empasy.io' || host.endsWith('.empasy.io')) ? '; domain=.empasy.io' : '';
+            var securePart = window.location.protocol === 'https:' ? '; Secure' : '';
+            var attrs = '; path=/; max-age=31536000; SameSite=Lax' + domainPart + securePart;
+            try {
+                document.cookie = 'empasy_site_locale=' + encodeURIComponent(siteLocale) + attrs;
+                document.cookie = 'empasy_locale=' + encodeURIComponent(adminLocale) + attrs;
+            } catch (err) {}
+        };
+        syncEmpasyLocaleCookies('ko');
+        var path = window.location.pathname || '/';
+        var m = path.match(/\/(ko|en|ja)\/(.*)/);
+        nav.querySelectorAll('.lang-switch a[data-lang]').forEach(function (a) {
+            if (a.dataset.langBound === 'true') return;
+            a.dataset.langBound = 'true';
+            var target = a.getAttribute('data-lang');
+            var url = target === 'ko' ? '/' : '/' + target + '/pages/index.html';
+            if (m) {
+                var sub = m[2] || 'pages/index.html';
+                if (target === 'ko' && (sub === 'pages/index.html' || sub === 'pages/' || sub === '')) {
+                    url = '/';
+                } else {
+                    url = '/' + target + '/' + sub;
+                }
+            }
+            a.setAttribute('href', url);
+            a.addEventListener('click', function () {
+                try { localStorage.setItem('preferred_lang', target); } catch (err) {}
+                syncEmpasyLocaleCookies(target);
+            });
+        });
+    })();
+    </script>
+
+    <main class="container ed-blog-main">
+        <div class="ed-blog-topbar">
+            <a href="/ko/blog/blog.html" class="ed-blog-back">
+                <i class="fas fa-arrow-left" style="font-size: 0.8rem;" aria-hidden="true"></i>
+                <span>엠파시 인사이트 목록으로</span>
+            </a>
+            <span class="badge" style="margin-bottom: 0;">AI 테스트 자동화 · 실전 해결</span>
+        </div>
+
+        <article class="ed-blog-article">
+            <div class="ed-blog-meta">
+                <span>2026-11-27</span>
+                <span>&bull;</span>
+                <span>읽는 시간 약 7분</span>
+                <span>&bull;</span>
+                <span class="ed-blog-meta-cat">실무 웹 QA · 보안 키패드 · 쿠키 · 시각 진단</span>
+            </div>
+
+            <h1 class="ed-blog-title">금융 보안 가상 키패드·글로벌 쿠키 팝업·화면 깨짐까지: 실무 웹 테스트 자동화가 멈추는 4가지 장애물 해결법</h1>
+
+            <div class="ed-exec-summary" aria-label="경영진 · 현업 담당자를 위한 3줄 요약">
+                <div class="ed-exec-summary-kicker">경영진 · 현업 담당자를 위한 3줄 요약</div>
+                <ul class="ed-exec-summary-list">
+                    <li><span class="ed-exec-summary-tag">현장 격차</span><span>데모 사이트에서는 잘 작동하던 자동화 도구가 실제 금융·글로벌 운영 사이트의 가상 키패드, 쿠키 동의 팝업, 개인정보 보안 규정 앞에서 멈춥니다.</span></li>
+                    <li><span class="ed-exec-summary-tag">엔진 내장</span><span>SyncETA는 가상 키패드 인식, 요소 탐색 직전 쿠키 배너 자동 해제, 증적 영상·DOM 개인정보 마스킹을 스크립트 수정 없이 엔진 레벨에서 처리합니다.</span></li>
+                    <li><span class="ed-exec-summary-tag">전수 진단</span><span>시나리오를 짜지 않은 영역도 사이트 지식그래프로 하위 링크 404와 글자 겹침·빈 영역을 자동 탐지해 배포 전 사각지대를 제거합니다.</span></li>
+                </ul>
+                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid #bae6fd; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 13.5px; color: #334155;">운영 중인 웹사이트에 바로 적용해 볼 수 있는 기능을 확인해 보세요.</span>
+                    <a href="/ko/solutions/sync-eta.html" class="btn btn-primary btn-sm" style="min-height: 36px;">SyncETA 기능 보기</a>
+                </div>
+            </div>
+
+            <details class="ed-tech-details" open>
+                <summary>4대 실무 장애물 원인 분석 및 SyncETA 해결 아키텍처 보기</summary>
+                <div class="ed-tech-details-body">
+<nav class="ed-article-toc" aria-label="이 글의 목차">
+  <div class="ed-article-toc-title">이 글의 목차</div>
+  <ol>
+    <li><a href="#sec-1">1. 장애물 ① 금융·공공 보안 가상 키패드 입력</a></li>
+    <li><a href="#sec-2">2. 장애물 ② 지연 등장하는 글로벌 쿠키 동의 팝업</a></li>
+    <li><a href="#sec-3">3. 장애물 ③ 테스트 녹화·스크린샷 속 민감 개인정보 노출</a></li>
+    <li><a href="#sec-4">4. 장애물 ④ 시나리오 밖의 404 하위 링크와 글자 겹침·화면 깨짐</a></li>
+  </ol>
+</nav>
+
+<h2 id="sec-1">1. 장애물 ① 금융·공공 보안 가상 키패드 입력</h2>
+<p>국내 금융·보험·공공 포털의 로그인·본인확인 화면은 키보드 후킹 방지를 위해 매 접속마다 숫자·문자 배열이 무작위로 재배치되는 이미지·캔버스 기반 <strong>보안 가상 키패드</strong>를 사용합니다. 일반적인 <code>page.fill()</code>이나 고정 좌표 클릭 스크립트는 이 단계에서 즉시 막히며, 해외 상용 테스트 도구 역시 국내 보안 키패드 패턴을 지원하지 못하는 경우가 많습니다.</p>
+<p><a href="/ko/solutions/sync-eta.html">SyncETA</a>는 브라우저 동작 레코더와 실행 엔진에 보안 가상 키패드 자동 인식 입력 흐름을 기본 통합해, 매번 배열이 바뀌어도 대상 키 위치를 시각·DOM 맥락으로 식별하고 안전하게 로그인 단계를 통과합니다.</p>
+
+<h2 id="sec-2">2. 장애물 ② 지연 등장하는 글로벌 쿠키 동의 팝업</h2>
+<p>유럽(GDPR), 미국(CCPA), 다국어 글로벌 브랜드 사이트는 페이지 로드 직후가 아니라 외부 CMP(Consent Management Platform) 스크립트가 로드된 뒤 2~5초 시점에 쿠키 동의 오버레이를 띄우는 경우가 흔합니다. 기존 방식처럼 <code>goto</code> 직후 고정 대기(sleep)를 두고 한 번만 닫기를 시도하면 두 가지 문제가 생깁니다.</p>
+<ul>
+  <li>고정 대기 이후 늦게 뜬 모달이 다음 버튼 클릭을 가로막아 <code>Element is obscured</code> 실패 발생</li>
+  <li>클릭이나 뒤로·앞으로 이동으로 새 문서에 진입했을 때 쿠키 검사가 누락되거나, 반대로 전역 플래그를 쓰면 다른 탭·시나리오까지 검사를 건너뛰는 부작용 발생</li>
+</ul>
+<p>SyncETA 실행 엔진은 쿠키 모달 처리를 <code>navigate</code> 후처리가 아니라 <strong>공통 레코드 실행 진입점의 DOM 요소 탐색 직전</strong>으로 앞당겼습니다. 닫기 성공 이력은 전역 변수가 아닌 <strong><code>WeakSet&lt;Page&gt;</code></strong>으로 페이지 인스턴스별 격리 관리하고, 메인 프레임의 <code>framenavigated</code> 이벤트가 발생할 때만 해당 페이지 이력을 초기화합니다(<code>iframe</code> 내부 이동은 제외). 덕분에 지연 모달, 멀티 탭, 뒤로·앞으로 이동이 섞인 글로벌 사이트에서도 클릭 방해 없이 실행이 이어집니다.</p>
+
+<h2 id="sec-3">3. 장애물 ③ 테스트 녹화·스크린샷 속 민감 개인정보 노출</h2>
+<p>E2E 테스트의 가장 큰 장점은 실패 순간의 스크린샷과 <code>.webm</code> 녹화 영상을 남겨 개발자에게 바로 공유할 수 있다는 점이지만, 실제 화면에 주민등록번호·전화번호·계좌번호·비밀번호가 찍히면 개인정보보호법 및 사내 보안 감사 위반 소지가 발생합니다.</p>
+<p>SyncETA는 입력·캡처·LLM 요청 경계 전반에서 주민번호·전화번호 등 민감 개인정보를 자동으로 가림(마스킹) 처리하고, 외부 클라우드 연결이 금지된 금융·공공망을 위해 <strong>PC 로컬 데스크톱 앱 실행 및 사내 온프레미스 서버 + 로컬 LLM</strong> 구성을 공식 지원합니다.</p>
+
+<h2 id="sec-4">4. 장애물 ④ 시나리오 밖의 404 하위 링크와 글자 겹침·화면 깨짐</h2>
+<p>핵심 결제 시나리오 20개가 모두 통과(Pass)했더라도, 프로모션 배너 링크 하나가 404를 반환하거나 다국어 번역 문구가 길어져 버튼 글자가 겹쳐 버리는 결함은 기존 기능 스크립트로 잡아낼 수 없습니다.</p>
+<table>
+  <thead>
+    <tr>
+      <th>결함 유형</th>
+      <th>기존 스크립트 QA의 사각지대</th>
+      <th>SyncETA 시나리오 없는 전수 진단</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>하위 링크 오류</strong></td>
+      <td>클릭 시나리오에 포함된 버튼만 확인</td>
+      <td>사이트 지식그래프로 페이지 내 하위 링크 404 및 링크 문구-도착 페이지 의미 불일치 전수 검사</td>
+    </tr>
+    <tr>
+      <td><strong>레이아웃 · 디자인 깨짐</strong></td>
+      <td>단순 픽셀 비교는 폰트·배너 변경에도 오탐 다발</td>
+      <td>글자 겹침, 빈 영역, 이미지·미디어 재생 오류를 시각·구조 기반으로 탐지</td>
+    </tr>
+    <tr>
+      <td><strong>애매한 화면 판정</strong></td>
+      <td>무조건 Pass 처리하거나 오탐 실패로 방치</td>
+      <td>확실한 항목만 정상 집계, 판단이 모호한 화면은 사진과 함께 <code>[확인 필요]</code>로 정직하게 분리</td>
+    </tr>
+  </tbody>
+</table>
+<p>시나리오를 작성할 시간이 부족한 긴급 배포 직후에도 <code>"하위 링크 검사해줘"</code>, <code>"화면 깨짐 봐줘"</code> 같은 한 줄 문장만으로 전수 진단을 실행하고, 검출된 문제는 버그 칸반에서 바로 추적·재검증할 수 있습니다.</p>
+                </div>
+            </details>
+
+        <div class="ed-article-footer-cta">
+            <div class="ed-article-footer-cta-copy">
+                <strong>보안 키패드·쿠키 팝업·링크 전수 검사까지 실제 사이트에서 확인해 보세요</strong>
+                <span>기존 웹사이트 코드를 수정할 필요 없이 SyncETA 데스크톱 앱에서 URL만 입력해 바로 점검을 시작할 수 있습니다.</span>
+            </div>
+            <div class="ed-article-footer-cta-actions">
+                <a href="/ko/solutions/sync-eta.html" class="btn btn-primary btn-sm">SyncETA 공식 페이지 &#8594;</a>
+                <a href="/ko/download_eta.html" class="btn btn-outline btn-sm">무료 다운로드</a>
+            </div>
+        </div>
+        </article>
+
+    <section class="ed-related-section" aria-label="함께 읽으면 좋은 AI 테스트 자동화 인사이트">
+        <h2 class="ed-related-heading">함께 읽으면 좋은 AI 테스트 자동화 인사이트</h2>
+        <div class="ed-related-grid">
+        <a href="/ko/blog/ai-test-automation-tools-comparison-2026.html" class="ed-related-card">
+            <span class="ed-related-cat">AI 테스트 자동화 · 도구 비교</span>
+            <span class="ed-related-title">AI 테스트 자동화 도구 비교 가이드 (2026): Selenium·Playwright vs AI 코딩 에이전트 vs 노코드 E2E</span>
+            <span class="ed-related-more">자세히 읽기 &rarr;</span>
+        </a>
+        <a href="/ko/blog/playwright-selector-self-healing-vision-llm-guide.html" class="ed-related-card">
+            <span class="ed-related-cat">AI 테스트 자동화 · 자가 치유</span>
+            <span class="ed-related-title">UI 개편마다 깨지는 Playwright·Selenium 테스트 해결기: Vision-LLM 셀렉터 자가 치유 설계</span>
+            <span class="ed-related-more">자세히 읽기 &rarr;</span>
+        </a>
+        <a href="/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html" class="ed-related-card">
+            <span class="ed-related-cat">AI 테스트 자동화 · QA 전환</span>
+            <span class="ed-related-title">엑셀 테스트케이스를 노코드 AI 테스트 자동화로 전환하는 실무 가이드</span>
+            <span class="ed-related-more">자세히 읽기 &rarr;</span>
+        </a>
+        <a href="/ko/blog/synceta-intelligent-regression-testing-pipeline.html" class="ed-related-card">
+            <span class="ed-related-cat">AI 테스트 자동화 · 아키텍처</span>
+            <span class="ed-related-title">AI 테스트 자동화 도입 가이드: 클릭 녹화부터 자가 치유 E2E 회귀 테스트까지</span>
+            <span class="ed-related-more">자세히 읽기 &rarr;</span>
+        </a>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 36px; padding-bottom: 36px; border-bottom: 1px solid #e2e8f0;" class="emp-footer-grid">
+                <div>
+                    <a href="/" aria-label="엠파시 공식 홈페이지">
+                        <img src="/images/logo.svg" alt="EMPASY" style="height: 22px; width: auto; margin-bottom: 14px;">
+                    </a>
+                    <p style="font-size: 14px; line-height: 1.7; color: #475569; max-width: 320px;">
+                        반복되는 기업 업무는 자동화하고, 중요한 결정은 담당자 확인을 거쳐 안전하게 반영하는 실무형 기업 소프트웨어를 만듭니다.
+                    </p>
+                </div>
+                <div>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">핵심 업무 영역</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
+                        <li><a href="/ko/solutions/sync-verse.html">협업·승인 통합 (SyncVerse)</a></li>
+                        <li><a href="/ko/solutions/sync-eta.html">자동 화면 점검 (SyncETA)</a></li>
+                        <li><a href="/ko/solutions/sync-boot.html">사내 관리 시스템 (SyncBoot)</a></li>
+                        <li><a href="/ko/solutions/sync-cms.html">웹사이트·다국어 (SyncCMS)</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">회사 및 사례</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
+                        <li><a href="/ko/pages/clients.html">고객 사례</a></li>
+                        <li><a href="/ko/pages/team.html">팀 소개</a></li>
+                        <li><a href="/ko/pages/vision.html">비전 · 벤처 인증</a></li>
+                        <li><a href="/ko/pages/careers.html">채용 안내</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">체험 · 문서 · 문의</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 9px; font-size: 14px;">
+                        <li><a href="https://demo.empasy.io/" target="_blank" rel="noopener noreferrer">통합 데모 포털 &#8599;</a></li>
+                        <li><a href="/ko/download_eta.html">SyncETA 다운로드</a></li>
+                        <li><a href="https://doc.empasy.com/" target="_blank" rel="noopener noreferrer">개발자 기술 문서 &#8599;</a></li>
+                        <li><a href="/ko/pages/contact.html">도입 상담 문의</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom" style="padding-top: 24px; text-align: left;">
+                <address class="emp-legal-list">
+                    <span class="emp-legal-seg"><strong style="color: #0f172a;">주식회사 엠파시</strong></span>
+                    <span class="emp-legal-seg">대표이사 오병문</span>
+                    <span class="emp-legal-seg">사업자등록번호 547-81-03408</span>
+                    <span class="emp-legal-seg is-wrap">혁신성장유형 벤처기업 확인 (제 20261111030084 호)</span>
+                    <span class="emp-legal-seg is-wrap">서울 금천구 가산디지털1로 205-27 2층 208호</span>
+                    <span class="emp-legal-seg">도입 문의 <a href="mailto:poh@empasy.com" style="color: #0e7490; text-decoration: underline;">poh@empasy.com</a></span>
+                    <span class="emp-legal-seg">대표번호 <a href="tel:0507-1360-8169" style="color: #0f172a;">0507-1360-8169</a></span>
+                    <span class="emp-legal-seg"><a href="/ko/pages/terms.html">이용약관</a></span>
+                    <span class="emp-legal-seg"><a href="/ko/pages/privacy.html">개인정보 처리방침</a></span>
+                </address>
+                <p style="color: #64748b; font-size: 12px; margin-top: 8px;">&copy; 2026 Empasy Inc. All rights reserved.</p>
+            </div>
+        </div>
+        <style>
+          @media (max-width: 900px) { .emp-footer-grid { grid-template-columns: 1fr 1fr !important; } }
+          @media (max-width: 560px) { .emp-footer-grid { grid-template-columns: 1fr !important; } }
+        </style>
+    </footer>
+
+</body>
+</html>
