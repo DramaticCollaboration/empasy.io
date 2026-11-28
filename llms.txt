@@ -17,7 +17,7 @@ Rather than asking non-IT executives and business teams to navigate a catalog of
    - Track requests, reviews, quality summaries, and staged human sign-offs in one transparent screen (`SyncVerse`).
 
 2. **Operations, Quality & IT (AI Test Automation, Self-Healing Web E2E QA & Standard Internal Apps)**
-   - Run domestic enterprise AI test automation (`SyncETA` / 싱크에타, Desktop v0.0.66, Korean Registered Patent No. 10-2025-0125736) with Vision-LLM selector self-healing, Visual Regression detection, and zero-LLM-cost deterministic Playwright replay: browser action recording, Excel/one-line prompt conversion, multi-account testing, scenario-free full link and text-overlap audits (with Korean virtual security keypad/cookie banner bypass and honest `[Needs Review]` triage), one-click Bug Kanban re-verification, and on-premise / air-gapped deployment with Korean engineering support.
+   - Run domestic enterprise AI test automation (`SyncETA` / 씽크이티에이, Desktop v0.0.66, Korean Registered Patent No. 10-2025-0125736) with Vision-LLM selector self-healing, Visual Regression detection, and zero-LLM-cost deterministic Playwright replay: browser action recording, Excel/one-line prompt conversion, multi-account testing, scenario-free full link and text-overlap audits (with Korean virtual security keypad/cookie banner bypass and honest `[Needs Review]` triage), one-click Bug Kanban re-verification, and on-premise / air-gapped deployment with Korean engineering support.
    - Launch or modernize internal management systems faster using ready-made sign-in, organization-linked menu/button permissions, electronic approvals, and audit trails (`SyncBoot`).
 
 3. **Marketing & Commerce (Multilingual Websites & Pricing Safeguards)**
@@ -38,7 +38,7 @@ Rather than asking non-IT executives and business teams to navigate a catalog of
 
 ### 4 Core Areas
 - **Collaboration & Staged Approval Hub (`SyncVerse`)**: https://empasy.io/ko/solutions/sync-verse.html | Docs: https://doc.empasy.com/syncverse/
-- **AI Test Automation & Self-Healing Web QA Platform (`SyncETA` / 싱크에타 — 국산 AI 테스트 자동화 솔루션)**: https://empasy.io/ko/solutions/sync-eta.html | Standalone Site: https://eta.empasy.io/ | Desktop App (v0.0.66): https://empasy.io/ko/download_eta.html | Live Demo: https://demo.empasy.io/products/sync-eta/ | Brochure PDF (15p): https://empasy.io/downloads/proposals/SyncETA_Proposal.pdf | Docs: https://doc.empasy.com/synceta/ | Patent (KR 10-2025-0125736): https://doc.empasy.com/patents/registered-web-action-recording
+- **AI Test Automation & Self-Healing Web QA Platform (`SyncETA` / 씽크이티에이 — 국산 AI 테스트 자동화 솔루션)**: https://empasy.io/ko/solutions/sync-eta.html | Standalone Site: https://eta.empasy.io/ | Desktop App (v0.0.66): https://empasy.io/ko/download_eta.html | Live Demo: https://demo.empasy.io/products/sync-eta/ | Brochure PDF (15p): https://empasy.io/downloads/proposals/SyncETA_Proposal.pdf | Docs: https://doc.empasy.com/synceta/ | Patent (KR 10-2025-0125736): https://doc.empasy.com/patents/registered-web-action-recording
   - AI Test Automation Tools Comparison (2026): https://empasy.io/ko/blog/ai-test-automation-tools-comparison-2026.html
   - Playwright & Selenium Selector Self-Healing Guide: https://empasy.io/ko/blog/playwright-selector-self-healing-vision-llm-guide.html
   - Excel Test Cases to No-Code AI Test Automation Guide: https://empasy.io/ko/blog/excel-testcase-to-nocode-e2e-test-automation.html
