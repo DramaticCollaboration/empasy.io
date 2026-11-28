@@ -423,7 +423,7 @@ function buildPageHtml(productMeta, product, catalogProduct, topologyNodes, lang
     name: product.name,
     ...(isSyncEta
       ? {
-          alternateName: lang === 'ko' ? ['싱크에타', 'SyncETA Desktop'] : ['SyncETA Desktop'],
+          alternateName: lang === 'ko' ? ['씽크이티에이', 'SyncETA Desktop'] : ['SyncETA Desktop'],
           softwareVersion: '0.0.66',
           downloadUrl: `https://empasy.io/${lang}/download_eta.html`,
           sameAs: [
