@@ -70,7 +70,9 @@ function getPriority(relFile) {
   if (relFile === 'index.html') return '1.0';
   if (relFile === 'en/pages/index.html' || relFile === 'ja/pages/index.html') return '0.9';
   if (relFile.endsWith('/download_eta.html')) return '0.9';
+  if (relFile.endsWith('/solutions/sync-eta.html')) return '0.9';
   if (relFile.endsWith('/solutions/sync-verse.html')) return '0.9';
+  if (relFile.endsWith('/blog/ai-test-automation-tools-comparison-2026.html')) return '0.8';
   if (relFile.includes('/solutions/')) return '0.8';
   if (relFile.includes('/pages/')) return '0.8';
   if (relFile.includes('/blog/')) return '0.7';

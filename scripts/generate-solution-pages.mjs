@@ -421,7 +421,19 @@ function buildPageHtml(productMeta, product, catalogProduct, topologyNodes, lang
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: product.name,
-    ...(isSyncEta ? { alternateName: lang === 'ko' ? ['싱크에타', 'SyncETA Desktop'] : ['SyncETA Desktop'] } : {}),
+    ...(isSyncEta
+      ? {
+          alternateName: lang === 'ko' ? ['싱크에타', 'SyncETA Desktop'] : ['SyncETA Desktop'],
+          softwareVersion: '0.0.66',
+          downloadUrl: `https://empasy.io/${lang}/download_eta.html`,
+          sameAs: [
+            lang === 'ko' ? 'https://eta.empasy.io/' : `https://eta.empasy.io/${lang}/`,
+            product.docUrl,
+            portalProductUrl,
+          ],
+          featureList: (product.features || []).map((f) => `${f.title}: ${f.description}`),
+        }
+      : {}),
     applicationCategory: isSyncEta ? 'DeveloperApplication, BusinessApplication' : 'BusinessApplication',
     operatingSystem: isSyncEta ? 'Windows 10, Windows 11, macOS 12+, Web' : 'Web',
     url: canonicalUrl,
